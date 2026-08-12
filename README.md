@@ -46,6 +46,42 @@ Power-Ranking-Tabelle mit Wochen-Umschalter. Läuft automatisch über
 21 Uhr Berlin-Zeit). Alternativ lassen sich Werte auch manuell direkt in `data/weekly-scores.js`
 eintragen (gleiches Format wie beim automatischen Sync).
 
+## Trade Analyzer
+
+Werte = Durchschnitt aus KTC- und Dynasty-Daddy-Trade-Value (`data/trade-values.js`, gleiche
+0–10000er Skala). Picks (auch die aus `data/trades.js` / Future Draft Boards) bekommen grobe
+Schätzwerte aus `PICK_VALUES` in derselben Datei — das sind **keine** offiziellen KTC/Dynasty-
+Daddy-Zahlen, nur eine Orientierung. Für verbindliche Werte verlinkt die Seite direkt auf die
+echten Rechner von Dynasty Daddy und KeepTradeCut. Klick auf eine Zelle im Draft Board oder in
+den Future Draft Boards öffnet den Trade Analyzer mit diesem Spieler/Pick vorausgefüllt.
+
+## Player Rankings & Player Projections
+
+Beide Seiten zeigen zusätzlich, welches Team (falls überhaupt) einen Spieler aktuell besitzt
+(`ownerOfPlayer()` in `js/app.js`, prüft Keeper-Listen + `ROSTERS_LIVE`), dazu Positions-Filter,
+Suche und einen "Nur Best Available"-Schalter, der eigene Spieler ausblendet.
+
+- **Player Projections** (`data/projections.js`) — ESPNs Saisonprojektionen, über
+  `scripts/sync-espn-projections.js` synct. Läuft schon vor Saisonstart, da ESPN Projektionen
+  bereits in der Preseason veröffentlicht.
+- **Player Rankings** (`data/player-stats.js`) — baut sich Woche für Woche aus tatsächlich
+  erzielten Punkten auf (`scripts/sync-espn-player-stats.js`), bleibt also bis Woche 1 leer.
+
+Beide laufen automatisch über die GitHub Action `sync-espn-projections-stats.yml` im selben
+Rhythmus wie der Weekly-Scores-Sync (9 & 21 Uhr Berlin-Zeit).
+
+**Achtung, ESPN-API-Detail:** Der `kona_player_info`-Endpoint für Projektionen/Statistiken
+braucht einen `x-fantasy-filter`-Header statt normaler Query-Parameter. Das exakte Response-
+Format (`stats`-Array mit `statSourceId`/`statSplitTypeId`) kann sich bei ESPN ändern — falls
+eines der beiden Scripts mit einem Feld-Fehler abbricht, zuerst dort ansetzen.
+
+## Future Draft Boards (2027–2029)
+
+Zeigt Runden 1–5 je Jahr, Spalten = Teams. Default ist "Own" (Team besitzt seinen Pick noch
+selbst) — nur tatsächlich getradete Picks sind farblich hervorgehoben, mit Angabe des
+ursprünglichen Besitzers. Datenquelle: `FUTURE_PICKS` in `data/trades.js`, ein Jahr `{round,
+from, owner}`-Einträge. Neuer Trade mit Future Picks → einfach dort ergänzen.
+
 ## ESPN Roster Sync
 
 **Lokal testen:**

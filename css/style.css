@@ -337,3 +337,21 @@ h2 { font-family: 'Playfair Display', serif; font-size: 22px; font-weight: 800; 
 .db-pos-btn.active { background: var(--accent-light); color: var(--accent); border-color: var(--accent); }
 table.db-table td, table.db-table th { min-width: unset; }
 table.db-table td:nth-child(2) { text-align: left; font-weight: 600; }
+
+/* ---------- TRADE ANALYZER ---------- */
+.trade-cols { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-bottom: 16px; }
+@media (max-width: 700px) { .trade-cols { grid-template-columns: 1fr; } }
+.trade-col { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 14px; }
+.trade-suggest { position: relative; }
+.trade-suggest-item {
+  background: var(--surface2); border: 1px solid var(--border); border-radius: 8px;
+  padding: 8px 10px; font-size: 13px; cursor: pointer; margin-top: 4px;
+}
+.trade-suggest-item:hover { border-color: var(--accent); }
+.trade-chip {
+  display: flex; align-items: center; justify-content: space-between; gap: 8px;
+  background: var(--surface2); border: 1px solid var(--border); border-radius: 8px;
+  padding: 8px 10px; margin-top: 8px; font-size: 13px; font-weight: 600;
+}
+.trade-chip button { background: none; border: none; color: var(--red); cursor: pointer; font-weight: 800; }
+.trade-total { margin-top: 12px; font-weight: 800; text-align: right; color: var(--accent); }

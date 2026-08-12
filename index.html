@@ -46,7 +46,14 @@
           <button class="snav-dropdown-item" data-page="keepers" onclick="showKeepers()">🔒 Keeper Übersicht</button>
           <button class="snav-dropdown-item" data-page="dynastyboard" onclick="showDynastyBoard()">🏆 Dynasty Board</button>
           <button class="snav-dropdown-item" data-page="rolling" onclick="showRolling()">📈 Rolling Rankings</button>
-          <button class="snav-dropdown-item" data-page="weekbyweek" onclick="showWeekByWeek()">🗓️ Week by Week</button>
+        </div>
+      </div>
+
+      <div class="snav-group">
+        <button class="snav-group-btn">🧮 Players <span class="snav-arrow">▾</span></button>
+        <div class="snav-dropdown">
+          <button class="snav-dropdown-item" data-page="playerrankings" onclick="showPlayerRankings()">📊 Player Rankings</button>
+          <button class="snav-dropdown-item" data-page="playerprojections" onclick="showPlayerProjections()">🔮 Player Projections</button>
         </div>
       </div>
 
@@ -61,8 +68,8 @@
       <div class="snav-divider"></div>
       <button class="snav-single" data-page="standings" onclick="showStandings()">📈 Standings</button>
       <button class="snav-single" data-page="matchups" onclick="showMatchups()">⚔️ Matchups</button>
-      <button class="snav-single" data-page="livescores" onclick="showLiveScores()">🔴 Live Scores</button>
-      <button class="snav-single" data-page="rules" onclick="showRules()">📜 Rules</button>
+      <button class="snav-single" data-page="futureboards" onclick="showFutureBoards()">🔮 Future Draft Boards</button>
+      <button class="snav-single" data-page="weekbyweek" onclick="showWeekByWeek()">🗓️ Weekly Scores</button>
     </div>
   </div>
 
@@ -78,8 +85,8 @@
         <button class="subnav-mobile-btn" data-page="home" onclick="goHome()">🏠 Home</button>
         <button class="subnav-mobile-btn" data-page="standings" onclick="showStandings()">📈 Standings</button>
         <button class="subnav-mobile-btn" data-page="matchups" onclick="showMatchups()">⚔️ Matchups</button>
-        <button class="subnav-mobile-btn" data-page="livescores" onclick="showLiveScores()">🔴 Live Scores</button>
-        <button class="subnav-mobile-btn" data-page="rules" onclick="showRules()">📜 Rules</button>
+        <button class="subnav-mobile-btn" data-page="futureboards" onclick="showFutureBoards()">🔮 Future Draft Boards</button>
+        <button class="subnav-mobile-btn" data-page="weekbyweek" onclick="showWeekByWeek()">🗓️ Weekly Scores</button>
       </div>
       <div class="subnav-mobile-group">
         <div class="subnav-mobile-label">Teams</div>
@@ -91,7 +98,11 @@
         <button class="subnav-mobile-btn" data-page="keepers" onclick="showKeepers()">🔒 Keeper Übersicht</button>
         <button class="subnav-mobile-btn" data-page="dynastyboard" onclick="showDynastyBoard()">🏆 Dynasty Board</button>
         <button class="subnav-mobile-btn" data-page="rolling" onclick="showRolling()">📈 Rolling Rankings</button>
-        <button class="subnav-mobile-btn" data-page="weekbyweek" onclick="showWeekByWeek()">🗓️ Week by Week</button>
+      </div>
+      <div class="subnav-mobile-group">
+        <div class="subnav-mobile-label">Players</div>
+        <button class="subnav-mobile-btn" data-page="playerrankings" onclick="showPlayerRankings()">📊 Player Rankings</button>
+        <button class="subnav-mobile-btn" data-page="playerprojections" onclick="showPlayerProjections()">🔮 Player Projections</button>
       </div>
       <div class="subnav-mobile-group">
         <div class="subnav-mobile-label">Trade</div>
@@ -151,6 +162,27 @@
   <div id="weekbyweekContent"></div>
 </div>
 
+<!-- ============ PLAYER RANKINGS ============ -->
+<div class="page" id="page-playerrankings">
+  <div class="page-title">📊 Player Rankings</div>
+  <div class="page-sub">Season-Ranking nach tatsächlich erzielten Punkten (aus Weekly Scores)</div>
+  <div id="playerrankingsContent"></div>
+</div>
+
+<!-- ============ PLAYER PROJECTIONS ============ -->
+<div class="page" id="page-playerprojections">
+  <div class="page-title">🔮 Player Projections</div>
+  <div class="page-sub">ESPN-Projektionen für die aktuelle Saison</div>
+  <div id="playerprojectionsContent"></div>
+</div>
+
+<!-- ============ FUTURE DRAFT BOARDS ============ -->
+<div class="page" id="page-futureboards">
+  <div class="page-title">🔮 Future Draft Boards</div>
+  <div class="page-sub">Pick-Besitz für 2027, 2028 und 2029</div>
+  <div id="futureboardsContent"></div>
+</div>
+
 <!-- ============ EMPTY / TBD PAGES ============ -->
 <div class="page" id="page-standings">
   <div class="page-title">📈 Standings</div>
@@ -174,12 +206,8 @@
 
 <div class="page" id="page-trade">
   <div class="page-title">⚖️ Trade Analyzer</div>
-  <div class="page-sub">Trades bewerten</div>
-  <div class="empty-state">
-    <span class="empty-emoji">🚧</span>
-    <div class="empty-title">Noch nicht eingerichtet</div>
-    <div class="empty-text">Folgt in einer späteren Ausbaustufe.</div>
-  </div>
+  <div class="page-sub">Werte = Ø aus KTC + Dynasty Daddy. Picks sind grobe Schätzwerte.</div>
+  <div id="tradeContent"></div>
 </div>
 
 <div class="page" id="page-tradehistory">
@@ -188,25 +216,6 @@
   <div id="tradehistoryContent"></div>
 </div>
 
-<div class="page" id="page-livescores">
-  <div class="page-title">🔴 Live Scores</div>
-  <div class="page-sub">Live-Punktestand am Matchup-Tag</div>
-  <div class="empty-state">
-    <span class="empty-emoji">🚧</span>
-    <div class="empty-title">Noch keine Daten</div>
-    <div class="empty-text">Kommt, sobald die Saison läuft.</div>
-  </div>
-</div>
-
-<div class="page" id="page-rules">
-  <div class="page-title">📜 Rules</div>
-  <div class="page-sub">Liga-Regeln der Foodball League</div>
-  <div class="empty-state">
-    <span class="empty-emoji">🚧</span>
-    <div class="empty-title">Noch nicht hinterlegt</div>
-    <div class="empty-text">Regel-Text folgt.</div>
-  </div>
-</div>
 
 <script src="data/teams.js"></script>
 <script src="data/draft2026.js"></script>
@@ -214,6 +223,9 @@
 <script src="data/dynasty-board.js"></script>
 <script src="data/dynasty-rolling.js"></script>
 <script src="data/weekly-scores.js"></script>
+<script src="data/trade-values.js"></script>
+<script src="data/projections.js"></script>
+<script src="data/player-stats.js"></script>
 <script src="data/trades.js"></script>
 <script src="js/app.js"></script>
 <script>

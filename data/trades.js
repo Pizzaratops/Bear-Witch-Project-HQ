@@ -5,12 +5,14 @@
 //  (aus unbekanntem Grund). Deshalb werden Trades, die solche Picks
 //  enthalten, hier von Hand nachgetragen — sowohl als Chronik
 //  (TRADES, für die Trade-History-Seite) als auch verdichtet zu
-//  "wer besitzt aktuell welchen 2027er-Pick" (FUTURE_PICKS_2027).
+//  "wer besitzt aktuell welchen Pick" je Zukunftsjahr (FUTURE_PICKS,
+//  für die Future-Draft-Boards-Seite 2027/2028/2029).
 //
-//  Regel: Jedes Team startet mit seinem eigenen 1st/2nd/3rd/...-Pick
-//  pro Runde für 2027. "from" = urspruenglicher Besitzer des Picks.
-//  Wird ein Pick weitergetradet, einfach "owner" auf das neue Team
-//  aendern (Chronik in TRADES bleibt unveraendert als Beleg).
+//  Regel: Jedes Team besitzt zu Beginn seinen eigenen 1st/2nd/3rd/...
+//  Pick pro Jahr ("Own", muss hier NICHT eingetragen werden — das ist
+//  die Voreinstellung in js/app.js). Nur tatsaechlich getradete Picks
+//  werden unten in FUTURE_PICKS gelistet. "from" = urspruenglicher
+//  Besitzer des Picks, "owner" = wer ihn jetzt hat.
 // ============================================================
 
 const TRADES = [
@@ -30,14 +32,17 @@ const TRADES = [
   },
 ];
 
-// Verdichtete Sicht: wer besitzt nach den obigen Trades welchen
-// 2027er-Pick (nur Picks, die tatsächlich den Besitzer gewechselt
-// haben — alle nicht gelisteten Picks liegen weiterhin beim
-// jeweiligen Team selbst).
-const FUTURE_PICKS_2027 = [
-  { round: "1st", from: "Beastmode",     owner: "The Bear Witch Project" },
-  { round: "2nd", from: "Beastmode",     owner: "The Bear Witch Project" },
-  { round: "3rd", from: "Beastmode",     owner: "The Bear Witch Project" },
-  { round: "1st", from: "Team Beermode", owner: "The Bear Witch Project" },
-  { round: "3rd", from: "Team Beermode", owner: "The Bear Witch Project" },
-];
+// Verdichtete Sicht je Zukunftsjahr: nur Picks, die tatsaechlich den
+// Besitzer gewechselt haben. Alles, was hier NICHT auftaucht, ist "Own"
+// (Team besitzt seinen eigenen Pick fuer dieses Jahr/diese Runde noch).
+const FUTURE_PICKS = {
+  2027: [
+    { round: "1st", from: "Beastmode",     owner: "The Bear Witch Project" },
+    { round: "2nd", from: "Beastmode",     owner: "The Bear Witch Project" },
+    { round: "3rd", from: "Beastmode",     owner: "The Bear Witch Project" },
+    { round: "1st", from: "Team Beermode", owner: "The Bear Witch Project" },
+    { round: "3rd", from: "Team Beermode", owner: "The Bear Witch Project" },
+  ],
+  2028: [],
+  2029: [],
+};

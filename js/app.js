@@ -21,8 +21,8 @@ function updateThemeBtn() {
 /* ---------- Navigation ---------- */
 const PAGES = [
   'home', 'roster', 'draftboard', 'keepers', 'dynastyboard', 'rolling', 'weekbyweek',
-  'standings', 'matchups', 'trade', 'tradehistory',
-  'livescores', 'rules'
+  'playerrankings', 'playerprojections', 'futureboards',
+  'standings', 'matchups', 'trade', 'tradehistory'
 ];
 
 function navigate(pageId, opts) {
@@ -54,10 +54,8 @@ function showRolling() { navigate('rolling'); renderRolling(); }
 function showWeekByWeek() { navigate('weekbyweek'); renderWeekByWeek(); }
 function showStandings() { navigate('standings'); }
 function showMatchups() { navigate('matchups'); }
-function showTrade() { navigate('trade'); }
+function showTrade() { navigate('trade'); renderTrade(); }
 function showTradeHistory() { navigate('tradehistory'); renderTradeHistory(); }
-function showLiveScores() { navigate('livescores'); }
-function showRules() { navigate('rules'); }
 
 function toggleMobileNav() {
   document.getElementById('mobileNavDropdown').classList.toggle('open');
@@ -205,10 +203,6 @@ function renderKeepers() {
 /* ---------- Draft Board ---------- */
 function renderDraftboard() {
   const wrap = document.getElementById('draftboardContent');
-
-  // Spaltenreihenfolge der Teams = noch nicht final, da die Pick-Reihenfolge
-  // (Draft-Slot 1-12) erst von ESPN vergeben wird. Bis dahin alphabetisch/
-  // wie gemeldet, in Team-Objekt-Reihenfolge.
   const teams = DRAFT_2026_TEAMS;
 
   let head = `<tr><th class="round-label">Runde</th>` +
@@ -222,9 +216,9 @@ function renderDraftboard() {
       const startRound = TOTAL_DRAFT_ROUNDS - k + 1;
       if (round >= startRound) {
         const player = t.keepers[round - startRound];
-        rows += `<td><div class="cell-keeper">${player.name}<small>${player.nfl} · ${player.pos}</small></div></td>`;
+        rows += `<td><div class="cell-keeper" onclick="openTradeAnalyzer('${escapeJs(player.name)}')">${player.name}<small>${player.nfl} · ${player.pos}</small></div></td>`;
       } else {
-        rows += `<td><div class="cell-open">Offen</div></td>`;
+        rows += `<td><div class="cell-open" onclick="openTradeAnalyzer('${escapeJs(t.team)} 2026 R${round}', 'pick')">Own</div></td>`;
       }
     });
     rows += `</tr>`;
@@ -232,10 +226,11 @@ function renderDraftboard() {
 
   wrap.innerHTML = `
     <div class="info-banner">
-      <b>${TOTAL_DRAFT_ROUNDS} Runden</b> · 12 Teams · bislang keine getradeten Picks.
+      <b>${TOTAL_DRAFT_ROUNDS} Runden</b> · 12 Teams · bislang keine getradeten 2026er-Picks.
       Keeper werden von unten aufgefüllt: ein Team mit K Keepern belegt automatisch
       die letzten K Runden seines eigenen Picks. Da niemand mehr als
       <b>${MAX_KEEPERS} Keeper</b> haben kann, bleiben <b>Runde 1–5 für alle Teams offen</b>.
+      "Own" = Team besitzt diesen Pick noch selbst. Klick auf eine Zelle öffnet den Trade Analyzer.
       Die konkrete Pick-Reihenfolge (Slot 1–12) je Runde steht noch nicht fest und wird
       ergänzt, sobald ESPN sie vergibt.
     </div>
@@ -247,10 +242,12 @@ function renderDraftboard() {
     </div>
     <div class="legend">
       <div class="legend-item"><span class="legend-swatch" style="background:var(--pick-own-bg);border:1px solid var(--pick-own-color)"></span> Keeper-Pick</div>
-      <div class="legend-item"><span class="legend-swatch" style="background:var(--pick-open-bg);border:1px solid var(--pick-open-color)"></span> Offener Pick (Draft Day)</div>
+      <div class="legend-item"><span class="legend-swatch" style="background:var(--pick-open-bg);border:1px solid var(--pick-open-color)"></span> Own (noch offener Pick)</div>
     </div>
   `;
 }
+
+function escapeJs(s) { return String(s).replace(/'/g, "\\'"); }
 
 /* ---------- Dynasty Board ---------- */
 let dynastyBoardState = { sortKey: 'avg', posFilter: 'ALL', search: '' };
@@ -435,6 +432,304 @@ function renderWeekByWeek() {
   });
 }
 
+/* ---------- Owner-Lookup (welches Team besitzt welchen Spieler) ---------- */
+function ownerOfPlayer(name) {
+  for (const dt of DRAFT_2026_TEAMS) {
+    if (dt.keepers.some(p => p.name === name)) {
+      const team = LEAGUE_TEAMS.find(t => t.name === dt.team);
+      return team || { name: dt.team, emoji: '🏈' };
+    }
+  }
+  if (typeof ROSTERS_LIVE !== 'undefined') {
+    for (const teamId of Object.keys(ROSTERS_LIVE)) {
+      if ((ROSTERS_LIVE[teamId] || []).some(p => p.name === name)) {
+        return LEAGUE_TEAMS.find(t => t.id === teamId) || { name: teamId, emoji: '🏈' };
+      }
+    }
+  }
+  return null; // Free Agent / Best Available
+}
+
+/* ---------- Trade Analyzer ---------- */
+let tradeState = { sideA: [], sideB: [] };
+
+function openTradeAnalyzer(assetName, kind) {
+  tradeState.sideA.push({ name: assetName, kind: kind || 'player' });
+  navigate('trade');
+  renderTrade();
+}
+
+function assetValue(asset) {
+  if (asset.kind === 'pick') {
+    // Format: "<Team> <Jahr> R<Runde>" -- grobe Schaetzung aus PICK_VALUES
+    const m = asset.name.match(/(\d{4}) R(\d+)/);
+    if (m) {
+      const year = parseInt(m[1]), round = parseInt(m[2]);
+      const label = round === 1 ? '1st' : round === 2 ? '2nd' : round === 3 ? '3rd' : '4th';
+      const table = PICK_VALUES[label] || PICK_VALUES['4th'];
+      return table[year] || table[2029] || 300;
+    }
+    return 500;
+  }
+  const p = TRADE_VALUES.find(x => x.name === asset.name);
+  return p ? p.avg : 0;
+}
+
+function renderTrade() {
+  const wrap = document.getElementById('tradeContent');
+  wrap.innerHTML = `
+    <div class="trade-cols">
+      <div class="trade-col">
+        <div class="section-label">Team A gibt</div>
+        <input type="text" id="tradeSearchA" class="db-search" placeholder="Spieler suchen…" oninput="tradeSearch('A')">
+        <div id="tradeSuggestA" class="trade-suggest"></div>
+        <div id="tradeAssetsA"></div>
+        <div class="trade-total" id="tradeTotalA"></div>
+      </div>
+      <div class="trade-col">
+        <div class="section-label">Team B gibt</div>
+        <input type="text" id="tradeSearchB" class="db-search" placeholder="Spieler suchen…" oninput="tradeSearch('B')">
+        <div id="tradeSuggestB" class="trade-suggest"></div>
+        <div id="tradeAssetsB"></div>
+        <div class="trade-total" id="tradeTotalB"></div>
+      </div>
+    </div>
+    <div id="tradeVerdict" class="info-banner" style="text-align:center;font-weight:700"></div>
+    <div class="page-sub" style="margin-top:18px">Für verbesserte Trade Talks mit echten, verbindlichen Werten:</div>
+    <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px">
+      <a href="https://dynasty-daddy.com/trade-calculator" target="_blank" rel="noopener" class="theme-toggle" style="text-decoration:none;display:inline-block">🔗 Dynasty Daddy Trade Calculator</a>
+      <a href="https://keeptradecut.com/trade-calculator" target="_blank" rel="noopener" class="theme-toggle" style="text-decoration:none;display:inline-block">🔗 KeepTradeCut Trade Calculator</a>
+    </div>
+  `;
+  renderTradeAssets();
+}
+
+function tradeSearch(side) {
+  const q = document.getElementById('tradeSearch' + side).value.trim().toLowerCase();
+  const box = document.getElementById('tradeSuggest' + side);
+  if (!q) { box.innerHTML = ''; box.style.display = 'none'; return; }
+  const results = TRADE_VALUES.filter(p => p.name.toLowerCase().includes(q)).slice(0, 8);
+  box.style.display = results.length ? 'block' : 'none';
+  box.innerHTML = results.map(p => `
+    <div class="trade-suggest-item" onclick="addTradeAsset('${side}','${escapeJs(p.name)}')">
+      ${p.name} <span style="color:var(--muted)">${p.team} ${p.pos} · ${p.avg}</span>
+    </div>`).join('');
+}
+
+function addTradeAsset(side, name) {
+  tradeState['side' + side].push({ name, kind: 'player' });
+  document.getElementById('tradeSearch' + side).value = '';
+  document.getElementById('tradeSuggest' + side).style.display = 'none';
+  renderTradeAssets();
+}
+
+function removeTradeAsset(side, idx) {
+  tradeState['side' + side].splice(idx, 1);
+  renderTradeAssets();
+}
+
+function renderTradeAssets() {
+  ['A', 'B'].forEach(side => {
+    const list = tradeState['side' + side];
+    const el = document.getElementById('tradeAssets' + side);
+    el.innerHTML = list.map((a, i) => `
+      <div class="trade-chip">
+        <span>${a.name}</span>
+        <span style="color:var(--muted)">${assetValue(a)}</span>
+        <button onclick="removeTradeAsset('${side}',${i})">✕</button>
+      </div>`).join('') || '<div class="page-sub" style="margin:6px 0">Noch nichts hinzugefügt.</div>';
+    const total = list.reduce((s, a) => s + assetValue(a), 0);
+    document.getElementById('tradeTotal' + side).textContent = `Gesamtwert: ${total.toLocaleString('de-DE')}`;
+  });
+
+  const totalA = tradeState.sideA.reduce((s, a) => s + assetValue(a), 0);
+  const totalB = tradeState.sideB.reduce((s, a) => s + assetValue(a), 0);
+  const verdict = document.getElementById('tradeVerdict');
+  if (!totalA && !totalB) {
+    verdict.textContent = 'Spieler zu beiden Seiten hinzufügen, um den Trade zu bewerten.';
+  } else {
+    const diff = Math.abs(totalA - totalB);
+    const pct = Math.round(diff / Math.max(totalA, totalB, 1) * 100);
+    if (pct <= 8) {
+      verdict.innerHTML = `✅ Fairer Trade (Unterschied ${pct}%)`;
+    } else {
+      const favored = totalA > totalB ? 'Team A' : 'Team B';
+      verdict.innerHTML = `⚖️ Begünstigt ${favored} (Unterschied ${pct}%, ${diff.toLocaleString('de-DE')} Punkte)`;
+    }
+  }
+}
+
+/* ---------- Future Draft Boards ---------- */
+let futureBoardsState = { year: 2027 };
+
+function showFutureBoards() { navigate('futureboards'); renderFutureBoards(); }
+
+function renderFutureBoards() {
+  const wrap = document.getElementById('futureboardsContent');
+  const years = Object.keys(FUTURE_PICKS).map(Number).sort();
+  const year = futureBoardsState.year;
+  const rounds = ['1st', '2nd', '3rd', '4th', '5th'];
+  const teams = LEAGUE_TEAMS;
+
+  const overrides = {}; // "team|round" -> owner team name
+  (FUTURE_PICKS[year] || []).forEach(p => { overrides[`${p.from}|${p.round}`] = p.owner; });
+
+  let head = `<tr><th class="round-label">Runde</th>` + teams.map(t => `<th>${t.name}</th>`).join('') + `</tr>`;
+  let rows = '';
+  rounds.forEach(r => {
+    rows += `<tr><th class="round-label">${r}</th>`;
+    teams.forEach(t => {
+      const owner = overrides[`${t.name}|${r}`];
+      const pickLabel = `${t.name} ${year} ${r}`;
+      if (owner) {
+        const ownerTeam = teams.find(x => x.name === owner);
+        rows += `<td><div class="cell-keeper" onclick="openTradeAnalyzer('${escapeJs(pickLabel)}','pick')">${ownerTeam ? ownerTeam.emoji : ''} ${owner}<small>via ${t.name}</small></div></td>`;
+      } else {
+        rows += `<td><div class="cell-open" onclick="openTradeAnalyzer('${escapeJs(pickLabel)}','pick')">Own</div></td>`;
+      }
+    });
+    rows += `</tr>`;
+  });
+
+  wrap.innerHTML = `
+    <div class="db-controls"><div class="db-pos-filters" id="futureYearSelector"></div></div>
+    <div class="info-banner">
+      "Own" = Team besitzt diesen Pick noch selbst. Nur tatsächlich getradete Picks sind hervorgehoben
+      (mit Angabe, von wem sie ursprünglich kamen). Klick auf eine Zelle öffnet den Trade Analyzer.
+      Runden 1–5 gezeigt (weitere Runden erst relevant, sobald mehr getradet wird).
+    </div>
+    <div class="board-table-wrap"><table class="board"><thead>${head}</thead><tbody>${rows}</tbody></table></div>
+  `;
+  const sel = document.getElementById('futureYearSelector');
+  years.forEach(y => {
+    const btn = document.createElement('button');
+    btn.className = 'db-pos-btn' + (y === year ? ' active' : '');
+    btn.textContent = y;
+    btn.onclick = () => { futureBoardsState.year = y; renderFutureBoards(); };
+    sel.appendChild(btn);
+  });
+}
+
+/* ---------- Player Rankings & Projections (gemeinsame Basis) ---------- */
+let playerBoardState = { rankings: { posFilter: 'ALL', search: '', bestAvailable: false },
+                          projections: { posFilter: 'ALL', search: '', bestAvailable: false } };
+
+function showPlayerRankings() { navigate('playerrankings'); renderPlayerRankings(); }
+function showPlayerProjections() { navigate('playerprojections'); renderPlayerProjections(); }
+
+function renderPlayerBoardControls(prefix, state) {
+  return `
+    <div class="db-controls">
+      <input type="text" id="${prefix}Search" placeholder="Spieler suchen…" class="db-search" value="${state.search}" oninput="onPlayerBoardChange('${prefix}')">
+      <div class="db-pos-filters" id="${prefix}PosFilters"></div>
+      <label style="display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted);cursor:pointer">
+        <input type="checkbox" id="${prefix}BestAvail" ${state.bestAvailable ? 'checked' : ''} onchange="onPlayerBoardChange('${prefix}')">
+        Nur Best Available
+      </label>
+    </div>`;
+}
+
+function wirePlayerBoardControls(prefix, state, rerender) {
+  const posBar = document.getElementById(prefix + 'PosFilters');
+  ['ALL', 'QB', 'RB', 'WR', 'TE'].forEach(p => {
+    const btn = document.createElement('button');
+    btn.className = 'db-pos-btn' + (p === state.posFilter ? ' active' : '');
+    btn.textContent = p;
+    btn.onclick = () => { state.posFilter = p; rerender(); };
+    posBar.appendChild(btn);
+  });
+}
+
+function onPlayerBoardChange(prefix) {
+  const key = prefix === 'pr' ? 'rankings' : 'projections';
+  const state = playerBoardState[key];
+  state.search = document.getElementById(prefix + 'Search').value;
+  state.bestAvailable = document.getElementById(prefix + 'BestAvail').checked;
+  if (prefix === 'pr') renderPlayerRankings(); else renderPlayerProjections();
+}
+
+function renderPlayerRankings() {
+  const wrap = document.getElementById('playerrankingsContent');
+  const state = playerBoardState.rankings;
+  const stats = (typeof PLAYER_SEASON_STATS !== 'undefined') ? PLAYER_SEASON_STATS.players : [];
+
+  if (!stats.length) {
+    wrap.innerHTML = emptyState(
+      'Noch keine Saisondaten',
+      'Player Rankings bauen sich automatisch aus den tatsächlich erzielten Punkten je Woche auf (scripts/sync-espn-player-stats.js, gleicher Rhythmus wie Weekly Scores). Vor Woche 1 gibt es hier naturgemäß noch nichts zu zeigen.',
+      '📊'
+    );
+    return;
+  }
+
+  wrap.innerHTML = renderPlayerBoardControls('pr', state) + `
+    <div class="board-table-wrap">
+      <table class="board db-table">
+        <thead><tr><th>#</th><th>Spieler</th><th>Pos</th><th>Team-Besitz</th><th>Ø Punkte</th><th>Gesamt</th><th>Spiele</th></tr></thead>
+        <tbody id="prBody"></tbody>
+      </table>
+    </div>`;
+  wirePlayerBoardControls('pr', state, renderPlayerRankings);
+
+  let rows = stats.filter(p => state.posFilter === 'ALL' || p.pos === state.posFilter);
+  if (state.search.trim()) rows = rows.filter(p => p.name.toLowerCase().includes(state.search.trim().toLowerCase()));
+  if (state.bestAvailable) rows = rows.filter(p => !ownerOfPlayer(p.name));
+  rows = rows.slice().sort((a, b) => b.avgPoints - a.avgPoints).slice(0, 300);
+
+  document.getElementById('prBody').innerHTML = rows.map((p, i) => {
+    const owner = ownerOfPlayer(p.name);
+    return `<tr>
+      <td>${i + 1}</td>
+      <td style="text-align:left;font-weight:600">${p.name}</td>
+      <td>${p.pos}</td>
+      <td>${owner ? `${owner.emoji || ''} ${owner.name}` : '<span style="color:var(--green)">Free Agent</span>'}</td>
+      <td><b>${p.avgPoints}</b></td>
+      <td>${p.totalPoints}</td>
+      <td>${p.gamesPlayed}</td>
+    </tr>`;
+  }).join('');
+}
+
+function renderPlayerProjections() {
+  const wrap = document.getElementById('playerprojectionsContent');
+  const state = playerBoardState.projections;
+  const players = (typeof PLAYER_PROJECTIONS !== 'undefined') ? PLAYER_PROJECTIONS.players : [];
+
+  if (!players.length) {
+    wrap.innerHTML = emptyState(
+      'Noch keine Projektionen geladen',
+      'Läuft automatisch über scripts/sync-espn-projections.js (ESPN-Saisonprojektionen). Einmal manuell ausführen oder auf den nächsten automatischen Sync warten.',
+      '🔮'
+    );
+    return;
+  }
+
+  wrap.innerHTML = renderPlayerBoardControls('pp', state) + `
+    <div class="board-table-wrap">
+      <table class="board db-table">
+        <thead><tr><th>#</th><th>Spieler</th><th>Pos</th><th>Team-Besitz</th><th>Projizierte Punkte (Saison)</th></tr></thead>
+        <tbody id="ppBody"></tbody>
+      </table>
+    </div>`;
+  wirePlayerBoardControls('pp', state, renderPlayerProjections);
+
+  let rows = players.filter(p => state.posFilter === 'ALL' || p.pos === state.posFilter);
+  if (state.search.trim()) rows = rows.filter(p => p.name.toLowerCase().includes(state.search.trim().toLowerCase()));
+  if (state.bestAvailable) rows = rows.filter(p => !ownerOfPlayer(p.name));
+  rows = rows.slice().sort((a, b) => b.projectedPoints - a.projectedPoints).slice(0, 300);
+
+  document.getElementById('ppBody').innerHTML = rows.map((p, i) => {
+    const owner = ownerOfPlayer(p.name);
+    return `<tr>
+      <td>${i + 1}</td>
+      <td style="text-align:left;font-weight:600">${p.name}</td>
+      <td>${p.pos}</td>
+      <td>${owner ? `${owner.emoji || ''} ${owner.name}` : '<span style="color:var(--green)">Free Agent</span>'}</td>
+      <td><b>${p.projectedPoints}</b></td>
+    </tr>`;
+  }).join('');
+}
+
 /* ---------- Trade History ---------- */
 function renderTradeHistory() {
   const wrap = document.getElementById('tradehistoryContent');
@@ -465,15 +760,7 @@ function renderTradeHistory() {
         </div>
       </div>
     `).join('')}
-
-    <div class="section-label">Aktueller Stand 2027er-Picks (nach Trades)</div>
-    ${FUTURE_PICKS_2027.map(p => `
-      <div class="player-row">
-        <div class="player-round">${p.round}</div>
-        <div class="player-name">2027 ${p.round} — ursprünglich ${p.from}</div>
-        <div class="player-team">jetzt bei ${teamEmoji(p.owner)} ${p.owner}</div>
-      </div>
-    `).join('')}
+    <div class="page-sub" style="margin-top:10px">Wer aktuell welchen Zukunfts-Pick besitzt, steht auf der Seite <b>Future Draft Boards</b> (2027–2029).</div>
   `;
 }
 
