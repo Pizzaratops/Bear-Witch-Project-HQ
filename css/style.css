@@ -111,7 +111,7 @@ a { color: inherit; text-decoration: none; }
   align-items: center;
   gap: 2px;
   padding: 0 16px;
-  overflow-x: auto;
+  flex-wrap: wrap;
 }
 .snav-single, .snav-group-btn {
   background: none;

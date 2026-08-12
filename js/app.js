@@ -65,6 +65,24 @@ function closeMobileNav() {
   if (el) el.classList.remove('open');
 }
 
+/* Desktop-Dropdowns zusaetzlich per Klick (nicht nur :hover) bedienbar
+   machen -- wichtig fuer Touch-Geraete mit breitem Viewport. */
+document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.snav-group').forEach(group => {
+    const btn = group.querySelector('.snav-group-btn');
+    if (!btn) return;
+    btn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const wasOpen = group.classList.contains('open');
+      document.querySelectorAll('.snav-group.open').forEach(g => g.classList.remove('open'));
+      if (!wasOpen) group.classList.add('open');
+    });
+  });
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.snav-group.open').forEach(g => g.classList.remove('open'));
+  });
+});
+
 /* ---------- Empty state helper ---------- */
 function emptyState(title, text, emoji) {
   return `
