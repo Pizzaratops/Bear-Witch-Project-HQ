@@ -3,13 +3,13 @@ name: ESPN Roster Sync
 # Synct die vollen Team-Roster aus ESPN Fantasy Football in
 # data/rosters-live.js und committet die Aenderung ins Repo.
 #
-# Laeuft taeglich + manuell startbar ("Run workflow" im Actions-Tab).
+# Laeuft alle 3 Stunden + manuell startbar ("Run workflow" im Actions-Tab).
 # Falls die Liga privat ist, muessen ESPN_S2 und SWID als Repository
 # Secrets hinterlegt sein (Settings > Secrets and variables > Actions).
 
 on:
   schedule:
-    - cron: "0 9 * * *"   # taeglich 09:00 UTC
+    - cron: "0 */3 * * *"   # alle 3 Stunden, zur vollen Stunde (UTC)
   workflow_dispatch: {}
 
 permissions:
