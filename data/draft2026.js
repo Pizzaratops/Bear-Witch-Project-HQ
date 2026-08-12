@@ -24,6 +24,16 @@
 //
 // status: "Q" = Questionable, "O" = Out (Injury-Tag, wie im ESPN-Export
 // direkt an die Position angehaengt, z.B. "WRQ"). null = kein Tag.
+//
+// STAND 12.08.2026: Zwei Trades mit 2027er-Picks eingearbeitet (ESPN
+// kennt diese Picks nicht, siehe data/trades.js fuer das Ledger):
+//  1) Beastmode  gibt 2027 1st/2nd/3rd + Colston Loveland
+//     Bear Witch Project gibt Trey McBride + Tetairoa McMillan
+//  2) Bear Witch Project gibt Emeka Egbuka
+//     Team Beermode gibt 2027 1st + 2027 3rd
+// Die neu erhaltenen Spieler wurden unten jeweils ans Ende der
+// Keeper-Liste des neuen Teams gehaengt (=> spaeteste freie Runde).
+// Falls die Prioritaet anders sein soll, hier die Reihenfolge tauschen.
 // ============================================================
 
 const TOTAL_DRAFT_ROUNDS = 15;
@@ -36,13 +46,11 @@ const DRAFT_2026_TEAMS = [
     keepers: [
       { name: "Travis Hunter",        nfl: "JAX", pos: "WR/CB", status: null },
       { name: "George Pickens",       nfl: "DAL", pos: "WR",    status: null },
-      { name: "Emeka Egbuka",         nfl: "TB",  pos: "WR",    status: null },
       { name: "DeVonta Smith",        nfl: "PHI", pos: "WR",    status: null },
       { name: "Garrett Wilson",       nfl: "NYJ", pos: "WR",    status: null },
-      { name: "Tetairoa McMillan",    nfl: "CAR", pos: "WR",    status: null },
-      { name: "Trey McBride",         nfl: "ARI", pos: "TE",    status: null },
       { name: "Nico Collins",         nfl: "HOU", pos: "WR",    status: null },
       { name: "Jonathan Taylor",      nfl: "IND", pos: "RB",    status: null },
+      { name: "Colston Loveland",     nfl: "CHI", pos: "TE",    status: null },
     ],
   },
   {
@@ -100,7 +108,8 @@ const DRAFT_2026_TEAMS = [
       { name: "Bijan Robinson",       nfl: "ATL", pos: "RB", status: null },
       { name: "James Cook III",       nfl: "BUF", pos: "RB", status: null },
       { name: "TreVeyon Henderson",   nfl: "NE",  pos: "RB", status: null },
-      { name: "Colston Loveland",     nfl: "CHI", pos: "TE", status: null },
+      { name: "Trey McBride",         nfl: "ARI", pos: "TE", status: null },
+      { name: "Tetairoa McMillan",    nfl: "CAR", pos: "WR", status: null },
     ],
   },
   {
@@ -122,6 +131,7 @@ const DRAFT_2026_TEAMS = [
       { name: "Justin Jefferson",     nfl: "MIN", pos: "WR", status: null },
       { name: "Chris Olave",          nfl: "NO",  pos: "WR", status: null },
       { name: "D'Andre Swift",        nfl: "CHI", pos: "RB", status: null },
+      { name: "Emeka Egbuka",         nfl: "TB",  pos: "WR", status: null },
     ],
   },
   {

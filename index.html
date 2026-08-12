@@ -36,6 +36,7 @@
         <div class="snav-dropdown">
           <button class="snav-dropdown-item" data-page="draftboard" onclick="showDraftboard()">📋 Draft Board</button>
           <button class="snav-dropdown-item" data-page="keepers" onclick="showKeepers()">🔒 Keeper Übersicht</button>
+          <button class="snav-dropdown-item" data-page="dynastyboard" onclick="showDynastyBoard()">🏆 Dynasty Board</button>
         </div>
       </div>
 
@@ -78,6 +79,7 @@
         <div class="subnav-mobile-label">Draft 2026</div>
         <button class="subnav-mobile-btn" data-page="draftboard" onclick="showDraftboard()">📋 Draft Board</button>
         <button class="subnav-mobile-btn" data-page="keepers" onclick="showKeepers()">🔒 Keeper Übersicht</button>
+        <button class="subnav-mobile-btn" data-page="dynastyboard" onclick="showDynastyBoard()">🏆 Dynasty Board</button>
       </div>
       <div class="subnav-mobile-group">
         <div class="subnav-mobile-label">Trade</div>
@@ -116,6 +118,13 @@
   <div id="keepersContent"></div>
 </div>
 
+<!-- ============ DYNASTY BOARD ============ -->
+<div class="page" id="page-dynastyboard">
+  <div class="page-title">🏆 Dynasty Board</div>
+  <div class="page-sub">Rankings-Vergleich mehrerer Quellen, sortiert nach Durchschnitt</div>
+  <div id="dynastyboardContent"></div>
+</div>
+
 <!-- ============ EMPTY / TBD PAGES ============ -->
 <div class="page" id="page-standings">
   <div class="page-title">📈 Standings</div>
@@ -150,11 +159,7 @@
 <div class="page" id="page-tradehistory">
   <div class="page-title">📜 Trade History</div>
   <div class="page-sub">Alle bisherigen Trades der Liga</div>
-  <div class="empty-state">
-    <span class="empty-emoji">🚧</span>
-    <div class="empty-title">Noch keine Trades erfasst</div>
-    <div class="empty-text">Bislang wurden laut Draft-Regeln keine Picks getradet.</div>
-  </div>
+  <div id="tradehistoryContent"></div>
 </div>
 
 <div class="page" id="page-livescores">
@@ -180,6 +185,8 @@
 <script src="data/teams.js"></script>
 <script src="data/draft2026.js"></script>
 <script src="data/rosters-live.js"></script>
+<script src="data/dynasty-board.js"></script>
+<script src="data/trades.js"></script>
 <script src="js/app.js"></script>
 <script>
   // Teams-Dropdown dynamisch befuellen (Desktop + Mobile)

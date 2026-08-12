@@ -20,7 +20,7 @@ function updateThemeBtn() {
 
 /* ---------- Navigation ---------- */
 const PAGES = [
-  'home', 'roster', 'draftboard', 'keepers',
+  'home', 'roster', 'draftboard', 'keepers', 'dynastyboard',
   'standings', 'matchups', 'trade', 'tradehistory',
   'livescores', 'rules'
 ];
@@ -49,10 +49,11 @@ function goHome() { navigate('home'); renderHome(); }
 function showRoster(teamId) { navigate('roster', { teamId }); }
 function showDraftboard() { navigate('draftboard'); renderDraftboard(); }
 function showKeepers() { navigate('keepers'); renderKeepers(); }
+function showDynastyBoard() { navigate('dynastyboard'); renderDynastyBoard(); }
 function showStandings() { navigate('standings'); }
 function showMatchups() { navigate('matchups'); }
 function showTrade() { navigate('trade'); }
-function showTradeHistory() { navigate('tradehistory'); }
+function showTradeHistory() { navigate('tradehistory'); renderTradeHistory(); }
 function showLiveScores() { navigate('livescores'); }
 function showRules() { navigate('rules'); }
 
@@ -231,7 +232,139 @@ function renderDraftboard() {
   `;
 }
 
-/* ---------- Init ---------- */
+/* ---------- Dynasty Board ---------- */
+let dynastyBoardState = { sortKey: 'avg', posFilter: 'ALL', search: '' };
+
+function renderDynastyBoard() {
+  const wrap = document.getElementById('dynastyboardContent');
+  wrap.innerHTML = `
+    <div class="info-banner">
+      Durchschnitt (Ø) aus allen Quellen, in denen ein Spieler auftaucht — je niedriger, desto wertvoller.
+      <b>FantasyCalc</b> ist hier noch nicht dabei (API-Key-Anbindung offen). Spaltenköpfe anklicken zum Sortieren.
+    </div>
+    <div class="db-controls">
+      <input type="text" id="dbSearch" placeholder="Spieler suchen…" class="db-search" oninput="onDynastyBoardChange()">
+      <div class="db-pos-filters" id="dbPosFilters"></div>
+    </div>
+    <div class="board-table-wrap">
+      <table class="board db-table">
+        <thead><tr id="dbHeadRow"></tr></thead>
+        <tbody id="dbBody"></tbody>
+      </table>
+    </div>
+    <div class="page-sub" style="margin-top:10px">${DYNASTY_BOARD.length} Spieler aus 4 Quellen zusammengeführt.</div>
+  `;
+
+  const posBar = document.getElementById('dbPosFilters');
+  ['ALL', 'QB', 'RB', 'WR', 'TE'].forEach(p => {
+    const btn = document.createElement('button');
+    btn.className = 'db-pos-btn' + (p === dynastyBoardState.posFilter ? ' active' : '');
+    btn.textContent = p;
+    btn.onclick = () => { dynastyBoardState.posFilter = p; renderDynastyBoard(); };
+    posBar.appendChild(btn);
+  });
+  document.getElementById('dbSearch').value = dynastyBoardState.search;
+
+  const cols = [
+    { key: 'avg', label: 'Ø' }, { key: 'name', label: 'Spieler' }, { key: 'pos', label: 'Pos' },
+    { key: 'fp', label: 'FantasyPros' }, { key: 'ktc', label: 'KTC' },
+    { key: 'fn', label: 'Fantasy Navigator' }, { key: 'dd', label: 'Dynasty Daddy' }, { key: 'n', label: 'Quellen' },
+  ];
+  const headRow = document.getElementById('dbHeadRow');
+  headRow.innerHTML = cols.map(c =>
+    `<th style="cursor:pointer" onclick="sortDynastyBoard('${c.key}')">${c.label}${dynastyBoardState.sortKey === c.key ? ' ▲' : ''}</th>`
+  ).join('');
+
+  renderDynastyBoardRows();
+}
+
+function onDynastyBoardChange() {
+  dynastyBoardState.search = document.getElementById('dbSearch').value;
+  renderDynastyBoardRows();
+}
+
+function sortDynastyBoard(key) {
+  dynastyBoardState.sortKey = key;
+  renderDynastyBoard();
+}
+
+function renderDynastyBoardRows() {
+  const { sortKey, posFilter, search } = dynastyBoardState;
+  let rows = DYNASTY_BOARD.filter(p => posFilter === 'ALL' || p.pos === posFilter);
+  if (search.trim()) {
+    const q = search.trim().toLowerCase();
+    rows = rows.filter(p => p.name.toLowerCase().includes(q));
+  }
+  rows = rows.slice().sort((a, b) => {
+    if (sortKey === 'name') return a.name.localeCompare(b.name);
+    const av = a[sortKey], bv = b[sortKey];
+    if (av == null && bv == null) return 0;
+    if (av == null) return 1;
+    if (bv == null) return -1;
+    return av - bv;
+  });
+  rows = rows.slice(0, 300); // Performance: Top 300 der aktuellen Filterung anzeigen
+
+  document.getElementById('dbBody').innerHTML = rows.map(p => `
+    <tr>
+      <td><b>${p.avg}</b></td>
+      <td style="text-align:left">${p.name}</td>
+      <td>${p.pos}</td>
+      <td>${p.fp ?? '—'}</td>
+      <td>${p.ktc ?? '—'}</td>
+      <td>${p.fn ?? '—'}</td>
+      <td>${p.dd ?? '—'}</td>
+      <td>${p.n}/4</td>
+    </tr>`).join('');
+}
+
+/* ---------- Trade History ---------- */
+function renderTradeHistory() {
+  const wrap = document.getElementById('tradehistoryContent');
+  if (!TRADES.length) {
+    wrap.innerHTML = emptyState('Noch keine Trades erfasst', 'Bislang wurden keine Picks getradet.');
+    return;
+  }
+  const teamEmoji = name => (LEAGUE_TEAMS.find(t => t.name === name) || {}).emoji || '🏈';
+
+  wrap.innerHTML = `
+    <div class="info-banner">
+      ESPN führt in unserer Liga keine Draft-Picks für 2027 und später. Trades mit solchen Picks
+      werden deshalb hier von Hand nachgetragen (siehe <code>data/trades.js</code>).
+    </div>
+    <div class="section-label">Chronik</div>
+    ${TRADES.map(t => `
+      <div class="player-row" style="align-items:flex-start;flex-direction:column;gap:6px;padding:14px;">
+        <div style="font-size:11px;color:var(--muted);font-weight:700">${formatTradeDate(t.date)}</div>
+        <div style="display:flex;gap:18px;flex-wrap:wrap;width:100%">
+          <div style="flex:1;min-width:200px">
+            <div style="font-weight:800;margin-bottom:4px">${teamEmoji(t.teamA)} ${t.teamA} gibt:</div>
+            ${t.teamAGives.map(a => `<div class="player-team">• ${a}</div>`).join('')}
+          </div>
+          <div style="flex:1;min-width:200px">
+            <div style="font-weight:800;margin-bottom:4px">${teamEmoji(t.teamB)} ${t.teamB} gibt:</div>
+            ${t.teamBGives.map(a => `<div class="player-team">• ${a}</div>`).join('')}
+          </div>
+        </div>
+      </div>
+    `).join('')}
+
+    <div class="section-label">Aktueller Stand 2027er-Picks (nach Trades)</div>
+    ${FUTURE_PICKS_2027.map(p => `
+      <div class="player-row">
+        <div class="player-round">${p.round}</div>
+        <div class="player-name">2027 ${p.round} — ursprünglich ${p.from}</div>
+        <div class="player-team">jetzt bei ${teamEmoji(p.owner)} ${p.owner}</div>
+      </div>
+    `).join('')}
+  `;
+}
+
+function formatTradeDate(iso) {
+  const d = new Date(iso + 'T12:00:00');
+  return d.toLocaleDateString('de-DE', { day: '2-digit', month: 'long', year: 'numeric' });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   updateThemeBtn();
   renderHome();
