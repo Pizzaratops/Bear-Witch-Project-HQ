@@ -30,6 +30,35 @@ const TRADES = [
     teamB: "Team Beermode",
     teamBGives: ["2027 1st", "2027 3rd"],
   },
+  {
+    date: "2026-08-11",
+    teamA: "Beastmode",
+    teamAGives: ["Quinshon Judkins", "Rome Odunze"],
+    teamB: "Burrowhead Dancers",
+    teamBGives: ["James Cook III"],
+  },
+  {
+    date: "2026-08-11",
+    teamA: "Beastmode",
+    teamAGives: ["Jaylen Waddle", "Christian McCaffrey", "Marvin Harrison Jr."],
+    teamB: "Running Bisons",
+    teamBGives: ["Puka Nacua"],
+  },
+  {
+    date: "2026-08-12",
+    teamA: "Beastmode",
+    teamAGives: ["Kyle Pitts"],
+    teamB: "Team Beermode",
+    teamBGives: ["2026 5th"],
+  },
+];
+
+// Getradete Picks INNERHALB des 2026er Drafts (im Gegensatz zu FUTURE_PICKS
+// unten, das nur 2027+ betrifft). Format: round = Rundennummer (1-15) wie
+// im Draft Board 2026 verwendet. "from" = urspruenglicher Team-Name (Spalte
+// im Draft Board 2026), "owner" = wer den Pick jetzt haelt.
+const TRADED_PICKS_2026 = [
+  { round: 5, from: "Beastmode", owner: "Team Beermode" },
 ];
 
 // Verdichtete Sicht je Zukunftsjahr: nur Picks, die tatsaechlich den

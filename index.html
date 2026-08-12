@@ -44,8 +44,14 @@
         <div class="snav-dropdown">
           <button class="snav-dropdown-item" data-page="draftboard" onclick="showDraftboard()">📋 Draft Board</button>
           <button class="snav-dropdown-item" data-page="keepers" onclick="showKeepers()">🔒 Keeper Übersicht</button>
+        </div>
+      </div>
+
+      <div class="snav-group">
+        <button class="snav-group-btn">🏆 Dynasty <span class="snav-arrow">▾</span></button>
+        <div class="snav-dropdown">
           <button class="snav-dropdown-item" data-page="dynastyboard" onclick="showDynastyBoard()">🏆 Dynasty Board</button>
-          <button class="snav-dropdown-item" data-page="rolling" onclick="showRolling()">📈 Rolling Rankings</button>
+          <button class="snav-dropdown-item" data-page="rolling" onclick="showRolling()">📈 Rolling Rankings Dynasty</button>
         </div>
       </div>
 
@@ -66,7 +72,13 @@
       </div>
 
       <div class="snav-divider"></div>
-      <button class="snav-single" data-page="standings" onclick="showStandings()">📈 Standings</button>
+      <div class="snav-group">
+        <button class="snav-group-btn">📈 Standings <span class="snav-arrow">▾</span></button>
+        <div class="snav-dropdown">
+          <button class="snav-dropdown-item" data-page="standings" onclick="showStandings()">📈 Standings</button>
+          <button class="snav-dropdown-item" data-page="seasonrolling" onclick="showSeasonRolling()">📈 2026 Rolling Rankings</button>
+        </div>
+      </div>
       <button class="snav-single" data-page="matchups" onclick="showMatchups()">⚔️ Matchups</button>
       <button class="snav-single" data-page="futureboards" onclick="showFutureBoards()">🔮 Future Draft Boards</button>
       <button class="snav-single" data-page="weekbyweek" onclick="showWeekByWeek()">🗓️ Weekly Scores</button>
@@ -84,6 +96,7 @@
         <div class="subnav-mobile-label">Navigation</div>
         <button class="subnav-mobile-btn" data-page="home" onclick="goHome()">🏠 Home</button>
         <button class="subnav-mobile-btn" data-page="standings" onclick="showStandings()">📈 Standings</button>
+        <button class="subnav-mobile-btn" data-page="seasonrolling" onclick="showSeasonRolling()">📈 2026 Rolling Rankings</button>
         <button class="subnav-mobile-btn" data-page="matchups" onclick="showMatchups()">⚔️ Matchups</button>
         <button class="subnav-mobile-btn" data-page="futureboards" onclick="showFutureBoards()">🔮 Future Draft Boards</button>
         <button class="subnav-mobile-btn" data-page="weekbyweek" onclick="showWeekByWeek()">🗓️ Weekly Scores</button>
@@ -96,8 +109,11 @@
         <div class="subnav-mobile-label">Draft 2026</div>
         <button class="subnav-mobile-btn" data-page="draftboard" onclick="showDraftboard()">📋 Draft Board</button>
         <button class="subnav-mobile-btn" data-page="keepers" onclick="showKeepers()">🔒 Keeper Übersicht</button>
+      </div>
+      <div class="subnav-mobile-group">
+        <div class="subnav-mobile-label">Dynasty</div>
         <button class="subnav-mobile-btn" data-page="dynastyboard" onclick="showDynastyBoard()">🏆 Dynasty Board</button>
-        <button class="subnav-mobile-btn" data-page="rolling" onclick="showRolling()">📈 Rolling Rankings</button>
+        <button class="subnav-mobile-btn" data-page="rolling" onclick="showRolling()">📈 Rolling Rankings Dynasty</button>
       </div>
       <div class="subnav-mobile-group">
         <div class="subnav-mobile-label">Players</div>
@@ -192,6 +208,12 @@
     <div class="empty-title">Noch keine Daten</div>
     <div class="empty-text">Die Standings werden befüllt, sobald die reguläre Saison läuft bzw. die ESPN-Anbindung steht.</div>
   </div>
+</div>
+
+<div class="page" id="page-seasonrolling">
+  <div class="page-title">📈 2026 Rolling Rankings</div>
+  <div class="page-sub">Kumulierte Punkte &amp; Rang je Woche, mit Wochenauswahl &amp; Vergleich</div>
+  <div id="seasonrollingContent"></div>
 </div>
 
 <div class="page" id="page-matchups">

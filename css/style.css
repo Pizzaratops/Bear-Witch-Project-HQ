@@ -204,6 +204,40 @@ a { color: inherit; text-decoration: none; }
   .subnav-mobile { display: block; }
 }
 
+/* ---------- MOBILE-GRUNDANPASSUNGEN ---------- */
+@media (max-width: 600px) {
+  .header { padding: 10px 12px; gap: 8px; }
+  .header .logo { font-size: 17px; }
+  .header-right { gap: 6px; }
+  .theme-toggle, .back-btn { padding: 6px 10px; font-size: 11px; }
+
+  .page { padding: 16px 12px 44px; }
+  .page-title { font-size: 22px; }
+  .page-sub { font-size: 12.5px; margin-bottom: 18px; }
+
+  .team-grid { grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+  .team-card { padding: 13px; }
+  .team-emoji { font-size: 21px; }
+  .team-name { font-size: 13px; }
+  .team-meta { font-size: 11px; }
+
+  .db-controls { gap: 8px; }
+  .db-search { min-width: 0; width: 100%; }
+  .db-pos-filters { gap: 4px; overflow-x: auto; padding-bottom: 2px; }
+  .db-pos-btn { padding: 6px 9px; font-size: 11px; white-space: nowrap; }
+
+  table.board td { min-width: 84px; font-size: 10.5px; padding: 5px 4px; }
+  table.board.board-compact td { min-width: 76px; }
+  table.board th { font-size: 9px; padding: 6px 4px; }
+
+  .info-banner { font-size: 11.5px; padding: 10px 12px; }
+  .player-row { padding: 8px 10px; gap: 8px; }
+  .player-name { font-size: 13px; }
+
+  .trade-cols { gap: 10px; }
+  .trade-col { padding: 10px; }
+}
+
 /* ---------- PAGE / LAYOUT ---------- */
 .page { max-width: 1180px; margin: 0 auto; padding: 28px 20px 60px; display: none; }
 .page.active { display: block; }
@@ -302,6 +336,21 @@ table.board td {
 .cell-keeper { background: var(--pick-own-bg) !important; color: var(--pick-own-color); border-radius: 8px; padding: 6px; font-weight: 700; }
 .cell-keeper small { display: block; font-weight: 500; opacity: 0.85; font-size: 10px; }
 .cell-open { color: var(--pick-open-color); background: var(--pick-open-bg) !important; border-radius: 8px; font-weight: 600; font-size: 11px; }
+
+/* Kompaktere Draft-Board-Variante, damit moeglichst viele Spalten
+   gleichzeitig sichtbar sind (Draft Board 2026 + Future Draft Boards).
+   Runde-Spalte bleibt beim horizontalen Scrollen sticky links stehen. */
+table.board.board-compact td { min-width: 96px; padding: 5px 5px; font-size: 11px; }
+table.board.board-compact th { padding: 7px 5px; font-size: 9.5px; }
+table.board th.round-label,
+table.board tr th:first-child {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+}
+table.board.board-compact .cell-keeper,
+table.board.board-compact .cell-open { padding: 4px; font-size: 10.5px; }
+table.board.board-compact .cell-keeper small { font-size: 9px; }
 
 .legend { display: flex; gap: 18px; flex-wrap: wrap; margin-top: 14px; }
 .legend-item { display: flex; align-items: center; gap: 8px; font-size: 12px; color: var(--muted); }

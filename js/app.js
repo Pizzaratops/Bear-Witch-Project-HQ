@@ -22,7 +22,7 @@ function updateThemeBtn() {
 const PAGES = [
   'home', 'roster', 'draftboard', 'keepers', 'dynastyboard', 'rolling', 'weekbyweek',
   'playerrankings', 'playerprojections', 'futureboards',
-  'standings', 'matchups', 'trade', 'tradehistory'
+  'standings', 'seasonrolling', 'matchups', 'trade', 'tradehistory'
 ];
 
 function navigate(pageId, opts) {
@@ -53,6 +53,7 @@ function showDynastyBoard() { navigate('dynastyboard'); renderDynastyBoard(); }
 function showRolling() { navigate('rolling'); renderRolling(); }
 function showWeekByWeek() { navigate('weekbyweek'); renderWeekByWeek(); }
 function showStandings() { navigate('standings'); }
+function showSeasonRolling() { navigate('seasonrolling'); renderSeasonRolling(); }
 function showMatchups() { navigate('matchups'); }
 function showTrade() { navigate('trade'); renderTrade(); }
 function showTradeHistory() { navigate('tradehistory'); renderTradeHistory(); }
@@ -204,6 +205,13 @@ function renderKeepers() {
 function renderDraftboard() {
   const wrap = document.getElementById('draftboardContent');
   const teams = DRAFT_2026_TEAMS;
+  const teamsById = LEAGUE_TEAMS.reduce((m, t) => { m[t.name] = t; return m; }, {});
+
+  const tradedOverrides = {}; // "team|round" -> owner team name
+  (typeof TRADED_PICKS_2026 !== 'undefined' ? TRADED_PICKS_2026 : []).forEach(p => {
+    tradedOverrides[`${p.from}|${p.round}`] = p.owner;
+  });
+  const tradedCount = Object.keys(tradedOverrides).length;
 
   let head = `<tr><th class="round-label">Runde</th>` +
     teams.map(t => `<th>${t.team}</th>`).join('') + `</tr>`;
@@ -214,9 +222,13 @@ function renderDraftboard() {
     teams.forEach(t => {
       const k = t.keepers.length;
       const startRound = TOTAL_DRAFT_ROUNDS - k + 1;
+      const tradedOwner = tradedOverrides[`${t.team}|${round}`];
       if (round >= startRound) {
         const player = t.keepers[round - startRound];
         rows += `<td><div class="cell-keeper" onclick="openTradeAnalyzer('${escapeJs(player.name)}')">${player.name}<small>${player.nfl} · ${player.pos}</small></div></td>`;
+      } else if (tradedOwner) {
+        const ownerEmoji = teamsById[tradedOwner] ? teamsById[tradedOwner].emoji : '';
+        rows += `<td><div class="cell-keeper" onclick="openTradeAnalyzer('${escapeJs(t.team)} 2026 R${round}', 'pick')">${ownerEmoji} ${tradedOwner}<small>via ${t.team}</small></div></td>`;
       } else {
         rows += `<td><div class="cell-open" onclick="openTradeAnalyzer('${escapeJs(t.team)} 2026 R${round}', 'pick')">Own</div></td>`;
       }
@@ -226,7 +238,7 @@ function renderDraftboard() {
 
   wrap.innerHTML = `
     <div class="info-banner">
-      <b>${TOTAL_DRAFT_ROUNDS} Runden</b> · 12 Teams · bislang keine getradeten 2026er-Picks.
+      <b>${TOTAL_DRAFT_ROUNDS} Runden</b> · 12 Teams${tradedCount ? ` · <b>${tradedCount}</b> getradete(r) 2026er-Pick(s) hervorgehoben` : ' · bislang keine getradeten 2026er-Picks'}.
       Keeper werden von unten aufgefüllt: ein Team mit K Keepern belegt automatisch
       die letzten K Runden seines eigenen Picks. Da niemand mehr als
       <b>${MAX_KEEPERS} Keeper</b> haben kann, bleiben <b>Runde 1–5 für alle Teams offen</b>.
@@ -235,13 +247,13 @@ function renderDraftboard() {
       ergänzt, sobald ESPN sie vergibt.
     </div>
     <div class="board-table-wrap">
-      <table class="board">
+      <table class="board board-compact">
         <thead>${head}</thead>
         <tbody>${rows}</tbody>
       </table>
     </div>
     <div class="legend">
-      <div class="legend-item"><span class="legend-swatch" style="background:var(--pick-own-bg);border:1px solid var(--pick-own-color)"></span> Keeper-Pick</div>
+      <div class="legend-item"><span class="legend-swatch" style="background:var(--pick-own-bg);border:1px solid var(--pick-own-color)"></span> Keeper-Pick / getradeter Pick</div>
       <div class="legend-item"><span class="legend-swatch" style="background:var(--pick-open-bg);border:1px solid var(--pick-open-color)"></span> Own (noch offener Pick)</div>
     </div>
   `;
@@ -432,6 +444,113 @@ function renderWeekByWeek() {
   });
 }
 
+/* ---------- 2026 Season Rolling Rankings (Standings-Unterseite) ---------- */
+let seasonRollingState = { season: null, week: null, compareWeek: null };
+
+// Kumulierte Punkte + Rang je Team bis (inkl.) einer bestimmten Woche.
+function cumulativeStandingsThroughWeek(season, uptoWeek) {
+  const totals = {}; // teamId -> { points, wins, losses }
+  for (let w = 1; w <= uptoWeek; w++) {
+    (WEEKLY_SCORES[season][w] || []).forEach(e => {
+      if (!totals[e.teamId]) totals[e.teamId] = { points: 0, wins: 0, losses: 0 };
+      totals[e.teamId].points += e.points;
+      if (e.points > e.opponentPoints) totals[e.teamId].wins++;
+      else if (e.points < e.opponentPoints) totals[e.teamId].losses++;
+    });
+  }
+  const ranked = Object.keys(totals)
+    .map(teamId => ({ teamId, ...totals[teamId] }))
+    .sort((a, b) => b.points - a.points);
+  ranked.forEach((r, i) => { r.rank = i + 1; });
+  return ranked;
+}
+
+function renderSeasonRolling() {
+  const wrap = document.getElementById('seasonrollingContent');
+  const seasons = Object.keys(WEEKLY_SCORES);
+  const season = seasonRollingState.season || seasons[seasons.length - 1];
+  const weeks = Object.keys(WEEKLY_SCORES[season] || {}).map(Number).sort((a, b) => a - b);
+
+  if (!weeks.length) {
+    wrap.innerHTML = emptyState(
+      'Noch keine Saisonwerte',
+      'Diese Seite zeigt die 2026 Season Rolling Rankings (kumulierte Punkte + Rang je Woche, inkl. Wochenauswahl und Vergleich). Sobald die reguläre Saison läuft und der automatische ESPN-Sync (täglich 9 & 21 Uhr) Wochenwerte liefert, füllt sie sich automatisch.',
+      '📈'
+    );
+    return;
+  }
+
+  const week = seasonRollingState.week && weeks.includes(seasonRollingState.week) ? seasonRollingState.week : weeks[weeks.length - 1];
+  const compareWeek = seasonRollingState.compareWeek && weeks.includes(seasonRollingState.compareWeek) && seasonRollingState.compareWeek < week
+    ? seasonRollingState.compareWeek
+    : (weeks.find(w => w < week) ?? week);
+  seasonRollingState = { season, week, compareWeek };
+
+  const teamMeta = id => LEAGUE_TEAMS.find(t => t.id === id) || { name: id, emoji: '🏈' };
+  const current = cumulativeStandingsThroughWeek(season, week);
+  const compare = cumulativeStandingsThroughWeek(season, compareWeek);
+  const compareRankByTeam = {};
+  compare.forEach(r => { compareRankByTeam[r.teamId] = r.rank; });
+
+  const rows = current.map(r => {
+    const t = teamMeta(r.teamId);
+    const prevRank = compareRankByTeam[r.teamId];
+    let trend = '<span style="color:var(--muted)">–</span>';
+    if (prevRank !== undefined && compareWeek !== week) {
+      const delta = prevRank - r.rank;
+      if (delta > 0) trend = `<span style="color:var(--green)">▲ ${delta}</span>`;
+      else if (delta < 0) trend = `<span style="color:var(--red)">▼ ${Math.abs(delta)}</span>`;
+      else trend = '<span style="color:var(--muted)">– 0</span>';
+    }
+    return `<tr>
+      <td>${r.rank}</td>
+      <td style="text-align:left;font-weight:600">${t.emoji || ''} ${t.name}</td>
+      <td><b>${r.points.toFixed(1)}</b></td>
+      <td>${r.wins}-${r.losses}</td>
+      <td>${trend}</td>
+    </tr>`;
+  }).join('');
+
+  wrap.innerHTML = `
+    <div class="db-controls">
+      <div class="db-pos-filters" id="seasonRollingWeekSelector"></div>
+    </div>
+    <div class="info-banner">
+      Kumulierte Punkte &amp; Rang durch <b>Woche ${week}</b> (Season ${season}).
+      Vergleich zu <b>Woche ${compareWeek}</b>${compareWeek === week ? ' (kein früherer Wert vorhanden)' : ''} —
+      wähle unten eine andere Vergleichs-Woche.
+    </div>
+    <div class="db-controls">
+      <span style="font-size:12px;color:var(--muted);font-weight:700">Vergleich zu:</span>
+      <div class="db-pos-filters" id="seasonRollingCompareSelector"></div>
+    </div>
+    <div class="board-table-wrap">
+      <table class="board">
+        <thead><tr><th class="round-label">#</th><th>Team</th><th>Punkte gesamt</th><th>W-L</th><th>Rang-Trend</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>
+  `;
+
+  const weekSel = document.getElementById('seasonRollingWeekSelector');
+  weeks.forEach(w => {
+    const btn = document.createElement('button');
+    btn.className = 'db-pos-btn' + (w === week ? ' active' : '');
+    btn.textContent = 'Woche ' + w;
+    btn.onclick = () => { seasonRollingState.week = w; renderSeasonRolling(); };
+    weekSel.appendChild(btn);
+  });
+
+  const cmpSel = document.getElementById('seasonRollingCompareSelector');
+  weeks.filter(w => w < week).forEach(w => {
+    const btn = document.createElement('button');
+    btn.className = 'db-pos-btn' + (w === compareWeek ? ' active' : '');
+    btn.textContent = 'Woche ' + w;
+    btn.onclick = () => { seasonRollingState.compareWeek = w; renderSeasonRolling(); };
+    cmpSel.appendChild(btn);
+  });
+}
+
 /* ---------- Owner-Lookup (welches Team besitzt welchen Spieler) ---------- */
 function ownerOfPlayer(name) {
   for (const dt of DRAFT_2026_TEAMS) {
@@ -598,7 +717,7 @@ function renderFutureBoards() {
       (mit Angabe, von wem sie ursprünglich kamen). Klick auf eine Zelle öffnet den Trade Analyzer.
       Runden 1–5 gezeigt (weitere Runden erst relevant, sobald mehr getradet wird).
     </div>
-    <div class="board-table-wrap"><table class="board"><thead>${head}</thead><tbody>${rows}</tbody></table></div>
+    <div class="board-table-wrap"><table class="board board-compact"><thead>${head}</thead><tbody>${rows}</tbody></table></div>
   `;
   const sel = document.getElementById('futureYearSelector');
   years.forEach(y => {
