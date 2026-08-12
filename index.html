@@ -4,6 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Bear Witch Project HQ 🐻🏈</title>
+<link rel="manifest" href="manifest.json">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Bear Witch Project HQ">
+<link rel="apple-touch-icon" href="icon-192.png">
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🐻</text></svg>">
 <meta name="theme-color" content="#0a0f1c">
 <link rel="stylesheet" href="css/style.css">
@@ -16,6 +21,8 @@
 <div class="header">
   <div class="logo">🐻 Bear Witch Project <span>HQ</span></div>
   <div class="header-right">
+    <button id="pwaInstallBtn" onclick="pwaInstallApp()" class="theme-toggle" style="display:none">⬇️ App installieren</button>
+    <button id="pwaIosHintBtn" onclick="pwaShowIosSteps()" class="theme-toggle" style="display:none">📲 Zum Home-Bildschirm</button>
     <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">☀️ Light</button>
   </div>
 </div>
@@ -38,6 +45,8 @@
           <button class="snav-dropdown-item" data-page="draftboard" onclick="showDraftboard()">📋 Draft Board</button>
           <button class="snav-dropdown-item" data-page="keepers" onclick="showKeepers()">🔒 Keeper Übersicht</button>
           <button class="snav-dropdown-item" data-page="dynastyboard" onclick="showDynastyBoard()">🏆 Dynasty Board</button>
+          <button class="snav-dropdown-item" data-page="rolling" onclick="showRolling()">📈 Rolling Rankings</button>
+          <button class="snav-dropdown-item" data-page="weekbyweek" onclick="showWeekByWeek()">🗓️ Week by Week</button>
         </div>
       </div>
 
@@ -81,6 +90,8 @@
         <button class="subnav-mobile-btn" data-page="draftboard" onclick="showDraftboard()">📋 Draft Board</button>
         <button class="subnav-mobile-btn" data-page="keepers" onclick="showKeepers()">🔒 Keeper Übersicht</button>
         <button class="subnav-mobile-btn" data-page="dynastyboard" onclick="showDynastyBoard()">🏆 Dynasty Board</button>
+        <button class="subnav-mobile-btn" data-page="rolling" onclick="showRolling()">📈 Rolling Rankings</button>
+        <button class="subnav-mobile-btn" data-page="weekbyweek" onclick="showWeekByWeek()">🗓️ Week by Week</button>
       </div>
       <div class="subnav-mobile-group">
         <div class="subnav-mobile-label">Trade</div>
@@ -124,6 +135,20 @@
   <div class="page-title">🏆 Dynasty Board</div>
   <div class="page-sub">Rankings-Vergleich mehrerer Quellen, sortiert nach Durchschnitt</div>
   <div id="dynastyboardContent"></div>
+</div>
+
+<!-- ============ ROLLING RANKINGS ============ -->
+<div class="page" id="page-rolling">
+  <div class="page-title">📈 Rolling Rankings</div>
+  <div class="page-sub">Dynasty-Wertentwicklung über Zeit</div>
+  <div id="rollingContent"></div>
+</div>
+
+<!-- ============ WEEK BY WEEK ============ -->
+<div class="page" id="page-weekbyweek">
+  <div class="page-title">🗓️ Week by Week Rankings</div>
+  <div class="page-sub">Wöchentliche Power Rankings nach ESPN-Matchup-Punktzahlen</div>
+  <div id="weekbyweekContent"></div>
 </div>
 
 <!-- ============ EMPTY / TBD PAGES ============ -->
@@ -187,6 +212,8 @@
 <script src="data/draft2026.js"></script>
 <script src="data/rosters-live.js"></script>
 <script src="data/dynasty-board.js"></script>
+<script src="data/dynasty-rolling.js"></script>
+<script src="data/weekly-scores.js"></script>
 <script src="data/trades.js"></script>
 <script src="js/app.js"></script>
 <script>

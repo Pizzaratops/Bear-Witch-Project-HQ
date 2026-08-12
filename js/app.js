@@ -20,7 +20,7 @@ function updateThemeBtn() {
 
 /* ---------- Navigation ---------- */
 const PAGES = [
-  'home', 'roster', 'draftboard', 'keepers', 'dynastyboard',
+  'home', 'roster', 'draftboard', 'keepers', 'dynastyboard', 'rolling', 'weekbyweek',
   'standings', 'matchups', 'trade', 'tradehistory',
   'livescores', 'rules'
 ];
@@ -50,6 +50,8 @@ function showRoster(teamId) { navigate('roster', { teamId }); }
 function showDraftboard() { navigate('draftboard'); renderDraftboard(); }
 function showKeepers() { navigate('keepers'); renderKeepers(); }
 function showDynastyBoard() { navigate('dynastyboard'); renderDynastyBoard(); }
+function showRolling() { navigate('rolling'); renderRolling(); }
+function showWeekByWeek() { navigate('weekbyweek'); renderWeekByWeek(); }
 function showStandings() { navigate('standings'); }
 function showMatchups() { navigate('matchups'); }
 function showTrade() { navigate('trade'); }
@@ -336,6 +338,103 @@ function renderDynastyBoardRows() {
     </tr>`).join('');
 }
 
+/* ---------- Rolling Rankings ---------- */
+function renderRolling() {
+  const wrap = document.getElementById('rollingContent');
+  const latest = DYNASTY_ROLLING[DYNASTY_ROLLING.length - 1];
+  const prev = DYNASTY_ROLLING.length > 1 ? DYNASTY_ROLLING[DYNASTY_ROLLING.length - 2] : null;
+
+  const prevRankByName = {};
+  if (prev) prev.rankings.forEach((p, i) => { prevRankByName[p.name] = i + 1; });
+
+  const rows = latest.rankings.slice(0, 150).map((p, i) => {
+    const curRank = i + 1;
+    let trendHtml = '<span style="color:var(--muted)">—</span>';
+    if (prev) {
+      const prevRank = prevRankByName[p.name];
+      if (prevRank == null) {
+        trendHtml = '<span style="color:var(--accent2)">NEU</span>';
+      } else {
+        const diff = prevRank - curRank; // positiv = aufgestiegen
+        if (diff > 0) trendHtml = `<span style="color:var(--green)">▲ ${diff}</span>`;
+        else if (diff < 0) trendHtml = `<span style="color:var(--red)">▼ ${Math.abs(diff)}</span>`;
+        else trendHtml = '<span style="color:var(--muted)">–</span>';
+      }
+    }
+    return `<tr><td>${curRank}</td><td style="text-align:left;font-weight:600">${p.name}</td><td>${p.pos}</td><td>${trendHtml}</td></tr>`;
+  }).join('');
+
+  wrap.innerHTML = `
+    <div class="info-banner">
+      Snapshot: <b>${latest.label}</b> (${latest.date}). ${DYNASTY_ROLLING.length} Snapshot${DYNASTY_ROLLING.length === 1 ? '' : 's'} insgesamt.
+      ${!prev ? 'Trend erscheint automatisch, sobald mindestens 2 Snapshots vorhanden sind (z.B. sobald 2025er-Rankings ergänzt oder ein neuer Snapshot per <code>node scripts/snapshot-dynasty-rolling.js</code> angelegt wird).' : `Vergleich zu vorherigem Snapshot "${prev.label}" (${prev.date}).`}
+    </div>
+    <div class="board-table-wrap">
+      <table class="board">
+        <thead><tr><th class="round-label">#</th><th>Spieler</th><th>Pos</th><th>Trend</th></tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>
+  `;
+}
+
+/* ---------- Week by Week ---------- */
+let weekByWeekState = { season: null, week: null };
+
+function renderWeekByWeek() {
+  const wrap = document.getElementById('weekbyweekContent');
+  const seasons = Object.keys(WEEKLY_SCORES);
+  const season = weekByWeekState.season || seasons[seasons.length - 1];
+  const weeks = Object.keys(WEEKLY_SCORES[season] || {}).map(Number).sort((a, b) => a - b);
+
+  if (!weeks.length) {
+    wrap.innerHTML = emptyState(
+      'Noch keine Wochenwerte',
+      'Sobald die Saison läuft, füllt der automatische ESPN-Sync (täglich 9 & 21 Uhr) diese Seite. Alternativ lassen sich Werte auch direkt in data/weekly-scores.js eintragen.',
+      '🗓️'
+    );
+    return;
+  }
+  const week = weekByWeekState.week || weeks[weeks.length - 1];
+  weekByWeekState = { season, week };
+
+  const entries = (WEEKLY_SCORES[season][week] || []).slice().sort((a, b) => b.points - a.points);
+  const teamName = id => (LEAGUE_TEAMS.find(t => t.id === id) || { name: id, emoji: '🏈' });
+
+  wrap.innerHTML = `
+    <div class="db-controls">
+      <div class="db-pos-filters" id="weekSelector"></div>
+    </div>
+    <div class="board-table-wrap">
+      <table class="board">
+        <thead><tr><th class="round-label">#</th><th>Team</th><th>Punkte</th><th>Gegner</th><th>Gegner-Punkte</th></tr></thead>
+        <tbody>
+          ${entries.map((e, i) => {
+            const t = teamName(e.teamId), o = teamName(e.opponentId);
+            const win = e.points > e.opponentPoints;
+            return `<tr>
+              <td>${i + 1}</td>
+              <td style="text-align:left;font-weight:600">${t.emoji || ''} ${t.name}</td>
+              <td><b>${e.points.toFixed(1)}</b></td>
+              <td>${o.emoji || ''} ${o.name}</td>
+              <td>${e.opponentPoints.toFixed(1)} ${win ? '✅' : ''}</td>
+            </tr>`;
+          }).join('')}
+        </tbody>
+      </table>
+    </div>
+  `;
+
+  const sel = document.getElementById('weekSelector');
+  weeks.forEach(w => {
+    const btn = document.createElement('button');
+    btn.className = 'db-pos-btn' + (w === week ? ' active' : '');
+    btn.textContent = 'Woche ' + w;
+    btn.onclick = () => { weekByWeekState.week = w; renderWeekByWeek(); };
+    sel.appendChild(btn);
+  });
+}
+
 /* ---------- Trade History ---------- */
 function renderTradeHistory() {
   const wrap = document.getElementById('tradehistoryContent');
@@ -388,3 +487,44 @@ document.addEventListener('DOMContentLoaded', () => {
   renderHome();
   navigate('home');
 });
+
+/* ---------- PWA Install ---------- */
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('service-worker.js').catch(() => {});
+  });
+}
+let _pwaDeferredPrompt = null;
+window.addEventListener('beforeinstallprompt', (e) => {
+  e.preventDefault();
+  _pwaDeferredPrompt = e;
+  const btn = document.getElementById('pwaInstallBtn');
+  if (btn) btn.style.display = '';
+});
+function pwaInstallApp() {
+  if (!_pwaDeferredPrompt) return;
+  _pwaDeferredPrompt.prompt();
+  _pwaDeferredPrompt.userChoice.finally(() => {
+    _pwaDeferredPrompt = null;
+    const btn = document.getElementById('pwaInstallBtn');
+    if (btn) btn.style.display = 'none';
+  });
+}
+window.addEventListener('appinstalled', () => {
+  _pwaDeferredPrompt = null;
+  const btn = document.getElementById('pwaInstallBtn');
+  if (btn) btn.style.display = 'none';
+});
+(function () {
+  const isIos = /iPad|iPhone|iPod/.test(navigator.userAgent) ||
+    (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1);
+  const isStandalone = window.navigator.standalone === true ||
+    window.matchMedia('(display-mode: standalone)').matches;
+  if (isIos && !isStandalone) {
+    const btn = document.getElementById('pwaIosHintBtn');
+    if (btn) btn.style.display = '';
+  }
+})();
+function pwaShowIosSteps() {
+  alert('📲 Teilen-Symbol tippen → "Zum Home-Bildschirm"');
+}

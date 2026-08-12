@@ -1,5 +1,7 @@
 # Bear Witch Project HQ 🐻🏈
 
+**🔗 Live-Seite: [pizzaratops.github.io/Bear-Witch-Project-HQ](https://pizzaratops.github.io/Bear-Witch-Project-HQ/)**
+
 Website zur Verwaltung der Fantasy-Football-Liga **Foodball** (ESPN League ID `91260355`).
 Aufgebaut im Stil von Taco Tuesday HQ, Colorway an die Chicago Bears angelehnt (gedämpftes
 Orange, Navy Blue), Light + Dark Mode.
@@ -17,6 +19,32 @@ data/rosters-live.js     Voller Kader je Team — automatisch von ESPN synchroni
 scripts/sync-espn-rosters.js   Sync-Script (Node), schreibt data/rosters-live.js
 .github/workflows/sync-espn-rosters.yml   Taeglicher Auto-Sync via GitHub Actions
 ```
+
+## App installieren
+
+Der Header hat jetzt (wie bei Taco Tuesday HQ) einen **"⬇️ App installieren"**-Button. Er
+erscheint automatisch, sobald der Browser die Seite als installierbar erkennt (Chrome/Edge/
+Android — braucht gültiges `manifest.json` + registrierten Service Worker + HTTPS, alles
+vorhanden). Auf iOS gibt es keinen programmatischen Install-Trigger; dort erscheint stattdessen
+ein **"📲 Zum Home-Bildschirm"**-Button mit Anleitung (Teilen-Symbol → Zum Home-Bildschirm).
+
+## Rolling Rankings & Week by Week
+
+**Rolling Rankings** (`data/dynasty-rolling.js`) hält Dynasty-Board-Schnappschüsse über Zeit fest.
+Der erste Snapshot ("Start 2026") ist direkt aus dem aktuellen Dynasty Board gezogen. Trend-Pfeile
+erscheinen automatisch, sobald mindestens 2 Snapshots existieren. Neuen Snapshot anlegen (z. B.
+nach neuen Ranking-Uploads):
+```bash
+node scripts/snapshot-dynasty-rolling.js "Label, z.B. Woche 3"
+```
+2025er-Rankings lassen sich später als frühester Snapshot ergänzen (Format siehe Kommentar in der
+Datei), dann läuft der Trendvergleich automatisch mit.
+
+**Week by Week Rankings** (`data/weekly-scores.js`) zeigt wöchentliche Matchup-Punktzahlen als
+Power-Ranking-Tabelle mit Wochen-Umschalter. Läuft automatisch über
+`scripts/sync-espn-weekly-scores.js` (GitHub Action `sync-espn-weekly-scores.yml`, täglich 9 &
+21 Uhr Berlin-Zeit). Alternativ lassen sich Werte auch manuell direkt in `data/weekly-scores.js`
+eintragen (gleiches Format wie beim automatischen Sync).
 
 ## ESPN Roster Sync
 
