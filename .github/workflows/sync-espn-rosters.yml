@@ -1,0 +1,40 @@
+name: ESPN Roster Sync
+
+# Synct die vollen Team-Roster aus ESPN Fantasy Football in
+# data/rosters-live.js und committet die Aenderung ins Repo.
+#
+# Laeuft taeglich + manuell startbar ("Run workflow" im Actions-Tab).
+# Falls die Liga privat ist, muessen ESPN_S2 und SWID als Repository
+# Secrets hinterlegt sein (Settings > Secrets and variables > Actions).
+
+on:
+  schedule:
+    - cron: "0 9 * * *"   # taeglich 09:00 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: ESPN Roster Sync
+        env:
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          SWID: ${{ secrets.SWID }}
+        run: node scripts/sync-espn-rosters.js
+
+      - name: Commit & Push falls geändert
+        run: |
+          git config user.name "bear-witch-project-hq-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/rosters-live.js
+          git diff --cached --quiet || git commit -m "chore: ESPN roster sync"
+          git push
