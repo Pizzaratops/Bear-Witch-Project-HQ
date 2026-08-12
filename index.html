@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bear Witch Project HQ 🐻🏈</title>
+<meta name="theme-color" content="#0a0f1c">
+<link rel="stylesheet" href="css/style.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300..800;1,9..40,300..800&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<div class="header">
+  <div class="logo">🐻 Bear Witch Project <span>HQ</span></div>
+  <div class="header-right">
+    <button class="theme-toggle" id="themeToggle" onclick="toggleTheme()">☀️ Light</button>
+  </div>
+</div>
+
+<div class="subnav">
+  <!-- Desktop -->
+  <div class="subnav-desktop">
+    <div class="subnav-inner">
+      <button class="snav-single" data-page="home" onclick="goHome()">🏠 Home</button>
+      <div class="snav-divider"></div>
+
+      <div class="snav-group">
+        <button class="snav-group-btn">🧍 Teams <span class="snav-arrow">▾</span></button>
+        <div class="snav-dropdown" id="teamsDropdownDesktop"></div>
+      </div>
+
+      <div class="snav-group">
+        <button class="snav-group-btn">📋 Draft 2026 <span class="snav-arrow">▾</span></button>
+        <div class="snav-dropdown">
+          <button class="snav-dropdown-item" data-page="draftboard" onclick="showDraftboard()">📋 Draft Board</button>
+          <button class="snav-dropdown-item" data-page="keepers" onclick="showKeepers()">🔒 Keeper Übersicht</button>
+        </div>
+      </div>
+
+      <div class="snav-group">
+        <button class="snav-group-btn">⚖️ Trade <span class="snav-arrow">▾</span></button>
+        <div class="snav-dropdown">
+          <button class="snav-dropdown-item" data-page="trade" onclick="showTrade()">⚖️ Trade Analyzer</button>
+          <button class="snav-dropdown-item" data-page="tradehistory" onclick="showTradeHistory()">📜 Trade History</button>
+        </div>
+      </div>
+
+      <div class="snav-divider"></div>
+      <button class="snav-single" data-page="standings" onclick="showStandings()">📈 Standings</button>
+      <button class="snav-single" data-page="matchups" onclick="showMatchups()">⚔️ Matchups</button>
+      <button class="snav-single" data-page="livescores" onclick="showLiveScores()">🔴 Live Scores</button>
+      <button class="snav-single" data-page="rules" onclick="showRules()">📜 Rules</button>
+    </div>
+  </div>
+
+  <!-- Mobile -->
+  <div class="subnav-mobile">
+    <button class="subnav-hamburger" onclick="toggleMobileNav()">
+      <span>🐻 League Tools</span>
+      <span>▾</span>
+    </button>
+    <div class="subnav-mobile-dropdown" id="mobileNavDropdown">
+      <div class="subnav-mobile-group">
+        <div class="subnav-mobile-label">Navigation</div>
+        <button class="subnav-mobile-btn" data-page="home" onclick="goHome()">🏠 Home</button>
+        <button class="subnav-mobile-btn" data-page="standings" onclick="showStandings()">📈 Standings</button>
+        <button class="subnav-mobile-btn" data-page="matchups" onclick="showMatchups()">⚔️ Matchups</button>
+        <button class="subnav-mobile-btn" data-page="livescores" onclick="showLiveScores()">🔴 Live Scores</button>
+        <button class="subnav-mobile-btn" data-page="rules" onclick="showRules()">📜 Rules</button>
+      </div>
+      <div class="subnav-mobile-group">
+        <div class="subnav-mobile-label">Teams</div>
+        <div id="teamsDropdownMobile"></div>
+      </div>
+      <div class="subnav-mobile-group">
+        <div class="subnav-mobile-label">Draft 2026</div>
+        <button class="subnav-mobile-btn" data-page="draftboard" onclick="showDraftboard()">📋 Draft Board</button>
+        <button class="subnav-mobile-btn" data-page="keepers" onclick="showKeepers()">🔒 Keeper Übersicht</button>
+      </div>
+      <div class="subnav-mobile-group">
+        <div class="subnav-mobile-label">Trade</div>
+        <button class="subnav-mobile-btn" data-page="trade" onclick="showTrade()">⚖️ Trade Analyzer</button>
+        <button class="subnav-mobile-btn" data-page="tradehistory" onclick="showTradeHistory()">📜 Trade History</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ HOME ============ -->
+<div class="page active" id="page-home">
+  <div class="page-title">The Bear Witch Project HQ</div>
+  <div class="page-sub">Foodball 🏈 — 12 Teams, Keeper League. Draft in ca. 22 Tagen · ESPN League ID 91260355</div>
+  <div class="team-grid" id="homeTeamGrid"></div>
+</div>
+
+<!-- ============ TEAM ROSTER ============ -->
+<div class="page" id="page-roster">
+  <div class="page-title" id="rosterTitle">Team</div>
+  <div class="page-sub">Kader-Übersicht</div>
+  <div id="rosterContent"></div>
+</div>
+
+<!-- ============ DRAFT BOARD ============ -->
+<div class="page" id="page-draftboard">
+  <div class="page-title">📋 Draft Board 2026</div>
+  <div class="page-sub">Keeper-Runden je Team, von unten aufgefüllt</div>
+  <div id="draftboardContent"></div>
+</div>
+
+<!-- ============ KEEPER ÜBERSICHT ============ -->
+<div class="page" id="page-keepers">
+  <div class="page-title">🔒 Keeper Übersicht</div>
+  <div class="page-sub">Alle gemeldeten Keeper je Team, vor dem Keeper Lock Date</div>
+  <div id="keepersContent"></div>
+</div>
+
+<!-- ============ EMPTY / TBD PAGES ============ -->
+<div class="page" id="page-standings">
+  <div class="page-title">📈 Standings</div>
+  <div class="page-sub">Tabelle der laufenden Saison</div>
+  <div class="empty-state">
+    <span class="empty-emoji">🚧</span>
+    <div class="empty-title">Noch keine Daten</div>
+    <div class="empty-text">Die Standings werden befüllt, sobald die reguläre Saison läuft bzw. die ESPN-Anbindung steht.</div>
+  </div>
+</div>
+
+<div class="page" id="page-matchups">
+  <div class="page-title">⚔️ Matchups</div>
+  <div class="page-sub">Wochen-Matchups &amp; Planer</div>
+  <div class="empty-state">
+    <span class="empty-emoji">🚧</span>
+    <div class="empty-title">Noch keine Daten</div>
+    <div class="empty-text">Kommt, sobald der Spielplan der Saison 2026 feststeht.</div>
+  </div>
+</div>
+
+<div class="page" id="page-trade">
+  <div class="page-title">⚖️ Trade Analyzer</div>
+  <div class="page-sub">Trades bewerten</div>
+  <div class="empty-state">
+    <span class="empty-emoji">🚧</span>
+    <div class="empty-title">Noch nicht eingerichtet</div>
+    <div class="empty-text">Folgt in einer späteren Ausbaustufe.</div>
+  </div>
+</div>
+
+<div class="page" id="page-tradehistory">
+  <div class="page-title">📜 Trade History</div>
+  <div class="page-sub">Alle bisherigen Trades der Liga</div>
+  <div class="empty-state">
+    <span class="empty-emoji">🚧</span>
+    <div class="empty-title">Noch keine Trades erfasst</div>
+    <div class="empty-text">Bislang wurden laut Draft-Regeln keine Picks getradet.</div>
+  </div>
+</div>
+
+<div class="page" id="page-livescores">
+  <div class="page-title">🔴 Live Scores</div>
+  <div class="page-sub">Live-Punktestand am Matchup-Tag</div>
+  <div class="empty-state">
+    <span class="empty-emoji">🚧</span>
+    <div class="empty-title">Noch keine Daten</div>
+    <div class="empty-text">Kommt, sobald die Saison läuft.</div>
+  </div>
+</div>
+
+<div class="page" id="page-rules">
+  <div class="page-title">📜 Rules</div>
+  <div class="page-sub">Liga-Regeln der Foodball League</div>
+  <div class="empty-state">
+    <span class="empty-emoji">🚧</span>
+    <div class="empty-title">Noch nicht hinterlegt</div>
+    <div class="empty-text">Regel-Text folgt.</div>
+  </div>
+</div>
+
+<script src="data/teams.js"></script>
+<script src="data/draft2026.js"></script>
+<script src="data/rosters-live.js"></script>
+<script src="js/app.js"></script>
+<script>
+  // Teams-Dropdown dynamisch befuellen (Desktop + Mobile)
+  document.getElementById('teamsDropdownDesktop').innerHTML = LEAGUE_TEAMS.map(t =>
+    `<button class="snav-dropdown-item" data-page="roster" onclick="showRoster('${t.id}')">${t.emoji} ${t.name}</button>`
+  ).join('');
+  document.getElementById('teamsDropdownMobile').innerHTML = LEAGUE_TEAMS.map(t =>
+    `<button class="subnav-mobile-btn" data-page="roster" onclick="showRoster('${t.id}')">${t.emoji} ${t.name}</button>`
+  ).join('');
+</script>
+</body>
+</html>
