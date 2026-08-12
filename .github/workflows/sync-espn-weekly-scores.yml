@@ -1,0 +1,44 @@
+name: ESPN Weekly Scores Sync
+
+# Synct die woechentlichen Matchup-Punktzahlen aus ESPN Fantasy Football
+# in data/weekly-scores.js. Laeuft taeglich um 9:00 und 21:00 Uhr MEZ
+# (deckt damit automatisch auch "mittwochs" mit ab, faengt aber zusaetzlich
+# auch Zwischenstaende waehrend laufender Spiele ein).
+#
+# Vor Saisonstart bzw. ausserhalb der Saison liefert ESPN einfach keine
+# gespielten Matchups -- das Script laeuft dann folgenlos durch.
+
+on:
+  schedule:
+    - cron: "0 7 * * *"    # 09:00 Berlin (Sommerzeit)
+    - cron: "0 8 * * *"    # 09:00 Berlin (Winterzeit)
+    - cron: "0 19 * * *"   # 21:00 Berlin (Sommerzeit)
+    - cron: "0 20 * * *"   # 21:00 Berlin (Winterzeit)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: ESPN Weekly Scores Sync
+        env:
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          SWID: ${{ secrets.SWID }}
+        run: node scripts/sync-espn-weekly-scores.js
+
+      - name: Commit & Push falls geändert
+        run: |
+          git config user.name "bear-witch-project-hq-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/weekly-scores.js
+          git diff --cached --quiet || git commit -m "chore: ESPN weekly scores sync"
+          git push

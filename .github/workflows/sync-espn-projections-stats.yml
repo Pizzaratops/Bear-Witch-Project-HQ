@@ -1,0 +1,45 @@
+name: ESPN Projections & Player Stats Sync
+
+# Projections: einmal taeglich (aendern sich selten/langsam).
+# Player Stats (tatsaechliche Punkte): gleicher Rhythmus wie die
+# Weekly-Scores-Sync (9 & 21 Uhr Berlin), da beides von Matchdays abhaengt.
+
+on:
+  schedule:
+    - cron: "30 7 * * *"   # Projections + Stats, 09:30 Berlin (Sommer)
+    - cron: "30 8 * * *"   # 09:30 Berlin (Winter)
+    - cron: "30 19 * * *"  # 21:30 Berlin (Sommer)
+    - cron: "30 20 * * *"  # 21:30 Berlin (Winter)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: ESPN Projections Sync
+        env:
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          SWID: ${{ secrets.SWID }}
+        run: node scripts/sync-espn-projections.js
+
+      - name: ESPN Player Stats Sync
+        env:
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          SWID: ${{ secrets.SWID }}
+        run: node scripts/sync-espn-player-stats.js
+
+      - name: Commit & Push falls geändert
+        run: |
+          git config user.name "bear-witch-project-hq-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/projections.js data/player-stats.js
+          git diff --cached --quiet || git commit -m "chore: ESPN projections & player stats sync"
+          git push
