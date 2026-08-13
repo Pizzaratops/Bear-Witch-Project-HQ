@@ -77,6 +77,7 @@
         <button class="snav-group-btn">📈 Standings <span class="snav-arrow">▾</span></button>
         <div class="snav-dropdown">
           <button class="snav-dropdown-item" data-page="standings" onclick="showStandings()">📈 Standings</button>
+          <button class="snav-dropdown-item" data-page="leaguehistory" onclick="showLeagueHistory()">🏛️ Liga-Historie</button>
           <button class="snav-dropdown-item" data-page="seasonrolling" onclick="showSeasonRolling()">📈 2026 Rolling Rankings</button>
         </div>
       </div>
@@ -97,6 +98,7 @@
         <div class="subnav-mobile-label">Navigation</div>
         <button class="subnav-mobile-btn" data-page="home" onclick="goHome()">🏠 Home</button>
         <button class="subnav-mobile-btn" data-page="standings" onclick="showStandings()">📈 Standings</button>
+        <button class="subnav-mobile-btn" data-page="leaguehistory" onclick="showLeagueHistory()">🏛️ Liga-Historie</button>
         <button class="subnav-mobile-btn" data-page="seasonrolling" onclick="showSeasonRolling()">📈 2026 Rolling Rankings</button>
         <button class="subnav-mobile-btn" data-page="matchups" onclick="showMatchups()">⚔️ Matchups</button>
         <button class="subnav-mobile-btn" data-page="futureboards" onclick="showFutureBoards()">🔮 Future Draft Boards</button>
@@ -251,11 +253,13 @@
 <div class="page" id="page-standings">
   <div class="page-title">📈 Standings</div>
   <div class="page-sub">Tabelle der laufenden Saison</div>
-  <div class="empty-state">
-    <span class="empty-emoji">🚧</span>
-    <div class="empty-title">Noch keine Daten</div>
-    <div class="empty-text">Die Standings werden befüllt, sobald die reguläre Saison läuft bzw. die ESPN-Anbindung steht.</div>
-  </div>
+  <div id="standingsContent"></div>
+</div>
+
+<div class="page" id="page-leaguehistory">
+  <div class="page-title">🏛️ Liga-Historie</div>
+  <div class="page-sub">Champions & vergangene Saisons</div>
+  <div id="leaguehistoryContent"></div>
 </div>
 
 <div class="page" id="page-seasonrolling">
@@ -266,12 +270,8 @@
 
 <div class="page" id="page-matchups">
   <div class="page-title">⚔️ Matchups</div>
-  <div class="page-sub">Wochen-Matchups &amp; Planer</div>
-  <div class="empty-state">
-    <span class="empty-emoji">🚧</span>
-    <div class="empty-title">Noch keine Daten</div>
-    <div class="empty-text">Kommt, sobald der Spielplan der Saison 2026 feststeht.</div>
-  </div>
+  <div class="page-sub">Spielplan & Wochen-Matchups</div>
+  <div id="matchupsContent"></div>
 </div>
 
 <div class="page" id="page-trade">
@@ -295,6 +295,8 @@
 <script src="data/dynasty-board.js"></script>
 <script src="data/dynasty-rolling.js"></script>
 <script src="data/weekly-scores.js"></script>
+<script src="data/schedule.js"></script>
+<script src="data/league-history.js"></script>
 <script src="data/trade-values.js"></script>
 <script src="data/projections.js"></script>
 <script src="data/player-stats.js"></script>

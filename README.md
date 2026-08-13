@@ -136,3 +136,33 @@ Secrets fehlen) oder Season-ID denken, nicht mehr an dieses Grundproblem.
 2026er-Draft: `{ round, from, owner }`, wobei `from` der **ursprüngliche** Besitzer ist und
 `owner`, wer den Pick nach dem Trade hat. Default ist "Own" beim ursprünglichen Team, nur
 Ausnahmen eintragen.
+
+## Trade Analyzer: geschätzte Team-Auswirkung
+
+Team A/B im Trade Analyzer auswählen (Dropdown über der Asset-Liste), dann rechnet die Seite mit
+`PLAYER_PROJECTIONS` aus, wie sich die projizierten Saisonpunkte (ohne K/DST) und der Rang unter
+allen 12 Teams durch den Trade verändern würden. Picks fließen nicht in die Punkteschätzung ein
+(keine Projektion für Picks). Erscheint automatisch, sobald Projections geladen sind.
+
+## Standings, Matchup Planner & Liga-Historie
+
+- **Standings** (`data/weekly-scores.js`) — echte Tabelle nach Siegen, PF als Tiebreak.
+- **Matchup Planner** (`data/schedule.js`) — kompletter Spielplan (auch ungespielte Wochen), aus
+  derselben ESPN-Antwort wie Weekly Scores, aber ungefiltert. Wochen-Umschalter, zeigt Ergebnis
+  sobald verfügbar.
+- **Liga-Historie** (`data/league-history.js`) — manuell zu pflegen, ESPN liefert keine Vorjahres-
+  Historie über unsere Anbindung. Einfach `{ year, champion, runnerUp, thirdPlace, notes }`-Einträge
+  ergänzen.
+
+## Dynasty Rolling: Rang-Trend-Schätzung
+
+Im Spieler-Panel der Rolling Rankings erscheint automatisch ein grober nächster Rang, sobald
+mindestens 2 Snapshots für einen Spieler vorhanden sind (lineare Regression über die letzten bis
+zu 4 Snapshots, ein Schritt extrapoliert). Explizit als grobe Trend-Schätzung gekennzeichnet, kein
+echtes Prognosemodell.
+
+## Sync-Skripte: Fehler jetzt sichtbar
+
+Alle vier ESPN-Sync-Skripte beenden sich bei einem echten Fehler jetzt mit `process.exit(1)` statt
+`exit(0)` — die GitHub Action zeigt dann ein rotes ✕ statt still grün durchzulaufen. Vorher war ein
+Fehlschlag nur im aufgeklappten Log-Text sichtbar, nicht am Status.
