@@ -43,7 +43,7 @@
         <button class="snav-group-btn">📋 Draft 2026 <span class="snav-arrow">▾</span></button>
         <div class="snav-dropdown">
           <button class="snav-dropdown-item" data-page="draftboard" onclick="showDraftboard()">📋 Draft Board</button>
-          <button class="snav-dropdown-item" data-page="keepers" onclick="showKeepers()">🔒 Keeper Übersicht</button>
+          <button class="snav-dropdown-item" data-page="keepers" onclick="showKeepers()">🔒 Keeper-Übersicht</button>
         </div>
       </div>
 
@@ -112,7 +112,7 @@
       <div class="subnav-mobile-group">
         <div class="subnav-mobile-label">Draft 2026</div>
         <button class="subnav-mobile-btn" data-page="draftboard" onclick="showDraftboard()">📋 Draft Board</button>
-        <button class="subnav-mobile-btn" data-page="keepers" onclick="showKeepers()">🔒 Keeper Übersicht</button>
+        <button class="subnav-mobile-btn" data-page="keepers" onclick="showKeepers()">🔒 Keeper-Übersicht</button>
       </div>
       <div class="subnav-mobile-group">
         <div class="subnav-mobile-label">Dynasty</div>
@@ -151,16 +151,26 @@
 
 <!-- ============ DRAFT BOARD ============ -->
 <div class="page" id="page-draftboard">
-  <div class="page-title">📋 Draft Board 2026</div>
-  <div class="page-sub">Keeper-Runden je Team, von unten aufgefüllt</div>
-  <div id="draftboardContent"></div>
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;">
+    <div>
+      <div class="page-title">📋 Draft Board 2026</div>
+      <div class="page-sub">Keeper-Runden je Team, von unten aufgefüllt</div>
+    </div>
+    <button class="theme-toggle" id="draftboardScreenshotBtn" onclick="downloadDraftboardScreenshot()">📸 Screenshot (HD)</button>
+  </div>
+  <div id="draftboardContent" style="margin-top:20px"></div>
 </div>
 
-<!-- ============ KEEPER ÜBERSICHT ============ -->
+<!-- ============ KEEPER-ÜBERSICHT ============ -->
 <div class="page" id="page-keepers">
-  <div class="page-title">🔒 Keeper Übersicht</div>
-  <div class="page-sub">Alle gemeldeten Keeper je Team, vor dem Keeper Lock Date</div>
-  <div id="keepersContent"></div>
+  <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap;">
+    <div>
+      <div class="page-title">🔒 Keeper-Übersicht</div>
+      <div class="page-sub">Alle gemeldeten Keeper je Team, vor dem Keeper Lock Date</div>
+    </div>
+    <button class="theme-toggle" id="keeperScreenshotBtn" onclick="downloadKeeperScreenshot()">📸 Screenshot (HQ)</button>
+  </div>
+  <div id="keepersContent" style="margin-top:20px"></div>
 </div>
 
 <!-- ============ DYNASTY BOARD ============ -->

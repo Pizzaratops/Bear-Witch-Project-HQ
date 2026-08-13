@@ -340,6 +340,54 @@ function renderKeepers() {
   }).join('') + `</div>`;
 }
 
+/* Sehr hochaufgeloester Screenshot der kompletten Keeper-Übersicht
+   (alle Team-Karten, auch was gerade nicht im Viewport sichtbar ist),
+   mit kleinem Branding-Header oben drauf. scale:3 fuer "very high
+   quality" -- html2canvas rendert den kompletten #keepersContent-Baum,
+   nicht nur den sichtbaren Ausschnitt. */
+async function downloadKeeperScreenshot() {
+  const btn = document.getElementById('keeperScreenshotBtn');
+  const orig = btn.textContent;
+  if (typeof html2canvas !== 'function') { alert('html2canvas Library nicht geladen.'); return; }
+  btn.textContent = '⏳ Erstelle...'; btn.disabled = true;
+
+  const isLight = document.body.classList.contains('light');
+  const bg = isLight ? '#faf6f1' : '#0a0f1c';
+  const accent = isLight ? '#cf7a48' : '#e0794a';
+  const muted = isLight ? '#93877a' : '#8a93ac';
+
+  try {
+    const target = document.getElementById('keepersContent');
+    const canvas = await html2canvas(target, {
+      backgroundColor: bg,
+      scale: 3,
+      logging: false,
+      useCORS: true,
+      onclone: (clonedDoc) => {
+        const clonedTarget = clonedDoc.getElementById('keepersContent');
+        if (!clonedTarget) return;
+        const header = clonedDoc.createElement('div');
+        header.style.cssText = 'padding:6px 4px 26px;text-align:center;';
+        header.innerHTML = `
+          <div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:800;color:${accent}">🐻 Bear Witch Project HQ</div>
+          <div style="font-size:13px;color:${muted};margin-top:4px;font-family:'DM Sans',sans-serif;">Keeper-Übersicht · Stand ${new Date().toLocaleDateString('de-DE', { day: '2-digit', month: 'long', year: 'numeric' })}</div>
+        `;
+        clonedTarget.parentNode.insertBefore(header, clonedTarget);
+      },
+    });
+    const link = document.createElement('a');
+    link.href = canvas.toDataURL('image/png');
+    link.download = `bwp-keeper-uebersicht-${new Date().toISOString().split('T')[0]}.png`;
+    link.click();
+    btn.textContent = '✓ Gespeichert!';
+  } catch (err) {
+    console.error('Keeper-Screenshot fehlgeschlagen:', err);
+    alert('Fehler beim Erstellen: ' + err.message);
+  } finally {
+    setTimeout(() => { btn.textContent = orig; btn.disabled = false; }, 1500);
+  }
+}
+
 /* ---------- Draft Board ---------- */
 function renderDraftboard() {
   const wrap = document.getElementById('draftboardContent');
@@ -396,6 +444,56 @@ function renderDraftboard() {
       <div class="legend-item"><span class="legend-swatch" style="background:var(--pick-open-bg);border:1px solid var(--pick-open-color)"></span> Own (noch offener Pick)</div>
     </div>
   `;
+}
+
+/* Sehr hochaufgeloester Screenshot des kompletten Draft Boards (alle 15
+   Runden x 12 Teams, auch der Teil, der gerade nur per Scroll sichtbar
+   waere), mit Branding-Header. scale:3 fuer HD-Qualitaet. */
+async function downloadDraftboardScreenshot() {
+  const btn = document.getElementById('draftboardScreenshotBtn');
+  const orig = btn.textContent;
+  if (typeof html2canvas !== 'function') { alert('html2canvas Library nicht geladen.'); return; }
+  btn.textContent = '⏳ Erstelle...'; btn.disabled = true;
+
+  const isLight = document.body.classList.contains('light');
+  const bg = isLight ? '#faf6f1' : '#0a0f1c';
+  const accent = isLight ? '#cf7a48' : '#e0794a';
+  const muted = isLight ? '#93877a' : '#8a93ac';
+
+  try {
+    const target = document.getElementById('draftboardContent');
+    const canvas = await html2canvas(target, {
+      backgroundColor: bg,
+      scale: 3,
+      logging: false,
+      useCORS: true,
+      onclone: (clonedDoc) => {
+        const clonedTarget = clonedDoc.getElementById('draftboardContent');
+        if (!clonedTarget) return;
+        const header = clonedDoc.createElement('div');
+        header.style.cssText = 'padding:6px 4px 22px;text-align:center;';
+        header.innerHTML = `
+          <div style="font-family:'Playfair Display',serif;font-size:28px;font-weight:800;color:${accent}">🐻 Bear Witch Project HQ</div>
+          <div style="font-size:13px;color:${muted};margin-top:4px;font-family:'DM Sans',sans-serif;">Draft Board 2026 · Stand ${new Date().toLocaleDateString('de-DE', { day: '2-digit', month: 'long', year: 'numeric' })}</div>
+        `;
+        clonedTarget.parentNode.insertBefore(header, clonedTarget);
+        // Tabelle darf im Screenshot ihre volle Breite einnehmen, statt
+        // sich an den (evtl. schmalen) Viewport zu halten.
+        const wrap = clonedTarget.querySelector('.board-table-wrap');
+        if (wrap) wrap.style.overflow = 'visible';
+      },
+    });
+    const link = document.createElement('a');
+    link.href = canvas.toDataURL('image/png');
+    link.download = `bwp-draftboard-2026-${new Date().toISOString().split('T')[0]}.png`;
+    link.click();
+    btn.textContent = '✓ Gespeichert!';
+  } catch (err) {
+    console.error('Draftboard-Screenshot fehlgeschlagen:', err);
+    alert('Fehler beim Erstellen: ' + err.message);
+  } finally {
+    setTimeout(() => { btn.textContent = orig; btn.disabled = false; }, 1500);
+  }
 }
 
 function escapeJs(s) { return String(s).replace(/'/g, "\\'"); }
