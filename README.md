@@ -30,15 +30,14 @@ ein **"📲 Zum Home-Bildschirm"**-Button mit Anleitung (Teilen-Symbol → Zum H
 
 ## Rolling Rankings & Week by Week
 
-**Rolling Rankings** (`data/dynasty-rolling.js`) hält Dynasty-Board-Schnappschüsse über Zeit fest.
-Der erste Snapshot ("Start 2026") ist direkt aus dem aktuellen Dynasty Board gezogen. Trend-Pfeile
-erscheinen automatisch, sobald mindestens 2 Snapshots existieren. Neuen Snapshot anlegen (z. B.
-nach neuen Ranking-Uploads):
+**Rolling Rankings** (`data/dynasty-rolling.js`) hält Dynasty-Board-Schnappschüsse über Zeit fest,
+angezeigt als Sidebar mit sortierbarer Liste + Chart.js-Verlaufsdiagramm (bis zu 3 Spieler im
+Vergleich). Aktuell 6 Snapshots: 2021–2024 (historische Einzelquellen-Rankings, je 100–250
+Spieler), 2025 (Einzelquelle, 250 Spieler), 2026 (aktueller 4-Quellen-Dynasty-Board-Schnitt, 942
+Spieler). Neuen Snapshot anlegen (z. B. nach neuen Ranking-Uploads):
 ```bash
 node scripts/snapshot-dynasty-rolling.js "Label, z.B. Woche 3"
 ```
-2025er-Rankings lassen sich später als frühester Snapshot ergänzen (Format siehe Kommentar in der
-Datei), dann läuft der Trendvergleich automatisch mit.
 
 **Week by Week Rankings** (`data/weekly-scores.js`) zeigt wöchentliche Matchup-Punktzahlen als
 Power-Ranking-Tabelle mit Wochen-Umschalter. Läuft automatisch über
