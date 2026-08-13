@@ -52,6 +52,7 @@
         <div class="snav-dropdown">
           <button class="snav-dropdown-item" data-page="dynastyboard" onclick="showDynastyBoard()">🏆 Dynasty Board</button>
           <button class="snav-dropdown-item" data-page="rolling" onclick="showRolling()">📈 Rolling Rankings Dynasty</button>
+          <button class="snav-dropdown-item" data-page="teamaverages" onclick="showTeamAverages()">📐 Team-Schnitt</button>
         </div>
       </div>
 
@@ -114,6 +115,7 @@
         <div class="subnav-mobile-label">Dynasty</div>
         <button class="subnav-mobile-btn" data-page="dynastyboard" onclick="showDynastyBoard()">🏆 Dynasty Board</button>
         <button class="subnav-mobile-btn" data-page="rolling" onclick="showRolling()">📈 Rolling Rankings Dynasty</button>
+        <button class="subnav-mobile-btn" data-page="teamaverages" onclick="showTeamAverages()">📐 Team-Schnitt</button>
       </div>
       <div class="subnav-mobile-group">
         <div class="subnav-mobile-label">Players</div>
@@ -162,6 +164,13 @@
   <div class="page-title">🏆 Dynasty Board</div>
   <div class="page-sub">Rankings-Vergleich mehrerer Quellen, sortiert nach Durchschnitt</div>
   <div id="dynastyboardContent"></div>
+</div>
+
+<!-- ============ TEAM-SCHNITT ============ -->
+<div class="page" id="page-teamaverages">
+  <div class="page-title">📐 Team-Schnitt</div>
+  <div class="page-sub">Durchschnittliches Dynasty-Ranking je Team (ohne K/DST)</div>
+  <div id="teamaveragesContent"></div>
 </div>
 
 <!-- ============ ROLLING RANKINGS ============ -->

@@ -477,3 +477,17 @@ table.db-table td:nth-child(2) { text-align: left; font-weight: 600; }
   #drShareCardContent { transform: scale(0.72); transform-origin: top center; height: 610px; margin-bottom: 0; }
   .rr-toolbar { flex-wrap: wrap; }
 }
+
+/* ---------- TRADE HISTORY: Chronik + Counter-Sidebar ---------- */
+.trade-history-layout { display: grid; grid-template-columns: 1fr 260px; gap: 20px; align-items: start; }
+.trade-history-side { position: sticky; top: 10px; }
+.trade-counter-box { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 16px; }
+.trade-counter-row { display: grid; grid-template-columns: 1fr 60px 20px; align-items: center; gap: 8px; margin-bottom: 10px; }
+.trade-counter-label { font-size: 12px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.trade-counter-bar-wrap { height: 6px; background: var(--surface2); border-radius: 4px; overflow: hidden; }
+.trade-counter-bar { height: 100%; background: linear-gradient(90deg, var(--accent), var(--accent2)); border-radius: 4px; }
+.trade-counter-n { font-size: 12px; font-weight: 800; color: var(--accent); text-align: right; }
+@media (max-width: 760px) {
+  .trade-history-layout { grid-template-columns: 1fr; }
+  .trade-history-side { position: static; }
+}

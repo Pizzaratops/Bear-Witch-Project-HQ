@@ -121,5 +121,5 @@ const PLAYER_PROJECTIONS = ${JSON.stringify({ season: cfg.ESPN_SEASON, updated: 
 
 main().catch(err => {
   console.error('ESPN Projections Sync fehlgeschlagen:', err.message);
-  process.exit(0);
+  process.exit(1); // sichtbarer Fehlschlag in der Action, statt still gruen zu bleiben
 });

@@ -20,7 +20,7 @@ function updateThemeBtn() {
 
 /* ---------- Navigation ---------- */
 const PAGES = [
-  'home', 'roster', 'draftboard', 'keepers', 'dynastyboard', 'rolling', 'weekbyweek',
+  'home', 'roster', 'draftboard', 'keepers', 'dynastyboard', 'rolling', 'teamaverages', 'weekbyweek',
   'playerrankings', 'playerprojections', 'futureboards',
   'standings', 'seasonrolling', 'matchups', 'trade', 'tradehistory'
 ];
@@ -51,6 +51,7 @@ function showDraftboard() { navigate('draftboard'); renderDraftboard(); }
 function showKeepers() { navigate('keepers'); renderKeepers(); }
 function showDynastyBoard() { navigate('dynastyboard'); renderDynastyBoard(); }
 function showRolling() { navigate('rolling'); renderRolling(); }
+function showTeamAverages() { navigate('teamaverages'); renderTeamAverages(); }
 function showWeekByWeek() { navigate('weekbyweek'); renderWeekByWeek(); }
 function showStandings() { navigate('standings'); }
 function showSeasonRolling() { navigate('seasonrolling'); renderSeasonRolling(); }
@@ -345,6 +346,68 @@ function renderDynastyBoardRows() {
       <td>${p.dd ?? '—'}</td>
       <td>${p.n}/4</td>
     </tr>`).join('');
+}
+
+/* ---------- Team-Schnitt (Ø Dynasty-Ranking je Team) ---------- */
+function _dynastyAvgFor(name) {
+  const p = DYNASTY_BOARD.find(x => x.name === name);
+  return p ? p.avg : null;
+}
+
+function _teamRosterForAverages(team) {
+  // Bevorzugt vollen ESPN-Roster (mit Starter-Info), sonst Keeper als Fallback.
+  const live = (typeof ROSTERS_LIVE !== 'undefined') ? ROSTERS_LIVE[team.id] : null;
+  if (live && live.length) return { players: live, source: 'live' };
+  const dt = DRAFT_2026_TEAMS.find(x => x.team === team.name);
+  const keepers = dt ? dt.keepers.map(k => ({ name: k.name, pos: k.pos, isStarter: null })) : [];
+  return { players: keepers, source: 'keepers' };
+}
+
+function renderTeamAverages() {
+  const wrap = document.getElementById('teamaveragesContent');
+  const anyLive = (typeof ROSTERS_LIVE !== 'undefined') && Object.values(ROSTERS_LIVE).some(r => r && r.length);
+
+  const rows = LEAGUE_TEAMS.map(team => {
+    const { players, source } = _teamRosterForAverages(team);
+    // Kicker/Defense raus, nur Positionen mit Dynasty-Relevanz
+    const relevant = players.filter(p => !['K', 'DST', 'D/ST'].includes((p.pos || '').split('/')[0]));
+    const withValue = relevant.map(p => ({ ...p, dyn: _dynastyAvgFor(p.name) })).filter(p => p.dyn != null);
+
+    const allAvg = withValue.length ? withValue.reduce((s, p) => s + p.dyn, 0) / withValue.length : null;
+    const starters = withValue.filter(p => p.isStarter === true);
+    const starterAvg = starters.length ? starters.reduce((s, p) => s + p.dyn, 0) / starters.length : null;
+    const hasStarterInfo = withValue.some(p => p.isStarter !== null);
+
+    return { team, source, n: withValue.length, allAvg, starterAvg, hasStarterInfo };
+  }).sort((a, b) => (a.allAvg ?? 9999) - (b.allAvg ?? 9999));
+
+  wrap.innerHTML = `
+    <div class="info-banner">
+      Durchschnitt aus dem <b>Dynasty Board</b> (Ø aus 4 Quellen) für alle Spieler eines Teams, ohne
+      Kicker/Defense. Niedriger = wertvoller. ${anyLive
+        ? 'Starter-Schnitt basiert auf dem ESPN-Lineup-Slot (Bench/IR ausgeschlossen).'
+        : 'Voller ESPN-Roster noch nicht synct — aktuell nur auf Basis der gemeldeten Keeper berechnet, Starter-Spalte erscheint automatisch, sobald der ESPN-Sync läuft.'}
+    </div>
+    <div class="board-table-wrap">
+      <table class="board">
+        <thead><tr>
+          <th class="round-label">Team</th>
+          <th>Ø Team (ohne K/DST)</th>
+          <th>Ø Starter</th>
+          <th>Spieler erfasst</th>
+        </tr></thead>
+        <tbody>
+          ${rows.map(r => `
+            <tr>
+              <td style="text-align:left;font-weight:600">${r.team.emoji} ${r.team.name}</td>
+              <td><b>${r.allAvg != null ? r.allAvg.toFixed(1) : '—'}</b></td>
+              <td>${r.hasStarterInfo ? (r.starterAvg != null ? r.starterAvg.toFixed(1) : '—') : '<span style="color:var(--muted)">n/a</span>'}</td>
+              <td>${r.n} ${r.source === 'keepers' ? '<span style="color:var(--muted);font-size:10px">(nur Keeper)</span>' : ''}</td>
+            </tr>`).join('')}
+        </tbody>
+      </table>
+    </div>
+  `;
 }
 
 /* ---------- Rolling Rankings (Dynasty) — Sidebar + Chart wie TTHQ ---------- */
@@ -1185,6 +1248,61 @@ let futureBoardsState = { year: 2027 };
 
 function showFutureBoards() { navigate('futureboards'); renderFutureBoards(); }
 
+function _picksHeldByTeam(year) {
+  // Baseline: 15 Runden fuer 2026 (abzueglich Keeper-Runden, die nicht
+  // handelbar sind), 5 Runden (Runde 1-5, mehr tracken wir noch nicht)
+  // fuer 2027+. Trades verschieben Picks zwischen Teams.
+  const counts = {};
+  LEAGUE_TEAMS.forEach(t => { counts[t.name] = 0; });
+
+  if (year === 2026) {
+    DRAFT_2026_TEAMS.forEach(dt => { counts[dt.team] = TOTAL_DRAFT_ROUNDS - dt.keepers.length; });
+    (typeof TRADED_PICKS_2026 !== 'undefined' ? TRADED_PICKS_2026 : []).forEach(p => {
+      counts[p.from] = (counts[p.from] || 0) - 1;
+      counts[p.owner] = (counts[p.owner] || 0) + 1;
+    });
+  } else {
+    LEAGUE_TEAMS.forEach(t => { counts[t.name] = 5; });
+    (FUTURE_PICKS[year] || []).forEach(p => {
+      counts[p.from] = (counts[p.from] || 0) - 1;
+      counts[p.owner] = (counts[p.owner] || 0) + 1;
+    });
+  }
+  return counts;
+}
+
+function renderPicksOverview() {
+  const years = [2026, ...Object.keys(FUTURE_PICKS).map(Number).sort()];
+  const byYear = years.map(y => ({ year: y, counts: _picksHeldByTeam(y) }));
+
+  const rows = LEAGUE_TEAMS.map(t => {
+    const cells = byYear.map(({ year, counts }) => {
+      const baseline = year === 2026
+        ? (TOTAL_DRAFT_ROUNDS - (DRAFT_2026_TEAMS.find(dt => dt.team === t.name) || { keepers: [] }).keepers.length)
+        : 5;
+      const n = counts[t.name] ?? baseline;
+      const diff = n - baseline;
+      const diffHtml = diff > 0 ? `<span style="color:var(--green)">+${diff}</span>`
+        : diff < 0 ? `<span style="color:var(--red)">${diff}</span>` : '';
+      return `<td><b>${n}</b> ${diffHtml}</td>`;
+    }).join('');
+    return `<tr><td style="text-align:left;font-weight:600">${t.emoji} ${t.name}</td>${cells}</tr>`;
+  }).join('');
+
+  const head = byYear.map(({ year }) => `<th>${year}</th>`).join('');
+
+  return `
+    <div class="section-label">📦 Picks-Übersicht (wie viele Picks besitzt jedes Team gerade)</div>
+    <div class="board-table-wrap">
+      <table class="board board-compact">
+        <thead><tr><th class="round-label">Team</th>${head}</tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>
+    <div class="page-sub" style="margin-top:8px">2026 = offene (nicht-Keeper-)Runden von 15. 2027–2029 = Runden 1–5 (Baseline 5). Grün/Rot zeigt Abweichung von der Baseline durch Trades.</div>
+  `;
+}
+
 function renderFutureBoards() {
   const wrap = document.getElementById('futureboardsContent');
   const years = Object.keys(FUTURE_PICKS).map(Number).sort();
@@ -1213,6 +1331,7 @@ function renderFutureBoards() {
   });
 
   wrap.innerHTML = `
+    ${renderPicksOverview()}
     <div class="db-controls"><div class="db-pos-filters" id="futureYearSelector"></div></div>
     <div class="info-banner">
       "Own" = Team besitzt diesen Pick noch selbst. Nur tatsächlich getradete Picks sind hervorgehoben
@@ -1360,28 +1479,58 @@ function renderTradeHistory() {
   }
   const teamEmoji = name => (LEAGUE_TEAMS.find(t => t.name === name) || {}).emoji || '🏈';
 
+  // Trade-Counter: wie oft taucht jedes Team als Handelspartner auf
+  const counts = {};
+  LEAGUE_TEAMS.forEach(t => { counts[t.name] = 0; });
+  TRADES.forEach(t => {
+    counts[t.teamA] = (counts[t.teamA] || 0) + 1;
+    counts[t.teamB] = (counts[t.teamB] || 0) + 1;
+  });
+  const ranked = Object.entries(counts).sort((a, b) => b[1] - a[1]);
+  const maxCount = ranked.length ? ranked[0][1] : 1;
+
+  const counterHtml = `
+    <div class="trade-counter-box">
+      <div class="section-label" style="margin-top:0">🔥 Trade-Aktivität</div>
+      ${ranked.map(([name, n]) => {
+        const team = LEAGUE_TEAMS.find(t => t.name === name);
+        const pct = maxCount ? Math.round((n / maxCount) * 100) : 0;
+        return `
+          <div class="trade-counter-row">
+            <div class="trade-counter-label">${team ? team.emoji : '🏈'} ${name}</div>
+            <div class="trade-counter-bar-wrap"><div class="trade-counter-bar" style="width:${pct}%"></div></div>
+            <div class="trade-counter-n">${n}</div>
+          </div>`;
+      }).join('')}
+    </div>`;
+
   wrap.innerHTML = `
     <div class="info-banner">
       ESPN führt in unserer Liga keine Draft-Picks für 2027 und später. Trades mit solchen Picks
       werden deshalb hier von Hand nachgetragen (siehe <code>data/trades.js</code>).
     </div>
-    <div class="section-label">Chronik</div>
-    ${TRADES.map(t => `
-      <div class="player-row" style="align-items:flex-start;flex-direction:column;gap:6px;padding:14px;">
-        <div style="font-size:11px;color:var(--muted);font-weight:700">${formatTradeDate(t.date)}</div>
-        <div style="display:flex;gap:18px;flex-wrap:wrap;width:100%">
-          <div style="flex:1;min-width:200px">
-            <div style="font-weight:800;margin-bottom:4px">${teamEmoji(t.teamA)} ${t.teamA} gibt:</div>
-            ${t.teamAGives.map(a => `<div class="player-team">• ${a}</div>`).join('')}
+    <div class="trade-history-layout">
+      <div class="trade-history-main">
+        <div class="section-label" style="margin-top:0">Chronik</div>
+        ${TRADES.map(t => `
+          <div class="player-row" style="align-items:flex-start;flex-direction:column;gap:6px;padding:14px;">
+            <div style="font-size:11px;color:var(--muted);font-weight:700">${formatTradeDate(t.date)}</div>
+            <div style="display:flex;gap:18px;flex-wrap:wrap;width:100%">
+              <div style="flex:1;min-width:200px">
+                <div style="font-weight:800;margin-bottom:4px">${teamEmoji(t.teamA)} ${t.teamA} gibt:</div>
+                ${t.teamAGives.map(a => `<div class="player-team">• ${a}</div>`).join('')}
+              </div>
+              <div style="flex:1;min-width:200px">
+                <div style="font-weight:800;margin-bottom:4px">${teamEmoji(t.teamB)} ${t.teamB} gibt:</div>
+                ${t.teamBGives.map(a => `<div class="player-team">• ${a}</div>`).join('')}
+              </div>
+            </div>
           </div>
-          <div style="flex:1;min-width:200px">
-            <div style="font-weight:800;margin-bottom:4px">${teamEmoji(t.teamB)} ${t.teamB} gibt:</div>
-            ${t.teamBGives.map(a => `<div class="player-team">• ${a}</div>`).join('')}
-          </div>
-        </div>
+        `).join('')}
+        <div class="page-sub" style="margin-top:10px">Wer aktuell welchen Zukunfts-Pick besitzt, steht auf der Seite <b>Future Draft Boards</b> (2027–2029).</div>
       </div>
-    `).join('')}
-    <div class="page-sub" style="margin-top:10px">Wer aktuell welchen Zukunfts-Pick besitzt, steht auf der Seite <b>Future Draft Boards</b> (2027–2029).</div>
+      <div class="trade-history-side">${counterHtml}</div>
+    </div>
   `;
 }
 

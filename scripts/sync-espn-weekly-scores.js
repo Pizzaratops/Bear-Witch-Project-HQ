@@ -165,5 +165,5 @@ const WEEKLY_SCORES = ${JSON.stringify(existing, null, 1)};
 
 main().catch(err => {
   console.error('ESPN Weekly Scores Sync fehlgeschlagen:', err.message);
-  process.exit(0); // non-fatal, letzter guter Stand bleibt erhalten
+  process.exit(1); // sichtbarer Fehlschlag in der Action, statt still gruen zu bleiben
 });

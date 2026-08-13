@@ -136,6 +136,9 @@ async function main() {
       const pos = cfg.ESPN_POS_MAP[p.defaultPositionId] || '?';
       const nflTeam = cfg.ESPN_NFL_MAP[p.proTeamId] || 'FA';
       const player = { name, pos, nfl: nflTeam };
+      // lineupSlotId 20=Bench, 21=IR -- alles andere zaehlt als Starter-Slot
+      const slot = entry.lineupSlotId;
+      player.isStarter = slot != null ? ![20, 21].includes(slot) : null;
       const inj = p.injuryStatus;
       if (inj && inj !== 'ACTIVE') {
         player.status = inj === 'QUESTIONABLE' ? 'Q'
@@ -194,5 +197,5 @@ const TEAM_RECORDS_LIVE = {
 main().catch(err => {
   console.error('ESPN Roster Sync fehlgeschlagen:', err.message);
   // Non-fatal: letzter guter Stand von data/rosters-live.js bleibt erhalten.
-  process.exit(0);
+  process.exit(1); // sichtbarer Fehlschlag in der Action, statt still gruen zu bleiben
 });
