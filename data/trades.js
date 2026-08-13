@@ -58,7 +58,7 @@ const TRADES = [
 // im Draft Board 2026 verwendet. "from" = urspruenglicher Team-Name (Spalte
 // im Draft Board 2026), "owner" = wer den Pick jetzt haelt.
 const TRADED_PICKS_2026 = [
-  { round: 5, from: "Beastmode", owner: "Team Beermode" },
+  { round: 5, from: "Team Beermode", owner: "Beastmode" },
 ];
 
 // Verdichtete Sicht je Zukunftsjahr: nur Picks, die tatsaechlich den

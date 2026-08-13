@@ -118,3 +118,22 @@ anpassen, die Rundenberechnung läuft automatisch mit.
 
 Die tatsächliche Draft-Slot-Reihenfolge (wer in Runde 1 an Position 1, 2, 3 … pickt) ist noch
 offen und wird ergänzt, sobald ESPN sie vergibt.
+
+## Wichtiger Bugfix (13.08.2026): ESPN-Syncs liefen ins Leere
+
+Alle vier ESPN-Sync-Skripte luden ihre Konfiguration (`js/espn-sync.js`, `data/teams.js`) über
+Node's `vm`-Modul. Node hängt `const`/`let`-Deklarationen dabei **nicht** als Property ans
+Sandbox-Objekt (nur `var` würde das tun) — die Skripte lasen also z. B. `ESPN_LEAGUE_ID:
+undefined`, scheiterten sofort und wurden durch das eigene stille Fehler-Handling (`exit(0)`,
+damit ein einzelner Sync-Fehler nicht den ganzen Workflow rot markiert) verschluckt. Behoben:
+`loadModuleSandbox()` sammelt jetzt per Regex alle `const NAME = ...`-Namen ein und hängt sie
+explizit über `this.NAME = NAME` an die Sandbox. Betroffen waren alle vier Sync-Skripte. Falls
+nach dem nächsten Push immer noch nichts ankommt, jetzt eher an Liga-Privatsphäre (ESPN_S2/SWID
+Secrets fehlen) oder Season-ID denken, nicht mehr an dieses Grundproblem.
+
+## Getradete Picks innerhalb des 2026er Drafts
+
+`TRADED_PICKS_2026` in `data/trades.js` funktioniert wie `FUTURE_PICKS`, nur für den laufenden
+2026er-Draft: `{ round, from, owner }`, wobei `from` der **ursprüngliche** Besitzer ist und
+`owner`, wer den Pick nach dem Trade hat. Default ist "Own" beim ursprünglichen Team, nur
+Ausnahmen eintragen.

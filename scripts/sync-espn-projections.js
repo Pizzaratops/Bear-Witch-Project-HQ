@@ -27,9 +27,18 @@ const OUT = path.join(ROOT, 'data', 'projections.js');
 const PLAYER_LIMIT = 800; // deckt den kompletten relevanten Fantasy-Pool ab
 
 function loadModuleSandbox(files) {
+  // WICHTIG: vm.runInContext haengt "const"/"let"-Deklarationen NICHT als
+  // Property ans Sandbox-Objekt (nur "var" wuerde das tun) -- deshalb hier per
+  // Regex alle top-level "const NAME = ..." Namen einsammeln und explizit
+  // ueber "this.NAME = NAME" an die Sandbox anhaengen.
   const sandbox = {};
   vm.createContext(sandbox);
-  files.forEach(f => vm.runInContext(fs.readFileSync(f, 'utf8'), sandbox));
+  files.forEach(f => {
+    const code = fs.readFileSync(f, 'utf8');
+    const names = [...code.matchAll(/^\s*const\s+([A-Za-z_\$][\w\$]*)/gm)].map(m => m[1]);
+    const expose = names.map(n => `this.${n} = ${n};`).join('\n');
+    vm.runInContext(code + '\n' + expose, sandbox);
+  });
   return sandbox;
 }
 function loadConfig() {
