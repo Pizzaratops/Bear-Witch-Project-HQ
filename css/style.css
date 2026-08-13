@@ -180,7 +180,16 @@ a { color: inherit; text-decoration: none; }
   font-family: 'DM Sans', sans-serif;
 }
 .subnav-mobile-dropdown { display: none; padding: 4px 8px 12px; }
-.subnav-mobile-dropdown.open { display: block; }
+.subnav-mobile-dropdown.open {
+  display: block;
+  /* WICHTIG: scrollt in sich selbst, statt die ganze Seite unter dem
+     "position: sticky"-Header extrem lang zu machen -- sonst wirkt die
+     Seite beim Scrollen "eingefroren", bis das gesamte lange Menue
+     durchgescrollt wurde. */
+  max-height: calc(100vh - 130px);
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
 .subnav-mobile-group { margin-bottom: 8px; }
 .subnav-mobile-label { font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); padding: 10px 8px 4px; }
 .subnav-mobile-btn {
