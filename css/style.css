@@ -526,3 +526,6 @@ table.db-table td:nth-child(2) { text-align: left; font-weight: 600; }
 .team-picks-future { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; }
 .team-pick-future-row { display: flex; justify-content: space-between; gap: 8px; font-size: 12.5px; padding: 6px 0; border-bottom: 1px solid var(--border); }
 .team-pick-future-row:last-of-type { border-bottom: none; }
+
+/* ---------- TENTATIVE KEEPER (vsl.) ---------- */
+.tentative-tag { font-size: 9px; font-weight: 800; color: var(--accent2); background: rgba(77,123,176,0.14); padding: 1px 5px; border-radius: 5px; letter-spacing: .3px; }

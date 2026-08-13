@@ -25,6 +25,12 @@
 // status: "Q" = Questionable, "O" = Out (Injury-Tag, wie im ESPN-Export
 // direkt an die Position angehaengt, z.B. "WRQ"). null = kein Tag.
 //
+// tentative: true = NOCH NICHT offiziell als Keeper bei ESPN ausgewaehlt,
+// aber vom Team-Owner als sehr wahrscheinlich eingeschaetzt. Wird ueberall
+// in Klammern mit "(vsl.)" angezeigt und zaehlt in Runden-/Board-Berechnungen
+// mit, bis entweder offiziell bestaetigt (Flag entfernen) oder verworfen
+// (Eintrag loeschen).
+//
 // STAND 12.08.2026: Zwei Trades mit 2027er-Picks eingearbeitet (ESPN
 // kennt diese Picks nicht, siehe data/trades.js fuer das Ledger):
 //  1) Beastmode  gibt 2027 1st/2nd/3rd + Colston Loveland
@@ -47,10 +53,12 @@ const DRAFT_2026_TEAMS = [
       { name: "Travis Hunter",        nfl: "JAX", pos: "WR/CB", status: null },
       { name: "George Pickens",       nfl: "DAL", pos: "WR",    status: null },
       { name: "DeVonta Smith",        nfl: "PHI", pos: "WR",    status: null },
-      { name: "Garrett Wilson",       nfl: "NYJ", pos: "WR",    status: null },
-      { name: "Nico Collins",         nfl: "HOU", pos: "WR",    status: null },
-      { name: "Jonathan Taylor",      nfl: "IND", pos: "RB",    status: null },
       { name: "Colston Loveland",     nfl: "CHI", pos: "TE",    status: null },
+      { name: "Garrett Wilson",       nfl: "NYJ", pos: "WR",    status: null },
+      { name: "Chuba Hubbard",        nfl: "CAR", pos: "RB",    status: null },
+      { name: "Nico Collins",         nfl: "HOU", pos: "WR",    status: null },
+      { name: "Dak Prescott",         nfl: "DAL", pos: "QB",    status: null },
+      { name: "Jonathan Taylor",      nfl: "IND", pos: "RB",    status: null },
     ],
   },
   {
@@ -92,6 +100,7 @@ const DRAFT_2026_TEAMS = [
   {
     team: "Vice City Crackheads",
     keepers: [
+      { name: "Trevor Lawrence",      nfl: "JAX", pos: "QB", status: null },
       { name: "Breece Hall",          nfl: "NYJ", pos: "RB", status: null },
       { name: "Derrick Henry",        nfl: "BAL", pos: "RB", status: null },
       { name: "George Kittle",        nfl: "SF",  pos: "TE", status: "O" },
@@ -108,8 +117,9 @@ const DRAFT_2026_TEAMS = [
       { name: "Bijan Robinson",       nfl: "ATL", pos: "RB", status: null },
       { name: "James Cook III",       nfl: "BUF", pos: "RB", status: null },
       { name: "TreVeyon Henderson",   nfl: "NE",  pos: "RB", status: null },
-      { name: "Trey McBride",         nfl: "ARI", pos: "TE", status: null },
       { name: "Tetairoa McMillan",    nfl: "CAR", pos: "WR", status: null },
+      { name: "Trey McBride",         nfl: "ARI", pos: "TE", status: null },
+      { name: "RJ Harvey",            nfl: "DEN", pos: "RB", status: null },
     ],
   },
   {
@@ -131,7 +141,7 @@ const DRAFT_2026_TEAMS = [
       { name: "Justin Jefferson",     nfl: "MIN", pos: "WR", status: null },
       { name: "Chris Olave",          nfl: "NO",  pos: "WR", status: null },
       { name: "D'Andre Swift",        nfl: "CHI", pos: "RB", status: null },
-      { name: "Emeka Egbuka",         nfl: "TB",  pos: "WR", status: null },
+      { name: "Emeka Egbuka",         nfl: "TB",  pos: "WR", status: null, tentative: true },
     ],
   },
   {

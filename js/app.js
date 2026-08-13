@@ -178,17 +178,17 @@ function renderTeamPicksSection(team, draftTeam) {
   const rounds2026 = [];
   for (let round = 1; round <= TOTAL_DRAFT_ROUNDS; round++) {
     const tradedOwner = tradedOverrides[`${team.name}|${round}`];
-    let label, kind, own;
+    let label, kind, own, assetName;
     if (round >= startRound) {
       const player = draftTeam.keepers[round - startRound];
-      label = player.name; kind = 'player'; own = false;
+      label = player.tentative ? `(${player.name})` : player.name; kind = 'player'; own = false; assetName = player.name;
     } else if (tradedOwner) {
       const ownerEmoji = teamsById[tradedOwner] ? teamsById[tradedOwner].emoji : '';
       label = `${ownerEmoji} ${tradedOwner}`; kind = 'pick'; own = false;
     } else {
       label = 'Own'; kind = 'pick'; own = true;
     }
-    const pickLabel = kind === 'pick' ? `${team.name} 2026 R${round}` : label;
+    const pickLabel = kind === 'pick' ? `${team.name} 2026 R${round}` : assetName;
     rounds2026.push({ round, label, kind, own, pickLabel });
   }
 
@@ -219,10 +219,11 @@ function renderTeamPicksSection(team, draftTeam) {
 }
 
 function playerRowHtml(p, round, isKeeperBadge) {
+  const nameHtml = p.tentative ? `(${p.name})` : p.name;
   return `
     <div class="player-row">
       ${round ? `<div class="player-round">R${round}</div>` : (isKeeperBadge === undefined ? '' : `<div class="player-round" style="opacity:.35">—</div>`)}
-      <div class="player-name">${p.name}${isKeeperBadge ? ' 🔒' : ''}</div>
+      <div class="player-name" style="${p.tentative ? 'opacity:.7;font-style:italic' : ''}">${nameHtml}${isKeeperBadge ? ' 🔒' : ''}${p.tentative ? ' <span class="tentative-tag">vsl.</span>' : ''}</div>
       <div class="player-team">${p.nfl} · ${p.pos}</div>
       ${p.status ? `<div class="player-status ${p.status}">${p.status}</div>` : ''}
     </div>`;
@@ -261,7 +262,7 @@ function renderKeepers() {
         ${dt.keepers.map((p, i) => `
           <div class="keeper-card-row">
             <span class="keeper-card-round">R${rounds[i]}</span>
-            <span class="keeper-card-name">${p.name}</span>
+            <span class="keeper-card-name"${p.tentative ? ' style="opacity:.7;font-style:italic"' : ''}>${p.tentative ? `(${p.name})` : p.name}${p.tentative ? ' <span class="tentative-tag">vsl.</span>' : ''}</span>
             <span class="keeper-card-meta">${p.nfl} · ${p.pos}${p.status ? ` · <span class="player-status ${p.status}">${p.status}</span>` : ''}</span>
           </div>`).join('')}
       </div>`;
@@ -292,7 +293,7 @@ function renderDraftboard() {
       const tradedOwner = tradedOverrides[`${t.team}|${round}`];
       if (round >= startRound) {
         const player = t.keepers[round - startRound];
-        rows += `<td><div class="cell-keeper" onclick="openTradeAnalyzer('${escapeJs(player.name)}')">${player.name}<small>${player.nfl} · ${player.pos}</small></div></td>`;
+        rows += `<td><div class="cell-keeper" onclick="openTradeAnalyzer('${escapeJs(player.name)}')">${player.tentative ? `(${player.name})` : player.name}${player.tentative ? ' <small style="display:inline">vsl.</small>' : ''}<small>${player.nfl} · ${player.pos}</small></div></td>`;
       } else if (tradedOwner) {
         const ownerEmoji = teamsById[tradedOwner] ? teamsById[tradedOwner].emoji : '';
         rows += `<td><div class="cell-keeper" onclick="openTradeAnalyzer('${escapeJs(t.team)} 2026 R${round}', 'pick')">${ownerEmoji} ${tradedOwner}<small>via ${t.team}</small></div></td>`;
