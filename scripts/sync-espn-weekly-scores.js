@@ -23,6 +23,7 @@ const https = require('https');
 
 const ROOT = path.join(__dirname, '..');
 const OUT = path.join(ROOT, 'data', 'weekly-scores.js');
+const SCHEDULE_OUT = path.join(ROOT, 'data', 'schedule.js');
 
 function loadModuleSandbox(files) {
   // WICHTIG: vm.runInContext haengt "const"/"let"-Deklarationen NICHT als
@@ -161,6 +162,37 @@ const WEEKLY_SCORES = ${JSON.stringify(existing, null, 1)};
 `;
   fs.writeFileSync(OUT, out, 'utf8');
   console.log(`${OUT} aktualisiert: ${weeksWritten} Matchup-Eintragungen verarbeitet.`);
+
+  // ---------- Kompletter Spielplan (auch ungespielte Wochen) ----------
+  // Fuer den Matchup-Planer: wer spielt wann gegen wen, unabhaengig davon
+  // ob die Woche schon Punkte hat.
+  const scheduleByWeek = {};
+  schedule.forEach(m => {
+    const week = m.matchupPeriodId;
+    const home = m.home, away = m.away;
+    if (!home || !away || home.teamId == null || away.teamId == null) return;
+    scheduleByWeek[week] = scheduleByWeek[week] || [];
+    scheduleByWeek[week].push({
+      home: espnIdToOurId[home.teamId] || home.teamId,
+      away: espnIdToOurId[away.teamId] || away.teamId,
+    });
+  });
+
+  const scheduleOutData = { [season]: scheduleByWeek };
+  const scheduleOut = `// ============================================================
+//  SCHEDULE — kompletter Saison-Spielplan (auch ungespielte Wochen)
+// ============================================================
+//  AUTO-GENERIERT von scripts/sync-espn-weekly-scores.js (selbe ESPN-
+//  Antwort wie WEEKLY_SCORES, hier aber ungefiltert -- auch Wochen ohne
+//  Punkte, fuer den Matchup-Planer).
+//  Zuletzt synchronisiert: ${new Date().toISOString()}
+// ============================================================
+
+const SCHEDULE = ${JSON.stringify(scheduleOutData, null, 1)};
+`;
+  fs.writeFileSync(SCHEDULE_OUT, scheduleOut, 'utf8');
+  const totalMatchups = Object.values(scheduleByWeek).reduce((s, w) => s + w.length, 0);
+  console.log(`${SCHEDULE_OUT} aktualisiert: ${totalMatchups} Matchups über ${Object.keys(scheduleByWeek).length} Wochen.`);
 }
 
 main().catch(err => {
