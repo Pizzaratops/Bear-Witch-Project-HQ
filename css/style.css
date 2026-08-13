@@ -248,7 +248,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ---------- PAGE / LAYOUT ---------- */
-.page { max-width: 1180px; margin: 0 auto; padding: 28px 20px 60px; display: none; }
+.page { max-width: min(1400px, 94vw); margin: 0 auto; padding: 28px 20px 60px; display: none; }
 .page.active { display: block; }
 
 .page-title { font-family: 'Playfair Display', serif; font-size: 30px; font-weight: 800; margin-bottom: 6px; color: var(--text); }
