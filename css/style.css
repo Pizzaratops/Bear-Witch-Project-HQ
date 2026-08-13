@@ -491,3 +491,19 @@ table.db-table td:nth-child(2) { text-align: left; font-weight: 600; }
   .trade-history-layout { grid-template-columns: 1fr; }
   .trade-history-side { position: static; }
 }
+
+/* ---------- TRADE IMPACT (Projections) ---------- */
+.trade-impact-box { display: flex; flex-direction: column; gap: 8px; }
+.trade-impact-row { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 10px 14px; display: flex; flex-wrap: wrap; gap: 6px 16px; align-items: center; font-size: 12.5px; }
+.trade-impact-row > div:first-child { flex: 1; min-width: 160px; }
+
+/* ---------- MATCHUP PLANNER ---------- */
+.matchup-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 12px; }
+.matchup-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 14px; }
+.matchup-team { display: flex; justify-content: space-between; align-items: center; padding: 6px 0; font-size: 13px; font-weight: 600; }
+.matchup-team.matchup-winner { color: var(--accent); font-weight: 800; }
+.matchup-score { font-weight: 800; }
+.matchup-vs { text-align: center; font-size: 10px; color: var(--muted); font-weight: 700; letter-spacing: 1px; padding: 2px 0; }
+
+/* ---------- ROLLING RANKINGS PREDICTION ---------- */
+.rr-prediction-box { background: var(--accent-light); border: 1px solid var(--border); border-radius: 12px; padding: 12px 16px; margin-top: 16px; font-size: 13px; font-weight: 600; }
