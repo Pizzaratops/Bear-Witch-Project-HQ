@@ -457,3 +457,23 @@ table.db-table td:nth-child(2) { text-align: left; font-weight: 600; }
   .rr-toolbar { padding: 8px 12px; }
   .rr-tb-btn { font-size: 10px; padding: 5px 8px; }
 }
+
+/* ---------- SNAPSHOT SHARE MODAL ---------- */
+.rr-share-overlay { display: none; position: fixed; inset: 0; background: rgba(0,0,0,.7); z-index: 1000; align-items: center; justify-content: center; padding: 20px; overflow-y: auto; }
+.rr-share-box { background: var(--surface); border-radius: 16px; padding: 22px; max-width: 540px; width: 100%; position: relative; max-height: 92vh; overflow-y: auto; }
+.share-modal-title { font-family: 'Playfair Display', serif; font-size: 18px; font-weight: 800; color: var(--text); text-align: center; margin-bottom: 16px; }
+.rr-style-toggle { display: flex; gap: 6px; background: var(--surface2); border: 1px solid var(--border); border-radius: 9px; padding: 3px; margin: 0 auto 16px; width: fit-content; }
+.rr-style-btn { background: transparent; border: none; color: var(--muted); font-family: 'DM Sans', sans-serif; font-size: 12px; font-weight: 700; padding: 6px 14px; border-radius: 6px; cursor: pointer; transition: all .15s; }
+.rr-style-btn.rr-style-active { background: var(--accent); color: #fff; }
+#drShareCardContent { display: flex; justify-content: center; margin-bottom: 16px; }
+.share-btn-row { display: grid; grid-template-columns: 1fr; gap: 10px; margin-top: 4px; }
+.share-action-btn { background: var(--surface2); border: 1px solid var(--border); color: var(--text); padding: 13px 10px; border-radius: 14px; font-size: 14px; font-weight: 700; font-family: 'DM Sans', sans-serif; cursor: pointer; transition: all 0.18s; text-align: center; }
+.share-action-btn:hover { border-color: var(--accent); background: var(--accent-light); color: var(--accent); }
+.share-action-btn.primary { background: linear-gradient(135deg, var(--accent), var(--accent2)); border-color: transparent; color: white; box-shadow: 0 4px 14px rgba(224,121,74,0.3); }
+.share-action-btn.primary:hover { opacity: 0.88; }
+.share-close-btn { position: absolute; top: 16px; right: 16px; background: var(--surface2); border: 1px solid var(--border); color: var(--muted); border-radius: 50%; width: 32px; height: 32px; font-size: 16px; cursor: pointer; display: flex; align-items: center; justify-content: center; transition: all 0.15s; font-family: 'DM Sans', sans-serif; }
+.share-close-btn:hover { border-color: var(--accent); color: var(--text); }
+@media (max-width: 560px) {
+  #drShareCardContent { transform: scale(0.72); transform-origin: top center; height: 610px; margin-bottom: 0; }
+  .rr-toolbar { flex-wrap: wrap; }
+}

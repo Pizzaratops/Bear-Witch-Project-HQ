@@ -442,10 +442,12 @@ function _drRenderToolbar() {
   const host = document.getElementById('drToolbar');
   if (!host) return;
   const compareActive = drCompareMode ? ' rr-tb-active' : '';
+  const shareDisabled = !drSelected.length ? ' disabled style="opacity:.4;cursor:not-allowed"' : '';
   host.innerHTML = `
     <div class="rr-tb-group">
       <button class="rr-tb-btn${compareActive}" onclick="drToggleCompare()">⚖️ Vergleichen ${drCompareMode ? '(' + drSelected.length + '/3)' : ''}</button>
     </div>
+    <button class="rr-tb-btn" onclick="drOpenShareModal()"${shareDisabled}>📸 Snapshot teilen</button>
   `;
   const sub = document.getElementById('drSnapshotSubtitle');
   const snaps = _drSnaps();
@@ -461,18 +463,32 @@ function drToggleCompare() {
 function _drRenderListHeader() {
   const host = document.getElementById('drListCols');
   if (!host) return;
-  const snaps = _drSnaps();
+  const snaps = _drListSnaps();
   const sortIndicator = key => drSortBy !== key ? '' : (drSortDir === 'asc' ? ' ↑' : ' ↓');
   const cls = key => 'rr-col-h' + (drSortBy === key ? ' rr-col-active' : '');
 
-  host.style.gridTemplateColumns = `32px 1fr repeat(${snaps.length}, 42px)`;
+  host.style.gridTemplateColumns = `30px 1fr repeat(${snaps.length}, 38px)`;
   const snapHeaders = snaps.map(s =>
-    `<span class="${cls(s.date)}" onclick="drSortByKey('${s.date}')" title="${s.date}">${s.label}${sortIndicator(s.date)}</span>`
+    `<span class="${cls(s.date)}" onclick="drSortByKey('${s.date}')" title="${s.label} (${s.date})">${_drShortLabel(s.label)}${sortIndicator(s.date)}</span>`
   ).join('');
   host.innerHTML =
     `<span class="${cls('latest')}" onclick="drSortByKey('latest')" title="Aktueller Rang (neuester Snapshot)">#${sortIndicator('latest')}</span>` +
     `<span class="${cls('name')}" onclick="drSortByKey('name')" style="text-align:left;">Name${sortIndicator('name')}</span>` +
     snapHeaders;
+}
+
+/* Nur die letzten 2 Snapshots in der Sidebar-Liste zeigen -- die volle
+   Historie (alle Snapshots) sieht man im Chart-Panel rechts nach Klick
+   auf einen Spieler. Haelt die Liste kompakt und verhindert Umbrueche
+   auf schmalen Screens, egal wie viele Snapshots insgesamt existieren. */
+function _drListSnaps() {
+  const snaps = _drSnaps();
+  return snaps.slice(-2);
+}
+function _drShortLabel(label) {
+  // "2021 Saisonstart" -> "'21", "Start 2026" -> "'26" etc. -- extrahiert die Jahreszahl
+  const m = label.match(/\d{4}/);
+  return m ? "'" + m[0].slice(2) : label.slice(0, 4);
 }
 
 function drFilter() {
@@ -498,12 +514,14 @@ function _drRankColor(r) {
 function _drRenderList() {
   const body = document.getElementById('drListBody');
   if (!body) return;
-  const snaps = _drSnaps();
-  const gridTpl = `32px 1fr repeat(${snaps.length}, 42px)`;
+  const allSnaps = _drSnaps();
+  const listSnaps = _drListSnaps();
+  const startIdx = allSnaps.length - listSnaps.length;
+  const gridTpl = `30px 1fr repeat(${listSnaps.length}, 38px)`;
 
   body.innerHTML = drFiltered.slice(0, 500).map((p, sortIdx) => {
-    const cells = snaps.map((s, i) => {
-      const r = p.ranks[i];
+    const cells = listSnaps.map((s, i) => {
+      const r = p.ranks[startIdx + i];
       const c = _drRankColor(r);
       return `<span class="rr-rank-cell" style="color:${c};background:${r ? c + '22' : 'transparent'}">${r ?? '–'}</span>`;
     }).join('');
@@ -699,6 +717,176 @@ function _drHexToRgba(hex, alpha) {
   if (!m) return `rgba(224,121,74,${alpha})`;
   const n = parseInt(m[1], 16);
   return `rgba(${(n>>16)&255},${(n>>8)&255},${n&255},${alpha})`;
+}
+
+// ============================================================
+//  SNAPSHOT TEILEN (Instagram-Story-Format 4:5)
+// ============================================================
+let drShareStyle = 'light'; // 'light' | 'dark'
+
+function drOpenShareModal() {
+  if (!drSelected.length) return;
+  const overlay = document.getElementById('drShareModalOverlay');
+  if (!overlay) return;
+  drShareStyle = document.body.classList.contains('light') ? 'light' : 'dark';
+  _drRenderShareCard();
+  overlay.style.display = 'flex';
+}
+function drCloseShareModal() {
+  const overlay = document.getElementById('drShareModalOverlay');
+  if (overlay) overlay.style.display = 'none';
+}
+function drSetShareStyle(style) {
+  drShareStyle = style;
+  _drRenderShareCard();
+}
+
+function _drRenderShareCard() {
+  const host = document.getElementById('drShareCardContent');
+  if (!host) return;
+
+  document.querySelectorAll('.rr-style-btn').forEach(btn => {
+    btn.classList.toggle('rr-style-active', btn.dataset.style === drShareStyle);
+  });
+
+  const isCompare = drCompareMode && drSelected.length > 1;
+  const data = _drData();
+  const players = drSelected.map(i => data[i]);
+  const snaps = _drSnaps();
+  const labels = snaps.map(s => s.label);
+  const datasets = players.map((p, i) => ({ player: p, values: p.ranks, color: DR_COMPARE_COLORS[i] }));
+
+  const th = drShareStyle === 'light' ? {
+    bg: '#faf6f1', surface: '#ffffff', text: '#23293a', muted: '#93877a',
+    accent: '#cf7a48', border: '#ecdcc9', shadow: 'rgba(207,122,72,0.10)',
+  } : {
+    bg: '#0a0f1c', surface: '#121a2b', text: '#eef1f8', muted: '#8a93ac',
+    accent: '#e0794a', border: '#2a3654', shadow: 'rgba(0,0,0,0.35)',
+  };
+
+  const titleText = isCompare ? 'Rolling Rankings · Vergleich' : players[0].name;
+  const subText = isCompare ? 'Dynasty Rolling Rankings' : `Dynasty Rolling Rankings · ${players[0].pos || ''}`;
+
+  let statsHtml = '';
+  if (isCompare) {
+    statsHtml = datasets.map(d => {
+      const valid = d.values.filter(x => x !== null);
+      const best = valid.length ? Math.min(...valid) : null;
+      const avg = valid.length ? Math.round(valid.reduce((a, b) => a + b, 0) / valid.length) : null;
+      return `<div style="display:flex;align-items:center;gap:10px;padding:10px 14px;background:${th.surface};border-radius:10px;border:1px solid ${th.border};">
+        <span style="width:14px;height:14px;border-radius:50%;background:${d.color};flex-shrink:0;"></span>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:14px;font-weight:800;color:${th.text};white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${d.player.name}</div>
+          <div style="font-size:10px;color:${th.muted};margin-top:2px;">Bestes #${best ?? '–'} · Schnitt #${avg ?? '–'}</div>
+        </div>
+      </div>`;
+    }).join('');
+    statsHtml = `<div style="display:flex;flex-direction:column;gap:8px;margin-bottom:18px;">${statsHtml}</div>`;
+  } else {
+    const v = datasets[0].values;
+    const valid = v.filter(x => x !== null);
+    const best = valid.length ? Math.min(...valid) : null;
+    const worst = valid.length ? Math.max(...valid) : null;
+    const avg = valid.length ? Math.round(valid.reduce((a, b) => a + b, 0) / valid.length) : null;
+    const pill = (val, label, color) => `
+      <div style="flex:1;background:${th.surface};border:1px solid ${th.border};border-radius:10px;padding:12px 8px;text-align:center;">
+        <div style="font-size:24px;font-weight:800;color:${color};line-height:1;">${val ?? '–'}</div>
+        <div style="font-size:9px;color:${th.muted};margin-top:6px;letter-spacing:1px;text-transform:uppercase;">${label}</div>
+      </div>`;
+    statsHtml = `<div style="display:flex;gap:8px;margin-bottom:18px;">
+      ${pill(best, 'Bestes', '#e0794a')}
+      ${pill(worst, 'Schlechtestes', '#d9695f')}
+      ${pill(avg, 'Schnitt', '#4d7bb0')}
+    </div>`;
+  }
+
+  host.innerHTML = `
+    <div id="drShareCardInner" style="width:480px;aspect-ratio:4/5;background:${th.bg};padding:32px 28px;font-family:'DM Sans',system-ui,sans-serif;color:${th.text};display:flex;flex-direction:column;border-radius:18px;box-shadow:0 8px 32px ${th.shadow};">
+      <div style="font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:${th.muted};text-align:center;margin-bottom:6px;">🐻 Bear Witch Project HQ · Rolling Rankings</div>
+      <div style="font-size:${isCompare ? '26px' : '30px'};font-family:'Playfair Display',serif;font-weight:800;text-align:center;line-height:1.1;color:${th.accent};margin-bottom:4px;">${titleText}</div>
+      <div style="font-size:11px;color:${th.muted};text-align:center;margin-bottom:18px;">${subText}</div>
+      ${statsHtml}
+      <div style="flex:1;background:${th.surface};border:1px solid ${th.border};border-radius:14px;padding:14px;display:flex;align-items:center;justify-content:center;min-height:0;">
+        <canvas id="drShareCanvas" style="max-width:100%;max-height:100%;"></canvas>
+      </div>
+      <div style="text-align:center;font-size:10px;color:${th.muted};margin-top:14px;letter-spacing:1px;">Foodball 🏈 · Bear Witch Project HQ</div>
+    </div>`;
+
+  setTimeout(() => _drDrawShareChart(datasets, labels, th), 30);
+}
+
+function _drDrawShareChart(datasets, labels, th) {
+  const canvas = document.getElementById('drShareCanvas');
+  if (!canvas || typeof Chart === 'undefined') return;
+  const ctx = canvas.getContext('2d');
+
+  const chartDatasets = datasets.map(d => {
+    const grad = ctx.createLinearGradient(0, 0, 0, 240);
+    grad.addColorStop(0, _drHexToRgba(d.color, 0.25));
+    grad.addColorStop(1, _drHexToRgba(d.color, 0));
+    return {
+      label: d.player.name,
+      data: d.values,
+      borderColor: d.color,
+      backgroundColor: datasets.length === 1 ? grad : 'transparent',
+      pointBackgroundColor: d.color,
+      pointBorderColor: th.bg,
+      pointBorderWidth: 2,
+      pointRadius: labels.length > 8 ? 3 : 5,
+      borderWidth: 2.5,
+      fill: datasets.length === 1,
+      tension: 0.35,
+      spanGaps: true,
+    };
+  });
+
+  new Chart(ctx, {
+    type: 'line',
+    data: { labels, datasets: chartDatasets },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false,
+      animation: false,
+      plugins: { legend: { display: false }, tooltip: { enabled: false } },
+      scales: {
+        y: {
+          reverse: true, min: 1,
+          grid: { color: th.border }, border: { color: th.border },
+          ticks: { color: th.muted, font: { size: 10 }, callback: v => `#${v}` }
+        },
+        x: {
+          grid: { color: th.border }, border: { color: th.border },
+          ticks: { color: th.text, font: { size: labels.length > 8 ? 8 : 11, weight: '700' }, autoSkip: labels.length > 8, autoSkipPadding: 6 }
+        }
+      }
+    }
+  });
+}
+
+async function drDownloadShareImage() {
+  const card = document.getElementById('drShareCardInner');
+  if (!card) return;
+  if (typeof html2canvas !== 'function') { alert('html2canvas Library nicht geladen.'); return; }
+  const btn = document.getElementById('drDownloadBtn');
+  const orig = btn ? btn.textContent : '';
+  if (btn) { btn.textContent = '⏳ Erstelle...'; btn.disabled = true; }
+  try {
+    const bg = drShareStyle === 'light' ? '#faf6f1' : '#0a0f1c';
+    const canvas = await html2canvas(card, { backgroundColor: bg, scale: 2, logging: false, useCORS: true });
+    const link = document.createElement('a');
+    link.href = canvas.toDataURL('image/png');
+    const stamp = new Date().toISOString().split('T')[0];
+    const isCompare = drCompareMode && drSelected.length > 1;
+    const slug = isCompare ? 'vergleich' : (_drData()[drSelected[0]]?.name || 'spieler').toLowerCase().replace(/[^a-z0-9]+/g, '-');
+    link.download = `bwp-rolling-${slug}-${stamp}.png`;
+    link.click();
+    if (btn) { btn.textContent = '✓ Gespeichert!'; }
+    setTimeout(() => { if (btn) { btn.textContent = orig; btn.disabled = false; } }, 1500);
+  } catch (err) {
+    console.error('Screenshot failed:', err);
+    alert('Fehler beim Erstellen: ' + err.message);
+    if (btn) { btn.textContent = orig; btn.disabled = false; }
+  }
 }
 
 /* ---------- Week by Week ---------- */

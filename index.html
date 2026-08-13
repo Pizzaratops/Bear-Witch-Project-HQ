@@ -194,6 +194,22 @@
   </div>
 </div>
 
+<!-- SNAPSHOT SHARE MODAL -->
+<div id="drShareModalOverlay" class="rr-share-overlay">
+  <div class="rr-share-box">
+    <button class="share-close-btn" onclick="drCloseShareModal()">✕</button>
+    <div class="share-modal-title">📸 Rolling Rankings Snapshot</div>
+    <div class="rr-style-toggle">
+      <button class="rr-style-btn rr-style-active" data-style="light" onclick="drSetShareStyle('light')">☀️ Light</button>
+      <button class="rr-style-btn" data-style="dark" onclick="drSetShareStyle('dark')">🌙 Dark</button>
+    </div>
+    <div id="drShareCardContent"></div>
+    <div class="share-btn-row">
+      <button class="share-action-btn primary" id="drDownloadBtn" onclick="drDownloadShareImage()">💾 Bild speichern</button>
+    </div>
+  </div>
+</div>
+
 <!-- ============ WEEK BY WEEK ============ -->
 <div class="page" id="page-weekbyweek">
   <div class="page-title">🗓️ Week by Week Rankings</div>
@@ -263,6 +279,7 @@
 
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
 <script src="data/teams.js"></script>
 <script src="data/draft2026.js"></script>
 <script src="data/rosters-live.js"></script>
