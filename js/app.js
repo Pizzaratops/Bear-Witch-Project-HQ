@@ -22,7 +22,7 @@ function updateThemeBtn() {
 const PAGES = [
   'home', 'roster', 'draftboard', 'keepers', 'dynastyboard', 'rolling', 'teamaverages', 'weekbyweek',
   'playerrankings', 'playerprojections', 'futureboards',
-  'standings', 'seasonrolling', 'matchups', 'trade', 'tradehistory'
+  'standings', 'leaguehistory', 'seasonrolling', 'matchups', 'trade', 'tradehistory'
 ];
 
 function navigate(pageId, opts) {
@@ -53,9 +53,10 @@ function showDynastyBoard() { navigate('dynastyboard'); renderDynastyBoard(); }
 function showRolling() { navigate('rolling'); renderRolling(); }
 function showTeamAverages() { navigate('teamaverages'); renderTeamAverages(); }
 function showWeekByWeek() { navigate('weekbyweek'); renderWeekByWeek(); }
-function showStandings() { navigate('standings'); }
+function showStandings() { navigate('standings'); renderStandings(); }
+function showLeagueHistory() { navigate('leaguehistory'); renderLeagueHistory(); }
 function showSeasonRolling() { navigate('seasonrolling'); renderSeasonRolling(); }
-function showMatchups() { navigate('matchups'); }
+function showMatchups() { navigate('matchups'); renderMatchups(); }
 function showTrade() { navigate('trade'); renderTrade(); }
 function showTradeHistory() { navigate('tradehistory'); renderTradeHistory(); }
 
@@ -655,6 +656,13 @@ function _drRenderSingle(panel, player) {
   }).join('') + '</div>';
 
   const owner = ownerOfPlayer(player.name);
+  const prediction = _drPredictNextRank(values);
+  const predictionHtml = prediction != null ? `
+    <div class="rr-prediction-box">
+      🔮 Geschätzter nächster Rang: <b style="color:#e0794a">#${prediction}</b>
+      <span style="color:var(--muted);font-size:11px">(grober Trend aus den letzten Snapshots, keine echte Prognose)</span>
+    </div>` : '';
+
   panel.innerHTML = `
     <div class="rr-player-header">
       <div>
@@ -666,9 +674,33 @@ function _drRenderSingle(panel, player) {
     <div class="rr-chart-box">
       <canvas id="drCanvas"></canvas>
     </div>
-    ${badgesHtml}`;
+    ${badgesHtml}
+    ${predictionHtml}`;
 
   _drDrawChart([{ player, values, color: DR_COMPARE_COLORS[0] }], labels);
+}
+
+/* Grober Trend: einfache lineare Regression ueber die letzten (max 4)
+   vorhandenen Rang-Werte, einen Schritt extrapoliert. Nur eine Trend-
+   Schaetzung, kein echtes Vorhersagemodell -- deshalb auch klar so
+   beschriftet. Braucht mindestens 2 Datenpunkte. */
+function _drPredictNextRank(values) {
+  const pts = [];
+  values.forEach((v, i) => { if (v !== null) pts.push([i, v]); });
+  if (pts.length < 2) return null;
+  const recent = pts.slice(-4);
+  const n = recent.length;
+  const sumX = recent.reduce((s, p) => s + p[0], 0);
+  const sumY = recent.reduce((s, p) => s + p[1], 0);
+  const sumXY = recent.reduce((s, p) => s + p[0] * p[1], 0);
+  const sumXX = recent.reduce((s, p) => s + p[0] * p[0], 0);
+  const denom = (n * sumXX - sumX * sumX);
+  if (denom === 0) return null;
+  const slope = (n * sumXY - sumX * sumY) / denom;
+  const intercept = (sumY - slope * sumX) / n;
+  const nextX = pts[pts.length - 1][0] + 1;
+  const predicted = Math.round(slope * nextX + intercept);
+  return Math.max(1, predicted);
 }
 
 function _drRenderCompare(panel) {
@@ -1030,6 +1062,158 @@ function cumulativeStandingsThroughWeek(season, uptoWeek) {
   return ranked;
 }
 
+/* ---------- Standings (offizielle Tabelle nach W-L, PF als Tiebreak) ---------- */
+function renderStandings() {
+  const wrap = document.getElementById('standingsContent');
+  const seasons = Object.keys(WEEKLY_SCORES);
+  const season = seasons[seasons.length - 1];
+  const weeks = Object.keys(WEEKLY_SCORES[season] || {}).map(Number).sort((a, b) => a - b);
+
+  if (!weeks.length) {
+    wrap.innerHTML = emptyState(
+      'Noch keine Saisondaten',
+      'Standings füllen sich automatisch, sobald Weekly Scores reinkommen (täglich 9 & 21 Uhr, ESPN-Sync). Vor Saisonstart naturgemäß leer.',
+      '📈'
+    );
+    return;
+  }
+
+  const lastWeek = weeks[weeks.length - 1];
+  const totals = {};
+  const teamMeta = id => LEAGUE_TEAMS.find(t => t.id === id) || { name: id, emoji: '🏈' };
+
+  for (let w = 1; w <= lastWeek; w++) {
+    (WEEKLY_SCORES[season][w] || []).forEach(e => {
+      if (!totals[e.teamId]) totals[e.teamId] = { pf: 0, pa: 0, wins: 0, losses: 0, ties: 0 };
+      const t = totals[e.teamId];
+      t.pf += e.points; t.pa += e.opponentPoints;
+      if (e.points > e.opponentPoints) t.wins++;
+      else if (e.points < e.opponentPoints) t.losses++;
+      else t.ties++;
+    });
+  }
+
+  const ranked = Object.keys(totals)
+    .map(teamId => ({ teamId, ...totals[teamId] }))
+    .sort((a, b) => (b.wins - a.wins) || (b.pf - a.pf));
+
+  wrap.innerHTML = `
+    <div class="info-banner">Stand nach Woche ${lastWeek} (Saison ${season}). Sortiert nach Siegen, bei Gleichstand nach erzielten Punkten.</div>
+    <div class="board-table-wrap">
+      <table class="board">
+        <thead><tr><th class="round-label">#</th><th>Team</th><th>W-L-T</th><th>PF</th><th>PA</th><th>Diff</th></tr></thead>
+        <tbody>
+          ${ranked.map((r, i) => {
+            const t = teamMeta(r.teamId);
+            const diff = r.pf - r.pa;
+            return `<tr>
+              <td>${i + 1}</td>
+              <td style="text-align:left;font-weight:600">${t.emoji || ''} ${t.name}</td>
+              <td><b>${r.wins}-${r.losses}${r.ties ? '-' + r.ties : ''}</b></td>
+              <td>${r.pf.toFixed(1)}</td>
+              <td>${r.pa.toFixed(1)}</td>
+              <td style="color:${diff >= 0 ? 'var(--green)' : 'var(--red)'}">${diff >= 0 ? '+' : ''}${diff.toFixed(1)}</td>
+            </tr>`;
+          }).join('')}
+        </tbody>
+      </table>
+    </div>
+  `;
+}
+
+/* ---------- Matchup Planner (Spielplan) ---------- */
+let matchupsState = { week: null };
+
+function renderMatchups() {
+  const wrap = document.getElementById('matchupsContent');
+  const seasons = Object.keys((typeof SCHEDULE !== 'undefined') ? SCHEDULE : {});
+  const season = seasons[seasons.length - 1];
+  const scheduleWeeks = season ? Object.keys(SCHEDULE[season] || {}).map(Number).sort((a, b) => a - b) : [];
+
+  if (!scheduleWeeks.length) {
+    wrap.innerHTML = emptyState(
+      'Spielplan noch nicht geladen',
+      'Läuft über denselben Sync wie Weekly Scores (scripts/sync-espn-weekly-scores.js, täglich 9 & 21 Uhr). ESPN veröffentlicht den Spielplan meist kurz vor Saisonstart.',
+      '⚔️'
+    );
+    return;
+  }
+
+  const week = matchupsState.week && scheduleWeeks.includes(matchupsState.week) ? matchupsState.week : scheduleWeeks[0];
+  matchupsState.week = week;
+
+  const teamMeta = id => LEAGUE_TEAMS.find(t => t.id === id) || { name: id, emoji: '🏈' };
+  const scoresThisWeek = {};
+  (WEEKLY_SCORES[season]?.[week] || []).forEach(e => { scoresThisWeek[e.teamId] = e.points; });
+  const played = Object.keys(scoresThisWeek).length > 0;
+
+  const matchups = SCHEDULE[season][week] || [];
+
+  wrap.innerHTML = `
+    <div class="db-controls"><div class="db-pos-filters" id="matchupsWeekSelector"></div></div>
+    <div class="info-banner">${played ? `Ergebnisse für Woche ${week} liegen vor.` : `Woche ${week} noch nicht gespielt — nur Paarungen.`}</div>
+    <div class="matchup-grid">
+      ${matchups.map(m => {
+        const home = teamMeta(m.home), away = teamMeta(m.away);
+        const hs = scoresThisWeek[m.home], as = scoresThisWeek[m.away];
+        const homeWin = played && hs > as, awayWin = played && as > hs;
+        return `
+          <div class="matchup-card">
+            <div class="matchup-team${homeWin ? ' matchup-winner' : ''}">
+              <span>${home.emoji || ''} ${home.name}</span>
+              <span class="matchup-score">${played ? hs.toFixed(1) : ''}</span>
+            </div>
+            <div class="matchup-vs">vs</div>
+            <div class="matchup-team${awayWin ? ' matchup-winner' : ''}">
+              <span>${away.emoji || ''} ${away.name}</span>
+              <span class="matchup-score">${played ? as.toFixed(1) : ''}</span>
+            </div>
+          </div>`;
+      }).join('')}
+    </div>
+    <div class="page-sub" style="margin-top:14px">Die kumulierte Team-Power-Ranking über die Saison steht unter <b>Standings → 2026 Rolling Rankings</b>.</div>
+  `;
+
+  const sel = document.getElementById('matchupsWeekSelector');
+  scheduleWeeks.forEach(w => {
+    const btn = document.createElement('button');
+    btn.className = 'db-pos-btn' + (w === week ? ' active' : '');
+    btn.textContent = 'Woche ' + w;
+    btn.onclick = () => { matchupsState.week = w; renderMatchups(); };
+    sel.appendChild(btn);
+  });
+}
+
+/* ---------- Liga-Historie (manuell gepflegt) ---------- */
+function renderLeagueHistory() {
+  const wrap = document.getElementById('leaguehistoryContent');
+  if (typeof LEAGUE_HISTORY === 'undefined' || !LEAGUE_HISTORY.length) {
+    wrap.innerHTML = emptyState(
+      'Noch keine Historie hinterlegt',
+      'Einfach vergangene Saisons in data/league-history.js eintragen (Champion, Vize, Dritter je Jahr) — die Tabelle hier befüllt sich dann automatisch.',
+      '🏛️'
+    );
+    return;
+  }
+  const sorted = LEAGUE_HISTORY.slice().sort((a, b) => b.year - a.year);
+  wrap.innerHTML = `
+    <div class="board-table-wrap">
+      <table class="board">
+        <thead><tr><th class="round-label">Jahr</th><th>🥇 Champion</th><th>🥈 Vize</th><th>🥉 Dritter</th><th>Notizen</th></tr></thead>
+        <tbody>
+          ${sorted.map(s => `<tr>
+            <td><b>${s.year}</b></td>
+            <td style="text-align:left;font-weight:600">${s.champion || '—'}</td>
+            <td>${s.runnerUp || '—'}</td>
+            <td>${s.thirdPlace || '—'}</td>
+            <td style="text-align:left;color:var(--muted);font-size:11px">${s.notes || ''}</td>
+          </tr>`).join('')}
+        </tbody>
+      </table>
+    </div>
+  `;
+}
+
 function renderSeasonRolling() {
   const wrap = document.getElementById('seasonrollingContent');
   const seasons = Object.keys(WEEKLY_SCORES);
@@ -1135,7 +1319,7 @@ function ownerOfPlayer(name) {
 }
 
 /* ---------- Trade Analyzer ---------- */
-let tradeState = { sideA: [], sideB: [] };
+let tradeState = { sideA: [], sideB: [], teamA: '', teamB: '' };
 
 function openTradeAnalyzer(assetName, kind) {
   tradeState.sideA.push({ name: assetName, kind: kind || 'player' });
@@ -1159,19 +1343,52 @@ function assetValue(asset) {
   return p ? p.avg : 0;
 }
 
+/* Projizierte Saisonpunkte eines Teams (ohne K/DST), optional mit
+   Trade-Anpassung: removeNames werden rausgerechnet, addNames (Spieler,
+   die von der anderen Seite reinkommen) werden dazugerechnet. */
+function _projectedPointsFor(name) {
+  if (typeof PLAYER_PROJECTIONS === 'undefined') return null;
+  const p = PLAYER_PROJECTIONS.players.find(x => x.name === name);
+  return p ? p.projectedPoints : null;
+}
+
+function teamProjectedTotal(teamName, removeNames, addNames) {
+  const team = LEAGUE_TEAMS.find(t => t.name === teamName);
+  if (!team) return null;
+  const { players } = _teamRosterForAverages(team);
+  const remove = new Set(removeNames || []);
+  let total = 0, counted = 0;
+  players.forEach(p => {
+    if (['K', 'DST', 'D/ST'].includes((p.pos || '').split('/')[0])) return;
+    if (remove.has(p.name)) return;
+    const pts = _projectedPointsFor(p.name);
+    if (pts != null) { total += pts; counted++; }
+  });
+  (addNames || []).forEach(n => {
+    const pts = _projectedPointsFor(n);
+    if (pts != null) { total += pts; counted++; }
+  });
+  return { total, counted };
+}
+
 function renderTrade() {
   const wrap = document.getElementById('tradeContent');
+  const teamOptions = '<option value="">— Team wählen —</option>' +
+    LEAGUE_TEAMS.map(t => `<option value="${t.name}">${t.emoji} ${t.name}</option>`).join('');
+
   wrap.innerHTML = `
     <div class="trade-cols">
       <div class="trade-col">
-        <div class="section-label">Team A gibt</div>
+        <div class="section-label" style="margin-top:0">Team A gibt</div>
+        <select id="tradeTeamA" class="board-mobile-team-select" style="margin-bottom:10px" onchange="onTradeTeamChange('A')">${teamOptions}</select>
         <input type="text" id="tradeSearchA" class="db-search" placeholder="Spieler suchen…" oninput="tradeSearch('A')">
         <div id="tradeSuggestA" class="trade-suggest"></div>
         <div id="tradeAssetsA"></div>
         <div class="trade-total" id="tradeTotalA"></div>
       </div>
       <div class="trade-col">
-        <div class="section-label">Team B gibt</div>
+        <div class="section-label" style="margin-top:0">Team B gibt</div>
+        <select id="tradeTeamB" class="board-mobile-team-select" style="margin-bottom:10px" onchange="onTradeTeamChange('B')">${teamOptions}</select>
         <input type="text" id="tradeSearchB" class="db-search" placeholder="Spieler suchen…" oninput="tradeSearch('B')">
         <div id="tradeSuggestB" class="trade-suggest"></div>
         <div id="tradeAssetsB"></div>
@@ -1179,12 +1396,20 @@ function renderTrade() {
       </div>
     </div>
     <div id="tradeVerdict" class="info-banner" style="text-align:center;font-weight:700"></div>
+    <div id="tradeImpact"></div>
     <div class="page-sub" style="margin-top:18px">Für verbesserte Trade Talks mit echten, verbindlichen Werten:</div>
     <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:8px">
       <a href="https://dynasty-daddy.com/trade-calculator" target="_blank" rel="noopener" class="theme-toggle" style="text-decoration:none;display:inline-block">🔗 Dynasty Daddy Trade Calculator</a>
       <a href="https://keeptradecut.com/trade-calculator" target="_blank" rel="noopener" class="theme-toggle" style="text-decoration:none;display:inline-block">🔗 KeepTradeCut Trade Calculator</a>
     </div>
   `;
+  document.getElementById('tradeTeamA').value = tradeState.teamA;
+  document.getElementById('tradeTeamB').value = tradeState.teamB;
+  renderTradeAssets();
+}
+
+function onTradeTeamChange(side) {
+  tradeState['team' + side] = document.getElementById('tradeTeam' + side).value;
   renderTradeAssets();
 }
 
@@ -1241,6 +1466,64 @@ function renderTradeAssets() {
       verdict.innerHTML = `⚖️ Begünstigt ${favored} (Unterschied ${pct}%, ${diff.toLocaleString('de-DE')} Punkte)`;
     }
   }
+
+  renderTradeImpact();
+}
+
+function renderTradeImpact() {
+  const host = document.getElementById('tradeImpact');
+  if (!host) return;
+  const { teamA, teamB, sideA, sideB } = tradeState;
+
+  if (typeof PLAYER_PROJECTIONS === 'undefined' || !PLAYER_PROJECTIONS.players.length) {
+    host.innerHTML = `<div class="page-sub" style="margin-top:10px">Geschätzte Team-Auswirkung erscheint automatisch, sobald Player Projections geladen sind.</div>`;
+    return;
+  }
+  if (!teamA || !teamB) {
+    host.innerHTML = `<div class="page-sub" style="margin-top:10px">Team A und Team B oben auswählen, um die geschätzte Punkte-/Rang-Auswirkung des Trades zu sehen.</div>`;
+    return;
+  }
+
+  const playerNamesA = sideA.filter(a => a.kind === 'player').map(a => a.name);
+  const playerNamesB = sideB.filter(a => a.kind === 'player').map(a => a.name);
+  const pickCount = sideA.filter(a => a.kind === 'pick').length + sideB.filter(a => a.kind === 'pick').length;
+
+  // Baseline-Projektion aller 12 Teams (fuer Rang-Kontext)
+  const baseline = LEAGUE_TEAMS.map(t => ({ name: t.name, total: teamProjectedTotal(t.name, [], []).total }));
+  const baselineSorted = baseline.slice().sort((a, b) => b.total - a.total);
+  const baseRank = name => baselineSorted.findIndex(x => x.name === name) + 1;
+
+  const newTotalA = teamProjectedTotal(teamA, playerNamesA, playerNamesB);
+  const newTotalB = teamProjectedTotal(teamB, playerNamesB, playerNamesA);
+
+  const newSorted = baseline.map(t => {
+    if (t.name === teamA) return { name: t.name, total: newTotalA.total };
+    if (t.name === teamB) return { name: t.name, total: newTotalB.total };
+    return t;
+  }).sort((a, b) => b.total - a.total);
+  const newRank = name => newSorted.findIndex(x => x.name === name) + 1;
+
+  const row = (label, teamName, oldTotal, newTotal) => {
+    const diff = newTotal.total - oldTotal.total;
+    const rankDiff = baseRank(teamName) - newRank(teamName); // positiv = besser (weiter oben)
+    const diffHtml = diff >= 0 ? `<span style="color:var(--green)">+${diff.toFixed(1)}</span>` : `<span style="color:var(--red)">${diff.toFixed(1)}</span>`;
+    const rankHtml = rankDiff > 0 ? `<span style="color:var(--green)">▲ ${rankDiff}</span>` : rankDiff < 0 ? `<span style="color:var(--red)">▼ ${Math.abs(rankDiff)}</span>` : '<span style="color:var(--muted)">–</span>';
+    return `
+      <div class="trade-impact-row">
+        <div style="font-weight:700">${label}: ${teamName}</div>
+        <div>${oldTotal.total.toFixed(1)} → ${newTotal.total.toFixed(1)} Pkte proj. (${diffHtml})</div>
+        <div>Rang #${baseRank(teamName)} → #${newRank(teamName)} (${rankHtml})</div>
+      </div>`;
+  };
+
+  host.innerHTML = `
+    <div class="section-label">📈 Geschätzte Team-Auswirkung (proj. Saisonpunkte, ohne K/DST)</div>
+    <div class="trade-impact-box">
+      ${row('Team A', teamA, { total: teamProjectedTotal(teamA, [], []).total }, newTotalA)}
+      ${row('Team B', teamB, { total: teamProjectedTotal(teamB, [], []).total }, newTotalB)}
+    </div>
+    ${pickCount ? `<div class="page-sub" style="margin-top:6px">${pickCount} Pick(s) im Trade fließen hier nicht ein (keine Punkteprojektion für Picks).</div>` : ''}
+  `;
 }
 
 /* ---------- Future Draft Boards ---------- */
