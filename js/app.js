@@ -347,44 +347,358 @@ function renderDynastyBoardRows() {
     </tr>`).join('');
 }
 
-/* ---------- Rolling Rankings ---------- */
+/* ---------- Rolling Rankings (Dynasty) — Sidebar + Chart wie TTHQ ---------- */
+let drCompareMode = false;
+let drSelected = [];
+let drFiltered = [];
+let drChart = null;
+let drSortBy = 'latest'; // 'latest' | 'name' | <snapshot-date>
+let drSortDir = 'asc';
+
+const DR_COMPARE_COLORS = ['#e0794a', '#4d7bb0', '#4caf81']; // Bears-Orange, Navy-Blau, Gruen
+
+let _drDataCache = null;
+function _drData() {
+  if (_drDataCache) return _drDataCache;
+  const snaps = _drSnaps();
+  const nameInfo = new Map();
+  snaps.forEach(s => s.rankings.forEach(p => { if (!nameInfo.has(p.name)) nameInfo.set(p.name, p.pos); }));
+
+  _drDataCache = [...nameInfo.keys()].map(name => {
+    const ranks = snaps.map(s => {
+      const p = s.rankings.find(x => x.name === name);
+      return p ? p.avg : null;
+    });
+    const latestRank = ranks.length ? ranks[ranks.length - 1] : null;
+    return { name, pos: nameInfo.get(name) || '', ranks, latestRank };
+  });
+  return _drDataCache;
+}
+function _drSnaps() { return (typeof DYNASTY_ROLLING !== 'undefined') ? DYNASTY_ROLLING : []; }
+
 function renderRolling() {
-  const wrap = document.getElementById('rollingContent');
-  const latest = DYNASTY_ROLLING[DYNASTY_ROLLING.length - 1];
-  const prev = DYNASTY_ROLLING.length > 1 ? DYNASTY_ROLLING[DYNASTY_ROLLING.length - 2] : null;
+  _drDataCache = null;
+  drSelected = [];
+  drCompareMode = false;
+  drSortBy = 'latest';
+  drSortDir = 'asc';
+  _drInit();
+}
 
-  const prevRankByName = {};
-  if (prev) prev.rankings.forEach((p, i) => { prevRankByName[p.name] = i + 1; });
+function _drInit() {
+  drFiltered = _drData().map((p, i) => ({ ...p, origIdx: i }));
+  _drApplySort();
+  const inp = document.getElementById('drSearch');
+  if (inp) inp.value = '';
+  _drRenderAll();
+}
 
-  const rows = latest.rankings.slice(0, 150).map((p, i) => {
-    const curRank = i + 1;
-    let trendHtml = '<span style="color:var(--muted)">—</span>';
-    if (prev) {
-      const prevRank = prevRankByName[p.name];
-      if (prevRank == null) {
-        trendHtml = '<span style="color:var(--accent2)">NEU</span>';
-      } else {
-        const diff = prevRank - curRank; // positiv = aufgestiegen
-        if (diff > 0) trendHtml = `<span style="color:var(--green)">▲ ${diff}</span>`;
-        else if (diff < 0) trendHtml = `<span style="color:var(--red)">▼ ${Math.abs(diff)}</span>`;
-        else trendHtml = '<span style="color:var(--muted)">–</span>';
-      }
-    }
-    return `<tr><td>${curRank}</td><td style="text-align:left;font-weight:600">${p.name}</td><td>${p.pos}</td><td>${trendHtml}</td></tr>`;
-  }).join('');
+function _drApplySort() {
+  const dir = drSortDir === 'desc' ? -1 : 1;
+  const key = drSortBy;
+  const snaps = _drSnaps();
+  const snapIdx = snaps.findIndex(s => s.date === key);
 
-  wrap.innerHTML = `
-    <div class="info-banner">
-      Snapshot: <b>${latest.label}</b> (${latest.date}). ${DYNASTY_ROLLING.length} Snapshot${DYNASTY_ROLLING.length === 1 ? '' : 's'} insgesamt.
-      ${!prev ? 'Trend erscheint automatisch, sobald mindestens 2 Snapshots vorhanden sind (z.B. sobald 2025er-Rankings ergänzt oder ein neuer Snapshot per <code>node scripts/snapshot-dynasty-rolling.js</code> angelegt wird).' : `Vergleich zu vorherigem Snapshot "${prev.label}" (${prev.date}).`}
-    </div>
-    <div class="board-table-wrap">
-      <table class="board">
-        <thead><tr><th class="round-label">#</th><th>Spieler</th><th>Pos</th><th>Trend</th></tr></thead>
-        <tbody>${rows}</tbody>
-      </table>
+  drFiltered.sort((a, b) => {
+    let va, vb;
+    if (key === 'name') return dir * a.name.localeCompare(b.name);
+    if (key === 'latest') { va = a.latestRank; vb = b.latestRank; }
+    else if (snapIdx !== -1) { va = a.ranks[snapIdx]; vb = b.ranks[snapIdx]; }
+    else { va = a.latestRank; vb = b.latestRank; }
+    const an = va == null, bn = vb == null;
+    if (an && bn) return a.name.localeCompare(b.name);
+    if (an) return 1;
+    if (bn) return -1;
+    return dir * (va - vb);
+  });
+}
+
+function drSortByKey(key) {
+  if (drSortBy === key) drSortDir = drSortDir === 'asc' ? 'desc' : 'asc';
+  else { drSortBy = key; drSortDir = 'asc'; }
+  _drApplySort();
+  _drRenderListHeader();
+  _drRenderList();
+}
+
+function _drRenderAll() {
+  _drRenderToolbar();
+  if (!_drSnaps().length) { _drRenderEmpty(); return; }
+  _drRenderListHeader();
+  _drRenderList();
+  _drRenderMain();
+}
+
+function _drRenderEmpty() {
+  const colHost = document.getElementById('drListCols');
+  if (colHost) colHost.innerHTML = '';
+  const body = document.getElementById('drListBody');
+  if (body) body.innerHTML = `<div style="padding:32px 18px;color:var(--muted);font-size:12px;text-align:center;line-height:1.6;">Noch keine Snapshot-Historie verfügbar.<br>Läuft automatisch mit, sobald <code>node scripts/snapshot-dynasty-rolling.js</code> läuft.</div>`;
+  const panel = document.getElementById('drChartPanel');
+  if (panel) panel.innerHTML = `<div style="margin:auto;text-align:center;color:var(--muted);"><div style="font-size:40px;margin-bottom:12px;">🕒</div><div style="font-size:15px;font-weight:700;color:var(--text);">Noch keine Daten</div></div>`;
+}
+
+function _drRenderToolbar() {
+  const host = document.getElementById('drToolbar');
+  if (!host) return;
+  const compareActive = drCompareMode ? ' rr-tb-active' : '';
+  host.innerHTML = `
+    <div class="rr-tb-group">
+      <button class="rr-tb-btn${compareActive}" onclick="drToggleCompare()">⚖️ Vergleichen ${drCompareMode ? '(' + drSelected.length + '/3)' : ''}</button>
     </div>
   `;
+  const sub = document.getElementById('drSnapshotSubtitle');
+  const snaps = _drSnaps();
+  if (sub) sub.textContent = snaps.length ? `${snaps.length} Snapshot${snaps.length === 1 ? '' : 's'} · zuletzt ${snaps[snaps.length - 1].label}` : 'Bear Witch Project HQ';
+}
+
+function drToggleCompare() {
+  drCompareMode = !drCompareMode;
+  if (!drCompareMode && drSelected.length > 1) drSelected = drSelected.slice(0, 1);
+  _drRenderAll();
+}
+
+function _drRenderListHeader() {
+  const host = document.getElementById('drListCols');
+  if (!host) return;
+  const snaps = _drSnaps();
+  const sortIndicator = key => drSortBy !== key ? '' : (drSortDir === 'asc' ? ' ↑' : ' ↓');
+  const cls = key => 'rr-col-h' + (drSortBy === key ? ' rr-col-active' : '');
+
+  host.style.gridTemplateColumns = `32px 1fr repeat(${snaps.length}, 42px)`;
+  const snapHeaders = snaps.map(s =>
+    `<span class="${cls(s.date)}" onclick="drSortByKey('${s.date}')" title="${s.date}">${s.label}${sortIndicator(s.date)}</span>`
+  ).join('');
+  host.innerHTML =
+    `<span class="${cls('latest')}" onclick="drSortByKey('latest')" title="Aktueller Rang (neuester Snapshot)">#${sortIndicator('latest')}</span>` +
+    `<span class="${cls('name')}" onclick="drSortByKey('name')" style="text-align:left;">Name${sortIndicator('name')}</span>` +
+    snapHeaders;
+}
+
+function drFilter() {
+  const q = (document.getElementById('drSearch')?.value || '').toLowerCase().trim();
+  const data = _drData();
+  drFiltered = q
+    ? data.map((p, i) => ({ ...p, origIdx: i })).filter(p => p.name.toLowerCase().includes(q) || p.pos.toLowerCase().includes(q))
+    : data.map((p, i) => ({ ...p, origIdx: i }));
+  _drApplySort();
+  _drRenderList();
+}
+
+function _drRankColor(r) {
+  if (r === null || r === undefined) return 'var(--border)';
+  if (r <= 5) return '#e0794a';
+  if (r <= 15) return '#4caf81';
+  if (r <= 30) return '#4d7bb0';
+  if (r <= 60) return '#9e78ff';
+  if (r <= 100) return '#e0a53a';
+  return '#d9695f';
+}
+
+function _drRenderList() {
+  const body = document.getElementById('drListBody');
+  if (!body) return;
+  const snaps = _drSnaps();
+  const gridTpl = `32px 1fr repeat(${snaps.length}, 42px)`;
+
+  body.innerHTML = drFiltered.slice(0, 500).map((p, sortIdx) => {
+    const cells = snaps.map((s, i) => {
+      const r = p.ranks[i];
+      const c = _drRankColor(r);
+      return `<span class="rr-rank-cell" style="color:${c};background:${r ? c + '22' : 'transparent'}">${r ?? '–'}</span>`;
+    }).join('');
+    const isSelected = drSelected.indexOf(p.origIdx) !== -1;
+    const active = isSelected ? ' rr-active' : '';
+    const selIdx = drSelected.indexOf(p.origIdx);
+    const colorDot = (drCompareMode && isSelected)
+      ? `<span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${DR_COMPARE_COLORS[selIdx]};margin-right:4px;vertical-align:middle;"></span>`
+      : '';
+    const idxLabel = drSortBy === 'latest' ? (p.latestRank != null ? p.latestRank : '–') : (sortIdx + 1);
+    return `<div class="rr-row${active}" data-idx="${p.origIdx}" onclick="drSelectPlayer(${p.origIdx})" style="grid-template-columns:${gridTpl};">
+      <span class="rr-idx">${idxLabel}</span>
+      <span class="rr-name" title="${p.name}">${colorDot}${p.name}</span>
+      ${cells}
+    </div>`;
+  }).join('');
+}
+
+function drSelectPlayer(origIdx) {
+  if (drCompareMode) {
+    const i = drSelected.indexOf(origIdx);
+    if (i !== -1) drSelected.splice(i, 1);
+    else if (drSelected.length < 3) drSelected.push(origIdx);
+    else drSelected[2] = origIdx;
+  } else {
+    drSelected = [origIdx];
+  }
+  _drRenderAll();
+}
+
+function _drRenderMain() {
+  const panel = document.getElementById('drChartPanel');
+  if (!panel) return;
+  if (!drSelected.length) {
+    panel.innerHTML = `
+      <div style="margin:auto;text-align:center;color:var(--muted);">
+        <div style="font-size:40px;margin-bottom:12px;">📈</div>
+        <div style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:6px;">Spieler auswählen</div>
+        <div style="font-size:13px;">${drCompareMode ? 'Wähle bis zu 3 Spieler links zum Vergleich' : 'Klicke links auf einen Spieler um seinen Dynasty-Rang-Verlauf zu sehen'}</div>
+      </div>`;
+    return;
+  }
+  if (drCompareMode && drSelected.length > 1) _drRenderCompare(panel);
+  else _drRenderSingle(panel, _drData()[drSelected[0]]);
+}
+
+function _drRenderSingle(panel, player) {
+  const snaps = _drSnaps();
+  const labels = snaps.map(s => s.label);
+  const values = player.ranks;
+  const valid = values.filter(x => x !== null);
+  const best = valid.length ? Math.min(...valid) : null;
+  const worst = valid.length ? Math.max(...valid) : null;
+  const avg = valid.length ? Math.round(valid.reduce((a, b) => a + b, 0) / valid.length) : null;
+
+  const pillsHtml = `
+    <div class="rr-pills">
+      <div class="rr-pill"><span class="rr-pill-val" style="color:#e0794a">${best ?? '–'}</span><span class="rr-pill-label">Bestes</span></div>
+      <div class="rr-pill"><span class="rr-pill-val" style="color:#d9695f">${worst ?? '–'}</span><span class="rr-pill-label">Schlechtestes</span></div>
+      <div class="rr-pill"><span class="rr-pill-val" style="color:#4d7bb0">${avg ?? '–'}</span><span class="rr-pill-label">Schnitt</span></div>
+      <div class="rr-pill"><span class="rr-pill-val" style="color:#4caf81">${valid.length}/${values.length}</span><span class="rr-pill-label">Snapshots</span></div>
+    </div>`;
+
+  const badgesHtml = '<div class="rr-badges">' + snaps.map((s, i) => {
+    const r = values[i];
+    const c = _drRankColor(r);
+    return `<div class="rr-month-badge"><span class="rr-badge-label">${s.label}</span><span class="rr-badge-rank" style="color:${c}">${r ?? '—'}</span></div>`;
+  }).join('') + '</div>';
+
+  const owner = ownerOfPlayer(player.name);
+  panel.innerHTML = `
+    <div class="rr-player-header">
+      <div>
+        <div class="rr-player-name">${player.name}</div>
+        <div class="rr-player-sub">Dynasty Rolling Rankings · ${player.pos || '—'}${owner ? ' · ' + (owner.emoji || '') + ' ' + owner.name : ''}</div>
+      </div>
+      ${pillsHtml}
+    </div>
+    <div class="rr-chart-box">
+      <canvas id="drCanvas"></canvas>
+    </div>
+    ${badgesHtml}`;
+
+  _drDrawChart([{ player, values, color: DR_COMPARE_COLORS[0] }], labels);
+}
+
+function _drRenderCompare(panel) {
+  const data = _drData();
+  const snaps = _drSnaps();
+  const labels = snaps.map(s => s.label);
+  const players = drSelected.map(i => data[i]);
+  const datasets = players.map((p, i) => ({ player: p, values: p.ranks, color: DR_COMPARE_COLORS[i] }));
+
+  const cardsHtml = datasets.map(d => {
+    const valid = d.values.filter(x => x !== null);
+    const best = valid.length ? Math.min(...valid) : null;
+    const avg = valid.length ? Math.round(valid.reduce((a, b) => a + b, 0) / valid.length) : null;
+    return `<div class="rr-compare-card" style="border-color:${d.color}55;">
+      <div style="display:flex;align-items:center;gap:8px;margin-bottom:8px;">
+        <span style="width:12px;height:12px;border-radius:50%;background:${d.color};"></span>
+        <span style="font-weight:800;font-size:15px;">${d.player.name}</span>
+      </div>
+      <div style="display:flex;gap:14px;font-size:11px;color:var(--muted);">
+        <span>Bestes: <strong style="color:${d.color};font-size:14px;">#${best ?? '–'}</strong></span>
+        <span>Schnitt: <strong style="color:${d.color};font-size:14px;">#${avg ?? '–'}</strong></span>
+      </div>
+    </div>`;
+  }).join('');
+
+  panel.innerHTML = `
+    <div class="rr-player-header">
+      <div>
+        <div class="rr-player-name">Vergleich</div>
+        <div class="rr-player-sub">Dynasty Rolling Rankings</div>
+      </div>
+    </div>
+    <div class="rr-compare-cards">${cardsHtml}</div>
+    <div class="rr-chart-box">
+      <canvas id="drCanvas"></canvas>
+    </div>`;
+
+  _drDrawChart(datasets, labels);
+}
+
+function _drDrawChart(datasets, labels) {
+  if (drChart) { drChart.destroy(); drChart = null; }
+  const canvas = document.getElementById('drCanvas');
+  if (!canvas || typeof Chart === 'undefined') return;
+  const ctx = canvas.getContext('2d');
+
+  const chartDatasets = datasets.map(d => {
+    const grad = ctx.createLinearGradient(0, 0, 0, 280);
+    const rgba = _drHexToRgba(d.color, 0.22);
+    grad.addColorStop(0, rgba);
+    grad.addColorStop(1, _drHexToRgba(d.color, 0));
+    return {
+      label: d.player.name,
+      data: d.values,
+      borderColor: d.color,
+      backgroundColor: datasets.length === 1 ? grad : 'transparent',
+      pointBackgroundColor: d.values.map(r => datasets.length === 1 ? _drRankColor(r) : d.color),
+      pointBorderColor: getComputedStyle(document.body).getPropertyValue('--surface') || '#fff',
+      pointBorderWidth: 2,
+      pointRadius: 6,
+      pointHoverRadius: 9,
+      borderWidth: 2.5,
+      fill: datasets.length === 1,
+      tension: 0.35,
+      spanGaps: true,
+    };
+  });
+
+  const styles = getComputedStyle(document.body);
+  const textColor = styles.getPropertyValue('--text') || '#333';
+  const mutedColor = styles.getPropertyValue('--muted') || '#888';
+  const borderColor = styles.getPropertyValue('--border') || '#ddd';
+  const surfaceColor = styles.getPropertyValue('--surface2') || '#fff';
+
+  drChart = new Chart(ctx, {
+    type: 'line',
+    data: { labels, datasets: chartDatasets },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      aspectRatio: 2.6,
+      plugins: {
+        legend: { display: datasets.length > 1, labels: { color: textColor, font: { size: 12, weight: '700' } } },
+        tooltip: {
+          backgroundColor: surfaceColor,
+          borderColor: borderColor,
+          borderWidth: 1,
+          titleColor: textColor,
+          bodyColor: '#e0794a',
+          padding: 12,
+          callbacks: { label: c => c.raw === null ? `${c.dataset.label}: kein Ranking` : `${c.dataset.label}: #${c.raw}` }
+        }
+      },
+      scales: {
+        y: {
+          reverse: true, min: 1,
+          grid: { color: borderColor }, border: { color: borderColor },
+          ticks: { color: mutedColor, font: { size: 11 }, callback: v => `#${v}` },
+          title: { display: true, text: 'Ranking', color: mutedColor, font: { size: 11 } }
+        },
+        x: { grid: { color: borderColor }, border: { color: borderColor }, ticks: { color: textColor, font: { size: 12, weight: '700' } } }
+      }
+    }
+  });
+}
+
+function _drHexToRgba(hex, alpha) {
+  const m = hex.match(/^#([0-9a-f]{6})$/i);
+  if (!m) return `rgba(224,121,74,${alpha})`;
+  const n = parseInt(m[1], 16);
+  return `rgba(${(n>>16)&255},${(n>>8)&255},${n&255},${alpha})`;
 }
 
 /* ---------- Week by Week ---------- */

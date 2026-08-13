@@ -404,3 +404,56 @@ table.db-table td:nth-child(2) { text-align: left; font-weight: 600; }
 }
 .trade-chip button { background: none; border: none; color: var(--red); cursor: pointer; font-weight: 800; }
 .trade-total { margin-top: 12px; font-weight: 800; text-align: right; color: var(--accent); }
+
+.page.page-wide { max-width: none; padding-left: clamp(20px, 3vw, 56px); padding-right: clamp(20px, 3vw, 56px); }
+/* ============================================================
+   ROLLING RANKINGS (Dynasty) — Sidebar + Chart, wie TTHQ
+   ============================================================ */
+#page-rolling { padding: 0; overflow: hidden; }
+#page-rolling.active { display: flex; flex-direction: column; height: calc(100vh - 120px); }
+.rr-layout { display: grid; grid-template-columns: 340px 1fr; flex: 1; overflow: hidden; }
+.rr-sidebar { border-right: 1px solid var(--border); display: flex; flex-direction: column; overflow: hidden; min-width: 0; }
+.rr-sidebar-header { padding: 14px 16px; border-bottom: 1px solid var(--border); display: flex; align-items: center; gap: 12px; flex-wrap: wrap; background: var(--surface); }
+.rr-search { background: var(--surface2); border: 1.5px solid var(--border); border-radius: 9px; color: var(--text); font-family: 'DM Sans', sans-serif; font-size: 12px; padding: 7px 10px 7px 30px; width: 160px; outline: none; transition: border-color .2s; }
+.rr-search:focus { border-color: var(--accent); }
+.rr-toolbar { display: flex; gap: 8px; padding: 10px 14px; background: var(--surface); border-bottom: 1px solid var(--border); flex-wrap: wrap; }
+.rr-tb-group { display: flex; gap: 4px; background: var(--surface2); border: 1px solid var(--border); border-radius: 9px; padding: 3px; }
+.rr-tb-btn { background: transparent; border: none; color: var(--muted); font-family: 'DM Sans', sans-serif; font-size: 11px; font-weight: 700; padding: 5px 10px; border-radius: 6px; cursor: pointer; transition: all .15s; white-space: nowrap; }
+.rr-tb-btn:hover { color: var(--text); }
+.rr-tb-btn.rr-tb-active { background: var(--accent); color: #fff; }
+.rr-list-scroll { flex: 1; overflow: auto; scrollbar-width: thin; scrollbar-color: var(--border) transparent; min-width: 0; }
+.rr-list-cols { display: grid; gap: 3px; padding: 7px 14px; background: var(--surface); border-bottom: 1px solid var(--border); font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); position: sticky; top: 0; z-index: 5; }
+.rr-list-cols span { text-align: center; }
+.rr-list-cols span:nth-child(2) { text-align: left; }
+.rr-col-h { cursor: pointer; user-select: none; transition: color .12s; }
+.rr-col-h:hover { color: var(--text); }
+.rr-col-active { color: var(--accent) !important; }
+.rr-row { display: grid; gap: 3px; padding: 6px 14px; border-bottom: 1px solid var(--border); align-items: center; cursor: pointer; transition: background .1s; }
+.rr-row:hover { background: var(--surface2); }
+.rr-row.rr-active { background: var(--accent-light); border-left: 3px solid var(--accent); padding-left: 11px; }
+.rr-idx { font-size: 10px; font-weight: 700; color: var(--muted); text-align: center; }
+.rr-name { font-size: 12px; font-weight: 600; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.rr-rank-cell { font-size: 10px; font-weight: 800; text-align: center; border-radius: 4px; padding: 2px 0; }
+.rr-main { padding: 28px 36px; overflow-y: auto; display: flex; flex-direction: column; }
+.rr-player-header { display: flex; align-items: flex-start; gap: 16px; margin-bottom: 24px; flex-wrap: wrap; }
+.rr-player-name { font-size: 26px; font-weight: 800; color: var(--text); font-family: 'Playfair Display', serif; line-height: 1.1; }
+.rr-player-sub { font-size: 11px; color: var(--muted); margin-top: 4px; }
+.rr-pills { display: flex; gap: 8px; flex-wrap: wrap; margin-left: auto; }
+.rr-pill { background: var(--surface2); border: 1px solid var(--border); border-radius: 10px; padding: 8px 12px; text-align: center; display: flex; flex-direction: column; gap: 2px; }
+.rr-pill-val { font-size: 18px; font-weight: 800; line-height: 1; }
+.rr-pill-label { font-size: 10px; color: var(--muted); letter-spacing: .5px; text-transform: uppercase; }
+.rr-chart-box { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 20px; }
+.rr-badges { display: flex; gap: 8px; margin-top: 18px; flex-wrap: wrap; }
+.rr-month-badge { background: var(--surface); border: 1px solid var(--border); border-radius: 10px; padding: 10px 14px; display: flex; flex-direction: column; align-items: center; gap: 2px; min-width: 68px; }
+.rr-badge-label { font-size: 10px; color: var(--muted); font-weight: 700; letter-spacing: .5px; text-transform: uppercase; }
+.rr-badge-rank { font-size: 20px; font-weight: 800; }
+.rr-compare-cards { display: flex; gap: 10px; margin-bottom: 18px; flex-wrap: wrap; }
+.rr-compare-card { flex: 1; min-width: 200px; background: var(--surface); border: 2px solid var(--border); border-radius: 12px; padding: 12px 14px; }
+@media (max-width: 768px) {
+  .rr-layout { grid-template-columns: 1fr; }
+  #page-rolling.active { height: auto; }
+  .rr-sidebar { height: 50vh; border-right: none; border-bottom: 1px solid var(--border); }
+  .rr-main { padding: 16px; }
+  .rr-toolbar { padding: 8px 12px; }
+  .rr-tb-btn { font-size: 10px; padding: 5px 8px; }
+}

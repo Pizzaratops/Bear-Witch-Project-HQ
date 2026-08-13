@@ -165,10 +165,33 @@
 </div>
 
 <!-- ============ ROLLING RANKINGS ============ -->
-<div class="page" id="page-rolling">
-  <div class="page-title">📈 Rolling Rankings</div>
-  <div class="page-sub">Dynasty-Wertentwicklung über Zeit</div>
-  <div id="rollingContent"></div>
+<div class="page page-wide" id="page-rolling">
+  <div class="rr-layout">
+    <div class="rr-sidebar">
+      <div class="rr-sidebar-header">
+        <div style="flex:1;">
+          <div style="font-size:15px;font-weight:800;color:var(--text);">📈 Dynasty Rolling Rankings</div>
+          <div id="drSnapshotSubtitle" style="font-size:11px;color:var(--muted);margin-top:2px;">Bear Witch Project HQ</div>
+        </div>
+        <div style="position:relative;">
+          <span style="position:absolute;left:9px;top:50%;transform:translateY(-50%);color:var(--muted);font-size:13px;pointer-events:none;">🔍</span>
+          <input id="drSearch" class="rr-search" placeholder="Suchen…" oninput="drFilter()">
+        </div>
+      </div>
+      <div id="drToolbar" class="rr-toolbar"></div>
+      <div class="rr-list-scroll">
+        <div id="drListCols" class="rr-list-cols"></div>
+        <div id="drListBody"></div>
+      </div>
+    </div>
+    <div class="rr-main" id="drChartPanel">
+      <div style="margin:auto;text-align:center;color:var(--muted);">
+        <div style="font-size:40px;margin-bottom:12px;">📈</div>
+        <div style="font-size:15px;font-weight:700;color:var(--text);margin-bottom:6px;">Spieler auswählen</div>
+        <div style="font-size:13px;">Klicke links auf einen Spieler um seinen Dynasty-Rang-Verlauf zu sehen</div>
+      </div>
+    </div>
+  </div>
 </div>
 
 <!-- ============ WEEK BY WEEK ============ -->
@@ -239,6 +262,7 @@
 </div>
 
 
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="data/teams.js"></script>
 <script src="data/draft2026.js"></script>
 <script src="data/rosters-live.js"></script>
