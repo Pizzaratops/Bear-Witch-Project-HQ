@@ -43,6 +43,77 @@ function navigate(pageId, opts) {
   if (pageId === 'roster' && opts && opts.teamId) {
     renderRoster(opts.teamId);
   }
+
+  // Echter Browser-History-Eintrag pro Navigation, damit der Zurueck-
+  // Button (Handy-Geste oder Browser) INNERHALB der App zurueckgeht,
+  // statt die ganze Seite zu verlassen. _suppressHistoryPush wird beim
+  // Reagieren auf einen "popstate" (= Zurueck wurde gedrueckt) gesetzt,
+  // damit dabei kein neuer Eintrag entsteht.
+  if (!_suppressHistoryPush) {
+    const teamId = opts && opts.teamId;
+    const nflCode = opts && opts.nflCode;
+    let hash = pageId;
+    if (pageId === 'roster' && teamId) hash = `roster-${teamId}`;
+    else if (pageId === 'nflteamdetail' && nflCode) hash = `nflteam-${nflCode}`;
+    if (location.hash.slice(1) !== hash) {
+      history.pushState({ pageId, teamId: teamId || null, nflCode: nflCode || null }, '', '#' + hash);
+    }
+  }
+}
+
+let _suppressHistoryPush = false;
+
+const ROUTE_HANDLERS = {
+  home: () => goHome(),
+  roster: (teamId) => showRoster(teamId),
+  draftboard: () => showDraftboard(),
+  keepers: () => showKeepers(),
+  dynastyboard: () => showDynastyBoard(),
+  rolling: () => showRolling(),
+  teamaverages: () => showTeamAverages(),
+  weekbyweek: () => showWeekByWeek(),
+  playerrankings: () => showPlayerRankings(),
+  playerprojections: () => showPlayerProjections(),
+  nflteams: () => showNFLTeams(),
+  nflteamdetail: (teamId, nflCode) => nflCode ? showNFLTeam(nflCode) : showNFLTeams(),
+  futureboards: () => showFutureBoards(),
+  standings: () => showStandings(),
+  leaguehistory: () => showLeagueHistory(),
+  seasonrolling: () => showSeasonRolling(),
+  matchups: () => showMatchups(),
+  trade: () => showTrade(),
+  tradehistory: () => showTradeHistory(),
+};
+
+function _routeTo(pageId, teamId, nflCode) {
+  _suppressHistoryPush = true;
+  try {
+    (ROUTE_HANDLERS[pageId] || ROUTE_HANDLERS.home)(teamId, nflCode);
+  } finally {
+    _suppressHistoryPush = false;
+  }
+}
+
+window.addEventListener('popstate', (e) => {
+  const state = e.state;
+  if (state && state.pageId) {
+    _routeTo(state.pageId, state.teamId, state.nflCode);
+  } else {
+    _routeTo('home', null, null);
+  }
+});
+
+/* Direktlink beim ersten Laden unterstuetzen (z.B. #draftboard in der
+   URL), sonst normal auf Home starten. Ersetzt den allerersten History-
+   Eintrag, damit "Zurueck" ab dort sauber funktioniert. */
+function _initialRoute() {
+  const hash = location.hash.slice(1);
+  let pageId = 'home', teamId = null, nflCode = null;
+  if (hash.startsWith('roster-')) { pageId = 'roster'; teamId = hash.slice(7); }
+  else if (hash.startsWith('nflteam-')) { pageId = 'nflteamdetail'; nflCode = hash.slice(8); }
+  else if (hash && ROUTE_HANDLERS[hash]) { pageId = hash; }
+  history.replaceState({ pageId, teamId, nflCode }, '', hash ? '#' + hash : '#home');
+  _routeTo(pageId, teamId, nflCode);
 }
 
 function goHome() { navigate('home'); renderHome(); }
@@ -953,7 +1024,7 @@ function showNFLTeam(code) {
         </div>`;
     }).join('');
   }
-  navigate('nflteamdetail');
+  navigate('nflteamdetail', { nflCode: code });
 }
 
 // ============================================================
@@ -1966,8 +2037,7 @@ function formatTradeDate(iso) {
 
 document.addEventListener('DOMContentLoaded', () => {
   updateThemeBtn();
-  renderHome();
-  navigate('home');
+  _initialRoute();
 });
 
 /* ---------- PWA Install ---------- */
