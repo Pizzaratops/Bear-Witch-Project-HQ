@@ -507,3 +507,22 @@ table.db-table td:nth-child(2) { text-align: left; font-weight: 600; }
 
 /* ---------- ROLLING RANKINGS PREDICTION ---------- */
 .rr-prediction-box { background: var(--accent-light); border: 1px solid var(--border); border-radius: 12px; padding: 12px 16px; margin-top: 16px; font-size: 13px; font-weight: 600; }
+
+/* ---------- KEEPER ÜBERSICHT (Karten-Grid) ---------- */
+.keeper-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 14px; align-items: start; }
+.keeper-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; overflow: hidden; }
+.keeper-card-header { display: flex; justify-content: space-between; align-items: center; padding: 12px 14px; background: var(--surface2); font-weight: 800; font-size: 13px; }
+.keeper-card-count { font-size: 11px; color: var(--accent); background: var(--accent-light); padding: 2px 8px; border-radius: 10px; }
+.keeper-card-row { display: grid; grid-template-columns: 32px 1fr auto; gap: 8px; align-items: center; padding: 7px 14px; border-top: 1px solid var(--border); font-size: 12.5px; }
+.keeper-card-round { font-weight: 800; font-size: 11px; color: var(--accent); text-align: center; }
+.keeper-card-name { font-weight: 600; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.keeper-card-meta { color: var(--muted); font-size: 11px; white-space: nowrap; }
+
+/* ---------- TEAM PICKS (Roster-Seite) ---------- */
+.team-picks-layout { display: grid; grid-template-columns: 1fr 260px; gap: 16px; align-items: start; }
+@media (max-width: 700px) { .team-picks-layout { grid-template-columns: 1fr; } }
+.team-picks-2026 { display: grid; grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); gap: 6px; }
+.team-pick-chip { display: flex; justify-content: space-between; gap: 6px; padding: 6px 10px; border-radius: 8px; font-size: 11px; font-weight: 700; cursor: pointer; }
+.team-picks-future { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 12px 14px; }
+.team-pick-future-row { display: flex; justify-content: space-between; gap: 8px; font-size: 12.5px; padding: 6px 0; border-bottom: 1px solid var(--border); }
+.team-pick-future-row:last-of-type { border-bottom: none; }

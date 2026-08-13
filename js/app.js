@@ -21,7 +21,7 @@ function updateThemeBtn() {
 /* ---------- Navigation ---------- */
 const PAGES = [
   'home', 'roster', 'draftboard', 'keepers', 'dynastyboard', 'rolling', 'teamaverages', 'weekbyweek',
-  'playerrankings', 'playerprojections', 'futureboards',
+  'playerrankings', 'playerprojections', 'nflteams', 'nflteamdetail', 'futureboards',
   'standings', 'leaguehistory', 'seasonrolling', 'matchups', 'trade', 'tradehistory'
 ];
 
@@ -162,7 +162,60 @@ function renderRoster(teamId) {
     `;
   }
 
-  wrap.innerHTML = html;
+  wrap.innerHTML = html + renderTeamPicksSection(team, draftTeam);
+}
+
+function renderTeamPicksSection(team, draftTeam) {
+  const teamsById = LEAGUE_TEAMS.reduce((m, t) => { m[t.name] = t; return m; }, {});
+  const tradedOverrides = {};
+  (typeof TRADED_PICKS_2026 !== 'undefined' ? TRADED_PICKS_2026 : []).forEach(p => {
+    tradedOverrides[`${p.from}|${p.round}`] = p.owner;
+  });
+
+  const k = draftTeam ? draftTeam.keepers.length : 0;
+  const startRound = TOTAL_DRAFT_ROUNDS - k + 1;
+
+  const rounds2026 = [];
+  for (let round = 1; round <= TOTAL_DRAFT_ROUNDS; round++) {
+    const tradedOwner = tradedOverrides[`${team.name}|${round}`];
+    let label, kind, own;
+    if (round >= startRound) {
+      const player = draftTeam.keepers[round - startRound];
+      label = player.name; kind = 'player'; own = false;
+    } else if (tradedOwner) {
+      const ownerEmoji = teamsById[tradedOwner] ? teamsById[tradedOwner].emoji : '';
+      label = `${ownerEmoji} ${tradedOwner}`; kind = 'pick'; own = false;
+    } else {
+      label = 'Own'; kind = 'pick'; own = true;
+    }
+    const pickLabel = kind === 'pick' ? `${team.name} 2026 R${round}` : label;
+    rounds2026.push({ round, label, kind, own, pickLabel });
+  }
+
+  const years = [2027, ...Object.keys(FUTURE_PICKS).map(Number).filter(y => y !== 2027)].sort();
+  const futureCounts = years.map(y => ({ year: y, n: (_picksHeldByTeam(y)[team.name]) ?? 5 }));
+
+  return `
+    <div class="section-label">📦 Meine Picks</div>
+    <div class="team-picks-layout">
+      <div class="team-picks-2026">
+        <div style="font-size:11px;font-weight:700;color:var(--muted);margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px">2026 Draft (15 Runden)</div>
+        ${rounds2026.map(r => `
+          <div class="team-pick-chip ${r.own ? 'cell-open' : 'cell-keeper'}" onclick="openTradeAnalyzer('${escapeJs(r.pickLabel)}','${r.kind}')">
+            <span>R${r.round}</span><span>${r.label}</span>
+          </div>`).join('')}
+      </div>
+      <div class="team-picks-future">
+        <div style="font-size:11px;font-weight:700;color:var(--muted);margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px">Zukünftige Picks (Runde 1–5 je Jahr)</div>
+        ${futureCounts.map(({ year, n }) => {
+          const diff = n - 5;
+          const diffHtml = diff > 0 ? `<span style="color:var(--green)">(+${diff})</span>` : diff < 0 ? `<span style="color:var(--red)">(${diff})</span>` : '';
+          return `<div class="team-pick-future-row"><span>${year}</span><b>${n} Picks</b> ${diffHtml}</div>`;
+        }).join('')}
+        <div class="page-sub" style="margin-top:8px;font-size:11px">Details & Trades: <b>Future Draft Boards</b></div>
+      </div>
+    </div>
+  `;
 }
 
 function playerRowHtml(p, round, isKeeperBadge) {
@@ -194,13 +247,25 @@ function formatLockDate() {
 /* ---------- Keepers Übersicht (alle Teams) ---------- */
 function renderKeepers() {
   const wrap = document.getElementById('keepersContent');
-  wrap.innerHTML = DRAFT_2026_TEAMS.map(dt => {
+  const teamsById = LEAGUE_TEAMS.reduce((m, t) => { m[t.name] = t; return m; }, {});
+
+  wrap.innerHTML = `<div class="keeper-grid">` + DRAFT_2026_TEAMS.map(dt => {
     const rounds = computeKeeperRounds(dt.keepers.length);
+    const t = teamsById[dt.team] || {};
     return `
-      <div class="section-label">${dt.team} — ${dt.keepers.length}/${MAX_KEEPERS} Keeper</div>
-      ${dt.keepers.map((p, i) => playerRowHtml(p, rounds[i])).join('')}
-    `;
-  }).join('');
+      <div class="keeper-card">
+        <div class="keeper-card-header">
+          <span>${t.emoji || '🏈'} ${dt.team}</span>
+          <span class="keeper-card-count">${dt.keepers.length}/${MAX_KEEPERS}</span>
+        </div>
+        ${dt.keepers.map((p, i) => `
+          <div class="keeper-card-row">
+            <span class="keeper-card-round">R${rounds[i]}</span>
+            <span class="keeper-card-name">${p.name}</span>
+            <span class="keeper-card-meta">${p.nfl} · ${p.pos}${p.status ? ` · <span class="player-status ${p.status}">${p.status}</span>` : ''}</span>
+          </div>`).join('')}
+      </div>`;
+  }).join('') + `</div>`;
 }
 
 /* ---------- Draft Board ---------- */
@@ -812,6 +877,82 @@ function _drHexToRgba(hex, alpha) {
   if (!m) return `rgba(224,121,74,${alpha})`;
   const n = parseInt(m[1], 16);
   return `rgba(${(n>>16)&255},${(n>>8)&255},${n&255},${alpha})`;
+}
+
+// ============================================================
+//  NFL TEAMS — welche unserer Liga-Spieler spielen fuer welches
+//  echte NFL-Team (nur QB/RB/WR/TE), mit Fantasy-Besitzer.
+// ============================================================
+const NFL_TEAM_NAMES = {
+  ARI: 'Arizona Cardinals', ATL: 'Atlanta Falcons', BAL: 'Baltimore Ravens',
+  BUF: 'Buffalo Bills', CAR: 'Carolina Panthers', CHI: 'Chicago Bears',
+  CIN: 'Cincinnati Bengals', CLE: 'Cleveland Browns', DAL: 'Dallas Cowboys',
+  DEN: 'Denver Broncos', DET: 'Detroit Lions', GB: 'Green Bay Packers',
+  HOU: 'Houston Texans', IND: 'Indianapolis Colts', JAX: 'Jacksonville Jaguars',
+  KC: 'Kansas City Chiefs', LAC: 'Los Angeles Chargers', LAR: 'Los Angeles Rams',
+  LV: 'Las Vegas Raiders', MIA: 'Miami Dolphins', MIN: 'Minnesota Vikings',
+  NE: 'New England Patriots', NO: 'New Orleans Saints', NYG: 'New York Giants',
+  NYJ: 'New York Jets', PHI: 'Philadelphia Eagles', PIT: 'Pittsburgh Steelers',
+  SEA: 'Seattle Seahawks', SF: 'San Francisco 49ers', TB: 'Tampa Bay Buccaneers',
+  TEN: 'Tennessee Titans', WAS: 'Washington Commanders',
+};
+// Unsere Ranking-Quellen nutzen leicht unterschiedliche Kuerzel (v.a. KTC:
+// GBP/NEP/NOS/SFO/TBB/LVR/JAC statt GB/NE/NO/SF/TB/LV/JAX) -- hier auf
+// die kanonische Liste oben normalisieren.
+const NFL_TEAM_ALIASES = { GBP: 'GB', NEP: 'NE', NOS: 'NO', SFO: 'SF', TBB: 'TB', LVR: 'LV', JAC: 'JAX' };
+function nflTeamCanon(code) { return NFL_TEAM_ALIASES[code] || code; }
+
+function showNFLTeams() { navigate('nflteams'); renderNFLTeams(); }
+
+function renderNFLTeams() {
+  const wrap = document.getElementById('nflteamsContent');
+  const counts = {};
+  DYNASTY_BOARD.forEach(p => {
+    if (!['QB', 'RB', 'WR', 'TE'].includes(p.pos)) return;
+    const code = nflTeamCanon(p.team);
+    if (!NFL_TEAM_NAMES[code]) return;
+    counts[code] = (counts[code] || 0) + 1;
+  });
+
+  const teams = Object.keys(NFL_TEAM_NAMES).sort();
+  wrap.innerHTML = `<div class="team-grid">` + teams.map(code => `
+    <div class="team-card" onclick="showNFLTeam('${code}')">
+      <span class="team-emoji" style="font-size:20px;font-weight:800;color:var(--accent)">${code}</span>
+      <div class="team-name">${NFL_TEAM_NAMES[code]}</div>
+      <div class="team-meta">${counts[code] || 0} QB/RB/WR/TE erfasst</div>
+    </div>`).join('') + `</div>`;
+}
+
+function showNFLTeam(code) {
+  const fullName = NFL_TEAM_NAMES[code] || code;
+  const players = DYNASTY_BOARD
+    .filter(p => ['QB', 'RB', 'WR', 'TE'].includes(p.pos) && nflTeamCanon(p.team) === code)
+    .sort((a, b) => a.avg - b.avg);
+
+  document.getElementById('nflTeamDetailHeader').innerHTML = `
+    <div class="page-title">🏈 ${fullName}</div>
+    <div class="page-sub">${players.length} QB/RB/WR/TE, sortiert nach Dynasty-Rang</div>
+  `;
+
+  const content = document.getElementById('nflTeamDetailContent');
+  if (!players.length) {
+    content.innerHTML = emptyState('Keine Spieler gefunden', 'Für dieses Team liegen aktuell keine Dynasty-Board-Einträge in dieser Positionsgruppe vor.');
+  } else {
+    content.innerHTML = players.map(p => {
+      const owner = ownerOfPlayer(p.name);
+      const color = _drRankColor(p.avg);
+      return `
+        <div class="player-row">
+          <div class="player-round" style="background:${color}22;color:${color}">#${p.avg}</div>
+          <div class="player-name" style="flex:1">${p.name}</div>
+          <div class="player-team">${p.pos}</div>
+          ${owner
+            ? `<div class="player-status" style="background:var(--accent-light);color:var(--accent)">${owner.emoji || ''} ${owner.name}</div>`
+            : `<div class="player-status" style="background:var(--pick-open-bg);color:var(--pick-open-color)">Free Agent</div>`}
+        </div>`;
+    }).join('');
+  }
+  navigate('nflteamdetail');
 }
 
 // ============================================================

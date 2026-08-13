@@ -61,6 +61,7 @@
         <div class="snav-dropdown">
           <button class="snav-dropdown-item" data-page="playerrankings" onclick="showPlayerRankings()">📊 Player Rankings</button>
           <button class="snav-dropdown-item" data-page="playerprojections" onclick="showPlayerProjections()">🔮 Player Projections</button>
+          <button class="snav-dropdown-item" data-page="nflteams" onclick="showNFLTeams()">🏈 NFL Teams</button>
         </div>
       </div>
 
@@ -123,6 +124,7 @@
         <div class="subnav-mobile-label">Players</div>
         <button class="subnav-mobile-btn" data-page="playerrankings" onclick="showPlayerRankings()">📊 Player Rankings</button>
         <button class="subnav-mobile-btn" data-page="playerprojections" onclick="showPlayerProjections()">🔮 Player Projections</button>
+        <button class="subnav-mobile-btn" data-page="nflteams" onclick="showNFLTeams()">🏈 NFL Teams</button>
       </div>
       <div class="subnav-mobile-group">
         <div class="subnav-mobile-label">Trade</div>
@@ -240,6 +242,19 @@
   <div class="page-title">🔮 Player Projections</div>
   <div class="page-sub">ESPN-Projektionen für die aktuelle Saison</div>
   <div id="playerprojectionsContent"></div>
+</div>
+
+<!-- ============ NFL TEAMS ============ -->
+<div class="page" id="page-nflteams">
+  <div class="page-title">🏈 NFL Teams</div>
+  <div class="page-sub">QB/RB/WR/TE je NFL-Team, mit Fantasy-Besitzer</div>
+  <div id="nflteamsContent"></div>
+</div>
+
+<div class="page" id="page-nflteamdetail">
+  <button class="back-btn" onclick="showNFLTeams()">← Zurück zu NFL Teams</button>
+  <div id="nflTeamDetailHeader"></div>
+  <div id="nflTeamDetailContent"></div>
 </div>
 
 <!-- ============ FUTURE DRAFT BOARDS ============ -->
