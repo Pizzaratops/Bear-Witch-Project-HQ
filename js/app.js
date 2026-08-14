@@ -1523,6 +1523,9 @@ function renderLeagueHistory() {
     </div>
     ${renderSeasonFinishRolling()}
   `;
+  if (typeof SEASON_HISTORY_STANDINGS !== 'undefined' && SEASON_HISTORY_STANDINGS.length) {
+    _srInit();
+  }
 }
 
 /* Regular-Season-Finish je Team über die Jahre, im gleichen Farb-/Aufbau-
@@ -1531,10 +1534,49 @@ function renderLeagueHistory() {
    data/season-history-standings.js zum Thema Umbenennungen). */
 function renderSeasonFinishRolling() {
   if (typeof SEASON_HISTORY_STANDINGS === 'undefined' || !SEASON_HISTORY_STANDINGS.length) return '';
-  const years = SEASON_HISTORY_STANDINGS.map(s => s.year).sort((a, b) => a - b);
+  return `
+    <div class="section-label">📈 Regular-Season-Finish über die Jahre</div>
+    <div class="info-banner">
+      Platzierung nach Regular Season (nicht Playoff-Ergebnis) je Jahr. Umbenannte Franchises sind zu
+      einer Zeile zusammengeführt — komplette Owner-Zuordnung vom Liga-Owner bestätigt.
+    </div>
+    <div class="sr-embed">
+      <div class="rr-layout">
+        <div class="rr-sidebar">
+          <div class="rr-sidebar-header">
+            <div style="font-size:13px;font-weight:800;color:var(--text);">Franchises</div>
+          </div>
+          <div id="srToolbar" class="rr-toolbar"></div>
+          <div class="rr-list-scroll">
+            <div id="srListCols" class="rr-list-cols"></div>
+            <div id="srListBody"></div>
+          </div>
+        </div>
+        <div class="rr-main" id="srChartPanel">
+          <div style="margin:auto;text-align:center;color:var(--muted);">
+            <div style="font-size:36px;margin-bottom:10px;">📈</div>
+            <div style="font-size:14px;font-weight:700;color:var(--text);">Team auswählen</div>
+            <div style="font-size:12px;margin-top:4px;">Klicke links auf ein Team für den Platzierungs-Verlauf</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  `;
+}
 
-  const teamRanks = {}; // franchiseName -> { [year]: rank }
-  const aliasHistory = {}; // franchiseName -> [{year, name}] wenn umbenannt
+/* ---------- Season Finish Rolling (Sidebar + Chart, wie Dynasty Rolling) ---------- */
+let srCompareMode = false;
+let srSelected = [];
+let srSortBy = 'avg';
+let srSortDir = 'asc';
+const SR_COMPARE_COLORS = ['#e0794a', '#4d7bb0', '#4caf81'];
+
+let _srDataCache = null;
+function _srData() {
+  if (_srDataCache) return _srDataCache;
+  const years = SEASON_HISTORY_STANDINGS.map(s => s.year).sort((a, b) => a - b);
+  const teamRanks = {};
+  const aliasHistory = {};
   SEASON_HISTORY_STANDINGS.forEach(s => {
     s.standings.forEach(row => {
       const franchise = (typeof resolveTeamFranchise === 'function') ? resolveTeamFranchise(row.team) : row.team;
@@ -1546,38 +1588,233 @@ function renderSeasonFinishRolling() {
       }
     });
   });
-
-  const teamRows = Object.keys(teamRanks).map(team => {
+  _srDataCache = Object.keys(teamRanks).map((team, i) => {
     const ranks = years.map(y => teamRanks[team][y] ?? null);
     const valid = ranks.filter(r => r !== null);
     const avg = valid.length ? valid.reduce((a, b) => a + b, 0) / valid.length : null;
-    return { team, ranks, avg, seasons: valid.length, aliases: aliasHistory[team] || [] };
-  }).sort((a, b) => (a.avg ?? 999) - (b.avg ?? 999));
+    return { team, ranks, avg, seasons: valid.length, aliases: [...new Set(aliasHistory[team] || [])], origIdx: i };
+  });
+  return _srDataCache;
+}
+function _srYears() { return SEASON_HISTORY_STANDINGS.map(s => s.year).sort((a, b) => a - b); }
+function _srListYears() { return _srYears().slice(-2); } // Sidebar: nur letzte 2 Jahre, Rest im Chart
 
-  const head = `<tr><th class="round-label">Team</th>${years.map(y => `<th>${y}</th>`).join('')}<th>Ø Platz</th><th>Saisons</th></tr>`;
-  const rows = teamRows.map(r => {
-    const cells = r.ranks.map(rank => {
+function _srInit() {
+  _srDataCache = null;
+  srSelected = [];
+  srCompareMode = false;
+  srSortBy = 'avg';
+  srSortDir = 'asc';
+  _srRenderToolbar();
+  _srRenderListHeader();
+  _srRenderList();
+  _srRenderMain();
+}
+
+function _srSortedData() {
+  const data = _srData().slice();
+  const dir = srSortDir === 'desc' ? -1 : 1;
+  const yearIdx = _srYears().indexOf(srSortBy);
+  data.sort((a, b) => {
+    let va, vb;
+    if (srSortBy === 'name') return dir * a.team.localeCompare(b.team);
+    if (srSortBy === 'avg') { va = a.avg; vb = b.avg; }
+    else if (yearIdx !== -1) { va = a.ranks[yearIdx]; vb = b.ranks[yearIdx]; }
+    else { va = a.avg; vb = b.avg; }
+    const an = va == null, bn = vb == null;
+    if (an && bn) return a.team.localeCompare(b.team);
+    if (an) return 1;
+    if (bn) return -1;
+    return dir * (va - vb);
+  });
+  return data;
+}
+
+function srSortByKey(key) {
+  if (srSortBy === key) srSortDir = srSortDir === 'asc' ? 'desc' : 'asc';
+  else { srSortBy = key; srSortDir = 'asc'; }
+  _srRenderListHeader();
+  _srRenderList();
+}
+
+function _srRenderToolbar() {
+  const host = document.getElementById('srToolbar');
+  if (!host) return;
+  const active = srCompareMode ? ' rr-tb-active' : '';
+  host.innerHTML = `<div class="rr-tb-group"><button class="rr-tb-btn${active}" onclick="srToggleCompare()">⚖️ Vergleichen ${srCompareMode ? '(' + srSelected.length + '/3)' : ''}</button></div>`;
+}
+function srToggleCompare() {
+  srCompareMode = !srCompareMode;
+  if (!srCompareMode && srSelected.length > 1) srSelected = srSelected.slice(0, 1);
+  _srRenderToolbar();
+  _srRenderList();
+  _srRenderMain();
+}
+
+function _srRenderListHeader() {
+  const host = document.getElementById('srListCols');
+  if (!host) return;
+  const listYears = _srListYears();
+  const cls = key => 'rr-col-h' + (srSortBy === key ? ' rr-col-active' : '');
+  const ind = key => srSortBy !== key ? '' : (srSortDir === 'asc' ? ' ↑' : ' ↓');
+  host.style.gridTemplateColumns = `28px 1fr repeat(${listYears.length}, 38px)`;
+  host.innerHTML =
+    `<span class="${cls('avg')}" onclick="srSortByKey('avg')" title="Ø Platz">#${ind('avg')}</span>` +
+    `<span class="${cls('name')}" onclick="srSortByKey('name')" style="text-align:left;">Team${ind('name')}</span>` +
+    listYears.map(y => `<span class="${cls(y)}" onclick="srSortByKey(${y})">'${String(y).slice(2)}${ind(y)}</span>`).join('');
+}
+
+function _srRenderList() {
+  const body = document.getElementById('srListBody');
+  if (!body) return;
+  const listYears = _srListYears();
+  const allYears = _srYears();
+  const startIdx = allYears.length - listYears.length;
+  const gridTpl = `28px 1fr repeat(${listYears.length}, 38px)`;
+  const data = _srSortedData();
+
+  body.innerHTML = data.map((r, sortIdx) => {
+    const cells = listYears.map((y, i) => {
+      const rank = r.ranks[startIdx + i];
       const c = rank == null ? 'var(--border)' : _drRankColor(rank);
-      return `<td><span class="rr-rank-cell" style="color:${c};background:${rank ? c + '22' : 'transparent'}">${rank ?? '–'}</span></td>`;
+      return `<span class="rr-rank-cell" style="color:${c};background:${rank ? c + '22' : 'transparent'}">${rank ?? '–'}</span>`;
     }).join('');
-    const aliasNote = r.aliases.length ? `<div style="font-size:9px;color:var(--muted);font-weight:400;margin-top:2px;">ex: ${[...new Set(r.aliases)].join(', ')}</div>` : '';
-    return `<tr><td style="text-align:left;font-weight:600">${r.team}${aliasNote}</td>${cells}<td><b>${r.avg != null ? r.avg.toFixed(1) : '–'}</b></td><td>${r.seasons}</td></tr>`;
+    const isSelected = srSelected.indexOf(r.origIdx) !== -1;
+    const selIdx = srSelected.indexOf(r.origIdx);
+    const colorDot = (srCompareMode && isSelected)
+      ? `<span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${SR_COMPARE_COLORS[selIdx]};margin-right:4px;vertical-align:middle;"></span>`
+      : '';
+    const idxLabel = srSortBy === 'avg' ? (r.avg != null ? r.avg.toFixed(1) : '–') : (sortIdx + 1);
+    return `<div class="rr-row${isSelected ? ' rr-active' : ''}" onclick="srSelectTeam(${r.origIdx})" style="grid-template-columns:${gridTpl};">
+      <span class="rr-idx">${idxLabel}</span>
+      <span class="rr-name" title="${r.team}">${colorDot}${r.team}</span>
+      ${cells}
+    </div>`;
   }).join('');
+}
 
-  return `
-    <div class="section-label">📈 Regular-Season-Finish über die Jahre</div>
-    <div class="info-banner">
-      Platzierung nach Regular Season (nicht Playoff-Ergebnis) je Jahr, farbcodiert wie bei den Dynasty
-      Rolling Rankings. Umbenannte Franchises sind zu einer Zeile zusammengeführt (ehemalige Namen stehen
-      klein drunter) — komplette Owner-Zuordnung vom Liga-Owner bestätigt.
-    </div>
-    <div class="board-table-wrap">
-      <table class="board">
-        <thead>${head}</thead>
-        <tbody>${rows}</tbody>
-      </table>
-    </div>
-  `;
+function srSelectTeam(origIdx) {
+  if (srCompareMode) {
+    const i = srSelected.indexOf(origIdx);
+    if (i !== -1) srSelected.splice(i, 1);
+    else if (srSelected.length < 3) srSelected.push(origIdx);
+    else srSelected[2] = origIdx;
+  } else {
+    srSelected = [origIdx];
+  }
+  _srRenderList();
+  _srRenderMain();
+}
+
+function _srRenderMain() {
+  const panel = document.getElementById('srChartPanel');
+  if (!panel) return;
+  if (!srSelected.length) {
+    panel.innerHTML = `
+      <div style="margin:auto;text-align:center;color:var(--muted);">
+        <div style="font-size:36px;margin-bottom:10px;">📈</div>
+        <div style="font-size:14px;font-weight:700;color:var(--text);">Team auswählen</div>
+        <div style="font-size:12px;margin-top:4px;">${srCompareMode ? 'Wähle bis zu 3 Teams zum Vergleich' : 'Klicke links auf ein Team für den Platzierungs-Verlauf'}</div>
+      </div>`;
+    return;
+  }
+  const data = _srData();
+  const years = _srYears();
+  const labels = years.map(String);
+  if (srCompareMode && srSelected.length > 1) {
+    const teams = srSelected.map(i => data[i]);
+    const datasets = teams.map((t, i) => ({ team: t, values: t.ranks, color: SR_COMPARE_COLORS[i] }));
+    const cards = datasets.map(d => {
+      const valid = d.values.filter(x => x !== null);
+      const best = valid.length ? Math.min(...valid) : null;
+      return `<div class="rr-compare-card" style="border-color:${d.color}55;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+          <span style="width:12px;height:12px;border-radius:50%;background:${d.color};"></span>
+          <span style="font-weight:800;font-size:14px;">${d.team.team}</span>
+        </div>
+        <div style="font-size:11px;color:var(--muted);">Bestes: <strong style="color:${d.color};font-size:14px;">#${best ?? '–'}</strong> · Ø <strong style="color:${d.color};font-size:14px;">${d.team.avg != null ? d.team.avg.toFixed(1) : '–'}</strong></div>
+      </div>`;
+    }).join('');
+    panel.innerHTML = `
+      <div class="rr-player-header"><div><div class="rr-player-name">Vergleich</div><div class="rr-player-sub">Regular-Season-Finish über die Jahre</div></div></div>
+      <div class="rr-compare-cards">${cards}</div>
+      <div class="rr-chart-box"><canvas id="srCanvas"></canvas></div>`;
+    _srDrawChart(datasets, labels);
+  } else {
+    const t = data[srSelected[0]];
+    const valid = t.ranks.filter(x => x !== null);
+    const best = valid.length ? Math.min(...valid) : null;
+    const worst = valid.length ? Math.max(...valid) : null;
+    const aliasNote = t.aliases.length ? `<div class="rr-player-sub">ex: ${t.aliases.join(', ')}</div>` : '';
+    const badges = years.map((y, i) => {
+      const r = t.ranks[i];
+      const c = r == null ? 'var(--border)' : _drRankColor(r);
+      return `<div class="rr-month-badge"><span class="rr-badge-label">${y}</span><span class="rr-badge-rank" style="color:${c}">${r ?? '—'}</span></div>`;
+    }).join('');
+    panel.innerHTML = `
+      <div class="rr-player-header">
+        <div><div class="rr-player-name">${t.team}</div><div class="rr-player-sub">Regular-Season-Finish über die Jahre</div>${aliasNote}</div>
+        <div class="rr-pills">
+          <div class="rr-pill"><span class="rr-pill-val" style="color:#e0794a">${best ?? '–'}</span><span class="rr-pill-label">Bestes</span></div>
+          <div class="rr-pill"><span class="rr-pill-val" style="color:#d9695f">${worst ?? '–'}</span><span class="rr-pill-label">Schlechtestes</span></div>
+          <div class="rr-pill"><span class="rr-pill-val" style="color:#4d7bb0">${t.avg != null ? t.avg.toFixed(1) : '–'}</span><span class="rr-pill-label">Ø Platz</span></div>
+          <div class="rr-pill"><span class="rr-pill-val" style="color:#4caf81">${t.seasons}</span><span class="rr-pill-label">Saisons</span></div>
+        </div>
+      </div>
+      <div class="rr-chart-box"><canvas id="srCanvas"></canvas></div>
+      <div class="rr-badges">${badges}</div>`;
+    _srDrawChart([{ team: t, values: t.ranks, color: SR_COMPARE_COLORS[0] }], labels);
+  }
+}
+
+let srChart = null;
+function _srDrawChart(datasets, labels) {
+  if (srChart) { srChart.destroy(); srChart = null; }
+  const canvas = document.getElementById('srCanvas');
+  if (!canvas || typeof Chart === 'undefined') return;
+  const ctx = canvas.getContext('2d');
+  const maxRank = Math.max(12, ...datasets.flatMap(d => d.values.filter(v => v != null)));
+
+  const chartDatasets = datasets.map(d => {
+    const grad = ctx.createLinearGradient(0, 0, 0, 260);
+    grad.addColorStop(0, _drHexToRgba(d.color, 0.22));
+    grad.addColorStop(1, _drHexToRgba(d.color, 0));
+    return {
+      label: d.team.team,
+      data: d.values,
+      borderColor: d.color,
+      backgroundColor: datasets.length === 1 ? grad : 'transparent',
+      pointBackgroundColor: d.values.map(r => datasets.length === 1 ? _drRankColor(r) : d.color),
+      pointBorderColor: getComputedStyle(document.body).getPropertyValue('--surface') || '#fff',
+      pointBorderWidth: 2, pointRadius: 6, pointHoverRadius: 9, borderWidth: 2.5,
+      fill: datasets.length === 1, tension: 0.3, spanGaps: true,
+    };
+  });
+  const styles = getComputedStyle(document.body);
+  const textColor = styles.getPropertyValue('--text') || '#333';
+  const mutedColor = styles.getPropertyValue('--muted') || '#888';
+  const borderColor = styles.getPropertyValue('--border') || '#ddd';
+  const surfaceColor = styles.getPropertyValue('--surface2') || '#fff';
+
+  srChart = new Chart(ctx, {
+    type: 'line',
+    data: { labels, datasets: chartDatasets },
+    options: {
+      responsive: true, maintainAspectRatio: true, aspectRatio: 2.4,
+      plugins: {
+        legend: { display: datasets.length > 1, labels: { color: textColor, font: { size: 11, weight: '700' } } },
+        tooltip: {
+          backgroundColor: surfaceColor, borderColor, borderWidth: 1, titleColor: textColor, bodyColor: '#e0794a', padding: 10,
+          callbacks: { label: c => c.raw === null ? `${c.dataset.label}: keine Daten` : `${c.dataset.label}: Platz ${c.raw}` }
+        }
+      },
+      scales: {
+        y: { reverse: true, min: 1, max: maxRank, grid: { color: borderColor }, border: { color: borderColor },
+             ticks: { color: mutedColor, font: { size: 10 }, stepSize: 1 }, title: { display: true, text: 'Platzierung', color: mutedColor, font: { size: 10 } } },
+        x: { grid: { color: borderColor }, border: { color: borderColor }, ticks: { color: textColor, font: { size: 11, weight: '700' } } }
+      }
+    }
+  });
 }
 
 function renderSeasonRolling() {

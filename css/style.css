@@ -538,3 +538,13 @@ table.db-table td:nth-child(2) { text-align: left; font-weight: 600; }
 
 /* ---------- TENTATIVE KEEPER (vsl.) ---------- */
 .tentative-tag { font-size: 9px; font-weight: 800; color: var(--accent2); background: rgba(77,123,176,0.14); padding: 1px 5px; border-radius: 5px; letter-spacing: .3px; }
+
+/* ---------- SEASON FINISH ROLLING (eingebettet in Liga-Historie) ---------- */
+.sr-embed { display: flex; flex-direction: column; height: 560px; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; margin-top: 4px; }
+.sr-embed .rr-layout { flex: 1; overflow: hidden; border: none; border-radius: 0; }
+.sr-embed .rr-sidebar { border-radius: 0; }
+@media (max-width: 768px) {
+  .sr-embed { height: auto; }
+  .sr-embed .rr-layout { grid-template-columns: 1fr; }
+  .sr-embed .rr-sidebar { height: 340px; border-right: none; border-bottom: 1px solid var(--border); }
+}
