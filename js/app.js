@@ -176,6 +176,7 @@ function renderHome() {
       <div class="team-card" onclick="showRoster('${t.id}')">
         <span class="team-emoji">${t.emoji}</span>
         <div class="team-name">${t.name}</div>
+        ${t.owner ? `<div class="team-owner">${t.owner}</div>` : ''}
         <div class="team-meta">${keeperCount} Keeper gemeldet</div>
       </div>`;
   }).join('');
@@ -190,6 +191,7 @@ function renderRoster(teamId) {
     return;
   }
   document.getElementById('rosterTitle').textContent = `${team.emoji} ${team.name}`;
+  document.getElementById('rosterSub').textContent = team.owner ? `Owner: ${team.owner}` : 'Kader-Übersicht';
 
   const draftTeam = DRAFT_2026_TEAMS.find(dt => dt.team === team.name);
   const keepers = draftTeam ? draftTeam.keepers : [];
@@ -327,7 +329,7 @@ function renderKeepers() {
     return `
       <div class="keeper-card">
         <div class="keeper-card-header">
-          <span>${t.emoji || '🏈'} ${dt.team}</span>
+          <span>${t.emoji || '🏈'} ${dt.team}${t.owner ? ` <span class="owner-tag" style="font-size:11px">(${t.owner})</span>` : ''}</span>
           <span class="keeper-card-count">${dt.keepers.length}/${MAX_KEEPERS}</span>
         </div>
         ${dt.keepers.map((p, i) => `
@@ -391,33 +393,47 @@ async function downloadKeeperScreenshot() {
 /* ---------- Draft Board ---------- */
 function renderDraftboard() {
   const wrap = document.getElementById('draftboardContent');
-  const teams = DRAFT_2026_TEAMS;
   const teamsById = LEAGUE_TEAMS.reduce((m, t) => { m[t.name] = t; return m; }, {});
+  const draftById = DRAFT_2026_TEAMS.reduce((m, t) => { m[t.team] = t; return m; }, {});
+
+  // Spaltenreihenfolge = echte, vom Liga-Owner bestaetigte Draft-Order
+  // (linear, reward-the-bottom). Fallback auf DRAFT_2026_TEAMS-Reihenfolge,
+  // falls DRAFT_ORDER_2026 mal fehlen sollte.
+  const order = (typeof DRAFT_ORDER_2026 !== 'undefined' && DRAFT_ORDER_2026.length)
+    ? DRAFT_ORDER_2026 : DRAFT_2026_TEAMS.map(t => t.team);
+  const teams = order.map(name => draftById[name]).filter(Boolean);
 
   const tradedOverrides = {}; // "team|round" -> owner team name
   (typeof TRADED_PICKS_2026 !== 'undefined' ? TRADED_PICKS_2026 : []).forEach(p => {
     tradedOverrides[`${p.from}|${p.round}`] = p.owner;
   });
   const tradedCount = Object.keys(tradedOverrides).length;
+  const hasOrder = typeof DRAFT_ORDER_2026 !== 'undefined' && DRAFT_ORDER_2026.length;
 
   let head = `<tr><th class="round-label">Runde</th>` +
-    teams.map(t => `<th>${t.team}</th>`).join('') + `</tr>`;
+    teams.map((t, i) => {
+      const meta = teamsById[t.team] || {};
+      const slot = hasOrder ? `<small style="display:block;font-weight:400;opacity:.75">Pick ${i + 1}</small>` : '';
+      const owner = meta.owner ? `<small style="display:block;font-weight:400;opacity:.6">${meta.owner}</small>` : '';
+      return `<th>${t.team}${slot}${owner}</th>`;
+    }).join('') + `</tr>`;
 
   let rows = '';
   for (let round = 1; round <= TOTAL_DRAFT_ROUNDS; round++) {
     rows += `<tr><th class="round-label">R${round}</th>`;
-    teams.forEach(t => {
+    teams.forEach((t, i) => {
       const k = t.keepers.length;
       const startRound = TOTAL_DRAFT_ROUNDS - k + 1;
       const tradedOwner = tradedOverrides[`${t.team}|${round}`];
+      const pickNum = hasOrder ? `${round}.${String(i + 1).padStart(2, '0')}` : `R${round}`;
       if (round >= startRound) {
         const player = t.keepers[round - startRound];
         rows += `<td><div class="cell-keeper" onclick="openTradeAnalyzer('${escapeJs(player.name)}')">${player.tentative ? `(${player.name})` : player.name}${player.tentative ? ' <small style="display:inline">vsl.</small>' : ''}<small>${player.nfl} · ${player.pos}</small></div></td>`;
       } else if (tradedOwner) {
-        const ownerEmoji = teamsById[tradedOwner] ? teamsById[tradedOwner].emoji : '';
-        rows += `<td><div class="cell-keeper" onclick="openTradeAnalyzer('${escapeJs(t.team)} 2026 R${round}', 'pick')">${ownerEmoji} ${tradedOwner}<small>via ${t.team}</small></div></td>`;
+        const ownerTeam = teamsById[tradedOwner] || {};
+        rows += `<td><div class="cell-keeper" onclick="openTradeAnalyzer('${escapeJs(t.team)} 2026 R${round}', 'pick')">${ownerTeam.emoji || ''} ${tradedOwner}<small>via ${t.team} · Pick ${pickNum}</small></div></td>`;
       } else {
-        rows += `<td><div class="cell-open" onclick="openTradeAnalyzer('${escapeJs(t.team)} 2026 R${round}', 'pick')">Own</div></td>`;
+        rows += `<td><div class="cell-open" onclick="openTradeAnalyzer('${escapeJs(t.team)} 2026 R${round}', 'pick')">Own<small>Pick ${pickNum}</small></div></td>`;
       }
     });
     rows += `</tr>`;
@@ -430,8 +446,7 @@ function renderDraftboard() {
       die letzten K Runden seines eigenen Picks. Da niemand mehr als
       <b>${MAX_KEEPERS} Keeper</b> haben kann, bleiben <b>Runde 1–5 für alle Teams offen</b>.
       "Own" = Team besitzt diesen Pick noch selbst. Klick auf eine Zelle öffnet den Trade Analyzer.
-      Die konkrete Pick-Reihenfolge (Slot 1–12) je Runde steht noch nicht fest und wird
-      ergänzt, sobald ESPN sie vergibt.
+      ${hasOrder ? 'Draft ist <b>linear</b> (kein Snake) — dieselbe Reihenfolge in jeder Runde, Vorjahres-Champion pickt zuletzt.' : 'Die konkrete Pick-Reihenfolge (Slot 1–12) je Runde steht noch nicht fest.'}
     </div>
     <div class="board-table-wrap">
       <table class="board board-compact">
@@ -902,7 +917,7 @@ function _drRenderSingle(panel, player) {
     <div class="rr-player-header">
       <div>
         <div class="rr-player-name">${player.name}</div>
-        <div class="rr-player-sub">Dynasty Rolling Rankings · ${player.pos || '—'}${owner ? ' · ' + (owner.emoji || '') + ' ' + owner.name : ''}</div>
+        <div class="rr-player-sub">Dynasty Rolling Rankings · ${player.pos || '—'}${owner ? ' · ' + teamLabelWithOwner(owner) : ''}</div>
       </div>
       ${pillsHtml}
     </div>
@@ -1117,7 +1132,7 @@ function showNFLTeam(code) {
           <div class="player-name" style="flex:1">${p.name}</div>
           <div class="player-team">${p.pos}</div>
           ${owner
-            ? `<div class="player-status" style="background:var(--accent-light);color:var(--accent)">${owner.emoji || ''} ${owner.name}</div>`
+            ? `<div class="player-status" style="background:var(--accent-light);color:var(--accent)">${teamLabelWithOwner(owner)}</div>`
             : `<div class="player-status" style="background:var(--pick-open-bg);color:var(--pick-open-color)">Free Agent</div>`}
         </div>`;
     }).join('');
@@ -2024,6 +2039,15 @@ function ownerOfPlayer(name) {
   return null; // Free Agent / Best Available
 }
 
+/* Einheitliches Team-Label mit Owner-Namen, z.B. "🐻 The Bear Witch
+   Project (Kong Power)" -- ueberall verwenden, wo ein Team angezeigt
+   wird, damit man den Owner nicht mehr extra fragen muss. */
+function teamLabelWithOwner(team) {
+  if (!team) return '';
+  const emoji = team.emoji || '🏈';
+  return team.owner ? `${emoji} ${team.name} <span class="owner-tag">(${team.owner})</span>` : `${emoji} ${team.name}`;
+}
+
 /* ---------- Trade Analyzer ---------- */
 let tradeState = { sideA: [], sideB: [], teamA: '', teamB: '' };
 
@@ -2080,7 +2104,7 @@ function teamProjectedTotal(teamName, removeNames, addNames) {
 function renderTrade() {
   const wrap = document.getElementById('tradeContent');
   const teamOptions = '<option value="">— Team wählen —</option>' +
-    LEAGUE_TEAMS.map(t => `<option value="${t.name}">${t.emoji} ${t.name}</option>`).join('');
+    LEAGUE_TEAMS.map(t => `<option value="${t.name}">${t.emoji} ${t.name}${t.owner ? ' (' + t.owner + ')' : ''}</option>`).join('');
 
   wrap.innerHTML = `
     <div class="trade-cols">
@@ -2411,7 +2435,7 @@ function renderPlayerRankings() {
       <td>${i + 1}</td>
       <td style="text-align:left;font-weight:600">${p.name}</td>
       <td>${p.pos}</td>
-      <td>${owner ? `${owner.emoji || ''} ${owner.name}` : '<span style="color:var(--green)">Free Agent</span>'}</td>
+      <td>${owner ? teamLabelWithOwner(owner) : '<span style="color:var(--green)">Free Agent</span>'}</td>
       <td><b>${p.avgPoints}</b></td>
       <td>${p.totalPoints}</td>
       <td>${p.gamesPlayed}</td>
@@ -2453,7 +2477,7 @@ function renderPlayerProjections() {
       <td>${i + 1}</td>
       <td style="text-align:left;font-weight:600">${p.name}</td>
       <td>${p.pos}</td>
-      <td>${owner ? `${owner.emoji || ''} ${owner.name}` : '<span style="color:var(--green)">Free Agent</span>'}</td>
+      <td>${owner ? teamLabelWithOwner(owner) : '<span style="color:var(--green)">Free Agent</span>'}</td>
       <td><b>${p.projectedPoints}</b></td>
     </tr>`;
   }).join('');

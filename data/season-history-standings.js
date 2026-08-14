@@ -157,9 +157,12 @@ const TEAM_NAME_ALIASES = {
   "Crackheads Robster":     { canonical: "Vice City Crackheads", source: "confirmed-user" },
   "Downtown Crackheads":    { canonical: "Vice City Crackheads", source: "confirmed-user" },
 
-  // Ogi (Oguzhan Dinler) -- letzter bekannter Name "The Skinnyfats", kein
-  // aktuelles Liga-Team unter den 12; vermutlich nicht mehr in der Liga.
-  "The skinnyfats Ogi":     { canonical: "The Skinnyfats", source: "confirmed-user" },
+  // Ogi (Oguzhan Dinler) -> Ogi verliess die Liga nach der 2025er-Saison,
+  // Marvin Tews ("Marv T.") uebernahm den Liga-Slot und benannte ihn zu
+  // "Running Bisons" um (bestaetigt 13.08.2026). Fuer den Rolling-Rankings-
+  // Verlauf als durchgehende Liga-Slot-Historie behandelt (Ownerwechsel!).
+  "The skinnyfats Ogi":     { canonical: "Running Bisons", source: "confirmed-user" },
+  "The Skinnyfats":         { canonical: "Running Bisons", source: "confirmed-user" },
 
   // Marvin
   "Carolina Beastmode":     { canonical: "Beastmode", source: "confirmed-user" },

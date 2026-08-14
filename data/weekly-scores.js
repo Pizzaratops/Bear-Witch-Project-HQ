@@ -1,15 +1,15 @@
 // ============================================================
 //  WEEKLY_SCORES — wöchentliche ESPN-Matchup-Punktzahlen
 // ============================================================
-//  AUTO-GENERIERT von scripts/sync-espn-weekly-scores.js über die
-//  GitHub Action ".github/workflows/sync-espn-weekly-scores.yml".
-//  Zuletzt synchronisiert: 2026-08-14T08:54:29.093Z
+//  Wird automatisch von scripts/sync-espn-weekly-scores.js befüllt,
+//  sobald die Saison läuft und ESPN echte Matchup-Daten liefert (vorher
+//  bleibt das Objekt leer — vor Woche 1 gibt es nichts zu synken).
 //
-//  teamId hier ist bereits unsere eigene Team-ID aus data/teams.js
-//  (uebersetzt beim Sync per Namensabgleich, wie in
-//  scripts/sync-espn-rosters.js).
+//  Struktur: WEEKLY_SCORES[season][week] = [
+//    { teamId, points, opponentId, opponentPoints }, ...
+//  ]
 // ============================================================
 
 const WEEKLY_SCORES = {
- "2026": {}
+  2026: {}
 };

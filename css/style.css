@@ -274,6 +274,7 @@ a { color: inherit; text-decoration: none; }
 }
 .team-emoji { font-size: 26px; margin-bottom: 8px; display: block; }
 .team-name { font-weight: 700; font-size: 15px; color: var(--text); margin-bottom: 3px; }
+.team-owner { font-size: 11px; color: var(--accent2); font-weight: 600; margin-bottom: 4px; }
 .team-meta { color: var(--muted); font-size: 12px; }
 
 /* ---------- EMPTY / PLACEHOLDER STATE ---------- */
@@ -548,3 +549,6 @@ table.db-table td:nth-child(2) { text-align: left; font-weight: 600; }
   .sr-embed .rr-layout { grid-template-columns: 1fr; }
   .sr-embed .rr-sidebar { height: 340px; border-right: none; border-bottom: 1px solid var(--border); }
 }
+
+/* ---------- OWNER-TAG ---------- */
+.owner-tag { font-weight: 500; color: var(--muted); font-size: 0.9em; }

@@ -46,6 +46,26 @@ const TOTAL_DRAFT_ROUNDS = 15;
 const MAX_KEEPERS = 10;
 const KEEPER_LOCK_DATE = "2026-08-26T21:00:00+02:00";
 
+// Tatsaechliche Draft-Reihenfolge, bestaetigt vom Liga-Owner (13.08.2026):
+// LINEAR (kein Snake!) -- dieselbe Reihenfolge in JEDER Runde. Reward-the-
+// bottom: der Vorjahres-Champion (The Bear Witch Project) pickt als
+// Letzter (Slot 12), das schlechteste Team (Running Bisons) als Erster.
+// Index 0 = Slot 1 ("1.01"), Index 11 = Slot 12 ("1.12").
+const DRAFT_ORDER_2026 = [
+  "Running Bisons",
+  "Burrowhead Dancers",
+  "The Lamartrix",
+  "Angry Ducks",
+  "Fred Bulls",
+  "London NoPuntsIntended",
+  "Lion Cereals",
+  "Beastmode",
+  "Charged UP",
+  "Vice City Crackheads",
+  "Team Beermode",
+  "The Bear Witch Project",
+];
+
 const DRAFT_2026_TEAMS = [
   {
     team: "The Bear Witch Project",
@@ -58,7 +78,6 @@ const DRAFT_2026_TEAMS = [
       { name: "Chuba Hubbard",        nfl: "CAR", pos: "RB",    status: null },
       { name: "Nico Collins",         nfl: "HOU", pos: "WR",    status: null },
       { name: "Dak Prescott",         nfl: "DAL", pos: "QB",    status: null },
-      { name: "Jonathan Taylor",      nfl: "IND", pos: "RB",    status: null },
     ],
   },
   {
