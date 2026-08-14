@@ -1533,11 +1533,17 @@ function renderSeasonFinishRolling() {
   if (typeof SEASON_HISTORY_STANDINGS === 'undefined' || !SEASON_HISTORY_STANDINGS.length) return '';
   const years = SEASON_HISTORY_STANDINGS.map(s => s.year).sort((a, b) => a - b);
 
-  const teamRanks = {}; // teamName -> { [year]: rank }
+  const teamRanks = {}; // franchiseName -> { [year]: rank }
+  const aliasHistory = {}; // franchiseName -> [{year, name}] wenn umbenannt
   SEASON_HISTORY_STANDINGS.forEach(s => {
     s.standings.forEach(row => {
-      teamRanks[row.team] = teamRanks[row.team] || {};
-      teamRanks[row.team][s.year] = row.rank;
+      const franchise = (typeof resolveTeamFranchise === 'function') ? resolveTeamFranchise(row.team) : row.team;
+      teamRanks[franchise] = teamRanks[franchise] || {};
+      teamRanks[franchise][s.year] = row.rank;
+      if (franchise !== row.team) {
+        aliasHistory[franchise] = aliasHistory[franchise] || [];
+        aliasHistory[franchise].push(`${row.team} (${s.year})`);
+      }
     });
   });
 
@@ -1545,7 +1551,7 @@ function renderSeasonFinishRolling() {
     const ranks = years.map(y => teamRanks[team][y] ?? null);
     const valid = ranks.filter(r => r !== null);
     const avg = valid.length ? valid.reduce((a, b) => a + b, 0) / valid.length : null;
-    return { team, ranks, avg, seasons: valid.length };
+    return { team, ranks, avg, seasons: valid.length, aliases: aliasHistory[team] || [] };
   }).sort((a, b) => (a.avg ?? 999) - (b.avg ?? 999));
 
   const head = `<tr><th class="round-label">Team</th>${years.map(y => `<th>${y}</th>`).join('')}<th>Ø Platz</th><th>Saisons</th></tr>`;
@@ -1554,15 +1560,16 @@ function renderSeasonFinishRolling() {
       const c = rank == null ? 'var(--border)' : _drRankColor(rank);
       return `<td><span class="rr-rank-cell" style="color:${c};background:${rank ? c + '22' : 'transparent'}">${rank ?? '–'}</span></td>`;
     }).join('');
-    return `<tr><td style="text-align:left;font-weight:600">${r.team}</td>${cells}<td><b>${r.avg != null ? r.avg.toFixed(1) : '–'}</b></td><td>${r.seasons}</td></tr>`;
+    const aliasNote = r.aliases.length ? `<div style="font-size:9px;color:var(--muted);font-weight:400;margin-top:2px;">ex: ${[...new Set(r.aliases)].join(', ')}</div>` : '';
+    return `<tr><td style="text-align:left;font-weight:600">${r.team}${aliasNote}</td>${cells}<td><b>${r.avg != null ? r.avg.toFixed(1) : '–'}</b></td><td>${r.seasons}</td></tr>`;
   }).join('');
 
   return `
     <div class="section-label">📈 Regular-Season-Finish über die Jahre</div>
     <div class="info-banner">
       Platzierung nach Regular Season (nicht Playoff-Ergebnis) je Jahr, farbcodiert wie bei den Dynasty
-      Rolling Rankings. Teamnamen wie sie im jeweiligen Jahr hiessen — bei Umbenennungen also eigene
-      Zeile pro Name, keine automatische Zuordnung zur heutigen Franchise.
+      Rolling Rankings. Umbenannte Franchises sind zu einer Zeile zusammengeführt (ehemalige Namen stehen
+      klein drunter) — komplette Owner-Zuordnung vom Liga-Owner bestätigt.
     </div>
     <div class="board-table-wrap">
       <table class="board">

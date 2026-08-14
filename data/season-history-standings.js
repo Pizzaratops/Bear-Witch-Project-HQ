@@ -128,3 +128,54 @@ const SEASON_HISTORY_STANDINGS = [
     ],
   },
 ];
+
+// ============================================================
+//  TEAM_NAME_ALIASES — Franchise-Kontinuitaet ueber Umbenennungen
+// ============================================================
+//  Bildet alte Teamnamen auf den kanonischen (aktuellen bzw. neuesten
+//  bekannten) Namen ab, damit ein Team trotz Umbenennung als EINE Zeile
+//  im Regular-Season-Finish-Verlauf erscheint.
+//
+//  Komplette Owner-Zuordnung vom Liga-Owner direkt bestaetigt (13.08.2026):
+//  Freddy, Jan, Felix, Kong Power (Liga-Owner), Dennis, Robin, Ogi,
+//  Marvin, Stefan, Kai, Georg, Daniel, Kevin, Bot.
+// ============================================================
+
+const TEAM_NAME_ALIASES = {
+  // Freddy
+  "Seksuelle BelPandas":    { canonical: "Fred Bulls", source: "confirmed-user" },
+
+  // Jan Schattschneider
+  "HST JeopardyJansen":     { canonical: "The Lamartrix", source: "confirmed-user" },
+  "Bad Mother Tucker":      { canonical: "The Lamartrix", source: "confirmed-user" },
+
+  // Kong Power (Liga-Owner)
+  "Team Kong":              { canonical: "The Bear Witch Project", source: "confirmed-user" },
+  "Kenora Tackles":         { canonical: "The Bear Witch Project", source: "confirmed-user" },
+
+  // Robin
+  "Crackheads Robster":     { canonical: "Vice City Crackheads", source: "confirmed-user" },
+  "Downtown Crackheads":    { canonical: "Vice City Crackheads", source: "confirmed-user" },
+
+  // Ogi (Oguzhan Dinler) -- letzter bekannter Name "The Skinnyfats", kein
+  // aktuelles Liga-Team unter den 12; vermutlich nicht mehr in der Liga.
+  "The skinnyfats Ogi":     { canonical: "The Skinnyfats", source: "confirmed-user" },
+
+  // Marvin
+  "Carolina Beastmode":     { canonical: "Beastmode", source: "confirmed-user" },
+
+  // Stefan
+  "Team Schapo":            { canonical: "Angry Ducks", source: "confirmed-user" },
+
+  // Georg
+  "Universe Dancebears":    { canonical: "Burrowhead Dancers", source: "confirmed-user" },
+
+  // Kai (Fried Chicken) und Bot (Hairy Potatoes): keine Fortsetzung unter
+  // den aktuellen 12 Teams bekannt -- vermutlich aus der Liga ausgeschieden,
+  // bewusst nicht gemappt.
+};
+
+function resolveTeamFranchise(name) {
+  const alias = TEAM_NAME_ALIASES[name];
+  return alias ? alias.canonical : name;
+}
