@@ -1510,16 +1510,64 @@ function renderLeagueHistory() {
   wrap.innerHTML = `
     <div class="board-table-wrap">
       <table class="board">
-        <thead><tr><th class="round-label">Jahr</th><th>🥇 Champion</th><th>🥈 Vize</th><th>🥉 Dritter</th><th>Notizen</th></tr></thead>
+        <thead><tr><th class="round-label">Jahr</th><th>🥇 Champion</th><th>🥈 Vize</th><th>🥉 Dritter</th></tr></thead>
         <tbody>
           ${sorted.map(s => `<tr>
             <td><b>${s.year}</b></td>
             <td style="text-align:left;font-weight:600">${s.champion || '—'}</td>
             <td>${s.runnerUp || '—'}</td>
             <td>${s.thirdPlace || '—'}</td>
-            <td style="text-align:left;color:var(--muted);font-size:11px">${s.notes || ''}</td>
           </tr>`).join('')}
         </tbody>
+      </table>
+    </div>
+    ${renderSeasonFinishRolling()}
+  `;
+}
+
+/* Regular-Season-Finish je Team über die Jahre, im gleichen Farb-/Aufbau-
+   Stil wie die Dynasty Rolling Rankings, plus Ø-Platzierung. Teamnamen
+   wie sie im jeweiligen Jahr hiessen (siehe Kommentar in
+   data/season-history-standings.js zum Thema Umbenennungen). */
+function renderSeasonFinishRolling() {
+  if (typeof SEASON_HISTORY_STANDINGS === 'undefined' || !SEASON_HISTORY_STANDINGS.length) return '';
+  const years = SEASON_HISTORY_STANDINGS.map(s => s.year).sort((a, b) => a - b);
+
+  const teamRanks = {}; // teamName -> { [year]: rank }
+  SEASON_HISTORY_STANDINGS.forEach(s => {
+    s.standings.forEach(row => {
+      teamRanks[row.team] = teamRanks[row.team] || {};
+      teamRanks[row.team][s.year] = row.rank;
+    });
+  });
+
+  const teamRows = Object.keys(teamRanks).map(team => {
+    const ranks = years.map(y => teamRanks[team][y] ?? null);
+    const valid = ranks.filter(r => r !== null);
+    const avg = valid.length ? valid.reduce((a, b) => a + b, 0) / valid.length : null;
+    return { team, ranks, avg, seasons: valid.length };
+  }).sort((a, b) => (a.avg ?? 999) - (b.avg ?? 999));
+
+  const head = `<tr><th class="round-label">Team</th>${years.map(y => `<th>${y}</th>`).join('')}<th>Ø Platz</th><th>Saisons</th></tr>`;
+  const rows = teamRows.map(r => {
+    const cells = r.ranks.map(rank => {
+      const c = rank == null ? 'var(--border)' : _drRankColor(rank);
+      return `<td><span class="rr-rank-cell" style="color:${c};background:${rank ? c + '22' : 'transparent'}">${rank ?? '–'}</span></td>`;
+    }).join('');
+    return `<tr><td style="text-align:left;font-weight:600">${r.team}</td>${cells}<td><b>${r.avg != null ? r.avg.toFixed(1) : '–'}</b></td><td>${r.seasons}</td></tr>`;
+  }).join('');
+
+  return `
+    <div class="section-label">📈 Regular-Season-Finish über die Jahre</div>
+    <div class="info-banner">
+      Platzierung nach Regular Season (nicht Playoff-Ergebnis) je Jahr, farbcodiert wie bei den Dynasty
+      Rolling Rankings. Teamnamen wie sie im jeweiligen Jahr hiessen — bei Umbenennungen also eigene
+      Zeile pro Name, keine automatische Zuordnung zur heutigen Franchise.
+    </div>
+    <div class="board-table-wrap">
+      <table class="board">
+        <thead>${head}</thead>
+        <tbody>${rows}</tbody>
       </table>
     </div>
   `;
