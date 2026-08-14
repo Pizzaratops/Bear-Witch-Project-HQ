@@ -1127,15 +1127,27 @@ function showNFLTeam(code) {
 
 // ============================================================
 //  SNAPSHOT TEILEN (Instagram-Story-Format 4:5)
+//  Ein Modal fuer beide Rolling-Rankings-Varianten (Dynasty & Season
+//  Finish), umgeschaltet ueber _shareMode.
 // ============================================================
 let drShareStyle = 'light'; // 'light' | 'dark'
+let _shareMode = 'dynasty'; // 'dynasty' | 'season'
 
 function drOpenShareModal() {
   if (!drSelected.length) return;
+  _shareMode = 'dynasty';
+  _openShareModalCommon();
+}
+function srOpenShareModal() {
+  if (!srSelected.length) return;
+  _shareMode = 'season';
+  _openShareModalCommon();
+}
+function _openShareModalCommon() {
   const overlay = document.getElementById('drShareModalOverlay');
   if (!overlay) return;
   drShareStyle = document.body.classList.contains('light') ? 'light' : 'dark';
-  _drRenderShareCard();
+  _renderShareCardDispatch();
   overlay.style.display = 'flex';
 }
 function drCloseShareModal() {
@@ -1144,7 +1156,11 @@ function drCloseShareModal() {
 }
 function drSetShareStyle(style) {
   drShareStyle = style;
-  _drRenderShareCard();
+  _renderShareCardDispatch();
+}
+function _renderShareCardDispatch() {
+  if (_shareMode === 'season') _srRenderShareCard();
+  else _drRenderShareCard();
 }
 
 function _drRenderShareCard() {
@@ -1160,7 +1176,7 @@ function _drRenderShareCard() {
   const players = drSelected.map(i => data[i]);
   const snaps = _drSnaps();
   const labels = snaps.map(s => s.label);
-  const datasets = players.map((p, i) => ({ player: p, values: p.ranks, color: DR_COMPARE_COLORS[i] }));
+  const datasets = players.map((p, i) => ({ label: p.name, values: p.ranks, color: DR_COMPARE_COLORS[i] }));
 
   const th = drShareStyle === 'light' ? {
     bg: '#faf6f1', surface: '#ffffff', text: '#23293a', muted: '#93877a',
@@ -1182,7 +1198,7 @@ function _drRenderShareCard() {
       return `<div style="display:flex;align-items:center;gap:10px;padding:10px 14px;background:${th.surface};border-radius:10px;border:1px solid ${th.border};">
         <span style="width:14px;height:14px;border-radius:50%;background:${d.color};flex-shrink:0;"></span>
         <div style="flex:1;min-width:0;">
-          <div style="font-size:14px;font-weight:800;color:${th.text};white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${d.player.name}</div>
+          <div style="font-size:14px;font-weight:800;color:${th.text};white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${d.label}</div>
           <div style="font-size:10px;color:${th.muted};margin-top:2px;">Bestes #${best ?? '–'} · Schnitt #${avg ?? '–'}</div>
         </div>
       </div>`;
@@ -1218,10 +1234,84 @@ function _drRenderShareCard() {
       <div style="text-align:center;font-size:10px;color:${th.muted};margin-top:14px;letter-spacing:1px;">Foodball 🏈 · Bear Witch Project HQ</div>
     </div>`;
 
-  setTimeout(() => _drDrawShareChart(datasets, labels, th), 30);
+  setTimeout(() => _drDrawShareChart(datasets, labels, th, false), 30);
 }
 
-function _drDrawShareChart(datasets, labels, th) {
+/* Gleicher Aufbau wie _drRenderShareCard, aber fuer Season-Finish-Rolling
+   (Franchises statt Spieler, Jahre statt Snapshots). */
+function _srRenderShareCard() {
+  const host = document.getElementById('drShareCardContent');
+  if (!host) return;
+
+  document.querySelectorAll('.rr-style-btn').forEach(btn => {
+    btn.classList.toggle('rr-style-active', btn.dataset.style === drShareStyle);
+  });
+
+  const isCompare = srCompareMode && srSelected.length > 1;
+  const data = _srData();
+  const teams = srSelected.map(i => data[i]);
+  const labels = _srYears().map(String);
+  const datasets = teams.map((t, i) => ({ label: t.team, values: t.ranks, color: SR_COMPARE_COLORS[i] }));
+
+  const th = drShareStyle === 'light' ? {
+    bg: '#faf6f1', surface: '#ffffff', text: '#23293a', muted: '#93877a',
+    accent: '#cf7a48', border: '#ecdcc9', shadow: 'rgba(207,122,72,0.10)',
+  } : {
+    bg: '#0a0f1c', surface: '#121a2b', text: '#eef1f8', muted: '#8a93ac',
+    accent: '#e0794a', border: '#2a3654', shadow: 'rgba(0,0,0,0.35)',
+  };
+
+  const titleText = isCompare ? 'Season Finish · Vergleich' : teams[0].team;
+  const subText = isCompare ? 'Regular-Season-Finish über die Jahre' : `Regular-Season-Finish über die Jahre${teams[0].aliases.length ? ' · ex: ' + teams[0].aliases.join(', ') : ''}`;
+
+  let statsHtml = '';
+  if (isCompare) {
+    statsHtml = datasets.map((d, i) => {
+      const valid = d.values.filter(x => x !== null);
+      const best = valid.length ? Math.min(...valid) : null;
+      const avg = teams[i].avg;
+      return `<div style="display:flex;align-items:center;gap:10px;padding:10px 14px;background:${th.surface};border-radius:10px;border:1px solid ${th.border};">
+        <span style="width:14px;height:14px;border-radius:50%;background:${d.color};flex-shrink:0;"></span>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:14px;font-weight:800;color:${th.text};white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${d.label}</div>
+          <div style="font-size:10px;color:${th.muted};margin-top:2px;">Bestes #${best ?? '–'} · Ø ${avg != null ? avg.toFixed(1) : '–'}</div>
+        </div>
+      </div>`;
+    }).join('');
+    statsHtml = `<div style="display:flex;flex-direction:column;gap:8px;margin-bottom:18px;">${statsHtml}</div>`;
+  } else {
+    const t = teams[0];
+    const valid = t.ranks.filter(x => x !== null);
+    const best = valid.length ? Math.min(...valid) : null;
+    const worst = valid.length ? Math.max(...valid) : null;
+    const pill = (val, label, color) => `
+      <div style="flex:1;background:${th.surface};border:1px solid ${th.border};border-radius:10px;padding:12px 8px;text-align:center;">
+        <div style="font-size:24px;font-weight:800;color:${color};line-height:1;">${val ?? '–'}</div>
+        <div style="font-size:9px;color:${th.muted};margin-top:6px;letter-spacing:1px;text-transform:uppercase;">${label}</div>
+      </div>`;
+    statsHtml = `<div style="display:flex;gap:8px;margin-bottom:18px;">
+      ${pill(best, 'Bestes', '#e0794a')}
+      ${pill(worst, 'Schlechtestes', '#d9695f')}
+      ${pill(t.avg != null ? t.avg.toFixed(1) : null, 'Ø Platz', '#4d7bb0')}
+    </div>`;
+  }
+
+  host.innerHTML = `
+    <div id="drShareCardInner" style="width:480px;aspect-ratio:4/5;background:${th.bg};padding:32px 28px;font-family:'DM Sans',system-ui,sans-serif;color:${th.text};display:flex;flex-direction:column;border-radius:18px;box-shadow:0 8px 32px ${th.shadow};">
+      <div style="font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:${th.muted};text-align:center;margin-bottom:6px;">🐻 Bear Witch Project HQ · Liga-Historie</div>
+      <div style="font-size:${isCompare ? '26px' : '30px'};font-family:'Playfair Display',serif;font-weight:800;text-align:center;line-height:1.1;color:${th.accent};margin-bottom:4px;">${titleText}</div>
+      <div style="font-size:11px;color:${th.muted};text-align:center;margin-bottom:18px;">${subText}</div>
+      ${statsHtml}
+      <div style="flex:1;background:${th.surface};border:1px solid ${th.border};border-radius:14px;padding:14px;display:flex;align-items:center;justify-content:center;min-height:0;">
+        <canvas id="drShareCanvas" style="max-width:100%;max-height:100%;"></canvas>
+      </div>
+      <div style="text-align:center;font-size:10px;color:${th.muted};margin-top:14px;letter-spacing:1px;">Foodball 🏈 · Bear Witch Project HQ</div>
+    </div>`;
+
+  setTimeout(() => _drDrawShareChart(datasets, labels, th, true), 30);
+}
+
+function _drDrawShareChart(datasets, labels, th, invertReverse) {
   const canvas = document.getElementById('drShareCanvas');
   if (!canvas || typeof Chart === 'undefined') return;
   const ctx = canvas.getContext('2d');
@@ -1231,7 +1321,7 @@ function _drDrawShareChart(datasets, labels, th) {
     grad.addColorStop(0, _drHexToRgba(d.color, 0.25));
     grad.addColorStop(1, _drHexToRgba(d.color, 0));
     return {
-      label: d.player.name,
+      label: d.label,
       data: d.values,
       borderColor: d.color,
       backgroundColor: datasets.length === 1 ? grad : 'transparent',
@@ -1282,9 +1372,17 @@ async function drDownloadShareImage() {
     const link = document.createElement('a');
     link.href = canvas.toDataURL('image/png');
     const stamp = new Date().toISOString().split('T')[0];
-    const isCompare = drCompareMode && drSelected.length > 1;
-    const slug = isCompare ? 'vergleich' : (_drData()[drSelected[0]]?.name || 'spieler').toLowerCase().replace(/[^a-z0-9]+/g, '-');
-    link.download = `bwp-rolling-${slug}-${stamp}.png`;
+    let slug, prefix;
+    if (_shareMode === 'season') {
+      const isCompare = srCompareMode && srSelected.length > 1;
+      prefix = 'season-finish';
+      slug = isCompare ? 'vergleich' : (_srData()[srSelected[0]]?.team || 'team').toLowerCase().replace(/[^a-z0-9]+/g, '-');
+    } else {
+      const isCompare = drCompareMode && drSelected.length > 1;
+      prefix = 'rolling';
+      slug = isCompare ? 'vergleich' : (_drData()[drSelected[0]]?.name || 'spieler').toLowerCase().replace(/[^a-z0-9]+/g, '-');
+    }
+    link.download = `bwp-${prefix}-${slug}-${stamp}.png`;
     link.click();
     if (btn) { btn.textContent = '✓ Gespeichert!'; }
     setTimeout(() => { if (btn) { btn.textContent = orig; btn.disabled = false; } }, 1500);
@@ -1641,7 +1739,11 @@ function _srRenderToolbar() {
   const host = document.getElementById('srToolbar');
   if (!host) return;
   const active = srCompareMode ? ' rr-tb-active' : '';
-  host.innerHTML = `<div class="rr-tb-group"><button class="rr-tb-btn${active}" onclick="srToggleCompare()">⚖️ Vergleichen ${srCompareMode ? '(' + srSelected.length + '/3)' : ''}</button></div>`;
+  const shareDisabled = !srSelected.length ? ' disabled style="opacity:.4;cursor:not-allowed"' : '';
+  host.innerHTML = `
+    <div class="rr-tb-group"><button class="rr-tb-btn${active}" onclick="srToggleCompare()">⚖️ Vergleichen ${srCompareMode ? '(' + srSelected.length + '/3)' : ''}</button></div>
+    <button class="rr-tb-btn" onclick="srOpenShareModal()"${shareDisabled}>📸 Snapshot</button>
+  `;
 }
 function srToggleCompare() {
   srCompareMode = !srCompareMode;
@@ -1702,6 +1804,7 @@ function srSelectTeam(origIdx) {
   } else {
     srSelected = [origIdx];
   }
+  _srRenderToolbar();
   _srRenderList();
   _srRenderMain();
 }
