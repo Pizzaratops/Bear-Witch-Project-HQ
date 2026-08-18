@@ -45,6 +45,9 @@
 const TOTAL_DRAFT_ROUNDS = 15;
 const MAX_KEEPERS = 10;
 const KEEPER_LOCK_DATE = "2026-08-26T21:00:00+02:00";
+// Draft Day, bestaetigt vom Liga-Owner: Mi. 02.09.2026, 20:00 Uhr deutsche
+// Zeit (MESZ, UTC+2 -- Deutschland ist im September noch in der Sommerzeit).
+const DRAFT_DATE = "2026-09-02T20:00:00+02:00";
 
 // Tatsaechliche Draft-Reihenfolge, bestaetigt vom Liga-Owner (13.08.2026):
 // LINEAR (kein Snake!) -- dieselbe Reihenfolge in JEDER Runde. Reward-the-

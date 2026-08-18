@@ -169,6 +169,7 @@ function emptyState(title, text, emoji) {
 
 /* ---------- Home ---------- */
 function renderHome() {
+  renderCountdowns();
   const grid = document.getElementById('homeTeamGrid');
   grid.innerHTML = LEAGUE_TEAMS.map(t => {
     const keeperCount = (DRAFT_2026_TEAMS.find(dt => dt.team === t.name) || { keepers: [] }).keepers.length;
@@ -180,6 +181,66 @@ function renderHome() {
         <div class="team-meta">${keeperCount} Keeper gemeldet</div>
       </div>`;
   }).join('');
+}
+
+/* ---------- Countdowns (Keeper Lock + Draft Day) ---------- */
+let _countdownInterval = null;
+
+function _countdownParts(targetIso) {
+  const diff = new Date(targetIso).getTime() - Date.now();
+  if (diff <= 0) return null;
+  const totalSec = Math.floor(diff / 1000);
+  return {
+    days: Math.floor(totalSec / 86400),
+    hours: Math.floor((totalSec % 86400) / 3600),
+    minutes: Math.floor((totalSec % 3600) / 60),
+    seconds: totalSec % 60,
+  };
+}
+
+function renderCountdowns() {
+  const host = document.getElementById('homeCountdowns');
+  if (!host) return;
+  host.innerHTML = `
+    <div class="countdown-card" id="cdKeeper">
+      <div class="countdown-label">🔒 Keeper Lock Date</div>
+      <div class="countdown-timer" id="cdKeeperTimer"></div>
+      <div class="countdown-date">${_formatCountdownTarget(KEEPER_LOCK_DATE)}</div>
+    </div>
+    <div class="countdown-card" id="cdDraft">
+      <div class="countdown-label">📋 Draft Day</div>
+      <div class="countdown-timer" id="cdDraftTimer"></div>
+      <div class="countdown-date">${_formatCountdownTarget(DRAFT_DATE)}</div>
+    </div>
+  `;
+  _tickCountdowns();
+  if (_countdownInterval) clearInterval(_countdownInterval);
+  _countdownInterval = setInterval(_tickCountdowns, 1000);
+}
+
+function _formatCountdownTarget(iso) {
+  const d = new Date(iso);
+  return d.toLocaleDateString('de-DE', { weekday: 'short', day: '2-digit', month: 'long', year: 'numeric' }) +
+    ', ' + d.toLocaleTimeString('de-DE', { hour: '2-digit', minute: '2-digit' }) + ' Uhr';
+}
+
+function _tickCountdowns() {
+  const keeperEl = document.getElementById('cdKeeperTimer');
+  const draftEl = document.getElementById('cdDraftTimer');
+  // Wenn die Home-Seite nicht mehr sichtbar ist, Interval stoppen statt
+  // sinnlos im Hintergrund weiterzulaufen.
+  if (!keeperEl && !draftEl) {
+    if (_countdownInterval) { clearInterval(_countdownInterval); _countdownInterval = null; }
+    return;
+  }
+  if (keeperEl) keeperEl.innerHTML = _renderCountdownParts(_countdownParts(KEEPER_LOCK_DATE));
+  if (draftEl) draftEl.innerHTML = _renderCountdownParts(_countdownParts(DRAFT_DATE));
+}
+
+function _renderCountdownParts(parts) {
+  if (!parts) return `<span class="countdown-done">🏁 Vorbei</span>`;
+  const seg = (val, label) => `<span class="countdown-seg"><b>${val}</b><small>${label}</small></span>`;
+  return seg(parts.days, 'Tage') + seg(parts.hours, 'Std') + seg(parts.minutes, 'Min') + seg(parts.seconds, 'Sek');
 }
 
 /* ---------- Roster / Team page ---------- */
