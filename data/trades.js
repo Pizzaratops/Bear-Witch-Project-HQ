@@ -58,6 +58,13 @@ const TRADES = [
     teamB: "Running Bisons",
     teamBGives: ["2026 R1 (Pick 1.01)"],
   },
+  {
+    date: "2026-08-19",
+    teamA: "The Lamartrix",
+    teamAGives: ["David Montgomery"],
+    teamB: "The Bear Witch Project",
+    teamBGives: ["2027 3rd (via Beastmode)"],
+  },
 ];
 
 // Getradete Picks INNERHALB des 2026er Drafts (im Gegensatz zu FUTURE_PICKS
@@ -77,7 +84,7 @@ const FUTURE_PICKS = {
   2027: [
     { round: "1st", from: "Beastmode",     owner: "The Bear Witch Project" },
     { round: "2nd", from: "Beastmode",     owner: "The Bear Witch Project" },
-    { round: "3rd", from: "Beastmode",     owner: "The Bear Witch Project" },
+    { round: "3rd", from: "Beastmode",     owner: "The Lamartrix" },
     { round: "1st", from: "Team Beermode", owner: "The Bear Witch Project" },
     { round: "3rd", from: "Team Beermode", owner: "The Bear Witch Project" },
   ],
