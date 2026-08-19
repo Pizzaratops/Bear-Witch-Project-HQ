@@ -33,6 +33,10 @@ const LEAGUE_DUES_PAID = [
   { team: "The Lamartrix", year: 2026 },
   { team: "Charged UP", year: 2026 },
   { team: "London NoPuntsIntended", year: 2026 },
+  { team: "The Bear Witch Project", year: 2027 },
+  { team: "Beastmode", year: 2027 },
+  { team: "Team Beermode", year: 2027 },
+  { team: "The Lamartrix", year: 2027 },
 ];
 
 // Rueckgabe: "paid" | "owes" | "not-relevant"
