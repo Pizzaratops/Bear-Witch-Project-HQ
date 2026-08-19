@@ -20,7 +20,7 @@ function updateThemeBtn() {
 
 /* ---------- Navigation ---------- */
 const PAGES = [
-  'home', 'roster', 'draftboard', 'keepers', 'dynastyboard', 'rolling', 'teamaverages', 'weekbyweek',
+  'home', 'roster', 'dues', 'draftboard', 'keepers', 'dynastyboard', 'rolling', 'teamaverages', 'weekbyweek',
   'playerrankings', 'playerprojections', 'nflteams', 'nflteamdetail', 'futureboards',
   'standings', 'leaguehistory', 'seasonrolling', 'matchups', 'trade', 'tradehistory'
 ];
@@ -118,6 +118,7 @@ function _initialRoute() {
 
 function goHome() { navigate('home'); renderHome(); }
 function showRoster(teamId) { navigate('roster', { teamId }); }
+function showDues() { navigate('dues'); renderDues(); }
 function showDraftboard() { navigate('draftboard'); renderDraftboard(); }
 function showKeepers() { navigate('keepers'); renderKeepers(); }
 function showDynastyBoard() { navigate('dynastyboard'); renderDynastyBoard(); }
@@ -1667,6 +1668,42 @@ function renderMatchups() {
     btn.onclick = () => { matchupsState.week = w; renderMatchups(); };
     sel.appendChild(btn);
   });
+}
+
+/* ---------- Liga-Beiträge (manuell gepflegt, Auto-Ableitung aus FUTURE_PICKS) ---------- */
+function renderDues() {
+  const wrap = document.getElementById('duesContent');
+  if (typeof LEAGUE_DUES_PAID === 'undefined' || typeof DUES_YEARS === 'undefined') {
+    wrap.innerHTML = emptyState(
+      'Noch keine Beitragsdaten',
+      'data/league-dues.js anlegen (LEAGUE_DUES_PAID mit { team, year }-Einträgen) — die Tabelle hier befüllt sich dann automatisch.',
+      '💰'
+    );
+    return;
+  }
+  const badge = (status) => {
+    if (status === 'paid') return `<span class="dues-badge dues-paid">✅ Bezahlt</span>`;
+    if (status === 'owes') return `<span class="dues-badge dues-owes">⚠️ Muss zahlen</span>`;
+    return `<span class="dues-badge dues-open">offen</span>`;
+  };
+  wrap.innerHTML = `
+    <div class="info-banner">
+      <b>✅ Bezahlt</b> — Beitrag für diese Saison beglichen.
+      <b>⚠️ Muss zahlen</b> — laufende Saison, oder ein Pick aus diesem Jahr wurde bereits getradet (siehe Future Draft Boards), Beitrag ist also schon fällig.
+      <b>offen</b> — Saison liegt noch in der Zukunft und ist für dieses Team noch nicht relevant.
+    </div>
+    <div class="board-table-wrap">
+      <table class="board">
+        <thead><tr><th class="round-label">Team</th>${DUES_YEARS.map(y => `<th>${y}</th>`).join('')}</tr></thead>
+        <tbody>
+          ${LEAGUE_TEAMS.map(t => `<tr>
+            <td style="text-align:left;font-weight:600">${t.emoji} ${t.name}</td>
+            ${DUES_YEARS.map(y => `<td>${badge(leagueDuesStatus(t.name, y))}</td>`).join('')}
+          </tr>`).join('')}
+        </tbody>
+      </table>
+    </div>
+  `;
 }
 
 /* ---------- Liga-Historie (manuell gepflegt) ---------- */
