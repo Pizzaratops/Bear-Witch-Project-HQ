@@ -2,7 +2,7 @@
 //  PLAYER_SEASON_STATS — tatsächlich erzielte Punkte je Woche
 // ============================================================
 //  AUTO-GENERIERT von scripts/sync-espn-player-stats.js.
-//  Zuletzt synchronisiert: 2026-08-20T19:51:28.487Z
+//  Zuletzt synchronisiert: 2026-08-20T20:52:11.576Z
 // ============================================================
 
-const PLAYER_SEASON_STATS = {"season":2026,"updated":"2026-08-20T19:51:28.488Z","players":[]};
+const PLAYER_SEASON_STATS = {"season":2026,"updated":"2026-08-20T20:52:11.576Z","players":[]};
