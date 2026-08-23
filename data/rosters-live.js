@@ -4,7 +4,7 @@
 //  AUTO-GENERIERT von scripts/sync-espn-rosters.js über die GitHub
 //  Action ".github/workflows/sync-espn-rosters.yml". Nicht von Hand
 //  editieren — Änderungen werden beim nächsten Sync überschrieben.
-//  Zuletzt synchronisiert: 2026-08-23T18:28:19.150Z
+//  Zuletzt synchronisiert: 2026-08-23T21:20:17.667Z
 // ============================================================
 
 const ROSTERS_LIVE = {
