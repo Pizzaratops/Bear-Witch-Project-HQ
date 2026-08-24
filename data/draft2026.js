@@ -50,6 +50,11 @@
 // Keeper ergaenzt, nicht mehr gemeldete entfernt, Injury-Tags aktualisiert).
 // Emeka Egbuka bei Team Beermode ist jetzt offiziell bestaetigt (tentative-
 // Flag entfernt).
+// Zwei Zeilen sind beim Excel-Export/Copy-Paste verlorengegangen (jeweils
+// nur die Namenszeile fehlte): Bear Witch Project's PIT-RB-Keeper wurde
+// vom Liga-Owner als Rico Dowdle bestaetigt, George Pickens (DAL WR) war
+// komplett aus dem Export gefallen und wurde an alter Stelle wieder
+// ergaenzt (vor DeVonta Smith).
 // ============================================================
 
 const TOTAL_DRAFT_ROUNDS = 15;
@@ -84,6 +89,7 @@ const DRAFT_2026_TEAMS = [
     team: "The Bear Witch Project",
     keepers: [
       { name: "Rico Dowdle",          nfl: "PIT", pos: "RB",    status: null },
+      { name: "George Pickens",       nfl: "DAL", pos: "WR",    status: null },
       { name: "DeVonta Smith",        nfl: "PHI", pos: "WR",    status: null },
       { name: "Colston Loveland",     nfl: "CHI", pos: "TE",    status: null },
       { name: "Garrett Wilson",       nfl: "NYJ", pos: "WR",    status: null },
