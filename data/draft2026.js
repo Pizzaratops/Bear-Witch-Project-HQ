@@ -52,20 +52,28 @@
 // Flag entfernt).
 // Beim Excel-Export/Copy-Paste ist eine Namenszeile verlorengegangen:
 // George Pickens (DAL WR) war komplett aus dem Export gefallen und wurde
-// an alter Stelle wieder ergaenzt (vor DeVonta Smith). Die verwaiste
-// Positionszeile "PIT RB" gehoert zu Rico Dowdle, vom Liga-Owner bestaetigt
-// (siehe unten) -- Dak Prescott ist damit KEIN Keeper mehr bei Bear Witch
-// Project.
+// an alter Stelle wieder ergaenzt (vor DeVonta Smith).
 //
 // KORREKTUR 26.08.2026 (per Live-Screenshots aus ESPN "Edit Players"
-// vom Liga-Owner bestaetigt):
+// vom Liga-Owner bestaetigt, finaler Stand vor Keeper Lock Date):
+//  - Bear Witch Project: Chuba Hubbard ist KEIN Keeper mehr (6 Keeper
+//    gesamt: George Pickens, DeVonta Smith, Colston Loveland, Garrett
+//    Wilson, Nico Collins, David Montgomery). Der zuvor vermutete
+//    "PIT RB"-Keeper (Rico Dowdle) existiert nicht -- war ein reines
+//    Excel-Artefakt.
 //  - Fred Bulls: Ja'Marr Chase und Kenneth Walker III haben jetzt beide
 //    ein Q-Injury-Tag.
-//  - Excel-Export war fuer Angry Ducks und Charged UP nicht mehr aktuell
-//    (kein Trade, nur ESPN-Stand weitergezogen): Angry Ducks hat
-//    zusaetzlich Omarion Hampton (LAC RB) und T.J. Hockenson (MIN TE) als
-//    Keeper gemeldet; Charged UP hat Matthew Golden (GB WR) weiterhin als
-//    Keeper (faelschlich beim 24.08.-Update entfernt).
+//  - Lion Cereals: Adonai Mitchell und Jauan Jennings sind KEINE Keeper
+//    mehr (nur noch 8 Keeper gesamt). Kayshon Boutte wurde zu HOU
+//    getradet (NFL-Team-Update, nicht Liga-intern).
+//  - Angry Ducks: zusaetzlich Omarion Hampton (LAC RB) und T.J. Hockenson
+//    (MIN TE) als Keeper gemeldet (Excel-Export war hier nicht mehr
+//    aktuell, kein Liga-Trade).
+//  - Charged UP: Matthew Golden (GB WR) weiterhin Keeper (faelschlich
+//    beim 24.08.-Update entfernt).
+//  - Team Beermode: Chris Olave jetzt mit Q-Tag.
+//  - Running Bisons: Josh Downs jetzt mit Q-Tag.
+//  - The Lamartrix: Zay Flowers jetzt mit Q-Tag.
 // ============================================================
 
 const TOTAL_DRAFT_ROUNDS = 15;
@@ -99,12 +107,10 @@ const DRAFT_2026_TEAMS = [
   {
     team: "The Bear Witch Project",
     keepers: [
-      { name: "Rico Dowdle",          nfl: "PIT", pos: "RB",    status: null },
       { name: "George Pickens",       nfl: "DAL", pos: "WR",    status: null },
       { name: "DeVonta Smith",        nfl: "PHI", pos: "WR",    status: null },
       { name: "Colston Loveland",     nfl: "CHI", pos: "TE",    status: null },
       { name: "Garrett Wilson",       nfl: "NYJ", pos: "WR",    status: null },
-      { name: "Chuba Hubbard",        nfl: "CAR", pos: "RB",    status: "Q" },
       { name: "Nico Collins",         nfl: "HOU", pos: "WR",    status: null },
       { name: "David Montgomery",     nfl: "HOU", pos: "RB",    status: null },
     ],
@@ -141,13 +147,11 @@ const DRAFT_2026_TEAMS = [
       { name: "Matthew Stafford",     nfl: "LAR", pos: "QB", status: null },
       { name: "A.J. Brown",           nfl: "NE",  pos: "WR", status: null },
       { name: "Kyler Murray",         nfl: "MIN", pos: "QB", status: null },
-      { name: "Adonai Mitchell",      nfl: "NYJ", pos: "WR", status: null },
       { name: "Brock Bowers",         nfl: "LV",  pos: "TE", status: null },
       { name: "De'Von Achane",        nfl: "MIA", pos: "RB", status: null },
       { name: "Blake Corum",          nfl: "LAR", pos: "RB", status: null },
       { name: "Brandon Aubrey",       nfl: "DAL", pos: "K",  status: null },
-      { name: "Jauan Jennings",       nfl: "MIN", pos: "WR", status: null },
-      { name: "Kayshon Boutte",       nfl: "NE",  pos: "WR", status: null },
+      { name: "Kayshon Boutte",       nfl: "HOU", pos: "WR", status: null },
     ],
   },
   {
@@ -196,7 +200,7 @@ const DRAFT_2026_TEAMS = [
       { name: "Cam Skattebo",         nfl: "NYG", pos: "RB", status: null },
       { name: "Emeka Egbuka",         nfl: "TB",  pos: "WR", status: "Q" },
       { name: "Justin Jefferson",     nfl: "MIN", pos: "WR", status: null },
-      { name: "Chris Olave",          nfl: "NO",  pos: "WR", status: null },
+      { name: "Chris Olave",          nfl: "NO",  pos: "WR", status: "Q" },
       { name: "D'Andre Swift",        nfl: "CHI", pos: "RB", status: null },
       { name: "Kyle Pitts Sr.",       nfl: "ATL", pos: "TE", status: null },
     ],
@@ -210,7 +214,7 @@ const DRAFT_2026_TEAMS = [
       { name: "Jaylen Warren",        nfl: "PIT", pos: "RB", status: null },
       { name: "Marvin Harrison Jr.",  nfl: "ARI", pos: "WR", status: null },
       { name: "Sam LaPorta",          nfl: "DET", pos: "TE", status: "Q" },
-      { name: "Josh Downs",           nfl: "IND", pos: "WR", status: null },
+      { name: "Josh Downs",           nfl: "IND", pos: "WR", status: "Q" },
       { name: "Joe Burrow",           nfl: "CIN", pos: "QB", status: null },
       { name: "Christian McCaffrey",  nfl: "SF",  pos: "RB", status: "Q" },
       { name: "Jonathan Taylor",      nfl: "IND", pos: "RB", status: null },
@@ -225,7 +229,7 @@ const DRAFT_2026_TEAMS = [
       { name: "Dalton Kincaid",       nfl: "BUF", pos: "TE", status: null },
       { name: "Javonte Williams",     nfl: "DAL", pos: "RB", status: null },
       { name: "Travis Etienne Jr.",   nfl: "NO",  pos: "RB", status: null },
-      { name: "Zay Flowers",          nfl: "BAL", pos: "WR", status: null },
+      { name: "Zay Flowers",          nfl: "BAL", pos: "WR", status: "Q" },
       { name: "Ladd McConkey",        nfl: "LAC", pos: "WR", status: null },
       { name: "Jaxson Dart",          nfl: "NYG", pos: "QB", status: null },
       { name: "CeeDee Lamb",          nfl: "DAL", pos: "WR", status: null },
