@@ -50,18 +50,22 @@
 // Keeper ergaenzt, nicht mehr gemeldete entfernt, Injury-Tags aktualisiert).
 // Emeka Egbuka bei Team Beermode ist jetzt offiziell bestaetigt (tentative-
 // Flag entfernt).
-// Zwei Zeilen sind beim Excel-Export/Copy-Paste verlorengegangen (jeweils
-// nur die Namenszeile fehlte): Bear Witch Project's PIT-RB-Keeper wurde
-// vom Liga-Owner als Rico Dowdle bestaetigt, George Pickens (DAL WR) war
-// komplett aus dem Export gefallen und wurde an alter Stelle wieder
-// ergaenzt (vor DeVonta Smith).
+// Beim Excel-Export/Copy-Paste ist eine Namenszeile verlorengegangen:
+// George Pickens (DAL WR) war komplett aus dem Export gefallen und wurde
+// an alter Stelle wieder ergaenzt (vor DeVonta Smith). Die verwaiste
+// Positionszeile "PIT RB" gehoert zu Rico Dowdle, vom Liga-Owner bestaetigt
+// (siehe unten) -- Dak Prescott ist damit KEIN Keeper mehr bei Bear Witch
+// Project.
 //
-// KORREKTUR 26.08.2026: Excel-Export war fuer Angry Ducks und Charged UP
-// nicht mehr aktuell (kein Trade, nur ESPN-Stand weitergezogen). Laut
-// Liga-Owner (Screenshots direkt aus ESPN "Edit Players"): Angry Ducks hat
-// zusaetzlich Omarion Hampton (LAC RB) und T.J. Hockenson (MIN TE) als
-// Keeper gemeldet; Charged UP hat Matthew Golden (GB WR) weiterhin als
-// Keeper (faelschlich beim 24.08.-Update entfernt).
+// KORREKTUR 26.08.2026 (per Live-Screenshots aus ESPN "Edit Players"
+// vom Liga-Owner bestaetigt):
+//  - Fred Bulls: Ja'Marr Chase und Kenneth Walker III haben jetzt beide
+//    ein Q-Injury-Tag.
+//  - Excel-Export war fuer Angry Ducks und Charged UP nicht mehr aktuell
+//    (kein Trade, nur ESPN-Stand weitergezogen): Angry Ducks hat
+//    zusaetzlich Omarion Hampton (LAC RB) und T.J. Hockenson (MIN TE) als
+//    Keeper gemeldet; Charged UP hat Matthew Golden (GB WR) weiterhin als
+//    Keeper (faelschlich beim 24.08.-Update entfernt).
 // ============================================================
 
 const TOTAL_DRAFT_ROUNDS = 15;
@@ -124,10 +128,10 @@ const DRAFT_2026_TEAMS = [
     team: "Fred Bulls",
     keepers: [
       { name: "Saquon Barkley",       nfl: "PHI", pos: "RB", status: null },
-      { name: "Ja'Marr Chase",        nfl: "CIN", pos: "WR", status: null },
+      { name: "Ja'Marr Chase",        nfl: "CIN", pos: "WR", status: "Q" },
       { name: "Travis Kelce",         nfl: "KC",  pos: "TE", status: null },
       { name: "Michael Pittman Jr.",  nfl: "PIT", pos: "WR", status: "Q" },
-      { name: "Kenneth Walker III",   nfl: "KC",  pos: "RB", status: null },
+      { name: "Kenneth Walker III",   nfl: "KC",  pos: "RB", status: "Q" },
       { name: "Jayden Daniels",       nfl: "WSH", pos: "QB", status: null },
     ],
   },
