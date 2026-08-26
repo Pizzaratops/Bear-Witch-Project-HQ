@@ -55,6 +55,13 @@
 // vom Liga-Owner als Rico Dowdle bestaetigt, George Pickens (DAL WR) war
 // komplett aus dem Export gefallen und wurde an alter Stelle wieder
 // ergaenzt (vor DeVonta Smith).
+//
+// KORREKTUR 26.08.2026: Excel-Export war fuer Angry Ducks und Charged UP
+// nicht mehr aktuell (kein Trade, nur ESPN-Stand weitergezogen). Laut
+// Liga-Owner (Screenshots direkt aus ESPN "Edit Players"): Angry Ducks hat
+// zusaetzlich Omarion Hampton (LAC RB) und T.J. Hockenson (MIN TE) als
+// Keeper gemeldet; Charged UP hat Matthew Golden (GB WR) weiterhin als
+// Keeper (faelschlich beim 24.08.-Update entfernt).
 // ============================================================
 
 const TOTAL_DRAFT_ROUNDS = 15;
@@ -168,8 +175,10 @@ const DRAFT_2026_TEAMS = [
   {
     team: "Angry Ducks",
     keepers: [
+      { name: "Omarion Hampton",      nfl: "LAC", pos: "RB", status: null },
       { name: "Malik Nabers",         nfl: "NYG", pos: "WR", status: "Q" },
-      { name: "Brian Thomas Jr.",     nfl: "JAX", pos: "WR", status: null },
+      { name: "Brian Thomas Jr.",     nfl: "JAX", pos: "WR", status: "Q" },
+      { name: "T.J. Hockenson",       nfl: "MIN", pos: "TE", status: null },
       { name: "Aaron Jones Sr.",      nfl: "MIN", pos: "RB", status: null },
       { name: "Jordan Mason",         nfl: "MIN", pos: "RB", status: null },
       { name: "Jaxon Smith-Njigba",   nfl: "SEA", pos: "WR", status: null },
@@ -224,6 +233,7 @@ const DRAFT_2026_TEAMS = [
       { name: "Tyler Warren",         nfl: "IND", pos: "TE", status: "Q" },
       { name: "Drake London",         nfl: "ATL", pos: "WR", status: null },
       { name: "Ashton Jeanty",        nfl: "LV",  pos: "RB", status: "Q" },
+      { name: "Matthew Golden",       nfl: "GB",  pos: "WR", status: null },
       { name: "Kyle Monangai",        nfl: "CHI", pos: "RB", status: "Q" },
       { name: "Rashee Rice",          nfl: "KC",  pos: "WR", status: null },
       { name: "Tee Higgins",          nfl: "CIN", pos: "WR", status: null },
