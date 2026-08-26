@@ -65,6 +65,13 @@ const TRADES = [
     teamB: "The Bear Witch Project",
     teamBGives: ["2027 3rd (via Beastmode)"],
   },
+  {
+    date: "2026-08-26",
+    teamA: "The Bear Witch Project",
+    teamAGives: ["2026 4th (Überbleibsel aus dem Jonathan-Taylor-Trade)"],
+    teamB: "Angry Ducks",
+    teamBGives: [],
+  },
 ];
 
 // Getradete Picks INNERHALB des 2026er Drafts (im Gegensatz zu FUTURE_PICKS
@@ -75,6 +82,7 @@ const TRADED_PICKS_2026 = [
   { round: 5, from: "Team Beermode", owner: "Beastmode" },
   { round: 1, from: "Running Bisons", owner: "The Bear Witch Project" },
   { round: 2, from: "The Bear Witch Project", owner: "Running Bisons" },
+  { round: 4, from: "The Bear Witch Project", owner: "Angry Ducks" },
 ];
 
 // Verdichtete Sicht je Zukunftsjahr: nur Picks, die tatsaechlich den
