@@ -74,6 +74,8 @@
 //  - Team Beermode: Chris Olave jetzt mit Q-Tag.
 //  - Running Bisons: Josh Downs jetzt mit Q-Tag.
 //  - The Lamartrix: Zay Flowers jetzt mit Q-Tag.
+//  - Beastmode: Jason Myers (K) ist KEIN Keeper mehr (nur noch 9 Keeper
+//    gesamt).
 // ============================================================
 
 const TOTAL_DRAFT_ROUNDS = 15;
@@ -175,7 +177,6 @@ const DRAFT_2026_TEAMS = [
       { name: "James Cook III",       nfl: "BUF", pos: "RB", status: null },
       { name: "TreVeyon Henderson",   nfl: "NE",  pos: "RB", status: "Q" },
       { name: "Tetairoa McMillan",    nfl: "CAR", pos: "WR", status: null },
-      { name: "Jason Myers",          nfl: "SEA", pos: "K",  status: null },
       { name: "Trey McBride",         nfl: "ARI", pos: "TE", status: null },
       { name: "RJ Harvey",            nfl: "DEN", pos: "RB", status: null },
     ],
