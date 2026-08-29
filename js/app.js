@@ -22,7 +22,7 @@ function updateThemeBtn() {
 const PAGES = [
   'home', 'roster', 'dues', 'draftboard', 'keepers', 'dynastyboard', 'rolling', 'teamaverages', 'weekbyweek',
   'playerrankings', 'playerprojections', 'nflteams', 'nflteamdetail', 'futureboards',
-  'standings', 'leaguehistory', 'seasonrolling', 'matchups', 'trade', 'tradehistory'
+  'standings', 'leaguehistory', 'seasonrolling', 'nflrankings', 'matchups', 'trade', 'tradehistory'
 ];
 
 function navigate(pageId, opts) {
@@ -80,6 +80,7 @@ const ROUTE_HANDLERS = {
   standings: () => showStandings(),
   leaguehistory: () => showLeagueHistory(),
   seasonrolling: () => showSeasonRolling(),
+  nflrankings: () => showNflRankings(),
   matchups: () => showMatchups(),
   trade: () => showTrade(),
   tradehistory: () => showTradeHistory(),
@@ -128,6 +129,7 @@ function showWeekByWeek() { navigate('weekbyweek'); renderWeekByWeek(); }
 function showStandings() { navigate('standings'); renderStandings(); }
 function showLeagueHistory() { navigate('leaguehistory'); renderLeagueHistory(); }
 function showSeasonRolling() { navigate('seasonrolling'); renderSeasonRolling(); }
+function showNflRankings() { navigate('nflrankings'); renderNflRankings(); }
 function showMatchups() { navigate('matchups'); renderMatchups(); }
 function showTrade() { navigate('trade'); renderTrade(); }
 function showTradeHistory() { navigate('tradehistory'); renderTradeHistory(); }
@@ -2116,6 +2118,127 @@ function renderSeasonRolling() {
     btn.textContent = 'Woche ' + w;
     btn.onclick = () => { seasonRollingState.compareWeek = w; renderSeasonRolling(); };
     cmpSel.appendChild(btn);
+  });
+}
+
+/* ---------- NFL Power Rankings (Conference/Division/NFL, W-L oder FPI) ---------- */
+let nflRankingsState = { season: null, week: null, scope: 'nfl', metric: 'wl' };
+
+function renderNflRankings() {
+  const wrap = document.getElementById('nflRankingsContent');
+  const seasons = Object.keys((typeof NFL_STANDINGS !== 'undefined' && NFL_STANDINGS) || {});
+
+  if (!seasons.length) {
+    wrap.innerHTML = emptyState(
+      'Noch keine NFL-Standings',
+      'Diese Seite zeigt ein wöchentliches Rolling Ranking aller 32 NFL-Teams (Conference/Division/NFL gesamt), wahlweise nach Sieg-Quote oder ESPN FPI. Sobald die reguläre NFL-Saison läuft und der automatische ESPN-Sync (täglich 9 & 21 Uhr) Wochenwerte liefert, füllt sie sich automatisch.',
+      '🏈'
+    );
+    return;
+  }
+
+  const season = nflRankingsState.season && seasons.includes(nflRankingsState.season) ? nflRankingsState.season : seasons[seasons.length - 1];
+  const weeks = Object.keys(NFL_STANDINGS[season] || {}).map(Number).sort((a, b) => a - b);
+  const week = nflRankingsState.week && weeks.includes(nflRankingsState.week) ? nflRankingsState.week : weeks[weeks.length - 1];
+  const scope = nflRankingsState.scope || 'nfl';
+  const metric = nflRankingsState.metric || 'wl';
+  nflRankingsState = { season, week, scope, metric };
+
+  const teams = (NFL_STANDINGS[season][week] || []).slice();
+  const fpiRows = (typeof NFL_FPI !== 'undefined' && NFL_FPI[season] && NFL_FPI[season][week]) || null;
+  const fpiByAbbr = {};
+  if (fpiRows) fpiRows.forEach(r => { fpiByAbbr[r.abbr] = r; });
+
+  function sortGroup(list) {
+    if (metric === 'fpi' && fpiRows) {
+      return list.slice().sort((a, b) => (fpiByAbbr[b.abbr]?.fpi ?? -999) - (fpiByAbbr[a.abbr]?.fpi ?? -999));
+    }
+    return list.slice().sort((a, b) => (b.winPct - a.winPct) || ((b.pf - b.pa) - (a.pf - a.pa)));
+  }
+
+  function rowHtml(t, rank) {
+    const fpi = fpiByAbbr[t.abbr];
+    const diff = t.pf - t.pa;
+    return `<tr>
+      <td>${rank}</td>
+      <td style="text-align:left;font-weight:600">${t.name} <span style="color:var(--muted);font-weight:400">${t.abbr}</span></td>
+      <td>${t.wins}-${t.losses}${t.ties ? '-' + t.ties : ''}</td>
+      <td>${(t.winPct * 100).toFixed(1)}%</td>
+      <td>${diff >= 0 ? '+' : ''}${diff.toFixed(0)}</td>
+      ${fpiRows ? `<td>${fpi ? fpi.fpi.toFixed(1) : '—'}</td>` : ''}
+    </tr>`;
+  }
+
+  function tableHtml(title, list) {
+    if (!list.length) return '';
+    const sorted = sortGroup(list);
+    return `
+      <div class="board-table-wrap" style="margin-bottom:22px">
+        ${title ? `<div style="font-weight:800;font-size:13px;margin:0 0 8px;color:var(--text)">${title}</div>` : ''}
+        <table class="board">
+          <thead><tr>
+            <th class="round-label">#</th><th>Team</th><th>W-L</th><th>Quote</th><th>Diff</th>
+            ${fpiRows ? '<th>FPI</th>' : ''}
+          </tr></thead>
+          <tbody>${sorted.map((t, i) => rowHtml(t, i + 1)).join('')}</tbody>
+        </table>
+      </div>`;
+  }
+
+  let body = '';
+  if (metric === 'fpi' && !fpiRows) {
+    body = emptyState('FPI noch nicht verfügbar', 'ESPN\'s FPI-Wert konnte für diese Woche (noch) nicht synchronisiert werden — Sieg-Quote weiter nutzbar, oder eine andere Woche wählen.', '📊');
+  } else if (scope === 'nfl') {
+    body = tableHtml(null, teams);
+  } else if (scope === 'conference') {
+    body = ['AFC', 'NFC'].map(c => tableHtml(c === 'AFC' ? '🦅 AFC' : '🏈 NFC', teams.filter(t => t.conference === c))).join('');
+  } else {
+    body = ['AFC', 'NFC'].map(c => ['East', 'North', 'South', 'West'].map(d =>
+      tableHtml(`${c} ${d}`, teams.filter(t => t.conference === c && t.division === d))
+    ).join('')).join('');
+  }
+
+  wrap.innerHTML = `
+    <div class="db-controls">
+      <span style="font-size:12px;color:var(--muted);font-weight:700">Ansicht:</span>
+      <div class="db-pos-filters" id="nflScopeSelector"></div>
+    </div>
+    <div class="db-controls">
+      <span style="font-size:12px;color:var(--muted);font-weight:700">Ranking nach:</span>
+      <div class="db-pos-filters" id="nflMetricSelector"></div>
+    </div>
+    <div class="db-controls">
+      <span style="font-size:12px;color:var(--muted);font-weight:700">Woche:</span>
+      <div class="db-pos-filters" id="nflWeekSelector"></div>
+    </div>
+    ${body}
+  `;
+
+  const scopeSel = document.getElementById('nflScopeSelector');
+  [['conference', 'Conference'], ['division', 'Division'], ['nfl', 'NFL']].forEach(([key, label]) => {
+    const btn = document.createElement('button');
+    btn.className = 'db-pos-btn' + (scope === key ? ' active' : '');
+    btn.textContent = label;
+    btn.onclick = () => { nflRankingsState.scope = key; renderNflRankings(); };
+    scopeSel.appendChild(btn);
+  });
+
+  const metricSel = document.getElementById('nflMetricSelector');
+  [['wl', 'Win-Loss'], ['fpi', 'ESPN FPI']].forEach(([key, label]) => {
+    const btn = document.createElement('button');
+    btn.className = 'db-pos-btn' + (metric === key ? ' active' : '');
+    btn.textContent = label;
+    btn.onclick = () => { nflRankingsState.metric = key; renderNflRankings(); };
+    metricSel.appendChild(btn);
+  });
+
+  const weekSel = document.getElementById('nflWeekSelector');
+  weeks.forEach(w => {
+    const btn = document.createElement('button');
+    btn.className = 'db-pos-btn' + (w === week ? ' active' : '');
+    btn.textContent = 'Woche ' + w;
+    btn.onclick = () => { nflRankingsState.week = w; renderNflRankings(); };
+    weekSel.appendChild(btn);
   });
 }
 

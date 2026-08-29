@@ -1,0 +1,44 @@
+name: ESPN NFL Standings Sync
+
+# Synct die NFL-Team-Standings (Sieg-Quote, PF/PA, best-effort FPI) aus
+# ESPN's oeffentlicher Sport-API in data/nfl-power-rankings.js und
+# committet die Aenderung ins Repo. Kein ESPN_S2/SWID noetig -- diese
+# Daten sind oeffentlich, unabhaengig von unserer privaten Fantasy-Liga.
+#
+# Laeuft taeglich um 9 & 21 Uhr Berlin (wie der Fantasy-Sync, inkl.
+# Sommer-/Winterzeit-Varianten) + manuell startbar ("Run workflow" im
+# Actions-Tab). Ausserhalb der Regular Season schreibt das Script
+# bewusst nichts (siehe scripts/sync-espn-nfl-standings.js) -- der
+# Commit-Schritt greift dann einfach nicht.
+
+on:
+  schedule:
+    - cron: "0 7 * * *"    # 09:00 Berlin (Sommerzeit)
+    - cron: "0 8 * * *"    # 09:00 Berlin (Winterzeit)
+    - cron: "0 19 * * *"   # 21:00 Berlin (Sommerzeit)
+    - cron: "0 20 * * *"   # 21:00 Berlin (Winterzeit)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: ESPN NFL Standings Sync
+        run: node scripts/sync-espn-nfl-standings.js
+
+      - name: Commit & Push falls geändert
+        run: |
+          git config user.name "bear-witch-project-hq-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/nfl-power-rankings.js
+          git diff --cached --quiet || git commit -m "chore: ESPN NFL standings sync"
+          git push

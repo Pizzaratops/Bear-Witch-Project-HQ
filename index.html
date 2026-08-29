@@ -83,6 +83,7 @@
           <button class="snav-dropdown-item" data-page="standings" onclick="showStandings()">📈 Standings</button>
           <button class="snav-dropdown-item" data-page="leaguehistory" onclick="showLeagueHistory()">🏛️ Liga-Historie</button>
           <button class="snav-dropdown-item" data-page="seasonrolling" onclick="showSeasonRolling()">📈 2026 Rolling Rankings</button>
+          <button class="snav-dropdown-item" data-page="nflrankings" onclick="showNflRankings()">🏈 NFL Power Rankings</button>
         </div>
       </div>
       <button class="snav-single" data-page="matchups" onclick="showMatchups()">⚔️ Matchups</button>
@@ -104,6 +105,7 @@
         <button class="subnav-mobile-btn" data-page="standings" onclick="showStandings()">📈 Standings</button>
         <button class="subnav-mobile-btn" data-page="leaguehistory" onclick="showLeagueHistory()">🏛️ Liga-Historie</button>
         <button class="subnav-mobile-btn" data-page="seasonrolling" onclick="showSeasonRolling()">📈 2026 Rolling Rankings</button>
+        <button class="subnav-mobile-btn" data-page="nflrankings" onclick="showNflRankings()">🏈 NFL Power Rankings</button>
         <button class="subnav-mobile-btn" data-page="matchups" onclick="showMatchups()">⚔️ Matchups</button>
         <button class="subnav-mobile-btn" data-page="futureboards" onclick="showFutureBoards()">🔮 Future Draft Boards</button>
         <button class="subnav-mobile-btn" data-page="weekbyweek" onclick="showWeekByWeek()">🗓️ Weekly Scores</button>
@@ -305,6 +307,12 @@
   <div id="seasonrollingContent"></div>
 </div>
 
+<div class="page page-wide" id="page-nflrankings">
+  <div class="page-title">🏈 NFL Power Rankings</div>
+  <div class="page-sub">Wöchentliches Rolling Ranking aller 32 NFL-Teams — Conference, Division oder gesamte Liga</div>
+  <div id="nflRankingsContent"></div>
+</div>
+
 <div class="page page-wide" id="page-matchups">
   <div class="page-title">⚔️ Matchups</div>
   <div class="page-sub">Spielplan & Wochen-Matchups</div>
@@ -340,6 +348,7 @@
 <script src="data/player-stats.js"></script>
 <script src="data/trades.js"></script>
 <script src="data/league-dues.js"></script>
+<script src="data/nfl-power-rankings.js"></script>
 <script src="js/app.js"></script>
 <script>
   // Teams-Dropdown dynamisch befuellen (Desktop + Mobile)
