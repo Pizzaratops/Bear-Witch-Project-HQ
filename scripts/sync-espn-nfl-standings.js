@@ -25,11 +25,14 @@ const ROOT = path.join(__dirname, '..');
 const OUT = path.join(ROOT, 'data', 'nfl-power-rankings.js');
 
 // ESPN's OEFFENTLICHE Sport-API (anders als der Fantasy-League-Endpoint)
-// sitzt hinter Bot-Schutz, der einen erkennbaren "bot"-User-Agent (und
-// z.T. GitHub-Actions-IPs ohne plausiblen Browser-Header) mit HTTP 403
-// abweist. Deshalb hier bewusst Browser-aehnliche Header + ein Retry mit
-// kurzer Pause, falls der erste Versuch trotzdem an transientem
-// Bot-Schutz scheitert.
+// sitzt hinter Bot-Schutz. Browser-aehnliche Header allein reichen NICHT
+// (getestet, weiterhin HTTP 403) -- das spricht dafuer, dass ESPN ganze
+// IP-Bereiche von GitHub-Actions-Runnern blockt, nicht (nur) den
+// User-Agent. Deshalb: nach fehlgeschlagenen direkten Versuchen ueber
+// einen oeffentlichen Read-Proxy (allorigins.win) nachfassen, der die
+// Anfrage von einer anderen IP aus stellt und die Rohantwort 1:1
+// zurueckgibt. Das ist ein Best-effort-Workaround -- faellt auch der
+// Proxy aus, schlaegt main() sichtbar fehl (kein stiller Fehlschlag).
 const BROWSER_HEADERS = {
   'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
   'Accept': 'application/json, text/plain, */*',
@@ -40,11 +43,11 @@ const BROWSER_HEADERS = {
 
 function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
 
-function httpsGetJsonOnce(url) {
+function httpsGetRaw(url, headers) {
   return new Promise((resolve, reject) => {
-    https.get(url, { headers: BROWSER_HEADERS }, res => {
+    https.get(url, { headers }, res => {
       if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
-        return httpsGetJsonOnce(res.headers.location).then(resolve, reject);
+        return httpsGetRaw(res.headers.location, headers).then(resolve, reject);
       }
       if (res.statusCode !== 200) {
         res.resume();
@@ -52,23 +55,43 @@ function httpsGetJsonOnce(url) {
       }
       let data = '';
       res.on('data', chunk => { data += chunk; });
-      res.on('end', () => {
-        try { resolve(JSON.parse(data)); }
-        catch (e) { reject(new Error('Keine gültige JSON-Antwort von ESPN: ' + e.message)); }
-      });
+      res.on('end', () => resolve(data));
     }).on('error', reject);
   });
 }
 
-async function httpsGetJson(url, attempt = 1) {
+async function httpsGetJsonDirect(url, attempt = 1) {
   try {
-    return await httpsGetJsonOnce(url);
+    const data = await httpsGetRaw(url, BROWSER_HEADERS);
+    try { return JSON.parse(data); }
+    catch (e) { throw new Error('Keine gültige JSON-Antwort von ESPN: ' + e.message); }
   } catch (e) {
-    if (attempt < 3 && /HTTP 403|HTTP 429|ECONNRESET|socket hang up/.test(e.message)) {
+    if (attempt < 2 && /HTTP 429|ECONNRESET|socket hang up/.test(e.message)) {
       await sleep(1500 * attempt);
-      return httpsGetJson(url, attempt + 1);
+      return httpsGetJsonDirect(url, attempt + 1);
     }
     throw e;
+  }
+}
+
+async function httpsGetJsonViaProxy(url) {
+  const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(url)}`;
+  const data = await httpsGetRaw(proxyUrl, { 'User-Agent': BROWSER_HEADERS['User-Agent'], 'Accept': 'application/json' });
+  try { return JSON.parse(data); }
+  catch (e) { throw new Error('Keine gültige JSON-Antwort vom Proxy: ' + e.message); }
+}
+
+async function httpsGetJson(url) {
+  try {
+    return await httpsGetJsonDirect(url);
+  } catch (direct) {
+    if (!/HTTP 403/.test(direct.message)) throw direct;
+    console.warn(`⚠️  Direkter Zugriff auf ${url} mit 403 abgewiesen (vermutlich IP-Sperre gegen Cloud-CI) — versuche Proxy-Fallback.`);
+    try {
+      return await httpsGetJsonViaProxy(url);
+    } catch (viaProxy) {
+      throw new Error(`Direkt: ${direct.message} | Proxy-Fallback: ${viaProxy.message}`);
+    }
   }
 }
 
