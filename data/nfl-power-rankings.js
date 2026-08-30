@@ -21,6 +21,15 @@
 //  fehlt einfach, wenn (noch) nicht verfügbar):
 //    { abbr, fpi, fpiRank }
 //
+//  NFL_OFFDEF[season][week] = flaches Array (nur befüllt, wenn ESPN's
+//  Power-Index-Endpoint die Offense/Defense-Efficiency-Werte für den
+//  jeweiligen Sync-Lauf geliefert hat — optional, best effort, genau
+//  wie NFL_FPI):
+//    { abbr, off, offRank, def, defRank }
+//  Bei beiden Werten gilt: höher = besser (Efficiency-Rating "Punkte
+//  über Durchschnitt", nicht "Punkte erlaubt") -- also absteigend
+//  sortieren, genau wie bei FPI.
+//
 //  Noch keine Daten vor Saisonstart / falls die Action noch nie
 //  erfolgreich gelaufen ist -- die Seite zeigt dann automatisch einen
 //  Hinweis statt einer leeren Tabelle.
@@ -28,3 +37,4 @@
 
 const NFL_STANDINGS = {};
 const NFL_FPI = {};
+const NFL_OFFDEF = {};

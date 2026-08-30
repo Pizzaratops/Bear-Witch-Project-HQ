@@ -2131,7 +2131,7 @@ function renderNflRankings() {
   if (!seasons.length) {
     wrap.innerHTML = emptyState(
       'Noch keine NFL-Standings',
-      'Diese Seite zeigt ein wöchentliches Rolling Ranking aller 32 NFL-Teams (Conference/Division/NFL gesamt), wahlweise nach Sieg-Quote oder ESPN FPI. Sobald die reguläre NFL-Saison läuft und der automatische ESPN-Sync (täglich 9 & 21 Uhr) Wochenwerte liefert, füllt sie sich automatisch.',
+      'Diese Seite zeigt ein wöchentliches Rolling Ranking aller 32 NFL-Teams (Conference/Division/NFL gesamt), wahlweise nach Sieg-Quote, ESPN FPI oder ESPN Offense-/Defense-Rating. Sobald die reguläre NFL-Saison läuft und der automatische ESPN-Sync (täglich 9 & 21 Uhr) Wochenwerte liefert, füllt sie sich automatisch.',
       '🏈'
     );
     return;
@@ -2149,15 +2149,26 @@ function renderNflRankings() {
   const fpiByAbbr = {};
   if (fpiRows) fpiRows.forEach(r => { fpiByAbbr[r.abbr] = r; });
 
+  const offDefRows = (typeof NFL_OFFDEF !== 'undefined' && NFL_OFFDEF[season] && NFL_OFFDEF[season][week]) || null;
+  const offDefByAbbr = {};
+  if (offDefRows) offDefRows.forEach(r => { offDefByAbbr[r.abbr] = r; });
+
   function sortGroup(list) {
     if (metric === 'fpi' && fpiRows) {
       return list.slice().sort((a, b) => (fpiByAbbr[b.abbr]?.fpi ?? -999) - (fpiByAbbr[a.abbr]?.fpi ?? -999));
+    }
+    if (metric === 'off' && offDefRows) {
+      return list.slice().sort((a, b) => (offDefByAbbr[b.abbr]?.off ?? -999) - (offDefByAbbr[a.abbr]?.off ?? -999));
+    }
+    if (metric === 'def' && offDefRows) {
+      return list.slice().sort((a, b) => (offDefByAbbr[b.abbr]?.def ?? -999) - (offDefByAbbr[a.abbr]?.def ?? -999));
     }
     return list.slice().sort((a, b) => (b.winPct - a.winPct) || ((b.pf - b.pa) - (a.pf - a.pa)));
   }
 
   function rowHtml(t, rank) {
     const fpi = fpiByAbbr[t.abbr];
+    const offDef = offDefByAbbr[t.abbr];
     const diff = t.pf - t.pa;
     return `<tr>
       <td>${rank}</td>
@@ -2166,6 +2177,7 @@ function renderNflRankings() {
       <td>${(t.winPct * 100).toFixed(1)}%</td>
       <td>${diff >= 0 ? '+' : ''}${diff.toFixed(0)}</td>
       ${fpiRows ? `<td>${fpi ? fpi.fpi.toFixed(1) : '—'}</td>` : ''}
+      ${offDefRows ? `<td>${offDef ? offDef.off.toFixed(1) : '—'}</td><td>${offDef ? offDef.def.toFixed(1) : '—'}</td>` : ''}
     </tr>`;
   }
 
@@ -2179,6 +2191,7 @@ function renderNflRankings() {
           <thead><tr>
             <th class="round-label">#</th><th>Team</th><th>W-L</th><th>Quote</th><th>Diff</th>
             ${fpiRows ? '<th>FPI</th>' : ''}
+            ${offDefRows ? '<th>Offense</th><th>Defense</th>' : ''}
           </tr></thead>
           <tbody>${sorted.map((t, i) => rowHtml(t, i + 1)).join('')}</tbody>
         </table>
@@ -2188,6 +2201,8 @@ function renderNflRankings() {
   let body = '';
   if (metric === 'fpi' && !fpiRows) {
     body = emptyState('FPI noch nicht verfügbar', 'ESPN\'s FPI-Wert konnte für diese Woche (noch) nicht synchronisiert werden — Sieg-Quote weiter nutzbar, oder eine andere Woche wählen.', '📊');
+  } else if ((metric === 'off' || metric === 'def') && !offDefRows) {
+    body = emptyState('Offense-/Defense-Rating noch nicht verfügbar', 'ESPN\'s Offense-/Defense-Efficiency-Werte konnten für diese Woche (noch) nicht synchronisiert werden — Sieg-Quote oder FPI weiter nutzbar, oder eine andere Woche wählen.', '📊');
   } else if (scope === 'nfl') {
     body = tableHtml(null, teams);
   } else if (scope === 'conference') {
@@ -2224,7 +2239,7 @@ function renderNflRankings() {
   });
 
   const metricSel = document.getElementById('nflMetricSelector');
-  [['wl', 'Win-Loss'], ['fpi', 'ESPN FPI']].forEach(([key, label]) => {
+  [['wl', 'Win-Loss'], ['fpi', 'ESPN FPI'], ['off', 'Offense'], ['def', 'Defense']].forEach(([key, label]) => {
     const btn = document.createElement('button');
     btn.className = 'db-pos-btn' + (metric === key ? ' active' : '');
     btn.textContent = label;

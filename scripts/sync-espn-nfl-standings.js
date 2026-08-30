@@ -133,6 +133,73 @@ async function fetchFpiSafe(season) {
   }
 }
 
+// Best-effort: ESPN's Power-Index-Endpoint (dieselbe Datenquelle wie die
+// FPI-Seite espn.com/nfl/fpi) liefert pro Team eine Liste von "categories"
+// mit jeweils eigenen "labels"/"values"-Arrays -- darunter eine Kategorie
+// mit den Efficiency-Werten für Offense/Defense/Special Teams (dieselben
+// Werte, die espn.com/nfl/fpi in den Spalten OFF/DEF/ST anzeigt). Das
+// exakte Category-/Label-Naming ist von ESPN nicht dokumentiert und kann
+// sich ändern -- daher wird hier robust nach Labels/Namen gesucht statt
+// fest auf einen Array-Index zu vertrauen. Schlaegt das fehl, wird das
+// NICHT als Fehler behandelt (wie fetchFpiSafe) -- die Seite zeigt dann
+// einfach "noch nicht verfügbar" für Offense/Defense, der Sync bleibt
+// insgesamt erfolgreich.
+async function fetchOffDefSafe(season) {
+  try {
+    const url = `https://site.api.espn.com/apis/fitt/v3/sports/football/nfl/powerindex?season=${season}&limit=40`;
+    const data = await httpsGetJson(url);
+    const rows = data.teams || data.items || [];
+    const out = [];
+    rows.forEach(row => {
+      const team = row.team || {};
+      const categories = row.categories || row.stats || [];
+      if (!team.abbreviation || !Array.isArray(categories)) return;
+
+      // Findet innerhalb der categories/values eine Offense- bzw.
+      // Defense-Efficiency, egal wie ESPN die jeweilige Kategorie/das
+      // Label gerade benennt (z.B. "efficiencies" mit labels ["OFF",
+      // "DEF", "ST"], oder eigene Kategorien "offensiveefficiency" /
+      // "defensiveefficiency").
+      function findEfficiency(pattern) {
+        for (const cat of categories) {
+          const catName = (cat.name || cat.abbreviation || '').toLowerCase();
+          const values = Array.isArray(cat.values) ? cat.values : null;
+          const labels = Array.isArray(cat.labels) ? cat.labels : (Array.isArray(cat.names) ? cat.names : null);
+          if (!values) continue;
+          // 1) Kategorie selbst trägt schon den passenden Namen (z.B. "offensiveefficiency")
+          if (pattern.test(catName) && values.length && typeof values[0] === 'number') {
+            return { value: Number(values[0]), rank: null };
+          }
+          // 2) Kategorie hat mehrere Werte mit parallelen Labels (z.B. "efficiencies" -> ["OFF","DEF","ST"])
+          if (labels && labels.length === values.length) {
+            const idx = labels.findIndex(l => pattern.test((l || '').toLowerCase()));
+            if (idx !== -1 && typeof values[idx] === 'number') {
+              return { value: Number(values[idx]), rank: null };
+            }
+          }
+        }
+        return null;
+      }
+
+      const off = findEfficiency(/^off/);
+      const def = findEfficiency(/^def/);
+      if (!off || !def) return;
+      out.push({ abbr: team.abbreviation, off: off.value, def: def.value });
+    });
+    if (!out.length) return null;
+
+    const byOff = out.slice().sort((a, b) => b.off - a.off);
+    byOff.forEach((r, i) => { r.offRank = i + 1; });
+    const byDef = out.slice().sort((a, b) => b.def - a.def);
+    byDef.forEach((r, i) => { r.defRank = i + 1; });
+
+    return out;
+  } catch (e) {
+    console.warn('⚠️  Offense/Defense-Sync übersprungen (best effort, kein Fehler):', e.message);
+    return null;
+  }
+}
+
 async function fetchCurrentWeek() {
   const data = await httpsGetJson('https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard');
   const season = data.season || {};
@@ -141,18 +208,22 @@ async function fetchCurrentWeek() {
 }
 
 function loadExisting() {
-  if (!fs.existsSync(OUT)) return { NFL_STANDINGS: {}, NFL_FPI: {} };
+  if (!fs.existsSync(OUT)) return { NFL_STANDINGS: {}, NFL_FPI: {}, NFL_OFFDEF: {} };
   const code = fs.readFileSync(OUT, 'utf8');
   const sandbox = {};
   const vm = require('vm');
   vm.createContext(sandbox);
   try {
-    vm.runInContext(code + '\nthis.NFL_STANDINGS = NFL_STANDINGS; this.NFL_FPI = NFL_FPI;', sandbox);
+    vm.runInContext(code + '\nthis.NFL_STANDINGS = NFL_STANDINGS; this.NFL_FPI = NFL_FPI; this.NFL_OFFDEF = (typeof NFL_OFFDEF !== "undefined" ? NFL_OFFDEF : {});', sandbox);
   } catch (e) {
     console.warn('⚠️  Konnte bestehende nfl-power-rankings.js nicht parsen, starte frisch:', e.message);
-    return { NFL_STANDINGS: {}, NFL_FPI: {} };
+    return { NFL_STANDINGS: {}, NFL_FPI: {}, NFL_OFFDEF: {} };
   }
-  return { NFL_STANDINGS: sandbox.NFL_STANDINGS || {}, NFL_FPI: sandbox.NFL_FPI || {} };
+  return {
+    NFL_STANDINGS: sandbox.NFL_STANDINGS || {},
+    NFL_FPI: sandbox.NFL_FPI || {},
+    NFL_OFFDEF: sandbox.NFL_OFFDEF || {},
+  };
 }
 
 async function main() {
@@ -169,6 +240,7 @@ async function main() {
   }
 
   const fpi = await fetchFpiSafe(season);
+  const offDef = await fetchOffDefSafe(season);
 
   const existing = loadExisting();
   existing.NFL_STANDINGS[season] = existing.NFL_STANDINGS[season] || {};
@@ -176,6 +248,10 @@ async function main() {
   if (fpi) {
     existing.NFL_FPI[season] = existing.NFL_FPI[season] || {};
     existing.NFL_FPI[season][week] = fpi;
+  }
+  if (offDef) {
+    existing.NFL_OFFDEF[season] = existing.NFL_OFFDEF[season] || {};
+    existing.NFL_OFFDEF[season][week] = offDef;
   }
 
   const now = new Date().toISOString();
@@ -200,16 +276,23 @@ async function main() {
 //  NFL_FPI[season][week] = flaches Array, NUR befüllt wenn ESPN's FPI-
 //  Endpoint beim jeweiligen Sync-Lauf erreichbar/parsbar war (optional):
 //    { abbr, fpi, fpiRank }
+//
+//  NFL_OFFDEF[season][week] = flaches Array, NUR befüllt wenn ESPN's
+//  Power-Index-Endpoint die Offense/Defense-Efficiency beim jeweiligen
+//  Sync-Lauf geliefert hat (optional, best effort):
+//    { abbr, off, offRank, def, defRank }  -- höher = besser bei beiden
 // ============================================================
 
 const NFL_STANDINGS = ${JSON.stringify(existing.NFL_STANDINGS, null, 2)};
 
 const NFL_FPI = ${JSON.stringify(existing.NFL_FPI, null, 2)};
+
+const NFL_OFFDEF = ${JSON.stringify(existing.NFL_OFFDEF, null, 2)};
 `;
 
   fs.mkdirSync(path.dirname(OUT), { recursive: true });
   fs.writeFileSync(OUT, out, 'utf8');
-  console.log(`${OUT} aktualisiert: Season ${season}, Woche ${week}, ${teams.length} Teams${fpi ? ', inkl. FPI' : ' (FPI nicht verfügbar)'}.`);
+  console.log(`${OUT} aktualisiert: Season ${season}, Woche ${week}, ${teams.length} Teams${fpi ? ', inkl. FPI' : ' (FPI nicht verfügbar)'}${offDef ? ', inkl. Offense/Defense' : ' (Offense/Defense nicht verfügbar)'}.`);
 }
 
 main().catch(err => {
