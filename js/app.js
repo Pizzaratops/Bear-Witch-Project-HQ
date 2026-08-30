@@ -2121,8 +2121,22 @@ function renderSeasonRolling() {
   });
 }
 
-/* ---------- NFL Power Rankings (Conference/Division/NFL, W-L oder FPI) ---------- */
-let nflRankingsState = { season: null, week: null, scope: 'nfl', metric: 'wl' };
+/* ---------- NFL Power Rankings (Conference/Division/NFL, W-L / Offense / Defense) ---------- */
+// Quelle: nflverse (GitHub-gehostet) statt ESPN -- ESPNs öffentliche
+// Sport-API blockt GitHub-Actions-Server generell (IP-Sperre gegen
+// Cloud-CI), siehe scripts/sync-espn-nfl-standings.js. Dadurch gibt es
+// kein ESPN-FPI mehr; Offense/Defense sind stattdessen EPA/Play
+// (Expected Points Added pro Spielzug) -- die in der Analytics-
+// Community etablierte, praezisere Alternative zu simplen Punkte-
+// schnitten, aus denselben nflverse-Rohdaten berechnet.
+let nflRankingsState = { season: null, week: null, scope: 'nfl', metric: 'wl', team: null };
+
+function _nflWinLossCompare(a, b) { return (b.winPct - a.winPct) || ((b.pf - b.pa) - (a.pf - a.pa)); }
+function _nflRankWithin(list, abbr) {
+  const sorted = list.slice().sort(_nflWinLossCompare);
+  const idx = sorted.findIndex(t => t.abbr === abbr);
+  return idx === -1 ? null : idx + 1;
+}
 
 function renderNflRankings() {
   const wrap = document.getElementById('nflRankingsContent');
@@ -2131,7 +2145,7 @@ function renderNflRankings() {
   if (!seasons.length) {
     wrap.innerHTML = emptyState(
       'Noch keine NFL-Standings',
-      'Diese Seite zeigt ein wöchentliches Rolling Ranking aller 32 NFL-Teams (Conference/Division/NFL gesamt), wahlweise nach Sieg-Quote, ESPN FPI oder ESPN Offense-/Defense-Rating. Sobald die reguläre NFL-Saison läuft und der automatische ESPN-Sync (täglich 9 & 21 Uhr) Wochenwerte liefert, füllt sie sich automatisch.',
+      'Diese Seite zeigt ein wöchentliches Rolling Ranking aller 32 NFL-Teams (Conference/Division/NFL gesamt oder einzelnes Team im Verlauf), wahlweise nach Sieg-Quote, Offense- oder Defense-Rating (EPA/Play). Sobald die reguläre NFL-Saison läuft und der automatische Sync (täglich 9 & 21 Uhr) Wochenwerte liefert, füllt sie sich automatisch.',
       '🏈'
     );
     return;
@@ -2142,32 +2156,48 @@ function renderNflRankings() {
   const week = nflRankingsState.week && weeks.includes(nflRankingsState.week) ? nflRankingsState.week : weeks[weeks.length - 1];
   const scope = nflRankingsState.scope || 'nfl';
   const metric = nflRankingsState.metric || 'wl';
-  nflRankingsState = { season, week, scope, metric };
+  const team = nflRankingsState.team || '';
+  nflRankingsState = { season, week, scope, metric, team };
+
+  // Team-Liste (fuer den Filter-Dropdown) aus der letzten verfuegbaren
+  // Woche ableiten -- unabhaengig davon, welche Woche gerade angezeigt wird.
+  const allTeamsMeta = (NFL_STANDINGS[season][weeks[weeks.length - 1]] || []).slice()
+    .sort((a, b) => a.name.localeCompare(b.name));
+
+  const teamSelectorHtml = `
+    <div class="db-controls">
+      <span style="font-size:12px;color:var(--muted);font-weight:700">Team-Filter:</span>
+      <select id="nflTeamSelector" style="background:var(--surface);color:var(--text);border:1px solid var(--border);border-radius:8px;padding:6px 10px;font-size:12px;font-weight:600">
+        <option value="">— Alle Teams (Tabelle) —</option>
+        ${allTeamsMeta.map(t => `<option value="${t.abbr}"${t.abbr === team ? ' selected' : ''}>${t.name} (${t.abbr})</option>`).join('')}
+      </select>
+    </div>`;
+
+  if (team) {
+    wrap.innerHTML = teamSelectorHtml + renderNflTeamHistory(season, weeks, team);
+    document.getElementById('nflTeamSelector').onchange = e => { nflRankingsState.team = e.target.value; renderNflRankings(); };
+    return;
+  }
 
   const teams = (NFL_STANDINGS[season][week] || []).slice();
-  const fpiRows = (typeof NFL_FPI !== 'undefined' && NFL_FPI[season] && NFL_FPI[season][week]) || null;
-  const fpiByAbbr = {};
-  if (fpiRows) fpiRows.forEach(r => { fpiByAbbr[r.abbr] = r; });
-
   const offDefRows = (typeof NFL_OFFDEF !== 'undefined' && NFL_OFFDEF[season] && NFL_OFFDEF[season][week]) || null;
   const offDefByAbbr = {};
   if (offDefRows) offDefRows.forEach(r => { offDefByAbbr[r.abbr] = r; });
 
   function sortGroup(list) {
-    if (metric === 'fpi' && fpiRows) {
-      return list.slice().sort((a, b) => (fpiByAbbr[b.abbr]?.fpi ?? -999) - (fpiByAbbr[a.abbr]?.fpi ?? -999));
-    }
     if (metric === 'off' && offDefRows) {
       return list.slice().sort((a, b) => (offDefByAbbr[b.abbr]?.off ?? -999) - (offDefByAbbr[a.abbr]?.off ?? -999));
     }
     if (metric === 'def' && offDefRows) {
-      return list.slice().sort((a, b) => (offDefByAbbr[b.abbr]?.def ?? -999) - (offDefByAbbr[a.abbr]?.def ?? -999));
+      // Weniger EPA/Play zugelassen = bessere Defense -> aufsteigend sortieren.
+      return list.slice().sort((a, b) => (offDefByAbbr[a.abbr]?.def ?? 999) - (offDefByAbbr[b.abbr]?.def ?? 999));
     }
-    return list.slice().sort((a, b) => (b.winPct - a.winPct) || ((b.pf - b.pa) - (a.pf - a.pa)));
+    return list.slice().sort(_nflWinLossCompare);
   }
 
+  function fmtEpa(v) { return (v >= 0 ? '+' : '') + v.toFixed(2); }
+
   function rowHtml(t, rank) {
-    const fpi = fpiByAbbr[t.abbr];
     const offDef = offDefByAbbr[t.abbr];
     const diff = t.pf - t.pa;
     return `<tr>
@@ -2176,8 +2206,7 @@ function renderNflRankings() {
       <td>${t.wins}-${t.losses}${t.ties ? '-' + t.ties : ''}</td>
       <td>${(t.winPct * 100).toFixed(1)}%</td>
       <td>${diff >= 0 ? '+' : ''}${diff.toFixed(0)}</td>
-      ${fpiRows ? `<td>${fpi ? fpi.fpi.toFixed(1) : '—'}</td>` : ''}
-      ${offDefRows ? `<td>${offDef ? offDef.off.toFixed(1) : '—'}</td><td>${offDef ? offDef.def.toFixed(1) : '—'}</td>` : ''}
+      ${offDefRows ? `<td>${offDef ? fmtEpa(offDef.off) : '—'}</td><td>${offDef ? fmtEpa(offDef.def) : '—'}</td>` : ''}
     </tr>`;
   }
 
@@ -2190,8 +2219,7 @@ function renderNflRankings() {
         <table class="board">
           <thead><tr>
             <th class="round-label">#</th><th>Team</th><th>W-L</th><th>Quote</th><th>Diff</th>
-            ${fpiRows ? '<th>FPI</th>' : ''}
-            ${offDefRows ? '<th>Offense</th><th>Defense</th>' : ''}
+            ${offDefRows ? '<th>Offense (EPA/Play)</th><th>Defense (EPA/Play zugel.)</th>' : ''}
           </tr></thead>
           <tbody>${sorted.map((t, i) => rowHtml(t, i + 1)).join('')}</tbody>
         </table>
@@ -2199,10 +2227,8 @@ function renderNflRankings() {
   }
 
   let body = '';
-  if (metric === 'fpi' && !fpiRows) {
-    body = emptyState('FPI noch nicht verfügbar', 'ESPN\'s FPI-Wert konnte für diese Woche (noch) nicht synchronisiert werden — Sieg-Quote weiter nutzbar, oder eine andere Woche wählen.', '📊');
-  } else if ((metric === 'off' || metric === 'def') && !offDefRows) {
-    body = emptyState('Offense-/Defense-Rating noch nicht verfügbar', 'ESPN\'s Offense-/Defense-Efficiency-Werte konnten für diese Woche (noch) nicht synchronisiert werden — Sieg-Quote oder FPI weiter nutzbar, oder eine andere Woche wählen.', '📊');
+  if ((metric === 'off' || metric === 'def') && !offDefRows) {
+    body = emptyState('Offense-/Defense-Rating noch nicht verfügbar', 'Für diese Woche wurden noch keine Offense-/Defense-Werte synchronisiert — Sieg-Quote weiter nutzbar, oder eine andere Woche wählen.', '📊');
   } else if (scope === 'nfl') {
     body = tableHtml(null, teams);
   } else if (scope === 'conference') {
@@ -2214,6 +2240,7 @@ function renderNflRankings() {
   }
 
   wrap.innerHTML = `
+    ${teamSelectorHtml}
     <div class="db-controls">
       <span style="font-size:12px;color:var(--muted);font-weight:700">Ansicht:</span>
       <div class="db-pos-filters" id="nflScopeSelector"></div>
@@ -2229,6 +2256,8 @@ function renderNflRankings() {
     ${body}
   `;
 
+  document.getElementById('nflTeamSelector').onchange = e => { nflRankingsState.team = e.target.value; renderNflRankings(); };
+
   const scopeSel = document.getElementById('nflScopeSelector');
   [['conference', 'Conference'], ['division', 'Division'], ['nfl', 'NFL']].forEach(([key, label]) => {
     const btn = document.createElement('button');
@@ -2239,7 +2268,7 @@ function renderNflRankings() {
   });
 
   const metricSel = document.getElementById('nflMetricSelector');
-  [['wl', 'Win-Loss'], ['fpi', 'ESPN FPI'], ['off', 'Offense'], ['def', 'Defense']].forEach(([key, label]) => {
+  [['wl', 'Win-Loss'], ['off', 'Offense'], ['def', 'Defense']].forEach(([key, label]) => {
     const btn = document.createElement('button');
     btn.className = 'db-pos-btn' + (metric === key ? ' active' : '');
     btn.textContent = label;
@@ -2255,6 +2284,53 @@ function renderNflRankings() {
     btn.onclick = () => { nflRankingsState.week = w; renderNflRankings(); };
     weekSel.appendChild(btn);
   });
+}
+
+// Verlauf EINES Teams über alle synchronisierten Wochen: Rang in NFL
+// gesamt, Conference, Division, Offense (EPA/Play) und Defense
+// (EPA/Play zugelassen) -- pro Woche eine Zeile, neueste Woche zuerst.
+function renderNflTeamHistory(season, weeks, teamAbbr) {
+  function fmtEpa(v) { return (v >= 0 ? '+' : '') + v.toFixed(2); }
+
+  const rows = weeks.slice().reverse().map(w => {
+    const wTeams = NFL_STANDINGS[season][w] || [];
+    const t = wTeams.find(x => x.abbr === teamAbbr);
+    if (!t) return '';
+
+    const nflRank = _nflRankWithin(wTeams, teamAbbr);
+    const confTeams = wTeams.filter(x => x.conference === t.conference);
+    const confRank = _nflRankWithin(confTeams, teamAbbr);
+    const divTeams = wTeams.filter(x => x.conference === t.conference && x.division === t.division);
+    const divRank = _nflRankWithin(divTeams, teamAbbr);
+
+    const wOffDef = (typeof NFL_OFFDEF !== 'undefined' && NFL_OFFDEF[season] && NFL_OFFDEF[season][w]) || null;
+    const od = wOffDef ? wOffDef.find(x => x.abbr === teamAbbr) : null;
+
+    return `<tr>
+      <td style="text-align:left;font-weight:600">Woche ${w}</td>
+      <td>${t.wins}-${t.losses}${t.ties ? '-' + t.ties : ''}</td>
+      <td>${nflRank}. <span style="color:var(--muted);font-weight:400">/ 32</span></td>
+      <td>${confRank}. <span style="color:var(--muted);font-weight:400">${t.conference}</span></td>
+      <td>${divRank}. <span style="color:var(--muted);font-weight:400">${t.conference} ${t.division}</span></td>
+      <td>${od ? `${od.offRank}. <span style="color:var(--muted);font-weight:400">(${fmtEpa(od.off)})</span>` : '—'}</td>
+      <td>${od ? `${od.defRank}. <span style="color:var(--muted);font-weight:400">(${fmtEpa(od.def)})</span>` : '—'}</td>
+    </tr>`;
+  }).join('');
+
+  const meta = NFL_STANDINGS[season][weeks[weeks.length - 1]].find(x => x.abbr === teamAbbr);
+
+  return `
+    <div class="info-banner">
+      <b>${meta ? meta.name : teamAbbr}</b> — Rang je Woche über die Saison. OR/DR = Offense-/Defense-Rang nach EPA/Play (Wert in Klammern), NFL/Conf/Div = Rang nach Sieg-Quote.
+    </div>
+    <div class="board-table-wrap">
+      <table class="board">
+        <thead><tr>
+          <th class="round-label">Woche</th><th>W-L</th><th>NFL #</th><th>Conf #</th><th>Div #</th><th>OR #</th><th>DR #</th>
+        </tr></thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>`;
 }
 
 /* ---------- Owner-Lookup (welches Team besitzt welchen Spieler) ---------- */
