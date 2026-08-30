@@ -24,11 +24,27 @@ const https = require('https');
 const ROOT = path.join(__dirname, '..');
 const OUT = path.join(ROOT, 'data', 'nfl-power-rankings.js');
 
-function httpsGetJson(url) {
+// ESPN's OEFFENTLICHE Sport-API (anders als der Fantasy-League-Endpoint)
+// sitzt hinter Bot-Schutz, der einen erkennbaren "bot"-User-Agent (und
+// z.T. GitHub-Actions-IPs ohne plausiblen Browser-Header) mit HTTP 403
+// abweist. Deshalb hier bewusst Browser-aehnliche Header + ein Retry mit
+// kurzer Pause, falls der erste Versuch trotzdem an transientem
+// Bot-Schutz scheitert.
+const BROWSER_HEADERS = {
+  'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
+  'Accept': 'application/json, text/plain, */*',
+  'Accept-Language': 'en-US,en;q=0.9,de;q=0.8',
+  'Referer': 'https://www.espn.com/',
+  'Origin': 'https://www.espn.com',
+};
+
+function sleep(ms) { return new Promise(r => setTimeout(r, ms)); }
+
+function httpsGetJsonOnce(url) {
   return new Promise((resolve, reject) => {
-    https.get(url, { headers: { 'User-Agent': 'bear-witch-project-hq-bot', 'Accept': 'application/json' } }, res => {
+    https.get(url, { headers: BROWSER_HEADERS }, res => {
       if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
-        return httpsGetJson(res.headers.location).then(resolve, reject);
+        return httpsGetJsonOnce(res.headers.location).then(resolve, reject);
       }
       if (res.statusCode !== 200) {
         res.resume();
@@ -42,6 +58,18 @@ function httpsGetJson(url) {
       });
     }).on('error', reject);
   });
+}
+
+async function httpsGetJson(url, attempt = 1) {
+  try {
+    return await httpsGetJsonOnce(url);
+  } catch (e) {
+    if (attempt < 3 && /HTTP 403|HTTP 429|ECONNRESET|socket hang up/.test(e.message)) {
+      await sleep(1500 * attempt);
+      return httpsGetJson(url, attempt + 1);
+    }
+    throw e;
+  }
 }
 
 // Findet rekursiv alle Knoten mit einer befuellten standings.entries-Liste
