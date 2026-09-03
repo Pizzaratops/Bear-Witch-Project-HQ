@@ -1800,6 +1800,137 @@ function matchupWinPct(teamA, teamB, mode, lineupType) {
   return { a, b, winA, winB: 1 - winA };
 }
 
+/* Ordnet eine Starter-Liste den 9 Standard-Slots zu (QB, RB, RB, WR, WR,
+   TE, FLEX, DST, K), unabhaengig davon ob es das aktuelle oder das Optimal-
+   Lineup ist -- damit sich zwei Teams sauber Slot-fuer-Slot (QB vs QB, RB
+   vs RB, ...) gegenueberstellen lassen. */
+function _assignSlotLabels(starters) {
+  const posKey = p => { const k = (p.pos || '').split('/')[0].toUpperCase(); return k === 'D' ? 'DST' : k; };
+  const byPos = { QB: [], RB: [], WR: [], TE: [], DST: [], K: [] };
+  starters.forEach(p => { (byPos[posKey(p)] || byPos.WR).push(p); });
+  Object.values(byPos).forEach(arr => arr.sort((a, b) => b.ms.mean - a.ms.mean));
+  const result = [];
+  const take = (posName, label) => { result.push({ slot: label, player: byPos[posName].shift() || null }); };
+  take('QB', 'QB');
+  take('RB', 'RB'); take('RB', 'RB');
+  take('WR', 'WR'); take('WR', 'WR');
+  take('TE', 'TE');
+  const flexPool = [...byPos.RB, ...byPos.WR, ...byPos.TE].sort((a, b) => b.ms.mean - a.ms.mean);
+  const flexPlayer = flexPool[0] || null;
+  if (flexPlayer) ['RB', 'WR', 'TE'].forEach(pk => {
+    const idx = byPos[pk].indexOf(flexPlayer); if (idx > -1) byPos[pk].splice(idx, 1);
+  });
+  result.push({ slot: 'FLEX', player: flexPlayer });
+  take('DST', 'DST');
+  take('K', 'K');
+  return result;
+}
+
+function _actualWeekPoints(name, week) {
+  if (typeof PLAYER_SEASON_STATS === 'undefined') return null;
+  const p = PLAYER_SEASON_STATS.players.find(x => x.name === name);
+  if (!p || !p.weeklyPoints) return null;
+  const v = p.weeklyPoints[week];
+  return v != null ? v : null;
+}
+
+let matchupDetailState = null; // { homeId, awayId, week }
+
+function openMatchupDetail(homeId, awayId, week) {
+  matchupDetailState = { homeId, awayId, week };
+  renderMatchupDetail();
+  const overlay = document.getElementById('matchupDetailOverlay');
+  if (overlay) overlay.style.display = 'flex';
+}
+function closeMatchupDetail() {
+  const overlay = document.getElementById('matchupDetailOverlay');
+  if (overlay) overlay.style.display = 'none';
+}
+
+function renderMatchupDetail() {
+  if (!matchupDetailState) return;
+  const { homeId, awayId, week } = matchupDetailState;
+  const home = LEAGUE_TEAMS.find(t => t.id === homeId) || { name: homeId, emoji: '🏈' };
+  const away = LEAGUE_TEAMS.find(t => t.id === awayId) || { name: awayId, emoji: '🏈' };
+  const seasons = Object.keys((typeof SCHEDULE !== 'undefined') ? SCHEDULE : {});
+  const season = seasons[seasons.length - 1];
+  const scoresThisWeek = {};
+  (WEEKLY_SCORES[season]?.[week] || []).forEach(e => { scoresThisWeek[e.teamId] = e.points; });
+  const played = Object.keys(scoresThisWeek).length > 0;
+  const canProject = typeof PLAYER_PROJECTIONS !== 'undefined';
+
+  const content = document.getElementById('matchupDetailContent');
+  if (!content) return;
+
+  if (!canProject) {
+    content.innerHTML = `<div class="page-sub">Keine Projektionsdaten geladen.</div>`;
+    return;
+  }
+
+  const homeProj = teamWeekProjection(home, matchupsState.mode, matchupsState.lineup);
+  const awayProj = teamWeekProjection(away, matchupsState.mode, matchupsState.lineup);
+  const homeSlots = _assignSlotLabels(homeProj.starters);
+  const awaySlots = _assignSlotLabels(awayProj.starters);
+  const rowCount = Math.max(homeSlots.length, awaySlots.length);
+
+  const wp = played ? null : matchupWinPct(home, away, matchupsState.mode, matchupsState.lineup);
+  const homeTotal = played ? scoresThisWeek[homeId] : homeProj.mean;
+  const awayTotal = played ? scoresThisWeek[awayId] : awayProj.mean;
+  const homeWinsWeek = played && homeTotal > awayTotal;
+  const awayWinsWeek = played && awayTotal > homeTotal;
+
+  const playerCell = (p, align) => {
+    if (!p) return `<div class="mdt-cell mdt-empty" style="text-align:${align}">—</div>`;
+    const val = played ? _actualWeekPoints(p.name, week) : p.ms.mean;
+    const label = played ? (val != null ? val.toFixed(1) : '—') : val.toFixed(1);
+    const sub = played ? (val != null ? 'Punkte' : 'kein Wert') : 'proj.';
+    return `<div class="mdt-cell" style="text-align:${align}">
+      <div class="mdt-player-name">${p.name}</div>
+      <div class="mdt-player-meta">${p.pos}${p.nfl ? ' · ' + p.nfl : ''}</div>
+      <div class="mdt-player-val">${label} <small>${sub}</small></div>
+    </div>`;
+  };
+
+  const rows = [];
+  for (let i = 0; i < rowCount; i++) {
+    const hSlot = homeSlots[i], aSlot = awaySlots[i];
+    const slotLabel = (hSlot || aSlot).slot;
+    const hVal = hSlot && hSlot.player ? (played ? (_actualWeekPoints(hSlot.player.name, week) ?? -1) : hSlot.player.ms.mean) : -1;
+    const aVal = aSlot && aSlot.player ? (played ? (_actualWeekPoints(aSlot.player.name, week) ?? -1) : aSlot.player.ms.mean) : -1;
+    rows.push(`
+      <div class="mdt-row">
+        ${playerCell(hSlot && hSlot.player, 'right')}
+        <div class="mdt-slot-label ${hVal > aVal ? 'mdt-edge-home' : (aVal > hVal ? 'mdt-edge-away' : '')}">${slotLabel}</div>
+        ${playerCell(aSlot && aSlot.player, 'left')}
+      </div>`);
+  }
+
+  content.innerHTML = `
+    <div class="mdt-header">
+      <div class="mdt-header-team ${homeWinsWeek ? 'mdt-header-winner' : ''}">
+        <div class="mdt-header-name">${home.emoji || ''} ${home.name}</div>
+        <div class="mdt-header-total">${homeTotal.toFixed(1)}</div>
+        ${wp ? `<div class="mdt-header-pct">${Math.round(wp.winA * 100)}%</div>` : ''}
+      </div>
+      <div class="mdt-header-mid">
+        <div class="mdt-header-week">Woche ${week}</div>
+        <div class="mdt-header-vs">vs</div>
+      </div>
+      <div class="mdt-header-team ${awayWinsWeek ? 'mdt-header-winner' : ''}">
+        <div class="mdt-header-name">${away.emoji || ''} ${away.name}</div>
+        <div class="mdt-header-total">${awayTotal.toFixed(1)}</div>
+        ${wp ? `<div class="mdt-header-pct">${Math.round(wp.winB * 100)}%</div>` : ''}
+      </div>
+    </div>
+    <div class="page-sub" style="text-align:center;margin:6px 0 14px">
+      ${played
+        ? 'Tatsächliche Punkte je Slot (Woche bereits gespielt). Lineup-Zuordnung basiert auf dem aktuellen Kaderstand, nicht rückwirkend auf die damalige Aufstellung.'
+        : `Projektion je Slot · Lineup: <b>${matchupsState.lineup === 'optimal' ? 'Optimal' : 'Aktuell'}</b> · Datenmodus: <b>${{ proj: 'Projektionen', hist: 'Historisch', mix: 'Mix' }[matchupsState.mode]}</b>`}
+    </div>
+    <div class="mdt-rows">${rows.join('')}</div>
+  `;
+}
+
 /* ---------- Matchup Planner (Spielplan) ---------- */
 let matchupsState = { week: null, lineup: 'current', mode: 'mix' };
 
@@ -1859,7 +1990,7 @@ function renderMatchups() {
         }
 
         return `
-          <div class="matchup-card">
+          <div class="matchup-card"${canProject ? ` onclick="openMatchupDetail('${escapeJs(m.home)}','${escapeJs(m.away)}',${week})" style="cursor:pointer"` : ''}>
             <div class="matchup-team${homeWin ? ' matchup-winner' : ''}">
               <span>${home.emoji || ''} ${home.name}</span>
               <span class="matchup-score">${played ? hs.toFixed(1) : ''}</span>
@@ -1870,6 +2001,7 @@ function renderMatchups() {
               <span class="matchup-score">${played ? as.toFixed(1) : ''}</span>
             </div>
             ${projHtml}
+            ${canProject ? `<div class="matchup-detail-hint">Klicken für Slot-Vergleich →</div>` : ''}
           </div>`;
       }).join('')}
     </div>
@@ -1891,7 +2023,7 @@ function renderMatchups() {
       const btn = document.createElement('button');
       btn.className = 'db-pos-btn' + (matchupsState.lineup === val ? ' active' : '');
       btn.textContent = label;
-      btn.onclick = () => { matchupsState.lineup = val; renderMatchups(); };
+      btn.onclick = () => { matchupsState.lineup = val; renderMatchups(); if (matchupDetailState) renderMatchupDetail(); };
       lineupSel.appendChild(btn);
     });
     const modeSel = document.getElementById('matchupsModeSelector');
@@ -1899,7 +2031,7 @@ function renderMatchups() {
       const btn = document.createElement('button');
       btn.className = 'db-pos-btn' + (matchupsState.mode === val ? ' active' : '');
       btn.textContent = label;
-      btn.onclick = () => { matchupsState.mode = val; renderMatchups(); };
+      btn.onclick = () => { matchupsState.mode = val; renderMatchups(); if (matchupDetailState) renderMatchupDetail(); };
       modeSel.appendChild(btn);
     });
   }
