@@ -1834,7 +1834,92 @@ function _actualWeekPoints(name, week) {
   return v != null ? v : null;
 }
 
-let matchupDetailState = null; // { homeId, awayId, week }
+/* ---------- Matchup-Snapshots (Proj. vor dem Spiel vs. Ist danach) ---------- */
+// Es gibt keinen Server/keine Datenbank hinter dieser statischen Seite --
+// Snapshots landen daher im localStorage DES BROWSERS, in dem sie erstellt
+// wurden. D.h.: nur auf dem Geraet/Browser, auf dem eine Woche VOR dem
+// Spiel geoeffnet wurde, gibt es hinterher einen Proj-vs-Ist-Vergleich.
+// Kein Snapshot vorhanden -> es wird nur der Ist-Wert gezeigt.
+const SNAPSHOT_SEASON = 2026;
+function _snapshotKey(week, teamId) { return `bwp:snap:${SNAPSHOT_SEASON}:${week}:${teamId}`; }
+function _hasStorage() { try { return typeof localStorage !== 'undefined'; } catch (e) { return false; } }
+
+function saveMatchupSnapshot(week, teamId, teamProj, force) {
+  if (!_hasStorage()) return false;
+  const key = _snapshotKey(week, teamId);
+  if (!force && localStorage.getItem(key)) return false; // nicht ueberschreiben, ausser explizit gewuenscht
+  const payload = {
+    capturedAt: new Date().toISOString(),
+    lineup: matchupsState.lineup, mode: matchupsState.mode,
+    teamMean: teamProj.mean,
+    starters: _assignSlotLabels(teamProj.starters).map(s => ({
+      slot: s.slot,
+      name: s.player ? s.player.name : null,
+      pos: s.player ? s.player.pos : null,
+      mean: s.player ? Math.round(s.player.ms.mean * 10) / 10 : null,
+    })),
+  };
+  try { localStorage.setItem(key, JSON.stringify(payload)); return true; } catch (e) { return false; }
+}
+function loadMatchupSnapshot(week, teamId) {
+  if (!_hasStorage()) return null;
+  try { const raw = localStorage.getItem(_snapshotKey(week, teamId)); return raw ? JSON.parse(raw) : null; } catch (e) { return null; }
+}
+
+/* Sammelt ueber ALLE lokal gespeicherten Snapshots, deren Woche inzwischen
+   gespielt wurde: Ø Abweichung pro Spieler (in Punkten) und Trefferquote
+   der Sieg-Vorhersage (predicted winner === tatsaechlicher Sieger). */
+function computeProjectionAccuracy() {
+  if (!_hasStorage()) return null;
+  const season = SNAPSHOT_SEASON;
+  const scheduleWeeks = (typeof SCHEDULE !== 'undefined' && SCHEDULE[season]) ? Object.keys(SCHEDULE[season]).map(Number) : [];
+  let playerErrors = [];
+  let winCalls = 0, winHits = 0;
+  const seenMatchups = new Set();
+
+  scheduleWeeks.forEach(week => {
+    const scoresThisWeek = {};
+    (WEEKLY_SCORES[season]?.[week] || []).forEach(e => { scoresThisWeek[e.teamId] = e.points; });
+    if (!Object.keys(scoresThisWeek).length) return; // Woche noch nicht gespielt
+
+    (SCHEDULE[season][week] || []).forEach(m => {
+      const homeSnap = loadMatchupSnapshot(week, m.home);
+      const awaySnap = loadMatchupSnapshot(week, m.away);
+      [[m.home, homeSnap], [m.away, awaySnap]].forEach(([teamId, snap]) => {
+        if (!snap) return;
+        snap.starters.forEach(s => {
+          if (!s.name || s.mean == null) return;
+          const actual = _actualWeekPoints(s.name, week);
+          if (actual == null) return;
+          playerErrors.push(Math.abs(actual - s.mean));
+        });
+      });
+      if (homeSnap && awaySnap) {
+        const matchupKey = `${week}|${m.home}|${m.away}`;
+        if (!seenMatchups.has(matchupKey)) {
+          seenMatchups.add(matchupKey);
+          const predictedHomeWin = homeSnap.teamMean >= awaySnap.teamMean;
+          const actualHomeWin = scoresThisWeek[m.home] > scoresThisWeek[m.away];
+          winCalls++;
+          if (predictedHomeWin === actualHomeWin) winHits++;
+        }
+      }
+    });
+  });
+
+  if (!playerErrors.length && !winCalls) return null;
+  const avgAbsError = playerErrors.length ? playerErrors.reduce((a, b) => a + b, 0) / playerErrors.length : null;
+  return {
+    playerCount: playerErrors.length,
+    avgAbsError,
+    matchupCount: winCalls,
+    winHits,
+    winPct: winCalls ? Math.round((winHits / winCalls) * 100) : null,
+  };
+}
+
+/* ---------- Matchup-Detail (Slot-Vergleich) ---------- */
+
 
 function openMatchupDetail(homeId, awayId, week) {
   matchupDetailState = { homeId, awayId, week };
@@ -1869,6 +1954,20 @@ function renderMatchupDetail() {
 
   const homeProj = teamWeekProjection(home, matchupsState.mode, matchupsState.lineup);
   const awayProj = teamWeekProjection(away, matchupsState.mode, matchupsState.lineup);
+
+  let homeSnap = loadMatchupSnapshot(week, homeId);
+  let awaySnap = loadMatchupSnapshot(week, awayId);
+  let justCaptured = false;
+  if (!played) {
+    // Beim ersten Ansehen dieser Woche automatisch einen Snapshot sichern
+    // (spaeter, nach dem Spiel, wird dann Proj. vs. Ist verglichen).
+    const savedH = saveMatchupSnapshot(week, homeId, homeProj, false);
+    const savedA = saveMatchupSnapshot(week, awayId, awayProj, false);
+    if (savedH || savedA) justCaptured = true;
+    homeSnap = loadMatchupSnapshot(week, homeId);
+    awaySnap = loadMatchupSnapshot(week, awayId);
+  }
+
   const homeSlots = _assignSlotLabels(homeProj.starters);
   const awaySlots = _assignSlotLabels(awayProj.starters);
   const rowCount = Math.max(homeSlots.length, awaySlots.length);
@@ -1879,15 +1978,51 @@ function renderMatchupDetail() {
   const homeWinsWeek = played && homeTotal > awayTotal;
   const awayWinsWeek = played && awayTotal > homeTotal;
 
+  // Snapshot-Werte je Spielername nachschlagen (fuer den Proj-vs-Ist-Vergleich
+  // nach dem Spiel -- nutzt den GESPEICHERTEN Wert, nicht die live neu
+  // berechnete Projektion, die inzwischen leicht abweichen kann).
+  const snapMeanByName = {};
+  [homeSnap, awaySnap].forEach(snap => {
+    if (!snap) return;
+    snap.starters.forEach(s => { if (s.name) snapMeanByName[s.name] = s.mean; });
+  });
+
   const playerCell = (p, align) => {
     if (!p) return `<div class="mdt-cell mdt-empty" style="text-align:${align}">—</div>`;
-    const val = played ? _actualWeekPoints(p.name, week) : p.ms.mean;
-    const label = played ? (val != null ? val.toFixed(1) : '—') : val.toFixed(1);
-    const sub = played ? (val != null ? 'Punkte' : 'kein Wert') : 'proj.';
+    if (!played) {
+      return `<div class="mdt-cell" style="text-align:${align}">
+        <div class="mdt-player-name">${p.name}</div>
+        <div class="mdt-player-meta">${p.pos}${p.nfl ? ' · ' + p.nfl : ''}</div>
+        <div class="mdt-player-val">${p.ms.mean.toFixed(1)} <small>proj.</small></div>
+      </div>`;
+    }
+    const actual = _actualWeekPoints(p.name, week);
+    const snapMean = snapMeanByName[p.name];
+    if (actual == null) {
+      return `<div class="mdt-cell" style="text-align:${align}">
+        <div class="mdt-player-name">${p.name}</div>
+        <div class="mdt-player-meta">${p.pos}${p.nfl ? ' · ' + p.nfl : ''}</div>
+        <div class="mdt-player-val">— <small>kein Wert</small></div>
+      </div>`;
+    }
+    if (snapMean == null) {
+      // Kein Vorab-Snapshot vorhanden -> nur Ist-Wert zeigen.
+      return `<div class="mdt-cell" style="text-align:${align}">
+        <div class="mdt-player-name">${p.name}</div>
+        <div class="mdt-player-meta">${p.pos}${p.nfl ? ' · ' + p.nfl : ''}</div>
+        <div class="mdt-player-val">${actual.toFixed(1)} <small>Punkte</small></div>
+      </div>`;
+    }
+    const delta = actual - snapMean;
+    const deltaClass = delta >= 0 ? 'mdt-delta-pos' : 'mdt-delta-neg';
+    const deltaLabel = (delta >= 0 ? '+' : '') + delta.toFixed(1);
     return `<div class="mdt-cell" style="text-align:${align}">
       <div class="mdt-player-name">${p.name}</div>
       <div class="mdt-player-meta">${p.pos}${p.nfl ? ' · ' + p.nfl : ''}</div>
-      <div class="mdt-player-val">${label} <small>${sub}</small></div>
+      <div class="mdt-player-val2row">
+        <div class="mdt-val-row"><small>Proj.</small> ${snapMean.toFixed(1)}</div>
+        <div class="mdt-val-row"><small>Ist</small> <b>${actual.toFixed(1)}</b> <span class="mdt-delta ${deltaClass}">${deltaLabel}</span></div>
+      </div>
     </div>`;
   };
 
@@ -1903,6 +2038,17 @@ function renderMatchupDetail() {
         <div class="mdt-slot-label ${hVal > aVal ? 'mdt-edge-home' : (aVal > hVal ? 'mdt-edge-away' : '')}">${slotLabel}</div>
         ${playerCell(aSlot && aSlot.player, 'left')}
       </div>`);
+  }
+
+  let subLine;
+  if (played) {
+    if (homeSnap || awaySnap) {
+      subLine = `Proj. = Snapshot vom ${new Date((homeSnap || awaySnap).capturedAt).toLocaleString('de-DE', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' })} (auf diesem Gerät gespeichert) · Ist = tatsächliche Punkte.`;
+    } else {
+      subLine = `Kein Vorab-Snapshot auf diesem Gerät gefunden — nur tatsächliche Punkte werden gezeigt. Snapshots werden automatisch gespeichert, wenn ein Matchup vor dem Spiel geöffnet wird.`;
+    }
+  } else {
+    subLine = `Projektion je Slot · Lineup: <b>${matchupsState.lineup === 'optimal' ? 'Optimal' : 'Aktuell'}</b> · Datenmodus: <b>${{ proj: 'Projektionen', hist: 'Historisch', mix: 'Mix' }[matchupsState.mode]}</b>${justCaptured ? ' · <span style="color:var(--accent)">📸 Snapshot gerade gespeichert</span>' : (homeSnap ? ` · Snapshot vom ${new Date(homeSnap.capturedAt).toLocaleString('de-DE', { day: '2-digit', month: '2-digit', hour: '2-digit', minute: '2-digit' })}` : '')}`;
   }
 
   content.innerHTML = `
@@ -1922,13 +2068,20 @@ function renderMatchupDetail() {
         ${wp ? `<div class="mdt-header-pct">${Math.round(wp.winB * 100)}%</div>` : ''}
       </div>
     </div>
-    <div class="page-sub" style="text-align:center;margin:6px 0 14px">
-      ${played
-        ? 'Tatsächliche Punkte je Slot (Woche bereits gespielt). Lineup-Zuordnung basiert auf dem aktuellen Kaderstand, nicht rückwirkend auf die damalige Aufstellung.'
-        : `Projektion je Slot · Lineup: <b>${matchupsState.lineup === 'optimal' ? 'Optimal' : 'Aktuell'}</b> · Datenmodus: <b>${{ proj: 'Projektionen', hist: 'Historisch', mix: 'Mix' }[matchupsState.mode]}</b>`}
-    </div>
+    <div class="page-sub" style="text-align:center;margin:6px 0 14px">${subLine}</div>
+    ${!played ? `<div style="text-align:center;margin-bottom:12px"><button class="db-pos-btn" onclick="_manualSnapshot()">📸 Snapshot jetzt (neu) sichern</button></div>` : ''}
     <div class="mdt-rows">${rows.join('')}</div>
   `;
+}
+
+function _manualSnapshot() {
+  if (!matchupDetailState) return;
+  const { homeId, awayId, week } = matchupDetailState;
+  const home = LEAGUE_TEAMS.find(t => t.id === homeId) || { name: homeId };
+  const away = LEAGUE_TEAMS.find(t => t.id === awayId) || { name: awayId };
+  saveMatchupSnapshot(week, homeId, teamWeekProjection(home, matchupsState.mode, matchupsState.lineup), true);
+  saveMatchupSnapshot(week, awayId, teamWeekProjection(away, matchupsState.mode, matchupsState.lineup), true);
+  renderMatchupDetail();
 }
 
 /* ---------- Matchup Planner (Spielplan) ---------- */
@@ -1959,6 +2112,7 @@ function renderMatchups() {
   const canProject = typeof PLAYER_PROJECTIONS !== 'undefined';
 
   const matchups = SCHEDULE[season][week] || [];
+  const accuracy = canProject ? computeProjectionAccuracy() : null;
 
   wrap.innerHTML = `
     <div class="db-controls"><div class="db-pos-filters" id="matchupsWeekSelector"></div></div>
@@ -1966,7 +2120,8 @@ function renderMatchups() {
       <div class="db-controls" style="margin-top:8px">
         <div class="db-pos-filters" id="matchupsLineupSelector"></div>
         <div class="db-pos-filters" id="matchupsModeSelector"></div>
-      </div>` : ''}
+      </div>
+      ${accuracy ? `<div class="accuracy-badge">📊 Bisherige Prognose-Genauigkeit (dieses Gerät): <b>${accuracy.winPct}%</b> Sieg-Trefferquote (${accuracy.matchupCount} Matchup${accuracy.matchupCount === 1 ? '' : 's'})${accuracy.avgAbsError != null ? ` · Ø <b>${accuracy.avgAbsError.toFixed(1)}</b> Punkte Abweichung/Spieler (${accuracy.playerCount})` : ''}</div>` : ''}` : ''}
     <div class="info-banner">${played ? `Ergebnisse für Woche ${week} liegen vor.` : (canProject ? `Woche ${week} noch nicht gespielt — Win% aus Projektion der 9 Starter (${matchupsState.lineup === 'optimal' ? 'Optimal-Lineup' : 'aktuelles Lineup'}, Datenmodus: ${{ proj: 'reine Projektionen', hist: 'historische Wochenwerte', mix: 'Mix (lernt über die Saison dazu)' }[matchupsState.mode]}).` : `Woche ${week} noch nicht gespielt — nur Paarungen.`)}</div>
     <div class="matchup-grid">
       ${matchups.map(m => {
