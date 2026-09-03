@@ -1,0 +1,44 @@
+name: Matchup Projections Snapshot
+
+# Sichert einmal pro Woche (Mittwoch, nach den taeglichen Roster-/
+# Projections-Syncs) die aktuelle Vorab-Projektion fuer die naechste noch
+# nicht gespielte Woche nach data/matchup-snapshots.js -- geraeteunabhaengig
+# und dauerhaft im Repo, im Gegensatz zum lokalen Browser-Fallback.
+#
+# Ruft KEINE ESPN-API auf (nur Berechnung aus bereits im Repo vorhandenen,
+# von den anderen Sync-Workflows synchronisierten Daten) -- braucht daher
+# keine ESPN_S2/SWID Secrets.
+#
+# Ueberschreibt nie einen bereits vorhandenen Wochen-Snapshot (siehe
+# scripts/snapshot-projections.js), ein manueller Re-Run ist also
+# gefahrlos.
+
+on:
+  schedule:
+    - cron: "0 8 * * 3"   # Mittwoch 10:00 Berlin (Sommerzeit)
+    - cron: "0 9 * * 3"   # Mittwoch 10:00 Berlin (Winterzeit)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  snapshot:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Matchup Projections Snapshot
+        run: node scripts/snapshot-projections.js
+
+      - name: Commit & Push falls geändert
+        run: |
+          git config user.name "bear-witch-project-hq-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/matchup-snapshots.js
+          git diff --cached --quiet || git commit -m "chore: matchup projections snapshot"
+          git push
