@@ -304,29 +304,49 @@ function renderRoster(teamId) {
 
 function renderTeamPicksSection(team, draftTeam) {
   const teamsById = LEAGUE_TEAMS.reduce((m, t) => { m[t.name] = t; return m; }, {});
-  const tradedOverrides = {};
-  (typeof TRADED_PICKS_2026 !== 'undefined' ? TRADED_PICKS_2026 : []).forEach(p => {
-    tradedOverrides[`${p.from}|${p.round}`] = p.owner;
-  });
+  const hasResults = typeof DRAFT_RESULTS_2026 !== 'undefined' && Object.keys(DRAFT_RESULTS_2026).length;
+  const keeperNames = draftTeam ? new Set(draftTeam.keepers.map(p => p.name)) : new Set();
 
-  const k = draftTeam ? draftTeam.keepers.length : 0;
-  const startRound = TOTAL_DRAFT_ROUNDS - k + 1;
+  let rounds2026 = [];
 
-  const rounds2026 = [];
-  for (let round = 1; round <= TOTAL_DRAFT_ROUNDS; round++) {
-    const tradedOwner = tradedOverrides[`${team.name}|${round}`];
-    let label, kind, own, assetName;
-    if (round >= startRound) {
-      const player = draftTeam.keepers[round - startRound];
-      label = player.tentative ? `(${player.name})` : player.name; kind = 'player'; own = false; assetName = player.name;
-    } else if (tradedOwner) {
-      const ownerEmoji = teamsById[tradedOwner] ? teamsById[tradedOwner].emoji : '';
-      label = `${ownerEmoji} ${tradedOwner}`; kind = 'pick'; own = false;
-    } else {
-      label = 'Own'; kind = 'pick'; own = true;
+  if (hasResults) {
+    // Echte Picks: alle Zellen in DRAFT_RESULTS_2026 einsammeln, in denen
+    // dieses Team tatsaechlich gepickt hat (kann mehrere pro Runde sein,
+    // wenn Picks getradet wurden).
+    for (let round = 1; round <= TOTAL_DRAFT_ROUNDS; round++) {
+      const roundData = DRAFT_RESULTS_2026[round] || [];
+      roundData.forEach(pick => {
+        if (pick && pick.team === team.name) {
+          const isKeeper = keeperNames.has(pick.name);
+          rounds2026.push({
+            round, label: `${pick.name}${isKeeper ? ' 🔒' : ''}`, kind: 'player', own: false, pickLabel: pick.name,
+          });
+        }
+      });
     }
-    const pickLabel = kind === 'pick' ? `${team.name} 2026 R${round}` : assetName;
-    rounds2026.push({ round, label, kind, own, pickLabel });
+  } else {
+    // Fallback vor dem Draft: Hochrechnung aus Keepern + getradeten Picks.
+    const tradedOverrides = {};
+    (typeof TRADED_PICKS_2026 !== 'undefined' ? TRADED_PICKS_2026 : []).forEach(p => {
+      tradedOverrides[`${p.from}|${p.round}`] = p.owner;
+    });
+    const k = draftTeam ? draftTeam.keepers.length : 0;
+    const startRound = TOTAL_DRAFT_ROUNDS - k + 1;
+    for (let round = 1; round <= TOTAL_DRAFT_ROUNDS; round++) {
+      const tradedOwner = tradedOverrides[`${team.name}|${round}`];
+      let label, kind, own, assetName;
+      if (round >= startRound) {
+        const player = draftTeam.keepers[round - startRound];
+        label = player.tentative ? `(${player.name})` : player.name; kind = 'player'; own = false; assetName = player.name;
+      } else if (tradedOwner) {
+        const ownerEmoji = teamsById[tradedOwner] ? teamsById[tradedOwner].emoji : '';
+        label = `${ownerEmoji} ${tradedOwner}`; kind = 'pick'; own = false;
+      } else {
+        label = 'Own'; kind = 'pick'; own = true;
+      }
+      const pickLabel = kind === 'pick' ? `${team.name} 2026 R${round}` : assetName;
+      rounds2026.push({ round, label, kind, own, pickLabel });
+    }
   }
 
   const years = [2027, ...Object.keys(FUTURE_PICKS).map(Number).filter(y => y !== 2027)].sort();
@@ -336,7 +356,7 @@ function renderTeamPicksSection(team, draftTeam) {
     <div class="section-label">📦 Meine Picks</div>
     <div class="team-picks-layout">
       <div class="team-picks-2026">
-        <div style="font-size:11px;font-weight:700;color:var(--muted);margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px">2026 Draft (15 Runden)</div>
+        <div style="font-size:11px;font-weight:700;color:var(--muted);margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px">2026 Draft (${TOTAL_DRAFT_ROUNDS} Runden${hasResults ? ', abgeschlossen' : ''})</div>
         ${rounds2026.map(r => `
           <div class="team-pick-chip ${r.own ? 'cell-open' : 'cell-keeper'}" onclick="openTradeAnalyzer('${escapeJs(r.pickLabel)}','${r.kind}')">
             <span>R${r.round}</span><span>${r.label}</span>
@@ -455,10 +475,15 @@ async function downloadKeeperScreenshot() {
 }
 
 /* ---------- Draft Board ---------- */
+/* Seit dem 02.09.2026 ist der Draft gelaufen -- DRAFT_RESULTS_2026 (siehe
+   data/draft2026.js) enthaelt die ECHTEN Picks und ist hier die Ground
+   Truth. Fallback auf die alte keeper-basierte Hochrechnung nur, falls
+   DRAFT_RESULTS_2026 (aus welchem Grund auch immer) fehlen sollte. */
 function renderDraftboard() {
   const wrap = document.getElementById('draftboardContent');
   const teamsById = LEAGUE_TEAMS.reduce((m, t) => { m[t.name] = t; return m; }, {});
   const draftById = DRAFT_2026_TEAMS.reduce((m, t) => { m[t.team] = t; return m; }, {});
+  const hasResults = typeof DRAFT_RESULTS_2026 !== 'undefined' && Object.keys(DRAFT_RESULTS_2026).length;
 
   // Spaltenreihenfolge = echte, vom Liga-Owner bestaetigte Draft-Order
   // (linear, reward-the-bottom). Fallback auf DRAFT_2026_TEAMS-Reihenfolge,
@@ -466,13 +491,10 @@ function renderDraftboard() {
   const order = (typeof DRAFT_ORDER_2026 !== 'undefined' && DRAFT_ORDER_2026.length)
     ? DRAFT_ORDER_2026 : DRAFT_2026_TEAMS.map(t => t.team);
   const teams = order.map(name => draftById[name]).filter(Boolean);
-
-  const tradedOverrides = {}; // "team|round" -> owner team name
-  (typeof TRADED_PICKS_2026 !== 'undefined' ? TRADED_PICKS_2026 : []).forEach(p => {
-    tradedOverrides[`${p.from}|${p.round}`] = p.owner;
-  });
-  const tradedCount = Object.keys(tradedOverrides).length;
   const hasOrder = typeof DRAFT_ORDER_2026 !== 'undefined' && DRAFT_ORDER_2026.length;
+
+  const keeperNameSets = {}; // team -> Set(keeper-namen), zum Markieren im echten Board
+  DRAFT_2026_TEAMS.forEach(dt => { keeperNameSets[dt.team] = new Set(dt.keepers.map(p => p.name)); });
 
   let head = `<tr><th class="round-label">Runde</th>` +
     teams.map((t, i) => {
@@ -483,34 +505,58 @@ function renderDraftboard() {
     }).join('') + `</tr>`;
 
   let rows = '';
-  for (let round = 1; round <= TOTAL_DRAFT_ROUNDS; round++) {
-    rows += `<tr><th class="round-label">R${round}</th>`;
-    teams.forEach((t, i) => {
-      const k = t.keepers.length;
-      const startRound = TOTAL_DRAFT_ROUNDS - k + 1;
-      const tradedOwner = tradedOverrides[`${t.team}|${round}`];
-      const pickNum = hasOrder ? `${round}.${String(i + 1).padStart(2, '0')}` : `R${round}`;
-      if (round >= startRound) {
-        const player = t.keepers[round - startRound];
-        rows += `<td><div class="cell-keeper" onclick="openTradeAnalyzer('${escapeJs(player.name)}')">${player.tentative ? `(${player.name})` : player.name}${player.tentative ? ' <small style="display:inline">vsl.</small>' : ''}<small>${player.nfl} · ${player.pos}</small></div></td>`;
-      } else if (tradedOwner) {
-        const ownerTeam = teamsById[tradedOwner] || {};
-        rows += `<td><div class="cell-keeper" onclick="openTradeAnalyzer('${escapeJs(t.team)} 2026 R${round}', 'pick')">${ownerTeam.emoji || ''} ${tradedOwner}<small>via ${t.team} · Pick ${pickNum}</small></div></td>`;
-      } else {
-        rows += `<td><div class="cell-open" onclick="openTradeAnalyzer('${escapeJs(t.team)} 2026 R${round}', 'pick')">Own<small>Pick ${pickNum}</small></div></td>`;
-      }
+
+  if (hasResults) {
+    for (let round = 1; round <= TOTAL_DRAFT_ROUNDS; round++) {
+      rows += `<tr><th class="round-label">R${round}</th>`;
+      const roundData = DRAFT_RESULTS_2026[round] || [];
+      teams.forEach((t, i) => {
+        const pick = roundData[i];
+        const pickNum = hasOrder ? `${round}.${String(i + 1).padStart(2, '0')}` : `R${round}`;
+        if (!pick) {
+          rows += `<td><div class="cell-open" style="opacity:.5">Kein Pick<small>${t.team} · Kader voll</small></div></td>`;
+          return;
+        }
+        const isTraded = pick.team !== t.team;
+        const isKeeper = keeperNameSets[pick.team] && keeperNameSets[pick.team].has(pick.name);
+        const ownerTeam = teamsById[pick.team] || {};
+        const tradedNote = isTraded ? `<small>via ${t.team} · Pick ${pickNum} · ${ownerTeam.emoji || ''} ${pick.team}</small>` : `<small>${pick.nfl} · ${pick.pos}${isKeeper ? ' · 🔒 Keeper' : ''}</small>`;
+        rows += `<td><div class="${isTraded ? 'cell-keeper' : (isKeeper ? 'cell-keeper' : 'cell-open')}" onclick="openTradeAnalyzer('${escapeJs(pick.name)}')">${pick.name}${isKeeper && !isTraded ? ' 🔒' : ''}${tradedNote}</div></td>`;
+      });
+      rows += `</tr>`;
+    }
+  } else {
+    // Fallback: alte, keeper-basierte Hochrechnung vor dem eigentlichen Draft.
+    const tradedOverrides = {};
+    (typeof TRADED_PICKS_2026 !== 'undefined' ? TRADED_PICKS_2026 : []).forEach(p => {
+      tradedOverrides[`${p.from}|${p.round}`] = p.owner;
     });
-    rows += `</tr>`;
+    for (let round = 1; round <= TOTAL_DRAFT_ROUNDS; round++) {
+      rows += `<tr><th class="round-label">R${round}</th>`;
+      teams.forEach((t, i) => {
+        const k = t.keepers.length;
+        const startRound = TOTAL_DRAFT_ROUNDS - k + 1;
+        const tradedOwner = tradedOverrides[`${t.team}|${round}`];
+        const pickNum = hasOrder ? `${round}.${String(i + 1).padStart(2, '0')}` : `R${round}`;
+        if (round >= startRound) {
+          const player = t.keepers[round - startRound];
+          rows += `<td><div class="cell-keeper" onclick="openTradeAnalyzer('${escapeJs(player.name)}')">${player.tentative ? `(${player.name})` : player.name}${player.tentative ? ' <small style="display:inline">vsl.</small>' : ''}<small>${player.nfl} · ${player.pos}</small></div></td>`;
+        } else if (tradedOwner) {
+          const ownerTeam = teamsById[tradedOwner] || {};
+          rows += `<td><div class="cell-keeper" onclick="openTradeAnalyzer('${escapeJs(t.team)} 2026 R${round}', 'pick')">${ownerTeam.emoji || ''} ${tradedOwner}<small>via ${t.team} · Pick ${pickNum}</small></div></td>`;
+        } else {
+          rows += `<td><div class="cell-open" onclick="openTradeAnalyzer('${escapeJs(t.team)} 2026 R${round}', 'pick')">Own<small>Pick ${pickNum}</small></div></td>`;
+        }
+      });
+      rows += `</tr>`;
+    }
   }
 
   wrap.innerHTML = `
     <div class="info-banner">
-      <b>${TOTAL_DRAFT_ROUNDS} Runden</b> · 12 Teams${tradedCount ? ` · <b>${tradedCount}</b> getradete(r) 2026er-Pick(s) hervorgehoben` : ' · bislang keine getradeten 2026er-Picks'}.
-      Keeper werden von unten aufgefüllt: ein Team mit K Keepern belegt automatisch
-      die letzten K Runden seines eigenen Picks. Da niemand mehr als
-      <b>${MAX_KEEPERS} Keeper</b> haben kann, bleiben <b>Runde 1–5 für alle Teams offen</b>.
-      "Own" = Team besitzt diesen Pick noch selbst. Klick auf eine Zelle öffnet den Trade Analyzer.
-      ${hasOrder ? 'Draft ist <b>linear</b> (kein Snake) — dieselbe Reihenfolge in jeder Runde, Vorjahres-Champion pickt zuletzt.' : 'Die konkrete Pick-Reihenfolge (Slot 1–12) je Runde steht noch nicht fest.'}
+      ${hasResults
+        ? `<b>Draft abgeschlossen</b> (02.09.2026) · ${TOTAL_DRAFT_ROUNDS} Runden · 12 Teams. Gezeigt werden die echten Picks aus dem ESPN Draft Recap. 🔒 = Keeper-Pick. Getradete Picks zeigen das tatsächlich pickende Team. Klick auf eine Zelle öffnet den Trade Analyzer.`
+        : `<b>${TOTAL_DRAFT_ROUNDS} Runden</b> · 12 Teams · Keeper werden von unten aufgefüllt, bis der Draft läuft ist dies eine Hochrechnung. "Own" = Team besitzt diesen Pick noch selbst.`}
     </div>
     <div class="board-table-wrap">
       <table class="board board-compact">
@@ -520,7 +566,7 @@ function renderDraftboard() {
     </div>
     <div class="legend">
       <div class="legend-item"><span class="legend-swatch" style="background:var(--pick-own-bg);border:1px solid var(--pick-own-color)"></span> Keeper-Pick / getradeter Pick</div>
-      <div class="legend-item"><span class="legend-swatch" style="background:var(--pick-open-bg);border:1px solid var(--pick-open-color)"></span> Own (noch offener Pick)</div>
+      <div class="legend-item"><span class="legend-swatch" style="background:var(--pick-open-bg);border:1px solid var(--pick-open-color)"></span> ${hasResults ? 'Regulärer Draft-Pick' : 'Own (noch offener Pick)'}</div>
     </div>
   `;
 }
@@ -1609,8 +1655,153 @@ function renderStandings() {
   `;
 }
 
+/* ---------- Matchup Win%-Engine ---------- */
+// Ansatz: Summe der Projection der 9 Starter je Team, plus eine Streuungs-
+// annahme je Spieler (sigma), daraus per Normalverteilung eine Win%.
+// Keine ESPN-Wochenprojektion pro Spieler verfuegbar (nur Saison-Total in
+// PLAYER_PROJECTIONS) -- als woechentliche Baseline wird Saison-Projection
+// / 17 Spiele verwendet. Sobald PLAYER_SEASON_STATS (echte Wochenwerte)
+// genug Spiele fuer einen Spieler enthaelt, blendet der "Mix"-Modus
+// automatisch in Richtung dieser historischen Werte (Shrinkage), ohne
+// dass man manuell umschalten muss.
+const SEASON_GAMES_FOR_BASELINE = 17;
+const POSITION_SIGMA = { QB: 7, RB: 7.5, WR: 8, TE: 5.5, K: 3.5, DST: 4, 'D/ST': 4 };
+
+// Angenommene Standard-Lineup-Struktur (9 Starter). Falls eure Liga eine
+// andere Aufstellung faehrt (z.B. Superflex, 2x FLEX), bitte Bescheid
+// geben -- steht sonst nirgends in den ESPN-Sync-Daten und muss von Hand
+// gepflegt werden.
+const LINEUP_SLOTS_DEFAULT = [
+  { slot: 'QB',   pos: ['QB'],             count: 1 },
+  { slot: 'RB',   pos: ['RB'],             count: 2 },
+  { slot: 'WR',   pos: ['WR'],             count: 2 },
+  { slot: 'TE',   pos: ['TE'],             count: 1 },
+  { slot: 'FLEX', pos: ['RB', 'WR', 'TE'], count: 1 },
+  { slot: 'DST',  pos: ['DST', 'D/ST'],    count: 1 },
+  { slot: 'K',    pos: ['K'],              count: 1 },
+];
+
+function _seasonProjFor(name) {
+  if (typeof PLAYER_PROJECTIONS === 'undefined') return null;
+  const p = PLAYER_PROJECTIONS.players.find(x => x.name === name);
+  return p ? p.projectedPoints : null;
+}
+function _historicalStatsFor(name) {
+  if (typeof PLAYER_SEASON_STATS === 'undefined') return null;
+  const p = PLAYER_SEASON_STATS.players.find(x => x.name === name);
+  if (!p || !p.gamesPlayed) return null;
+  const vals = Object.values(p.weeklyPoints || {});
+  if (!vals.length) return null;
+  const mean = vals.reduce((a, b) => a + b, 0) / vals.length;
+  const variance = vals.length > 1
+    ? vals.reduce((s, v) => s + (v - mean) * (v - mean), 0) / (vals.length - 1)
+    : null;
+  return { mean, sigma: variance != null ? Math.sqrt(variance) : null, games: vals.length };
+}
+
+/* Liefert {mean, sigma} fuer EINE Woche eines Spielers, je nach gewaehltem
+   Modus. 'proj' = reine Projection, 'hist' = reine historische Wochenwerte
+   (faellt auf Projection zurueck, wenn noch keine Spiele da sind), 'mix' =
+   Shrinkage-Blend, der mit mehr gespielten Wochen automatisch staerker auf
+   historisch wechselt. */
+function playerWeekMeanSigma(name, pos, mode) {
+  const posKey = (pos || '').split('/')[0].toUpperCase();
+  const sigmaBase = POSITION_SIGMA[posKey] ?? POSITION_SIGMA[pos] ?? 6;
+  const seasonProj = _seasonProjFor(name);
+  const projMean = seasonProj != null ? seasonProj / SEASON_GAMES_FOR_BASELINE : null;
+  const hist = _historicalStatsFor(name);
+
+  if (mode === 'hist') {
+    if (hist) return { mean: hist.mean, sigma: hist.sigma ?? sigmaBase, source: 'hist' };
+    return projMean != null ? { mean: projMean, sigma: sigmaBase, source: 'proj-fallback' } : { mean: 8, sigma: sigmaBase, source: 'default' };
+  }
+  if (mode === 'proj') {
+    return projMean != null ? { mean: projMean, sigma: sigmaBase, source: 'proj' } : { mean: 8, sigma: sigmaBase, source: 'default' };
+  }
+  // mix (Standard): Gewicht Richtung historisch waechst mit Anzahl gespielter
+  // Wochen (haelftiger Zug bei ca. 3 Spielen), Projection bleibt Basis.
+  const baseMean = projMean != null ? projMean : 8;
+  if (!hist) return { mean: baseMean, sigma: sigmaBase, source: 'proj' };
+  const w = hist.games / (hist.games + 3);
+  const mean = w * hist.mean + (1 - w) * baseMean;
+  const sigma = w * (hist.sigma ?? sigmaBase) + (1 - w) * sigmaBase;
+  return { mean, sigma, source: `mix (${hist.games} Wo.)` };
+}
+
+function _rosterForTeamProjection(team) {
+  const live = (typeof ROSTERS_LIVE !== 'undefined') ? ROSTERS_LIVE[team.id] : null;
+  if (live && live.length) return live.map(p => ({ name: p.name, pos: p.pos, isStarter: p.isStarter === true }));
+  const dt = (typeof DRAFT_2026_TEAMS !== 'undefined') ? DRAFT_2026_TEAMS.find(x => x.team === team.name) : null;
+  return dt ? dt.keepers.map(p => ({ name: p.name, pos: p.pos, isStarter: null })) : [];
+}
+
+/* Greedy-Optimallineup: Slots nach "am wenigsten flexibel zuerst" befuellen
+   (K, DST, TE, QB, RB, WR, dann FLEX), an jedem Slot den best-projizierten
+   noch verfuegbaren passenden Spieler nehmen. Fuer 9 Slots reicht Greedy
+   in der Praxis nahezu immer fuer das echte Optimum. */
+function _optimalLineup(players, mode) {
+  const withProj = players.map(p => ({ ...p, ms: playerWeekMeanSigma(p.name, p.pos, mode) }));
+  const remaining = withProj.slice();
+  const slotOrder = ['K', 'DST', 'TE', 'QB', 'RB', 'WR', 'FLEX'];
+  const bySlot = {};
+  LINEUP_SLOTS_DEFAULT.forEach(s => { bySlot[s.slot] = s; });
+  const chosen = [];
+  slotOrder.forEach(slotName => {
+    const def = bySlot[slotName];
+    for (let i = 0; i < def.count; i++) {
+      const posKey = p => (p.pos || '').split('/')[0].toUpperCase();
+      const eligible = remaining.filter(p => def.pos.includes(posKey(p)) || def.pos.includes(p.pos));
+      if (!eligible.length) continue;
+      eligible.sort((a, b) => b.ms.mean - a.ms.mean);
+      const pick = eligible[0];
+      chosen.push(pick);
+      remaining.splice(remaining.indexOf(pick), 1);
+    }
+  });
+  return chosen;
+}
+
+function _currentLineup(players, mode) {
+  const starters = players.filter(p => p.isStarter === true);
+  if (starters.length) return starters.map(p => ({ ...p, ms: playerWeekMeanSigma(p.name, p.pos, mode) }));
+  return null; // keine Live-Lineup-Info -> Aufrufer soll auf Optimal zurueckfallen
+}
+
+/* Team-Projektion fuer eine Woche: Summe der Means, sigma als Wurzel der
+   Summe der Varianzen (Annahme: Spieler-Performance unabhaengig). */
+function teamWeekProjection(team, mode, lineupType) {
+  const players = _rosterForTeamProjection(team);
+  let starters = lineupType === 'current' ? _currentLineup(players, mode) : null;
+  let usedOptimal = false;
+  if (!starters) { starters = _optimalLineup(players, mode); usedOptimal = true; }
+  const mean = starters.reduce((s, p) => s + p.ms.mean, 0);
+  const variance = starters.reduce((s, p) => s + p.ms.sigma * p.ms.sigma, 0);
+  return { mean, sigma: Math.sqrt(variance), starters, usedOptimal };
+}
+
+// Standardnormalverteilung (Abramowitz-Stegun-Approximation der Fehlerfunktion).
+function _erf(x) {
+  const sign = x < 0 ? -1 : 1; x = Math.abs(x);
+  const a1 = 0.254829592, a2 = -0.284496736, a3 = 1.421413741, a4 = -1.453152027, a5 = 1.061405429, p = 0.3275911;
+  const t = 1 / (1 + p * x);
+  const y = 1 - (((((a5 * t + a4) * t) + a3) * t + a2) * t + a1) * t * Math.exp(-x * x);
+  return sign * y;
+}
+function _normalCdf(z) { return 0.5 * (1 + _erf(z / Math.SQRT2)); }
+
+/* Win% von Team A gegen Team B in einer Woche, aus den beiden (unabhaengig
+   angenommenen) Normalverteilungen ihrer projizierten Punktzahl. */
+function matchupWinPct(teamA, teamB, mode, lineupType) {
+  const a = teamWeekProjection(teamA, mode, lineupType);
+  const b = teamWeekProjection(teamB, mode, lineupType);
+  const diffMean = a.mean - b.mean;
+  const diffSigma = Math.sqrt(a.sigma * a.sigma + b.sigma * b.sigma) || 1;
+  const winA = _normalCdf(diffMean / diffSigma);
+  return { a, b, winA, winB: 1 - winA };
+}
+
 /* ---------- Matchup Planner (Spielplan) ---------- */
-let matchupsState = { week: null };
+let matchupsState = { week: null, lineup: 'current', mode: 'mix' };
 
 function renderMatchups() {
   const wrap = document.getElementById('matchupsContent');
@@ -1634,17 +1825,39 @@ function renderMatchups() {
   const scoresThisWeek = {};
   (WEEKLY_SCORES[season]?.[week] || []).forEach(e => { scoresThisWeek[e.teamId] = e.points; });
   const played = Object.keys(scoresThisWeek).length > 0;
+  const canProject = typeof PLAYER_PROJECTIONS !== 'undefined';
 
   const matchups = SCHEDULE[season][week] || [];
 
   wrap.innerHTML = `
     <div class="db-controls"><div class="db-pos-filters" id="matchupsWeekSelector"></div></div>
-    <div class="info-banner">${played ? `Ergebnisse für Woche ${week} liegen vor.` : `Woche ${week} noch nicht gespielt — nur Paarungen.`}</div>
+    ${canProject && !played ? `
+      <div class="db-controls" style="margin-top:8px">
+        <div class="db-pos-filters" id="matchupsLineupSelector"></div>
+        <div class="db-pos-filters" id="matchupsModeSelector"></div>
+      </div>` : ''}
+    <div class="info-banner">${played ? `Ergebnisse für Woche ${week} liegen vor.` : (canProject ? `Woche ${week} noch nicht gespielt — Win% aus Projektion der 9 Starter (${matchupsState.lineup === 'optimal' ? 'Optimal-Lineup' : 'aktuelles Lineup'}, Datenmodus: ${{ proj: 'reine Projektionen', hist: 'historische Wochenwerte', mix: 'Mix (lernt über die Saison dazu)' }[matchupsState.mode]}).` : `Woche ${week} noch nicht gespielt — nur Paarungen.`)}</div>
     <div class="matchup-grid">
       ${matchups.map(m => {
         const home = teamMeta(m.home), away = teamMeta(m.away);
         const hs = scoresThisWeek[m.home], as = scoresThisWeek[m.away];
         const homeWin = played && hs > as, awayWin = played && as > hs;
+
+        let projHtml = '';
+        if (!played && canProject) {
+          const wp = matchupWinPct(home, away, matchupsState.mode, matchupsState.lineup);
+          const homePct = Math.round(wp.winA * 100), awayPct = 100 - Math.round(wp.winA * 100);
+          projHtml = `
+            <div class="matchup-projbar">
+              <div class="matchup-projbar-fill" style="width:${homePct}%"></div>
+            </div>
+            <div class="matchup-projpcts">
+              <span class="${homePct >= awayPct ? 'matchup-pct-lead' : ''}">${homePct}%</span>
+              <span class="matchup-projmeans">${wp.a.mean.toFixed(1)} proj. vs ${wp.b.mean.toFixed(1)} proj.</span>
+              <span class="${awayPct > homePct ? 'matchup-pct-lead' : ''}">${awayPct}%</span>
+            </div>`;
+        }
+
         return `
           <div class="matchup-card">
             <div class="matchup-team${homeWin ? ' matchup-winner' : ''}">
@@ -1656,6 +1869,7 @@ function renderMatchups() {
               <span>${away.emoji || ''} ${away.name}</span>
               <span class="matchup-score">${played ? as.toFixed(1) : ''}</span>
             </div>
+            ${projHtml}
           </div>`;
       }).join('')}
     </div>
@@ -1670,6 +1884,25 @@ function renderMatchups() {
     btn.onclick = () => { matchupsState.week = w; renderMatchups(); };
     sel.appendChild(btn);
   });
+
+  if (canProject && !played) {
+    const lineupSel = document.getElementById('matchupsLineupSelector');
+    [['current', 'Aktuelles Lineup'], ['optimal', 'Optimal-Lineup']].forEach(([val, label]) => {
+      const btn = document.createElement('button');
+      btn.className = 'db-pos-btn' + (matchupsState.lineup === val ? ' active' : '');
+      btn.textContent = label;
+      btn.onclick = () => { matchupsState.lineup = val; renderMatchups(); };
+      lineupSel.appendChild(btn);
+    });
+    const modeSel = document.getElementById('matchupsModeSelector');
+    [['proj', 'Projektionen'], ['hist', 'Historisch'], ['mix', 'Mix']].forEach(([val, label]) => {
+      const btn = document.createElement('button');
+      btn.className = 'db-pos-btn' + (matchupsState.mode === val ? ' active' : '');
+      btn.textContent = label;
+      btn.onclick = () => { matchupsState.mode = val; renderMatchups(); };
+      modeSel.appendChild(btn);
+    });
+  }
 }
 
 /* ---------- Liga-Beiträge (manuell gepflegt, Auto-Ableitung aus FUTURE_PICKS) ---------- */

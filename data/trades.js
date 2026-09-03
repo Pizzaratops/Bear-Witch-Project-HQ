@@ -83,6 +83,11 @@ const TRADED_PICKS_2026 = [
   { round: 1, from: "Running Bisons", owner: "The Bear Witch Project" },
   { round: 2, from: "The Bear Witch Project", owner: "Running Bisons" },
   { round: 4, from: "The Bear Witch Project", owner: "Angry Ducks" },
+  // NEU (erkannt 03.09.2026 aus dem ESPN Draft Recap, war vorher nicht im
+  // Ledger -- Beastmode pickte mit BWPs Slot 8 in Runde 6 Keaton Mitchell,
+  // der jetzt im Bear-Witch-Project-Kader steht. Details des Gegen-Trades
+  // (was BWP im Gegenzug gegeben hat) bitte noch ergaenzen, falls gewuenscht.
+  { round: 6, from: "Beastmode", owner: "The Bear Witch Project" },
 ];
 
 // Verdichtete Sicht je Zukunftsjahr: nur Picks, die tatsaechlich den
