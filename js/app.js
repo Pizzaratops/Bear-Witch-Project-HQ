@@ -1679,7 +1679,16 @@ function _serverSnapshot(week, teamId) {
 function saveMatchupSnapshot(week, teamId, teamProj, force) {
   if (!_hasStorage()) return false;
   const key = _snapshotKey(week, teamId);
-  if (!force && (localStorage.getItem(key) || _serverSnapshot(week, teamId))) return false; // nicht ueberschreiben, ausser explizit gewuenscht
+  const existingLocalRaw = localStorage.getItem(key);
+  const existingLocal = existingLocalRaw ? JSON.parse(existingLocalRaw) : null;
+  // Automatische (nicht-manuelle) Aufrufe speichern nur, wenn NOCH GAR NICHTS
+  // vorliegt (weder lokal noch Server) -- sie sollen einen spaeter
+  // eintreffenden Server-Snapshot nicht dauerhaft ueberdecken. Der manuelle
+  // "Snapshot jetzt sichern"-Button (force=true) darf dagegen immer
+  // ueberschreiben, das ist ja der Zweck des Buttons.
+  if (!force) {
+    if (existingLocal || _serverSnapshot(week, teamId)) return false;
+  }
   const payload = {
     capturedAt: new Date().toISOString(),
     lineup: matchupsState.lineup, mode: matchupsState.mode,
@@ -1691,18 +1700,26 @@ function saveMatchupSnapshot(week, teamId, teamProj, force) {
       mean: s.player ? Math.round(s.player.ms.mean * 10) / 10 : null,
     })),
     source: 'local',
+    manual: !!force,
   };
   try { localStorage.setItem(key, JSON.stringify(payload)); return true; } catch (e) { return false; }
 }
 function loadMatchupSnapshot(week, teamId) {
+  let local = null;
   if (_hasStorage()) {
     try {
       const raw = localStorage.getItem(_snapshotKey(week, teamId));
-      if (raw) return JSON.parse(raw); // lokal vorhanden (Fallback-Fuellung oder bewusstes Override) -> hat Vorrang
+      if (raw) local = JSON.parse(raw);
     } catch (e) { /* ignore */ }
   }
+  // Ein bewusst manuell gesetzter lokaler Snapshot (Button) hat immer
+  // Vorrang. Sonst gewinnt der Server-Snapshot (geraeteunabhaengig,
+  // Standardfall). Nur wenn beides fehlt, wird ein automatisch
+  // gespeicherter lokaler Snapshot als Fallback genutzt.
+  if (local && local.manual) return local;
   const server = _serverSnapshot(week, teamId);
-  return server ? { ...server, source: 'server' } : null;
+  if (server) return { ...server, source: 'server' };
+  return local;
 }
 
 /* Sammelt ueber ALLE Snapshots (Server + lokal), deren Woche inzwischen
@@ -1879,7 +1896,7 @@ function renderMatchupDetail() {
       </div>`);
   }
 
-  const snapSourceLabel = snap => snap.source === 'server' ? 'automatisch (Server)' : 'lokal auf diesem Gerät';
+  const snapSourceLabel = snap => snap.manual ? 'manuell überschrieben' : (snap.source === 'server' ? 'automatisch (Server)' : 'lokal, vorläufig (noch kein Server-Snapshot)');
   let subLine;
   if (played) {
     const refSnap = homeSnap || awaySnap;
@@ -1911,7 +1928,7 @@ function renderMatchupDetail() {
       </div>
     </div>
     <div class="page-sub" style="text-align:center;margin:6px 0 14px">${subLine}</div>
-    ${!played ? `<div style="text-align:center;margin-bottom:12px"><button class="db-pos-btn" onclick="_manualSnapshot()">📸 Snapshot jetzt (neu) sichern</button></div>` : ''}
+    ${!played ? `<div style="text-align:center;margin-bottom:12px"><button class="db-pos-btn" onclick="_manualSnapshot()">📸 Eigenen Snapshot erzwingen (überschreibt Server-Wert)</button></div>` : ''}
     <div class="mdt-rows">${rows.join('')}</div>
   `;
 }
