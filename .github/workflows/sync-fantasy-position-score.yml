@@ -1,0 +1,48 @@
+name: Fantasy Power Score Sync
+
+# Fantasy-Pendant zur Bootleg-Power-Score-Sync (Spinnennetz für die
+# eigene 12-Team-Liga statt 32 NFL-Teams): Points Scored/Allowed +
+# Points by QB/RB/WR/TE je Team, kumulativ und pro Woche isoliert.
+#
+# Braucht ESPN_S2/SWID wie die anderen ESPN-Syncs (privater Fantasy-
+# Endpoint, nicht die oeffentliche Sport-API). Laeuft NACH dem
+# Weekly-Scores-Sync (selber Zeitplan, 9 & 21 Uhr Berlin), damit
+# data/weekly-scores.js schon aktuell ist, wenn dieses Script startet.
+#
+# Schreibt nichts, solange keine Woche gespielt ist -- Commit-Schritt
+# greift dann einfach nicht.
+
+on:
+  schedule:
+    - cron: "10 7 * * *"    # 09:10 Berlin (Sommerzeit) -- 10 Min nach Weekly-Scores-Sync
+    - cron: "10 8 * * *"    # 09:10 Berlin (Winterzeit)
+    - cron: "10 19 * * *"   # 21:10 Berlin (Sommerzeit)
+    - cron: "10 20 * * *"   # 21:10 Berlin (Winterzeit)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Fantasy Power Score Sync
+        env:
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          SWID: ${{ secrets.SWID }}
+        run: node scripts/sync-fantasy-position-score.js
+
+      - name: Commit & Push falls geändert
+        run: |
+          git config user.name "bear-witch-project-hq-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/fantasy-power-score.js
+          git diff --cached --quiet || git commit -m "chore: fantasy power score sync"
+          git push

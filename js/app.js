@@ -271,7 +271,7 @@ function renderRoster(teamId) {
     return;
   }
 
-  let html = '';
+  let html = renderFantasyPowerScoreSection(team.id);
 
   if (fullRoster && fullRoster.length) {
     html += `
@@ -300,6 +300,7 @@ function renderRoster(teamId) {
   }
 
   wrap.innerHTML = html + renderTeamPicksSection(team, draftTeam);
+  wireFantasyPowerScoreControls(team.id);
 }
 
 function renderTeamPicksSection(team, draftTeam) {
@@ -2712,6 +2713,182 @@ function renderNflTeamHistory(season, weeks, teamAbbr) {
       </table>
     </div>`;
 }
+
+/* ---------- Fantasy Power Score (Spinnennetz fürs eigene Fantasy-Team) ---------- */
+// Analog zu renderBootlegPowerScoreSection/_drawBootlegChart oben, aber
+// für die eigene 12-Team-Liga statt NFL (Rang 1-12 statt 1-32). Quelle:
+// data/fantasy-power-score.js, siehe scripts/sync-fantasy-position-score.js.
+let fantasyBootlegChart = null;
+let fantasyBootlegState = { week: null, mode: 'cumulative', valueFormat: 'avg' };
+
+function renderFantasyPowerScoreSection(teamId) {
+  const fps = (typeof FANTASY_POWER_SCORE !== 'undefined') ? FANTASY_POWER_SCORE : null;
+  if (!fps || !fps.weeks || !Object.keys(fps.weeks).length) {
+    return `<div class="info-banner" style="margin-bottom:16px">🎯 <b>Bootleg Power Score</b> noch nicht verfügbar — braucht mindestens eine gespielte Woche.</div>`;
+  }
+  const weeks = Object.keys(fps.weeks).map(Number).sort((a, b) => a - b);
+  const week = fantasyBootlegState.week && weeks.includes(fantasyBootlegState.week) ? fantasyBootlegState.week : weeks[weeks.length - 1];
+  fantasyBootlegState.week = week;
+
+  return `
+    <div class="bootleg-box">
+      <div class="bootleg-title">🎯 Bootleg Power Score</div>
+      <div class="db-controls">
+        <span style="font-size:12px;color:var(--muted);font-weight:700">Ansicht:</span>
+        <div class="db-pos-filters" id="fpsModeSelector"></div>
+        <div class="db-pos-filters" id="fpsWeekSelector"></div>
+      </div>
+      <div class="db-controls" style="margin-top:4px">
+        <span style="font-size:12px;color:var(--muted);font-weight:700">Anzeige:</span>
+        <div class="db-pos-filters" id="fpsValueFormatSelector"></div>
+      </div>
+      <div class="bootleg-chart-wrap">
+        <canvas id="fpsCanvas"></canvas>
+      </div>
+      <div class="page-sub" id="fpsLegend" style="margin-top:10px"></div>
+    </div>`;
+}
+
+function wireFantasyPowerScoreControls(teamId) {
+  const fps = (typeof FANTASY_POWER_SCORE !== 'undefined') ? FANTASY_POWER_SCORE : null;
+  if (!fps || !fps.weeks || !Object.keys(fps.weeks).length) return;
+  const weeks = Object.keys(fps.weeks).map(Number).sort((a, b) => a - b);
+
+  const modeSel = document.getElementById('fpsModeSelector');
+  [['cumulative', 'Kumulativ bis Woche'], ['weekly', 'Nur diese Woche']].forEach(([key, label]) => {
+    const btn = document.createElement('button');
+    btn.className = 'db-pos-btn' + (fantasyBootlegState.mode === key ? ' active' : '');
+    btn.textContent = label;
+    btn.onclick = () => { fantasyBootlegState.mode = key; _drawFantasyBootlegChart(teamId); _syncFpsControlsActive(); };
+    modeSel.appendChild(btn);
+  });
+
+  const weekSel = document.getElementById('fpsWeekSelector');
+  weeks.forEach(w => {
+    const btn = document.createElement('button');
+    btn.className = 'db-pos-btn' + (fantasyBootlegState.week === w ? ' active' : '');
+    btn.textContent = 'Woche ' + w;
+    btn.onclick = () => { fantasyBootlegState.week = w; _drawFantasyBootlegChart(teamId); _syncFpsControlsActive(); };
+    weekSel.appendChild(btn);
+  });
+
+  const valSel = document.getElementById('fpsValueFormatSelector');
+  [['avg', 'Ø pro Woche'], ['total', 'Gesamt']].forEach(([key, label]) => {
+    const btn = document.createElement('button');
+    btn.className = 'db-pos-btn' + (fantasyBootlegState.valueFormat === key ? ' active' : '');
+    btn.textContent = label;
+    btn.onclick = () => { fantasyBootlegState.valueFormat = key; _drawFantasyBootlegChart(teamId); _syncFpsControlsActive(); };
+    valSel.appendChild(btn);
+  });
+
+  _drawFantasyBootlegChart(teamId);
+}
+
+function _syncFpsControlsActive() {
+  document.querySelectorAll('#fpsModeSelector .db-pos-btn').forEach((btn, i) => {
+    btn.classList.toggle('active', (i === 0) === (fantasyBootlegState.mode === 'cumulative'));
+  });
+  document.querySelectorAll('#fpsWeekSelector .db-pos-btn').forEach(btn => {
+    btn.classList.toggle('active', parseInt(btn.textContent.replace('Woche ', ''), 10) === fantasyBootlegState.week);
+  });
+  document.querySelectorAll('#fpsValueFormatSelector .db-pos-btn').forEach((btn, i) => {
+    btn.classList.toggle('active', (i === 0) === (fantasyBootlegState.valueFormat === 'avg'));
+  });
+}
+
+function _drawFantasyBootlegChart(teamId) {
+  if (fantasyBootlegChart) { fantasyBootlegChart.destroy(); fantasyBootlegChart = null; }
+  const canvas = document.getElementById('fpsCanvas');
+  if (!canvas || typeof Chart === 'undefined') return;
+
+  const fps = FANTASY_POWER_SCORE;
+  const week = fantasyBootlegState.week;
+  const mode = fantasyBootlegState.mode;
+  const valueFormat = fantasyBootlegState.valueFormat;
+  const weekData = fps.weeks[week];
+  const list = mode === 'weekly' ? weekData.weekly : weekData.cumulative;
+  const categories = fps.categories;
+  const entry = list.find(t => t.teamId === teamId);
+  const gamesPlayed = mode === 'cumulative' ? (entry?.gamesPlayed || week) : 1;
+  const legend = document.getElementById('fpsLegend');
+
+  if (!entry || categories.every(c => entry.ranks[c.key] == null)) {
+    if (legend) legend.innerHTML = 'Für diese Woche liegen noch keine Werte vor.';
+    return;
+  }
+
+  const dataPoints = categories.map(c => entry.ranks[c.key] != null ? 13 - entry.ranks[c.key] : null); // 12 Teams -> 13-Rang
+  const labels = categories.map(c => c.label);
+
+  const styles = getComputedStyle(document.body);
+  const textColor = styles.getPropertyValue('--text') || '#333';
+  const borderColor = styles.getPropertyValue('--border') || '#ddd';
+  const accentColor = (styles.getPropertyValue('--accent2') || styles.getPropertyValue('--accent') || '#4a90e0').trim();
+
+  function hexToRgba(hex, alpha) {
+    hex = hex.trim().replace('#', '');
+    if (hex.length === 3) hex = hex.split('').map(c => c + c).join('');
+    const r = parseInt(hex.slice(0, 2), 16), g = parseInt(hex.slice(2, 4), 16), b = parseInt(hex.slice(4, 6), 16);
+    return `rgba(${r || 74},${g || 144},${b || 224},${alpha})`;
+  }
+
+  const ctx = canvas.getContext('2d');
+  fantasyBootlegChart = new Chart(ctx, {
+    type: 'radar',
+    data: {
+      labels,
+      datasets: [{
+        label: mode === 'weekly' ? `Woche ${week}` : `Kumulativ bis Woche ${week}`,
+        data: dataPoints,
+        borderColor: accentColor,
+        backgroundColor: hexToRgba(accentColor, 0.25),
+        pointBackgroundColor: accentColor,
+        pointBorderColor: styles.getPropertyValue('--surface') || '#fff',
+        pointRadius: 5, pointHoverRadius: 7, borderWidth: 2.5, spanGaps: false,
+      }],
+    },
+    options: {
+      responsive: true, maintainAspectRatio: true, aspectRatio: 1.3,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: styles.getPropertyValue('--surface2') || '#fff',
+          borderColor, borderWidth: 1, titleColor: textColor, bodyColor: accentColor, padding: 12,
+          callbacks: {
+            label: c => {
+              const cat = categories[c.dataIndex];
+              const r = entry.ranks[cat.key];
+              const v = entry.values[cat.key];
+              if (r == null) return 'Kein Wert';
+              const shown = valueFormat === 'total' && mode === 'cumulative' ? round1(v * gamesPlayed) : v;
+              const label = valueFormat === 'total' && mode === 'cumulative' ? 'Gesamt' : cat.unit;
+              return `Rang ${r} von 12 (${shown} ${label})`;
+            },
+          },
+        },
+      },
+      scales: {
+        r: {
+          min: 0, max: 12,
+          ticks: { display: false, stepSize: 3 },
+          grid: { color: borderColor }, angleLines: { color: borderColor },
+          pointLabels: { color: textColor, font: { size: 11, weight: '700' } },
+        },
+      },
+    },
+  });
+
+  if (legend) {
+    legend.innerHTML = categories.map(c => {
+      const r = entry.ranks[c.key];
+      const v = entry.values[c.key];
+      const shown = valueFormat === 'total' && mode === 'cumulative' && v != null ? round1(v * gamesPlayed) : v;
+      const label = valueFormat === 'total' && mode === 'cumulative' ? 'Gesamt' : c.unit;
+      return `<span style="display:inline-block;margin:2px 10px 2px 0"><b>${c.label}:</b> ${r != null ? `#${r}` : '—'} <span style="color:var(--muted)">(${shown != null ? shown : '—'} ${label})</span></span>`;
+    }).join('');
+  }
+}
+function round1(n) { return Math.round(n * 10) / 10; }
 
 /* ---------- Bootleg Power Score (Spinnennetz, 6 Kategorien) ---------- */
 // Datengestützt ausgewählte 6 Kategorien (siehe Kommentarkopf in
