@@ -2553,8 +2553,9 @@ function renderNflRankings() {
     </div>`;
 
   if (team) {
-    wrap.innerHTML = teamSelectorHtml + renderNflTeamHistory(season, weeks, team);
+    wrap.innerHTML = teamSelectorHtml + renderBootlegPowerScoreSection(season, team) + renderNflTeamHistory(season, weeks, team);
     document.getElementById('nflTeamSelector').onchange = e => { nflRankingsState.team = e.target.value; renderNflRankings(); };
+    wireBootlegPowerScoreControls(season, team);
     return;
   }
 
@@ -2710,6 +2711,178 @@ function renderNflTeamHistory(season, weeks, teamAbbr) {
         <tbody>${rows}</tbody>
       </table>
     </div>`;
+}
+
+/* ---------- Bootleg Power Score (Spinnennetz, 6 Kategorien) ---------- */
+// Datengestützt ausgewählte 6 Kategorien (siehe Kommentarkopf in
+// scripts/sync-nfl-power-score.js für die Korrelationsanalyse gegen
+// echte Season-Siege 2021-2025, die zur Auswahl geführt hat). Zeigt je
+// Kategorie den Liga-Rang (1-32) als Spinnennetz -- Rang 1 immer aussen,
+// unabhängig davon ob die zugrundeliegende Kennzahl "hoch=gut" oder
+// "niedrig=gut" ist (das übernimmt schon der Sync, siehe "ranks").
+let bootlegChart = null;
+
+function renderBootlegPowerScoreSection(season, teamAbbr) {
+  const psSeason = (typeof NFL_POWER_SCORE !== 'undefined') ? NFL_POWER_SCORE[season] : null;
+  if (!psSeason || !Object.keys(psSeason.weeks || {}).length) {
+    return `<div class="info-banner" style="margin-bottom:16px">🎯 <b>Bootleg Power Score</b> noch nicht verfügbar — braucht mindestens eine gespielte Woche der Season ${season}.</div>`;
+  }
+  const weeks = Object.keys(psSeason.weeks).map(Number).sort((a, b) => a - b);
+  const week = nflRankingsState.radarWeek && weeks.includes(nflRankingsState.radarWeek) ? nflRankingsState.radarWeek : weeks[weeks.length - 1];
+  const mode = nflRankingsState.radarMode || 'cumulative';
+  nflRankingsState.radarWeek = week;
+  nflRankingsState.radarMode = mode;
+
+  const anyWeek = Object.keys(NFL_STANDINGS[season] || {})[0];
+  const meta = anyWeek ? (NFL_STANDINGS[season][anyWeek] || []).find(t => t.abbr === teamAbbr) : null;
+
+  return `
+    <div class="bootleg-box">
+      <div class="bootleg-title">🎯 Bootleg Power Score — ${meta ? meta.name : teamAbbr}</div>
+      <div class="db-controls">
+        <span style="font-size:12px;color:var(--muted);font-weight:700">Ansicht:</span>
+        <div class="db-pos-filters" id="bootlegModeSelector"></div>
+        <div class="db-pos-filters" id="bootlegWeekSelector"></div>
+      </div>
+      <div class="bootleg-chart-wrap">
+        <canvas id="bootlegCanvas"></canvas>
+      </div>
+      <div class="page-sub" id="bootlegLegend" style="margin-top:10px"></div>
+    </div>`;
+}
+
+function wireBootlegPowerScoreControls(season, teamAbbr) {
+  const psSeason = (typeof NFL_POWER_SCORE !== 'undefined') ? NFL_POWER_SCORE[season] : null;
+  if (!psSeason || !Object.keys(psSeason.weeks || {}).length) return;
+  const weeks = Object.keys(psSeason.weeks).map(Number).sort((a, b) => a - b);
+
+  const modeSel = document.getElementById('bootlegModeSelector');
+  [['cumulative', 'Kumulativ bis Woche'], ['weekly', 'Nur diese Woche']].forEach(([key, label]) => {
+    const btn = document.createElement('button');
+    btn.className = 'db-pos-btn' + (nflRankingsState.radarMode === key ? ' active' : '');
+    btn.textContent = label;
+    btn.onclick = () => { nflRankingsState.radarMode = key; _drawBootlegChart(season, teamAbbr); _updateBootlegControlsActiveState(); };
+    modeSel.appendChild(btn);
+  });
+
+  const weekSel = document.getElementById('bootlegWeekSelector');
+  weeks.forEach(w => {
+    const btn = document.createElement('button');
+    btn.className = 'db-pos-btn' + (nflRankingsState.radarWeek === w ? ' active' : '');
+    btn.textContent = 'Woche ' + w;
+    btn.onclick = () => { nflRankingsState.radarWeek = w; _drawBootlegChart(season, teamAbbr); _updateBootlegControlsActiveState(); };
+    weekSel.appendChild(btn);
+  });
+
+  _drawBootlegChart(season, teamAbbr);
+}
+
+function _updateBootlegControlsActiveState() {
+  document.querySelectorAll('#bootlegModeSelector .db-pos-btn').forEach((btn, i) => {
+    btn.classList.toggle('active', (i === 0) === (nflRankingsState.radarMode === 'cumulative'));
+  });
+  document.querySelectorAll('#bootlegWeekSelector .db-pos-btn').forEach(btn => {
+    const w = parseInt(btn.textContent.replace('Woche ', ''), 10);
+    btn.classList.toggle('active', w === nflRankingsState.radarWeek);
+  });
+}
+
+function _drawBootlegChart(season, teamAbbr) {
+  if (bootlegChart) { bootlegChart.destroy(); bootlegChart = null; }
+  const canvas = document.getElementById('bootlegCanvas');
+  if (!canvas || typeof Chart === 'undefined') return;
+
+  const psSeason = NFL_POWER_SCORE[season];
+  const week = nflRankingsState.radarWeek;
+  const mode = nflRankingsState.radarMode || 'cumulative';
+  const weekData = psSeason.weeks[week];
+  const list = mode === 'weekly' ? weekData.weekly : weekData.cumulative;
+  const categories = psSeason.categories;
+  const entry = list.find(t => t.abbr === teamAbbr);
+  const legend = document.getElementById('bootlegLegend');
+
+  if (!entry || categories.every(c => entry.ranks[c.key] == null)) {
+    if (legend) legend.innerHTML = mode === 'weekly'
+      ? `Kein Spiel in Woche ${week} (Bye-Week) — andere Woche wählen.`
+      : `Für diese Woche liegen noch keine Werte vor.`;
+    return;
+  }
+
+  // Rang 1 = aussen (33 - Rang), damit "besser" visuell immer nach aussen zeigt.
+  const dataPoints = categories.map(c => entry.ranks[c.key] != null ? 33 - entry.ranks[c.key] : null);
+  const labels = categories.map(c => c.label);
+
+  const styles = getComputedStyle(document.body);
+  const textColor = styles.getPropertyValue('--text') || '#333';
+  const mutedColor = styles.getPropertyValue('--muted') || '#888';
+  const borderColor = styles.getPropertyValue('--border') || '#ddd';
+  const accentColor = (styles.getPropertyValue('--accent') || '#e0794a').trim();
+
+  function hexToRgba(hex, alpha) {
+    hex = hex.trim().replace('#', '');
+    if (hex.length === 3) hex = hex.split('').map(c => c + c).join('');
+    const r = parseInt(hex.slice(0, 2), 16), g = parseInt(hex.slice(2, 4), 16), b = parseInt(hex.slice(4, 6), 16);
+    return `rgba(${r || 224},${g || 121},${b || 74},${alpha})`;
+  }
+
+  const ctx = canvas.getContext('2d');
+  bootlegChart = new Chart(ctx, {
+    type: 'radar',
+    data: {
+      labels,
+      datasets: [{
+        label: mode === 'weekly' ? `Woche ${week}` : `Kumulativ bis Woche ${week}`,
+        data: dataPoints,
+        borderColor: accentColor,
+        backgroundColor: hexToRgba(accentColor, 0.25),
+        pointBackgroundColor: accentColor,
+        pointBorderColor: styles.getPropertyValue('--surface') || '#fff',
+        pointRadius: 5,
+        pointHoverRadius: 7,
+        borderWidth: 2.5,
+        spanGaps: false,
+      }],
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: true,
+      aspectRatio: 1.3,
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          backgroundColor: styles.getPropertyValue('--surface2') || '#fff',
+          borderColor, borderWidth: 1,
+          titleColor: textColor, bodyColor: accentColor, padding: 12,
+          callbacks: {
+            label: c => {
+              const cat = categories[c.dataIndex];
+              const r = entry.ranks[cat.key];
+              const v = entry.values[cat.key];
+              if (r == null) return 'Kein Wert';
+              return `Rang ${r} von 32 (${v} ${cat.unit})`;
+            },
+          },
+        },
+      },
+      scales: {
+        r: {
+          min: 0, max: 32,
+          ticks: { display: false, stepSize: 8 },
+          grid: { color: borderColor },
+          angleLines: { color: borderColor },
+          pointLabels: { color: textColor, font: { size: 11, weight: '700' } },
+        },
+      },
+    },
+  });
+
+  if (legend) {
+    legend.innerHTML = categories.map(c => {
+      const r = entry.ranks[c.key];
+      const v = entry.values[c.key];
+      return `<span style="display:inline-block;margin:2px 10px 2px 0"><b>${c.label}:</b> ${r != null ? `#${r}` : '—'} <span style="color:var(--muted)">(${v != null ? v : '—'} ${c.unit})</span></span>`;
+    }).join('');
+  }
 }
 
 /* ---------- Owner-Lookup (welches Team besitzt welchen Spieler) ---------- */

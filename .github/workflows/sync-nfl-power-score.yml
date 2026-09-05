@@ -1,0 +1,44 @@
+name: Bootleg Power Score Sync
+
+# Berechnet den 6-Kategorien "Bootleg Power Score" (Spinnennetz) je NFL-
+# Team, kumulativ und pro Woche isoliert, aus nflverse-Daten und
+# committet data/nfl-power-score.js. Kein ESPN, keine Secrets noetig
+# (siehe scripts/sync-nfl-power-score.js für die Herleitung der 6
+# Kategorien und scripts/lib/nflverse.js für die geteilten Helfer).
+#
+# Laeuft auf demselben Rhythmus wie die NFL-Standings-Sync (taeglich
+# 9 & 21 Uhr Berlin, inkl. Sommer-/Winterzeit) + manuell startbar.
+# Ausserhalb der Regular Season / vor Wochen-Ergebnissen schreibt das
+# Script bewusst nichts -- der Commit-Schritt greift dann einfach nicht.
+
+on:
+  schedule:
+    - cron: "0 7 * * *"    # 09:00 Berlin (Sommerzeit)
+    - cron: "0 8 * * *"    # 09:00 Berlin (Winterzeit)
+    - cron: "0 19 * * *"   # 21:00 Berlin (Sommerzeit)
+    - cron: "0 20 * * *"   # 21:00 Berlin (Winterzeit)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Bootleg Power Score Sync
+        run: node scripts/sync-nfl-power-score.js
+
+      - name: Commit & Push falls geändert
+        run: |
+          git config user.name "bear-witch-project-hq-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/nfl-power-score.js
+          git diff --cached --quiet || git commit -m "chore: bootleg power score sync"
+          git push
