@@ -303,6 +303,27 @@ function renderRoster(teamId) {
   wireFantasyPowerScoreControls(team.id);
 }
 
+/* Alle Picks, die ein Team in einem Jahr tatsaechlich HAELT (eigene +
+   per Trade dazugewonnene, minus per Trade abgegebene) -- Runde 1-5,
+   dieselbe Datengrundlage wie renderFutureBoards()/_picksHeldByTeam(). */
+function picksDetailForTeam(team, year) {
+  const rounds = ['1st', '2nd', '3rd', '4th', '5th'];
+  const overrides = {}; // "fromTeam|round" -> ownerTeam
+  (FUTURE_PICKS[year] || []).forEach(p => { overrides[`${p.from}|${p.round}`] = p.owner; });
+  const picks = [];
+  LEAGUE_TEAMS.forEach(originTeam => {
+    rounds.forEach(r => {
+      const owner = overrides[`${originTeam.name}|${r}`] || originTeam.name;
+      if (owner === team.name) picks.push({ round: r, origin: originTeam.name, isOwn: originTeam.name === team.name });
+    });
+  });
+  const roundOrder = { '1st': 1, '2nd': 2, '3rd': 3, '4th': 4, '5th': 5 };
+  picks.sort((a, b) => roundOrder[a.round] - roundOrder[b.round]);
+  return picks;
+}
+
+let teamPicksState = { year: null };
+
 function renderTeamPicksSection(team, draftTeam) {
   const teamsById = LEAGUE_TEAMS.reduce((m, t) => { m[t.name] = t; return m; }, {});
   const hasResults = typeof DRAFT_RESULTS_2026 !== 'undefined' && Object.keys(DRAFT_RESULTS_2026).length;
@@ -351,7 +372,9 @@ function renderTeamPicksSection(team, draftTeam) {
   }
 
   const years = [2027, ...Object.keys(FUTURE_PICKS).map(Number).filter(y => y !== 2027)].sort();
-  const futureCounts = years.map(y => ({ year: y, n: (_picksHeldByTeam(y)[team.name]) ?? 5 }));
+  const selectedYear = years.includes(teamPicksState.year) ? teamPicksState.year : years[0];
+  teamPicksState.year = selectedYear;
+  const detail = picksDetailForTeam(team, selectedYear);
 
   return `
     <div class="section-label">📦 Meine Picks</div>
@@ -364,13 +387,17 @@ function renderTeamPicksSection(team, draftTeam) {
           </div>`).join('')}
       </div>
       <div class="team-picks-future">
-        <div style="font-size:11px;font-weight:700;color:var(--muted);margin-bottom:8px;text-transform:uppercase;letter-spacing:.5px">Zukünftige Picks (Runde 1–5 je Jahr)</div>
-        ${futureCounts.map(({ year, n }) => {
-          const diff = n - 5;
-          const diffHtml = diff > 0 ? `<span style="color:var(--green)">(+${diff})</span>` : diff < 0 ? `<span style="color:var(--red)">(${diff})</span>` : '';
-          return `<div class="team-pick-future-row"><span>${year}</span><b>${n} Picks</b> ${diffHtml}</div>`;
-        }).join('')}
-        <div class="page-sub" style="margin-top:8px;font-size:11px">Details & Trades: <b>Future Draft Boards</b></div>
+        <div style="display:flex;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px">
+          <div style="font-size:11px;font-weight:700;color:var(--muted);text-transform:uppercase;letter-spacing:.5px">Zukünftige Picks</div>
+          <select id="teamFutureYearSelect" onchange="teamPicksState.year=parseInt(this.value,10);renderRoster('${team.id}')" style="background:var(--surface);color:var(--text);border:1px solid var(--border);border-radius:8px;padding:4px 8px;font-size:12px;font-weight:600">
+            ${years.map(y => `<option value="${y}" ${y === selectedYear ? 'selected' : ''}>${y}</option>`).join('')}
+          </select>
+        </div>
+        ${detail.length ? detail.map(p => `
+          <div class="team-pick-chip ${p.isOwn ? 'cell-open' : 'cell-keeper'}" onclick="openTradeAnalyzer('${escapeJs(`${p.origin} ${selectedYear} ${p.round}`)}','pick')">
+            <span>${p.round}</span><span>${p.isOwn ? 'Own' : `via ${teamsById[p.origin] ? teamsById[p.origin].emoji : ''} ${p.origin}`}</span>
+          </div>`).join('') : `<div class="page-sub" style="font-size:12px">Keine Picks in ${selectedYear} (Runde 1–5) — alle abgegeben.</div>`}
+        <div class="page-sub" style="margin-top:8px;font-size:11px">${detail.length} Pick(s) in ${selectedYear}. Details & Trades: <b>Future Draft Boards</b></div>
       </div>
     </div>
   `;
