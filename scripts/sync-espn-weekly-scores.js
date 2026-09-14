@@ -92,6 +92,22 @@ async function main() {
   const data = await httpsGetJson(url, headers);
   const schedule = data.schedule || [];
 
+  // ---- DIAGNOSE-LOGGING (temporär) ----
+  // Hilft zu klären, warum aktuell keine Score-Eintraege geschrieben
+  // werden: liegt es an leeren/fehlenden matchupPeriodId-Eintraegen,
+  // oder an totalPoints, die (noch) bei 0 stehen? Bei Bedarf nach der
+  // Fehlersuche wieder rausnehmen.
+  console.log(`Diagnose: ${schedule.length} Matchup-Einträge insgesamt in der ESPN-Antwort.`);
+  const byPeriod = {};
+  schedule.forEach(m => { byPeriod[m.matchupPeriodId] = (byPeriod[m.matchupPeriodId] || 0) + 1; });
+  console.log('Diagnose: Matchups je matchupPeriodId:', JSON.stringify(byPeriod));
+  const week1 = schedule.filter(m => m.matchupPeriodId === 1);
+  console.log(`Diagnose: ${week1.length} Matchups mit matchupPeriodId=1. Details:`);
+  week1.forEach(m => {
+    console.log(`  home teamId=${m.home?.teamId} totalPoints=${m.home?.totalPoints} | away teamId=${m.away?.teamId} totalPoints=${m.away?.totalPoints} | winner=${m.winner}`);
+  });
+  // ---- Ende Diagnose-Logging ----
+
   // ESPN-Team-ID -> unsere Team-ID (data/teams.js), gleicher Namensabgleich
   // wie in scripts/sync-espn-rosters.js.
   const byNormName = {};
