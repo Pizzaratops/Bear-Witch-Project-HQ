@@ -40,5 +40,27 @@ jobs:
           git config user.name "bear-witch-project-hq-bot"
           git config user.email "actions@users.noreply.github.com"
           git add data/nfl-power-rankings.js
-          git diff --cached --quiet || git commit -m "chore: ESPN NFL standings sync"
-          git push
+          if git diff --cached --quiet; then
+            echo "Keine Änderungen -- nichts zu committen."
+            exit 0
+          fi
+          git commit -m "chore: ESPN NFL standings sync"
+          # Mehrere Sync-Workflows laufen zeitlich dicht beieinander und
+          # committen unabhaengig voneinander -- der Push kann daher
+          # gelegentlich abgelehnt werden, weil zwischenzeitlich ein
+          # anderer Workflow schon gepusht hat (non-fast-forward). Da
+          # jeder Workflow nur seine eigene(n) Datei(en) aendert, ist ein
+          # Rebase auf den neuen Stand so gut wie nie konfliktbehaftet --
+          # deshalb bei einem fehlgeschlagenen Push einfach den aktuellen
+          # Stand holen, den eigenen Commit draufsetzen und erneut pushen.
+          for i in 1 2 3 4 5; do
+            if git push; then
+              exit 0
+            fi
+            echo "Push fehlgeschlagen (Versuch $i/5) -- vermutlich hat ein anderer Sync-Workflow zeitgleich gepusht. Hole aktuellen Stand und versuche erneut..."
+            git fetch origin main
+            git rebase origin/main
+            sleep $((RANDOM % 8 + 3))
+          done
+          echo "Push nach 5 Versuchen weiterhin fehlgeschlagen -- bitte Workflow-Log prüfen."
+          exit 1
