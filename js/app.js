@@ -4258,6 +4258,25 @@ function _statusReportData() {
   return (typeof STATUS_REPORT_DATA !== 'undefined') ? STATUS_REPORT_DATA : null;
 }
 
+// Passwort-Vorhang je Person -- rein clientseitig, also KEIN echter Schutz
+// (der Code liegt oeffentlich im Repo), nur ein Vorhang gegen zufaelliges
+// Reinstolpern. Muss exakt zu den "label"-Werten in
+// js/status-report-config.js passen (siehe Hinweis dort).
+const STATUS_REPORT_GATE = {
+  'Bear Down': { password: '2428', emoji: '🐻' },
+  'TeamBeermode': { password: 'Dolpins', emoji: '🍺' },
+};
+
+let _srUnlockedOwner = null; // welche Person aktuell "aufgeklappt" ist (nur UI-Zustand)
+
+function _srStorageKey(owner) { return 'bwp-sr-unlock-' + owner; }
+function _srIsUnlocked(owner) {
+  try { return localStorage.getItem(_srStorageKey(owner)) === '1'; } catch (e) { return false; }
+}
+function _srUnlock(owner) {
+  try { localStorage.setItem(_srStorageKey(owner), '1'); } catch (e) { /* ignore */ }
+}
+
 function renderStatusReport() {
   const wrap = document.getElementById('statusReportContent');
   const meta = document.getElementById('statusReportMeta');
@@ -4282,7 +4301,86 @@ function renderStatusReport() {
     }
   }
 
-  const tileHtml = l => {
+  const owners = [...new Set(data.leagues.map(l => l.owner).filter(Boolean))];
+
+  // Bereits entsperrte Person aufgeklappt anzeigen (z.B. nach Zurueck aus
+  // der Kader-Detailansicht) statt wieder ganz von vorne zu starten.
+  if (_srUnlockedOwner && owners.includes(_srUnlockedOwner) && _srIsUnlocked(_srUnlockedOwner)) {
+    _srRenderOwnerLeagues(_srUnlockedOwner, data);
+    return;
+  }
+
+  wrap.innerHTML = `<div class="team-grid">` + owners.map(owner => {
+    const gate = STATUS_REPORT_GATE[owner] || {};
+    const unlocked = _srIsUnlocked(owner);
+    return `
+      <div class="team-card sr-card" onclick="srSelectOwner('${owner.replace(/'/g, "\\'")}')">
+        <span class="team-emoji" style="font-size:26px">${gate.emoji || '🔒'}</span>
+        <div class="team-name">${owner}</div>
+        <div class="team-meta">${unlocked ? '🔓 entsperrt' : '🔒 Passwort nötig'}</div>
+      </div>`;
+  }).join('') + `</div>`;
+}
+
+function srSelectOwner(owner) {
+  if (_srIsUnlocked(owner)) {
+    _srUnlockedOwner = owner;
+    renderStatusReport();
+    return;
+  }
+  _srRenderPasswordPrompt(owner);
+}
+
+function _srRenderPasswordPrompt(owner) {
+  const wrap = document.getElementById('statusReportContent');
+  const gate = STATUS_REPORT_GATE[owner] || {};
+  wrap.innerHTML = `
+    <div class="sr-gate">
+      <div class="sr-gate-emoji">${gate.emoji || '🔒'}</div>
+      <div class="sr-gate-title">${owner}</div>
+      <div class="sr-gate-sub">Passwort eingeben</div>
+      <input type="password" id="srPasswordInput" class="sr-gate-input" autocomplete="off" />
+      <div id="srGateError" class="sr-gate-error" style="display:none">Falsches Passwort.</div>
+      <div class="sr-gate-actions">
+        <button class="back-btn" onclick="srBackToOwners()">← Zurück</button>
+        <button class="share-action-btn primary" onclick="srCheckPassword('${owner.replace(/'/g, "\\'")}')">Entsperren</button>
+      </div>
+    </div>`;
+  const input = document.getElementById('srPasswordInput');
+  if (input) {
+    input.focus();
+    input.addEventListener('keydown', e => { if (e.key === 'Enter') srCheckPassword(owner); });
+  }
+}
+
+function srCheckPassword(owner) {
+  const input = document.getElementById('srPasswordInput');
+  const val = input ? input.value : '';
+  const gate = STATUS_REPORT_GATE[owner];
+  if (gate && val === gate.password) {
+    _srUnlock(owner);
+    _srUnlockedOwner = owner;
+    renderStatusReport();
+  } else {
+    const err = document.getElementById('srGateError');
+    if (err) err.style.display = '';
+    if (input) { input.value = ''; input.focus(); }
+  }
+}
+
+function srBackToOwners() {
+  _srUnlockedOwner = null;
+  renderStatusReport();
+}
+
+function _srRenderOwnerLeagues(owner, data) {
+  const wrap = document.getElementById('statusReportContent');
+  const leagues = data.leagues.filter(l => l.owner === owner);
+  wrap.innerHTML = `
+    <div class="sr-owner-bar">
+      <button class="back-btn" onclick="srBackToOwners()">← Andere Person</button>
+    </div>
+    <div class="team-grid">` + leagues.map(l => {
     const flagged = l.flaggedCount || 0;
     const playerCount = (l.players || []).length;
     return `
@@ -4293,20 +4391,7 @@ function renderStatusReport() {
         <div class="team-owner">${l.teamName}${l.record ? ' · ' + l.record : ''}</div>
         <div class="team-meta">${playerCount} Spieler${l.stale ? ' · ⚠️ veraltet' : ''}</div>
       </div>`;
-  };
-
-  // Gruppierung nach Person nur einblenden, wenn mehr als eine Person
-  // dabei ist -- solo bleibt es eine flache Kachel-Uebersicht.
-  const owners = [...new Set(data.leagues.map(l => l.owner).filter(Boolean))];
-  if (owners.length > 1) {
-    wrap.innerHTML = owners.map(owner => `
-      <div class="sr-owner-group">
-        <div class="sr-owner-heading">${owner}</div>
-        <div class="team-grid">${data.leagues.filter(l => l.owner === owner).map(tileHtml).join('')}</div>
-      </div>`).join('');
-  } else {
-    wrap.innerHTML = `<div class="team-grid">` + data.leagues.map(tileHtml).join('') + `</div>`;
-  }
+  }).join('') + `</div>`;
 }
 
 function renderStatusReportDetail(leagueId) {

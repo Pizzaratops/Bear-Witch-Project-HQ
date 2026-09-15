@@ -47,10 +47,16 @@ jobs:
         env:
           ESPN_S2: ${{ secrets.ESPN_S2 }}
           SWID: ${{ secrets.SWID }}
-          # Neue Person mit eigenem ESPN-Login in status-report-config.js
-          # ergaenzt? Hier eine analoge Zeile dazu ergaenzen, z.B.:
-          # ESPN_S2_FELIX: ${{ secrets.ESPN_S2_FELIX }}
-          # SWID_FELIX: ${{ secrets.SWID_FELIX }}
+          # Felix: SWID_FELIX identifiziert sein Team in den 4 gemeinsamen
+          # Ligen (per Owner-Match), ESPN_S2_FELIX wird nur fuer seine
+          # eigene Liga (519920608) zum Abrufen gebraucht.
+          ESPN_S2_FELIX: ${{ secrets.ESPN_S2_FELIX }}
+          SWID_FELIX: ${{ secrets.SWID_FELIX }}
+          # Weitere Person mit eigenem ESPN-Login/-Team in
+          # status-report-config.js ergaenzt? Hier eine analoge Zeile
+          # dazu ergaenzen, z.B.:
+          # ESPN_S2_NEUERNAME: ${{ secrets.ESPN_S2_NEUERNAME }}
+          # SWID_NEUERNAME: ${{ secrets.SWID_NEUERNAME }}
           SLEEPER_PLAYERS_CACHE_PATH: /tmp/sleeper-players.json
         run: node scripts/sync-status-report.js
 

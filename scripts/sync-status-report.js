@@ -94,13 +94,16 @@ function normalizeSwid(s) {
   return (s || '').toUpperCase().replace(/[{}]/g, '');
 }
 
-// Baut die ESPN-Cookie-Header fuer eine Person. credentialKey === null/undefined
-// -> Standard-Secrets ESPN_S2/SWID. Sonst -> ESPN_S2_<KEY>/SWID_<KEY>
-// (KEY wird auf gueltige Env-Var-Zeichen normalisiert: A-Z0-9_).
-function espnHeadersFor(person) {
-  const suffix = person.credentialKey
-    ? '_' + String(person.credentialKey).toUpperCase().replace(/[^A-Z0-9]/g, '_')
-    : '';
+// credentialKey === null/undefined -> Standard-Secrets ESPN_S2/SWID.
+// Sonst -> ESPN_S2_<KEY>/SWID_<KEY> (KEY auf gueltige Env-Var-Zeichen normalisiert).
+function envSuffix(credentialKey) {
+  return credentialKey ? '_' + String(credentialKey).toUpperCase().replace(/[^A-Z0-9]/g, '_') : '';
+}
+
+// Baut die ESPN-Cookie-Header fuer den angegebenen Credential-Key (wer sich
+// bei ESPN "einloggt", um die Liga ueberhaupt lesen zu duerfen).
+function espnHeadersFor(credentialKey) {
+  const suffix = envSuffix(credentialKey);
   const s2 = process.env['ESPN_S2' + suffix];
   const swid = process.env['SWID' + suffix];
   const headers = { 'User-Agent': 'bear-witch-project-hq-bot', 'Accept': 'application/json' };
@@ -108,7 +111,18 @@ function espnHeadersFor(person) {
   if (s2) cookieParts.push(`espn_s2=${s2}`);
   if (swid) cookieParts.push(`SWID=${swid}`);
   if (cookieParts.length) headers['Cookie'] = cookieParts.join('; ');
-  return { headers, swid };
+  return headers;
+}
+
+// Liefert nur die SWID fuer den angegebenen Credential-Key (wird benutzt, um
+// IN den (mit wessen Cookies auch immer abgerufenen) Liga-Daten das richtige
+// Team per Owner-Match zu FINDEN -- unabhaengig davon, wessen Login den
+// eigentlichen HTTP-Request gemacht hat. So kann z.B. Felix' Team in einer
+// Liga erkannt werden, die mit Beyaz' Cookies abgerufen wurde, solange
+// Felix' SWID (SWID_FELIX) als Secret hinterlegt ist -- sein espn_s2 wird
+// dafuer NICHT gebraucht.
+function identitySwidFor(credentialKey) {
+  return process.env['SWID' + envSuffix(credentialKey)];
 }
 
 /* ---------- ESPN ---------- */
@@ -143,17 +157,25 @@ function mapEspnPlayer(entry, cfg, actionStatuses) {
 }
 
 async function fetchEspnLeague(person, leagueCfg, cfg, actionStatuses) {
-  const { headers, swid } = espnHeadersFor(person);
-  if (!swid) throw new Error(`SWID für "${person.label}" nicht gesetzt -- kann eigenes Team nicht per Owner-Match erkennen.`);
+  // Wessen Cookies fuer den Request: Liga-Override > Person-Default > Standard-Secrets.
+  const authKey = leagueCfg.credentialKey !== undefined ? leagueCfg.credentialKey : person.credentialKey;
+  const headers = espnHeadersFor(authKey);
+
+  // Wessen SWID zum Erkennen des Teams: Liga-Override > Person-Default (identityCredentialKey)
+  // > derselbe Key wie fuer den Request (Normalfall: eigene Liga, eigener Login).
+  const identityKey = leagueCfg.identityCredentialKey !== undefined ? leagueCfg.identityCredentialKey
+    : (person.identityCredentialKey !== undefined ? person.identityCredentialKey : authKey);
+  const identitySwid = identitySwidFor(identityKey);
+  if (!identitySwid) throw new Error(`SWID für "${person.label}" nicht gesetzt -- kann Team nicht per Owner-Match erkennen.`);
 
   const url = `https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/${leagueCfg.season}/segments/0/leagues/${leagueCfg.id}?view=mRoster&view=mTeam`;
   const data = await httpsGetJson(url, headers, { isEspn: true });
   const teams = data.teams || [];
   if (!teams.length) throw new Error('Keine Teams in ESPN-Antwort -- Liga-ID/Season prüfen.');
 
-  const mySwid = normalizeSwid(swid);
+  const mySwid = normalizeSwid(identitySwid);
   const myTeam = teams.find(t => (t.owners || []).some(o => normalizeSwid(o) === mySwid));
-  if (!myTeam) throw new Error(`Team von "${person.label}" nicht gefunden (SWID-Match) -- espn_s2/SWID prüfen (Account eingeloggt bei fantasy.espn.com?).`);
+  if (!myTeam) throw new Error(`Team von "${person.label}" nicht gefunden (SWID-Match) -- espn_s2/SWID prüfen (Account eingeloggt bei fantasy.espn.com? Ist "${person.label}" wirklich Mitglied dieser Liga?).`);
 
   const entries = myTeam.roster?.entries || [];
   const players = entries.map(e => mapEspnPlayer(e, cfg, actionStatuses)).filter(Boolean);

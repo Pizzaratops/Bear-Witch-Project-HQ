@@ -335,13 +335,25 @@ a { color: inherit; text-decoration: none; }
   border-radius: 10px; padding: 2px 8px;
 }
 .sr-lightning { font-size: 14px; margin-right: -2px; }
-.sr-owner-group { margin-bottom: 22px; }
-.sr-owner-heading {
-  font-size: 13px; font-weight: 800; color: var(--accent2);
-  text-transform: uppercase; letter-spacing: .5px;
-  margin-bottom: 8px; padding-bottom: 4px;
-  border-bottom: 1px solid var(--border);
+.sr-owner-bar { margin-bottom: 14px; }
+
+.sr-gate {
+  max-width: 320px; margin: 30px auto; text-align: center;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 16px; padding: 32px 24px;
 }
+.sr-gate-emoji { font-size: 40px; margin-bottom: 8px; }
+.sr-gate-title { font-size: 18px; font-weight: 800; color: var(--text); margin-bottom: 2px; }
+.sr-gate-sub { font-size: 13px; color: var(--muted); margin-bottom: 16px; }
+.sr-gate-input {
+  width: 100%; box-sizing: border-box; padding: 10px 14px;
+  border: 1px solid var(--border); border-radius: 10px;
+  background: var(--surface2); color: var(--text);
+  font-size: 15px; text-align: center; letter-spacing: 2px;
+}
+.sr-gate-input:focus { outline: none; border-color: var(--accent); }
+.sr-gate-error { color: var(--red); font-size: 12px; font-weight: 700; margin-top: 8px; }
+.sr-gate-actions { display: flex; gap: 10px; justify-content: center; margin-top: 18px; }
 
 .board-table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 14px; }
 table.board { width: 100%; border-collapse: collapse; font-size: 12px; }
