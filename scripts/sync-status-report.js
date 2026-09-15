@@ -156,6 +156,98 @@ function mapEspnPlayer(entry, cfg, actionStatuses) {
   return { name, pos, nfl, isStarter, status, flag };
 }
 
+function round1(n) { return Math.round(n * 10) / 10; }
+
+// Welche Wochen eines Teams schon gespielt wurden -- genau wie in
+// scripts/sync-espn-weekly-scores.js: "gespielt" = mind. eine Seite hat
+// totalPoints > 0. Kommt aus derselben mRoster+mTeam-Antwort (mit
+// zusaetzlich angefragtem view=mMatchupScore), braucht also KEINEN
+// weiteren Request.
+function playedWeeksForTeam(schedule, teamId) {
+  const weeks = new Set();
+  (schedule || []).forEach(m => {
+    if (!m.home || !m.away) return;
+    if (m.home.teamId !== teamId && m.away.teamId !== teamId) return;
+    if (m.home.totalPoints > 0 || m.away.totalPoints > 0) weeks.add(m.matchupPeriodId);
+  });
+  return [...weeks].sort((a, b) => a - b);
+}
+
+// Gecacht ueber alle Personen/Ligen eines Laufs hinweg: derselbe
+// Liga-Boxscore einer Woche ist fuer jede Person in derselben Liga
+// identisch (gemeinsame Ligen wie bei Felix), daher pro
+// authKey+leagueId+season+week nur EINMAL abrufen.
+const _espnBoxscoreCache = new Map();
+
+// Identisch zur bewaehrten Methode aus scripts/sync-espn-player-stats.js:
+// appliedStatTotal direkt am Roster-Eintrag ist der primaere Weg, das
+// stats-Array (statSourceId=0, statSplitTypeId=1) ist der Fallback.
+async function getEspnWeekBoxscoreMap(headers, leagueId, season, week, cacheKey) {
+  const key = `${cacheKey}|box|${week}`;
+  if (_espnBoxscoreCache.has(key)) return _espnBoxscoreCache.get(key);
+  const url = `https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/${season}/segments/0/leagues/${leagueId}?view=mBoxscore&view=mMatchupScore&scoringPeriodId=${week}`;
+  const map = new Map();
+  try {
+    const data = await httpsGetJson(url, headers, { isEspn: true });
+    (data.schedule || []).forEach(matchup => {
+      if (matchup.matchupPeriodId !== week) return;
+      ['home', 'away'].forEach(side => {
+        const teamSide = matchup[side];
+        if (!teamSide) return;
+        const entries = teamSide.rosterForCurrentScoringPeriod?.entries || [];
+        entries.forEach(entry => {
+          const p = entry.playerPoolEntry?.player;
+          if (!p || !p.fullName) return;
+          let pts = entry.playerPoolEntry?.appliedStatTotal;
+          if (typeof pts !== 'number') {
+            const stats = p.stats || [];
+            const match = stats.find(s => s.statSourceId === 0 && s.statSplitTypeId === 1 && s.scoringPeriodId === week);
+            pts = match ? (match.appliedTotal || 0) : null;
+          }
+          if (pts != null) map.set(p.fullName, round1(pts));
+        });
+      });
+    });
+  } catch (err) {
+    console.warn(`   ⚠️  Boxscore Woche ${week} (Liga ${leagueId}) nicht abrufbar (best effort, Punkte bleiben leer): ${err.message}`);
+  }
+  _espnBoxscoreCache.set(key, map);
+  return map;
+}
+
+// Ebenfalls gecacht (siehe oben) -- ein voller kona_player_info-Abruf
+// deckt ALLE Spieler der Liga ab und wird per Namen nachgeschlagen, so
+// dass sich auch mehrere Personen in derselben Liga einen Abruf teilen.
+const _espnProjectionsCache = new Map();
+
+// Siehe scripts/sync-espn-projections.js: kona_player_info liefert nur bei
+// PROJEKTIONEN (statSourceId=1) eine Wochenaufschluesselung. Wir fragen
+// hier gezielt die Projektion fuer eine bestimmte Woche (targetWeek) ab.
+async function getEspnWeekProjectionsMap(headers, leagueId, season, targetWeek, cacheKey) {
+  const key = `${cacheKey}|proj|${targetWeek}`;
+  if (_espnProjectionsCache.has(key)) return _espnProjectionsCache.get(key);
+  const filterHeaders = Object.assign({}, headers, {
+    'x-fantasy-filter': JSON.stringify({
+      players: { limit: 800, sortDraftRanks: { sortPriority: 1, sortAsc: true, value: 'STANDARD' } },
+    }),
+  });
+  const url = `https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/${season}/segments/0/leagues/${leagueId}?view=kona_player_info`;
+  const map = new Map();
+  try {
+    const data = await httpsGetJson(url, filterHeaders, { isEspn: true });
+    (data.players || []).forEach(entry => {
+      const p = entry.player || {};
+      if (!p.fullName) return;
+      const stat = (p.stats || []).find(s => s.statSourceId === 1 && s.statSplitTypeId === 1 && s.scoringPeriodId === targetWeek);
+      if (stat && typeof stat.appliedTotal === 'number') map.set(p.fullName, round1(stat.appliedTotal));
+    });
+  } catch (err) {
+    console.warn(`   ⚠️  Projektionen Woche ${targetWeek} (Liga ${leagueId}) nicht abrufbar (best effort, Projektion bleibt leer): ${err.message}`);
+  }
+  _espnProjectionsCache.set(key, map);
+  return map;
+}
+
 async function fetchEspnLeague(person, leagueCfg, cfg, actionStatuses) {
   // Wessen Cookies fuer den Request: Liga-Override > Person-Default > Standard-Secrets.
   const authKey = leagueCfg.credentialKey !== undefined ? leagueCfg.credentialKey : person.credentialKey;
@@ -168,7 +260,7 @@ async function fetchEspnLeague(person, leagueCfg, cfg, actionStatuses) {
   const identitySwid = identitySwidFor(identityKey);
   if (!identitySwid) throw new Error(`SWID für "${person.label}" nicht gesetzt -- kann Team nicht per Owner-Match erkennen.`);
 
-  const url = `https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/${leagueCfg.season}/segments/0/leagues/${leagueCfg.id}?view=mRoster&view=mTeam`;
+  const url = `https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/${leagueCfg.season}/segments/0/leagues/${leagueCfg.id}?view=mRoster&view=mTeam&view=mMatchupScore`;
   const data = await httpsGetJson(url, headers, { isEspn: true });
   const teams = data.teams || [];
   if (!teams.length) throw new Error('Keine Teams in ESPN-Antwort -- Liga-ID/Season prüfen.');
@@ -180,6 +272,43 @@ async function fetchEspnLeague(person, leagueCfg, cfg, actionStatuses) {
   const entries = myTeam.roster?.entries || [];
   const players = entries.map(e => mapEspnPlayer(e, cfg, actionStatuses)).filter(Boolean);
   if (!players.length) throw new Error('Kein Kader in ESPN-Antwort für dieses Team -- sieht nach Teilantwort aus.');
+
+  // Vergangene Produktion (letztes Spiel, letzte 3 Spiele) + Projektion fuer
+  // die kommende Woche -- best effort, siehe Kommentare an den Helper-
+  // Funktionen. Ein Fehler hier lässt den Rest der Liga (Roster/Status)
+  // unangetastet, es fehlen dann nur die Stats-Spalten.
+  const cacheKey = `${authKey || '_default'}|${leagueCfg.id}|${leagueCfg.season}`;
+  const playedWeeks = playedWeeksForTeam(data.schedule, myTeam.id);
+  const lastWeek = playedWeeks[playedWeeks.length - 1] || null;
+  const last3Weeks = playedWeeks.slice(-3);
+  const targetWeek = lastWeek ? lastWeek + 1 : 1;
+
+  try {
+    const weekMaps = new Map(); // week -> Map(name -> points)
+    for (const w of last3Weeks) {
+      weekMaps.set(w, await getEspnWeekBoxscoreMap(headers, leagueCfg.id, leagueCfg.season, w, cacheKey));
+    }
+    const projMap = await getEspnWeekProjectionsMap(headers, leagueCfg.id, leagueCfg.season, targetWeek, cacheKey);
+
+    players.forEach(pl => {
+      const lastMap = lastWeek ? weekMaps.get(lastWeek) : null;
+      pl.lastGamePoints = lastMap && lastMap.has(pl.name) ? lastMap.get(pl.name) : null;
+
+      const last3Values = last3Weeks
+        .map(w => weekMaps.get(w))
+        .filter(Boolean)
+        .map(m => m.get(pl.name))
+        .filter(v => v != null);
+      pl.last3AvgPoints = last3Values.length ? round1(last3Values.reduce((a, b) => a + b, 0) / last3Values.length) : null;
+
+      pl.projPoints = projMap.has(pl.name) ? projMap.get(pl.name) : null;
+    });
+  } catch (err) {
+    // Sollte durch die try/catches in den Helper-Funktionen eigentlich nie
+    // hier ankommen, aber sicher ist sicher: lieber Roster ohne Stats-
+    // Spalten als gar keinen Sync-Erfolg fuer diese Liga.
+    console.warn(`   ⚠️  Stats/Projektionen für "${leagueCfg.name}" (${person.label}) übersprungen: ${err.message}`);
+  }
 
   const ov = myTeam.record?.overall || {};
   return {
@@ -203,17 +332,90 @@ function mapSleeperInjuryStatus(inj) {
   return MAP[inj] || inj.toUpperCase().slice(0, 4);
 }
 
-function mapSleeperPlayer(pid, pdata, isStarter, actionStatuses) {
-  if (!pdata) return { name: `Unbekannt (${pid})`, pos: '?', nfl: 'FA', isStarter, status: null, flag: false };
+function mapSleeperPlayer(pid, pdata, isStarter, actionStatuses, statsWeeks, scoreField) {
+  const lastGamePoints = _sleeperPointsFor(pid, statsWeeks.lastMap, scoreField);
+  const last3Values = statsWeeks.last3Maps
+    .map(m => _sleeperPointsFor(pid, m, scoreField))
+    .filter(v => v != null);
+  const last3AvgPoints = last3Values.length ? round1(last3Values.reduce((a, b) => a + b, 0) / last3Values.length) : null;
+  const projPoints = _sleeperPointsFor(pid, statsWeeks.projMap, scoreField);
+
+  if (!pdata) {
+    return { name: `Unbekannt (${pid})`, pos: '?', nfl: 'FA', isStarter, status: null, flag: false, lastGamePoints, last3AvgPoints, projPoints };
+  }
   const name = pdata.full_name || `${pdata.first_name || ''} ${pdata.last_name || ''}`.trim() || pid;
   const pos = pdata.position || (pdata.fantasy_positions && pdata.fantasy_positions[0]) || '?';
   const nfl = pdata.team || 'FA';
   const status = mapSleeperInjuryStatus(pdata.injury_status);
   const flag = !!(isStarter && status && actionStatuses.includes(status));
-  return { name, pos, nfl, isStarter, status, flag };
+  return { name, pos, nfl, isStarter, status, flag, lastGamePoints, last3AvgPoints, projPoints };
+}
+
+function _sleeperPointsFor(pid, weekMap, scoreField) {
+  if (!weekMap) return null;
+  const entry = weekMap[pid];
+  if (!entry) return null;
+  const v = entry[scoreField];
+  return typeof v === 'number' ? round1(v) : null;
+}
+
+// Sleeper hat keine liga-eigenen Fantasy-Punkte in stats/projections --
+// die Endpunkte liefern vorgerechnete Standard-Werte fuer PPR/Half-PPR/
+// Standard. Wir waehlen anhand der Liga-Scoring-Settings (reception
+// points) das naechstliegende Feld -- eine Annaeherung, keine exakte
+// Umrechnung der individuellen Liga-Scoring-Regeln.
+function sleeperScoreField(league) {
+  const rec = league.scoring_settings && league.scoring_settings.rec;
+  if (rec === 1) return 'pts_ppr';
+  if (rec === 0.5) return 'pts_half_ppr';
+  return 'pts_std';
 }
 
 const PUBLIC_HEADERS = { 'User-Agent': 'bear-witch-project-hq-bot', 'Accept': 'application/json' };
+
+// Gecacht ueber den ganzen Lauf: Sleeper-Wochenstats/-Projektionen sind
+// season-/week-weit identisch fuer alle Ligen und Personen.
+const _sleeperWeekStatsCache = new Map();
+const _sleeperWeekProjCache = new Map();
+
+async function getSleeperWeekStats(season, week) {
+  const key = `${season}|${week}`;
+  if (_sleeperWeekStatsCache.has(key)) return _sleeperWeekStatsCache.get(key);
+  let map = {};
+  try {
+    map = await httpsGetJson(`https://api.sleeper.app/v1/stats/nfl/regular/${season}/${week}`, PUBLIC_HEADERS);
+  } catch (err) {
+    console.warn(`   ⚠️  Sleeper-Stats Woche ${week} nicht abrufbar (best effort): ${err.message}`);
+  }
+  _sleeperWeekStatsCache.set(key, map || {});
+  return map || {};
+}
+
+async function getSleeperWeekProjections(season, week) {
+  const key = `${season}|${week}`;
+  if (_sleeperWeekProjCache.has(key)) return _sleeperWeekProjCache.get(key);
+  let map = {};
+  try {
+    map = await httpsGetJson(`https://api.sleeper.app/v1/projections/nfl/regular/${season}/${week}`, PUBLIC_HEADERS);
+  } catch (err) {
+    console.warn(`   ⚠️  Sleeper-Projektionen Woche ${week} nicht abrufbar (best effort): ${err.message}`);
+  }
+  _sleeperWeekProjCache.set(key, map || {});
+  return map || {};
+}
+
+let _sleeperCurrentWeek = null; // einmal pro Lauf ermittelt
+async function getSleeperCurrentWeek() {
+  if (_sleeperCurrentWeek != null) return _sleeperCurrentWeek;
+  try {
+    const state = await httpsGetJson('https://api.sleeper.app/v1/state/nfl', PUBLIC_HEADERS);
+    _sleeperCurrentWeek = (state && state.week) || 1;
+  } catch (err) {
+    console.warn(`   ⚠️  Sleeper NFL-State nicht abrufbar, nehme Woche 1 an: ${err.message}`);
+    _sleeperCurrentWeek = 1;
+  }
+  return _sleeperCurrentWeek;
+}
 
 async function loadSleeperPlayersMap() {
   const cachePath = process.env.SLEEPER_PLAYERS_CACHE_PATH;
@@ -250,6 +452,17 @@ async function fetchSleeperLeagues(person, playersMap, actionStatuses) {
   const leagues = await httpsGetJson(`https://api.sleeper.app/v1/user/${user.user_id}/leagues/nfl/${season}`, PUBLIC_HEADERS);
   if (!leagues.length) throw new Error(`Keine Sleeper-Ligen für "${username}" in Season ${season} gefunden.`);
 
+  const currentWeek = await getSleeperCurrentWeek();
+  const lastWeek = currentWeek > 1 ? currentWeek - 1 : null;
+  const last3Weeks = lastWeek ? [lastWeek - 2, lastWeek - 1, lastWeek].filter(w => w >= 1) : [];
+  const targetWeek = currentWeek;
+
+  const lastMap = lastWeek ? await getSleeperWeekStats(season, lastWeek) : null;
+  const last3Maps = [];
+  for (const w of last3Weeks) last3Maps.push(await getSleeperWeekStats(season, w));
+  const projMap = await getSleeperWeekProjections(season, targetWeek);
+  const statsWeeks = { lastMap, last3Maps, projMap };
+
   const results = [];
   for (const league of leagues) {
     try {
@@ -262,10 +475,11 @@ async function fetchSleeperLeagues(person, playersMap, actionStatuses) {
 
       const ownerMeta = users.find(u => u.user_id === user.user_id) || {};
       const teamName = (ownerMeta.metadata && ownerMeta.metadata.team_name) || ownerMeta.display_name || username;
+      const scoreField = sleeperScoreField(league);
 
       const starters = new Set(myRoster.starters || []);
       const players = (myRoster.players || [])
-        .map(pid => mapSleeperPlayer(pid, playersMap[pid], starters.has(pid), actionStatuses))
+        .map(pid => mapSleeperPlayer(pid, playersMap[pid], starters.has(pid), actionStatuses, statsWeeks, scoreField))
         .filter(Boolean);
       if (!players.length) throw new Error('Kein Kader für eigenes Team gefunden.');
 

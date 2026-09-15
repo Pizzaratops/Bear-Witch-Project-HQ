@@ -4379,12 +4379,28 @@ function _srSortedPlayers(league) {
   });
 }
 
+function _srFmtPts(v) { return (v == null) ? '–' : v.toFixed(1); }
+
+function _srStatsHeaderHtml() {
+  return `
+    <div class="player-row sr-stats-head">
+      <div class="player-name">Name</div>
+      <div class="player-team">Pos</div>
+      <div class="sr-stat"><span class="sr-stat-label">Last</span></div>
+      <div class="sr-stat"><span class="sr-stat-label">L3</span></div>
+      <div class="sr-stat"><span class="sr-stat-label">Proj</span></div>
+    </div>`;
+}
+
 function _srPlayerRowHtml(p) {
   return `
     <div class="player-row">
       ${p.flag ? '<span class="sr-lightning" title="Starter mit Status — evtl. Handlungsbedarf">⚡</span>' : ''}
       <div class="player-name">${p.name}</div>
       <div class="player-team">${p.pos || '?'} · ${p.nfl || 'FA'}</div>
+      <div class="sr-stat"><span class="sr-stat-label">Last</span>${_srFmtPts(p.lastGamePoints)}</div>
+      <div class="sr-stat"><span class="sr-stat-label">L3</span>${_srFmtPts(p.last3AvgPoints)}</div>
+      <div class="sr-stat sr-stat-proj"><span class="sr-stat-label">Proj</span>${_srFmtPts(p.projPoints)}</div>
       ${p.isStarter === false ? '<div class="player-status sr-bench">Bench</div>' : ''}
       ${p.status ? `<div class="player-status ${p.status}">${p.status}</div>` : ''}
     </div>`;
@@ -4409,7 +4425,7 @@ function _srRenderOwnerLeagues(owner, data) {
           </div>
           ${flagged ? `<div class="sr-flag-badge sr-flag-badge-inline">⚡ ${flagged}</div>` : ''}
         </div>
-        ${players.length ? players.map(_srPlayerRowHtml).join('') : emptyState('Kein Kader gefunden', 'Für dieses Team liegen aktuell keine Spieler vor.')}
+        ${players.length ? _srStatsHeaderHtml() + players.map(_srPlayerRowHtml).join('') : emptyState('Kein Kader gefunden', 'Für dieses Team liegen aktuell keine Spieler vor.')}
       </div>`;
   }).join('');
 
