@@ -355,6 +355,18 @@ a { color: inherit; text-decoration: none; }
 .sr-gate-error { color: var(--red); font-size: 12px; font-weight: 700; margin-top: 8px; }
 .sr-gate-actions { display: flex; gap: 10px; justify-content: center; margin-top: 18px; }
 
+.sr-league-section { margin-bottom: 26px; }
+.sr-league-header {
+  display: flex; align-items: center; gap: 12px;
+  margin-bottom: 10px; padding-bottom: 8px;
+  border-bottom: 2px solid var(--border);
+}
+.sr-league-emoji { font-size: 24px; }
+.sr-league-headtext { flex: 1; }
+.sr-league-name { font-size: 16px; font-weight: 800; color: var(--text); }
+.sr-league-sub { font-size: 12px; color: var(--muted); margin-top: 1px; }
+.sr-flag-badge-inline { position: static; }
+
 .board-table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 14px; }
 table.board { width: 100%; border-collapse: collapse; font-size: 12px; }
 table.board th {

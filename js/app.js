@@ -23,7 +23,7 @@ const PAGES = [
   'home', 'roster', 'dues', 'draftboard', 'keepers', 'dynastyboard', 'rolling', 'teamaverages', 'weekbyweek',
   'playerrankings', 'playerprojections', 'nflteams', 'nflteamdetail', 'futureboards',
   'standings', 'leaguehistory', 'seasonrolling', 'nflrankings', 'matchups', 'trade', 'tradehistory',
-  'statusreport', 'statusreportdetail'
+  'statusreport'
 ];
 
 function navigate(pageId, opts) {
@@ -57,7 +57,6 @@ function navigate(pageId, opts) {
     let hash = pageId;
     if (pageId === 'roster' && teamId) hash = `roster-${teamId}`;
     else if (pageId === 'nflteamdetail' && nflCode) hash = `nflteam-${nflCode}`;
-    else if (pageId === 'statusreportdetail' && leagueId) hash = `statusreport-${leagueId}`;
     if (location.hash.slice(1) !== hash) {
       history.pushState({ pageId, teamId: teamId || null, nflCode: nflCode || null, leagueId: leagueId || null }, '', '#' + hash);
     }
@@ -88,7 +87,6 @@ const ROUTE_HANDLERS = {
   trade: () => showTrade(),
   tradehistory: () => showTradeHistory(),
   statusreport: () => showStatusReport(),
-  statusreportdetail: (teamId, nflCode, leagueId) => leagueId ? showStatusReportDetail(leagueId) : showStatusReport(),
 };
 
 function _routeTo(pageId, teamId, nflCode, leagueId) {
@@ -117,7 +115,6 @@ function _initialRoute() {
   let pageId = 'home', teamId = null, nflCode = null, leagueId = null;
   if (hash.startsWith('roster-')) { pageId = 'roster'; teamId = hash.slice(7); }
   else if (hash.startsWith('nflteam-')) { pageId = 'nflteamdetail'; nflCode = hash.slice(8); }
-  else if (hash.startsWith('statusreport-')) { pageId = 'statusreportdetail'; leagueId = hash.slice(13); }
   else if (hash && ROUTE_HANDLERS[hash]) { pageId = hash; }
   history.replaceState({ pageId, teamId, nflCode, leagueId }, '', hash ? '#' + hash : '#home');
   _routeTo(pageId, teamId, nflCode, leagueId);
@@ -140,7 +137,6 @@ function showMatchups() { navigate('matchups'); renderMatchups(); }
 function showTrade() { navigate('trade'); renderTrade(); }
 function showTradeHistory() { navigate('tradehistory'); renderTradeHistory(); }
 function showStatusReport() { navigate('statusreport'); renderStatusReport(); }
-function showStatusReportDetail(leagueId) { renderStatusReportDetail(leagueId); navigate('statusreportdetail', { leagueId }); }
 
 function toggleMobileNav() {
   document.getElementById('mobileNavDropdown').classList.toggle('open');
@@ -4373,58 +4369,54 @@ function srBackToOwners() {
   renderStatusReport();
 }
 
-function _srRenderOwnerLeagues(owner, data) {
-  const wrap = document.getElementById('statusReportContent');
-  const leagues = data.leagues.filter(l => l.owner === owner);
-  wrap.innerHTML = `
-    <div class="sr-owner-bar">
-      <button class="back-btn" onclick="srBackToOwners()">← Andere Person</button>
-    </div>
-    <div class="team-grid">` + leagues.map(l => {
-    const flagged = l.flaggedCount || 0;
-    const playerCount = (l.players || []).length;
-    return `
-      <div class="team-card sr-card" onclick="showStatusReportDetail('${l.id}')">
-        ${flagged ? `<div class="sr-flag-badge">⚡ ${flagged}</div>` : ''}
-        <span class="team-emoji" style="font-size:22px">${l.emoji || '🏈'}</span>
-        <div class="team-name">${l.leagueName}</div>
-        <div class="team-owner">${l.teamName}${l.record ? ' · ' + l.record : ''}</div>
-        <div class="team-meta">${playerCount} Spieler${l.stale ? ' · ⚠️ veraltet' : ''}</div>
-      </div>`;
-  }).join('') + `</div>`;
-}
-
-function renderStatusReportDetail(leagueId) {
-  const data = _statusReportData();
-  const league = data && data.leagues.find(l => l.id === leagueId);
-  const header = document.getElementById('statusReportDetailHeader');
-  const content = document.getElementById('statusReportDetailContent');
-
-  if (!league) {
-    header.innerHTML = `<div class="page-title">🚨 Status Report</div>`;
-    content.innerHTML = emptyState('Liga nicht gefunden', 'Bitte zurück zum Status Report und erneut versuchen.', '❓');
-    return;
-  }
-
-  header.innerHTML = `
-    <div class="page-title">${league.emoji || '🏈'} ${league.leagueName}</div>
-    <div class="page-sub">${league.owner ? league.owner + ' · ' : ''}${league.teamName}${league.record ? ' · ' + league.record : ''}${league.stale ? ' · ⚠️ Daten evtl. veraltet (letzter erfolgreicher Sync)' : ''}</div>
-  `;
-
-  const players = (league.players || []).slice().sort((a, b) => {
+function _srSortedPlayers(league) {
+  return (league.players || []).slice().sort((a, b) => {
     const fa = a.flag ? 1 : 0, fb = b.flag ? 1 : 0;
     if (fb !== fa) return fb - fa;
     const sa = a.isStarter ? 1 : 0, sb = b.isStarter ? 1 : 0;
     if (sb !== sa) return sb - sa;
     return (a.name || '').localeCompare(b.name || '');
   });
+}
 
-  content.innerHTML = players.length ? players.map(p => `
+function _srPlayerRowHtml(p) {
+  return `
     <div class="player-row">
       ${p.flag ? '<span class="sr-lightning" title="Starter mit Status — evtl. Handlungsbedarf">⚡</span>' : ''}
       <div class="player-name">${p.name}</div>
       <div class="player-team">${p.pos || '?'} · ${p.nfl || 'FA'}</div>
       ${p.isStarter === false ? '<div class="player-status sr-bench">Bench</div>' : ''}
       ${p.status ? `<div class="player-status ${p.status}">${p.status}</div>` : ''}
-    </div>`).join('') : emptyState('Kein Kader gefunden', 'Für dieses Team liegen aktuell keine Spieler vor.');
+    </div>`;
 }
+
+// Alles auf einer Seite: nach dem Entsperren direkt alle Ligen dieser
+// Person untereinander mit vollem Kader, kein Durchklicken pro Liga mehr.
+function _srRenderOwnerLeagues(owner, data) {
+  const wrap = document.getElementById('statusReportContent');
+  const leagues = data.leagues.filter(l => l.owner === owner);
+
+  const sections = leagues.map(l => {
+    const flagged = l.flaggedCount || 0;
+    const players = _srSortedPlayers(l);
+    return `
+      <div class="sr-league-section">
+        <div class="sr-league-header">
+          <span class="sr-league-emoji">${l.emoji || '🏈'}</span>
+          <div class="sr-league-headtext">
+            <div class="sr-league-name">${l.leagueName}</div>
+            <div class="sr-league-sub">${l.teamName}${l.record ? ' · ' + l.record : ''}${l.stale ? ' · ⚠️ veraltet' : ''}</div>
+          </div>
+          ${flagged ? `<div class="sr-flag-badge sr-flag-badge-inline">⚡ ${flagged}</div>` : ''}
+        </div>
+        ${players.length ? players.map(_srPlayerRowHtml).join('') : emptyState('Kein Kader gefunden', 'Für dieses Team liegen aktuell keine Spieler vor.')}
+      </div>`;
+  }).join('');
+
+  wrap.innerHTML = `
+    <div class="sr-owner-bar">
+      <button class="back-btn" onclick="srBackToOwners()">← Andere Person</button>
+    </div>
+    ${sections}`;
+}
+
