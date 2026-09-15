@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-09-15T20:22:26.366Z",
+  "generatedAt": "2026-09-15T22:38:26.893Z",
   "leagues": [
     {
       "id": "beyaz-sleeper-1312794408151687168",
@@ -668,7 +668,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 22.7,
           "last3AvgPoints": 22.7,
-          "projPoints": 17.2
+          "projPoints": 17.9
         },
         {
           "name": "DJ Moore",
@@ -950,7 +950,7 @@ const STATUS_REPORT_DATA = {
           "name": "Cooper Rush",
           "pos": "QB",
           "nfl": "ATL",
-          "isStarter": true,
+          "isStarter": false,
           "status": null,
           "flag": false,
           "lastGamePoints": 7.7,
@@ -1038,7 +1038,7 @@ const STATUS_REPORT_DATA = {
           "name": "Brock Purdy",
           "pos": "QB",
           "nfl": "SF",
-          "isStarter": false,
+          "isStarter": true,
           "status": null,
           "flag": false,
           "lastGamePoints": 22.1,
@@ -2625,7 +2625,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 25.2,
           "last3AvgPoints": 25.2,
-          "projPoints": 14.3
+          "projPoints": 15.3
         },
         {
           "name": "Omar Cooper",
