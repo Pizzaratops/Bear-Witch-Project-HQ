@@ -5,9 +5,15 @@ name: Status Report Sync
 # data/status-report.js und committet die Aenderung ins Repo.
 #
 # Laeuft alle 2 Stunden + manuell startbar ("Run workflow" im Actions-Tab).
-# Fuer private ESPN-Ligen muessen ESPN_S2 und SWID als Repository Secrets
-# hinterlegt sein (Settings > Secrets and variables > Actions) -- dieselben,
-# die auch der bestehende ESPN-Roster-Sync nutzt.
+# Fuer private ESPN-Ligen muessen espn_s2 und SWID als Repository Secrets
+# hinterlegt sein (Settings > Secrets and variables > Actions):
+#   - Fuer die Standard-Person (credentialKey: null in status-report-config.js)
+#     -> Secrets ESPN_S2 / SWID (dieselben wie beim bestehenden ESPN-Roster-Sync)
+#   - Fuer jede weitere Person (credentialKey: "FELIX" o.ae.)
+#     -> Secrets ESPN_S2_FELIX / SWID_FELIX, UND eine zusaetzliche Zeile
+#        weiter unten im "env:"-Block dieses Workflows ergaenzen (Secrets
+#        werden von Actions nicht automatisch durchgereicht, jeder Key
+#        muss hier einzeln benannt werden).
 
 on:
   schedule:
@@ -41,6 +47,10 @@ jobs:
         env:
           ESPN_S2: ${{ secrets.ESPN_S2 }}
           SWID: ${{ secrets.SWID }}
+          # Neue Person mit eigenem ESPN-Login in status-report-config.js
+          # ergaenzt? Hier eine analoge Zeile dazu ergaenzen, z.B.:
+          # ESPN_S2_FELIX: ${{ secrets.ESPN_S2_FELIX }}
+          # SWID_FELIX: ${{ secrets.SWID_FELIX }}
           SLEEPER_PLAYERS_CACHE_PATH: /tmp/sleeper-players.json
         run: node scripts/sync-status-report.js
 

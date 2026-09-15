@@ -1,28 +1,33 @@
 #!/usr/bin/env node
 // ============================================================
-//  STATUS REPORT SYNC (alle ESPN- & Sleeper-Football-Ligen)
+//  STATUS REPORT SYNC (ESPN- & Sleeper-Football-Ligen, mehrere Personen)
 // ============================================================
-//  Holt für jede in js/status-report-config.js gelistete Liga NUR das
-//  eigene Team (Roster + Verletztenstatus) und schreibt alles gesammelt
-//  nach data/status-report.js -> STATUS_REPORT_DATA.
+//  Holt für jede Person aus js/status-report-config.js (STATUS_REPORT_PEOPLE)
+//  ihr eigenes Team je gelisteter Liga (Roster + Verletztenstatus) und
+//  schreibt alles gesammelt nach data/status-report.js -> STATUS_REPORT_DATA.
 //
-//  ESPN: eigenes Team wird per SWID-Match erkannt (team.owners), braucht
-//  ESPN_S2 + SWID als Env-Var/GitHub Secret für private Ligen (siehe
-//  js/espn-sync.js). Läuft gegen den ESPN "reads"-Endpoint -- kein CORS-
-//  Problem in Node/GitHub Actions, anders als im Browser.
+//  ESPN: eigenes Team wird per SWID-Match erkannt (team.owners). Für
+//  private Ligen braucht jede Person ihre eigenen espn_s2/SWID-Cookies
+//  als GitHub Secrets -- Standard-Person (credentialKey: null) nutzt
+//  ESPN_S2/SWID, jede weitere Person nutzt ESPN_S2_<KEY>/SWID_<KEY>
+//  (siehe js/status-report-config.js für die Namenskonvention).
+//  Läuft gegen den ESPN "reads"-Endpoint -- kein CORS-Problem in
+//  Node/GitHub Actions, anders als im Browser.
 //
-//  Sleeper: öffentliche API, eigenes Team wird über den in der Config
-//  hinterlegten Usernamen aufgelöst. players/nfl (Referenzdaten, ~5MB)
-//  wird gecacht, wenn SLEEPER_PLAYERS_CACHE_PATH gesetzt ist (siehe
-//  .github/workflows/sync-status-report.yml, actions/cache).
+//  Sleeper: öffentliche API, eigenes Team wird über den je Person in
+//  der Config hinterlegten Usernamen aufgelöst. players/nfl (Referenz-
+//  daten, ~5MB) wird gecacht, wenn SLEEPER_PLAYERS_CACHE_PATH gesetzt
+//  ist (siehe .github/workflows/sync-status-report.yml, actions/cache)
+//  -- einmal fuer alle Personen zusammen, nicht pro Person neu laden.
 //
-//  Ausfallsicher: schlägt eine einzelne Liga fehl, wird sie mit dem
-//  letzten guten Stand (aus der bestehenden data/status-report.js)
-//  und stale:true übernommen, statt den ganzen Sync abzubrechen.
+//  Ausfallsicher: schlägt eine einzelne Liga (einer Person) fehl, wird
+//  sie mit dem letzten guten Stand (aus der bestehenden
+//  data/status-report.js) und stale:true übernommen, statt den ganzen
+//  Sync abzubrechen.
 //
 //  Usage:
 //    node scripts/sync-status-report.js
-//    ESPN_S2=... SWID=... node scripts/sync-status-report.js
+//    ESPN_S2=... SWID=... ESPN_S2_FELIX=... SWID_FELIX=... node scripts/sync-status-report.js
 // ============================================================
 
 const fs = require('fs');
@@ -63,7 +68,7 @@ function httpsGetJson(url, headers, opts) {
       if (res.statusCode === 401 || res.statusCode === 403) {
         res.resume();
         const hint = opts.isEspn
-          ? ' — Liga ist vermutlich privat. ESPN_S2 und SWID als Env-Variablen/GitHub Secrets setzen (siehe js/espn-sync.js).'
+          ? ' — Liga ist vermutlich privat. espn_s2/SWID-Secrets für diese Person prüfen (siehe js/status-report-config.js).'
           : '';
         return reject(new Error(`HTTP ${res.statusCode} für ${url}${hint}`));
       }
@@ -87,6 +92,23 @@ function httpsGetJson(url, headers, opts) {
 
 function normalizeSwid(s) {
   return (s || '').toUpperCase().replace(/[{}]/g, '');
+}
+
+// Baut die ESPN-Cookie-Header fuer eine Person. credentialKey === null/undefined
+// -> Standard-Secrets ESPN_S2/SWID. Sonst -> ESPN_S2_<KEY>/SWID_<KEY>
+// (KEY wird auf gueltige Env-Var-Zeichen normalisiert: A-Z0-9_).
+function espnHeadersFor(person) {
+  const suffix = person.credentialKey
+    ? '_' + String(person.credentialKey).toUpperCase().replace(/[^A-Z0-9]/g, '_')
+    : '';
+  const s2 = process.env['ESPN_S2' + suffix];
+  const swid = process.env['SWID' + suffix];
+  const headers = { 'User-Agent': 'bear-witch-project-hq-bot', 'Accept': 'application/json' };
+  const cookieParts = [];
+  if (s2) cookieParts.push(`espn_s2=${s2}`);
+  if (swid) cookieParts.push(`SWID=${swid}`);
+  if (cookieParts.length) headers['Cookie'] = cookieParts.join('; ');
+  return { headers, swid };
 }
 
 /* ---------- ESPN ---------- */
@@ -120,26 +142,28 @@ function mapEspnPlayer(entry, cfg, actionStatuses) {
   return { name, pos, nfl, isStarter, status, flag };
 }
 
-async function fetchEspnLeague(leagueCfg, cfg, headers, actionStatuses) {
+async function fetchEspnLeague(person, leagueCfg, cfg, actionStatuses) {
+  const { headers, swid } = espnHeadersFor(person);
+  if (!swid) throw new Error(`SWID für "${person.label}" nicht gesetzt -- kann eigenes Team nicht per Owner-Match erkennen.`);
+
   const url = `https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/${leagueCfg.season}/segments/0/leagues/${leagueCfg.id}?view=mRoster&view=mTeam`;
   const data = await httpsGetJson(url, headers, { isEspn: true });
   const teams = data.teams || [];
   if (!teams.length) throw new Error('Keine Teams in ESPN-Antwort -- Liga-ID/Season prüfen.');
 
-  const mySwid = normalizeSwid(process.env.SWID);
-  if (!mySwid) throw new Error('SWID nicht gesetzt -- kann eigenes Team nicht per Owner-Match erkennen.');
-
+  const mySwid = normalizeSwid(swid);
   const myTeam = teams.find(t => (t.owners || []).some(o => normalizeSwid(o) === mySwid));
-  if (!myTeam) throw new Error('Eigenes Team nicht gefunden (SWID-Match) -- ESPN_S2/SWID prüfen (Account eingeloggt bei fantasy.espn.com?).');
+  if (!myTeam) throw new Error(`Team von "${person.label}" nicht gefunden (SWID-Match) -- espn_s2/SWID prüfen (Account eingeloggt bei fantasy.espn.com?).`);
 
   const entries = myTeam.roster?.entries || [];
   const players = entries.map(e => mapEspnPlayer(e, cfg, actionStatuses)).filter(Boolean);
-  if (!players.length) throw new Error('Kein Kader in ESPN-Antwort für eigenes Team -- sieht nach Teilantwort aus.');
+  if (!players.length) throw new Error('Kein Kader in ESPN-Antwort für dieses Team -- sieht nach Teilantwort aus.');
 
   const ov = myTeam.record?.overall || {};
   return {
-    id: `espn-${leagueCfg.id}`,
+    id: `${person.id}-espn-${leagueCfg.id}`,
     platform: 'espn',
+    owner: person.label,
     leagueName: leagueCfg.name,
     emoji: leagueCfg.emoji || '🏈',
     teamName: (myTeam.name || `${myTeam.location || ''} ${myTeam.nickname || ''}`).trim(),
@@ -167,7 +191,9 @@ function mapSleeperPlayer(pid, pdata, isStarter, actionStatuses) {
   return { name, pos, nfl, isStarter, status, flag };
 }
 
-async function loadSleeperPlayersMap(headers) {
+const PUBLIC_HEADERS = { 'User-Agent': 'bear-witch-project-hq-bot', 'Accept': 'application/json' };
+
+async function loadSleeperPlayersMap() {
   const cachePath = process.env.SLEEPER_PLAYERS_CACHE_PATH;
   if (cachePath && fs.existsSync(cachePath)) {
     try {
@@ -181,7 +207,7 @@ async function loadSleeperPlayersMap(headers) {
     }
   }
   console.log('Lade Sleeper players.nfl (Referenzdaten, ~5MB, kann etwas dauern)...');
-  const playersMap = await httpsGetJson('https://api.sleeper.app/v1/players/nfl', headers);
+  const playersMap = await httpsGetJson('https://api.sleeper.app/v1/players/nfl', PUBLIC_HEADERS);
   if (cachePath) {
     try {
       fs.mkdirSync(path.dirname(cachePath), { recursive: true });
@@ -193,21 +219,21 @@ async function loadSleeperPlayersMap(headers) {
   return playersMap;
 }
 
-async function fetchSleeperLeagues(username, season, headers, actionStatuses) {
-  const user = await httpsGetJson(`https://api.sleeper.app/v1/user/${encodeURIComponent(username)}`, headers);
+async function fetchSleeperLeagues(person, playersMap, actionStatuses) {
+  const username = person.sleeperUsername;
+  const season = person.sleeperSeason;
+  const user = await httpsGetJson(`https://api.sleeper.app/v1/user/${encodeURIComponent(username)}`, PUBLIC_HEADERS);
   if (!user || !user.user_id) throw new Error(`Sleeper-User "${username}" nicht gefunden.`);
 
-  const leagues = await httpsGetJson(`https://api.sleeper.app/v1/user/${user.user_id}/leagues/nfl/${season}`, headers);
+  const leagues = await httpsGetJson(`https://api.sleeper.app/v1/user/${user.user_id}/leagues/nfl/${season}`, PUBLIC_HEADERS);
   if (!leagues.length) throw new Error(`Keine Sleeper-Ligen für "${username}" in Season ${season} gefunden.`);
-
-  const playersMap = await loadSleeperPlayersMap(headers);
 
   const results = [];
   for (const league of leagues) {
     try {
       const [rosters, users] = await Promise.all([
-        httpsGetJson(`https://api.sleeper.app/v1/league/${league.league_id}/rosters`, headers),
-        httpsGetJson(`https://api.sleeper.app/v1/league/${league.league_id}/users`, headers),
+        httpsGetJson(`https://api.sleeper.app/v1/league/${league.league_id}/rosters`, PUBLIC_HEADERS),
+        httpsGetJson(`https://api.sleeper.app/v1/league/${league.league_id}/users`, PUBLIC_HEADERS),
       ]);
       const myRoster = rosters.find(r => r.owner_id === user.user_id);
       if (!myRoster) throw new Error('Kein eigenes Roster in dieser Liga gefunden.');
@@ -223,8 +249,9 @@ async function fetchSleeperLeagues(username, season, headers, actionStatuses) {
 
       const rs = myRoster.settings || {};
       results.push({
-        id: `sleeper-${league.league_id}`,
+        id: `${person.id}-sleeper-${league.league_id}`,
         platform: 'sleeper',
+        owner: person.label,
         leagueName: league.name,
         emoji: '💤',
         teamName,
@@ -234,8 +261,8 @@ async function fetchSleeperLeagues(username, season, headers, actionStatuses) {
       });
     } catch (err) {
       // Einzelne Sleeper-Liga uebersprungen -- Fallback passiert in main() ueber die
-      // ID (sleeper-<league_id>), damit ein Fehler hier nicht den ganzen Sync killt.
-      console.warn(`⚠️  Sleeper-Liga "${league.name}" (${league.league_id}) fehlgeschlagen: ${err.message}`);
+      // ID, damit ein Fehler hier nicht den ganzen Sync killt.
+      console.warn(`⚠️  Sleeper-Liga "${league.name}" (${league.league_id}, ${person.label}) fehlgeschlagen: ${err.message}`);
     }
   }
   return results;
@@ -262,55 +289,51 @@ async function main() {
     path.join(ROOT, 'js', 'status-report-config.js'),
   ]);
   const actionStatuses = cfgSandbox.STATUS_REPORT_ACTION_STATUSES || ['O', 'D', 'IR', 'SUSP', 'PUP', 'NFI'];
+  const people = cfgSandbox.STATUS_REPORT_PEOPLE || [];
   const previousLeagues = loadPreviousLeagues();
   const previousById = {};
   previousLeagues.forEach(l => { previousById[l.id] = l; });
 
-  const headers = { 'User-Agent': 'bear-witch-project-hq-bot', 'Accept': 'application/json' };
-  const cookieParts = [];
-  if (process.env.ESPN_S2) cookieParts.push(`espn_s2=${process.env.ESPN_S2}`);
-  if (process.env.SWID) cookieParts.push(`SWID=${process.env.SWID}`);
-  if (cookieParts.length) headers['Cookie'] = cookieParts.join('; ');
-
   const leagues = [];
+  let sleeperPlayersMap = null; // lazy, einmal fuer alle Personen zusammen
 
-  for (const leagueCfg of (cfgSandbox.STATUS_REPORT_ESPN_LEAGUES || [])) {
-    const id = `espn-${leagueCfg.id}`;
-    try {
-      const league = await fetchEspnLeague(leagueCfg, cfgSandbox, headers, actionStatuses);
-      leagues.push(league);
-      console.log(`✓ ESPN "${leagueCfg.name}": ${league.teamName}, ${league.players.length} Spieler, ${league.flaggedCount} geflaggt.`);
-    } catch (err) {
-      console.warn(`⚠️  ESPN-Liga "${leagueCfg.name}" (${leagueCfg.id}) fehlgeschlagen: ${err.message}`);
-      if (previousById[id]) {
-        leagues.push({ ...previousById[id], stale: true });
-        console.warn(`   -> letzten guten Stand übernommen (stale).`);
+  for (const person of people) {
+    for (const leagueCfg of (person.espnLeagues || [])) {
+      const id = `${person.id}-espn-${leagueCfg.id}`;
+      try {
+        const league = await fetchEspnLeague(person, leagueCfg, cfgSandbox, actionStatuses);
+        leagues.push(league);
+        console.log(`✓ ESPN "${leagueCfg.name}" (${person.label}): ${league.teamName}, ${league.players.length} Spieler, ${league.flaggedCount} geflaggt.`);
+      } catch (err) {
+        console.warn(`⚠️  ESPN-Liga "${leagueCfg.name}" (${leagueCfg.id}, ${person.label}) fehlgeschlagen: ${err.message}`);
+        if (previousById[id]) {
+          leagues.push({ ...previousById[id], stale: true });
+          console.warn(`   -> letzten guten Stand übernommen (stale).`);
+        }
       }
     }
-  }
 
-  try {
-    const sleeperLeagues = await fetchSleeperLeagues(
-      cfgSandbox.STATUS_REPORT_SLEEPER_USERNAME,
-      cfgSandbox.STATUS_REPORT_SLEEPER_SEASON,
-      headers,
-      actionStatuses
-    );
-    sleeperLeagues.forEach(l => {
-      leagues.push(l);
-      console.log(`✓ Sleeper "${l.leagueName}": ${l.teamName}, ${l.players.length} Spieler, ${l.flaggedCount} geflaggt.`);
-    });
-    // Sleeper-Ligen, die dieses Mal (einzeln) fehlgeschlagen sind, aus dem
-    // vorherigen Stand auffuellen, damit sie nicht einfach verschwinden.
-    previousLeagues
-      .filter(l => l.platform === 'sleeper' && !sleeperLeagues.some(nl => nl.id === l.id))
-      .forEach(l => {
-        leagues.push({ ...l, stale: true });
-        console.warn(`   -> Sleeper-Liga "${l.leagueName}" letzten guten Stand übernommen (stale).`);
-      });
-  } catch (err) {
-    console.warn(`⚠️  Sleeper-Sync komplett fehlgeschlagen: ${err.message}`);
-    previousLeagues.filter(l => l.platform === 'sleeper').forEach(l => leagues.push({ ...l, stale: true }));
+    if (person.sleeperUsername) {
+      try {
+        if (!sleeperPlayersMap) sleeperPlayersMap = await loadSleeperPlayersMap();
+        const sleeperLeagues = await fetchSleeperLeagues(person, sleeperPlayersMap, actionStatuses);
+        sleeperLeagues.forEach(l => {
+          leagues.push(l);
+          console.log(`✓ Sleeper "${l.leagueName}" (${person.label}): ${l.teamName}, ${l.players.length} Spieler, ${l.flaggedCount} geflaggt.`);
+        });
+        // Sleeper-Ligen dieser Person, die dieses Mal (einzeln) fehlgeschlagen
+        // sind, aus dem vorherigen Stand auffuellen statt verschwinden zu lassen.
+        previousLeagues
+          .filter(l => l.platform === 'sleeper' && l.owner === person.label && !sleeperLeagues.some(nl => nl.id === l.id))
+          .forEach(l => {
+            leagues.push({ ...l, stale: true });
+            console.warn(`   -> Sleeper-Liga "${l.leagueName}" (${person.label}) letzten guten Stand übernommen (stale).`);
+          });
+      } catch (err) {
+        console.warn(`⚠️  Sleeper-Sync für "${person.label}" komplett fehlgeschlagen: ${err.message}`);
+        previousLeagues.filter(l => l.platform === 'sleeper' && l.owner === person.label).forEach(l => leagues.push({ ...l, stale: true }));
+      }
+    }
   }
 
   if (!leagues.length) {

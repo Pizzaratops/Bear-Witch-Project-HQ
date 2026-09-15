@@ -4282,7 +4282,7 @@ function renderStatusReport() {
     }
   }
 
-  wrap.innerHTML = `<div class="team-grid">` + data.leagues.map(l => {
+  const tileHtml = l => {
     const flagged = l.flaggedCount || 0;
     const playerCount = (l.players || []).length;
     return `
@@ -4293,7 +4293,20 @@ function renderStatusReport() {
         <div class="team-owner">${l.teamName}${l.record ? ' · ' + l.record : ''}</div>
         <div class="team-meta">${playerCount} Spieler${l.stale ? ' · ⚠️ veraltet' : ''}</div>
       </div>`;
-  }).join('') + `</div>`;
+  };
+
+  // Gruppierung nach Person nur einblenden, wenn mehr als eine Person
+  // dabei ist -- solo bleibt es eine flache Kachel-Uebersicht.
+  const owners = [...new Set(data.leagues.map(l => l.owner).filter(Boolean))];
+  if (owners.length > 1) {
+    wrap.innerHTML = owners.map(owner => `
+      <div class="sr-owner-group">
+        <div class="sr-owner-heading">${owner}</div>
+        <div class="team-grid">${data.leagues.filter(l => l.owner === owner).map(tileHtml).join('')}</div>
+      </div>`).join('');
+  } else {
+    wrap.innerHTML = `<div class="team-grid">` + data.leagues.map(tileHtml).join('') + `</div>`;
+  }
 }
 
 function renderStatusReportDetail(leagueId) {
@@ -4310,7 +4323,7 @@ function renderStatusReportDetail(leagueId) {
 
   header.innerHTML = `
     <div class="page-title">${league.emoji || '🏈'} ${league.leagueName}</div>
-    <div class="page-sub">${league.teamName}${league.record ? ' · ' + league.record : ''}${league.stale ? ' · ⚠️ Daten evtl. veraltet (letzter erfolgreicher Sync)' : ''}</div>
+    <div class="page-sub">${league.owner ? league.owner + ' · ' : ''}${league.teamName}${league.record ? ' · ' + league.record : ''}${league.stale ? ' · ⚠️ Daten evtl. veraltet (letzter erfolgreicher Sync)' : ''}</div>
   `;
 
   const players = (league.players || []).slice().sort((a, b) => {
