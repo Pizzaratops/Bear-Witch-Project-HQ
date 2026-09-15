@@ -2,14 +2,27 @@
 // ============================================================
 //  ESPN PLAYER WEEKLY STATS SYNC (fürs Player-Rankings-Board)
 // ============================================================
-//  Zieht tatsaechlich erzielte Fantasy-Punkte je Spieler und Woche
-//  (statSourceId=0 = actual, statSplitTypeId=1 = weekly) und schreibt
-//  sie nach data/player-stats.js. Vor Saisonstart liefert ESPN dafuer
-//  einfach nichts -- das Script laeuft dann folgenlos durch (players: []
-//  bleibt leer, bis die erste Woche gespielt ist).
+//  UMGEBAUT (15.09.2026, nach Diagnose): view=kona_player_info liefert
+//  für ECHTE Punkte (statSourceId=0) nur den SAISON-GESAMTWERT
+//  (statSplitTypeId=0, scoringPeriodId=0) -- keine Wochenaufschlüsselung.
+//  Die einzige Wochenaufschlüsselung in dieser View ist bei PROJEKTIONEN
+//  (statSourceId=1), nicht bei echten Werten. Deshalb lieferte die alte
+//  Version (Filter auf statSourceId=0 UND statSplitTypeId=1) konstant 0
+//  Treffer -- bestätigt per Diagnose-Log aus einem echten Sync-Lauf.
 //
-//  Gleiche x-fantasy-filter-Header-Mechanik wie sync-espn-projections.js,
-//  siehe Kommentar dort zu moeglichen API-Aenderungen bei ESPN.
+//  Jetzt genutzt: dieselbe woechentliche Boxscore-Methode wie
+//  scripts/sync-fantasy-position-score.js (dort bereits nachweislich
+//  erfolgreich, siehe dortige Kommentare) -- pro bereits gespielter Woche
+//  wird der Liga-Boxscore (view=mBoxscore) geholt und JEDER Roster-
+//  Eintrag (Starter UND Bank, anders als beim Fantasy-Power-Score, der
+//  nur Starter zaehlt) ausgewertet.
+//
+//  BEKANNTE EINSCHRÄNKUNG: erfasst werden nur Spieler, die in der
+//  jeweiligen Woche auf einem der 12 Team-Kader standen. Reine Free
+//  Agents, die nie von jemandem gerostert wurden, tauchen hier NICHT
+//  auf (kein Zugriff auf den vollen ESPN-Spielerpool mit Wochenwerten).
+//  Fuer Player Rankings/Best-Available betrifft das nur Spieler, die
+//  ohnehin nie interessant waren -- alles fantasy-relevante ist erfasst.
 //
 //  Usage:
 //    node scripts/sync-espn-player-stats.js
@@ -22,18 +35,13 @@ const https = require('https');
 
 const ROOT = path.join(__dirname, '..');
 const OUT = path.join(ROOT, 'data', 'player-stats.js');
-const PLAYER_LIMIT = 800;
 
 function loadModuleSandbox(files) {
-  // WICHTIG: vm.runInContext haengt "const"/"let"-Deklarationen NICHT als
-  // Property ans Sandbox-Objekt (nur "var" wuerde das tun) -- deshalb hier per
-  // Regex alle top-level "const NAME = ..." Namen einsammeln und explizit
-  // ueber "this.NAME = NAME" an die Sandbox anhaengen.
   const sandbox = {};
   vm.createContext(sandbox);
   files.forEach(f => {
     const code = fs.readFileSync(f, 'utf8');
-    const names = [...code.matchAll(/^\s*const\s+([A-Za-z_\$][\w\$]*)/gm)].map(m => m[1]);
+    const names = [...code.matchAll(/^const\s+([A-Za-z_\$][\w\$]*)/gm)].map(m => m[1]);
     const expose = names.map(n => `this.${n} = ${n};`).join('\n');
     vm.runInContext(code + '\n' + expose, sandbox);
   });
@@ -46,6 +54,11 @@ function loadConfig() {
     ESPN_POS_MAP: sandbox.ESPN_POS_MAP, ESPN_NFL_MAP: sandbox.ESPN_NFL_MAP,
   };
 }
+function loadWeeklyScores(season) {
+  const sandbox = loadModuleSandbox([path.join(ROOT, 'data', 'weekly-scores.js')]);
+  return (sandbox.WEEKLY_SCORES && sandbox.WEEKLY_SCORES[season]) || {};
+}
+
 function httpsGetJson(url, headers) {
   return new Promise((resolve, reject) => {
     https.get(url, { headers }, res => {
@@ -66,66 +79,105 @@ function httpsGetJson(url, headers) {
   });
 }
 
-async function main() {
-  const cfg = loadConfig();
-  const headers = {
-    'User-Agent': 'bear-witch-project-hq-bot', 'Accept': 'application/json',
-    'x-fantasy-filter': JSON.stringify({
-      players: { limit: PLAYER_LIMIT, sortDraftRanks: { sortPriority: 1, sortAsc: true, value: 'STANDARD' } },
-    }),
-  };
+function authHeaders() {
+  const headers = { 'User-Agent': 'bear-witch-project-hq-bot', 'Accept': 'application/json' };
   const cookieParts = [];
   if (process.env.ESPN_S2) cookieParts.push(`espn_s2=${process.env.ESPN_S2}`);
   if (process.env.SWID) cookieParts.push(`SWID=${process.env.SWID}`);
   if (cookieParts.length) headers['Cookie'] = cookieParts.join('; ');
+  return headers;
+}
 
-  const url = `https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/${cfg.ESPN_SEASON}/segments/0/leagues/${cfg.ESPN_LEAGUE_ID}?view=kona_player_info`;
-  const data = await httpsGetJson(url, headers);
-  const entries = data.players || [];
-
-  // ---- DIAGNOSE-LOGGING (temporär) ----
-  console.log(`Diagnose: ${entries.length} Spieler-Einträge insgesamt von ESPN erhalten.`);
-  const sample = entries.find(e => (e.player?.stats || []).length > 0) || entries[0];
-  if (sample) {
-    console.log(`Diagnose: Beispielspieler "${sample.player?.fullName}", stats-Array hat ${sample.player?.stats?.length || 0} Einträge:`);
-    (sample.player?.stats || []).slice(0, 10).forEach(s => {
-      console.log(`  statSourceId=${s.statSourceId} statSplitTypeId=${s.statSplitTypeId} seasonId=${s.seasonId} scoringPeriodId=${s.scoringPeriodId} appliedTotal=${s.appliedTotal}`);
-    });
-  } else {
-    console.log('Diagnose: kein einziger Spieler mit stats-Array gefunden.');
+// Identisch zu scripts/sync-fantasy-position-score.js: appliedStatTotal
+// direkt am Roster-Eintrag ist der primaere, nachweislich funktionierende
+// Weg; der stats-Array-Fallback bleibt fuer alle Faelle drin.
+function extractWeekPoints(entry, week) {
+  if (typeof entry.playerPoolEntry?.appliedStatTotal === 'number') {
+    return entry.playerPoolEntry.appliedStatTotal;
   }
-  // ---- Ende Diagnose-Logging ----
+  const stats = entry.playerPoolEntry?.player?.stats || [];
+  const match = stats.find(s => s.statSourceId === 0 && s.statSplitTypeId === 1 && s.scoringPeriodId === week);
+  return match ? (match.appliedTotal || 0) : null;
+}
 
-  const players = entries.map(entry => {
-    const p = entry.player || {};
-    if (!p.fullName) return null;
-    const weekly = {};
-    (p.stats || []).forEach(s => {
-      if (s.statSourceId === 0 && s.statSplitTypeId === 1 && s.seasonId === cfg.ESPN_SEASON && s.scoringPeriodId) {
-        weekly[s.scoringPeriodId] = Math.round((s.appliedTotal || 0) * 10) / 10;
-      }
+async function fetchWeekBoxscore(cfg, week) {
+  const url = `https://lm-api-reads.fantasy.espn.com/apis/v3/games/ffl/seasons/${cfg.ESPN_SEASON}/segments/0/leagues/${cfg.ESPN_LEAGUE_ID}?view=mBoxscore&view=mMatchupScore&scoringPeriodId=${week}`;
+  const data = await httpsGetJson(url, authHeaders());
+  const playersThisWeek = []; // { name, pos, team, points }
+  (data.schedule || []).forEach(matchup => {
+    if (matchup.matchupPeriodId !== week) return;
+    ['home', 'away'].forEach(side => {
+      const teamSide = matchup[side];
+      if (!teamSide) return;
+      const entries = teamSide.rosterForCurrentScoringPeriod?.entries || [];
+      entries.forEach(entry => {
+        const p = entry.playerPoolEntry?.player;
+        if (!p || !p.fullName) return;
+        const pts = extractWeekPoints(entry, week);
+        if (pts == null) return;
+        playersThisWeek.push({
+          name: p.fullName,
+          pos: cfg.ESPN_POS_MAP[p.defaultPositionId] || '?',
+          team: cfg.ESPN_NFL_MAP[p.proTeamId] || 'FA',
+          points: Math.round(pts * 10) / 10,
+        });
+      });
     });
-    const weeks = Object.keys(weekly);
-    if (!weeks.length) return null;
-    const total = Object.values(weekly).reduce((a, b) => a + b, 0);
+  });
+  return playersThisWeek;
+}
+
+async function main() {
+  const cfg = loadConfig();
+  const season = cfg.ESPN_SEASON;
+  const weeklyScores = loadWeeklyScores(season);
+  const playedWeeks = Object.keys(weeklyScores).map(Number).filter(w => (weeklyScores[w] || []).length > 0).sort((a, b) => a - b);
+
+  if (!playedWeeks.length) {
+    console.log(`Season ${season}: noch keine gespielte Woche in data/weekly-scores.js -- Sync übersprungen, keine Datei geschrieben.`);
+    return;
+  }
+
+  const byPlayer = {}; // name -> { pos, team, weeklyPoints: {week: pts} }
+  for (const week of playedWeeks) {
+    let weekPlayers = [];
+    try {
+      weekPlayers = await fetchWeekBoxscore(cfg, week);
+    } catch (e) {
+      console.warn(`⚠️  Woche ${week}: Boxscore übersprungen (best effort):`, e.message);
+      continue;
+    }
+    console.log(`Woche ${week}: ${weekPlayers.length} Spieler-Einträge aus dem Boxscore.`);
+    weekPlayers.forEach(p => {
+      byPlayer[p.name] = byPlayer[p.name] || { pos: p.pos, team: p.team, weeklyPoints: {} };
+      byPlayer[p.name].pos = p.pos; // immer den neuesten Stand nehmen (Positionswechsel selten, aber moeglich)
+      byPlayer[p.name].team = p.team;
+      byPlayer[p.name].weeklyPoints[week] = p.points;
+    });
+  }
+
+  const players = Object.entries(byPlayer).map(([name, p]) => {
+    const weeks = Object.keys(p.weeklyPoints);
+    const total = Object.values(p.weeklyPoints).reduce((a, b) => a + b, 0);
     return {
-      name: p.fullName,
-      team: cfg.ESPN_NFL_MAP[p.proTeamId] || 'FA',
-      pos: cfg.ESPN_POS_MAP[p.defaultPositionId] || '?',
-      weeklyPoints: weekly,
+      name, team: p.team, pos: p.pos,
+      weeklyPoints: p.weeklyPoints,
       gamesPlayed: weeks.length,
       totalPoints: Math.round(total * 10) / 10,
       avgPoints: Math.round((total / weeks.length) * 10) / 10,
     };
-  }).filter(Boolean);
-
-  players.sort((a, b) => b.totalPoints - a.totalPoints);
+  }).sort((a, b) => b.totalPoints - a.totalPoints);
 
   const out = `// ============================================================
 //  PLAYER_SEASON_STATS — tatsächlich erzielte Punkte je Woche
 // ============================================================
 //  AUTO-GENERIERT von scripts/sync-espn-player-stats.js.
 //  Zuletzt synchronisiert: ${new Date().toISOString()}
+//
+//  Quelle: woechentlicher ESPN-Boxscore (view=mBoxscore), nicht
+//  kona_player_info -- siehe Kommentarkopf im Script fuer die Begruendung.
+//  Erfasst nur Spieler, die in der jeweiligen Woche auf einem der 12
+//  Team-Kader standen (Starter + Bank) -- keine reinen Free Agents.
 // ============================================================
 
 const PLAYER_SEASON_STATS = ${JSON.stringify({ season: cfg.ESPN_SEASON, updated: new Date().toISOString(), players })};

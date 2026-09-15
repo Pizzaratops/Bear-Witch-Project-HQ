@@ -271,7 +271,7 @@ function renderRoster(teamId) {
     return;
   }
 
-  let html = renderFantasyPowerScoreSection(team.id);
+  let html = `<div id="fpsHost">${renderFantasyPowerScoreSection(team.id)}</div>`;
 
   if (fullRoster && fullRoster.length) {
     html += `
@@ -1313,6 +1313,9 @@ function drSetShareStyle(style) {
 }
 function _renderShareCardDispatch() {
   if (_shareMode === 'season') _srRenderShareCard();
+  else if (_shareMode === 'weekly') _wrRenderShareCard();
+  else if (_shareMode === 'nflBootleg') _nflBootlegRenderShareCard();
+  else if (_shareMode === 'fantasyBootleg') _fantasyBootlegRenderShareCard();
   else _drRenderShareCard();
 }
 
@@ -2445,87 +2448,377 @@ function _srDrawChart(datasets, labels) {
 function renderSeasonRolling() {
   const wrap = document.getElementById('seasonrollingContent');
   const seasons = Object.keys(WEEKLY_SCORES);
-  const season = seasonRollingState.season || seasons[seasons.length - 1];
+  const season = seasons[seasons.length - 1];
   const weeks = Object.keys(WEEKLY_SCORES[season] || {}).map(Number).sort((a, b) => a - b);
 
   if (!weeks.length) {
     wrap.innerHTML = emptyState(
       'Noch keine Saisonwerte',
-      'Diese Seite zeigt die 2026 Season Rolling Rankings (kumulierte Punkte + Rang je Woche, inkl. Wochenauswahl und Vergleich). Sobald die reguläre Saison läuft und der automatische ESPN-Sync (täglich 9 & 21 Uhr) Wochenwerte liefert, füllt sie sich automatisch.',
+      'Diese Seite zeigt die 2026 Season Rolling Rankings (kumulierter Rang je Woche, Team-Auswahl, Vergleich bis zu 3 Teams, Snapshot zum Teilen). Sobald die reguläre Saison läuft und der automatische ESPN-Sync (täglich 9 & 21 Uhr) Wochenwerte liefert, füllt sie sich automatisch.',
       '📈'
     );
     return;
   }
 
-  const week = seasonRollingState.week && weeks.includes(seasonRollingState.week) ? seasonRollingState.week : weeks[weeks.length - 1];
-  const compareWeek = seasonRollingState.compareWeek && weeks.includes(seasonRollingState.compareWeek) && seasonRollingState.compareWeek < week
-    ? seasonRollingState.compareWeek
-    : (weeks.find(w => w < week) ?? week);
-  seasonRollingState = { season, week, compareWeek };
-
-  const teamMeta = id => LEAGUE_TEAMS.find(t => t.id === id) || { name: id, emoji: '🏈' };
-  const current = cumulativeStandingsThroughWeek(season, week);
-  const compare = cumulativeStandingsThroughWeek(season, compareWeek);
-  const compareRankByTeam = {};
-  compare.forEach(r => { compareRankByTeam[r.teamId] = r.rank; });
-
-  const rows = current.map(r => {
-    const t = teamMeta(r.teamId);
-    const prevRank = compareRankByTeam[r.teamId];
-    let trend = '<span style="color:var(--muted)">–</span>';
-    if (prevRank !== undefined && compareWeek !== week) {
-      const delta = prevRank - r.rank;
-      if (delta > 0) trend = `<span style="color:var(--green)">▲ ${delta}</span>`;
-      else if (delta < 0) trend = `<span style="color:var(--red)">▼ ${Math.abs(delta)}</span>`;
-      else trend = '<span style="color:var(--muted)">– 0</span>';
-    }
-    return `<tr>
-      <td>${r.rank}</td>
-      <td style="text-align:left;font-weight:600">${t.emoji || ''} ${t.name}</td>
-      <td><b>${r.points.toFixed(1)}</b></td>
-      <td>${r.wins}-${r.losses}</td>
-      <td>${trend}</td>
-    </tr>`;
-  }).join('');
-
   wrap.innerHTML = `
-    <div class="db-controls">
-      <div class="db-pos-filters" id="seasonRollingWeekSelector"></div>
-    </div>
-    <div class="info-banner">
-      Kumulierte Punkte &amp; Rang durch <b>Woche ${week}</b> (Season ${season}).
-      Vergleich zu <b>Woche ${compareWeek}</b>${compareWeek === week ? ' (kein früherer Wert vorhanden)' : ''} —
-      wähle unten eine andere Vergleichs-Woche.
-    </div>
-    <div class="db-controls">
-      <span style="font-size:12px;color:var(--muted);font-weight:700">Vergleich zu:</span>
-      <div class="db-pos-filters" id="seasonRollingCompareSelector"></div>
-    </div>
-    <div class="board-table-wrap">
-      <table class="board">
-        <thead><tr><th class="round-label">#</th><th>Team</th><th>Punkte gesamt</th><th>W-L</th><th>Rang-Trend</th></tr></thead>
-        <tbody>${rows}</tbody>
-      </table>
+    <div class="rr-layout">
+      <div class="rr-sidebar">
+        <div class="rr-sidebar-header">
+          <div style="font-size:13px;font-weight:800;color:var(--text);">Teams</div>
+        </div>
+        <div id="wrToolbar" class="rr-toolbar"></div>
+        <div class="rr-list-scroll">
+          <div id="wrListCols" class="rr-list-cols"></div>
+          <div id="wrListBody"></div>
+        </div>
+      </div>
+      <div class="rr-main" id="wrChartPanel">
+        <div style="margin:auto;text-align:center;color:var(--muted);">
+          <div style="font-size:36px;margin-bottom:10px;">📈</div>
+          <div style="font-size:14px;font-weight:700;color:var(--text);">Team auswählen</div>
+          <div style="font-size:12px;margin-top:4px;">Klicke links auf ein Team für den Rang-Verlauf</div>
+        </div>
+      </div>
     </div>
   `;
+  _wrInit();
+}
 
-  const weekSel = document.getElementById('seasonRollingWeekSelector');
+/* ---------- Weekly Rolling (2026 Rolling Rankings: Sidebar + Chart + Vergleich, wie Dynasty/Season-Finish Rolling) ---------- */
+let wrCompareMode = false;
+let wrSelected = [];
+let wrSortBy = 'avg';
+let wrSortDir = 'asc';
+const WR_COMPARE_COLORS = SR_COMPARE_COLORS;
+
+let _wrDataCache = null;
+function _wrSeason() { const seasons = Object.keys(WEEKLY_SCORES); return seasons[seasons.length - 1]; }
+function _wrWeeks() { return Object.keys(WEEKLY_SCORES[_wrSeason()] || {}).map(Number).sort((a, b) => a - b); }
+function _wrListWeeks() { return _wrWeeks().slice(-2); }
+
+function _wrData() {
+  if (_wrDataCache) return _wrDataCache;
+  const weeks = _wrWeeks();
+  const season = _wrSeason();
+  const rankByTeamWeek = {}, pointsByTeamWeek = {};
   weeks.forEach(w => {
-    const btn = document.createElement('button');
-    btn.className = 'db-pos-btn' + (w === week ? ' active' : '');
-    btn.textContent = 'Woche ' + w;
-    btn.onclick = () => { seasonRollingState.week = w; renderSeasonRolling(); };
-    weekSel.appendChild(btn);
+    cumulativeStandingsThroughWeek(season, w).forEach(r => {
+      rankByTeamWeek[r.teamId] = rankByTeamWeek[r.teamId] || {};
+      rankByTeamWeek[r.teamId][w] = r.rank;
+      pointsByTeamWeek[r.teamId] = pointsByTeamWeek[r.teamId] || {};
+      pointsByTeamWeek[r.teamId][w] = r.points;
+    });
+  });
+  _wrDataCache = LEAGUE_TEAMS.map((t, i) => {
+    const ranks = weeks.map(w => rankByTeamWeek[t.id]?.[w] ?? null);
+    const points = weeks.map(w => pointsByTeamWeek[t.id]?.[w] ?? null);
+    const valid = ranks.filter(r => r !== null);
+    const avg = valid.length ? valid.reduce((a, b) => a + b, 0) / valid.length : null;
+    return { team: t.name, emoji: t.emoji, ranks, points, avg, weeksPlayed: valid.length, origIdx: i };
+  });
+  return _wrDataCache;
+}
+
+function _wrInit() {
+  _wrDataCache = null;
+  wrSelected = [];
+  wrCompareMode = false;
+  wrSortBy = 'avg';
+  wrSortDir = 'asc';
+  _wrRenderToolbar();
+  _wrRenderListHeader();
+  _wrRenderList();
+  _wrRenderMain();
+}
+
+function _wrSortedData() {
+  const data = _wrData().slice();
+  const dir = wrSortDir === 'desc' ? -1 : 1;
+  const weekIdx = _wrWeeks().indexOf(wrSortBy);
+  data.sort((a, b) => {
+    let va, vb;
+    if (wrSortBy === 'name') return dir * a.team.localeCompare(b.team);
+    if (wrSortBy === 'avg') { va = a.avg; vb = b.avg; }
+    else if (weekIdx !== -1) { va = a.ranks[weekIdx]; vb = b.ranks[weekIdx]; }
+    else { va = a.avg; vb = b.avg; }
+    const an = va == null, bn = vb == null;
+    if (an && bn) return a.team.localeCompare(b.team);
+    if (an) return 1;
+    if (bn) return -1;
+    return dir * (va - vb);
+  });
+  return data;
+}
+
+function wrSortByKey(key) {
+  if (wrSortBy === key) wrSortDir = wrSortDir === 'asc' ? 'desc' : 'asc';
+  else { wrSortBy = key; wrSortDir = 'asc'; }
+  _wrRenderListHeader();
+  _wrRenderList();
+}
+
+function _wrRenderToolbar() {
+  const host = document.getElementById('wrToolbar');
+  if (!host) return;
+  const active = wrCompareMode ? ' rr-tb-active' : '';
+  const shareDisabled = !wrSelected.length ? ' disabled style="opacity:.4;cursor:not-allowed"' : '';
+  host.innerHTML = `
+    <div class="rr-tb-group"><button class="rr-tb-btn${active}" onclick="wrToggleCompare()">⚖️ Vergleichen ${wrCompareMode ? '(' + wrSelected.length + '/3)' : ''}</button></div>
+    <button class="rr-tb-btn" onclick="wrOpenShareModal()"${shareDisabled}>📸 Snapshot</button>
+  `;
+}
+function wrToggleCompare() {
+  wrCompareMode = !wrCompareMode;
+  if (!wrCompareMode && wrSelected.length > 1) wrSelected = wrSelected.slice(0, 1);
+  _wrRenderToolbar();
+  _wrRenderList();
+  _wrRenderMain();
+}
+
+function _wrRenderListHeader() {
+  const host = document.getElementById('wrListCols');
+  if (!host) return;
+  const listWeeks = _wrListWeeks();
+  const cls = key => 'rr-col-h' + (wrSortBy === key ? ' rr-col-active' : '');
+  const ind = key => wrSortBy !== key ? '' : (wrSortDir === 'asc' ? ' ↑' : ' ↓');
+  host.style.gridTemplateColumns = `28px 1fr repeat(${listWeeks.length}, 38px)`;
+  host.innerHTML =
+    `<span class="${cls('avg')}" onclick="wrSortByKey('avg')" title="Ø Rang">#${ind('avg')}</span>` +
+    `<span class="${cls('name')}" onclick="wrSortByKey('name')" style="text-align:left;">Team${ind('name')}</span>` +
+    listWeeks.map(w => `<span class="${cls(w)}" onclick="wrSortByKey(${w})">W${w}${ind(w)}</span>`).join('');
+}
+
+function _wrRenderList() {
+  const body = document.getElementById('wrListBody');
+  if (!body) return;
+  const listWeeks = _wrListWeeks();
+  const allWeeks = _wrWeeks();
+  const startIdx = allWeeks.length - listWeeks.length;
+  const gridTpl = `28px 1fr repeat(${listWeeks.length}, 38px)`;
+  const data = _wrSortedData();
+
+  body.innerHTML = data.map((r, sortIdx) => {
+    const cells = listWeeks.map((w, i) => {
+      const rank = r.ranks[startIdx + i];
+      const c = rank == null ? 'var(--border)' : _drRankColor(rank);
+      return `<span class="rr-rank-cell" style="color:${c};background:${rank ? c + '22' : 'transparent'}">${rank ?? '–'}</span>`;
+    }).join('');
+    const isSelected = wrSelected.indexOf(r.origIdx) !== -1;
+    const selIdx = wrSelected.indexOf(r.origIdx);
+    const colorDot = (wrCompareMode && isSelected)
+      ? `<span style="display:inline-block;width:8px;height:8px;border-radius:50%;background:${WR_COMPARE_COLORS[selIdx]};margin-right:4px;vertical-align:middle;"></span>`
+      : '';
+    const idxLabel = wrSortBy === 'avg' ? (r.avg != null ? r.avg.toFixed(1) : '–') : (sortIdx + 1);
+    return `<div class="rr-row${isSelected ? ' rr-active' : ''}" onclick="wrSelectTeam(${r.origIdx})" style="grid-template-columns:${gridTpl};">
+      <span class="rr-idx">${idxLabel}</span>
+      <span class="rr-name" title="${r.team}">${colorDot}${r.emoji || ''} ${r.team}</span>
+      ${cells}
+    </div>`;
+  }).join('');
+}
+
+function wrSelectTeam(origIdx) {
+  if (wrCompareMode) {
+    const i = wrSelected.indexOf(origIdx);
+    if (i !== -1) wrSelected.splice(i, 1);
+    else if (wrSelected.length < 3) wrSelected.push(origIdx);
+    else wrSelected[2] = origIdx;
+  } else {
+    wrSelected = [origIdx];
+  }
+  _wrRenderToolbar();
+  _wrRenderList();
+  _wrRenderMain();
+}
+
+function _wrRenderMain() {
+  const panel = document.getElementById('wrChartPanel');
+  if (!panel) return;
+  if (!wrSelected.length) {
+    panel.innerHTML = `
+      <div style="margin:auto;text-align:center;color:var(--muted);">
+        <div style="font-size:36px;margin-bottom:10px;">📈</div>
+        <div style="font-size:14px;font-weight:700;color:var(--text);">Team auswählen</div>
+        <div style="font-size:12px;margin-top:4px;">${wrCompareMode ? 'Wähle bis zu 3 Teams zum Vergleich' : 'Klicke links auf ein Team für den Rang-Verlauf'}</div>
+      </div>`;
+    return;
+  }
+  const data = _wrData();
+  const weeks = _wrWeeks();
+  const labels = weeks.map(w => 'W' + w);
+  if (wrCompareMode && wrSelected.length > 1) {
+    const teams = wrSelected.map(i => data[i]);
+    const datasets = teams.map((t, i) => ({ team: t, values: t.ranks, color: WR_COMPARE_COLORS[i] }));
+    const cards = datasets.map(d => {
+      const valid = d.values.filter(x => x !== null);
+      const best = valid.length ? Math.min(...valid) : null;
+      return `<div class="rr-compare-card" style="border-color:${d.color}55;">
+        <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+          <span style="width:12px;height:12px;border-radius:50%;background:${d.color};"></span>
+          <span style="font-weight:800;font-size:14px;">${d.team.emoji || ''} ${d.team.team}</span>
+        </div>
+        <div style="font-size:11px;color:var(--muted);">Bester Rang: <strong style="color:${d.color};font-size:14px;">#${best ?? '–'}</strong> · Ø <strong style="color:${d.color};font-size:14px;">${d.team.avg != null ? d.team.avg.toFixed(1) : '–'}</strong></div>
+      </div>`;
+    }).join('');
+    panel.innerHTML = `
+      <div class="rr-player-header"><div><div class="rr-player-name">Vergleich</div><div class="rr-player-sub">Kumulierter Rang je Woche (Season ${_wrSeason()})</div></div></div>
+      <div class="rr-compare-cards">${cards}</div>
+      <div class="rr-chart-box"><canvas id="wrCanvas"></canvas></div>`;
+    _wrDrawChart(datasets, labels);
+  } else {
+    const t = data[wrSelected[0]];
+    const valid = t.ranks.filter(x => x !== null);
+    const best = valid.length ? Math.min(...valid) : null;
+    const worst = valid.length ? Math.max(...valid) : null;
+    const lastPoints = t.points.filter(p => p != null).slice(-1)[0];
+    const badges = weeks.map((w, i) => {
+      const r = t.ranks[i];
+      const c = r == null ? 'var(--border)' : _drRankColor(r);
+      return `<div class="rr-month-badge"><span class="rr-badge-label">W${w}</span><span class="rr-badge-rank" style="color:${c}">${r ?? '—'}</span></div>`;
+    }).join('');
+    panel.innerHTML = `
+      <div class="rr-player-header">
+        <div><div class="rr-player-name">${t.emoji || ''} ${t.team}</div><div class="rr-player-sub">Kumulierter Rang je Woche (Season ${_wrSeason()})</div></div>
+        <div class="rr-pills">
+          <div class="rr-pill"><span class="rr-pill-val" style="color:#e0794a">${best ?? '–'}</span><span class="rr-pill-label">Bester Rang</span></div>
+          <div class="rr-pill"><span class="rr-pill-val" style="color:#d9695f">${worst ?? '–'}</span><span class="rr-pill-label">Schlechtester</span></div>
+          <div class="rr-pill"><span class="rr-pill-val" style="color:#4d7bb0">${t.avg != null ? t.avg.toFixed(1) : '–'}</span><span class="rr-pill-label">Ø Rang</span></div>
+          <div class="rr-pill"><span class="rr-pill-val" style="color:#4caf81">${lastPoints != null ? lastPoints.toFixed(1) : '–'}</span><span class="rr-pill-label">Punkte ges.</span></div>
+        </div>
+      </div>
+      <div class="rr-chart-box"><canvas id="wrCanvas"></canvas></div>
+      <div class="rr-badges">${badges}</div>`;
+    _wrDrawChart([{ team: t, values: t.ranks, color: WR_COMPARE_COLORS[0] }], labels);
+  }
+}
+
+let wrChart = null;
+function _wrDrawChart(datasets, labels) {
+  if (wrChart) { wrChart.destroy(); wrChart = null; }
+  const canvas = document.getElementById('wrCanvas');
+  if (!canvas || typeof Chart === 'undefined') return;
+  const ctx = canvas.getContext('2d');
+  const maxRank = Math.max(LEAGUE_TEAMS.length, ...datasets.flatMap(d => d.values.filter(v => v != null)));
+
+  const chartDatasets = datasets.map(d => {
+    const grad = ctx.createLinearGradient(0, 0, 0, 260);
+    grad.addColorStop(0, _drHexToRgba(d.color, 0.22));
+    grad.addColorStop(1, _drHexToRgba(d.color, 0));
+    return {
+      label: d.team.team,
+      data: d.values,
+      borderColor: d.color,
+      backgroundColor: datasets.length === 1 ? grad : 'transparent',
+      pointBackgroundColor: d.values.map(r => datasets.length === 1 ? _drRankColor(r) : d.color),
+      pointBorderColor: getComputedStyle(document.body).getPropertyValue('--surface') || '#fff',
+      pointBorderWidth: 2, pointRadius: 6, pointHoverRadius: 9, borderWidth: 2.5,
+      fill: datasets.length === 1, tension: 0.3, spanGaps: true,
+    };
+  });
+  const styles = getComputedStyle(document.body);
+  const textColor = styles.getPropertyValue('--text') || '#333';
+  const mutedColor = styles.getPropertyValue('--muted') || '#888';
+  const borderColor = styles.getPropertyValue('--border') || '#ddd';
+  const surfaceColor = styles.getPropertyValue('--surface2') || '#fff';
+
+  wrChart = new Chart(ctx, {
+    type: 'line',
+    data: { labels, datasets: chartDatasets },
+    options: {
+      responsive: true, maintainAspectRatio: true, aspectRatio: 2.4,
+      plugins: {
+        legend: { display: datasets.length > 1, labels: { color: textColor, font: { size: 11, weight: '700' } } },
+        tooltip: {
+          backgroundColor: surfaceColor, borderColor, borderWidth: 1, titleColor: textColor, bodyColor: '#e0794a', padding: 10,
+          callbacks: { label: c => c.raw === null ? `${c.dataset.label}: keine Daten` : `${c.dataset.label}: Rang ${c.raw}` }
+        }
+      },
+      scales: {
+        y: { reverse: true, min: 1, max: maxRank, grid: { color: borderColor }, border: { color: borderColor },
+             ticks: { color: mutedColor, font: { size: 10 }, stepSize: 1 }, title: { display: true, text: 'Rang', color: mutedColor, font: { size: 10 } } },
+        x: { grid: { color: borderColor }, border: { color: borderColor }, ticks: { color: textColor, font: { size: 11, weight: '700' } } }
+      }
+    }
+  });
+}
+
+function wrOpenShareModal() {
+  if (!wrSelected.length) return;
+  _shareMode = 'weekly';
+  _openShareModalCommon();
+}
+
+function _wrRenderShareCard() {
+  const host = document.getElementById('drShareCardContent');
+  if (!host) return;
+
+  document.querySelectorAll('.rr-style-btn').forEach(btn => {
+    btn.classList.toggle('rr-style-active', btn.dataset.style === drShareStyle);
   });
 
-  const cmpSel = document.getElementById('seasonRollingCompareSelector');
-  weeks.filter(w => w < week).forEach(w => {
-    const btn = document.createElement('button');
-    btn.className = 'db-pos-btn' + (w === compareWeek ? ' active' : '');
-    btn.textContent = 'Woche ' + w;
-    btn.onclick = () => { seasonRollingState.compareWeek = w; renderSeasonRolling(); };
-    cmpSel.appendChild(btn);
-  });
+  const isCompare = wrCompareMode && wrSelected.length > 1;
+  const data = _wrData();
+  const teams = wrSelected.map(i => data[i]);
+  const weeks = _wrWeeks();
+  const labels = weeks.map(w => 'W' + w);
+  const datasets = teams.map((t, i) => ({ label: t.team, values: t.ranks, color: WR_COMPARE_COLORS[i] }));
+
+  const th = drShareStyle === 'light' ? {
+    bg: '#faf6f1', surface: '#ffffff', text: '#23293a', muted: '#93877a',
+    accent: '#cf7a48', border: '#ecdcc9', shadow: 'rgba(207,122,72,0.10)',
+  } : {
+    bg: '#0a0f1c', surface: '#121a2b', text: '#eef1f8', muted: '#8a93ac',
+    accent: '#e0794a', border: '#2a3654', shadow: 'rgba(0,0,0,0.35)',
+  };
+
+  const titleText = isCompare ? '2026 Rolling Rankings · Vergleich' : teams[0].team;
+  const subText = `Kumulierter Rang je Woche (Season ${_wrSeason()})`;
+
+  let statsHtml = '';
+  if (isCompare) {
+    statsHtml = datasets.map((d, i) => {
+      const valid = d.values.filter(x => x !== null);
+      const best = valid.length ? Math.min(...valid) : null;
+      const avg = teams[i].avg;
+      return `<div style="display:flex;align-items:center;gap:10px;padding:10px 14px;background:${th.surface};border-radius:10px;border:1px solid ${th.border};">
+        <span style="width:14px;height:14px;border-radius:50%;background:${d.color};flex-shrink:0;"></span>
+        <div style="flex:1;min-width:0;">
+          <div style="font-size:14px;font-weight:800;color:${th.text};white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${d.label}</div>
+          <div style="font-size:10px;color:${th.muted};margin-top:2px;">Bester Rang #${best ?? '–'} · Ø ${avg != null ? avg.toFixed(1) : '–'}</div>
+        </div>
+      </div>`;
+    }).join('');
+    statsHtml = `<div style="display:flex;flex-direction:column;gap:8px;margin-bottom:18px;">${statsHtml}</div>`;
+  } else {
+    const t = teams[0];
+    const valid = t.ranks.filter(x => x !== null);
+    const best = valid.length ? Math.min(...valid) : null;
+    const worst = valid.length ? Math.max(...valid) : null;
+    const pill = (val, label, color) => `
+      <div style="flex:1;background:${th.surface};border:1px solid ${th.border};border-radius:10px;padding:12px 8px;text-align:center;">
+        <div style="font-size:24px;font-weight:800;color:${color};line-height:1;">${val ?? '–'}</div>
+        <div style="font-size:9px;color:${th.muted};margin-top:6px;letter-spacing:1px;text-transform:uppercase;">${label}</div>
+      </div>`;
+    statsHtml = `<div style="display:flex;gap:8px;margin-bottom:18px;">
+      ${pill(best, 'Bester Rang', '#e0794a')}
+      ${pill(worst, 'Schlechtester', '#d9695f')}
+      ${pill(t.avg != null ? t.avg.toFixed(1) : null, 'Ø Rang', '#4d7bb0')}
+    </div>`;
+  }
+
+  host.innerHTML = `
+    <div id="drShareCardInner" style="width:480px;aspect-ratio:4/5;background:${th.bg};padding:32px 28px;font-family:'DM Sans',system-ui,sans-serif;color:${th.text};display:flex;flex-direction:column;border-radius:18px;box-shadow:0 8px 32px ${th.shadow};">
+      <div style="font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:${th.muted};text-align:center;margin-bottom:6px;">🐻 Bear Witch Project HQ · Rolling Rankings</div>
+      <div style="font-size:${isCompare ? '24px' : '28px'};font-family:'Playfair Display',serif;font-weight:800;text-align:center;line-height:1.1;color:${th.accent};margin-bottom:4px;">${titleText}</div>
+      <div style="font-size:11px;color:${th.muted};text-align:center;margin-bottom:18px;">${subText}</div>
+      ${statsHtml}
+      <div style="flex:1;background:${th.surface};border:1px solid ${th.border};border-radius:14px;padding:14px;display:flex;align-items:center;justify-content:center;min-height:0;">
+        <canvas id="drShareCanvas" style="max-width:100%;max-height:100%;"></canvas>
+      </div>
+      <div style="text-align:center;font-size:10px;color:${th.muted};margin-top:14px;letter-spacing:1px;">Foodball 🏈 · Bear Witch Project HQ</div>
+    </div>`;
+
+  setTimeout(() => _drDrawShareChart(datasets, labels, th, true), 30);
 }
 
 /* ---------- NFL Power Rankings (Conference/Division/NFL, W-L / Offense / Defense) ---------- */
@@ -2581,7 +2874,7 @@ function renderNflRankings() {
     </div>`;
 
   if (team) {
-    wrap.innerHTML = teamSelectorHtml + renderBootlegPowerScoreSection(season, team) + renderNflTeamHistory(season, weeks, team);
+    wrap.innerHTML = teamSelectorHtml + `<div id="bootlegHost">${renderBootlegPowerScoreSection(season, team)}</div>` + renderNflTeamHistory(season, weeks, team);
     document.getElementById('nflTeamSelector').onchange = e => { nflRankingsState.team = e.target.value; renderNflRankings(); };
     wireBootlegPowerScoreControls(season, team);
     return;
@@ -2747,6 +3040,9 @@ function renderNflTeamHistory(season, weeks, teamAbbr) {
 // data/fantasy-power-score.js, siehe scripts/sync-fantasy-position-score.js.
 let fantasyBootlegChart = null;
 let fantasyBootlegState = { week: null, mode: 'cumulative', valueFormat: 'avg' };
+let fpsCompareMode = false;
+let fpsCompareTeams = []; // bis zu 3 Fantasy-Team-IDs
+const FPS_COMPARE_COLORS = SR_COMPARE_COLORS;
 
 function renderFantasyPowerScoreSection(teamId) {
   const fps = (typeof FANTASY_POWER_SCORE !== 'undefined') ? FANTASY_POWER_SCORE : null;
@@ -2756,6 +3052,16 @@ function renderFantasyPowerScoreSection(teamId) {
   const weeks = Object.keys(fps.weeks).map(Number).sort((a, b) => a - b);
   const week = fantasyBootlegState.week && weeks.includes(fantasyBootlegState.week) ? fantasyBootlegState.week : weeks[weeks.length - 1];
   fantasyBootlegState.week = week;
+  if (!fpsCompareTeams.length) fpsCompareTeams = [teamId];
+
+  const compareSelectors = fpsCompareMode ? `
+    <div class="db-controls" style="margin-top:6px">
+      ${[0, 1, 2].map(i => `
+        <select onchange="fpsSetCompareTeam(${i}, this.value)" style="background:var(--surface);color:var(--text);border:1px solid var(--border);border-radius:8px;padding:4px 8px;font-size:12px;font-weight:600">
+          <option value="">${i === 0 ? '— Team ' + (i + 1) + ' —' : '— Team ' + (i + 1) + ' (optional) —'}</option>
+          ${LEAGUE_TEAMS.map(t => `<option value="${t.id}" ${fpsCompareTeams[i] === t.id ? 'selected' : ''}>${t.emoji || ''} ${t.name}</option>`).join('')}
+        </select>`).join('')}
+    </div>` : '';
 
   return `
     <div class="bootleg-box">
@@ -2769,11 +3075,31 @@ function renderFantasyPowerScoreSection(teamId) {
         <span style="font-size:12px;color:var(--muted);font-weight:700">Anzeige:</span>
         <div class="db-pos-filters" id="fpsValueFormatSelector"></div>
       </div>
+      <div class="db-controls" style="margin-top:4px">
+        <button class="rr-tb-btn${fpsCompareMode ? ' rr-tb-active' : ''}" onclick="fpsToggleCompare('${escapeJs(teamId)}')">⚖️ Vergleichen ${fpsCompareMode ? '(' + fpsCompareTeams.filter(Boolean).length + '/3)' : ''}</button>
+        <button class="rr-tb-btn" onclick="fpsOpenShareModal()">📸 Snapshot</button>
+      </div>
+      ${compareSelectors}
+      <div id="fpsCompareCards"></div>
       <div class="bootleg-chart-wrap">
         <canvas id="fpsCanvas"></canvas>
       </div>
       <div class="page-sub" id="fpsLegend" style="margin-top:10px"></div>
     </div>`;
+}
+
+function fpsToggleCompare(teamId) {
+  fpsCompareMode = !fpsCompareMode;
+  if (!fpsCompareMode) fpsCompareTeams = [teamId];
+  else if (!fpsCompareTeams.length) fpsCompareTeams = [teamId];
+  const host = document.getElementById('fpsHost');
+  if (!host) return;
+  host.innerHTML = renderFantasyPowerScoreSection(teamId);
+  wireFantasyPowerScoreControls(teamId);
+}
+function fpsSetCompareTeam(slot, teamId) {
+  fpsCompareTeams[slot] = teamId || null;
+  _drawFantasyBootlegChart(fpsCompareTeams[0]);
 }
 
 function wireFantasyPowerScoreControls(teamId) {
@@ -2835,61 +3161,65 @@ function _drawFantasyBootlegChart(teamId) {
   const weekData = fps.weeks[week];
   const list = mode === 'weekly' ? weekData.weekly : weekData.cumulative;
   const categories = fps.categories;
-  const entry = list.find(t => t.teamId === teamId);
-  const gamesPlayed = mode === 'cumulative' ? (entry?.gamesPlayed || week) : 1;
   const legend = document.getElementById('fpsLegend');
+  const cardsHost = document.getElementById('fpsCompareCards');
+  const teamMeta = id => LEAGUE_TEAMS.find(t => t.id === id) || { name: id, emoji: '🏈' };
 
-  if (!entry || categories.every(c => entry.ranks[c.key] == null)) {
+  const ids = fpsCompareMode ? fpsCompareTeams : [teamId];
+  const rawEntries = _bootlegEntriesFor(list, 'teamId', ids);
+  const entries = rawEntries.map(e => ({ ...e, name: teamMeta(e.teamId).name, emoji: teamMeta(e.teamId).emoji, gamesPlayed: mode === 'cumulative' ? (e.gamesPlayed || week) : 1 }));
+
+  if (!entries.length || entries.every(e => categories.every(c => e.ranks[c.key] == null))) {
     if (legend) legend.innerHTML = 'Für diese Woche liegen noch keine Werte vor.';
+    if (cardsHost) cardsHost.innerHTML = '';
     return;
   }
 
-  const dataPoints = categories.map(c => entry.ranks[c.key] != null ? 13 - entry.ranks[c.key] : null); // 12 Teams -> 13-Rang
   const labels = categories.map(c => c.label);
-
   const styles = getComputedStyle(document.body);
   const textColor = styles.getPropertyValue('--text') || '#333';
   const borderColor = styles.getPropertyValue('--border') || '#ddd';
   const accentColor = (styles.getPropertyValue('--accent2') || styles.getPropertyValue('--accent') || '#4a90e0').trim();
+  const isCompare = entries.length > 1;
+  const colors = isCompare ? FPS_COMPARE_COLORS : [accentColor];
 
-  function hexToRgba(hex, alpha) {
-    hex = hex.trim().replace('#', '');
-    if (hex.length === 3) hex = hex.split('').map(c => c + c).join('');
-    const r = parseInt(hex.slice(0, 2), 16), g = parseInt(hex.slice(2, 4), 16), b = parseInt(hex.slice(4, 6), 16);
-    return `rgba(${r || 74},${g || 144},${b || 224},${alpha})`;
-  }
+  const valLabel = (entry, cat) => {
+    const v = entry.values[cat.key];
+    if (v == null) return { shown: null, unit: cat.unit };
+    const shown = valueFormat === 'total' && mode === 'cumulative' ? round1(v * entry.gamesPlayed) : v;
+    const unit = valueFormat === 'total' && mode === 'cumulative' ? 'Gesamt' : cat.unit;
+    return { shown, unit };
+  };
+
+  const chartDatasets = entries.map((entry, i) => ({
+    label: `${entry.emoji || ''} ${entry.name}`,
+    data: categories.map(c => entry.ranks[c.key] != null ? 13 - entry.ranks[c.key] : null), // 12 Teams -> 13-Rang
+    borderColor: colors[i],
+    backgroundColor: _hexToRgbaShared(colors[i], isCompare ? 0.12 : 0.25),
+    pointBackgroundColor: colors[i],
+    pointBorderColor: styles.getPropertyValue('--surface') || '#fff',
+    pointRadius: 5, pointHoverRadius: 7, borderWidth: 2.5, spanGaps: false,
+  }));
 
   const ctx = canvas.getContext('2d');
   fantasyBootlegChart = new Chart(ctx, {
     type: 'radar',
-    data: {
-      labels,
-      datasets: [{
-        label: mode === 'weekly' ? `Woche ${week}` : `Kumulativ bis Woche ${week}`,
-        data: dataPoints,
-        borderColor: accentColor,
-        backgroundColor: hexToRgba(accentColor, 0.25),
-        pointBackgroundColor: accentColor,
-        pointBorderColor: styles.getPropertyValue('--surface') || '#fff',
-        pointRadius: 5, pointHoverRadius: 7, borderWidth: 2.5, spanGaps: false,
-      }],
-    },
+    data: { labels, datasets: chartDatasets },
     options: {
       responsive: true, maintainAspectRatio: true, aspectRatio: 1.3,
       plugins: {
-        legend: { display: false },
+        legend: { display: isCompare, labels: { color: textColor, font: { size: 11, weight: '700' } } },
         tooltip: {
           backgroundColor: styles.getPropertyValue('--surface2') || '#fff',
           borderColor, borderWidth: 1, titleColor: textColor, bodyColor: accentColor, padding: 12,
           callbacks: {
             label: c => {
+              const entry = entries[c.datasetIndex];
               const cat = categories[c.dataIndex];
               const r = entry.ranks[cat.key];
-              const v = entry.values[cat.key];
-              if (r == null) return 'Kein Wert';
-              const shown = valueFormat === 'total' && mode === 'cumulative' ? round1(v * gamesPlayed) : v;
-              const label = valueFormat === 'total' && mode === 'cumulative' ? 'Gesamt' : cat.unit;
-              return `Rang ${r} von 12 (${shown} ${label})`;
+              if (r == null) return `${entry.name}: kein Wert`;
+              const { shown, unit } = valLabel(entry, cat);
+              return `${entry.name}: Rang ${r} von 12 (${shown} ${unit})`;
             },
           },
         },
@@ -2905,17 +3235,99 @@ function _drawFantasyBootlegChart(teamId) {
     },
   });
 
-  if (legend) {
-    legend.innerHTML = categories.map(c => {
-      const r = entry.ranks[c.key];
-      const v = entry.values[c.key];
-      const shown = valueFormat === 'total' && mode === 'cumulative' && v != null ? round1(v * gamesPlayed) : v;
-      const label = valueFormat === 'total' && mode === 'cumulative' ? 'Gesamt' : c.unit;
-      return `<span style="display:inline-block;margin:2px 10px 2px 0"><b>${c.label}:</b> ${r != null ? `#${r}` : '—'} <span style="color:var(--muted)">(${shown != null ? shown : '—'} ${label})</span></span>`;
-    }).join('');
+  if (isCompare) {
+    if (legend) legend.innerHTML = '';
+    if (cardsHost) {
+      cardsHost.innerHTML = `<div class="rr-compare-cards">${entries.map((e, i) => {
+        const ranks = categories.map(c => e.ranks[c.key]).filter(r => r != null);
+        const bestCat = categories.find(c => e.ranks[c.key] === Math.min(...ranks));
+        const avg = ranks.length ? (ranks.reduce((a, b) => a + b, 0) / ranks.length).toFixed(1) : '–';
+        return `<div class="rr-compare-card" style="border-color:${colors[i]}55;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span style="width:12px;height:12px;border-radius:50%;background:${colors[i]};"></span>
+            <span style="font-weight:800;font-size:14px;">${e.emoji || ''} ${e.name}</span>
+          </div>
+          <div style="font-size:11px;color:var(--muted);">Stärkste Kategorie: <strong style="color:${colors[i]}">${bestCat ? bestCat.label : '–'}</strong> · Ø Rang <strong style="color:${colors[i]}">${avg}</strong></div>
+        </div>`;
+      }).join('')}</div>`;
+    }
+  } else {
+    if (cardsHost) cardsHost.innerHTML = '';
+    if (legend) {
+      const entry = entries[0];
+      legend.innerHTML = categories.map(c => {
+        const r = entry.ranks[c.key];
+        const { shown, unit } = valLabel(entry, c);
+        return `<span style="display:inline-block;margin:2px 10px 2px 0"><b>${c.label}:</b> ${r != null ? `#${r}` : '—'} <span style="color:var(--muted)">(${shown != null ? shown : '—'} ${unit})</span></span>`;
+      }).join('');
+    }
   }
 }
 function round1(n) { return Math.round(n * 10) / 10; }
+
+function fpsOpenShareModal() {
+  if (!fpsCompareTeams.filter(Boolean).length) return;
+  _shareMode = 'fantasyBootleg';
+  _openShareModalCommon();
+}
+
+function _fantasyBootlegRenderShareCard() {
+  const host = document.getElementById('drShareCardContent');
+  if (!host) return;
+  document.querySelectorAll('.rr-style-btn').forEach(btn => {
+    btn.classList.toggle('rr-style-active', btn.dataset.style === drShareStyle);
+  });
+
+  const fps = FANTASY_POWER_SCORE;
+  const week = fantasyBootlegState.week;
+  const mode = fantasyBootlegState.mode;
+  const valueFormat = fantasyBootlegState.valueFormat;
+  const list = mode === 'weekly' ? fps.weeks[week].weekly : fps.weeks[week].cumulative;
+  const categories = fps.categories;
+  const teamMeta = id => LEAGUE_TEAMS.find(t => t.id === id) || { name: id, emoji: '🏈' };
+  const ids = fpsCompareMode ? fpsCompareTeams : [fpsCompareTeams[0]];
+  const rawEntries = _bootlegEntriesFor(list, 'teamId', ids);
+  const entries = rawEntries.map(e => ({ ...e, name: teamMeta(e.teamId).name, emoji: teamMeta(e.teamId).emoji, gamesPlayed: mode === 'cumulative' ? (e.gamesPlayed || week) : 1 }));
+  const isCompare = entries.length > 1;
+  const colors = isCompare ? FPS_COMPARE_COLORS : ['#4a90e0'];
+
+  const th = drShareStyle === 'light' ? {
+    bg: '#faf6f1', surface: '#ffffff', text: '#23293a', muted: '#93877a',
+    accent: '#cf7a48', border: '#ecdcc9', shadow: 'rgba(207,122,72,0.10)',
+  } : {
+    bg: '#0a0f1c', surface: '#121a2b', text: '#eef1f8', muted: '#8a93ac',
+    accent: '#e0794a', border: '#2a3654', shadow: 'rgba(0,0,0,0.35)',
+  };
+
+  const titleText = isCompare ? '🎯 Bootleg Power Score · Vergleich' : `🎯 ${entries[0].name}`;
+  const subText = `${mode === 'weekly' ? 'Woche ' + week : 'Kumulativ bis Woche ' + week}${valueFormat === 'total' && mode === 'cumulative' ? ' · Gesamt' : ' · Ø pro Woche'}`;
+
+  const cardsHtml = entries.map((e, i) => {
+    const ranks = categories.map(c => e.ranks[c.key]).filter(r => r != null);
+    const avg = ranks.length ? (ranks.reduce((a, b) => a + b, 0) / ranks.length).toFixed(1) : '–';
+    return `<div style="display:flex;align-items:center;gap:10px;padding:10px 14px;background:${th.surface};border-radius:10px;border:1px solid ${th.border};">
+      <span style="width:14px;height:14px;border-radius:50%;background:${colors[i]};flex-shrink:0;"></span>
+      <div style="flex:1;min-width:0;">
+        <div style="font-size:14px;font-weight:800;color:${th.text};white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${e.emoji || ''} ${e.name}</div>
+        <div style="font-size:10px;color:${th.muted};margin-top:2px;">Ø Rang ${avg} von 12</div>
+      </div>
+    </div>`;
+  }).join('');
+
+  host.innerHTML = `
+    <div id="drShareCardInner" style="width:480px;aspect-ratio:4/5;background:${th.bg};padding:32px 28px;font-family:'DM Sans',system-ui,sans-serif;color:${th.text};display:flex;flex-direction:column;border-radius:18px;box-shadow:0 8px 32px ${th.shadow};">
+      <div style="font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:${th.muted};text-align:center;margin-bottom:6px;">🐻 Bear Witch Project HQ · Foodball</div>
+      <div style="font-size:${isCompare ? '22px' : '26px'};font-family:'Playfair Display',serif;font-weight:800;text-align:center;line-height:1.1;color:${th.accent};margin-bottom:4px;">${titleText}</div>
+      <div style="font-size:11px;color:${th.muted};text-align:center;margin-bottom:18px;">${subText}</div>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:18px;">${cardsHtml}</div>
+      <div style="flex:1;background:${th.surface};border:1px solid ${th.border};border-radius:14px;padding:14px;display:flex;align-items:center;justify-content:center;min-height:0;">
+        <canvas id="drShareRadarCanvas" style="max-width:100%;max-height:100%;"></canvas>
+      </div>
+      <div style="text-align:center;font-size:10px;color:${th.muted};margin-top:14px;letter-spacing:1px;">Foodball 🏈 · Bear Witch Project HQ</div>
+    </div>`;
+
+  setTimeout(() => _drawShareRadarChart(entries, categories, colors, th, 12), 30);
+}
 
 /* ---------- Bootleg Power Score (Spinnennetz, 6 Kategorien) ---------- */
 // Datengestützt ausgewählte 6 Kategorien (siehe Kommentarkopf in
@@ -2925,6 +3337,14 @@ function round1(n) { return Math.round(n * 10) / 10; }
 // unabhängig davon ob die zugrundeliegende Kennzahl "hoch=gut" oder
 // "niedrig=gut" ist (das übernimmt schon der Sync, siehe "ranks").
 let bootlegChart = null;
+let bootlegCompareMode = false;
+let bootlegCompareTeams = []; // bis zu 3 NFL-Abbrs
+const BOOTLEG_COMPARE_COLORS = SR_COMPARE_COLORS;
+
+function _bootlegAllTeams(season) {
+  const anyWeek = Object.keys(NFL_STANDINGS[season] || {})[0];
+  return anyWeek ? (NFL_STANDINGS[season][anyWeek] || []).slice().sort((a, b) => a.name.localeCompare(b.name)) : [];
+}
 
 function renderBootlegPowerScoreSection(season, teamAbbr) {
   const psSeason = (typeof NFL_POWER_SCORE !== 'undefined') ? NFL_POWER_SCORE[season] : null;
@@ -2937,17 +3357,33 @@ function renderBootlegPowerScoreSection(season, teamAbbr) {
   nflRankingsState.radarWeek = week;
   nflRankingsState.radarMode = mode;
 
-  const anyWeek = Object.keys(NFL_STANDINGS[season] || {})[0];
-  const meta = anyWeek ? (NFL_STANDINGS[season][anyWeek] || []).find(t => t.abbr === teamAbbr) : null;
+  if (!bootlegCompareTeams.length) bootlegCompareTeams = [teamAbbr];
+  const allTeams = _bootlegAllTeams(season);
+  const meta = allTeams.find(t => t.abbr === teamAbbr);
+
+  const compareSelectors = bootlegCompareMode ? `
+    <div class="db-controls" style="margin-top:6px">
+      ${[0, 1, 2].map(i => `
+        <select onchange="bootlegSetCompareTeam(${i}, this.value)" style="background:var(--surface);color:var(--text);border:1px solid var(--border);border-radius:8px;padding:4px 8px;font-size:12px;font-weight:600">
+          <option value="">${i === 0 ? '— Team ' + (i + 1) + ' —' : '— Team ' + (i + 1) + ' (optional) —'}</option>
+          ${allTeams.map(t => `<option value="${t.abbr}" ${bootlegCompareTeams[i] === t.abbr ? 'selected' : ''}>${t.name}</option>`).join('')}
+        </select>`).join('')}
+    </div>` : '';
 
   return `
     <div class="bootleg-box">
-      <div class="bootleg-title">🎯 Bootleg Power Score — ${meta ? meta.name : teamAbbr}</div>
+      <div class="bootleg-title">🎯 Bootleg Power Score${bootlegCompareMode ? '' : ' — ' + (meta ? meta.name : teamAbbr)}</div>
       <div class="db-controls">
         <span style="font-size:12px;color:var(--muted);font-weight:700">Ansicht:</span>
         <div class="db-pos-filters" id="bootlegModeSelector"></div>
         <div class="db-pos-filters" id="bootlegWeekSelector"></div>
       </div>
+      <div class="db-controls" style="margin-top:4px">
+        <button class="rr-tb-btn${bootlegCompareMode ? ' rr-tb-active' : ''}" onclick="bootlegToggleCompare('${escapeJs(teamAbbr)}')">⚖️ Vergleichen ${bootlegCompareMode ? '(' + bootlegCompareTeams.filter(Boolean).length + '/3)' : ''}</button>
+        <button class="rr-tb-btn" onclick="bootlegOpenShareModal('${escapeJs(season)}')">📸 Snapshot</button>
+      </div>
+      ${compareSelectors}
+      <div id="bootlegCompareCards"></div>
       <div class="bootleg-chart-wrap">
         <canvas id="bootlegCanvas"></canvas>
       </div>
@@ -2955,7 +3391,28 @@ function renderBootlegPowerScoreSection(season, teamAbbr) {
     </div>`;
 }
 
+function bootlegToggleCompare(teamAbbr) {
+  bootlegCompareMode = !bootlegCompareMode;
+  if (!bootlegCompareMode) bootlegCompareTeams = [teamAbbr];
+  else if (!bootlegCompareTeams.length) bootlegCompareTeams = [teamAbbr];
+  renderNflTeamDetailRadar(teamAbbr);
+}
+function bootlegSetCompareTeam(slot, abbr) {
+  bootlegCompareTeams[slot] = abbr || null;
+  _drawBootlegChart(nflRankingsState.season, bootlegCompareTeams[0]);
+}
+// Kleiner Re-Render-Helfer, der die ganze Box (inkl. neuer Team-Dropdowns)
+// neu aufbaut -- gebraucht beim Ein-/Ausschalten des Vergleichsmodus, wo
+// sich die Box-Struktur selbst aendert, nicht nur der Chart-Inhalt.
+function renderNflTeamDetailRadar(teamAbbr) {
+  const host = document.getElementById('bootlegHost');
+  if (!host) return;
+  host.innerHTML = renderBootlegPowerScoreSection(nflRankingsState.season, teamAbbr);
+  wireBootlegPowerScoreControls(nflRankingsState.season, teamAbbr);
+}
+
 function wireBootlegPowerScoreControls(season, teamAbbr) {
+  nflRankingsState.season = season;
   const psSeason = (typeof NFL_POWER_SCORE !== 'undefined') ? NFL_POWER_SCORE[season] : null;
   if (!psSeason || !Object.keys(psSeason.weeks || {}).length) return;
   const weeks = Object.keys(psSeason.weeks).map(Number).sort((a, b) => a - b);
@@ -2991,6 +3448,20 @@ function _updateBootlegControlsActiveState() {
   });
 }
 
+function _hexToRgbaShared(hex, alpha) {
+  hex = (hex || '').trim().replace('#', '');
+  if (hex.length === 3) hex = hex.split('').map(c => c + c).join('');
+  const r = parseInt(hex.slice(0, 2), 16), g = parseInt(hex.slice(2, 4), 16), b = parseInt(hex.slice(4, 6), 16);
+  return `rgba(${r || 224},${g || 121},${b || 74},${alpha})`;
+}
+
+// Holt fuer eine Liste von Team-Kennungen (Abbr fuer NFL, teamId fuer
+// Fantasy) die {entry, ranks-Eintraege} aus einer Bootleg-Power-Score-
+// Woche -- gemeinsame Grundlage fuer Einzel- und Vergleichsdarstellung.
+function _bootlegEntriesFor(list, idField, ids) {
+  return ids.filter(Boolean).map(id => list.find(t => t[idField] === id)).filter(Boolean);
+}
+
 function _drawBootlegChart(season, teamAbbr) {
   if (bootlegChart) { bootlegChart.destroy(); bootlegChart = null; }
   const canvas = document.getElementById('bootlegCanvas');
@@ -3002,68 +3473,59 @@ function _drawBootlegChart(season, teamAbbr) {
   const weekData = psSeason.weeks[week];
   const list = mode === 'weekly' ? weekData.weekly : weekData.cumulative;
   const categories = psSeason.categories;
-  const entry = list.find(t => t.abbr === teamAbbr);
   const legend = document.getElementById('bootlegLegend');
+  const cardsHost = document.getElementById('bootlegCompareCards');
 
-  if (!entry || categories.every(c => entry.ranks[c.key] == null)) {
+  const ids = bootlegCompareMode ? bootlegCompareTeams : [teamAbbr];
+  const nflMeta = abbr => _bootlegAllTeams(season).find(t => t.abbr === abbr) || { name: abbr, abbr };
+  const entries = _bootlegEntriesFor(list, 'abbr', ids).map(e => ({ ...e, name: nflMeta(e.abbr).name }));
+
+  if (!entries.length || entries.every(e => categories.every(c => e.ranks[c.key] == null))) {
     if (legend) legend.innerHTML = mode === 'weekly'
       ? `Kein Spiel in Woche ${week} (Bye-Week) — andere Woche wählen.`
       : `Für diese Woche liegen noch keine Werte vor.`;
+    if (cardsHost) cardsHost.innerHTML = '';
     return;
   }
 
-  // Rang 1 = aussen (33 - Rang), damit "besser" visuell immer nach aussen zeigt.
-  const dataPoints = categories.map(c => entry.ranks[c.key] != null ? 33 - entry.ranks[c.key] : null);
   const labels = categories.map(c => c.label);
-
   const styles = getComputedStyle(document.body);
   const textColor = styles.getPropertyValue('--text') || '#333';
   const mutedColor = styles.getPropertyValue('--muted') || '#888';
   const borderColor = styles.getPropertyValue('--border') || '#ddd';
   const accentColor = (styles.getPropertyValue('--accent') || '#e0794a').trim();
+  const isCompare = entries.length > 1;
+  const colors = isCompare ? BOOTLEG_COMPARE_COLORS : [accentColor];
 
-  function hexToRgba(hex, alpha) {
-    hex = hex.trim().replace('#', '');
-    if (hex.length === 3) hex = hex.split('').map(c => c + c).join('');
-    const r = parseInt(hex.slice(0, 2), 16), g = parseInt(hex.slice(2, 4), 16), b = parseInt(hex.slice(4, 6), 16);
-    return `rgba(${r || 224},${g || 121},${b || 74},${alpha})`;
-  }
+  const chartDatasets = entries.map((entry, i) => ({
+    label: entry.name || entry.abbr,
+    data: categories.map(c => entry.ranks[c.key] != null ? 33 - entry.ranks[c.key] : null), // Rang 1 = aussen
+    borderColor: colors[i],
+    backgroundColor: _hexToRgbaShared(colors[i], isCompare ? 0.12 : 0.25),
+    pointBackgroundColor: colors[i],
+    pointBorderColor: styles.getPropertyValue('--surface') || '#fff',
+    pointRadius: 5, pointHoverRadius: 7, borderWidth: 2.5, spanGaps: false,
+  }));
 
   const ctx = canvas.getContext('2d');
   bootlegChart = new Chart(ctx, {
     type: 'radar',
-    data: {
-      labels,
-      datasets: [{
-        label: mode === 'weekly' ? `Woche ${week}` : `Kumulativ bis Woche ${week}`,
-        data: dataPoints,
-        borderColor: accentColor,
-        backgroundColor: hexToRgba(accentColor, 0.25),
-        pointBackgroundColor: accentColor,
-        pointBorderColor: styles.getPropertyValue('--surface') || '#fff',
-        pointRadius: 5,
-        pointHoverRadius: 7,
-        borderWidth: 2.5,
-        spanGaps: false,
-      }],
-    },
+    data: { labels, datasets: chartDatasets },
     options: {
-      responsive: true,
-      maintainAspectRatio: true,
-      aspectRatio: 1.3,
+      responsive: true, maintainAspectRatio: true, aspectRatio: 1.3,
       plugins: {
-        legend: { display: false },
+        legend: { display: isCompare, labels: { color: textColor, font: { size: 11, weight: '700' } } },
         tooltip: {
           backgroundColor: styles.getPropertyValue('--surface2') || '#fff',
-          borderColor, borderWidth: 1,
-          titleColor: textColor, bodyColor: accentColor, padding: 12,
+          borderColor, borderWidth: 1, titleColor: textColor, bodyColor: accentColor, padding: 12,
           callbacks: {
             label: c => {
+              const entry = entries[c.datasetIndex];
               const cat = categories[c.dataIndex];
               const r = entry.ranks[cat.key];
               const v = entry.values[cat.key];
-              if (r == null) return 'Kein Wert';
-              return `Rang ${r} von 32 (${v} ${cat.unit})`;
+              if (r == null) return `${entry.name}: kein Wert`;
+              return `${entry.name}: Rang ${r} von 32 (${v} ${cat.unit})`;
             },
           },
         },
@@ -3080,13 +3542,123 @@ function _drawBootlegChart(season, teamAbbr) {
     },
   });
 
-  if (legend) {
-    legend.innerHTML = categories.map(c => {
-      const r = entry.ranks[c.key];
-      const v = entry.values[c.key];
-      return `<span style="display:inline-block;margin:2px 10px 2px 0"><b>${c.label}:</b> ${r != null ? `#${r}` : '—'} <span style="color:var(--muted)">(${v != null ? v : '—'} ${c.unit})</span></span>`;
-    }).join('');
+  if (isCompare) {
+    if (legend) legend.innerHTML = '';
+    if (cardsHost) {
+      cardsHost.innerHTML = `<div class="rr-compare-cards">${entries.map((e, i) => {
+        const ranks = categories.map(c => e.ranks[c.key]).filter(r => r != null);
+        const bestCat = categories.find(c => e.ranks[c.key] === Math.min(...ranks));
+        const avg = ranks.length ? (ranks.reduce((a, b) => a + b, 0) / ranks.length).toFixed(1) : '–';
+        return `<div class="rr-compare-card" style="border-color:${colors[i]}55;">
+          <div style="display:flex;align-items:center;gap:8px;margin-bottom:6px;">
+            <span style="width:12px;height:12px;border-radius:50%;background:${colors[i]};"></span>
+            <span style="font-weight:800;font-size:14px;">${e.name}</span>
+          </div>
+          <div style="font-size:11px;color:var(--muted);">Stärkste Kategorie: <strong style="color:${colors[i]}">${bestCat ? bestCat.label : '–'}</strong> · Ø Rang <strong style="color:${colors[i]}">${avg}</strong></div>
+        </div>`;
+      }).join('')}</div>`;
+    }
+  } else {
+    if (cardsHost) cardsHost.innerHTML = '';
+    if (legend) {
+      const entry = entries[0];
+      legend.innerHTML = categories.map(c => {
+        const r = entry.ranks[c.key];
+        const v = entry.values[c.key];
+        return `<span style="display:inline-block;margin:2px 10px 2px 0"><b>${c.label}:</b> ${r != null ? `#${r}` : '—'} <span style="color:var(--muted)">(${v != null ? v : '—'} ${c.unit})</span></span>`;
+      }).join('');
+    }
   }
+}
+
+function bootlegOpenShareModal(season) {
+  if (!bootlegCompareTeams.filter(Boolean).length) return;
+  nflRankingsState.season = season;
+  _shareMode = 'nflBootleg';
+  _openShareModalCommon();
+}
+
+function _nflBootlegRenderShareCard() {
+  const host = document.getElementById('drShareCardContent');
+  if (!host) return;
+  document.querySelectorAll('.rr-style-btn').forEach(btn => {
+    btn.classList.toggle('rr-style-active', btn.dataset.style === drShareStyle);
+  });
+
+  const season = nflRankingsState.season;
+  const psSeason = NFL_POWER_SCORE[season];
+  const week = nflRankingsState.radarWeek;
+  const mode = nflRankingsState.radarMode || 'cumulative';
+  const list = mode === 'weekly' ? psSeason.weeks[week].weekly : psSeason.weeks[week].cumulative;
+  const categories = psSeason.categories;
+  const ids = bootlegCompareMode ? bootlegCompareTeams : [bootlegCompareTeams[0]];
+  const nflMeta = abbr => _bootlegAllTeams(season).find(t => t.abbr === abbr) || { name: abbr, abbr };
+  const entries = _bootlegEntriesFor(list, 'abbr', ids).map(e => ({ ...e, name: nflMeta(e.abbr).name }));
+  const isCompare = entries.length > 1;
+  const colors = isCompare ? BOOTLEG_COMPARE_COLORS : ['#e0794a'];
+
+  const th = drShareStyle === 'light' ? {
+    bg: '#faf6f1', surface: '#ffffff', text: '#23293a', muted: '#93877a',
+    accent: '#cf7a48', border: '#ecdcc9', shadow: 'rgba(207,122,72,0.10)',
+  } : {
+    bg: '#0a0f1c', surface: '#121a2b', text: '#eef1f8', muted: '#8a93ac',
+    accent: '#e0794a', border: '#2a3654', shadow: 'rgba(0,0,0,0.35)',
+  };
+
+  const titleText = isCompare ? '🎯 Bootleg Power Score · Vergleich' : `🎯 ${entries[0].name}`;
+  const subText = `${mode === 'weekly' ? 'Woche ' + week : 'Kumulativ bis Woche ' + week} · Season ${season}`;
+
+  const cardsHtml = entries.map((e, i) => {
+    const ranks = categories.map(c => e.ranks[c.key]).filter(r => r != null);
+    const avg = ranks.length ? (ranks.reduce((a, b) => a + b, 0) / ranks.length).toFixed(1) : '–';
+    return `<div style="display:flex;align-items:center;gap:10px;padding:10px 14px;background:${th.surface};border-radius:10px;border:1px solid ${th.border};">
+      <span style="width:14px;height:14px;border-radius:50%;background:${colors[i]};flex-shrink:0;"></span>
+      <div style="flex:1;min-width:0;">
+        <div style="font-size:14px;font-weight:800;color:${th.text};white-space:nowrap;overflow:hidden;text-overflow:ellipsis;">${e.name}</div>
+        <div style="font-size:10px;color:${th.muted};margin-top:2px;">Ø Rang ${avg} von 32</div>
+      </div>
+    </div>`;
+  }).join('');
+
+  host.innerHTML = `
+    <div id="drShareCardInner" style="width:480px;aspect-ratio:4/5;background:${th.bg};padding:32px 28px;font-family:'DM Sans',system-ui,sans-serif;color:${th.text};display:flex;flex-direction:column;border-radius:18px;box-shadow:0 8px 32px ${th.shadow};">
+      <div style="font-size:10px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:${th.muted};text-align:center;margin-bottom:6px;">🐻 Bear Witch Project HQ · NFL Power Rankings</div>
+      <div style="font-size:${isCompare ? '22px' : '26px'};font-family:'Playfair Display',serif;font-weight:800;text-align:center;line-height:1.1;color:${th.accent};margin-bottom:4px;">${titleText}</div>
+      <div style="font-size:11px;color:${th.muted};text-align:center;margin-bottom:18px;">${subText}</div>
+      <div style="display:flex;flex-direction:column;gap:8px;margin-bottom:18px;">${cardsHtml}</div>
+      <div style="flex:1;background:${th.surface};border:1px solid ${th.border};border-radius:14px;padding:14px;display:flex;align-items:center;justify-content:center;min-height:0;">
+        <canvas id="drShareRadarCanvas" style="max-width:100%;max-height:100%;"></canvas>
+      </div>
+      <div style="text-align:center;font-size:10px;color:${th.muted};margin-top:14px;letter-spacing:1px;">Foodball 🏈 · Bear Witch Project HQ</div>
+    </div>`;
+
+  setTimeout(() => _drawShareRadarChart(entries, categories, colors, th, 32), 30);
+}
+
+// Gemeinsamer Radar-Chart-Zeichner fuers Snapshot-Modal, von NFL- und
+// Fantasy-Bootleg-Share-Karte genutzt. "scale" = Anzahl Teams in der Liga
+// (32 NFL / 12 Fantasy), bestimmt Rang-Skala und Rang-Flip (scale+1-Rang).
+function _drawShareRadarChart(entries, categories, colors, th, scale) {
+  const canvas = document.getElementById('drShareRadarCanvas');
+  if (!canvas || typeof Chart === 'undefined') return;
+  const ctx = canvas.getContext('2d');
+  const chartDatasets = entries.map((e, i) => ({
+    label: e.name,
+    data: categories.map(c => e.ranks[c.key] != null ? (scale + 1) - e.ranks[c.key] : null),
+    borderColor: colors[i],
+    backgroundColor: entries.length === 1 ? _hexToRgbaShared(colors[i], 0.2) : 'transparent',
+    pointBackgroundColor: colors[i], pointBorderColor: th.bg, pointBorderWidth: 2,
+    pointRadius: 4, borderWidth: 2.5, fill: entries.length === 1,
+  }));
+  new Chart(ctx, {
+    type: 'radar',
+    data: { labels: categories.map(c => c.label), datasets: chartDatasets },
+    options: {
+      responsive: true, maintainAspectRatio: false, animation: false,
+      plugins: { legend: { display: entries.length > 1, labels: { color: th.text, font: { size: 9 } } }, tooltip: { enabled: false } },
+      scales: { r: { min: 0, max: scale, ticks: { display: false }, grid: { color: th.border }, angleLines: { color: th.border }, pointLabels: { color: th.text, font: { size: 9, weight: '700' } } } },
+    },
+  });
 }
 
 /* ---------- Owner-Lookup (welches Team besitzt welchen Spieler) ---------- */
