@@ -82,6 +82,8 @@
       <button class="snav-single" data-page="futureboards" onclick="showFutureBoards()">🔮 Future Draft Boards</button>
       <button class="snav-single" data-page="weekbyweek" onclick="showWeekByWeek()">🗓️ Weekly Scores</button>
       <div class="snav-divider"></div>
+      <button class="snav-single" data-page="statusreport" onclick="showStatusReport()">🚨 Status Report</button>
+      <div class="snav-divider"></div>
       <button class="snav-single" data-page="futureboards" onclick="showDraft2027()">📋 Draft 2027</button>
       <div class="snav-group">
         <button class="snav-group-btn">🗄️ Draft History <span class="snav-arrow">▾</span></button>
@@ -110,6 +112,7 @@
         <button class="subnav-mobile-btn" data-page="matchups" onclick="showMatchups()">⚔️ Matchups</button>
         <button class="subnav-mobile-btn" data-page="futureboards" onclick="showFutureBoards()">🔮 Future Draft Boards</button>
         <button class="subnav-mobile-btn" data-page="weekbyweek" onclick="showWeekByWeek()">🗓️ Weekly Scores</button>
+        <button class="subnav-mobile-btn" data-page="statusreport" onclick="showStatusReport()">🚨 Status Report</button>
       </div>
       <div class="subnav-mobile-group">
         <div class="subnav-mobile-label">Teams</div>
@@ -344,6 +347,19 @@
   <div id="tradehistoryContent"></div>
 </div>
 
+<!-- ============ STATUS REPORT ============ -->
+<div class="page page-wide" id="page-statusreport">
+  <div class="page-title">🚨 Status Report</div>
+  <div class="page-sub">Alle Football-Ligen auf einen Blick — Kader &amp; Verletztenstatus <span class="sr-meta" id="statusReportMeta"></span></div>
+  <div id="statusReportContent"></div>
+</div>
+
+<div class="page page-wide" id="page-statusreportdetail">
+  <button class="back-btn" onclick="showStatusReport()">← Zurück zum Status Report</button>
+  <div id="statusReportDetailHeader"></div>
+  <div id="statusReportDetailContent"></div>
+</div>
+
 
 <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
@@ -365,6 +381,7 @@
 <script src="data/nfl-power-score.js"></script>
 <script src="data/fantasy-power-score.js"></script>
 <script src="data/matchup-snapshots.js"></script>
+<script src="data/status-report.js"></script>
 <script src="js/matchup-engine.js"></script>
 <script src="js/app.js"></script>
 <script>

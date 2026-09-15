@@ -318,6 +318,23 @@ a { color: inherit; text-decoration: none; }
 .player-status { font-size: 10px; font-weight: 800; padding: 2px 6px; border-radius: 5px; }
 .player-status.Q { color: #b58a2a; background: rgba(181,138,42,0.14); }
 .player-status.O { color: var(--red); background: rgba(217,105,95,0.14); }
+.player-status.D,
+.player-status.IR,
+.player-status.SUSP,
+.player-status.PUP,
+.player-status.NFI { color: var(--red); background: rgba(217,105,95,0.14); }
+.player-status.sr-bench { color: var(--muted); background: var(--surface2); }
+
+/* ---------- Status Report ---------- */
+.sr-meta { font-size: 12px; font-weight: 600; color: var(--muted); }
+.sr-card { position: relative; }
+.sr-flag-badge {
+  position: absolute; top: 10px; right: 10px;
+  font-size: 11px; font-weight: 800; color: #b8543f;
+  background: rgba(217,105,95,0.16);
+  border-radius: 10px; padding: 2px 8px;
+}
+.sr-lightning { font-size: 14px; margin-right: -2px; }
 
 .board-table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 14px; }
 table.board { width: 100%; border-collapse: collapse; font-size: 12px; }

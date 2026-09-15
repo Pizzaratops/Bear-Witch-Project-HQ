@@ -1,0 +1,70 @@
+name: Status Report Sync
+
+# Synct das eigene Team (Roster + Verletztenstatus) aus allen ESPN- und
+# Sleeper-Football-Ligen (siehe js/status-report-config.js) in
+# data/status-report.js und committet die Aenderung ins Repo.
+#
+# Laeuft alle 2 Stunden + manuell startbar ("Run workflow" im Actions-Tab).
+# Fuer private ESPN-Ligen muessen ESPN_S2 und SWID als Repository Secrets
+# hinterlegt sein (Settings > Secrets and variables > Actions) -- dieselben,
+# die auch der bestehende ESPN-Roster-Sync nutzt.
+
+on:
+  schedule:
+    - cron: "0 */2 * * *"   # alle 2 Stunden, zur vollen Stunde (UTC)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Cache-Key (taeglich) bestimmen
+        id: cachekey
+        run: echo "date=$(date -u +'%Y-%m-%d')" >> "$GITHUB_OUTPUT"
+
+      - name: Sleeper players.nfl cachen (Referenzdaten, ~5MB, nur 1x/Tag laden)
+        uses: actions/cache@v4
+        with:
+          path: /tmp/sleeper-players.json
+          key: sleeper-players-${{ steps.cachekey.outputs.date }}
+
+      - name: Status Report Sync
+        env:
+          ESPN_S2: ${{ secrets.ESPN_S2 }}
+          SWID: ${{ secrets.SWID }}
+          SLEEPER_PLAYERS_CACHE_PATH: /tmp/sleeper-players.json
+        run: node scripts/sync-status-report.js
+
+      - name: Commit & Push falls geändert
+        run: |
+          git config user.name "bear-witch-project-hq-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/status-report.js
+          if git diff --cached --quiet; then
+            echo "Keine Änderungen -- nichts zu committen."
+            exit 0
+          fi
+          git commit -m "chore: Status Report sync"
+          # Siehe sync-espn-rosters.yml: mehrere Sync-Workflows laufen
+          # zeitlich dicht beieinander, deshalb bei fehlgeschlagenem Push
+          # (non-fast-forward) einfach rebasen und erneut versuchen.
+          for i in 1 2 3 4 5; do
+            if git push; then
+              exit 0
+            fi
+            echo "Push fehlgeschlagen (Versuch $i/5) -- vermutlich hat ein anderer Sync-Workflow zeitgleich gepusht. Hole aktuellen Stand und versuche erneut..."
+            git fetch origin main
+            git rebase origin/main
+            sleep $((RANDOM % 8 + 3))
+          done
+          echo "Push nach 5 Versuchen weiterhin fehlgeschlagen -- bitte Workflow-Log prüfen."
+          exit 1

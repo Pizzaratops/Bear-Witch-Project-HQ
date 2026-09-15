@@ -22,7 +22,8 @@ function updateThemeBtn() {
 const PAGES = [
   'home', 'roster', 'dues', 'draftboard', 'keepers', 'dynastyboard', 'rolling', 'teamaverages', 'weekbyweek',
   'playerrankings', 'playerprojections', 'nflteams', 'nflteamdetail', 'futureboards',
-  'standings', 'leaguehistory', 'seasonrolling', 'nflrankings', 'matchups', 'trade', 'tradehistory'
+  'standings', 'leaguehistory', 'seasonrolling', 'nflrankings', 'matchups', 'trade', 'tradehistory',
+  'statusreport', 'statusreportdetail'
 ];
 
 function navigate(pageId, opts) {
@@ -52,11 +53,13 @@ function navigate(pageId, opts) {
   if (!_suppressHistoryPush) {
     const teamId = opts && opts.teamId;
     const nflCode = opts && opts.nflCode;
+    const leagueId = opts && opts.leagueId;
     let hash = pageId;
     if (pageId === 'roster' && teamId) hash = `roster-${teamId}`;
     else if (pageId === 'nflteamdetail' && nflCode) hash = `nflteam-${nflCode}`;
+    else if (pageId === 'statusreportdetail' && leagueId) hash = `statusreport-${leagueId}`;
     if (location.hash.slice(1) !== hash) {
-      history.pushState({ pageId, teamId: teamId || null, nflCode: nflCode || null }, '', '#' + hash);
+      history.pushState({ pageId, teamId: teamId || null, nflCode: nflCode || null, leagueId: leagueId || null }, '', '#' + hash);
     }
   }
 }
@@ -84,12 +87,14 @@ const ROUTE_HANDLERS = {
   matchups: () => showMatchups(),
   trade: () => showTrade(),
   tradehistory: () => showTradeHistory(),
+  statusreport: () => showStatusReport(),
+  statusreportdetail: (teamId, nflCode, leagueId) => leagueId ? showStatusReportDetail(leagueId) : showStatusReport(),
 };
 
-function _routeTo(pageId, teamId, nflCode) {
+function _routeTo(pageId, teamId, nflCode, leagueId) {
   _suppressHistoryPush = true;
   try {
-    (ROUTE_HANDLERS[pageId] || ROUTE_HANDLERS.home)(teamId, nflCode);
+    (ROUTE_HANDLERS[pageId] || ROUTE_HANDLERS.home)(teamId, nflCode, leagueId);
   } finally {
     _suppressHistoryPush = false;
   }
@@ -98,9 +103,9 @@ function _routeTo(pageId, teamId, nflCode) {
 window.addEventListener('popstate', (e) => {
   const state = e.state;
   if (state && state.pageId) {
-    _routeTo(state.pageId, state.teamId, state.nflCode);
+    _routeTo(state.pageId, state.teamId, state.nflCode, state.leagueId);
   } else {
-    _routeTo('home', null, null);
+    _routeTo('home', null, null, null);
   }
 });
 
@@ -109,12 +114,13 @@ window.addEventListener('popstate', (e) => {
    Eintrag, damit "Zurueck" ab dort sauber funktioniert. */
 function _initialRoute() {
   const hash = location.hash.slice(1);
-  let pageId = 'home', teamId = null, nflCode = null;
+  let pageId = 'home', teamId = null, nflCode = null, leagueId = null;
   if (hash.startsWith('roster-')) { pageId = 'roster'; teamId = hash.slice(7); }
   else if (hash.startsWith('nflteam-')) { pageId = 'nflteamdetail'; nflCode = hash.slice(8); }
+  else if (hash.startsWith('statusreport-')) { pageId = 'statusreportdetail'; leagueId = hash.slice(13); }
   else if (hash && ROUTE_HANDLERS[hash]) { pageId = hash; }
-  history.replaceState({ pageId, teamId, nflCode }, '', hash ? '#' + hash : '#home');
-  _routeTo(pageId, teamId, nflCode);
+  history.replaceState({ pageId, teamId, nflCode, leagueId }, '', hash ? '#' + hash : '#home');
+  _routeTo(pageId, teamId, nflCode, leagueId);
 }
 
 function goHome() { navigate('home'); renderHome(); }
@@ -133,6 +139,8 @@ function showNflRankings() { navigate('nflrankings'); renderNflRankings(); }
 function showMatchups() { navigate('matchups'); renderMatchups(); }
 function showTrade() { navigate('trade'); renderTrade(); }
 function showTradeHistory() { navigate('tradehistory'); renderTradeHistory(); }
+function showStatusReport() { navigate('statusreport'); renderStatusReport(); }
+function showStatusReportDetail(leagueId) { renderStatusReportDetail(leagueId); navigate('statusreportdetail', { leagueId }); }
 
 function toggleMobileNav() {
   document.getElementById('mobileNavDropdown').classList.toggle('open');
@@ -4237,4 +4245,88 @@ window.addEventListener('appinstalled', () => {
 })();
 function pwaShowIosSteps() {
   alert('📲 Teilen-Symbol tippen → "Zum Home-Bildschirm"');
+}
+
+/* ============================================================
+   STATUS REPORT
+   Uebersicht ueber das eigene Team in allen ESPN- & Sleeper-Football-
+   Ligen (data/status-report.js -> STATUS_REPORT_DATA, automatisch per
+   GitHub Action synchronisiert, siehe scripts/sync-status-report.js).
+   ============================================================ */
+
+function _statusReportData() {
+  return (typeof STATUS_REPORT_DATA !== 'undefined') ? STATUS_REPORT_DATA : null;
+}
+
+function renderStatusReport() {
+  const wrap = document.getElementById('statusReportContent');
+  const meta = document.getElementById('statusReportMeta');
+  const data = _statusReportData();
+
+  if (!data || !data.leagues || !data.leagues.length) {
+    if (meta) meta.textContent = '';
+    wrap.innerHTML = emptyState(
+      'Noch keine Daten',
+      'Der Status Report wurde noch nicht synchronisiert. Der erste Lauf der GitHub Action füllt diese Seite automatisch.',
+      '📡'
+    );
+    return;
+  }
+
+  if (meta) {
+    if (data.generatedAt) {
+      const dt = new Date(data.generatedAt);
+      meta.textContent = '· Letzter Sync: ' + dt.toLocaleString('de-DE', { dateStyle: 'medium', timeStyle: 'short' });
+    } else {
+      meta.textContent = '';
+    }
+  }
+
+  wrap.innerHTML = `<div class="team-grid">` + data.leagues.map(l => {
+    const flagged = l.flaggedCount || 0;
+    const playerCount = (l.players || []).length;
+    return `
+      <div class="team-card sr-card" onclick="showStatusReportDetail('${l.id}')">
+        ${flagged ? `<div class="sr-flag-badge">⚡ ${flagged}</div>` : ''}
+        <span class="team-emoji" style="font-size:22px">${l.emoji || '🏈'}</span>
+        <div class="team-name">${l.leagueName}</div>
+        <div class="team-owner">${l.teamName}${l.record ? ' · ' + l.record : ''}</div>
+        <div class="team-meta">${playerCount} Spieler${l.stale ? ' · ⚠️ veraltet' : ''}</div>
+      </div>`;
+  }).join('') + `</div>`;
+}
+
+function renderStatusReportDetail(leagueId) {
+  const data = _statusReportData();
+  const league = data && data.leagues.find(l => l.id === leagueId);
+  const header = document.getElementById('statusReportDetailHeader');
+  const content = document.getElementById('statusReportDetailContent');
+
+  if (!league) {
+    header.innerHTML = `<div class="page-title">🚨 Status Report</div>`;
+    content.innerHTML = emptyState('Liga nicht gefunden', 'Bitte zurück zum Status Report und erneut versuchen.', '❓');
+    return;
+  }
+
+  header.innerHTML = `
+    <div class="page-title">${league.emoji || '🏈'} ${league.leagueName}</div>
+    <div class="page-sub">${league.teamName}${league.record ? ' · ' + league.record : ''}${league.stale ? ' · ⚠️ Daten evtl. veraltet (letzter erfolgreicher Sync)' : ''}</div>
+  `;
+
+  const players = (league.players || []).slice().sort((a, b) => {
+    const fa = a.flag ? 1 : 0, fb = b.flag ? 1 : 0;
+    if (fb !== fa) return fb - fa;
+    const sa = a.isStarter ? 1 : 0, sb = b.isStarter ? 1 : 0;
+    if (sb !== sa) return sb - sa;
+    return (a.name || '').localeCompare(b.name || '');
+  });
+
+  content.innerHTML = players.length ? players.map(p => `
+    <div class="player-row">
+      ${p.flag ? '<span class="sr-lightning" title="Starter mit Status — evtl. Handlungsbedarf">⚡</span>' : ''}
+      <div class="player-name">${p.name}</div>
+      <div class="player-team">${p.pos || '?'} · ${p.nfl || 'FA'}</div>
+      ${p.isStarter === false ? '<div class="player-status sr-bench">Bench</div>' : ''}
+      ${p.status ? `<div class="player-status ${p.status}">${p.status}</div>` : ''}
+    </div>`).join('') : emptyState('Kein Kader gefunden', 'Für dieses Team liegen aktuell keine Spieler vor.');
 }
