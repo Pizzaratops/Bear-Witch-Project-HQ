@@ -3327,7 +3327,8 @@ function renderTradeImpact() {
 /* ---------- Future Draft Boards ---------- */
 let futureBoardsState = { year: 2027 };
 
-function showFutureBoards() { navigate('futureboards'); renderFutureBoards(); }
+function showFutureBoards() { navigate('futureboards'); futureBoardsState.year = 2028; renderFutureBoards(); }
+function showDraft2027() { navigate('futureboards'); futureBoardsState.year = 2027; renderFutureBoards(); }
 
 function _picksHeldByTeam(year) {
   // Baseline: 15 Runden fuer 2026 (abzueglich Keeper-Runden, die nicht
@@ -3386,7 +3387,7 @@ function renderPicksOverview() {
 
 function renderFutureBoards() {
   const wrap = document.getElementById('futureboardsContent');
-  const years = Object.keys(FUTURE_PICKS).map(Number).sort();
+  const years = Object.keys(FUTURE_PICKS).map(Number).sort().filter(y => y >= 2028);
   const year = futureBoardsState.year;
   const rounds = ['1st', '2nd', '3rd', '4th', '5th'];
   const teams = LEAGUE_TEAMS;

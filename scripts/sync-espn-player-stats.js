@@ -83,6 +83,19 @@ async function main() {
   const data = await httpsGetJson(url, headers);
   const entries = data.players || [];
 
+  // ---- DIAGNOSE-LOGGING (temporär) ----
+  console.log(`Diagnose: ${entries.length} Spieler-Einträge insgesamt von ESPN erhalten.`);
+  const sample = entries.find(e => (e.player?.stats || []).length > 0) || entries[0];
+  if (sample) {
+    console.log(`Diagnose: Beispielspieler "${sample.player?.fullName}", stats-Array hat ${sample.player?.stats?.length || 0} Einträge:`);
+    (sample.player?.stats || []).slice(0, 10).forEach(s => {
+      console.log(`  statSourceId=${s.statSourceId} statSplitTypeId=${s.statSplitTypeId} seasonId=${s.seasonId} scoringPeriodId=${s.scoringPeriodId} appliedTotal=${s.appliedTotal}`);
+    });
+  } else {
+    console.log('Diagnose: kein einziger Spieler mit stats-Array gefunden.');
+  }
+  // ---- Ende Diagnose-Logging ----
+
   const players = entries.map(entry => {
     const p = entry.player || {};
     if (!p.fullName) return null;

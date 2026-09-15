@@ -43,14 +43,6 @@
       </div>
 
       <div class="snav-group">
-        <button class="snav-group-btn">📋 Draft 2026 <span class="snav-arrow">▾</span></button>
-        <div class="snav-dropdown">
-          <button class="snav-dropdown-item" data-page="draftboard" onclick="showDraftboard()">📋 Draft Board</button>
-          <button class="snav-dropdown-item" data-page="keepers" onclick="showKeepers()">🔒 Keeper-Übersicht</button>
-        </div>
-      </div>
-
-      <div class="snav-group">
         <button class="snav-group-btn">🏆 Dynasty <span class="snav-arrow">▾</span></button>
         <div class="snav-dropdown">
           <button class="snav-dropdown-item" data-page="dynastyboard" onclick="showDynastyBoard()">🏆 Dynasty Board</button>
@@ -89,6 +81,15 @@
       <button class="snav-single" data-page="matchups" onclick="showMatchups()">⚔️ Matchups</button>
       <button class="snav-single" data-page="futureboards" onclick="showFutureBoards()">🔮 Future Draft Boards</button>
       <button class="snav-single" data-page="weekbyweek" onclick="showWeekByWeek()">🗓️ Weekly Scores</button>
+      <div class="snav-divider"></div>
+      <button class="snav-single" data-page="futureboards" onclick="showDraft2027()">📋 Draft 2027</button>
+      <div class="snav-group">
+        <button class="snav-group-btn">🗄️ Draft History <span class="snav-arrow">▾</span></button>
+        <div class="snav-dropdown">
+          <button class="snav-dropdown-item" data-page="draftboard" onclick="showDraftboard()">📋 Draft Board 2026</button>
+          <button class="snav-dropdown-item" data-page="keepers" onclick="showKeepers()">🔒 Keeper-Übersicht 2026</button>
+        </div>
+      </div>
     </div>
   </div>
 
@@ -116,11 +117,6 @@
         <button class="subnav-mobile-btn" data-page="dues" onclick="showDues()">💰 Liga-Beiträge</button>
       </div>
       <div class="subnav-mobile-group">
-        <div class="subnav-mobile-label">Draft 2026</div>
-        <button class="subnav-mobile-btn" data-page="draftboard" onclick="showDraftboard()">📋 Draft Board</button>
-        <button class="subnav-mobile-btn" data-page="keepers" onclick="showKeepers()">🔒 Keeper-Übersicht</button>
-      </div>
-      <div class="subnav-mobile-group">
         <div class="subnav-mobile-label">Dynasty</div>
         <button class="subnav-mobile-btn" data-page="dynastyboard" onclick="showDynastyBoard()">🏆 Dynasty Board</button>
         <button class="subnav-mobile-btn" data-page="rolling" onclick="showRolling()">📈 Rolling Rankings Dynasty</button>
@@ -136,6 +132,15 @@
         <div class="subnav-mobile-label">Trade</div>
         <button class="subnav-mobile-btn" data-page="trade" onclick="showTrade()">⚖️ Trade Analyzer</button>
         <button class="subnav-mobile-btn" data-page="tradehistory" onclick="showTradeHistory()">📜 Trade History</button>
+      </div>
+      <div class="subnav-mobile-group">
+        <div class="subnav-mobile-label">Draft 2027</div>
+        <button class="subnav-mobile-btn" data-page="futureboards" onclick="showDraft2027()">📋 Draft 2027</button>
+      </div>
+      <div class="subnav-mobile-group">
+        <div class="subnav-mobile-label">Draft History</div>
+        <button class="subnav-mobile-btn" data-page="draftboard" onclick="showDraftboard()">📋 Draft Board 2026</button>
+        <button class="subnav-mobile-btn" data-page="keepers" onclick="showKeepers()">🔒 Keeper-Übersicht 2026</button>
       </div>
     </div>
   </div>
@@ -292,7 +297,7 @@
 <!-- ============ FUTURE DRAFT BOARDS ============ -->
 <div class="page page-wide" id="page-futureboards">
   <div class="page-title">🔮 Future Draft Boards</div>
-  <div class="page-sub">Pick-Besitz für 2027, 2028 und 2029</div>
+  <div class="page-sub">Pick-Besitz ab 2028 (Draft 2027: eigener Menüpunkt bei Teams)</div>
   <div id="futureboardsContent"></div>
 </div>
 
