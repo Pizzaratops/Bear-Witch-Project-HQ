@@ -92,22 +92,6 @@ async function main() {
   const data = await httpsGetJson(url, headers);
   const schedule = data.schedule || [];
 
-  // ---- DIAGNOSE-LOGGING (temporär) ----
-  // Hilft zu klären, warum aktuell keine Score-Eintraege geschrieben
-  // werden: liegt es an leeren/fehlenden matchupPeriodId-Eintraegen,
-  // oder an totalPoints, die (noch) bei 0 stehen? Bei Bedarf nach der
-  // Fehlersuche wieder rausnehmen.
-  console.log(`Diagnose: ${schedule.length} Matchup-Einträge insgesamt in der ESPN-Antwort.`);
-  const byPeriod = {};
-  schedule.forEach(m => { byPeriod[m.matchupPeriodId] = (byPeriod[m.matchupPeriodId] || 0) + 1; });
-  console.log('Diagnose: Matchups je matchupPeriodId:', JSON.stringify(byPeriod));
-  const week1 = schedule.filter(m => m.matchupPeriodId === 1);
-  console.log(`Diagnose: ${week1.length} Matchups mit matchupPeriodId=1. Details:`);
-  week1.forEach(m => {
-    console.log(`  home teamId=${m.home?.teamId} totalPoints=${m.home?.totalPoints} | away teamId=${m.away?.teamId} totalPoints=${m.away?.totalPoints} | winner=${m.winner}`);
-  });
-  // ---- Ende Diagnose-Logging ----
-
   // ESPN-Team-ID -> unsere Team-ID (data/teams.js), gleicher Namensabgleich
   // wie in scripts/sync-espn-rosters.js.
   const byNormName = {};
@@ -131,6 +115,15 @@ async function main() {
   const season = cfg.ESPN_SEASON;
   existing[season] = existing[season] || {};
 
+  // WICHTIG: hier IMMER zuerst auf unsere eigene Team-ID (String, z.B.
+  // "beastmode") uebersetzen, BEVOR mit den schon gespeicherten Eintraegen
+  // verglichen wird. Vorher wurde beim upsert() gegen die rohe ESPN-ID
+  // (Zahl) verglichen, waehrend die gespeicherten Eintraege aus dem letzten
+  // Lauf schon uebersetzt waren -- der Abgleich hat nie gegriffen, jeder
+  // Sync-Lauf hat also einen weiteren Duplikat-Eintrag pro Team angehaengt,
+  // statt den bestehenden zu aktualisieren (sichtbar z.B. an "5-0"/"0-5"
+  // Standings nach nur einer gespielten Woche, weil dieselbe Woche 5x im
+  // Array stand).
   let weeksWritten = 0;
   schedule.forEach(m => {
     const week = m.matchupPeriodId;
@@ -140,26 +133,26 @@ async function main() {
     if (!(home.totalPoints > 0 || away.totalPoints > 0)) return;
     existing[season][week] = existing[season][week] || [];
     const list = existing[season][week];
+    const homeId = espnIdToOurId[home.teamId] || home.teamId;
+    const awayId = espnIdToOurId[away.teamId] || away.teamId;
     const upsert = (teamId, points, oppId, oppPoints) => {
       const idx = list.findIndex(e => e.teamId === teamId);
       const entry = { teamId, points, opponentId: oppId, opponentPoints: oppPoints };
       if (idx === -1) list.push(entry); else list[idx] = entry;
     };
-    upsert(home.teamId, home.totalPoints, away.teamId, away.totalPoints);
-    upsert(away.teamId, away.totalPoints, home.teamId, home.totalPoints);
+    upsert(homeId, home.totalPoints, awayId, away.totalPoints);
+    upsert(awayId, away.totalPoints, homeId, home.totalPoints);
     weeksWritten++;
   });
 
-  // ESPN-Team-IDs in unsere eigenen Team-IDs uebersetzen (nur Eintraege,
-  // die sich zuordnen liessen -- Rest bleibt mit ESPN-ID als Fallback,
-  // damit keine Daten stillschweigend verloren gehen).
+  // Defensive Absicherung: falls durch einen frueheren Bug oder eine
+  // ESPN-Antwort mit doppelten Matchup-Eintraegen trotzdem mehrere
+  // Eintraege pro (Woche, Team) im Array stehen, hier auf genau einen
+  // reduzieren (der letzte gewinnt -- sollte inhaltlich eh identisch sein).
   Object.keys(existing[season]).forEach(week => {
-    existing[season][week] = existing[season][week].map(e => ({
-      teamId: espnIdToOurId[e.teamId] || e.teamId,
-      points: e.points,
-      opponentId: espnIdToOurId[e.opponentId] || e.opponentId,
-      opponentPoints: e.opponentPoints,
-    }));
+    const seen = new Map();
+    existing[season][week].forEach(e => seen.set(e.teamId, e));
+    existing[season][week] = Array.from(seen.values());
   });
 
   const out = `// ============================================================
