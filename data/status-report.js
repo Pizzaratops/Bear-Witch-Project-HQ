@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-09-16T08:59:35.989Z",
+  "generatedAt": "2026-09-16T14:32:01.796Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -66,7 +66,7 @@ const STATUS_REPORT_DATA = {
           "name": "Jordan Love",
           "pos": "QB",
           "nfl": "GB",
-          "isStarter": false,
+          "isStarter": true,
           "status": null,
           "flag": false,
           "lastGamePoints": 19.5,
@@ -187,7 +187,7 @@ const STATUS_REPORT_DATA = {
           "name": "Bryce Young",
           "pos": "QB",
           "nfl": "CAR",
-          "isStarter": true,
+          "isStarter": false,
           "status": null,
           "flag": false,
           "lastGamePoints": null,
@@ -276,7 +276,7 @@ const STATUS_REPORT_DATA = {
           "name": "Rome Odunze",
           "pos": "WR",
           "nfl": "CHI",
-          "isStarter": false,
+          "isStarter": true,
           "status": null,
           "flag": false,
           "lastGamePoints": 7.2,
@@ -431,7 +431,7 @@ const STATUS_REPORT_DATA = {
           "name": "Brian Thomas Jr.",
           "pos": "WR",
           "nfl": "JAX",
-          "isStarter": true,
+          "isStarter": false,
           "status": "Q",
           "flag": false,
           "lastGamePoints": 7,
@@ -541,7 +541,7 @@ const STATUS_REPORT_DATA = {
           "name": "Jalen Coker",
           "pos": "WR",
           "nfl": "CAR",
-          "isStarter": false,
+          "isStarter": true,
           "status": "Q",
           "flag": false,
           "lastGamePoints": null,
@@ -1912,7 +1912,7 @@ const STATUS_REPORT_DATA = {
           "name": "Eddy Pineiro",
           "pos": "K",
           "nfl": "SF",
-          "isStarter": false,
+          "isStarter": true,
           "status": null,
           "flag": false,
           "lastGamePoints": 10,
@@ -2871,17 +2871,6 @@ const STATUS_REPORT_DATA = {
           "projPoints": 19.3
         },
         {
-          "name": "Alec Pierce",
-          "pos": "WR",
-          "nfl": "IND",
-          "isStarter": true,
-          "status": "Q",
-          "flag": false,
-          "lastGamePoints": 10.1,
-          "last3AvgPoints": 10.1,
-          "projPoints": 11.1
-        },
-        {
           "name": "Rachaad White",
           "pos": "RB",
           "nfl": "WSH",
@@ -2937,17 +2926,6 @@ const STATUS_REPORT_DATA = {
           "projPoints": 9.9
         },
         {
-          "name": "Blake Corum",
-          "pos": "RB",
-          "nfl": "LAR",
-          "isStarter": true,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 5.4,
-          "last3AvgPoints": 5.4,
-          "projPoints": 9.1
-        },
-        {
           "name": "Broncos D/ST",
           "pos": "DST",
           "nfl": "DEN",
@@ -2979,6 +2957,28 @@ const STATUS_REPORT_DATA = {
           "lastGamePoints": null,
           "last3AvgPoints": null,
           "projPoints": 11.6
+        },
+        {
+          "name": "Deebo Samuel Sr.",
+          "pos": "WR",
+          "nfl": "SF",
+          "isStarter": true,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": null,
+          "last3AvgPoints": null,
+          "projPoints": 12
+        },
+        {
+          "name": "Jacory Croskey-Merritt",
+          "pos": "RB",
+          "nfl": "WSH",
+          "isStarter": true,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": null,
+          "last3AvgPoints": null,
+          "projPoints": 10.2
         }
       ],
       "flaggedCount": 0
@@ -3037,17 +3037,6 @@ const STATUS_REPORT_DATA = {
           "projPoints": null
         },
         {
-          "name": "De'Zhaun Stribling",
-          "pos": "WR",
-          "nfl": "SF",
-          "isStarter": true,
-          "status": "D",
-          "flag": true,
-          "lastGamePoints": null,
-          "last3AvgPoints": null,
-          "projPoints": null
-        },
-        {
           "name": "Deebo Samuel Sr.",
           "pos": "WR",
           "nfl": "SF",
@@ -3090,9 +3079,20 @@ const STATUS_REPORT_DATA = {
           "lastGamePoints": null,
           "last3AvgPoints": null,
           "projPoints": null
+        },
+        {
+          "name": "Rome Odunze",
+          "pos": "WR",
+          "nfl": "CHI",
+          "isStarter": true,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": null,
+          "last3AvgPoints": null,
+          "projPoints": null
         }
       ],
-      "flaggedCount": 1
+      "flaggedCount": 0
     },
     {
       "id": "felix-espn-519920608",
