@@ -4427,6 +4427,27 @@ function _srComputeMostOwned(leagues) {
     .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
 }
 
+// Handlungsbedarf-Übersicht: alle geflaggten (⚡) Spieler über alle Ligen
+// dieser Person hinweg, gruppiert nach Liga, damit man auf einen Blick
+// sieht ob (und wo) man vor dem Deadline was tun muss, ohne erst jede
+// Liga einzeln aufklappen zu müssen.
+function _srComputeActionNeeded(leagues) {
+  const byLeague = leagues.map(l => ({
+    id: l.id,
+    leagueName: l.leagueName,
+    emoji: l.emoji || '🏈',
+    players: (l.players || []).filter(p => p.flag),
+  })).filter(l => l.players.length);
+  const totalPlayers = byLeague.reduce((sum, l) => sum + l.players.length, 0);
+  return { byLeague, totalPlayers, totalLeagues: byLeague.length };
+}
+
+function srJumpToLeague(leagueId) {
+  if (_srCollapsedLeagues.has(leagueId)) srToggleLeagueSection(leagueId);
+  const section = document.getElementById('sr-section-' + leagueId);
+  if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
 function _srLeagueSectionHtml(l) {
   const flagged = l.flaggedCount || 0;
   const players = _srSortedPlayers(l);
@@ -4487,7 +4508,20 @@ function _srRenderOwnerLeagues(owner, data) {
   const espnLeagues = leagues.filter(l => l.platform === 'espn');
   const sleeperLeagues = leagues.filter(l => l.platform === 'sleeper');
   const mostOwned = _srComputeMostOwned(leagues);
+  const actionNeeded = _srComputeActionNeeded(leagues);
   const ownerEsc = owner.replace(/'/g, "\\'");
+
+  const actionBannerHtml = actionNeeded.totalPlayers ? `
+    <div class="sr-action-banner">
+      <div class="sr-action-headline">⚡ ${actionNeeded.totalPlayers} Spieler in ${actionNeeded.totalLeagues} ${actionNeeded.totalLeagues === 1 ? 'Liga braucht' : 'Ligen brauchen'} eine Entscheidung</div>
+      <div class="sr-action-chips">
+        ${actionNeeded.byLeague.map(l => `
+          <button class="sr-action-chip" onclick="srJumpToLeague('${l.id}')" title="${l.players.map(p => p.name + (p.status ? ' (' + p.status + ')' : '')).join(', ')}">
+            ${l.emoji} ${l.leagueName} <span class="sr-action-chip-count">${l.players.length}</span>
+          </button>`).join('')}
+      </div>
+    </div>` : `
+    <div class="sr-action-banner sr-action-banner-clear">✅ Aktuell kein Handlungsbedarf — alle Starter sind einsatzbereit.</div>`;
 
   const columnHtml = (title, list) => `
     <div class="sr-platform-col">
@@ -4513,6 +4547,7 @@ function _srRenderOwnerLeagues(owner, data) {
         <button class="share-action-btn" onclick="srCollapseAll('${ownerEsc}')">⬆️ Alle einklappen</button>
       </div>
     </div>
+    ${actionBannerHtml}
     <div class="sr-columns">
       ${columnHtml('📇 ESPN', espnLeagues)}
       ${columnHtml('💤 Sleeper', sleeperLeagues)}
