@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-09-16T14:32:01.796Z",
+  "generatedAt": "2026-09-16T19:18:24.599Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -934,7 +934,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 12,
           "last3AvgPoints": 12,
-          "projPoints": 6.5
+          "projPoints": 6.4
         },
         {
           "name": "Eddy Pineiro",
@@ -1413,17 +1413,6 @@ const STATUS_REPORT_DATA = {
           "projPoints": 2
         },
         {
-          "name": "Luke McCaffrey",
-          "pos": "WR",
-          "nfl": "WAS",
-          "isStarter": false,
-          "status": "O",
-          "flag": false,
-          "lastGamePoints": null,
-          "last3AvgPoints": null,
-          "projPoints": 0.4
-        },
-        {
           "name": "George Holani",
           "pos": "RB",
           "nfl": "SEA",
@@ -1576,6 +1565,17 @@ const STATUS_REPORT_DATA = {
           "lastGamePoints": 4.1,
           "last3AvgPoints": 4.1,
           "projPoints": 8.3
+        },
+        {
+          "name": "Demarcus Robinson",
+          "pos": "WR",
+          "nfl": "SF",
+          "isStarter": false,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 12,
+          "last3AvgPoints": 12,
+          "projPoints": 5.7
         },
         {
           "name": "Cooper Kupp",
@@ -2232,7 +2232,7 @@ const STATUS_REPORT_DATA = {
           "name": "Jordan Mason",
           "pos": "RB",
           "nfl": "MIN",
-          "isStarter": true,
+          "isStarter": false,
           "status": "Q",
           "flag": false,
           "lastGamePoints": 11.9,
@@ -2871,21 +2871,10 @@ const STATUS_REPORT_DATA = {
           "projPoints": 19.3
         },
         {
-          "name": "Rachaad White",
-          "pos": "RB",
-          "nfl": "WSH",
-          "isStarter": false,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 4.7,
-          "last3AvgPoints": 4.7,
-          "projPoints": 7.6
-        },
-        {
           "name": "Jakobi Meyers",
           "pos": "WR",
           "nfl": "JAX",
-          "isStarter": true,
+          "isStarter": false,
           "status": null,
           "flag": false,
           "lastGamePoints": 12.2,
@@ -2979,6 +2968,17 @@ const STATUS_REPORT_DATA = {
           "lastGamePoints": null,
           "last3AvgPoints": null,
           "projPoints": 10.2
+        },
+        {
+          "name": "Xavier Worthy",
+          "pos": "WR",
+          "nfl": "KC",
+          "isStarter": true,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": null,
+          "last3AvgPoints": null,
+          "projPoints": 11.1
         }
       ],
       "flaggedCount": 0
