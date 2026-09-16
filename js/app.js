@@ -4406,33 +4406,120 @@ function _srPlayerRowHtml(p) {
     </div>`;
 }
 
+// Welche Liga-Sektionen (per Liga-ID) aktuell eingeklappt sind. Bewusst
+// modulweit statt pro Owner, aber IDs sind eh eindeutig ueber alle
+// Personen hinweg -- reicht fuer die Dauer der Seitensitzung.
+let _srCollapsedLeagues = new Set();
+
+function _srComputeMostOwned(leagues) {
+  const map = new Map(); // name -> { name, pos, nfl, count, leagueNames }
+  leagues.forEach(l => {
+    (l.players || []).forEach(p => {
+      if (!p.name) return;
+      if (!map.has(p.name)) map.set(p.name, { name: p.name, pos: p.pos, nfl: p.nfl, count: 0, leagueNames: [] });
+      const entry = map.get(p.name);
+      entry.count += 1;
+      entry.leagueNames.push(l.leagueName);
+    });
+  });
+  return [...map.values()]
+    .filter(e => e.count > 1)
+    .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name));
+}
+
+function _srLeagueSectionHtml(l) {
+  const flagged = l.flaggedCount || 0;
+  const players = _srSortedPlayers(l);
+  const collapsed = _srCollapsedLeagues.has(l.id);
+  return `
+    <div class="sr-league-section${collapsed ? ' sr-collapsed' : ''}" id="sr-section-${l.id}">
+      <div class="sr-league-header" onclick="srToggleLeagueSection('${l.id}')">
+        <span class="sr-league-chevron">${collapsed ? '▸' : '▾'}</span>
+        <span class="sr-league-emoji">${l.emoji || '🏈'}</span>
+        <div class="sr-league-headtext">
+          <div class="sr-league-name">${l.leagueName}</div>
+          <div class="sr-league-sub">${l.teamName}${l.record ? ' · ' + l.record : ''}${l.stale ? ' · ⚠️ veraltet' : ''}</div>
+        </div>
+        ${flagged ? `<div class="sr-flag-badge sr-flag-badge-inline">⚡ ${flagged}</div>` : ''}
+      </div>
+      <div class="sr-league-body" style="${collapsed ? 'display:none' : ''}">
+        ${players.length ? _srStatsHeaderHtml() + players.map(_srPlayerRowHtml).join('') : emptyState('Kein Kader gefunden', 'Für dieses Team liegen aktuell keine Spieler vor.')}
+      </div>
+    </div>`;
+}
+
+function srToggleLeagueSection(leagueId) {
+  const section = document.getElementById('sr-section-' + leagueId);
+  if (!section) return;
+  const body = section.querySelector('.sr-league-body');
+  const chevron = section.querySelector('.sr-league-chevron');
+  const nowCollapsed = !_srCollapsedLeagues.has(leagueId);
+  if (nowCollapsed) {
+    _srCollapsedLeagues.add(leagueId);
+    if (body) body.style.display = 'none';
+    if (chevron) chevron.textContent = '▸';
+  } else {
+    _srCollapsedLeagues.delete(leagueId);
+    if (body) body.style.display = '';
+    if (chevron) chevron.textContent = '▾';
+  }
+  section.classList.toggle('sr-collapsed', nowCollapsed);
+}
+
+function srExpandAll(owner) {
+  const data = _statusReportData();
+  (data.leagues || []).filter(l => l.owner === owner).forEach(l => _srCollapsedLeagues.delete(l.id));
+  _srRenderOwnerLeagues(owner, data);
+}
+
+function srCollapseAll(owner) {
+  const data = _statusReportData();
+  (data.leagues || []).filter(l => l.owner === owner).forEach(l => _srCollapsedLeagues.add(l.id));
+  _srRenderOwnerLeagues(owner, data);
+}
+
 // Alles auf einer Seite: nach dem Entsperren direkt alle Ligen dieser
-// Person untereinander mit vollem Kader, kein Durchklicken pro Liga mehr.
+// Person, in zwei Spalten (ESPN/Sleeper) mit Ein-/Ausklappen, plus eine
+// "Most Owned"-Seitenleiste mit Spielern in mehreren ihrer Ligen.
 function _srRenderOwnerLeagues(owner, data) {
   const wrap = document.getElementById('statusReportContent');
   const leagues = data.leagues.filter(l => l.owner === owner);
+  const espnLeagues = leagues.filter(l => l.platform === 'espn');
+  const sleeperLeagues = leagues.filter(l => l.platform === 'sleeper');
+  const mostOwned = _srComputeMostOwned(leagues);
+  const ownerEsc = owner.replace(/'/g, "\\'");
 
-  const sections = leagues.map(l => {
-    const flagged = l.flaggedCount || 0;
-    const players = _srSortedPlayers(l);
-    return `
-      <div class="sr-league-section">
-        <div class="sr-league-header">
-          <span class="sr-league-emoji">${l.emoji || '🏈'}</span>
-          <div class="sr-league-headtext">
-            <div class="sr-league-name">${l.leagueName}</div>
-            <div class="sr-league-sub">${l.teamName}${l.record ? ' · ' + l.record : ''}${l.stale ? ' · ⚠️ veraltet' : ''}</div>
-          </div>
-          ${flagged ? `<div class="sr-flag-badge sr-flag-badge-inline">⚡ ${flagged}</div>` : ''}
-        </div>
-        ${players.length ? _srStatsHeaderHtml() + players.map(_srPlayerRowHtml).join('') : emptyState('Kein Kader gefunden', 'Für dieses Team liegen aktuell keine Spieler vor.')}
-      </div>`;
-  }).join('');
+  const columnHtml = (title, list) => `
+    <div class="sr-platform-col">
+      <div class="sr-platform-heading">${title} <span class="sr-platform-count">(${list.length})</span></div>
+      ${list.length ? list.map(_srLeagueSectionHtml).join('') : emptyState('Keine Ligen', 'Für diese Plattform sind aktuell keine Ligen hinterlegt.', '🤷')}
+    </div>`;
+
+  const mostOwnedHtml = `
+    <div class="sr-sidebar">
+      <div class="sr-platform-heading">⭐ Most Owned</div>
+      ${mostOwned.length ? mostOwned.slice(0, 10).map(p => `
+        <div class="sr-most-owned-row">
+          <div class="sr-most-owned-name">${p.name}<span class="sr-most-owned-meta">${p.pos || '?'} · ${p.nfl || 'FA'}</span></div>
+          <div class="sr-most-owned-count">×${p.count}</div>
+        </div>`).join('') : emptyState('Keine Überschneidungen', 'Kein Spieler steht bei dieser Person in mehr als einer Liga.', '🔍')}
+    </div>`;
 
   wrap.innerHTML = `
     <div class="sr-owner-bar">
       <button class="back-btn" onclick="srBackToOwners()">← Andere Person</button>
+      <div class="sr-collapse-actions">
+        <button class="share-action-btn" onclick="srExpandAll('${ownerEsc}')">⬇️ Alle ausklappen</button>
+        <button class="share-action-btn" onclick="srCollapseAll('${ownerEsc}')">⬆️ Alle einklappen</button>
+      </div>
     </div>
-    ${sections}`;
+    <div class="sr-columns">
+      ${columnHtml('📇 ESPN', espnLeagues)}
+      ${columnHtml('💤 Sleeper', sleeperLeagues)}
+      ${mostOwnedHtml}
+    </div>
+    <div class="sr-scrolltop-wrap">
+      <button class="back-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">↑ Nach oben</button>
+    </div>`;
 }
 
