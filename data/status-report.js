@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-09-15T22:38:26.893Z",
+  "generatedAt": "2026-09-16T02:54:09.426Z",
   "leagues": [
     {
       "id": "beyaz-sleeper-1312794408151687168",
@@ -281,7 +281,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 12,
           "last3AvgPoints": 12,
-          "projPoints": 6.6
+          "projPoints": 6.5
         },
         {
           "name": "Eddy Pineiro",
@@ -292,7 +292,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 10,
           "last3AvgPoints": 10,
-          "projPoints": 7
+          "projPoints": 6.8
         },
         {
           "name": "Cameron Dicker",
@@ -303,7 +303,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 2,
           "last3AvgPoints": 2,
-          "projPoints": 7.5
+          "projPoints": 7.4
         },
         {
           "name": "Houston Texans",
@@ -1529,7 +1529,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
-          "projPoints": 1.1
+          "projPoints": 1.2
         },
         {
           "name": "Jack Strand",
@@ -1562,7 +1562,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 10,
           "last3AvgPoints": 10,
-          "projPoints": 11.4
+          "projPoints": 11.6
         },
         {
           "name": "Kyler Murray",
@@ -1573,7 +1573,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 0.6,
           "last3AvgPoints": 0.6,
-          "projPoints": 16.9
+          "projPoints": null
         },
         {
           "name": "Brock Purdy",
@@ -1595,7 +1595,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 11.9,
           "last3AvgPoints": 11.9,
-          "projPoints": 10.1
+          "projPoints": 10.3
         },
         {
           "name": "Brenton Strange",
@@ -2470,7 +2470,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 12,
           "last3AvgPoints": 12,
-          "projPoints": 6.1
+          "projPoints": 6.2
         },
         {
           "name": "Baltimore Ravens",
@@ -2503,7 +2503,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 1,
           "last3AvgPoints": 1,
-          "projPoints": 8.6
+          "projPoints": 8.5
         },
         {
           "name": "Philadelphia Eagles",
@@ -3000,7 +3000,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 1,
           "last3AvgPoints": 1,
-          "projPoints": 8.6
+          "projPoints": 8.5
         }
       ],
       "flaggedCount": 0
