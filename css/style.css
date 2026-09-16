@@ -384,6 +384,47 @@ a { color: inherit; text-decoration: none; }
 .sr-stats-head .player-team { font-size: 10px; font-weight: 800; color: var(--muted); text-transform: uppercase; letter-spacing: .3px; }
 .sr-stats-head .sr-stat-label { display: inline; font-size: 10px; }
 
+.sr-owner-bar { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px; margin-bottom: 18px; }
+.sr-collapse-actions { display: flex; gap: 8px; }
+.sr-collapse-actions .share-action-btn { padding: 8px 12px; font-size: 12px; border-radius: 10px; }
+
+.sr-columns { display: grid; grid-template-columns: 1fr 1fr 260px; gap: 20px; align-items: start; }
+@media (max-width: 900px) {
+  .sr-columns { grid-template-columns: 1fr; }
+}
+
+.sr-platform-heading {
+  font-size: 13px; font-weight: 800; color: var(--accent2);
+  text-transform: uppercase; letter-spacing: .5px;
+  margin-bottom: 10px; padding-bottom: 6px;
+  border-bottom: 1px solid var(--border);
+}
+.sr-platform-count { color: var(--muted); font-weight: 600; text-transform: none; letter-spacing: 0; }
+
+.sr-league-header {
+  cursor: pointer; user-select: none;
+}
+.sr-league-header:hover { opacity: 0.85; }
+.sr-league-chevron { font-size: 12px; color: var(--muted); width: 12px; text-align: center; }
+.sr-league-section.sr-collapsed .sr-league-header { border-bottom-color: transparent; margin-bottom: 0; padding-bottom: 8px; }
+
+.sr-sidebar {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 14px; padding: 14px;
+  position: sticky; top: 90px;
+}
+.sr-most-owned-row {
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 8px; padding: 7px 0; border-bottom: 1px solid var(--border);
+  font-size: 13px;
+}
+.sr-most-owned-row:last-child { border-bottom: none; }
+.sr-most-owned-name { font-weight: 700; color: var(--text); display: flex; flex-direction: column; }
+.sr-most-owned-meta { font-size: 11px; font-weight: 600; color: var(--muted); }
+.sr-most-owned-count { font-weight: 800; color: var(--accent); font-size: 13px; white-space: nowrap; }
+
+.sr-scrolltop-wrap { text-align: center; margin-top: 26px; }
+
 .board-table-wrap { overflow-x: auto; border: 1px solid var(--border); border-radius: 14px; }
 table.board { width: 100%; border-collapse: collapse; font-size: 12px; }
 table.board th {
