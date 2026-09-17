@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-09-17T09:06:05.878Z",
+  "generatedAt": "2026-09-17T14:35:34.174Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -2171,7 +2171,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
-          "projPoints": 3.4
+          "projPoints": 3.8
         },
         {
           "name": "Jack Strand",
