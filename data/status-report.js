@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-09-17T02:57:56.202Z",
+  "generatedAt": "2026-09-17T09:06:05.878Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -270,7 +270,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 3.6,
           "last3AvgPoints": 3.6,
-          "projPoints": 4.8
+          "projPoints": 7.5
         },
         {
           "name": "Rome Odunze",
