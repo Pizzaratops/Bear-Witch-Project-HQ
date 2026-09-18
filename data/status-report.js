@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-09-18T14:02:12.598Z",
+  "generatedAt": "2026-09-18T18:48:23.528Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -520,7 +520,7 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "CAR",
           "isStarter": true,
-          "status": "Q",
+          "status": null,
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
@@ -834,7 +834,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 28.9,
           "last3AvgPoints": 28.9,
-          "projPoints": 17.1
+          "projPoints": 16.8
         },
         {
           "name": "John Metchie",
@@ -1277,7 +1277,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 8.3,
           "last3AvgPoints": 8.3,
-          "projPoints": 12.1
+          "projPoints": 12.3
         },
         {
           "name": "Colston Loveland",
@@ -1630,7 +1630,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 1,
           "last3AvgPoints": 1,
-          "projPoints": 2.7
+          "projPoints": 2.9
         },
         {
           "name": "Colby Parkinson",
@@ -1862,7 +1862,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 4,
           "last3AvgPoints": 4,
-          "projPoints": 4.1
+          "projPoints": null
         },
         {
           "name": "Makai Lemon",
@@ -2083,7 +2083,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 8.3,
           "last3AvgPoints": 8.3,
-          "projPoints": 13.7
+          "projPoints": 14
         },
         {
           "name": "TreVeyon Henderson",
@@ -2348,7 +2348,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 28.9,
           "last3AvgPoints": 28.9,
-          "projPoints": 17.1
+          "projPoints": 16.8
         },
         {
           "name": "CeeDee Lamb",
@@ -2359,7 +2359,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 15.4,
           "last3AvgPoints": 15.4,
-          "projPoints": 18.5
+          "projPoints": 17.8
         },
         {
           "name": "Justin Herbert",
@@ -2392,7 +2392,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 18.8,
           "last3AvgPoints": 18.8,
-          "projPoints": 15.5
+          "projPoints": 15.7
         },
         {
           "name": "Michael Mayer",
@@ -2797,7 +2797,7 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "CAR",
           "isStarter": false,
-          "status": "Q",
+          "status": null,
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
@@ -3433,7 +3433,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 4,
           "last3AvgPoints": 4,
-          "projPoints": 4.1
+          "projPoints": null
         },
         {
           "name": "Malachi Fields",
@@ -3532,7 +3532,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 34.1,
           "last3AvgPoints": 34.1,
-          "projPoints": 16.4
+          "projPoints": 16.9
         },
         {
           "name": "Jalen Nailor",
