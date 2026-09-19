@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-09-19T13:38:49.152Z",
+  "generatedAt": "2026-09-19T16:58:31.981Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -71,7 +71,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 19.5,
           "last3AvgPoints": 19.5,
-          "projPoints": 16
+          "projPoints": 15.9
         },
         {
           "name": "George Pickens",
@@ -270,7 +270,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 18.8,
           "last3AvgPoints": 18.8,
-          "projPoints": 15.4
+          "projPoints": 15.5
         },
         {
           "name": "Travis Hunter",
@@ -2185,6 +2185,17 @@ const STATUS_REPORT_DATA = {
           "projPoints": 10.2
         },
         {
+          "name": "Demarcus Robinson",
+          "pos": "WR",
+          "nfl": "SF",
+          "isStarter": false,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 13,
+          "last3AvgPoints": 13,
+          "projPoints": 6.4
+        },
+        {
           "name": "Aaron Jones",
           "pos": "RB",
           "nfl": "MIN",
@@ -2481,7 +2492,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 23.2,
           "last3AvgPoints": 23.2,
-          "projPoints": 15.1
+          "projPoints": 15
         },
         {
           "name": "Eagles D/ST",
@@ -2757,7 +2768,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 21,
           "last3AvgPoints": 21,
-          "projPoints": 16
+          "projPoints": 15.9
         },
         {
           "name": "Andrew Van Ginkel",
@@ -2779,7 +2790,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 4.5,
           "last3AvgPoints": 4.5,
-          "projPoints": 8.6
+          "projPoints": 8.8
         },
         {
           "name": "T.J. Watt",
@@ -2868,7 +2879,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 3.6,
           "last3AvgPoints": 3.6,
-          "projPoints": 11.6
+          "projPoints": 11.7
         },
         {
           "name": "Matthew Golden",
@@ -3178,7 +3189,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 3.1,
           "last3AvgPoints": 3.1,
-          "projPoints": 11.9
+          "projPoints": 12
         },
         {
           "name": "Jaylen Warren",
