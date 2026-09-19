@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-09-19T19:54:57.130Z",
+  "generatedAt": "2026-09-19T22:02:58.440Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -442,7 +442,7 @@ const STATUS_REPORT_DATA = {
           "name": "Brian Thomas Jr.",
           "pos": "WR",
           "nfl": "JAX",
-          "isStarter": true,
+          "isStarter": false,
           "status": null,
           "flag": false,
           "lastGamePoints": 7,
@@ -552,7 +552,7 @@ const STATUS_REPORT_DATA = {
           "name": "Caleb Douglas",
           "pos": "WR",
           "nfl": "MIA",
-          "isStarter": false,
+          "isStarter": true,
           "status": null,
           "flag": false,
           "lastGamePoints": null,
@@ -1376,7 +1376,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 6.2,
           "last3AvgPoints": 6.2,
-          "projPoints": 5.9
+          "projPoints": 6.4
         },
         {
           "name": "Parker Washington",
@@ -1641,7 +1641,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 1,
           "last3AvgPoints": 1,
-          "projPoints": 2.9
+          "projPoints": 3.6
         },
         {
           "name": "Colby Parkinson",
@@ -1663,7 +1663,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
-          "projPoints": 0.1
+          "projPoints": 0.5
         },
         {
           "name": "Cade Otton",
@@ -2127,7 +2127,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
-          "projPoints": 1.3
+          "projPoints": 5.7
         },
         {
           "name": "Carnell Tate",
@@ -2259,7 +2259,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 9.2,
           "last3AvgPoints": 9.2,
-          "projPoints": 7.8
+          "projPoints": 8.3
         }
       ],
       "flaggedCount": 0
@@ -2436,7 +2436,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 9.2,
           "last3AvgPoints": 9.2,
-          "projPoints": 7.8
+          "projPoints": 8.3
         },
         {
           "name": "Zach Charbonnet",
@@ -3576,7 +3576,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 5.7,
           "last3AvgPoints": 5.7,
-          "projPoints": 8.3
+          "projPoints": 7.8
         }
       ],
       "flaggedCount": 1
@@ -3621,7 +3621,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
-          "projPoints": 1.3
+          "projPoints": 5.7
         },
         {
           "name": "Davante Adams",
