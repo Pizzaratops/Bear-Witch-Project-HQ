@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-09-19T16:58:31.981Z",
+  "generatedAt": "2026-09-19T19:54:57.130Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -757,7 +757,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 7,
           "last3AvgPoints": 7,
-          "projPoints": 6.3
+          "projPoints": 6.2
         },
         {
           "name": "Bhayshul Tuten",
@@ -1000,7 +1000,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 10,
           "last3AvgPoints": 10,
-          "projPoints": 6.5
+          "projPoints": 6.4
         }
       ],
       "flaggedCount": 0
