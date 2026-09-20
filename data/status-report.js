@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-09-20T02:56:02.100Z",
+  "generatedAt": "2026-09-20T08:58:45.467Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -663,15 +663,15 @@ const STATUS_REPORT_DATA = {
           "name": "Brock Bowers",
           "pos": "TE",
           "nfl": "LV",
-          "isStarter": true,
+          "isStarter": false,
           "status": "D",
-          "flag": true,
+          "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
           "projPoints": null
         }
       ],
-      "flaggedCount": 1
+      "flaggedCount": 0
     },
     {
       "id": "beyaz-sleeper-1312794408151687168",
@@ -922,7 +922,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 3,
           "last3AvgPoints": 3,
-          "projPoints": 6.9
+          "projPoints": 6.8
         }
       ],
       "flaggedCount": 0
@@ -1023,7 +1023,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 3.7,
           "last3AvgPoints": 3.7,
-          "projPoints": 11.7
+          "projPoints": 11.8
         },
         {
           "name": "Rome Odunze",
@@ -1199,7 +1199,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 24.5,
           "last3AvgPoints": 24.5,
-          "projPoints": 14.6
+          "projPoints": 14.8
         },
         {
           "name": "Sean Tucker",
@@ -1696,7 +1696,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 0.9,
           "last3AvgPoints": 0.9,
-          "projPoints": 6.3
+          "projPoints": 6.1
         },
         {
           "name": "Parker Washington",
@@ -1994,7 +1994,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 3,
           "last3AvgPoints": 3,
-          "projPoints": 6.9
+          "projPoints": 6.8
         }
       ],
       "flaggedCount": 0
@@ -2083,7 +2083,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 5,
           "last3AvgPoints": 5,
-          "projPoints": 8.9
+          "projPoints": 9
         },
         {
           "name": "Tory Horton",
@@ -2171,7 +2171,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
-          "projPoints": 4.3
+          "projPoints": 3.8
         },
         {
           "name": "Hunter Henry",
@@ -3477,7 +3477,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 4.5,
           "last3AvgPoints": 4.5,
-          "projPoints": 6.4
+          "projPoints": 6.1
         },
         {
           "name": "De'Zhaun Stribling",
@@ -3565,7 +3565,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 34.1,
           "last3AvgPoints": 34.1,
-          "projPoints": 16.9
+          "projPoints": 17
         },
         {
           "name": "Jalen Nailor",
@@ -3654,7 +3654,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 35.3,
           "last3AvgPoints": 35.3,
-          "projPoints": 15.1
+          "projPoints": 15.2
         },
         {
           "name": "Ka'imi Fairbairn",
