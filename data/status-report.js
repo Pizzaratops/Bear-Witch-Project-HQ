@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-09-19T22:02:58.440Z",
+  "generatedAt": "2026-09-20T02:56:02.100Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -270,7 +270,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 18.8,
           "last3AvgPoints": 18.8,
-          "projPoints": 15.5
+          "projPoints": 15.4
         },
         {
           "name": "Travis Hunter",
@@ -702,7 +702,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 17.7,
           "last3AvgPoints": 17.7,
-          "projPoints": 20.3
+          "projPoints": 20.2
         },
         {
           "name": "Brock Bowers",
@@ -922,7 +922,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 3,
           "last3AvgPoints": 3,
-          "projPoints": 6.8
+          "projPoints": 6.9
         }
       ],
       "flaggedCount": 0
@@ -1763,7 +1763,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 17.7,
           "last3AvgPoints": 17.7,
-          "projPoints": 20.3
+          "projPoints": 20.2
         },
         {
           "name": "Blake Corum",
@@ -1869,7 +1869,7 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "NYJ",
           "isStarter": false,
-          "status": "O",
+          "status": "IR",
           "flag": false,
           "lastGamePoints": 4,
           "last3AvgPoints": 4,
@@ -1994,7 +1994,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 3,
           "last3AvgPoints": 3,
-          "projPoints": 6.8
+          "projPoints": 6.9
         }
       ],
       "flaggedCount": 0
@@ -2127,7 +2127,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
-          "projPoints": 5.7
+          "projPoints": 6.3
         },
         {
           "name": "Carnell Tate",
@@ -3311,7 +3311,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 7,
           "last3AvgPoints": 7,
-          "projPoints": 9.1
+          "projPoints": 9
         },
         {
           "name": "Chicago Bears",
@@ -3367,7 +3367,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 17.7,
           "last3AvgPoints": 17.7,
-          "projPoints": 20.3
+          "projPoints": 20.2
         },
         {
           "name": "Blake Corum",
@@ -3462,7 +3462,7 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "NYJ",
           "isStarter": false,
-          "status": "O",
+          "status": "IR",
           "flag": false,
           "lastGamePoints": 4,
           "last3AvgPoints": 4,
@@ -3484,7 +3484,7 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "SF",
           "isStarter": true,
-          "status": "O",
+          "status": "IR",
           "flag": true,
           "lastGamePoints": null,
           "last3AvgPoints": null,
@@ -3621,7 +3621,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
-          "projPoints": 5.7
+          "projPoints": 6.3
         },
         {
           "name": "Davante Adams",
