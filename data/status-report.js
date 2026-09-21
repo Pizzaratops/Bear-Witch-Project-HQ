@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-09-21T09:30:47.518Z",
+  "generatedAt": "2026-09-21T16:08:57.628Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -900,7 +900,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 15.5,
           "last3AvgPoints": 15.5,
-          "projPoints": 17
+          "projPoints": 16.2
         },
         {
           "name": "Brian Robinson",
@@ -1288,7 +1288,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 5.4,
           "last3AvgPoints": 5.4,
-          "projPoints": 10.3
+          "projPoints": 9.6
         },
         {
           "name": "Jalen Coker",
@@ -1674,7 +1674,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 11.8,
           "last3AvgPoints": 11.8,
-          "projPoints": 3.4
+          "projPoints": 3.9
         },
         {
           "name": "Colby Parkinson",
@@ -1685,7 +1685,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 1.1,
           "last3AvgPoints": 1.1,
-          "projPoints": 4.3
+          "projPoints": 4.5
         },
         {
           "name": "Tutu Atwell",
@@ -1807,7 +1807,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 5.4,
           "last3AvgPoints": 5.4,
-          "projPoints": 10.6
+          "projPoints": 10
         },
         {
           "name": "Brock Bowers",
@@ -1840,7 +1840,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": -0.6,
           "last3AvgPoints": -0.6,
-          "projPoints": 1.9
+          "projPoints": 2.2
         },
         {
           "name": "Cam Skattebo",
@@ -1851,7 +1851,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 14.1,
           "last3AvgPoints": 14.1,
-          "projPoints": 13.3
+          "projPoints": 14.6
         },
         {
           "name": "Tory Horton",
@@ -1983,7 +1983,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 13.8,
           "last3AvgPoints": 13.8,
-          "projPoints": 3.9
+          "projPoints": 4.4
         },
         {
           "name": "Brian Robinson",
@@ -3411,7 +3411,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 5.4,
           "last3AvgPoints": 5.4,
-          "projPoints": 10.6
+          "projPoints": 10
         },
         {
           "name": "Ladd McConkey",
@@ -3444,7 +3444,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": -0.6,
           "last3AvgPoints": -0.6,
-          "projPoints": 1.9
+          "projPoints": 2.2
         },
         {
           "name": "Tory Horton",
@@ -3510,7 +3510,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 4.5,
           "last3AvgPoints": 4.5,
-          "projPoints": 6.1
+          "projPoints": 5.9
         },
         {
           "name": "De'Zhaun Stribling",
@@ -3554,7 +3554,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 27.8,
           "last3AvgPoints": 27.8,
-          "projPoints": 11.1
+          "projPoints": 11.8
         },
         {
           "name": "Rachaad White",
@@ -3665,7 +3665,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 5.6,
           "last3AvgPoints": 5.6,
-          "projPoints": 12.1
+          "projPoints": 10.9
         },
         {
           "name": "Stefon Diggs",
