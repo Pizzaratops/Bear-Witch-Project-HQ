@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-09-21T16:08:57.628Z",
+  "generatedAt": "2026-09-21T21:34:50.155Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -790,7 +790,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 7,
           "last3AvgPoints": 7,
-          "projPoints": 6.2
+          "projPoints": 7.9
         },
         {
           "name": "Bhayshul Tuten",
@@ -978,7 +978,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 12,
           "last3AvgPoints": 12,
-          "projPoints": 6.3
+          "projPoints": 7.9
         },
         {
           "name": "Eddy Pineiro",
@@ -989,7 +989,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 10,
           "last3AvgPoints": 10,
-          "projPoints": 6.8
+          "projPoints": 8.4
         },
         {
           "name": "Cameron Dicker",
@@ -1000,7 +1000,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 2,
           "last3AvgPoints": 2,
-          "projPoints": 7.4
+          "projPoints": 9
         },
         {
           "name": "Houston Texans",
@@ -1950,7 +1950,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 10,
           "last3AvgPoints": 10,
-          "projPoints": 6.8
+          "projPoints": 8.4
         },
         {
           "name": "Josh Jacobs",
@@ -2499,7 +2499,7 @@ const STATUS_REPORT_DATA = {
           "pos": "RB",
           "nfl": "CAR",
           "isStarter": false,
-          "status": "Q",
+          "status": "D",
           "flag": false,
           "lastGamePoints": 7.2,
           "last3AvgPoints": 7.2,
@@ -2886,8 +2886,8 @@ const STATUS_REPORT_DATA = {
           "pos": "QB",
           "nfl": "CHI",
           "isStarter": true,
-          "status": "Q",
-          "flag": false,
+          "status": "D",
+          "flag": true,
           "lastGamePoints": 37.3,
           "last3AvgPoints": 37.3,
           "projPoints": 19.4
@@ -3003,7 +3003,7 @@ const STATUS_REPORT_DATA = {
           "projPoints": 11
         }
       ],
-      "flaggedCount": 0
+      "flaggedCount": 1
     },
     {
       "id": "felix-espn-1340233816",
@@ -3322,7 +3322,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 1,
           "last3AvgPoints": 1,
-          "projPoints": 7.3
+          "projPoints": 9.5
         },
         {
           "name": "Cam Little",
@@ -3333,7 +3333,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 12,
           "last3AvgPoints": 12,
-          "projPoints": 6.2
+          "projPoints": 8.1
         },
         {
           "name": "Baltimore Ravens",
@@ -3665,7 +3665,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 5.6,
           "last3AvgPoints": 5.6,
-          "projPoints": 10.9
+          "projPoints": 10.8
         },
         {
           "name": "Stefon Diggs",
@@ -3698,7 +3698,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 9,
           "last3AvgPoints": 9,
-          "projPoints": 7.3
+          "projPoints": 9.2
         },
         {
           "name": "Joe Mixon",
