@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-09-22T07:11:23.849Z",
+  "generatedAt": "2026-09-22T13:00:33.845Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -1780,9 +1780,9 @@ const STATUS_REPORT_DATA = {
           "name": "Caleb Williams",
           "pos": "QB",
           "nfl": "CHI",
-          "isStarter": true,
+          "isStarter": false,
           "status": "O",
-          "flag": true,
+          "flag": false,
           "lastGamePoints": 8.7,
           "last3AvgPoints": 23,
           "projPoints": null
@@ -1967,7 +1967,7 @@ const STATUS_REPORT_DATA = {
           "name": "Daniel Jones",
           "pos": "QB",
           "nfl": "IND",
-          "isStarter": false,
+          "isStarter": true,
           "status": null,
           "flag": false,
           "lastGamePoints": 12.4,
@@ -2030,7 +2030,7 @@ const STATUS_REPORT_DATA = {
           "projPoints": 6.5
         }
       ],
-      "flaggedCount": 1
+      "flaggedCount": 0
     },
     {
       "id": "beyaz-sleeper-1312748395584036864",
