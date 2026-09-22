@@ -745,3 +745,22 @@ table.db-table td:nth-child(2) { text-align: left; font-weight: 600; }
 .dues-paid { background: rgba(76,175,129,0.14); color: var(--green); }
 .dues-owes { background: var(--pick-own-bg); color: var(--pick-own-color); }
 .dues-open { background: var(--pick-open-bg); color: var(--muted); }
+
+/* ---------- Rolling Standings Tabelle (2026 Rolling Rankings) ---------- */
+.rst-section { margin-top: 22px; }
+.rst-head { display: flex; justify-content: space-between; align-items: flex-end; gap: 12px; flex-wrap: wrap; margin-bottom: 10px; }
+.rst-title { font-size: 15px; font-weight: 800; color: var(--text); }
+.rst-sub { font-size: 12px; color: var(--muted); margin-top: 2px; }
+table.rst-table td, table.rst-table th { min-width: unset; }
+table.rst-table td.rst-team { text-align: left; font-weight: 700; white-space: nowrap; position: sticky; left: 0; background: var(--surface); z-index: 1; }
+table.rst-table td.rst-cell { white-space: nowrap; padding: 6px 6px; }
+.rst-rank { display: inline-block; min-width: 26px; padding: 2px 6px; border-radius: 6px; font-weight: 800; }
+.rst-up { color: var(--green); font-size: 10px; font-weight: 800; margin-left: 3px; }
+.rst-down { color: var(--red); font-size: 10px; font-weight: 800; margin-left: 3px; }
+.rst-flat { color: var(--muted); }
+.rst-row { cursor: pointer; }
+.rst-row:hover td { background: var(--surface2); }
+@media (max-width: 700px) {
+  table.rst-table td, table.rst-table th { font-size: 11px; padding: 5px 4px; }
+  .rst-rank { min-width: 22px; padding: 1px 4px; }
+}

@@ -2484,8 +2484,124 @@ function renderSeasonRolling() {
         </div>
       </div>
     </div>
+    <div class="rst-section">
+      <div class="rst-head">
+        <div>
+          <div class="rst-title">📋 Rolling Standings — alle Teams</div>
+          <div class="rst-sub" id="rstSub"></div>
+        </div>
+        <div class="db-pos-filters" id="rstModeBtns"></div>
+      </div>
+      <div class="board-table-wrap"><div id="rstTable"></div></div>
+    </div>
   `;
   _wrInit();
+  renderRollingStandingsTable();
+}
+
+/* ---------- Rolling Standings Tabelle (alle Teams x alle Wochen) ---------- */
+let rstMode = 'standings'; // 'standings' = W-L (PF Tiebreak) | 'points' = kumulierte Punkte
+
+// Offizielle Tabelle (W-L, PF als Tiebreak) bis inkl. Woche uptoWeek.
+function standingsThroughWeek(season, uptoWeek) {
+  const totals = {};
+  for (let w = 1; w <= uptoWeek; w++) {
+    (WEEKLY_SCORES[season][w] || []).forEach(e => {
+      if (!totals[e.teamId]) totals[e.teamId] = { pf: 0, pa: 0, wins: 0, losses: 0, ties: 0 };
+      const t = totals[e.teamId];
+      t.pf += e.points; t.pa += e.opponentPoints;
+      if (e.points > e.opponentPoints) t.wins++;
+      else if (e.points < e.opponentPoints) t.losses++;
+      else t.ties++;
+    });
+  }
+  const ranked = Object.keys(totals)
+    .map(teamId => ({ teamId, ...totals[teamId] }))
+    .sort((a, b) => ((b.wins + b.ties / 2) - (a.wins + a.ties / 2)) || (b.pf - a.pf));
+  ranked.forEach((r, i) => { r.rank = i + 1; });
+  return ranked;
+}
+
+// Farbskala fuer 12er-Liga: oben gruen, Mitte neutral, unten rot.
+function _rstRankColor(rank, n) {
+  if (rank == null) return 'var(--border)';
+  const q = (rank - 1) / Math.max(1, n - 1);
+  if (q <= 0.25) return '#4caf81';
+  if (q <= 0.5) return '#4d7bb0';
+  if (q <= 0.75) return '#e0a53a';
+  return '#d9695f';
+}
+
+function setRollingStandingsMode(m) { rstMode = m; renderRollingStandingsTable(); }
+
+function renderRollingStandingsTable() {
+  const host = document.getElementById('rstTable');
+  if (!host) return;
+  const season = _wrSeason();
+  const weeks = _wrWeeks();
+  const n = LEAGUE_TEAMS.length;
+
+  document.getElementById('rstModeBtns').innerHTML = [
+    ['standings', 'Standings (W-L)'], ['points', 'Punkte kumuliert']
+  ].map(([k, l]) => `<button class="db-pos-btn${rstMode === k ? ' active' : ''}" onclick="setRollingStandingsMode('${k}')">${l}</button>`).join('');
+  document.getElementById('rstSub').textContent = rstMode === 'standings'
+    ? `Tabellenplatz nach jeder Woche (Siege, Tiebreak: Punkte) · Saison ${season}`
+    : `Rang nach kumulierten Punkten nach jeder Woche · Saison ${season}`;
+
+  // byTeam[teamId][week] = { rank, wins, losses, ties, pf }
+  const byTeam = {};
+  weeks.forEach(w => {
+    const list = rstMode === 'standings'
+      ? standingsThroughWeek(season, w)
+      : cumulativeStandingsThroughWeek(season, w).map(r => ({ ...r, pf: r.points, ties: 0 }));
+    list.forEach(r => { (byTeam[r.teamId] = byTeam[r.teamId] || {})[w] = r; });
+  });
+
+  const lastW = weeks[weeks.length - 1];
+  const rows = LEAGUE_TEAMS.map((t, origIdx) => ({ t, origIdx, cells: byTeam[t.id] || {} }))
+    .sort((a, b) => (a.cells[lastW]?.rank ?? 99) - (b.cells[lastW]?.rank ?? 99));
+
+  const recStr = c => `${c.wins}-${c.losses}${c.ties ? '-' + c.ties : ''}`;
+
+  host.innerHTML = `
+    <table class="board rst-table">
+      <thead><tr>
+        <th class="round-label">#</th><th class="round-label" style="text-align:left">Team</th>
+        ${weeks.map(w => `<th>W${w}</th>`).join('')}
+        <th>Δ</th><th>Ø</th><th>Bilanz</th><th>PF</th>
+      </tr></thead>
+      <tbody>
+        ${rows.map(({ t, origIdx, cells }) => {
+          const ranks = weeks.map(w => cells[w]?.rank ?? null);
+          const valid = ranks.filter(r => r != null);
+          const avg = valid.length ? (valid.reduce((a, b) => a + b, 0) / valid.length).toFixed(1) : '–';
+          const last = cells[lastW];
+          const firstRank = valid[0], lastRank = valid[valid.length - 1];
+          const totalDelta = valid.length > 1 ? firstRank - lastRank : 0;
+          const tds = weeks.map((w, i) => {
+            const c = cells[w];
+            if (!c) return '<td class="rst-cell">–</td>';
+            const col = _rstRankColor(c.rank, n);
+            const prev = i > 0 ? ranks[i - 1] : null;
+            const d = prev != null ? prev - c.rank : 0;
+            const arrow = d > 0 ? `<span class="rst-up">▲${d}</span>` : d < 0 ? `<span class="rst-down">▼${-d}</span>` : '';
+            const tip = `W${w}: Platz ${c.rank} · ${recStr(c)} · ${c.pf.toFixed(1)} PF`;
+            return `<td class="rst-cell" title="${tip}"><span class="rst-rank" style="color:${col};background:${col}22">${c.rank}</span>${arrow}</td>`;
+          }).join('');
+          const dCls = totalDelta > 0 ? 'rst-up' : totalDelta < 0 ? 'rst-down' : 'rst-flat';
+          const dTxt = totalDelta > 0 ? '▲' + totalDelta : totalDelta < 0 ? '▼' + (-totalDelta) : '—';
+          return `<tr class="rst-row" onclick="wrSelectTeam(${origIdx});document.getElementById('wrChartPanel')?.scrollIntoView({behavior:'smooth',block:'nearest'})">
+            <td><b>${last?.rank ?? '–'}</b></td>
+            <td class="rst-team">${t.emoji || ''} ${t.name}</td>
+            ${tds}
+            <td class="${dCls}" style="font-weight:800">${dTxt}</td>
+            <td>${avg}</td>
+            <td><b>${last ? recStr(last) : '–'}</b></td>
+            <td>${last ? last.pf.toFixed(1) : '–'}</td>
+          </tr>`;
+        }).join('')}
+      </tbody>
+    </table>`;
 }
 
 /* ---------- Weekly Rolling (2026 Rolling Rankings: Sidebar + Chart + Vergleich, wie Dynasty/Season-Finish Rolling) ---------- */
