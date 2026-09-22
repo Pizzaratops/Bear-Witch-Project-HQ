@@ -2487,12 +2487,12 @@ function renderSeasonRolling() {
     <div class="rst-section">
       <div class="rst-head">
         <div>
-          <div class="rst-title">📋 Rolling Standings — alle Teams</div>
+          <div class="rst-title">📈 Rolling Standings — alle Teams</div>
           <div class="rst-sub" id="rstSub"></div>
         </div>
         <div class="db-pos-filters" id="rstModeBtns"></div>
       </div>
-      <div class="board-table-wrap"><div id="rstTable"></div></div>
+      <div class="rst-chart-card"><div class="rst-chart-box" id="rstChartBox"><canvas id="rstCanvas"></canvas></div><div class="rst-hint">Hover hebt ein Team hervor · Klick öffnet es oben im Detail-Chart</div></div>
     </div>
   `;
   _wrInit();
@@ -2534,9 +2534,14 @@ function _rstRankColor(rank, n) {
 
 function setRollingStandingsMode(m) { rstMode = m; renderRollingStandingsTable(); }
 
+const RST_TEAM_COLORS = ['#e0794a', '#22c1dc', '#8a9ba8', '#ef5350', '#4caf81', '#ffca28',
+  '#e040fb', '#6c63ff', '#29b6f6', '#ff6b8a', '#9ccc65', '#ffa726'];
+let rstChart = null;
+let rstHover = null; // dataset-Index des gehighlighteten Teams
+
 function renderRollingStandingsTable() {
-  const host = document.getElementById('rstTable');
-  if (!host) return;
+  const box = document.getElementById('rstChartBox');
+  if (!box) return;
   const season = _wrSeason();
   const weeks = _wrWeeks();
   const n = LEAGUE_TEAMS.length;
@@ -2556,52 +2561,112 @@ function renderRollingStandingsTable() {
       : cumulativeStandingsThroughWeek(season, w).map(r => ({ ...r, pf: r.points, ties: 0 }));
     list.forEach(r => { (byTeam[r.teamId] = byTeam[r.teamId] || {})[w] = r; });
   });
+  const firstW = weeks[0], lastW = weeks[weeks.length - 1];
 
-  const lastW = weeks[weeks.length - 1];
-  const rows = LEAGUE_TEAMS.map((t, origIdx) => ({ t, origIdx, cells: byTeam[t.id] || {} }))
-    .sort((a, b) => (a.cells[lastW]?.rank ?? 99) - (b.cells[lastW]?.rank ?? 99));
-
+  // Achsen-Labels: links = Team auf Platz X in Woche 1, rechts = aktueller Platz
+  const narrow = box.clientWidth < 640;
+  const label = t => {
+    if (!t) return '';
+    const nm = narrow && t.name.length > 10 ? t.name.slice(0, 9) + '…' : t.name;
+    return `${t.emoji || ''} ${nm}`;
+  };
+  const teamAt = (w, rank) => LEAGUE_TEAMS.find(t => byTeam[t.id]?.[w]?.rank === rank);
   const recStr = c => `${c.wins}-${c.losses}${c.ties ? '-' + c.ties : ''}`;
 
-  host.innerHTML = `
-    <table class="board rst-table">
-      <thead><tr>
-        <th class="round-label">#</th><th class="round-label" style="text-align:left">Team</th>
-        ${weeks.map(w => `<th>W${w}</th>`).join('')}
-        <th>Δ</th><th>Ø</th><th>Bilanz</th><th>PF</th>
-      </tr></thead>
-      <tbody>
-        ${rows.map(({ t, origIdx, cells }) => {
-          const ranks = weeks.map(w => cells[w]?.rank ?? null);
-          const valid = ranks.filter(r => r != null);
-          const avg = valid.length ? (valid.reduce((a, b) => a + b, 0) / valid.length).toFixed(1) : '–';
-          const last = cells[lastW];
-          const firstRank = valid[0], lastRank = valid[valid.length - 1];
-          const totalDelta = valid.length > 1 ? firstRank - lastRank : 0;
-          const tds = weeks.map((w, i) => {
-            const c = cells[w];
-            if (!c) return '<td class="rst-cell">–</td>';
-            const col = _rstRankColor(c.rank, n);
-            const prev = i > 0 ? ranks[i - 1] : null;
-            const d = prev != null ? prev - c.rank : 0;
-            const arrow = d > 0 ? `<span class="rst-up">▲${d}</span>` : d < 0 ? `<span class="rst-down">▼${-d}</span>` : '';
-            const tip = `W${w}: Platz ${c.rank} · ${recStr(c)} · ${c.pf.toFixed(1)} PF`;
-            return `<td class="rst-cell" title="${tip}"><span class="rst-rank" style="color:${col};background:${col}22">${c.rank}</span>${arrow}</td>`;
-          }).join('');
-          const dCls = totalDelta > 0 ? 'rst-up' : totalDelta < 0 ? 'rst-down' : 'rst-flat';
-          const dTxt = totalDelta > 0 ? '▲' + totalDelta : totalDelta < 0 ? '▼' + (-totalDelta) : '—';
-          return `<tr class="rst-row" onclick="wrSelectTeam(${origIdx});document.getElementById('wrChartPanel')?.scrollIntoView({behavior:'smooth',block:'nearest'})">
-            <td><b>${last?.rank ?? '–'}</b></td>
-            <td class="rst-team">${t.emoji || ''} ${t.name}</td>
-            ${tds}
-            <td class="${dCls}" style="font-weight:800">${dTxt}</td>
-            <td>${avg}</td>
-            <td><b>${last ? recStr(last) : '–'}</b></td>
-            <td>${last ? last.pf.toFixed(1) : '–'}</td>
-          </tr>`;
-        }).join('')}
-      </tbody>
-    </table>`;
+  const styles = getComputedStyle(document.body);
+  const textColor = styles.getPropertyValue('--text').trim() || '#333';
+  const mutedColor = styles.getPropertyValue('--muted').trim() || '#888';
+  const borderColor = styles.getPropertyValue('--border').trim() || '#ddd';
+  const surface = styles.getPropertyValue('--surface').trim() || '#fff';
+
+  const datasets = LEAGUE_TEAMS.map((t, i) => {
+    const col = RST_TEAM_COLORS[i % RST_TEAM_COLORS.length];
+    return {
+      label: `${t.emoji || ''} ${t.name}`,
+      origIdx: i,
+      baseColor: col,
+      cells: weeks.map(w => byTeam[t.id]?.[w] || null),
+      data: weeks.map(w => byTeam[t.id]?.[w]?.rank ?? null),
+      borderColor: col, backgroundColor: col,
+      pointBackgroundColor: col, pointBorderColor: surface, pointBorderWidth: 2,
+      pointRadius: 6, pointHoverRadius: 8, borderWidth: 3,
+      tension: 0.4, cubicInterpolationMode: 'monotone', spanGaps: true, clip: false,
+    };
+  });
+
+  const applyHighlight = chart => {
+    chart.data.datasets.forEach((d, i) => {
+      const dim = rstHover !== null && i !== rstHover;
+      const c = dim ? _drHexToRgba(d.baseColor, 0.15) : d.baseColor;
+      d.borderColor = c; d.pointBackgroundColor = c;
+      d.borderWidth = rstHover === i ? 4.5 : 3;
+      d.order = rstHover === i ? -1 : 0;
+    });
+    chart.update('none');
+  };
+
+  if (rstChart) { rstChart.destroy(); rstChart = null; }
+  rstHover = null;
+  const canvas = document.getElementById('rstCanvas');
+  if (!canvas || typeof Chart === 'undefined') return;
+
+  const rankAxis = (position, week) => ({
+    position, reverse: true, min: 1, max: n, offset: false,
+    grid: { color: position === 'left' ? borderColor : 'transparent', drawTicks: false },
+    border: { display: false },
+    ticks: {
+      stepSize: 1, autoSkip: false, padding: 10,
+      color: textColor, font: { size: narrow ? 10 : 12, weight: '700' },
+      // Mobile: links nur Platz + Emoji, rechts (aktueller Stand) Emoji + Kurzname
+      callback: v => {
+        const t = teamAt(week, v);
+        if (narrow && position === 'left') return `${v}. ${t?.emoji || ''}`;
+        return narrow ? label(t) : `${v}. ${label(t)}`;
+      },
+    },
+  });
+
+  rstChart = new Chart(canvas.getContext('2d'), {
+    type: 'line',
+    data: { labels: weeks.map(w => (narrow ? 'W' : 'Woche ') + w), datasets },
+    options: {
+      responsive: true, maintainAspectRatio: false, animation: { duration: 400 },
+      layout: { padding: { top: 10, bottom: 4, left: narrow ? 6 : 4, right: narrow ? 26 : 12 } },
+      interaction: { mode: 'nearest', intersect: false, axis: 'xy' },
+      plugins: {
+        legend: { display: false },
+        tooltip: {
+          displayColors: true,
+          callbacks: {
+            title: items => items[0]?.label || '',
+            label: c => {
+              const cell = c.dataset.cells[c.dataIndex];
+              return cell ? `${c.dataset.label}: Platz ${cell.rank} · ${recStr(cell)} · ${cell.pf.toFixed(1)} PF` : `${c.dataset.label}: –`;
+            },
+          },
+        },
+      },
+      onHover: (evt, els, chart) => {
+        const idx = els.length ? els[0].datasetIndex : null;
+        if (idx !== rstHover) { rstHover = idx; applyHighlight(chart); }
+        evt.native && (evt.native.target.style.cursor = idx !== null ? 'pointer' : 'default');
+      },
+      onClick: (evt, els, chart) => {
+        if (!els.length) return;
+        wrSelectTeam(chart.data.datasets[els[0].datasetIndex].origIdx);
+        document.getElementById('wrChartPanel')?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+      },
+      scales: {
+        x: {
+          offset: false, grid: { color: borderColor }, border: { color: borderColor },
+          ticks: { color: mutedColor, font: { size: 11, weight: '700' }, padding: 8 },
+        },
+        y: rankAxis('left', firstW),
+        y2: rankAxis('right', lastW),
+      },
+    },
+  });
+  canvas.addEventListener('mouseleave', () => { if (rstHover !== null) { rstHover = null; applyHighlight(rstChart); } });
 }
 
 /* ---------- Weekly Rolling (2026 Rolling Rankings: Sidebar + Chart + Vergleich, wie Dynasty/Season-Finish Rolling) ---------- */
