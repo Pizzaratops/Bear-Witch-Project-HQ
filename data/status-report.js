@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-09-21T21:34:50.155Z",
+  "generatedAt": "2026-09-22T00:30:04.447Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -900,14 +900,14 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 15.5,
           "last3AvgPoints": 15.5,
-          "projPoints": 16.2
+          "projPoints": 16.5
         },
         {
           "name": "Brian Robinson",
           "pos": "RB",
           "nfl": "ATL",
           "isStarter": false,
-          "status": null,
+          "status": "Q",
           "flag": false,
           "lastGamePoints": 3.1,
           "last3AvgPoints": 3.1,
@@ -1288,7 +1288,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 5.4,
           "last3AvgPoints": 5.4,
-          "projPoints": 9.6
+          "projPoints": 9.8
         },
         {
           "name": "Jalen Coker",
@@ -1520,7 +1520,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
-          "projPoints": 0.9
+          "projPoints": 0.8
         },
         {
           "name": "Nicholas Singleton",
@@ -1685,7 +1685,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 1.1,
           "last3AvgPoints": 1.1,
-          "projPoints": 4.5
+          "projPoints": 6.1
         },
         {
           "name": "Tutu Atwell",
@@ -1696,7 +1696,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
-          "projPoints": 0.5
+          "projPoints": 2
         },
         {
           "name": "Cade Otton",
@@ -1807,7 +1807,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 5.4,
           "last3AvgPoints": 5.4,
-          "projPoints": 10
+          "projPoints": 10.2
         },
         {
           "name": "Brock Bowers",
@@ -1840,7 +1840,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": -0.6,
           "last3AvgPoints": -0.6,
-          "projPoints": 2.2
+          "projPoints": 2
         },
         {
           "name": "Cam Skattebo",
@@ -1990,7 +1990,7 @@ const STATUS_REPORT_DATA = {
           "pos": "RB",
           "nfl": "ATL",
           "isStarter": false,
-          "status": null,
+          "status": "Q",
           "flag": false,
           "lastGamePoints": 3.1,
           "last3AvgPoints": 3.1,
@@ -3411,7 +3411,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 5.4,
           "last3AvgPoints": 5.4,
-          "projPoints": 10
+          "projPoints": 10.2
         },
         {
           "name": "Ladd McConkey",
@@ -3444,7 +3444,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": -0.6,
           "last3AvgPoints": -0.6,
-          "projPoints": 2.2
+          "projPoints": 2
         },
         {
           "name": "Tory Horton",
@@ -3665,7 +3665,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 5.6,
           "last3AvgPoints": 5.6,
-          "projPoints": 10.8
+          "projPoints": 13.6
         },
         {
           "name": "Stefon Diggs",
