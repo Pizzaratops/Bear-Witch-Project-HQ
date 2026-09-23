@@ -24,6 +24,7 @@ const https = require('https');
 const ROOT = path.join(__dirname, '..');
 const OUT = path.join(ROOT, 'data', 'weekly-scores.js');
 const SCHEDULE_OUT = path.join(ROOT, 'data', 'schedule.js');
+const { loadFrozenWeeks, isFrozenWeek } = require('./lib/frozen-weeks');
 
 function loadModuleSandbox(files) {
   // WICHTIG: vm.runInContext haengt "const"/"let"-Deklarationen NICHT als
@@ -114,6 +115,8 @@ async function main() {
   }
   const season = cfg.ESPN_SEASON;
   existing[season] = existing[season] || {};
+  // ESPN-Draft-Reset 23.09.2026: W1/W2 kommen fest aus data/frozen-weeks-2026.js
+  const frozen = loadFrozenWeeks(season);
 
   // WICHTIG: hier IMMER zuerst auf unsere eigene Team-ID (String, z.B.
   // "beastmode") uebersetzen, BEVOR mit den schon gespeicherten Eintraegen
@@ -127,6 +130,7 @@ async function main() {
   let weeksWritten = 0;
   schedule.forEach(m => {
     const week = m.matchupPeriodId;
+    if (isFrozenWeek(frozen, week)) return; // eingefrorene Woche: ESPN ignorieren
     const home = m.home, away = m.away;
     if (!home || !away) return;
     // Nur gespielte/live Matchups (totalPoints > 0 bei mindestens einer Seite)
@@ -144,6 +148,10 @@ async function main() {
     upsert(awayId, away.totalPoints, homeId, home.totalPoints);
     weeksWritten++;
   });
+
+  // Eingefrorene Wochen immer aus der festen Quelle (auch falls die Datei
+  // mal kaputt/leer ueberschrieben wurde).
+  if (frozen) Object.entries(frozen.scores).forEach(([w, list]) => { existing[season][w] = JSON.parse(JSON.stringify(list)); });
 
   // Defensive Absicherung: falls durch einen frueheren Bug oder eine
   // ESPN-Antwort mit doppelten Matchup-Eintraegen trotzdem mehrere
@@ -187,6 +195,8 @@ const WEEKLY_SCORES = ${JSON.stringify(existing, null, 1)};
     });
   });
 
+  // Eingefrorene Wochen: Paarungen aus der festen Quelle, nicht von ESPN.
+  if (frozen) Object.entries(frozen.schedule).forEach(([w, list]) => { scheduleByWeek[w] = list; });
   const scheduleOutData = { [season]: scheduleByWeek };
   const scheduleOut = `// ============================================================
 //  SCHEDULE — kompletter Saison-Spielplan (auch ungespielte Wochen)

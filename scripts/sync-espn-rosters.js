@@ -27,6 +27,7 @@ const https = require('https');
 
 const ROOT = path.join(__dirname, '..');
 const OUT = path.join(ROOT, 'data', 'rosters-live.js');
+const { loadFrozenWeeks, frozenRecord } = require('./lib/frozen-weeks');
 
 function loadModuleSandbox(files) {
   // WICHTIG: vm.runInContext haengt "const"/"let"-Deklarationen NICHT als
@@ -94,6 +95,7 @@ function httpsGetJson(url, headers) {
 async function main() {
   const cfg = loadConfig();
   const leagueTeams = loadLeagueTeams();
+  const frozen = loadFrozenWeeks(cfg.ESPN_SEASON); // ESPN-Draft-Reset 23.09.2026
 
   const headers = {
     'User-Agent': 'bear-witch-project-hq-bot',
@@ -151,7 +153,9 @@ async function main() {
     }).filter(Boolean);
 
     const ov = espnTeam.record?.overall || {};
-    records[ourId] = `${ov.wins || 0}-${ov.losses || 0}-${ov.ties || 0}`;
+    // ESPN-Draft-Reset 23.09.2026: ESPN zaehlt erst ab W3 -> W1/W2 draufaddieren
+    const fr = frozenRecord(frozen, ourId);
+    records[ourId] = `${(ov.wins || 0) + fr.wins}-${(ov.losses || 0) + fr.losses}-${(ov.ties || 0) + fr.ties}`;
   });
 
   if (unmatched.length) {
@@ -160,7 +164,10 @@ async function main() {
   }
 
   const totalPlayers = Object.values(rosters).reduce((s, r) => s + r.length, 0);
-  if (totalPlayers < 50) {
+  // Schwelle nach dem ESPN-Draft-Reset (23.09.2026) von 50 auf 150 erhoeht:
+  // ein halb neu eingetragener Draft (normal ~195 Spieler) soll den letzten
+  // vollstaendigen Stand nicht ueberschreiben.
+  if (totalPlayers < 150) {
     throw new Error(`Nur ${totalPlayers} Spieler in ESPN-Antwort gefunden — sieht nach Teil-/Fehlantwort aus, breche ab ohne zu schreiben.`);
   }
 

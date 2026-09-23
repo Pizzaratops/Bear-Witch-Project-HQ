@@ -96,6 +96,8 @@ function loadExisting() {
   }
 }
 
+const { loadFrozenWeeks, isFrozenWeek } = require('./lib/frozen-weeks');
+
 function normalizeName(s) { return (s || '').toLowerCase().replace(/[^a-z0-9]/g, ''); }
 
 function httpsGetJson(url, headers) {
@@ -215,7 +217,10 @@ async function main() {
   const existing = loadExisting();
   const perWeekPosition = {}; // week -> {teamId -> {qbPts,rbPts,wrPts,tePts}}
 
+  // ESPN-Draft-Reset 23.09.2026: W1/W2 fest aus data/frozen-weeks-2026.js
+  const frozen = loadFrozenWeeks(season);
   for (const week of playedWeeks) {
+    if (isFrozenWeek(frozen, week)) { perWeekPosition[week] = (frozen.positionPoints || {})[week] || {}; continue; }
     try {
       perWeekPosition[week] = await fetchWeekPositionPoints(cfg, espnIdToOurId, week);
     } catch (e) {

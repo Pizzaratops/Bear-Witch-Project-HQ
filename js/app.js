@@ -1667,7 +1667,7 @@ function renderStandings() {
     .sort((a, b) => (b.wins - a.wins) || (b.pf - a.pf));
 
   wrap.innerHTML = `
-    <div class="info-banner">Stand nach Woche ${lastWeek} (Saison ${season}). Sortiert nach Siegen, bei Gleichstand nach erzielten Punkten.</div>
+    <div class="info-banner">Stand nach Woche ${lastWeek} (Saison ${season}). Sortiert nach Siegen, bei Gleichstand nach erzielten Punkten.${season === '2026' ? ' <b>W1 &amp; W2</b> stammen aus dem Archiv (ESPN-Draft-Reset am 23.09.) und zählen voll für Standings, Playoffs und Draft-Reihenfolge.' : ''}</div>
     <div class="board-table-wrap">
       <table class="board">
         <thead><tr><th class="round-label">#</th><th>Team</th><th>W-L-T</th><th>PF</th><th>PA</th><th>Diff</th></tr></thead>

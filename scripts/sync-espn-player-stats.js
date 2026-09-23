@@ -35,6 +35,7 @@ const https = require('https');
 
 const ROOT = path.join(__dirname, '..');
 const OUT = path.join(ROOT, 'data', 'player-stats.js');
+const { loadFrozenWeeks, isFrozenWeek } = require('./lib/frozen-weeks');
 
 function loadModuleSandbox(files) {
   const sandbox = {};
@@ -139,7 +140,14 @@ async function main() {
   }
 
   const byPlayer = {}; // name -> { pos, team, weeklyPoints: {week: pts} }
+  // ESPN-Draft-Reset 23.09.2026: W1/W2-Boxscores gibt es auf ESPN nicht mehr,
+  // die Werte kommen fest aus data/frozen-weeks-2026.js.
+  const frozen = loadFrozenWeeks(season);
+  if (frozen) Object.entries(frozen.playerWeeklyPoints || {}).forEach(([name, p]) => {
+    byPlayer[name] = { pos: p.pos, team: p.team, weeklyPoints: { ...p.weeklyPoints } };
+  });
   for (const week of playedWeeks) {
+    if (isFrozenWeek(frozen, week)) continue;
     let weekPlayers = [];
     try {
       weekPlayers = await fetchWeekBoxscore(cfg, week);

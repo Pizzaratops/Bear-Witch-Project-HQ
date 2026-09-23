@@ -38,6 +38,21 @@ const https = require('https');
 const ROOT = path.join(__dirname, '..');
 const OUT = path.join(ROOT, 'data', 'status-report.js');
 const REQUEST_TIMEOUT_MS = 30000;
+const { loadFrozenWeeks, frozenRecord } = require('./lib/frozen-weeks');
+
+// ESPN-Draft-Reset 23.09.2026: Foodball (91260355) zaehlt auf ESPN erst ab W3.
+// Fuer die Bilanz werden W1/W2 aus data/frozen-weeks-2026.js draufaddiert.
+const FOODBALL_LEAGUE_ID = 91260355;
+function foodballFrozenOffset(leagueCfg, teamName) {
+  if (Number(leagueCfg.id) !== FOODBALL_LEAGUE_ID) return { wins: 0, losses: 0, ties: 0 };
+  const frozen = loadFrozenWeeks(leagueCfg.season);
+  if (!frozen) return { wins: 0, losses: 0, ties: 0 };
+  const sb = {}; vm.createContext(sb);
+  vm.runInContext(fs.readFileSync(path.join(ROOT, 'data', 'teams.js'), 'utf8') + '\nthis.LEAGUE_TEAMS = LEAGUE_TEAMS;', sb);
+  const norm = x => (x || '').toLowerCase().replace(/[^a-z0-9]/g, '');
+  const t = (sb.LEAGUE_TEAMS || []).find(t => norm(t.name) === norm(teamName));
+  return t ? frozenRecord(frozen, t.id) : { wins: 0, losses: 0, ties: 0 };
+}
 
 /* ---------- Shared helpers (Muster wie in den anderen sync-espn-*.js Skripten) ---------- */
 
@@ -311,6 +326,8 @@ async function fetchEspnLeague(person, leagueCfg, cfg, actionStatuses) {
   }
 
   const ov = myTeam.record?.overall || {};
+  const myTeamName = (myTeam.name || `${myTeam.location || ''} ${myTeam.nickname || ''}`).trim();
+  const fr = foodballFrozenOffset(leagueCfg, myTeamName);
   return {
     id: `${person.id}-espn-${leagueCfg.id}`,
     platform: 'espn',
@@ -318,7 +335,7 @@ async function fetchEspnLeague(person, leagueCfg, cfg, actionStatuses) {
     leagueName: leagueCfg.name,
     emoji: leagueCfg.emoji || '🏈',
     teamName: (myTeam.name || `${myTeam.location || ''} ${myTeam.nickname || ''}`).trim(),
-    record: `${ov.wins || 0}-${ov.losses || 0}-${ov.ties || 0}`,
+    record: `${(ov.wins || 0) + fr.wins}-${(ov.losses || 0) + fr.losses}-${(ov.ties || 0) + fr.ties}`,
     players,
     flaggedCount: players.filter(p => p.flag).length,
   };
