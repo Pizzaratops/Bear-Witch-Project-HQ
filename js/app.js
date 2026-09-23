@@ -23,7 +23,7 @@ const PAGES = [
   'home', 'roster', 'dues', 'draftboard', 'keepers', 'dynastyboard', 'rolling', 'teamaverages', 'weekbyweek',
   'playerrankings', 'playerprojections', 'nflteams', 'nflteamdetail', 'futureboards',
   'standings', 'leaguehistory', 'seasonrolling', 'nflrankings', 'matchups', 'trade', 'tradehistory',
-  'statusreport'
+  'statusreport', 'erklaerung'
 ];
 
 function navigate(pageId, opts) {
@@ -87,6 +87,7 @@ const ROUTE_HANDLERS = {
   trade: () => showTrade(),
   tradehistory: () => showTradeHistory(),
   statusreport: () => showStatusReport(),
+  erklaerung: () => showErklaerung(),
 };
 
 function _routeTo(pageId, teamId, nflCode, leagueId) {
@@ -137,6 +138,7 @@ function showMatchups() { navigate('matchups'); renderMatchups(); }
 function showTrade() { navigate('trade'); renderTrade(); }
 function showTradeHistory() { navigate('tradehistory'); renderTradeHistory(); }
 function showStatusReport() { navigate('statusreport'); renderStatusReport(); }
+function showErklaerung() { navigate('erklaerung'); renderErklaerung(); }
 
 function toggleMobileNav() {
   document.getElementById('mobileNavDropdown').classList.toggle('open');
@@ -4739,3 +4741,60 @@ function _srRenderOwnerLeagues(owner, data) {
     </div>`;
 }
 
+
+/* ---------- Erklärung ---------- */
+function renderErklaerung() {
+  const wrap = document.getElementById('erklaerungContent');
+  if (!wrap) return;
+  wrap.innerHTML = `
+    <div class="info-banner" style="margin-bottom:18px;">
+      Zuletzt aktualisiert: 23.09.2026
+    </div>
+
+    <div class="board-table-wrap" style="padding:18px 20px;margin-bottom:16px;">
+      <h3 style="margin:0 0 8px;font-size:16px;">🎯 ESPN hat unseren Draft zurückgesetzt</h3>
+      <p style="margin:0 0 10px;line-height:1.6;">
+        Der 2026-Draft wurde auf ESPN komplett zurückgesetzt (alle Picks weg, Liga-Status
+        wieder "pre-draft"). Das ist eine ESPN-Funktion, die eigentlich für neue Ligen gedacht
+        ist und <b>nicht rückgängig gemacht werden kann</b>. ESPN zählt die Saison danach ab der
+        aktuellen Woche neu — Woche 1 und 2 kennt ESPN selbst nicht mehr.
+      </p>
+      <p style="margin:0;line-height:1.6;">
+        Der Draft (inkl. Keeper) muss deshalb auf ESPN komplett neu eingetragen werden.
+      </p>
+    </div>
+
+    <div class="board-table-wrap" style="padding:18px 20px;margin-bottom:16px;">
+      <h3 style="margin:0 0 8px;font-size:16px;">✅ Was auf dieser Seite trotzdem sicher ist</h3>
+      <ul style="margin:0;padding-left:20px;line-height:1.8;">
+        <li><b>Woche 1 &amp; 2</b> — Ergebnisse, Punkte und Bilanzen sind fest im System hinterlegt
+          und werden durch nichts mehr überschrieben, auch wenn ESPN sie vergessen hat.</li>
+        <li><b>Draft-Board 2026 &amp; Keeper-Übersicht</b> — werden auf dieser Seite ohnehin nie
+          automatisch synchronisiert, sondern von Hand gepflegt. Davon ist also nichts betroffen.</li>
+      </ul>
+    </div>
+
+    <div class="board-table-wrap" style="padding:18px 20px;margin-bottom:16px;">
+      <h3 style="margin:0 0 8px;font-size:16px;">📈 Wie es weitergeht</h3>
+      <p style="margin:0 0 10px;line-height:1.6;">
+        Sobald der Draft neu eingetragen ist, läuft der automatische Sync mit ESPN wieder normal —
+        aber mit einer wichtigen Ausnahme: <b>Woche 1 und 2 bleiben stehen</b>, und alles, was ESPN ab
+        jetzt an neuen Wochen liefert, wird einfach oben draufaddiert.
+      </p>
+      <p style="margin:0;line-height:1.6;">
+        Damit stimmen auf <b>dieser Seite</b> Standings, PF/PA, Playoff-Seeding und die
+        Draft-Reihenfolge fürs nächste Jahr über die komplette Saison — auch wenn ESPN selbst
+        nur ab der neuen Startwoche zählt.
+      </p>
+    </div>
+
+    <div class="board-table-wrap" style="padding:18px 20px;border-color:var(--accent);">
+      <h3 style="margin:0 0 8px;font-size:16px;">⚠️ Wichtig für alle Owner</h3>
+      <p style="margin:0;line-height:1.6;">
+        <b>Maßgeblich ist ab jetzt diese Website, nicht die ESPN-App.</b> ESPN selbst zeigt intern
+        eine falsche bzw. unvollständige Bilanz und ein falsches Playoff-Bild, weil ESPN
+        Woche 1 und 2 nicht mehr kennt.
+      </p>
+    </div>
+  `;
+}
