@@ -4754,22 +4754,21 @@ function renderErklaerung() {
     <div class="board-table-wrap" style="padding:18px 20px;margin-bottom:16px;">
       <h3 style="margin:0 0 8px;font-size:16px;">🎯 Der ESPN-Draft wurde zurückgesetzt</h3>
       <p style="margin:0 0 10px;line-height:1.6;">
-        Wir wissen nicht wie, aber alle Picks sind weg, der Liga-Status steht wieder auf
-        "pre-draft" — und das <b>kann nicht rückgängig gemacht werden</b>. ESPN zählt die Saison
-        danach ab der aktuellen Woche neu, Woche 1 und 2 kennt ESPN selbst nicht mehr.
+        Ich weiß nicht wie, aber alle Picks weg, Liga-Status wieder "pre-draft") und kann nicht
+        rückgängig gemacht werden. ESPN zählt die Saison danach ab der aktuellen Woche neu,
+        Woche 1 und 2 kennt ESPN selbst nicht mehr.
       </p>
       <p style="margin:0;line-height:1.6;">
-        Der Draft wurde auf ESPN neu eingetragen — hoffentlich sind alle Spieler korrekt drin.
-        Falls dir bei deinem Team etwas fehlt oder falsch aussieht, meld dich.
+        Ich habe alle Spieler hoffentlich korrekt hinzugefügt.
       </p>
     </div>
 
     <div class="board-table-wrap" style="padding:18px 20px;margin-bottom:16px;">
       <h3 style="margin:0 0 8px;font-size:16px;">✅ Was auf dieser Seite trotzdem sicher ist</h3>
       <ul style="margin:0;padding-left:20px;line-height:1.8;">
-        <li><b>Woche 1 &amp; 2</b> — Ergebnisse, Punkte und Bilanzen sind fest im System hinterlegt
-          und werden durch nichts mehr überschrieben, auch wenn ESPN sie vergessen hat.</li>
-        <li><b>Draft-Board 2026 &amp; Keeper-Übersicht</b> — werden auf dieser Seite ohnehin nie
+        <li>Woche 1 &amp; 2 Ergebnisse, Punkte und Bilanzen sind fest im System hinterlegt und
+          werden durch nichts mehr überschrieben, auch wenn ESPN sie vergessen hat.</li>
+        <li>Draft-Board 2026 &amp; Keeper-Übersicht, werden auf dieser Seite ohnehin nie
           automatisch synchronisiert, sondern von Hand gepflegt. Davon ist also nichts betroffen.</li>
       </ul>
     </div>
@@ -4777,13 +4776,13 @@ function renderErklaerung() {
     <div class="board-table-wrap" style="padding:18px 20px;margin-bottom:16px;">
       <h3 style="margin:0 0 8px;font-size:16px;">📈 Wie es weitergeht</h3>
       <p style="margin:0 0 10px;line-height:1.6;">
-        Ab jetzt läuft der automatische Sync mit ESPN wieder normal — aber mit einer wichtigen
-        Ausnahme: <b>Woche 1 und 2 bleiben stehen</b>, und alles, was ESPN ab jetzt an neuen
-        Wochen liefert, wird einfach oben draufaddiert.
+        Ab jetzt  läuft der automatische Sync mit ESPN wieder normal, aber mit einer wichtigen
+        Ausnahme: Woche 1 und 2 bleiben stehen, und alles, was ESPN ab jetzt an neuen Wochen
+        liefert, wird einfach oben draufaddiert.
       </p>
       <p style="margin:0;line-height:1.6;">
-        Damit stimmen auf <b>dieser Seite</b> Standings, PF/PA, Playoff-Seeding und die
-        Draft-Reihenfolge fürs nächste Jahr über die komplette Saison — auch wenn ESPN selbst
+        Damit stimmen auf dieser Seite Standings, PF/PA, Playoff-Seeding und die
+        Draft-Reihenfolge fürs nächste Jahr über die komplette Saison, auch wenn ESPN selbst
         nur ab der neuen Startwoche zählt.
       </p>
     </div>
