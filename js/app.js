@@ -4752,15 +4752,15 @@ function renderErklaerung() {
     </div>
 
     <div class="board-table-wrap" style="padding:18px 20px;margin-bottom:16px;">
-      <h3 style="margin:0 0 8px;font-size:16px;">🎯 ESPN hat unseren Draft zurückgesetzt</h3>
+      <h3 style="margin:0 0 8px;font-size:16px;">🎯 Der ESPN-Draft wurde zurückgesetzt</h3>
       <p style="margin:0 0 10px;line-height:1.6;">
-        Der 2026-Draft wurde auf ESPN komplett zurückgesetzt (alle Picks weg, Liga-Status
-        wieder "pre-draft"). Das ist eine ESPN-Funktion, die eigentlich für neue Ligen gedacht
-        ist und <b>nicht rückgängig gemacht werden kann</b>. ESPN zählt die Saison danach ab der
-        aktuellen Woche neu — Woche 1 und 2 kennt ESPN selbst nicht mehr.
+        Wir wissen nicht wie, aber alle Picks sind weg, der Liga-Status steht wieder auf
+        "pre-draft" — und das <b>kann nicht rückgängig gemacht werden</b>. ESPN zählt die Saison
+        danach ab der aktuellen Woche neu, Woche 1 und 2 kennt ESPN selbst nicht mehr.
       </p>
       <p style="margin:0;line-height:1.6;">
-        Der Draft (inkl. Keeper) muss deshalb auf ESPN komplett neu eingetragen werden.
+        Der Draft wurde auf ESPN neu eingetragen — hoffentlich sind alle Spieler korrekt drin.
+        Falls dir bei deinem Team etwas fehlt oder falsch aussieht, meld dich.
       </p>
     </div>
 
@@ -4777,9 +4777,9 @@ function renderErklaerung() {
     <div class="board-table-wrap" style="padding:18px 20px;margin-bottom:16px;">
       <h3 style="margin:0 0 8px;font-size:16px;">📈 Wie es weitergeht</h3>
       <p style="margin:0 0 10px;line-height:1.6;">
-        Sobald der Draft neu eingetragen ist, läuft der automatische Sync mit ESPN wieder normal —
-        aber mit einer wichtigen Ausnahme: <b>Woche 1 und 2 bleiben stehen</b>, und alles, was ESPN ab
-        jetzt an neuen Wochen liefert, wird einfach oben draufaddiert.
+        Ab jetzt läuft der automatische Sync mit ESPN wieder normal — aber mit einer wichtigen
+        Ausnahme: <b>Woche 1 und 2 bleiben stehen</b>, und alles, was ESPN ab jetzt an neuen
+        Wochen liefert, wird einfach oben draufaddiert.
       </p>
       <p style="margin:0;line-height:1.6;">
         Damit stimmen auf <b>dieser Seite</b> Standings, PF/PA, Playoff-Seeding und die
