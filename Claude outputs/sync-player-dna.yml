@@ -1,0 +1,51 @@
+name: Player DNA Sync
+
+# Rechnet die Player-DNA-Perzentile (QB/RB/WR/TE) aus nflverse neu:
+# Stats, Next Gen Stats, Snap Counts. Vorjahre werden aus der bestehenden
+# data/player-dna.js uebernommen, neu gerechnet wird nur die laufende Saison.
+# nflverse aktualisiert nachts (US-Zeit) -> Lauf morgens deutscher Zeit.
+# Ligaunabhaengig (alle NFL-Spieler mit Mindest-Volumen) -- keine ESPN-
+# Secrets noetig, komplett unabhaengig vom ESPN-Draft/-Sync.
+
+on:
+  schedule:
+    - cron: "40 7 * * *"   # 09:40 Berlin (Sommerzeit) / 08:40 (Winterzeit)
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Player DNA Sync
+        run: node scripts/sync-player-dna.js
+
+      - name: Commit & Push falls geändert
+        run: |
+          git config user.name "bear-witch-project-hq-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/player-dna.js
+          if git diff --cached --quiet; then
+            echo "Keine Änderungen -- nichts zu committen."
+            exit 0
+          fi
+          git commit -m "chore: player dna sync"
+          for i in 1 2 3 4 5; do
+            if git push; then
+              exit 0
+            fi
+            echo "Push fehlgeschlagen (Versuch $i/5) -- vermutlich hat ein anderer Sync-Workflow zeitgleich gepusht. Hole aktuellen Stand und versuche erneut..."
+            git fetch origin main
+            git rebase origin/main
+            sleep $((RANDOM % 8 + 3))
+          done
+          echo "Push nach 5 Versuchen weiterhin fehlgeschlagen -- bitte Workflow-Log prüfen."
+          exit 1

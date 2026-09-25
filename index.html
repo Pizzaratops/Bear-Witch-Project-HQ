@@ -56,6 +56,7 @@
         <div class="snav-dropdown">
           <button class="snav-dropdown-item" data-page="playerrankings" onclick="showPlayerRankings()">📊 Player Rankings</button>
           <button class="snav-dropdown-item" data-page="playerprojections" onclick="showPlayerProjections()">🔮 Player Projections</button>
+          <button class="snav-dropdown-item" data-page="playerdna" onclick="showPlayerDna()">🧬 Player DNA</button>
           <button class="snav-dropdown-item" data-page="nflteams" onclick="showNFLTeams()">🏈 NFL Teams</button>
         </div>
       </div>
@@ -129,6 +130,7 @@
         <div class="subnav-mobile-label">Players</div>
         <button class="subnav-mobile-btn" data-page="playerrankings" onclick="showPlayerRankings()">📊 Player Rankings</button>
         <button class="subnav-mobile-btn" data-page="playerprojections" onclick="showPlayerProjections()">🔮 Player Projections</button>
+        <button class="subnav-mobile-btn" data-page="playerdna" onclick="showPlayerDna()">🧬 Player DNA</button>
         <button class="subnav-mobile-btn" data-page="nflteams" onclick="showNFLTeams()">🏈 NFL Teams</button>
       </div>
       <div class="subnav-mobile-group">
@@ -289,6 +291,13 @@
   <div id="playerprojectionsContent"></div>
 </div>
 
+<!-- ============ PLAYER DNA ============ -->
+<div class="page page-wide" id="page-playerdna">
+  <div class="page-title">🧬 Player DNA</div>
+  <div class="page-sub">Profil je Spieler gegen alle NFL-Spieler derselben Position — Rolle, Produktion &amp; Spielstil (nflverse)</div>
+  <div id="playerdnaContent"></div>
+</div>
+
 <!-- ============ NFL TEAMS ============ -->
 <div class="page page-wide" id="page-nflteams">
   <div class="page-title">🏈 NFL Teams</div>
@@ -390,6 +399,8 @@
 <script src="data/matchup-snapshots.js"></script>
 <script src="data/status-report.js"></script>
 <script src="js/matchup-engine.js"></script>
+<script src="js/player-dna-glossary.js"></script>
+<script src="js/player-dna.js"></script>
 <script src="js/app.js"></script>
 <script>
   // Teams-Dropdown dynamisch befuellen (Desktop + Mobile)

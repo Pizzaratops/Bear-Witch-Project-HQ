@@ -23,7 +23,7 @@ const PAGES = [
   'home', 'roster', 'dues', 'draftboard', 'keepers', 'dynastyboard', 'rolling', 'teamaverages', 'weekbyweek',
   'playerrankings', 'playerprojections', 'nflteams', 'nflteamdetail', 'futureboards',
   'standings', 'leaguehistory', 'seasonrolling', 'nflrankings', 'matchups', 'trade', 'tradehistory',
-  'statusreport', 'erklaerung'
+  'statusreport', 'erklaerung', 'playerdna'
 ];
 
 function navigate(pageId, opts) {
@@ -88,6 +88,7 @@ const ROUTE_HANDLERS = {
   tradehistory: () => showTradeHistory(),
   statusreport: () => showStatusReport(),
   erklaerung: () => showErklaerung(),
+  playerdna: () => showPlayerDna(),
 };
 
 function _routeTo(pageId, teamId, nflCode, leagueId) {
@@ -289,7 +290,10 @@ function renderRoster(teamId) {
       ${fullRoster.map(p => {
         const isKeeper = keeperNames.has(p.name);
         const round = isKeeper ? computeKeeperRounds(keepers.length)[keepers.findIndex(k => k.name === p.name)] : null;
-        return playerRowHtml({ name: p.name, nfl: p.nfl, pos: p.pos, status: p.status }, round, isKeeper);
+        const row = playerRowHtml({ name: p.name, nfl: p.nfl, pos: p.pos, status: p.status }, round, isKeeper);
+        const dna = ['QB', 'RB', 'WR', 'TE'].includes(p.pos)
+          ? `<button class="dna-open-btn" title="Player DNA" onclick="openPlayerDna('${escapeJs(p.name)}','${p.pos}')">🧬</button>` : '';
+        return dna ? row.replace(/<\/div>\s*$/, dna + '</div>') : row;
       }).join('')}
     `;
   } else {
