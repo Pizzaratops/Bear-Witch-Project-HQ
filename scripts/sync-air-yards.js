@@ -22,10 +22,8 @@
 const fs = require('fs');
 const path = require('path');
 const vm = require('vm');
-const zlib = require('zlib');
-const https = require('https');
-const readline = require('readline');
 const { httpsGetText, parseCsv, GAMES_CSV_URL } = require('./lib/nflverse');
+const { streamPbp } = require('./lib/pbp-stream');
 
 const ROOT = path.join(__dirname, '..');
 const OUT = path.join(ROOT, 'data', 'air-yards.js');
@@ -37,40 +35,6 @@ const NBINS = (BIN_MAX - BIN_MIN) / BIN_W + 2;
 const binOf = ay => (ay < BIN_MIN ? 0 : ay >= BIN_MAX ? NBINS - 1 : 1 + Math.floor((ay - BIN_MIN) / BIN_W));
 const MIN_N = { QB: 10, RB: 5, WR: 5, TE: 5 };
 const SEASONS_BACK = 1; // laufende + 1 Vorsaison
-
-// Eine CSV-Zeile splitten (Anfuehrungszeichen-sicher; pbp hat keine Zeilenumbrueche in Feldern)
-function splitCsvLine(line) {
-  const out = []; let f = '', q = false;
-  for (let i = 0; i < line.length; i++) {
-    const c = line[i];
-    if (q) { if (c === '"') { if (line[i + 1] === '"') { f += '"'; i++; } else q = false; } else f += c; }
-    else if (c === '"') q = true;
-    else if (c === ',') { out.push(f); f = ''; }
-    else f += c;
-  }
-  out.push(f);
-  return out;
-}
-
-function streamPbp(season, onRow) {
-  const url = `${REL}/pbp/play_by_play_${season}.csv.gz`;
-  return new Promise((resolve, reject) => {
-    const get = u => https.get(u, { headers: { 'User-Agent': 'dpe-hq-bot' } }, res => {
-      if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) return get(res.headers.location);
-      if (res.statusCode !== 200) { res.resume(); return reject(new Error(`HTTP ${res.statusCode} für ${u}`)); }
-      const rl = readline.createInterface({ input: res.pipe(zlib.createGunzip()), crlfDelay: Infinity });
-      let idx = null;
-      rl.on('line', line => {
-        const cols = splitCsvLine(line);
-        if (!idx) { idx = {}; cols.forEach((h, i) => { idx[h] = i; }); return; }
-        onRow(cols, idx);
-      });
-      rl.on('close', resolve);
-      rl.on('error', reject);
-    }).on('error', reject);
-    get(url);
-  });
-}
 
 // Positionen aus players.csv (gsis_id -> position)
 async function loadPositions() {

@@ -4828,9 +4828,15 @@ function renderErklaerung() {
     </div>` : ''}
 
     ${typeof fuExplainHtml === 'function' ? `
-    <div class="board-table-wrap" style="padding:18px 20px;">
+    <div class="board-table-wrap" style="padding:18px 20px;margin-bottom:16px;">
       <h3 style="margin:0 0 8px;font-size:16px;">📊 Unit-Vergleich (Matchups)</h3>
       ${fuExplainHtml()}
+    </div>` : ''}
+
+    ${typeof playerStyleExplainHtml === 'function' ? `
+    <div class="board-table-wrap" style="padding:18px 20px;">
+      <h3 style="margin:0 0 8px;font-size:16px;">🎯 Spielstil (Player DNA)</h3>
+      ${playerStyleExplainHtml()}
     </div>` : ''}
   `;
 }

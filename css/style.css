@@ -892,9 +892,11 @@ table.db-table td:nth-child(2) { text-align: left; font-weight: 600; }
 .ma-center { position: absolute; left: 50%; top: 3px; bottom: 3px; width: 2px; margin-left: -1px; background: var(--border); }
 .ma-fill { position: absolute; top: 50%; height: 6px; margin-top: -3px; border-radius: 4px; opacity: .85; }
 .ma-knob { position: absolute; top: 50%; transform: translate(-50%, -50%); background: var(--surface); border: 2px solid; border-radius: 6px; font-size: 9.5px; font-weight: 900; padding: 1px 4px; line-height: 1.3; }
+.ma-row-noisy .ma-val, .ma-row-noisy .ma-track { opacity: .5; }
 .ma-verdict { font-size: 12px; margin-top: 10px; padding-top: 8px; border-top: 1px solid var(--border); color: var(--muted); }
 
 .ma-fpa-title { font-size: 12px; font-weight: 700; margin-bottom: 10px; }
+.ma-fpa-basis { display: block; font-size: 10.5px; font-weight: 600; color: var(--muted); margin-top: 2px; }
 .ma-fpa-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; }
 .ma-fpa-cell { background: var(--surface2); border-radius: 9px; padding: 8px; text-align: center; }
 .ma-fpa-pos { font-size: 10.5px; font-weight: 800; color: var(--muted); letter-spacing: .5px; }
@@ -904,6 +906,23 @@ table.db-table td:nth-child(2) { text-align: left; font-weight: 600; }
 .ma-fpa-cell.ma-good .ma-fpa-r { color: var(--green); }
 .ma-fpa-cell.ma-bad { box-shadow: inset 0 0 0 1.5px var(--red); }
 .ma-fpa-cell.ma-bad .ma-fpa-r { color: var(--red); }
+
+/* Scheme-Tendenzen (FTN) */
+.ma-section-title { margin-top: 22px; font-size: 14px; font-weight: 800; }
+.ma-section-title span { font-size: 11px; font-weight: 600; color: var(--muted); margin-left: 6px; }
+.ma-srow { display: grid; grid-template-columns: 92px 1fr auto; grid-template-areas: "label freq verdict" "label split verdict"; column-gap: 10px; row-gap: 2px; align-items: center; padding: 8px 0; border-top: 1px solid var(--border); }
+.ma-slabel { grid-area: label; font-size: 12px; font-weight: 800; }
+.ma-sfreq { grid-area: freq; font-size: 12px; }
+.ma-sfreq small { color: var(--muted); margin-left: 6px; }
+.ma-ssplit { grid-area: split; font-size: 11.5px; color: var(--muted); }
+.ma-ssplit b { color: var(--text); font-variant-numeric: tabular-nums; }
+.ma-sverdict { grid-area: verdict; }
+.ma-sv { display: inline-block; font-size: 10.5px; font-weight: 900; padding: 2px 6px; border: 1.5px solid; border-radius: 6px; white-space: nowrap; }
+.ma-sv-n { border-color: var(--border); color: var(--muted); font-weight: 700; }
+.ma-rank.ma-hi { background: var(--accent-light); color: var(--accent); }
+@media (max-width: 600px) {
+  .ma-srow { grid-template-columns: 1fr auto; grid-template-areas: "label verdict" "freq freq" "split split"; }
+}
 
 /* Spieler-Badge (Fantasy-Matchup-Boost) */
 .ma-boost { display: inline-block; font-size: 10px; font-weight: 800; padding: 1px 5px; border-radius: 5px; margin-left: 6px; white-space: nowrap; vertical-align: middle; cursor: help; background: var(--surface2); color: var(--muted); }
@@ -924,6 +943,7 @@ table.db-table td:nth-child(2) { text-align: left; font-weight: 600; }
   .ma-track { grid-column: 1 / -1; grid-row: 3; }
   .ma-fpa-n { font-size: 15px; }
 }
+
 /* ---------- AIR YARDS (js/air-yards.js, Karte im Player-DNA-Profil) ---------- */
 .ay-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 14px 16px; margin-top: 16px; }
 .ay-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
@@ -989,3 +1009,39 @@ table.db-table td:nth-child(2) { text-align: left; font-weight: 600; }
   .fu-season { font-size: 11px; }
   .fu-long { display: none; }
 }
+
+/* ---------- PLAYER STYLE (js/player-style.js, FTN-Karte im Player-DNA-Profil) ---------- */
+.ps-card { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 14px 16px; margin-top: 16px; }
+.ps-head { display: flex; justify-content: space-between; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 10px; }
+.ps-title { font-size: 13px; font-weight: 800; letter-spacing: .3px; }
+.ps-meta { font-size: 12px; color: var(--muted); }
+.ps-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.ps-tile { background: var(--surface2); border-radius: 10px; padding: 10px 12px; min-width: 0; }
+.ps-tile.ps-style { background: transparent; border: 1px dashed var(--border); }
+.ps-label { font-size: 11px; font-weight: 700; color: var(--muted); letter-spacing: .3px; }
+.ps-val { font-size: 20px; font-weight: 800; font-variant-numeric: tabular-nums; margin: 2px 0; display: flex; align-items: center; gap: 8px; }
+.ps-val.ps-thin { opacity: .55; }
+.ps-pct { font-size: 11px; font-weight: 800; padding: 1px 6px; border-radius: 6px; background: var(--surface); color: var(--muted); }
+.ps-pct.ps-good { background: rgba(76,175,129,.18); color: var(--green); }
+.ps-pct.ps-bad { background: rgba(217,105,95,.16); color: var(--red); }
+.ps-avg { font-size: 11px; color: var(--muted); }
+.ps-sub { font-size: 11px; color: var(--muted); margin-top: 4px; line-height: 1.35; }
+.ps-foot { font-size: 11px; color: var(--muted); margin-top: 10px; }
+@media (max-width: 760px) { .ps-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+
+/* Gesamt-Fazit (Matchup Advantage) */
+.ma-overall { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 12px 16px; margin-top: 14px; }
+.ma-ov-head { font-size: 14px; font-weight: 800; display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; }
+.ma-ov-tag { font-size: 11px; font-weight: 900; padding: 2px 8px; border-radius: 6px; border: 1.5px solid var(--tc, var(--border)); color: var(--tc, var(--muted)); letter-spacing: .3px; text-transform: uppercase; }
+.ma-ov-tag.ma-ov-strong { background: var(--tc); color: #fff; }
+.ma-ov-net { font-size: 11.5px; font-weight: 600; color: var(--muted); }
+.ma-ov-body { font-size: 12.5px; color: var(--muted); margin-top: 6px; line-height: 1.5; }
+.ma-ov-body b { color: var(--text); }
+.ma-ov-res { font-size: 12px; margin-top: 6px; padding-top: 6px; border-top: 1px solid var(--border); color: var(--muted); }
+.ma-cal { width: 100%; border-collapse: collapse; font-size: 12.5px; margin: 4px 0 8px; }
+.ma-cal th, .ma-cal td { padding: 4px 6px; border-bottom: 1px solid var(--border); text-align: right; }
+.ma-cal th:first-child, .ma-cal td:first-child { text-align: left; }
+.ma-cal th { font-size: 11px; color: var(--muted); font-weight: 700; }
+.ma-ov-vegas { font-size: 12.5px; margin-top: 6px; padding: 6px 10px; border-radius: 8px; line-height: 1.45; }
+.ma-ov-agree { background: rgba(76,175,129,.12); color: var(--text); }
+.ma-ov-disagree { background: rgba(217,105,95,.13); color: var(--text); }

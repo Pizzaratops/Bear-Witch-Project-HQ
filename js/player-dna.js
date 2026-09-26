@@ -375,6 +375,7 @@ function _dnaRenderMain() {
       </div>
     </div>
     <div id="dnaAirYards"></div>
+    <div id="dnaStyle"></div>
     <div class="dna-matches">
       ${matchHtml(`🧬 DNA-Match ${season}`, cur, false)}
       ${matchHtml('🏛️ Historisches Match', hist, true, me.e ? ` <label class="dna-toggle dna-inline"><input type="checkbox" ${dnaState.sameYear ? 'checked' : ''} onchange="dnaSet('sameYear',this.checked)"> nur ${me.e === 1 ? 'Rookie-Jahre' : 'NFL-Jahr ' + me.e}</label>` : '')}
@@ -383,6 +384,8 @@ function _dnaRenderMain() {
   _dnaDrawChart(entries, cats);
   // Air-Yards-Tiefenprofil (js/air-yards.js), falls geladen
   if (typeof airYardsMount === 'function') airYardsMount('dnaAirYards', me.id, pos, season, me.n);
+  // FTN-Spielstil (js/player-style.js), falls geladen
+  if (typeof playerStyleMount === 'function') playerStyleMount('dnaStyle', me.id, pos, season, me.n);
 }
 
 function _dnaDrawChart(entries, cats) {
