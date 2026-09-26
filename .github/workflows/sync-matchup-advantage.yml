@@ -1,0 +1,64 @@
+name: Matchup Advantage Sync
+
+# Unit gegen Unit (Passing/Rushing EPA, Sack Rate, Explosive %, Red-Zone-
+# TD %) je NFL-Team, Offense und Defense, plus Fantasy Points Allowed je
+# Position und der REG-Spielplan -- aus nflverse, keine Secrets. Schreibt
+# data/matchup-advantage.js (siehe scripts/sync-matchup-advantage.js).
+#
+# Taeglich 9 & 21 Uhr Berlin + Dienstag frueh (nach Monday Night) +
+# manuell startbar.
+
+on:
+  schedule:
+    - cron: "0 7 * * *"    # 09:00 Berlin (Sommerzeit)
+    - cron: "0 8 * * *"    # 09:00 Berlin (Winterzeit)
+    - cron: "0 19 * * *"   # 21:00 Berlin (Sommerzeit)
+    - cron: "0 20 * * *"   # 21:00 Berlin (Winterzeit)
+    - cron: "30 5 * * 2"   # Dienstag frueh nach MNF
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Matchup Advantage Sync
+        run: node scripts/sync-matchup-advantage.js
+
+      - name: Commit & Push falls geändert
+        run: |
+          git config user.name "bear-witch-project-hq-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/matchup-advantage.js
+          if git diff --cached --quiet; then
+            echo "Keine Änderungen -- nichts zu committen."
+            exit 0
+          fi
+          git commit -m "chore: matchup advantage sync"
+          # Mehrere Sync-Workflows laufen zeitlich dicht beieinander und
+          # committen unabhaengig voneinander -- der Push kann daher
+          # gelegentlich abgelehnt werden, weil zwischenzeitlich ein
+          # anderer Workflow schon gepusht hat (non-fast-forward). Da
+          # jeder Workflow nur seine eigene(n) Datei(en) aendert, ist ein
+          # Rebase auf den neuen Stand so gut wie nie konfliktbehaftet --
+          # deshalb bei einem fehlgeschlagenen Push einfach den aktuellen
+          # Stand holen, den eigenen Commit draufsetzen und erneut pushen.
+          for i in 1 2 3 4 5; do
+            if git push; then
+              exit 0
+            fi
+            echo "Push fehlgeschlagen (Versuch $i/5) -- vermutlich hat ein anderer Sync-Workflow zeitgleich gepusht. Hole aktuellen Stand und versuche erneut..."
+            git fetch origin main
+            git rebase origin/main
+            sleep $((RANDOM % 8 + 3))
+          done
+          echo "Push nach 5 Versuchen weiterhin fehlgeschlagen -- bitte Workflow-Log prüfen."
+          exit 1
