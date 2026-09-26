@@ -374,12 +374,15 @@ function _dnaRenderMain() {
         </table>
       </div>
     </div>
+    <div id="dnaAirYards"></div>
     <div class="dna-matches">
       ${matchHtml(`🧬 DNA-Match ${season}`, cur, false)}
       ${matchHtml('🏛️ Historisches Match', hist, true, me.e ? ` <label class="dna-toggle dna-inline"><input type="checkbox" ${dnaState.sameYear ? 'checked' : ''} onchange="dnaSet('sameYear',this.checked)"> nur ${me.e === 1 ? 'Rookie-Jahre' : 'NFL-Jahr ' + me.e}</label>` : '')}
     </div>
     <div class="page-sub" style="margin-top:10px;font-size:11px">Klick auf ein Match legt es zum Vergleich ins Radar (max. 3 Profile). Match-Score = 100 − Ø Abstand über alle 8 Achsen. Stabilität r = gemessene Jahr-zu-Jahr-Korrelation 2016–2025. Quellen: nflverse (Stats, Next Gen Stats, Snap Counts, PFR), ffverse (Expected Fantasy Points).</div>`;
   _dnaDrawChart(entries, cats);
+  // Air-Yards-Tiefenprofil (js/air-yards.js), falls geladen
+  if (typeof airYardsMount === 'function') airYardsMount('dnaAirYards', me.id, pos, season, me.n);
 }
 
 function _dnaDrawChart(entries, cats) {

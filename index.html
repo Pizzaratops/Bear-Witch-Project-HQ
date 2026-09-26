@@ -77,6 +77,7 @@
           <button class="snav-dropdown-item" data-page="leaguehistory" onclick="showLeagueHistory()">🏛️ Liga-Historie</button>
           <button class="snav-dropdown-item" data-page="seasonrolling" onclick="showSeasonRolling()">📈 2026 Rolling Rankings</button>
           <button class="snav-dropdown-item" data-page="nflrankings" onclick="showNflRankings()">🏈 NFL Power Rankings</button>
+          <button class="snav-dropdown-item" data-page="nflmatchup" onclick="showNflMatchup()">⚔️ Matchup Advantage</button>
         </div>
       </div>
       <button class="snav-single" data-page="matchups" onclick="showMatchups()">⚔️ Matchups</button>
@@ -111,6 +112,7 @@
         <button class="subnav-mobile-btn" data-page="leaguehistory" onclick="showLeagueHistory()">🏛️ Liga-Historie</button>
         <button class="subnav-mobile-btn" data-page="seasonrolling" onclick="showSeasonRolling()">📈 2026 Rolling Rankings</button>
         <button class="subnav-mobile-btn" data-page="nflrankings" onclick="showNflRankings()">🏈 NFL Power Rankings</button>
+        <button class="subnav-mobile-btn" data-page="nflmatchup" onclick="showNflMatchup()">⚔️ Matchup Advantage</button>
         <button class="subnav-mobile-btn" data-page="matchups" onclick="showMatchups()">⚔️ Matchups</button>
         <button class="subnav-mobile-btn" data-page="futureboards" onclick="showFutureBoards()">🔮 Future Draft Boards</button>
         <button class="subnav-mobile-btn" data-page="weekbyweek" onclick="showWeekByWeek()">🗓️ Weekly Scores</button>
@@ -337,6 +339,13 @@
   <div id="seasonrollingContent"></div>
 </div>
 
+<!-- ============ MATCHUP ADVANTAGE (js/matchup-advantage.js) ============ -->
+<div class="page page-wide" id="page-nflmatchup">
+  <div class="page-title">⚔️ Matchup Advantage</div>
+  <div class="page-sub">Unit gegen Unit für jedes NFL-Spiel der Woche: wessen Offense trifft auf wessen Defense, und wer hat wo den Vorteil</div>
+  <div id="nflmatchupContent"></div>
+</div>
+
 <div class="page page-wide" id="page-nflrankings">
   <div class="page-title">🏈 NFL Power Rankings</div>
   <div class="page-sub">Wöchentliches Rolling Ranking aller 32 NFL-Teams — Conference, Division oder gesamte Liga</div>
@@ -398,9 +407,13 @@
 <script src="data/fantasy-power-score.js"></script>
 <script src="data/matchup-snapshots.js"></script>
 <script src="data/status-report.js"></script>
+<script src="data/matchup-advantage.js"></script>
 <script src="js/matchup-engine.js"></script>
 <script src="js/player-dna-glossary.js"></script>
 <script src="js/player-dna.js"></script>
+<script src="js/matchup-advantage.js"></script>
+<script src="js/air-yards.js"></script>
+<script src="js/fantasy-units.js"></script>
 <script src="js/app.js"></script>
 <script>
   // Teams-Dropdown dynamisch befuellen (Desktop + Mobile)

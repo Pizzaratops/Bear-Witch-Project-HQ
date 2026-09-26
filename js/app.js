@@ -23,7 +23,7 @@ const PAGES = [
   'home', 'roster', 'dues', 'draftboard', 'keepers', 'dynastyboard', 'rolling', 'teamaverages', 'weekbyweek',
   'playerrankings', 'playerprojections', 'nflteams', 'nflteamdetail', 'futureboards',
   'standings', 'leaguehistory', 'seasonrolling', 'nflrankings', 'matchups', 'trade', 'tradehistory',
-  'statusreport', 'erklaerung', 'playerdna'
+  'statusreport', 'erklaerung', 'playerdna', 'nflmatchup'
 ];
 
 function navigate(pageId, opts) {
@@ -89,6 +89,7 @@ const ROUTE_HANDLERS = {
   statusreport: () => showStatusReport(),
   erklaerung: () => showErklaerung(),
   playerdna: () => showPlayerDna(),
+  nflmatchup: () => showNflMatchup(),
 };
 
 function _routeTo(pageId, teamId, nflCode, leagueId) {
@@ -293,7 +294,11 @@ function renderRoster(teamId) {
         const row = playerRowHtml({ name: p.name, nfl: p.nfl, pos: p.pos, status: p.status }, round, isKeeper);
         const dna = ['QB', 'RB', 'WR', 'TE'].includes(p.pos)
           ? `<button class="dna-open-btn" title="Player DNA" onclick="openPlayerDna('${escapeJs(p.name)}','${p.pos}')">🧬</button>` : '';
-        return dna ? row.replace(/<\/div>\s*$/, dna + '</div>') : row;
+        // Matchup-Advantage-Badge fuer die aktuelle NFL-Woche (js/matchup-advantage.js)
+        const ma = (typeof maPlayerBadge === 'function' && typeof MATCHUP_ADVANTAGE !== 'undefined' && p.nfl)
+          ? maPlayerBadge(p.pos, p.nfl, MATCHUP_ADVANTAGE.currentWeek) : '';
+        const extra = ma + dna;
+        return extra ? row.replace(/<\/div>\s*$/, extra + '</div>') : row;
       }).join('')}
     `;
   } else {
@@ -1884,12 +1889,21 @@ function renderMatchupDetail() {
     snap.starters.forEach(s => { if (s.name) snapMeanByName[s.name] = s.mean; });
   });
 
+  // Matchup-Advantage-Badge (js/matchup-advantage.js), falls geladen
+  // Projektions-Starter tragen kein NFL-Team -> per Name aus den Live-Kadern
+  const _nflByName = {};
+  Object.values(typeof ROSTERS_LIVE !== 'undefined' ? ROSTERS_LIVE : {}).forEach(r => r.forEach(x => { if (x.nfl) _nflByName[x.name] = x.nfl; }));
+  const _maBadge = (pl, wk) => {
+    const nfl = pl.nfl || _nflByName[pl.name];
+    return (typeof maPlayerBadge === 'function' && nfl) ? maPlayerBadge(pl.pos, nfl, wk) : '';
+  };
+
   const playerCell = (p, align) => {
     if (!p) return `<div class="mdt-cell mdt-empty" style="text-align:${align}">—</div>`;
     if (!played) {
       return `<div class="mdt-cell" style="text-align:${align}">
         <div class="mdt-player-name">${p.name}</div>
-        <div class="mdt-player-meta">${p.pos}${p.nfl ? ' · ' + p.nfl : ''}</div>
+        <div class="mdt-player-meta">${p.pos}${(p.nfl || _nflByName[p.name]) ? ' · ' + (p.nfl || _nflByName[p.name]) : ''}${_maBadge(p, week)}</div>
         <div class="mdt-player-val">${p.ms.mean.toFixed(1)} <small>proj.</small></div>
       </div>`;
     }
@@ -1898,7 +1912,7 @@ function renderMatchupDetail() {
     if (actual == null) {
       return `<div class="mdt-cell" style="text-align:${align}">
         <div class="mdt-player-name">${p.name}</div>
-        <div class="mdt-player-meta">${p.pos}${p.nfl ? ' · ' + p.nfl : ''}</div>
+        <div class="mdt-player-meta">${p.pos}${(p.nfl || _nflByName[p.name]) ? ' · ' + (p.nfl || _nflByName[p.name]) : ''}${_maBadge(p, week)}</div>
         <div class="mdt-player-val">— <small>kein Wert</small></div>
       </div>`;
     }
@@ -1906,7 +1920,7 @@ function renderMatchupDetail() {
       // Kein Vorab-Snapshot vorhanden -> nur Ist-Wert zeigen.
       return `<div class="mdt-cell" style="text-align:${align}">
         <div class="mdt-player-name">${p.name}</div>
-        <div class="mdt-player-meta">${p.pos}${p.nfl ? ' · ' + p.nfl : ''}</div>
+        <div class="mdt-player-meta">${p.pos}${(p.nfl || _nflByName[p.name]) ? ' · ' + (p.nfl || _nflByName[p.name]) : ''}${_maBadge(p, week)}</div>
         <div class="mdt-player-val">${actual.toFixed(1)} <small>Punkte</small></div>
       </div>`;
     }
@@ -1915,7 +1929,7 @@ function renderMatchupDetail() {
     const deltaLabel = (delta >= 0 ? '+' : '') + delta.toFixed(1);
     return `<div class="mdt-cell" style="text-align:${align}">
       <div class="mdt-player-name">${p.name}</div>
-      <div class="mdt-player-meta">${p.pos}${p.nfl ? ' · ' + p.nfl : ''}</div>
+      <div class="mdt-player-meta">${p.pos}${(p.nfl || _nflByName[p.name]) ? ' · ' + (p.nfl || _nflByName[p.name]) : ''}${_maBadge(p, week)}</div>
       <div class="mdt-player-val2row">
         <div class="mdt-val-row"><small>Proj.</small> ${snapMean.toFixed(1)}</div>
         <div class="mdt-val-row"><small>Ist</small> <b>${actual.toFixed(1)}</b> <span class="mdt-delta ${deltaClass}">${deltaLabel}</span></div>
@@ -1970,6 +1984,7 @@ function renderMatchupDetail() {
     </div>
     <div class="page-sub" style="text-align:center;margin:6px 0 14px">${subLine}</div>
     ${!played ? `<div style="text-align:center;margin-bottom:12px"><button class="db-pos-btn" onclick="_manualSnapshot()">📸 Eigenen Snapshot erzwingen (überschreibt Server-Wert)</button></div>` : ''}
+    ${typeof fuUnitCompareHtml === 'function' ? fuUnitCompareHtml({ season, week, homeId, awayId, homeName: home.name, awayName: away.name, homeStarters: homeProj.starters, awayStarters: awayProj.starters, played }) : ''}
     <div class="mdt-rows">${rows.join('')}</div>
   `;
 }
@@ -4791,7 +4806,7 @@ function renderErklaerung() {
       </p>
     </div>
 
-    <div class="board-table-wrap" style="padding:18px 20px;border-color:var(--accent);">
+    <div class="board-table-wrap" style="padding:18px 20px;border-color:var(--accent);margin-bottom:16px;">
       <h3 style="margin:0 0 8px;font-size:16px;">⚠️ Wichtig für alle Owner</h3>
       <p style="margin:0;line-height:1.6;">
         <b>Maßgeblich ist ab jetzt diese Website, nicht die ESPN-App.</b> ESPN selbst zeigt intern
@@ -4799,5 +4814,23 @@ function renderErklaerung() {
         Woche 1 und 2 nicht mehr kennt.
       </p>
     </div>
+
+    ${typeof maExplainHtml === 'function' ? `
+    <div class="board-table-wrap" style="padding:18px 20px;margin-bottom:16px;">
+      <h3 style="margin:0 0 8px;font-size:16px;">⚔️ Matchup Advantage</h3>
+      ${maExplainHtml()}
+    </div>` : ''}
+
+    ${typeof airYardsExplainHtml === 'function' ? `
+    <div class="board-table-wrap" style="padding:18px 20px;margin-bottom:16px;">
+      <h3 style="margin:0 0 8px;font-size:16px;">📏 Air Yards (Player DNA)</h3>
+      ${airYardsExplainHtml()}
+    </div>` : ''}
+
+    ${typeof fuExplainHtml === 'function' ? `
+    <div class="board-table-wrap" style="padding:18px 20px;">
+      <h3 style="margin:0 0 8px;font-size:16px;">📊 Unit-Vergleich (Matchups)</h3>
+      ${fuExplainHtml()}
+    </div>` : ''}
   `;
 }
