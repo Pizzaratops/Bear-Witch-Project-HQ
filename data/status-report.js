@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-09-25T22:55:09.081Z",
+  "generatedAt": "2026-09-26T02:24:26.096Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -889,7 +889,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 15.7,
           "last3AvgPoints": 15.6,
-          "projPoints": 13.6
+          "projPoints": 13.7
         },
         {
           "name": "Brian Robinson",
@@ -944,7 +944,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 8,
           "last3AvgPoints": 5.5,
-          "projPoints": 6.3
+          "projPoints": 6.4
         }
       ],
       "flaggedCount": 0
@@ -1383,7 +1383,7 @@ const STATUS_REPORT_DATA = {
           "pos": "RB",
           "nfl": "PIT",
           "isStarter": false,
-          "status": "Q",
+          "status": "O",
           "flag": false,
           "lastGamePoints": 5.4,
           "last3AvgPoints": 4.3,
@@ -2016,7 +2016,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 8,
           "last3AvgPoints": 5.5,
-          "projPoints": 6.3
+          "projPoints": 6.4
         }
       ],
       "flaggedCount": 0
@@ -2222,7 +2222,7 @@ const STATUS_REPORT_DATA = {
           "pos": "RB",
           "nfl": "MIN",
           "isStarter": true,
-          "status": "Q",
+          "status": null,
           "flag": false,
           "lastGamePoints": 10.5,
           "last3AvgPoints": 10.3,
@@ -2344,7 +2344,7 @@ const STATUS_REPORT_DATA = {
           "pos": "RB",
           "nfl": "CHI",
           "isStarter": false,
-          "status": "Q",
+          "status": null,
           "flag": false,
           "lastGamePoints": 7.8,
           "last3AvgPoints": 14.1,
@@ -3495,7 +3495,7 @@ const STATUS_REPORT_DATA = {
           "pos": "TE",
           "nfl": "NYJ",
           "isStarter": true,
-          "status": "D",
+          "status": "O",
           "flag": true,
           "lastGamePoints": null,
           "last3AvgPoints": 1.8,
@@ -3698,7 +3698,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 39.5,
           "last3AvgPoints": 22.6,
-          "projPoints": 14.2
+          "projPoints": 14.3
         },
         {
           "name": "Stefon Diggs",
@@ -3826,7 +3826,7 @@ const STATUS_REPORT_DATA = {
           "pos": "RB",
           "nfl": "NO",
           "isStarter": true,
-          "status": "Q",
+          "status": null,
           "flag": false,
           "lastGamePoints": 7.1,
           "last3AvgPoints": 11,
