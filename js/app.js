@@ -23,7 +23,7 @@ const PAGES = [
   'home', 'roster', 'dues', 'draftboard', 'keepers', 'dynastyboard', 'rolling', 'teamaverages', 'weekbyweek',
   'playerrankings', 'playerprojections', 'nflteams', 'nflteamdetail', 'futureboards',
   'standings', 'leaguehistory', 'seasonrolling', 'nflrankings', 'matchups', 'trade', 'tradehistory',
-  'statusreport', 'erklaerung', 'playerdna', 'nflmatchup'
+  'statusreport', 'erklaerung', 'playerdna', 'nflmatchup', 'collegescouting'
 ];
 
 /* Nav-Struktur fuers Menue (buildNav()): jede Section wird oben EIN Knopf
@@ -57,6 +57,7 @@ const NAV_SECTIONS = [
     ['playerrankings', '📊 Player Rankings', () => showPlayerRankings()],
     ['playerprojections', '🔮 Player Projections', () => showPlayerProjections()],
     ['playerdna', '🧬 Player DNA', () => showPlayerDna()],
+    ['collegescouting', '🎓 College Scouting', () => showCollegeScouting()],
   ] },
   { key: 'nfl', label: '🏈 NFL', pages: [
     ['nflrankings', '🏟️ Power Rankings', () => showNflRankings()],
@@ -200,6 +201,7 @@ const ROUTE_HANDLERS = {
   erklaerung: () => showErklaerung(),
   playerdna: () => showPlayerDna(),
   nflmatchup: () => showNflMatchup(),
+  collegescouting: () => showCollegeScouting(),
 };
 
 function _routeTo(pageId, teamId, nflCode, leagueId) {
