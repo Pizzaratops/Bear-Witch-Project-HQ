@@ -18727,6 +18727,26 @@ const NFL_DRAFT_ATHLETIC_PROFILES = {
       "draftCapitalScore": 0.703
     },
     {
+      "nameKey": "velusjones",
+      "name": "Velus Jones Jr.",
+      "college": "Tennessee; USC",
+      "draftYear": 2022,
+      "draftRound": 3,
+      "draftPick": 71,
+      "heightIn": 72,
+      "weightLb": 204,
+      "ras": {
+        "overall": 5.72,
+        "measuredCount": 5,
+        "size": 4.2,
+        "speed": 9.83,
+        "explosion": 3.13,
+        "agility": null,
+        "strength": null
+      },
+      "draftCapitalScore": 0.372
+    },
+    {
       "nameKey": "billjones",
       "name": "Bill Jones",
       "college": "Texas State-San Marcos; SMU",
@@ -39419,26 +39439,6 @@ const NFL_DRAFT_ATHLETIC_PROFILES = {
         "strength": null
       },
       "draftCapitalScore": 0.261
-    },
-    {
-      "nameKey": "velusjones",
-      "name": "Velus Jones Jr.",
-      "college": "Tennessee; USC",
-      "draftYear": 2022,
-      "draftRound": 3,
-      "draftPick": 71,
-      "heightIn": 72,
-      "weightLb": 204,
-      "ras": {
-        "overall": 5.72,
-        "measuredCount": 5,
-        "size": 4.2,
-        "speed": 9.83,
-        "explosion": 3.13,
-        "agility": null,
-        "strength": null
-      },
-      "draftCapitalScore": 0.489
     },
     {
       "nameKey": "joejurevicius",
