@@ -40,7 +40,10 @@ const FBS_CONFERENCES = new Set([
   'Sun Belt', 'Conference USA', 'Mountain West', 'Pac-12', 'FBS Independents',
 ]);
 
-function cfbdGet(pathAndQuery) {
+// CFBD limitiert gleichzeitige Requests pro Endpunkt (429 "Too many
+// concurrent requests"), nicht nur Calls/Monat -- Retry mit Backoff als
+// Sicherheitsnetz (Haupt-Fix ist unten: sequenziell statt Promise.all).
+function cfbdGet(pathAndQuery, attempt = 0) {
   return new Promise((resolve, reject) => {
     const options = {
       hostname: 'api.collegefootballdata.com',
@@ -52,6 +55,13 @@ function cfbdGet(pathAndQuery) {
       },
     };
     https.get(options, res => {
+      if (res.statusCode === 429 && attempt < 5) {
+        res.resume();
+        const wait = Math.min(2000 * 2 ** attempt, 20000);
+        console.warn(`  (429 fuer ${pathAndQuery} -- warte ${wait}ms, Versuch ${attempt + 1}/5)`);
+        sleep(wait).then(() => resolve(cfbdGet(pathAndQuery, attempt + 1)));
+        return;
+      }
       if (res.statusCode !== 200) {
         let body = '';
         res.on('data', c => { body += c; });
@@ -73,12 +83,15 @@ const round = (x, d = 2) => (x == null ? null : Math.round(x * 10 ** d) / 10 ** 
 const sleep = ms => new Promise(r => setTimeout(r, ms));
 
 async function fetchYear(year) {
-  const [passingRaw, rushingRaw, usageRaw, ppaRaw] = await Promise.all([
-    cfbdGet(`/stats/player/season?year=${year}&category=passing`),
-    cfbdGet(`/stats/player/season?year=${year}&category=rushing`),
-    cfbdGet(`/player/usage?year=${year}`).catch(() => []),
-    cfbdGet(`/ppa/players/season?year=${year}`).catch(() => []),
-  ]);
+  // Sequenziell statt Promise.all -- CFBD limitiert gleichzeitige Requests
+  // pro Endpunkt (siehe Kommentar bei cfbdGet).
+  const passingRaw = await cfbdGet(`/stats/player/season?year=${year}&category=passing`);
+  await sleep(400);
+  const rushingRaw = await cfbdGet(`/stats/player/season?year=${year}&category=rushing`);
+  await sleep(400);
+  const usageRaw = await cfbdGet(`/player/usage?year=${year}`).catch(() => []);
+  await sleep(400);
+  const ppaRaw = await cfbdGet(`/ppa/players/season?year=${year}`).catch(() => []);
 
   const byPlayer = {};
   const getOrCreate = (rawId, name, team, conf) => {

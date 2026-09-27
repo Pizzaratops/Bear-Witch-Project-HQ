@@ -78,8 +78,16 @@ function currentSeason() {
   return month >= 7 ? now.getUTCFullYear() : now.getUTCFullYear() - 1;
 }
 
+const sleep = ms => new Promise(r => setTimeout(r, ms));
+
 // ---------------- CFBD HTTP ----------------
-function cfbdGet(pathAndQuery) {
+// CFBD limitiert nicht nur Calls/Monat, sondern auch GLEICHZEITIGE Requests
+// pro Endpunkt ("Too many concurrent requests for this endpoint", HTTP 429)
+// -- bestaetigt 27.09.2026 (proto-college-qb-comps.js schlug ab Jahrgang
+// 2019 fehl, weil vier Endpunkte parallel per Promise.all gefeuert wurden).
+// Deshalb: (1) Calls sequenziell statt parallel (siehe fetchYearRaw unten),
+// (2) zusaetzlich Retry mit exponentiellem Backoff als Sicherheitsnetz.
+function cfbdGet(pathAndQuery, attempt = 0) {
   return new Promise((resolve, reject) => {
     const options = {
       hostname: 'api.collegefootballdata.com',
@@ -91,6 +99,13 @@ function cfbdGet(pathAndQuery) {
       },
     };
     https.get(options, res => {
+      if (res.statusCode === 429 && attempt < 5) {
+        res.resume();
+        const wait = Math.min(2000 * 2 ** attempt, 20000);
+        console.warn(`  (429 Too Many Requests fuer ${pathAndQuery} -- warte ${wait}ms, Versuch ${attempt + 1}/5)`);
+        sleep(wait).then(() => resolve(cfbdGet(pathAndQuery, attempt + 1)));
+        return;
+      }
       if (res.statusCode !== 200) {
         let body = '';
         res.on('data', c => { body += c; });
@@ -310,20 +325,23 @@ async function main() {
   for (const year of ALL_YEARS) {
     const isCurrent = year === CURRENT;
     if (!isCurrent && seasonsData[year] && !REBUILD) {
-      console.log(`${year}: aus Cache uebernommen (${seasonsData[year].WR.length} WR, ${seasonsData[year].RB.length} RB).`);
+      console.log(`${year}: aus Cache uebernommen (${seasonsData[year].WR.length} WR, ${seasonsData[year].TE.length} TE, ${seasonsData[year].RB.length} RB).`);
       continue;
     }
     process.stdout.write(`${year}: lade 4 Endpunkte ... `);
     try {
-      const [rushingRaw, receivingRaw, usageRaw, ppaRaw] = await Promise.all([
-        cfbdGet(`/stats/player/season?year=${year}&category=rushing`),
-        cfbdGet(`/stats/player/season?year=${year}&category=receiving`),
-        cfbdGet(`/player/usage?year=${year}`).catch(() => []),
-        cfbdGet(`/ppa/players/season?year=${year}`).catch(() => []),
-      ]);
+      // Sequenziell statt Promise.all (siehe Kommentar bei cfbdGet oben --
+      // CFBD limitiert gleichzeitige Requests pro Endpunkt).
+      const rushingRaw = await cfbdGet(`/stats/player/season?year=${year}&category=rushing`);
+      await sleep(400);
+      const receivingRaw = await cfbdGet(`/stats/player/season?year=${year}&category=receiving`);
+      await sleep(400);
+      const usageRaw = await cfbdGet(`/player/usage?year=${year}`).catch(() => []);
+      await sleep(400);
+      const ppaRaw = await cfbdGet(`/ppa/players/season?year=${year}`).catch(() => []);
       const built = buildYearRecords(year, rushingRaw, receivingRaw, usageRaw, ppaRaw);
       seasonsData[year] = built;
-      console.log(`${built.WR.length} WR, ${built.RB.length} RB.`);
+      console.log(`${built.WR.length} WR, ${built.TE.length} TE, ${built.RB.length} RB.`);
     } catch (e) {
       console.log(`FEHLER: ${e.message} -- Jahr uebersprungen (${seasonsData[year] ? 'alter Cache-Stand bleibt' : 'komplett fehlend'}).`);
     }
