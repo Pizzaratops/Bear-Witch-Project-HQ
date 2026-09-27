@@ -4,7 +4,7 @@
 //  AUTO-GENERIERT von scripts/sync-espn-weekly-scores.js (selbe ESPN-
 //  Antwort wie WEEKLY_SCORES, hier aber ungefiltert -- auch Wochen ohne
 //  Punkte, fuer den Matchup-Planer).
-//  Zuletzt synchronisiert: 2026-09-27T13:42:15.947Z
+//  Zuletzt synchronisiert: 2026-09-27T21:50:58.125Z
 // ============================================================
 
 const SCHEDULE = {
