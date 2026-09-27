@@ -313,15 +313,21 @@ async function main() {
     }
   }
 
-  // ---- Pool zusammenbauen + Comps fuer die juengsten Jahrgaenge ----
+  // ---- Comps fuer die juengsten Jahrgaenge (Pool selbst wird NICHT nochmal
+  // separat gespeichert -- steht schon vollstaendig in `seasons`, siehe unten) ----
   const recentYears = new Set(ALL_YEARS.slice(-RECENT_SEASONS_FOR_COMPS));
-  const output = { meta: { lastSync: new Date().toISOString(), currentSeason: CURRENT, years: ALL_YEARS, features: FEATURES }, pool: {}, comps: {} };
+  const output = {
+    meta: { lastSync: new Date().toISOString(), currentSeason: CURRENT, years: ALL_YEARS, features: FEATURES },
+    seasons: seasonsData, // Cache-Grundlage FUER DIESES SCRIPT + vollstaendige Historie
+    recent: {}, // kleine, direkt frontend-taugliche Teilmenge (nur die Draft-relevanten Prospects)
+    comps: {},
+  };
 
   for (const pos of ['WR', 'RB']) {
     const pool = [];
     ALL_YEARS.forEach(y => { if (seasonsData[y]) pool.push(...seasonsData[y][pos]); });
-    output.pool[pos] = pool;
     const targets = pool.filter(p => recentYears.has(p.year));
+    output.recent[pos] = targets;
     output.comps[pos] = computeComps(pool, targets, FEATURES[pos]);
     console.log(`${pos}: Pool ${pool.length} Spieler-Saisons, Comps fuer ${Object.keys(output.comps[pos]).length} aktuelle Spieler berechnet.`);
   }
@@ -333,11 +339,17 @@ async function main() {
 //  editieren. Siehe claude/college-scouting-concept.md (Projekt-Doc)
 //  fuer die Methodik.
 //
-//  COLLEGE_SCOUTING.pool[Pos] = ALLE Spieler-Saisons ${HIST_START}-${CURRENT}
-//    (Mindest-Volumen gefiltert) -- dient als Vergleichs-Universum.
+//  COLLEGE_SCOUTING.seasons[Jahr][Pos] = Spieler-Saisons dieses Jahrgangs
+//    (Mindest-Volumen gefiltert) -- vollstaendige Historie ${HIST_START}-${CURRENT},
+//    dient als Cache-Grundlage (abgeschlossene Jahrgaenge werden beim naechsten
+//    Lauf NICHT neu von CFBD geholt) UND als Vergleichs-Universum fuer die
+//    Mahalanobis-Distanz.
+//  COLLEGE_SCOUTING.recent[Pos] = nur die ${RECENT_SEASONS_FOR_COMPS} juengsten
+//    Jahrgaenge, flach -- das sind die tatsaechlich Draft-relevanten Prospects,
+//    fuers Frontend direkt nutzbar (keine Notwendigkeit, durch "seasons" zu
+//    iterieren).
 //  COLLEGE_SCOUTING.comps[Pos][playerId] = Top-${COMPS_N}-Comps (Mahalanobis-
-//    Distanz) -- nur fuer die ${RECENT_SEASONS_FOR_COMPS} juengsten Jahrgaenge
-//    vorberechnet (aktuelle Draft-relevante Prospects).
+//    Distanz) fuer genau diese "recent"-Spieler.
 //
 //  TODO (v2, siehe Projekt-Doc Abschnitt 7): Early-Signal-Fallback fuer
 //  Spieler unter dem Mindest-Volumen (z.B. frueh in der laufenden Saison),
