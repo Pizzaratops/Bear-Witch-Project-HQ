@@ -1,19 +1,27 @@
 name: College Scouting Sync
 
-# College Production Comp (WR, RB) fuer die geplante College-Scouting-
-# Erweiterung von Player DNA -- aus der CollegeFootballData.com API
-# (CFBD). Schreibt data/college-scouting.js (siehe
-# scripts/sync-college-scouting.js).
+# College Production Comp (WR, RB, TE, QB) + NFL Profile Comp fuer die
+# College-Scouting-Erweiterung von Player DNA -- aus der
+# CollegeFootballData.com API (CFBD) + nflverse (Draft-Historie, Combine).
+# Drei Schritte, siehe claude/college-scouting-concept.md:
+#   1. scripts/sync-college-scouting.js       -> data/college-scouting.js
+#      (CFBD, braucht CFBD_API_KEY)
+#   2. scripts/build-nfl-draft-athletic-profiles.js
+#      -> data/nfl-draft-athletic-profiles.js (nflverse, KEIN CFBD-Key noetig)
+#   3. scripts/build-nfl-profile-comp.js      -> data/nfl-profile-comp.js
+#      (reine Offline-Verarbeitung der beiden vorigen Outputs, kein Netz)
 #
 # WICHTIG: braucht das Repository-Secret CFBD_API_KEY (Settings ->
 # Secrets and variables -> Actions -> New repository secret, Name
-# GENAU "CFBD_API_KEY"). Ohne das Secret bricht der Sync sofort ab.
+# GENAU "CFBD_API_KEY"). Ohne das Secret bricht Schritt 1 sofort ab.
 #
 # Abgeschlossene College-Football-Jahrgaenge werden gecacht (aus der
 # bestehenden data/college-scouting.js uebernommen) -- nur die laufende
-# Saison wird pro Lauf neu geholt (4 API-Calls). Taeglich einmal reicht
+# Saison wird pro Lauf neu geholt (6 API-Calls). Taeglich einmal reicht
 # locker (CFB-Spiele sind i.d.R. samstags), bleibt weit unter dem
-# 1.000-Calls/Monat-Free-Tier-Limit.
+# 1.000-Calls/Monat-Free-Tier-Limit. Schritt 2 (nflverse) ist nicht
+# CFBD-rate-limitiert -- laeuft taeglich mit, auch wenn sich die
+# Draft-Historie kaum aendert (schadet nicht, haelt alles simpel/frisch).
 #
 # Taeglich 10 Uhr Berlin + manuell startbar.
 
@@ -36,16 +44,22 @@ jobs:
         with:
           node-version: 20
 
-      - name: College Scouting Sync
+      - name: College Scouting Sync (CFBD)
         env:
           CFBD_API_KEY: ${{ secrets.CFBD_API_KEY }}
         run: node scripts/sync-college-scouting.js
+
+      - name: NFL Draft Athletic Profiles (nflverse, kein CFBD-Key)
+        run: node scripts/build-nfl-draft-athletic-profiles.js
+
+      - name: NFL Profile Comp (offline, verarbeitet obige zwei Outputs)
+        run: node scripts/build-nfl-profile-comp.js
 
       - name: Commit & Push falls geändert
         run: |
           git config user.name "bear-witch-project-hq-bot"
           git config user.email "actions@users.noreply.github.com"
-          git add data/college-scouting.js
+          git add data/college-scouting.js data/nfl-draft-athletic-profiles.js data/nfl-profile-comp.js
           if git diff --cached --quiet; then
             echo "Keine Änderungen -- nichts zu committen."
             exit 0

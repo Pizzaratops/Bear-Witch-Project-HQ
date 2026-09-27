@@ -3,10 +3,12 @@
 //  COLLEGE SCOUTING SYNC — Produktions-Comp fuer College-Prospects
 // ============================================================
 //  Erste Ausbaustufe der "College Scouting"-Erweiterung zu Player DNA
-//  (siehe Projekt-Doc claude/college-scouting-concept.md). Aktuell nur
-//  "College Production Comp" (wem sieht ein Prospect aehnlich in der
-//  College-Produktion), NFL Profile Comp folgt spaeter (braucht noch
-//  RAS/Athletik-Daten).
+//  (siehe Projekt-Doc claude/college-scouting-concept.md). Deckt "College
+//  Production Comp" ab (wem sieht ein Prospect aehnlich in der College-
+//  Produktion) PLUS Groesse/Gewicht je Spieler (roster-Endpunkt) als
+//  Grundlage fuer das separate "NFL Profile Comp" (siehe
+//  scripts/build-nfl-profile-comp.js + scripts/build-nfl-draft-athletic-
+//  profiles.js, laufen NACH diesem Script).
 //
 //  Positionen: WR, RB, TE (validiert per Prototyp 27.-28.09.2026, siehe
 //  Doc), QB (validiert 28.09.2026 -- braucht category=passing zusaetzlich
@@ -20,12 +22,12 @@
 //  RATE-LIMIT-STRATEGIE (wichtig!): Abgeschlossene Saisons aendern sich
 //  nicht mehr -> werden aus der bestehenden data/college-scouting.js
 //  uebernommen (0 API-Calls), neu geholt wird NUR die laufende Saison
-//  (5 Calls: stats/passing, stats/rushing, stats/receiving, player/usage,
-//  ppa/season -- je EIN Call fuer die GESAMTE Liga, kein team-Parameter
-//  noetig). Calls laufen SEQUENZIELL (CFBD limitiert gleichzeitige
+//  (6 Calls: stats/passing, stats/rushing, stats/receiving, player/usage,
+//  ppa/season, roster -- je EIN Call fuer die GESAMTE Liga, kein team-
+//  Parameter noetig). Calls laufen SEQUENZIELL (CFBD limitiert gleichzeitige
 //  Requests pro Endpunkt, siehe cfbdGet-Kommentar unten).
 //  COLLEGE_REBUILD=1 holt alle Jahrgaenge neu (fuer Erst-Lauf oder wenn
-//  sich die Berechnung geaendert hat -- kostet dann ~65 Calls fuer
+//  sich die Berechnung geaendert hat -- kostet dann ~85 Calls fuer
 //  2013-<laufende Saison>, weit unter dem Monatslimit).
 //
 //  "Laufende Saison" = College-Football-Jahrgang nach NCAA-Konvention
@@ -44,6 +46,10 @@
 //  Usage:
 //    CFBD_API_KEY=... node scripts/sync-college-scouting.js
 //    COLLEGE_REBUILD=1 CFBD_API_KEY=... node scripts/sync-college-scouting.js
+//
+//  Voller lokaler Pipeline-Lauf fuer NFL Profile Comp (nach diesem Script):
+//    node scripts/build-nfl-draft-athletic-profiles.js   (kein CFBD-Key noetig)
+//    node scripts/build-nfl-profile-comp.js              (rein offline)
 // ============================================================
 
 const fs = require('fs');
@@ -129,9 +135,13 @@ const round = (x, d = 2) => (x == null ? null : Math.round(x * 10 ** d) / 10 ** 
 
 // ---------------- Reine Transform-Funktionen (unit-testbar, keine Netzwerk-Calls) ----------------
 
-// Baut aus den vier Rohdatensaetzen eines Jahres die WR- und RB-Spielerlisten.
+// Baut aus den Rohdatensaetzen eines Jahres die WR/TE/RB/QB-Spielerlisten.
 // Exportiert fuer Tests -- macht selbst keine API-Calls.
-function buildYearRecords(year, passingRaw, rushingRaw, receivingRaw, usageRaw, ppaRaw) {
+// rosterRaw liefert Groesse/Gewicht (fuer das spaetere NFL Profile Comp,
+// siehe scripts/build-nfl-profile-comp.js) -- optional, faellt bei Bedarf
+// auf ein leeres Array zurueck (aeltere Cache-Eintraege ohne Groesse/Gewicht
+// bleiben dadurch abwaertskompatibel funktionsfaehig).
+function buildYearRecords(year, passingRaw, rushingRaw, receivingRaw, usageRaw, ppaRaw, rosterRaw = []) {
   const teamRush = {}; // team -> { CAR, YDS, TD, ... } ueber ALLE Positionen
   rushingRaw.forEach(r => {
     if (!FBS_CONFERENCES.has(r.conference)) return;
@@ -150,6 +160,15 @@ function buildYearRecords(year, passingRaw, rushingRaw, receivingRaw, usageRaw, 
   usageRaw.forEach(u => { usageById[u.id] = u.usage; });
   const ppaById = {};
   ppaRaw.forEach(u => { ppaById[u.id] = u; });
+  // Roster liefert Groesse (in)/Gewicht (lb) -- CFBD nennt das Feld je nach
+  // Antwortform "id" (wie bei allen anderen Endpunkten hier) oder "athleteId";
+  // beide abdecken, damit ein API-Formatwechsel nicht sofort alles leerlaeuft.
+  const sizeById = {};
+  rosterRaw.forEach(r => {
+    const rid = r.id ?? r.athleteId ?? r.athlete_id;
+    if (rid == null) return;
+    sizeById[rid] = { heightIn: num(r.height), weightLb: num(r.weight) };
+  });
 
   // ---- WR + TE (identisches Feature-Set -- beide nur ueber category=receiving,
   // Dominator-Rating-Stil, da CFBD kein targets-Feld hat; siehe Projekt-Doc) ----
@@ -169,6 +188,7 @@ function buildYearRecords(year, passingRaw, rushingRaw, receivingRaw, usageRaw, 
         const t = teamRec[p.team] || { REC: 1, YDS: 1, TD: 1 };
         const usage = usageById[p.rawId];
         const ppa = ppaById[p.rawId];
+        const size = sizeById[p.rawId];
         return {
           id: p.id, rawId: p.rawId, name: p.name, team: p.team, conf: p.conf, year,
           rec: p.REC ?? null, yds: p.YDS ?? null, td: p.TD ?? null,
@@ -177,6 +197,8 @@ function buildYearRecords(year, passingRaw, rushingRaw, receivingRaw, usageRaw, 
           tdShare: round(100 * (p.TD || 0) / (t.TD || 1), 1),
           usageOverall: usage ? round(100 * usage.overall, 1) : null,
           avgPPA: ppa ? round(ppa.averagePPA?.all, 3) : null,
+          heightIn: size ? size.heightIn : null,
+          weightLb: size ? size.weightLb : null,
         };
       });
   }
@@ -208,6 +230,7 @@ function buildYearRecords(year, passingRaw, rushingRaw, receivingRaw, usageRaw, 
       const tRec = teamRec[p.team] || { YDS: 1 };
       const usage = usageById[p.rawId];
       const ppa = ppaById[p.rawId];
+      const size = sizeById[p.rawId];
       return {
         id: p.id, rawId: p.rawId, name: p.name, team: p.team, conf: p.conf, year,
         rushYds: p.rush_YDS ?? null, rushCar: p.rush_CAR ?? null, rushTd: p.rush_TD ?? null,
@@ -217,6 +240,8 @@ function buildYearRecords(year, passingRaw, rushingRaw, receivingRaw, usageRaw, 
         usageRush: usage ? round(100 * usage.rush, 1) : null,
         avgPpaRush: ppa ? round(ppa.averagePPA?.rush, 3) : null,
         avgPpaPass: ppa ? round(ppa.averagePPA?.pass, 3) : null,
+        heightIn: size ? size.heightIn : null,
+        weightLb: size ? size.weightLb : null,
       };
     });
 
@@ -243,6 +268,7 @@ function buildYearRecords(year, passingRaw, rushingRaw, receivingRaw, usageRaw, 
     .map(p => {
       const usage = usageById[p.rawId];
       const ppa = ppaById[p.rawId];
+      const size = sizeById[p.rawId];
       return {
         id: p.id, rawId: p.rawId, name: p.name, team: p.team, conf: p.conf, year,
         passYds: p.pass_YDS ?? null, passAtt: p.pass_ATT ?? null, passTd: p.pass_TD ?? null,
@@ -252,6 +278,8 @@ function buildYearRecords(year, passingRaw, rushingRaw, receivingRaw, usageRaw, 
         usageRush: usage ? round(100 * usage.rush, 1) : null,
         avgPpaPass: ppa ? round(ppa.averagePPA?.pass, 3) : null,
         avgPpaRush: ppa ? round(ppa.averagePPA?.rush, 3) : null,
+        heightIn: size ? size.heightIn : null,
+        weightLb: size ? size.weightLb : null,
       };
     });
 
@@ -366,7 +394,7 @@ async function main() {
       console.log(`${year}: aus Cache uebernommen (${seasonsData[year].WR.length} WR, ${seasonsData[year].TE.length} TE, ${seasonsData[year].RB.length} RB, ${(seasonsData[year].QB || []).length} QB).`);
       continue;
     }
-    process.stdout.write(`${year}: lade 5 Endpunkte ... `);
+    process.stdout.write(`${year}: lade 6 Endpunkte ... `);
     try {
       // Sequenziell statt Promise.all (siehe Kommentar bei cfbdGet oben --
       // CFBD limitiert gleichzeitige Requests pro Endpunkt).
@@ -379,7 +407,13 @@ async function main() {
       const usageRaw = await cfbdGet(`/player/usage?year=${year}`).catch(() => []);
       await sleep(400);
       const ppaRaw = await cfbdGet(`/ppa/players/season?year=${year}`).catch(() => []);
-      const built = buildYearRecords(year, passingRaw, rushingRaw, receivingRaw, usageRaw, ppaRaw);
+      await sleep(400);
+      // roster: Groesse/Gewicht -- nur fuer das spaetere NFL Profile Comp
+      // gebraucht, deshalb weich fehlschlagend (leeres Array statt Abbruch,
+      // falls CFBD hier mal einen Ausfall hat -- Production Comp bleibt
+      // davon unberuehrt).
+      const rosterRaw = await cfbdGet(`/roster?year=${year}`).catch(() => []);
+      const built = buildYearRecords(year, passingRaw, rushingRaw, receivingRaw, usageRaw, ppaRaw, rosterRaw);
       seasonsData[year] = built;
       console.log(`${built.WR.length} WR, ${built.TE.length} TE, ${built.RB.length} RB, ${built.QB.length} QB.`);
     } catch (e) {
