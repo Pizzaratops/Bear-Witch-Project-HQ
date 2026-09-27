@@ -101,6 +101,18 @@ const QUALIFIES = {
   WR: (r, W) => r.targets >= 2.5 * W,
   TE: (r, W) => r.targets >= 2 * W,
 };
+
+// "Early Signal": Opportunity-Zaehler je Position fuer Spieler UNTER dem
+// QUALIFIES-Cutoff (z.B. Rookies mit noch zu wenig Volumen). Nur Rate-Stats
+// (Stil-Kategorien, pro Play statt pro Spiel/Saison) werden dafuer gezeigt,
+// weil die auch bei kleiner Stichprobe schneller aussagekraeftig werden --
+// siehe CATEGORIES[pos].filter(c => c.type === 'style').
+const EARLY_OPP = {
+  QB: r => r.attempts,
+  RB: r => r.carries + r.targets,
+  WR: r => r.targets,
+  TE: r => r.targets,
+};
 const Z_CAP = 2.5;
 const CAT_VERSION = 'v2:' + Object.entries(CATEGORIES).map(([p, cs]) => p + '=' + cs.map(c => c.k).join('.')).join('|');
 
@@ -213,8 +225,9 @@ async function buildSeason(season, shared, prevSeason, isCurrent) {
   }
 
   const out = {};
+  const outEarly = {};
   for (const pos of ['QB', 'RB', 'WR', 'TE']) {
-    const rows = stats.filter(r => r.player_id && r.position === pos).map(r => {
+    const rowsAll = stats.filter(r => r.player_id && r.position === pos).map(r => {
       const o = { id: r.player_id, name: r.player_display_name, team: normTeam(r.recent_team), games: n0(r.games) };
       ['attempts', 'passing_epa', 'rushing_epa', 'sacks_suffered', 'carries', 'passing_air_yards', 'rushing_yards',
         'passing_tds', 'passing_interceptions', 'sack_fumbles_lost', 'rushing_fumbles_lost', 'receiving_yards',
@@ -239,9 +252,17 @@ async function buildSeason(season, shared, prevSeason, isCurrent) {
       o.ngs_yacoe = nC ? num(nC.avg_yac_above_expectation) : null;
       o.snap_pct = snapByGsis[r.player_id] != null ? snapByGsis[r.player_id] : null;
       return o;
-    }).filter(r => QUALIFIES[pos](r, W));
+    });
+    const rows = rowsAll.filter(r => QUALIFIES[pos](r, W));
+    const earlyRows = rowsAll.filter(r => !QUALIFIES[pos](r, W) && EARLY_OPP[pos](r) >= 1);
 
     const cats = CATEGORIES[pos];
+    const styleCats = cats.filter(c => c.type === 'style');
+    outEarly[pos] = earlyRows.map(r => ({
+      id: r.id, n: r.name, t: r.team, g: r.games, opp: EARLY_OPP[pos](r),
+      e: r.rookie ? season - r.rookie + 1 : null,
+      stab: styleCats.map(c => { const v = c.v(r); return v != null && isFinite(v) ? round(v) : null; }),
+    })).filter(x => x.stab.some(v => v != null)).sort((a, b) => a.n.localeCompare(b.n));
     const raw = rows.map(r => cats.map(c => { const v = c.v(r); return v != null && isFinite(v) ? v : null; }));
     const pcts = cats.map((c, ci) => percentiles(raw.map(x => x[ci]), c.invert));
     const zs = cats.map((c, ci) => zscores(raw.map(x => x[ci]), c.invert));
@@ -279,7 +300,7 @@ async function buildSeason(season, shared, prevSeason, isCurrent) {
       return o;
     }).sort((a, b) => a.n.localeCompare(b.n));
   }
-  return { weeks: W, players: out };
+  return { weeks: W, players: out, early: outEarly };
 }
 
 function loadExisting() {
@@ -350,6 +371,12 @@ async function main() {
 //  (z.B. keine Next Gen Stats, weil unter der NGS-Mindestanzahl).
 //  Pool = alle NFL-Spieler der Position mit Mindest-Volumen (skaliert mit
 //  gespielten Wochen), NICHT nur die gerosterten Spieler der Liga.
+//
+//  PLAYER_DNA.seasons[Saison].early[Pos] = [{ id, n, t, g, e, opp, stab }]
+//    Spieler UNTER dem Mindest-Volumen (z.B. Rookies mit noch zu wenig
+//    Snaps/Targets) -- kein Perzentil-Vergleich (Population zu inkonsistent),
+//    nur die Rate-Stats (Stil-Kategorien, siehe categories[Pos].type==='style')
+//    als rohe "Early Signal"-Werte. opp = Targets/Carries/Attempts bisher.
 // ============================================================
 
 const PLAYER_DNA = ${JSON.stringify(data)};

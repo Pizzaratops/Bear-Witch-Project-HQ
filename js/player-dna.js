@@ -20,7 +20,7 @@
 
 const DNA_POSITIONS = ['QB', 'RB', 'WR', 'TE'];
 const DNA_COLORS = ['#20d3c2', '#f25c8a', '#ffca28'];
-let dnaState = { season: null, pos: 'WR', search: '', rosteredOnly: true, sel: null, compare: [], scale: 'p', stab: true, sameYear: false };
+let dnaState = { season: null, pos: 'WR', search: '', rosteredOnly: true, sel: null, earlySel: null, compare: [], scale: 'p', stab: true, sameYear: false };
 let _dnaChart = null;
 let _dnaLoading = null;
 
@@ -69,6 +69,11 @@ const _dnaAvg = p => {
 };
 const _dnaPlayers = (season, pos) => ((PLAYER_DNA.seasons[season] || {}).players || {})[pos] || [];
 const _dnaFind = (season, pos, id) => _dnaPlayers(season, pos).find(p => p.id === id) || null;
+
+// "Early Signal": Spieler unter dem Mindest-Volumen (siehe scripts/sync-player-dna.js
+// EARLY_OPP). Nur Rate-Stats (Stil-Achsen), kein Perzentil-Vergleich.
+const _dnaEarlyList = (season, pos) => ((PLAYER_DNA.seasons[season] || {}).early || {})[pos] || [];
+const _dnaEarlyFind = (season, pos, id) => _dnaEarlyList(season, pos).find(p => p.id === id) || null;
 
 function _dnaDistance(a, b) {
   const va = _dnaVals(a), vb = _dnaVals(b);
@@ -189,20 +194,34 @@ function openPlayerDna(name, pos) {
   _dnaLoad().then(() => {
     const season = String(PLAYER_DNA.current);
     const key = _dnaKey(name);
-    let hit = null, hitSeason = season;
-    // aktuelle Saison zuerst, sonst juengste Saison, in der er im Pool war
-    const years = Object.keys(PLAYER_DNA.seasons).sort((a, b) => b - a);
-    for (const y of years) {
-      hit = _dnaPlayers(y, pos).find(p => _dnaKey(p.n) === key);
-      if (hit) { hitSeason = y; break; }
+    // Reihenfolge: laufende Saison (Pool, dann Early Signal) hat Vorrang vor
+    // der Historie -- sonst wuerde z.B. ein Rookie mit abgeschlossener,
+    // qualifizierender Vorsaison die aktuelle "unter Cutoff"-Lage verdecken.
+    let hit = _dnaPlayers(season, pos).find(p => _dnaKey(p.n) === key) || null;
+    let hitSeason = season;
+    let earlyHit = hit ? null : (_dnaEarlyList(season, pos).find(p => _dnaKey(p.n) === key) || null);
+    let earlySeason = season;
+    if (!hit && !earlyHit) {
+      const years = Object.keys(PLAYER_DNA.seasons).sort((a, b) => b - a).filter(y => y !== season);
+      for (const y of years) {
+        hit = _dnaPlayers(y, pos).find(p => _dnaKey(p.n) === key);
+        if (hit) { hitSeason = y; break; }
+      }
+      if (!hit) {
+        for (const y of years) {
+          earlyHit = _dnaEarlyList(y, pos).find(p => _dnaKey(p.n) === key);
+          if (earlyHit) { earlySeason = y; break; }
+        }
+      }
     }
     dnaState.pos = pos;
-    dnaState.season = hitSeason;
+    dnaState.season = hit ? hitSeason : (earlyHit ? earlySeason : season);
     dnaState.sel = hit ? hit.id : null;
+    dnaState.earlySel = (!hit && earlyHit) ? earlyHit.id : null;
     dnaState.compare = [];
     dnaState.search = '';
-    renderPlayerDna(hit ? null : `${name} erfüllt in keiner Saison ab 2016 das Mindest-Volumen für den ${pos}-Pool.`);
-    if (hit) setTimeout(_dnaScrollMain, 50);
+    renderPlayerDna((hit || earlyHit) ? null : `${name} erfüllt in keiner Saison ab 2016 das Mindest-Volumen für den ${pos}-Pool.`);
+    if (hit || earlyHit) setTimeout(_dnaScrollMain, 50);
   }).catch(e => renderPlayerDna(e.message));
 }
 
@@ -221,7 +240,7 @@ function renderPlayerDna(notice) {
   const season = dnaState.season, pos = dnaState.pos;
   const weeks = PLAYER_DNA.seasons[season].weeks;
   const all = _dnaPlayers(season, pos);
-  if (!dnaState.sel || !all.some(p => p.id === dnaState.sel)) {
+  if (!dnaState.earlySel && (!dnaState.sel || !all.some(p => p.id === dnaState.sel))) {
     const firstOwned = all.slice().sort((a, b) => _dnaAvg(b) - _dnaAvg(a)).find(p => _dnaOwner(p.n));
     dnaState.sel = (firstOwned || all[0] || {}).id || null;
   }
@@ -257,16 +276,17 @@ function renderPlayerDna(notice) {
 function dnaSet(key, val) { dnaState[key] = val; _dnaRenderList(); _dnaRenderMain(); document.querySelectorAll('.dna-controls .rr-tb-btn').forEach(b => {
   if (b.textContent === 'Perzentil') b.classList.toggle('rr-tb-active', dnaState.scale === 'p');
   if (b.textContent === 'Z-Score') b.classList.toggle('rr-tb-active', dnaState.scale === 'z'); }); }
-function dnaSetPos(p) { dnaState.pos = p; dnaState.sel = null; dnaState.compare = []; renderPlayerDna(); }
+function dnaSetPos(p) { dnaState.pos = p; dnaState.sel = null; dnaState.earlySel = null; dnaState.compare = []; renderPlayerDna(); }
 function dnaSetSeason(y) {
   const prev = dnaState.sel ? _dnaFind(dnaState.season, dnaState.pos, dnaState.sel) : null;
   dnaState.season = String(y);
   // gleichen Spieler behalten, falls er auch in der neuen Saison im Pool ist
   dnaState.sel = prev && _dnaFind(y, dnaState.pos, prev.id) ? prev.id : null;
+  dnaState.earlySel = null;
   dnaState.compare = [];
   renderPlayerDna();
 }
-function dnaSelect(id) { dnaState.sel = id; dnaState.compare = []; _dnaRenderList(); _dnaRenderMain(); _dnaScrollMain(); }
+function dnaSelect(id) { dnaState.sel = id; dnaState.earlySel = null; dnaState.compare = []; _dnaRenderList(); _dnaRenderMain(); _dnaScrollMain(); }
 function _dnaScrollMain() {
   // Mobil liegt das Profil unter der Liste -> nach Auswahl hinscrollen
   if (window.innerWidth > 900) return;
@@ -304,10 +324,43 @@ function _dnaCellVal(x) {
   return String(x);
 }
 
+function _dnaEarlyCardHtml(e, pos) {
+  const cats = _dnaCats(pos).filter(c => c.type === 'style');
+  const yearTxt = e.e ? (e.e === 1 ? 'Rookie' : `NFL-Jahr ${e.e}`) : '';
+  const owner = _dnaOwner(e.n);
+  const oppLabel = pos === 'QB' ? 'Pass-Versuche' : pos === 'RB' ? 'Touches (Carries+Targets)' : 'Targets';
+  return `
+    <div class="dna-head">
+      <div>
+        <div class="dna-name">${e.n}</div>
+        <div class="page-sub">${pos} · ${e.t} · ${e.g} Spiele${yearTxt ? ' · ' + yearTxt : ''}${owner ? ` · ${owner.emoji} ${owner.name}` : ' · Free Agent'}</div>
+      </div>
+      <div class="dna-score" style="border-color:var(--accent)" title="Noch unter dem Mindest-Volumen fuer den vollen Pool"><b style="color:var(--accent)">🌱</b><small>Early Signal</small></div>
+    </div>
+    <div class="info-banner">Noch unter dem Mindest-Volumen (${e.opp} ${oppLabel} bisher) für den vollen ${pos}-Perzentil-Vergleich. Gezeigt werden nur Rate-Stats, die auch bei kleiner Stichprobe aussagekräftig sind – <b>kein Ranking</b> gegen den Rest der Liga, weil die Vergleichsgruppe dafür zu inkonsistent wäre.</div>
+    <div class="dna-grid" style="grid-template-columns:1fr">
+      <table class="dna-table">
+        <thead><tr><th>Kategorie</th><th>Wert</th></tr></thead>
+        <tbody>
+          ${cats.map((c, i) => `
+            <tr class="dna-style-row">
+              <td><span class="dna-tip" tabindex="0" data-tip="${_dnaAttr((_dnaGloss(pos, c.k) || {}).short || '')}"><b>◇ ${c.label}</b> <a class="dna-info" onclick="event.stopPropagation();dnaOpenHelp('${pos}','${c.k}')" title="Ausführlich erklärt">ⓘ</a></span><small>${c.unit}</small></td>
+              <td>${_dnaFmt(e.stab[i], c)}</td>
+            </tr>`).join('')}
+        </tbody>
+      </table>
+    </div>
+    <div class="page-sub" style="margin-top:10px;font-size:11px">Sobald genug Volumen da ist, taucht ${e.n} automatisch mit vollem DNA-Profil (Perzentile, Matches, Radar) im ${pos}-Pool auf.</div>`;
+}
+
 function _dnaRenderMain() {
   const host = document.getElementById('dnaMain');
   if (!host) return;
   const { season, pos } = dnaState;
+  if (dnaState.earlySel) {
+    const early = _dnaEarlyFind(season, pos, dnaState.earlySel);
+    if (early) { host.innerHTML = _dnaEarlyCardHtml(early, pos); return; }
+  }
   const cats = _dnaCats(pos);
   const me = dnaState.sel ? _dnaFind(season, pos, dnaState.sel) : null;
   if (!me) { host.innerHTML = emptyState('Kein Spieler gewählt', 'Links einen Spieler auswählen.', '🧬'); return; }
