@@ -8,11 +8,10 @@
 //  College-Produktion), NFL Profile Comp folgt spaeter (braucht noch
 //  RAS/Athletik-Daten).
 //
-//  Positionen: WR, RB (validiert per Prototyp 27.09.2026, siehe Doc), TE
-//  (identisches Feature-Set wie WR -- category=receiving mit anderer
-//  Position + niedrigerer Mindest-Volumen-Schwelle).
-//  QB folgt noch -- braucht category=passing, statType-Namen noch nicht
-//  gegen CFBD verifiziert (siehe scripts/proto-college-qb.js).
+//  Positionen: WR, RB, TE (validiert per Prototyp 27.-28.09.2026, siehe
+//  Doc), QB (validiert 28.09.2026 -- braucht category=passing zusaetzlich
+//  zu rushing, Passing/Rushing bewusst getrennte Features, siehe Doc
+//  Abschnitt 1: kein Mischwert, sonst verzerrt bei Dual-Threat-QBs).
 //
 //  Quelle: CollegeFootballData.com API (CFBD), Free-Tier (1000 Calls/
 //  Monat). Braucht CFBD_API_KEY als Env-Var (in GitHub Actions als
@@ -21,10 +20,12 @@
 //  RATE-LIMIT-STRATEGIE (wichtig!): Abgeschlossene Saisons aendern sich
 //  nicht mehr -> werden aus der bestehenden data/college-scouting.js
 //  uebernommen (0 API-Calls), neu geholt wird NUR die laufende Saison
-//  (4 Calls: stats/rushing, stats/receiving, player/usage, ppa/season --
-//  je EIN Call fuer die GESAMTE Liga, kein team-Parameter noetig).
+//  (5 Calls: stats/passing, stats/rushing, stats/receiving, player/usage,
+//  ppa/season -- je EIN Call fuer die GESAMTE Liga, kein team-Parameter
+//  noetig). Calls laufen SEQUENZIELL (CFBD limitiert gleichzeitige
+//  Requests pro Endpunkt, siehe cfbdGet-Kommentar unten).
 //  COLLEGE_REBUILD=1 holt alle Jahrgaenge neu (fuer Erst-Lauf oder wenn
-//  sich die Berechnung geaendert hat -- kostet dann ~48 Calls fuer
+//  sich die Berechnung geaendert hat -- kostet dann ~65 Calls fuer
 //  2013-<laufende Saison>, weit unter dem Monatslimit).
 //
 //  "Laufende Saison" = College-Football-Jahrgang nach NCAA-Konvention
@@ -68,6 +69,7 @@ const MIN_VOLUME = {
   // nicht als Passspiel) -- niedrigere Schwelle, sonst faellt die grosse
   // Mehrheit der Receiving-TEs schon raus.
   TE: { key: 'YDS', val: 150 },
+  QB: { key: 'pass_YDS', val: 1500 },
 };
 const RECENT_SEASONS_FOR_COMPS = 2; // fuer diese vielen juengsten Jahrgaenge werden Comps gespeichert
 const COMPS_N = 10;
@@ -129,7 +131,7 @@ const round = (x, d = 2) => (x == null ? null : Math.round(x * 10 ** d) / 10 ** 
 
 // Baut aus den vier Rohdatensaetzen eines Jahres die WR- und RB-Spielerlisten.
 // Exportiert fuer Tests -- macht selbst keine API-Calls.
-function buildYearRecords(year, rushingRaw, receivingRaw, usageRaw, ppaRaw) {
+function buildYearRecords(year, passingRaw, rushingRaw, receivingRaw, usageRaw, ppaRaw) {
   const teamRush = {}; // team -> { CAR, YDS, TD, ... } ueber ALLE Positionen
   rushingRaw.forEach(r => {
     if (!FBS_CONFERENCES.has(r.conference)) return;
@@ -218,7 +220,42 @@ function buildYearRecords(year, rushingRaw, receivingRaw, usageRaw, ppaRaw) {
       };
     });
 
-  return { WR: wr, TE: te, RB: rb };
+  // ---- QB (Passing + Rushing GETRENNT gefuehrt, siehe Kommentar oben) ----
+  const qbByPlayer = {};
+  passingRaw.forEach(r => {
+    if (r.position !== 'QB') return;
+    if (!FBS_CONFERENCES.has(r.conference)) return;
+    const p = qbByPlayer[r.playerId] || (qbByPlayer[r.playerId] = {
+      id: `${year}_${r.playerId}`, rawId: r.playerId, name: r.player, team: r.team, conf: r.conference, year,
+    });
+    p[`pass_${r.statType}`] = num(r.stat);
+  });
+  rushingRaw.forEach(r => {
+    if (r.position !== 'QB') return;
+    if (!FBS_CONFERENCES.has(r.conference)) return;
+    const p = qbByPlayer[r.playerId] || (qbByPlayer[r.playerId] = {
+      id: `${year}_${r.playerId}`, rawId: r.playerId, name: r.player, team: r.team, conf: r.conference, year,
+    });
+    p[`rush_${r.statType}`] = num(r.stat);
+  });
+  const qb = Object.values(qbByPlayer)
+    .filter(p => (p.pass_YDS || 0) >= MIN_VOLUME.QB.val)
+    .map(p => {
+      const usage = usageById[p.rawId];
+      const ppa = ppaById[p.rawId];
+      return {
+        id: p.id, rawId: p.rawId, name: p.name, team: p.team, conf: p.conf, year,
+        passYds: p.pass_YDS ?? null, passAtt: p.pass_ATT ?? null, passTd: p.pass_TD ?? null,
+        rushYds: p.rush_YDS ?? null,
+        compPct: p.pass_PCT != null ? round(100 * p.pass_PCT, 1) : null,
+        usagePass: usage ? round(100 * usage.pass, 1) : null,
+        usageRush: usage ? round(100 * usage.rush, 1) : null,
+        avgPpaPass: ppa ? round(ppa.averagePPA?.pass, 3) : null,
+        avgPpaRush: ppa ? round(ppa.averagePPA?.rush, 3) : null,
+      };
+    });
+
+  return { WR: wr, TE: te, RB: rb, QB: qb };
 }
 
 // ---------------- Mahalanobis (reines JS, keine Deps) ----------------
@@ -262,6 +299,7 @@ const FEATURES = {
   WR: ['recShare', 'ydShare', 'tdShare', 'avgPPA', 'usageOverall'],
   TE: ['recShare', 'ydShare', 'tdShare', 'avgPPA', 'usageOverall'],
   RB: ['rushCarShare', 'recYdShare', 'avgPpaRush', 'avgPpaPass', 'usageRush'],
+  QB: ['avgPpaPass', 'avgPpaRush', 'usagePass', 'usageRush', 'compPct'],
 };
 
 // Berechnet fuer jeden Spieler in `targets` die COMPS_N naechsten Nachbarn
@@ -325,13 +363,15 @@ async function main() {
   for (const year of ALL_YEARS) {
     const isCurrent = year === CURRENT;
     if (!isCurrent && seasonsData[year] && !REBUILD) {
-      console.log(`${year}: aus Cache uebernommen (${seasonsData[year].WR.length} WR, ${seasonsData[year].TE.length} TE, ${seasonsData[year].RB.length} RB).`);
+      console.log(`${year}: aus Cache uebernommen (${seasonsData[year].WR.length} WR, ${seasonsData[year].TE.length} TE, ${seasonsData[year].RB.length} RB, ${(seasonsData[year].QB || []).length} QB).`);
       continue;
     }
-    process.stdout.write(`${year}: lade 4 Endpunkte ... `);
+    process.stdout.write(`${year}: lade 5 Endpunkte ... `);
     try {
       // Sequenziell statt Promise.all (siehe Kommentar bei cfbdGet oben --
       // CFBD limitiert gleichzeitige Requests pro Endpunkt).
+      const passingRaw = await cfbdGet(`/stats/player/season?year=${year}&category=passing`);
+      await sleep(400);
       const rushingRaw = await cfbdGet(`/stats/player/season?year=${year}&category=rushing`);
       await sleep(400);
       const receivingRaw = await cfbdGet(`/stats/player/season?year=${year}&category=receiving`);
@@ -339,9 +379,9 @@ async function main() {
       const usageRaw = await cfbdGet(`/player/usage?year=${year}`).catch(() => []);
       await sleep(400);
       const ppaRaw = await cfbdGet(`/ppa/players/season?year=${year}`).catch(() => []);
-      const built = buildYearRecords(year, rushingRaw, receivingRaw, usageRaw, ppaRaw);
+      const built = buildYearRecords(year, passingRaw, rushingRaw, receivingRaw, usageRaw, ppaRaw);
       seasonsData[year] = built;
-      console.log(`${built.WR.length} WR, ${built.TE.length} TE, ${built.RB.length} RB.`);
+      console.log(`${built.WR.length} WR, ${built.TE.length} TE, ${built.RB.length} RB, ${built.QB.length} QB.`);
     } catch (e) {
       console.log(`FEHLER: ${e.message} -- Jahr uebersprungen (${seasonsData[year] ? 'alter Cache-Stand bleibt' : 'komplett fehlend'}).`);
     }
@@ -357,7 +397,7 @@ async function main() {
     comps: {},
   };
 
-  for (const pos of ['WR', 'TE', 'RB']) {
+  for (const pos of ['WR', 'TE', 'RB', 'QB']) {
     const pool = [];
     ALL_YEARS.forEach(y => { if (seasonsData[y]) pool.push(...seasonsData[y][pos]); });
     const targets = pool.filter(p => recentYears.has(p.year));
@@ -367,7 +407,7 @@ async function main() {
   }
 
   const body = `// ============================================================
-//  COLLEGE_SCOUTING — College Production Comp (WR, TE, RB)
+//  COLLEGE_SCOUTING — College Production Comp (WR, TE, RB, QB)
 // ============================================================
 //  AUTO-GENERIERT von scripts/sync-college-scouting.js. Nicht von Hand
 //  editieren. Siehe claude/college-scouting-concept.md (Projekt-Doc)
@@ -387,7 +427,7 @@ async function main() {
 //
 //  TODO (v2, siehe Projekt-Doc Abschnitt 7): Early-Signal-Fallback fuer
 //  Spieler unter dem Mindest-Volumen (z.B. frueh in der laufenden Saison),
-//  TE/QB-Positionen, NFL Profile Comp (RAS + Draft-Kapital-Kurve).
+//  NFL Profile Comp (RAS + Draft-Kapital-Kurve).
 // ============================================================
 
 const COLLEGE_SCOUTING = ${JSON.stringify(output, null, 2)};
