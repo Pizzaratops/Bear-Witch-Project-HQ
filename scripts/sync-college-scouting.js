@@ -8,8 +8,11 @@
 //  College-Produktion), NFL Profile Comp folgt spaeter (braucht noch
 //  RAS/Athletik-Daten).
 //
-//  Positionen: WR, RB (validiert per Prototyp 27.09.2026, siehe Doc).
-//  TE/QB folgen -- gleiches Muster, andere Feature-Sets.
+//  Positionen: WR, RB (validiert per Prototyp 27.09.2026, siehe Doc), TE
+//  (identisches Feature-Set wie WR -- category=receiving mit anderer
+//  Position + niedrigerer Mindest-Volumen-Schwelle).
+//  QB folgt noch -- braucht category=passing, statType-Namen noch nicht
+//  gegen CFBD verifiziert (siehe scripts/proto-college-qb.js).
 //
 //  Quelle: CollegeFootballData.com API (CFBD), Free-Tier (1000 Calls/
 //  Monat). Braucht CFBD_API_KEY als Env-Var (in GitHub Actions als
@@ -58,7 +61,14 @@ const FBS_CONFERENCES = new Set([
   'Sun Belt', 'Conference USA', 'Mountain West', 'Pac-12', 'FBS Independents',
 ]);
 
-const MIN_VOLUME = { WR: { key: 'YDS', val: 250 }, RB: { key: 'rush_YDS', val: 300 } };
+const MIN_VOLUME = {
+  WR: { key: 'YDS', val: 250 },
+  RB: { key: 'rush_YDS', val: 300 },
+  // TE bekommt strukturell weniger Targets als WR (Blocking-Snaps zaehlen
+  // nicht als Passspiel) -- niedrigere Schwelle, sonst faellt die grosse
+  // Mehrheit der Receiving-TEs schon raus.
+  TE: { key: 'YDS', val: 150 },
+};
 const RECENT_SEASONS_FOR_COMPS = 2; // fuer diese vielen juengsten Jahrgaenge werden Comps gespeichert
 const COMPS_N = 10;
 
@@ -124,32 +134,37 @@ function buildYearRecords(year, rushingRaw, receivingRaw, usageRaw, ppaRaw) {
   const ppaById = {};
   ppaRaw.forEach(u => { ppaById[u.id] = u; });
 
-  // ---- WR ----
-  const wrByPlayer = {};
-  receivingRaw.forEach(r => {
-    if (r.position !== 'WR') return;
-    if (!FBS_CONFERENCES.has(r.conference)) return;
-    const p = wrByPlayer[r.playerId] || (wrByPlayer[r.playerId] = {
-      id: `${year}_${r.playerId}`, rawId: r.playerId, name: r.player, team: r.team, conf: r.conference, year,
+  // ---- WR + TE (identisches Feature-Set -- beide nur ueber category=receiving,
+  // Dominator-Rating-Stil, da CFBD kein targets-Feld hat; siehe Projekt-Doc) ----
+  function buildReceiverPos(position) {
+    const byPlayer = {};
+    receivingRaw.forEach(r => {
+      if (r.position !== position) return;
+      if (!FBS_CONFERENCES.has(r.conference)) return;
+      const p = byPlayer[r.playerId] || (byPlayer[r.playerId] = {
+        id: `${year}_${r.playerId}`, rawId: r.playerId, name: r.player, team: r.team, conf: r.conference, year,
+      });
+      p[r.statType] = num(r.stat);
     });
-    p[r.statType] = num(r.stat);
-  });
-  const wr = Object.values(wrByPlayer)
-    .filter(p => (p.YDS || 0) >= MIN_VOLUME.WR.val)
-    .map(p => {
-      const t = teamRec[p.team] || { REC: 1, YDS: 1, TD: 1 };
-      const usage = usageById[p.rawId];
-      const ppa = ppaById[p.rawId];
-      return {
-        id: p.id, rawId: p.rawId, name: p.name, team: p.team, conf: p.conf, year,
-        rec: p.REC ?? null, yds: p.YDS ?? null, td: p.TD ?? null,
-        recShare: round(100 * (p.REC || 0) / (t.REC || 1), 1),
-        ydShare: round(100 * (p.YDS || 0) / (t.YDS || 1), 1),
-        tdShare: round(100 * (p.TD || 0) / (t.TD || 1), 1),
-        usageOverall: usage ? round(100 * usage.overall, 1) : null,
-        avgPPA: ppa ? round(ppa.averagePPA?.all, 3) : null,
-      };
-    });
+    return Object.values(byPlayer)
+      .filter(p => (p.YDS || 0) >= MIN_VOLUME[position].val)
+      .map(p => {
+        const t = teamRec[p.team] || { REC: 1, YDS: 1, TD: 1 };
+        const usage = usageById[p.rawId];
+        const ppa = ppaById[p.rawId];
+        return {
+          id: p.id, rawId: p.rawId, name: p.name, team: p.team, conf: p.conf, year,
+          rec: p.REC ?? null, yds: p.YDS ?? null, td: p.TD ?? null,
+          recShare: round(100 * (p.REC || 0) / (t.REC || 1), 1),
+          ydShare: round(100 * (p.YDS || 0) / (t.YDS || 1), 1),
+          tdShare: round(100 * (p.TD || 0) / (t.TD || 1), 1),
+          usageOverall: usage ? round(100 * usage.overall, 1) : null,
+          avgPPA: ppa ? round(ppa.averagePPA?.all, 3) : null,
+        };
+      });
+  }
+  const wr = buildReceiverPos('WR');
+  const te = buildReceiverPos('TE');
 
   // ---- RB ----
   const rbByPlayer = {};
@@ -188,7 +203,7 @@ function buildYearRecords(year, rushingRaw, receivingRaw, usageRaw, ppaRaw) {
       };
     });
 
-  return { WR: wr, RB: rb };
+  return { WR: wr, TE: te, RB: rb };
 }
 
 // ---------------- Mahalanobis (reines JS, keine Deps) ----------------
@@ -230,6 +245,7 @@ function mahalanobis(a, b, invCov) {
 
 const FEATURES = {
   WR: ['recShare', 'ydShare', 'tdShare', 'avgPPA', 'usageOverall'],
+  TE: ['recShare', 'ydShare', 'tdShare', 'avgPPA', 'usageOverall'],
   RB: ['rushCarShare', 'recYdShare', 'avgPpaRush', 'avgPpaPass', 'usageRush'],
 };
 
@@ -323,7 +339,7 @@ async function main() {
     comps: {},
   };
 
-  for (const pos of ['WR', 'RB']) {
+  for (const pos of ['WR', 'TE', 'RB']) {
     const pool = [];
     ALL_YEARS.forEach(y => { if (seasonsData[y]) pool.push(...seasonsData[y][pos]); });
     const targets = pool.filter(p => recentYears.has(p.year));
@@ -333,7 +349,7 @@ async function main() {
   }
 
   const body = `// ============================================================
-//  COLLEGE_SCOUTING — College Production Comp (WR, RB)
+//  COLLEGE_SCOUTING — College Production Comp (WR, TE, RB)
 // ============================================================
 //  AUTO-GENERIERT von scripts/sync-college-scouting.js. Nicht von Hand
 //  editieren. Siehe claude/college-scouting-concept.md (Projekt-Doc)
