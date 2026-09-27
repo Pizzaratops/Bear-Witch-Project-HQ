@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-09-27T17:58:38.402Z",
+  "generatedAt": "2026-09-27T20:54:06.023Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -376,7 +376,7 @@ const STATUS_REPORT_DATA = {
           "pos": "?",
           "nfl": "IND",
           "isStarter": true,
-          "status": "Q",
+          "status": null,
           "flag": false,
           "lastGamePoints": 4.5,
           "last3AvgPoints": 7,
@@ -498,8 +498,8 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "CAR",
           "isStarter": true,
-          "status": null,
-          "flag": false,
+          "status": "O",
+          "flag": true,
           "lastGamePoints": 14.6,
           "last3AvgPoints": 14.6,
           "projPoints": 13.8
@@ -560,7 +560,7 @@ const STATUS_REPORT_DATA = {
           "projPoints": 11.6
         }
       ],
-      "flaggedCount": 0
+      "flaggedCount": 1
     },
     {
       "id": "beyaz-espn-1340233816",
@@ -653,7 +653,7 @@ const STATUS_REPORT_DATA = {
           "pos": "TE",
           "nfl": "LV",
           "isStarter": true,
-          "status": "Q",
+          "status": null,
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
@@ -686,7 +686,7 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "BAL",
           "isStarter": true,
-          "status": "Q",
+          "status": null,
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
@@ -1166,7 +1166,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 8.8,
           "last3AvgPoints": 8.6,
-          "projPoints": 9.4
+          "projPoints": 9.5
         },
         {
           "name": "Lamar Jackson",
@@ -1707,7 +1707,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 6.3,
           "last3AvgPoints": 5.2,
-          "projPoints": 5.6
+          "projPoints": 5.7
         },
         {
           "name": "Brock Purdy",
@@ -2204,7 +2204,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 1.2,
           "last3AvgPoints": 1.2,
-          "projPoints": 2.6
+          "projPoints": 2.5
         },
         {
           "name": "Hunter Henry",
@@ -2248,7 +2248,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 0.6,
-          "projPoints": 17.6
+          "projPoints": 17.5
         },
         {
           "name": "Brock Purdy",
@@ -2532,7 +2532,7 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "MIN",
           "isStarter": true,
-          "status": null,
+          "status": "Q",
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
@@ -2852,7 +2852,7 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "CAR",
           "isStarter": false,
-          "status": null,
+          "status": "O",
           "flag": false,
           "lastGamePoints": 14.6,
           "last3AvgPoints": 14.6,
@@ -3163,8 +3163,8 @@ const STATUS_REPORT_DATA = {
           "pos": "RB",
           "nfl": "MIA",
           "isStarter": true,
-          "status": "Q",
-          "flag": false,
+          "status": "D",
+          "flag": true,
           "lastGamePoints": 12.3,
           "last3AvgPoints": 11.5,
           "projPoints": 19.4
@@ -3346,7 +3346,7 @@ const STATUS_REPORT_DATA = {
           "projPoints": 11.3
         }
       ],
-      "flaggedCount": 0
+      "flaggedCount": 1
     },
     {
       "id": "felix-sleeper-1402417765519781888",
@@ -3830,7 +3830,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
-          "projPoints": 7
+          "projPoints": 6.9
         },
         {
           "name": "Travis Etienne",
