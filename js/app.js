@@ -26,6 +26,114 @@ const PAGES = [
   'statusreport', 'erklaerung', 'playerdna', 'nflmatchup'
 ];
 
+/* Nav-Struktur fuers Menue (buildNav()): jede Section wird oben EIN Knopf
+   (springt zur ersten Seite), hat sie mehrere Unterseiten erscheint dort
+   eine Tab-Leiste (_renderSectionTabs). 'teams: true' bekommt stattdessen
+   ein echtes Dropdown mit allen Team-Kadern. */
+const NAV_SECTIONS = [
+  { key: 'home', label: '🏠 Home', pages: [['home', 'Home', () => goHome()]] },
+  { key: 'standings', label: '📈 Standings', pages: [
+    ['standings', '📈 Standings', () => showStandings()],
+    ['seasonrolling', '📊 2026 Rolling Rankings', () => showSeasonRolling()],
+    ['weekbyweek', '🗓️ Weekly Scores', () => showWeekByWeek()],
+  ] },
+  { key: 'matchups', label: '⚔️ Matchups', pages: [['matchups', 'Matchups', () => showMatchups()]] },
+  { key: 'teams', label: '🧍 Teams', teams: true, pages: [['roster', 'Team', null]] },
+  { key: 'draft', label: '📋 Draft & Picks', pages: [
+    ['draftboard', '📋 Draft Board 2026', () => showDraftboard()],
+    ['keepers', '🔒 Keeper-Übersicht', () => showKeepers()],
+    ['futureboards', '🔮 Future Draft Boards', () => showFutureBoards()],
+  ] },
+  { key: 'trade', label: '⚖️ Trade', pages: [
+    ['trade', '⚖️ Trade Analyzer', () => showTrade()],
+    ['tradehistory', '📜 Trade History', () => showTradeHistory()],
+  ] },
+  { key: 'dynasty', label: '🏆 Dynasty', pages: [
+    ['dynastyboard', '🏆 Dynasty Board', () => showDynastyBoard()],
+    ['rolling', '📈 Rolling Rankings', () => showRolling()],
+    ['teamaverages', '📐 Team-Schnitt', () => showTeamAverages()],
+  ] },
+  { key: 'players', label: '🧮 Spieler', pages: [
+    ['playerrankings', '📊 Player Rankings', () => showPlayerRankings()],
+    ['playerprojections', '🔮 Player Projections', () => showPlayerProjections()],
+    ['playerdna', '🧬 Player DNA', () => showPlayerDna()],
+  ] },
+  { key: 'nfl', label: '🏈 NFL', pages: [
+    ['nflrankings', '🏟️ Power Rankings', () => showNflRankings()],
+    ['nflmatchup', '⚔️ Matchup Advantage', () => showNflMatchup()],
+    ['nflteams', '🏈 NFL Teams', () => showNFLTeams()],
+  ] },
+  { key: 'liga', label: '📜 Liga', pages: [
+    ['erklaerung', '📢 Erklärung', () => showErklaerung()],
+    ['dues', '💰 Liga-Beiträge', () => showDues()],
+    ['leaguehistory', '🏛️ Liga-Historie', () => showLeagueHistory()],
+  ] },
+];
+const _PAGE_ALIAS = { nflteamdetail: 'nflteams' };
+
+function _sectionOf(pageId) {
+  const pid = _PAGE_ALIAS[pageId] || pageId;
+  return NAV_SECTIONS.find(s => s.pages.some(p => p[0] === pid)) || null;
+}
+function _navGo(key) {
+  const sec = NAV_SECTIONS.find(s => s.key === key);
+  if (sec && sec.pages[0][2]) sec.pages[0][2]();
+}
+function _navGoPage(pageId) {
+  for (const s of NAV_SECTIONS) { const p = s.pages.find(x => x[0] === pageId); if (p && p[2]) return p[2](); }
+}
+
+function _tabLabel(p) { return p[1]; }
+
+function buildNav() {
+  const teamItems = (cls) => LEAGUE_TEAMS.map(t =>
+    `<button class="${cls}" data-page="roster" data-team="${t.id}" onclick="showRoster('${t.id}')">${t.emoji} ${t.name}</button>`).join('');
+  const desk = document.getElementById('navDesktop');
+  if (desk) desk.innerHTML = NAV_SECTIONS.map(s => s.teams
+    ? `<div class="snav-group"><button class="snav-group-btn" data-section="${s.key}">${s.label} <span class="snav-arrow">▾</span></button>
+         <div class="snav-dropdown snav-dropdown-teams">${teamItems('snav-dropdown-item')}</div></div>`
+    : `<button class="snav-single" data-section="${s.key}" onclick="_navGo('${s.key}')">${s.label}</button>`).join('');
+  const mob = document.getElementById('mobileNavDropdown');
+  if (mob) mob.innerHTML = NAV_SECTIONS.map(s => {
+    if (s.teams) return `<div class="subnav-mobile-group"><div class="subnav-mobile-label">${s.label}</div><div class="subnav-mobile-grid">${teamItems('subnav-mobile-btn')}</div></div>`;
+    if (s.pages.length === 1) return `<button class="subnav-mobile-btn subnav-mobile-top" data-section="${s.key}" onclick="_navGo('${s.key}')">${s.label}</button>`;
+    return `<div class="subnav-mobile-group"><div class="subnav-mobile-label">${s.label}</div>${s.pages.map(p =>
+      `<button class="subnav-mobile-btn" data-page="${p[0]}" onclick="_navGoPage('${p[0]}')">${_tabLabel(p)}</button>`).join('')}</div>`;
+  }).join('') + `<button class="subnav-mobile-btn subnav-mobile-top" data-page="statusreport" onclick="showStatusReport()">🚨 Status Report</button>`;
+}
+
+// Tab-Leiste oben auf jeder Seite eines Bereichs mit mehreren Seiten
+function _renderSectionTabs(pageId) {
+  const page = document.getElementById('page-' + pageId);
+  if (!page) return;
+  let bar = page.querySelector(':scope > .section-tabs');
+  const sec = _sectionOf(pageId);
+  if (!sec || sec.pages.length < 2 || sec.teams) { if (bar) bar.remove(); return; }
+  if (!bar) { bar = document.createElement('div'); bar.className = 'section-tabs'; page.insertBefore(bar, page.firstChild); }
+  const cur = _PAGE_ALIAS[pageId] || pageId;
+  bar.innerHTML = sec.pages.map(p =>
+    `<button class="section-tab${p[0] === cur ? ' active' : ''}" onclick="_navGoPage('${p[0]}')">${_tabLabel(p)}</button>`).join('');
+}
+
+function _markNavActive(pageId, opts) {
+  const sec = _sectionOf(pageId);
+  document.querySelectorAll('[data-section]').forEach(el => {
+    el.classList.toggle('active', !!sec && el.getAttribute('data-section') === sec.key);
+  });
+  const teamId = opts && opts.teamId;
+  document.querySelectorAll('[data-team]').forEach(el => {
+    el.classList.toggle('active', pageId === 'roster' && el.getAttribute('data-team') === teamId);
+  });
+  const lbl = document.getElementById('mobileNavLabel');
+  if (lbl) {
+    let txt = sec ? sec.label : '🐻 League Tools';
+    if (pageId === 'roster' && teamId) { const t = LEAGUE_TEAMS.find(x => x.id === teamId); if (t) txt = `${t.emoji} ${t.name}`; }
+    else if (sec && sec.pages.length > 1) { const p = sec.pages.find(x => x[0] === (_PAGE_ALIAS[pageId] || pageId)); if (p) txt = `${sec.label} · ${_tabLabel(p).replace(/^\S+\s/, '')}`; }
+    else if (pageId === 'statusreport') txt = '🚨 Status Report';
+    lbl.textContent = txt;
+  }
+}
+
 function navigate(pageId, opts) {
   PAGES.forEach(p => {
     const el = document.getElementById('page-' + p);
@@ -37,6 +145,8 @@ function navigate(pageId, opts) {
   document.querySelectorAll('[data-page]').forEach(el => {
     el.classList.toggle('active', el.getAttribute('data-page') === pageId);
   });
+  _markNavActive(pageId, opts);
+  _renderSectionTabs(pageId);
 
   window.scrollTo({ top: 0, behavior: 'instant' in window ? 'instant' : 'auto' });
   closeMobileNav();
@@ -152,11 +262,24 @@ function closeMobileNav() {
 
 /* Desktop-Dropdowns zusaetzlich per Klick (nicht nur :hover) bedienbar
    machen -- wichtig fuer Touch-Geraete mit breitem Viewport. */
+function _placeSnavDropdown(group) {
+  const btn = group.querySelector('.snav-group-btn');
+  const dd = group.querySelector('.snav-dropdown');
+  if (!btn || !dd) return;
+  const r = btn.getBoundingClientRect();
+  const w = Math.max(dd.offsetWidth || 220, 220);
+  dd.style.top = r.bottom + 'px';
+  dd.style.left = Math.max(8, Math.min(r.left, window.innerWidth - w - 8)) + 'px';
+}
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.snav-group').forEach(group => {
     const btn = group.querySelector('.snav-group-btn');
     if (!btn) return;
+    group.addEventListener('mouseenter', () => _placeSnavDropdown(group));
+    const dd = group.querySelector('.snav-dropdown');
+    if (dd) dd.addEventListener('click', (e) => { e.stopPropagation(); group.classList.remove('open'); });
     btn.addEventListener('click', (e) => {
+      _placeSnavDropdown(group);
       e.stopPropagation();
       const wasOpen = group.classList.contains('open');
       document.querySelectorAll('.snav-group.open').forEach(g => g.classList.remove('open'));

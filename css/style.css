@@ -110,9 +110,13 @@ a { color: inherit; text-decoration: none; }
   display: flex;
   align-items: center;
   gap: 2px;
-  padding: 0 16px;
-  flex-wrap: wrap;
+  padding: 0 12px;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
 }
+.subnav-inner::-webkit-scrollbar { display: none; }
+.snav-dropdown-teams { max-height: 70vh; overflow-y: auto; }
 .snav-single, .snav-group-btn {
   background: none;
   border: none;
@@ -134,8 +138,10 @@ a { color: inherit; text-decoration: none; }
 .snav-arrow { font-size: 10px; margin-left: 2px; }
 .snav-dropdown {
   display: none;
-  position: absolute;
-  top: 100%;
+  /* fixed statt absolute: .subnav-inner hat overflow-x:auto und wuerde
+     ein absolut positioniertes Dropdown abschneiden. Position setzt JS. */
+  position: fixed;
+  top: 0;
   left: 0;
   background: var(--surface);
   border: 1px solid var(--border);
@@ -212,6 +218,37 @@ a { color: inherit; text-decoration: none; }
   .subnav-desktop { display: none; }
   .subnav-mobile { display: block; }
 }
+
+/* Unter-Tabs eines Bereichs (z.B. Tabelle / Verlauf / Wochenpunkte) */
+.section-tabs {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  padding: 4px;
+  margin-bottom: 18px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  max-width: 100%;
+}
+.section-tab {
+  background: none;
+  border: none;
+  color: var(--muted);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 13px;
+  font-weight: 700;
+  padding: 7px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+.section-tab:hover { color: var(--text); }
+.section-tab.active { background: var(--accent-light); color: var(--accent); }
+.subnav-mobile-top { font-weight: 700; }
+.subnav-mobile-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; }
+.subnav-mobile-grid .subnav-mobile-btn { font-size: 13px; padding: 8px; }
+@media (max-width: 420px) { .subnav-mobile-grid { grid-template-columns: 1fr; } }
 
 /* ---------- MOBILE-GRUNDANPASSUNGEN ---------- */
 @media (max-width: 600px) {
