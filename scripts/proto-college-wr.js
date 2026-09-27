@@ -110,7 +110,7 @@ async function main() {
     console.warn(`  WARNUNG: ppa/players/season ohne team-Param fehlgeschlagen (${e.message}). Wird uebersprungen -- PPA fehlt dann im Prototyp.`);
   }
 
-  // ---- 1) Long-Format -> pro Spieler pivotieren ----
+  // ---- 1) Long-Format -> pro Spieler pivotieren (NUR WR fuer den Pool) ----
   // Felder je Zeile: season, playerId, player, position, team, conference, category, statType, stat
   const byPlayer = {}; // playerId -> { name, pos, team, conf, REC, YDS, TD, LONG, YPR }
   statsRaw.forEach(r => {
@@ -125,13 +125,15 @@ async function main() {
   console.log(`\nNach WR + FBS-Filter: ${players.length} Spieler.`);
 
   // ---- 2) Team-Totals fuer Dominator-Rating-Style Shares (REC/YDS/TD) ----
-  // Basis: Summe ueber ALLE WR dieses Datensatzes je Team (Naeherung -- echte
-  // Team-Totals muessten alle Positionen inkl. RB/TE einschliessen; fuer den
-  // Prototyp reicht WR-only als erste Naeherung, spaeter ggf. verfeinern).
+  // WICHTIG: Nenner = ALLE Pass-Catcher des Teams (WR+RB+TE+FB), nicht nur
+  // WR -- category=receiving liefert diese bereits mit, also kein extra
+  // API-Call noetig. Nur FBS-Teams zaehlen (gleiche Liga-Ebene wie der Pool).
   const teamTotals = {}; // team -> { REC, YDS, TD }
-  players.forEach(p => {
-    const t = teamTotals[p.team] || (teamTotals[p.team] = { REC: 0, YDS: 0, TD: 0 });
-    t.REC += p.REC || 0; t.YDS += p.YDS || 0; t.TD += p.TD || 0;
+  statsRaw.forEach(r => {
+    if (!FBS_CONFERENCES.has(r.conference)) return;
+    if (r.statType !== 'REC' && r.statType !== 'YDS' && r.statType !== 'TD') return;
+    const t = teamTotals[r.team] || (teamTotals[r.team] = { REC: 0, YDS: 0, TD: 0 });
+    t[r.statType] += num(r.stat) || 0;
   });
 
   // ---- 3) Usage- und PPA-Daten per ID mergen ----
