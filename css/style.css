@@ -849,7 +849,7 @@ table.db-table td:nth-child(2) { text-align: left; font-weight: 600; }
 /* College Scouting: Radar/Spider-Grafik (Prospect vs. gewählter Comp) */
 .cs-match-pickable { border: 1px solid transparent; }
 .cs-match-picked { border-color: var(--accent); background: var(--accent-light); }
-.cs-radar-wrap { margin-top: 12px; padding-top: 12px; border-top: 1px dashed var(--border); }
+.cs-radar-wrap { margin-bottom: 12px; padding-bottom: 12px; border-bottom: 1px dashed var(--border); }
 .cs-radar-svg { display: block; margin: 0 auto; overflow: visible; }
 .cs-radar-ring { fill: none; stroke: var(--border); stroke-width: 1; }
 .cs-radar-axis { stroke: var(--border); stroke-width: 1; }
