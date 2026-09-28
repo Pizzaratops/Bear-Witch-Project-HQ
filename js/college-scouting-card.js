@@ -230,11 +230,11 @@ function _csRenderProdBox() {
   const compVals = compObj ? feats[compObj.id] : null;
 
   box.innerHTML = `
+    ${targetVals ? _csRadarSvg(axes, targetVals, compVals, me.name, compObj ? compObj.name : null)
+                 : '<div class="page-sub" style="padding:8px 0">Keine Perzentil-Daten für diesen Prospect (zu wenige vollständige Feature-Werte).</div>'}
     ${_csMatchBox('🎓 College Production Comp — „Produziert wie …“', prodComps,
       'Kein vergleichbares Produktionsprofil gefunden (zu wenige vollständige Datensätze im Pool).',
-      null, 'csPickProdRadar', csState.prodRadar)}
-    ${targetVals ? _csRadarSvg(axes, targetVals, compVals, me.name, compObj ? compObj.name : null)
-                 : '<div class="page-sub" style="padding:8px 0">Keine Perzentil-Daten für diesen Prospect (zu wenige vollständige Feature-Werte).</div>'}`;
+      null, 'csPickProdRadar', csState.prodRadar)}`;
 }
 
 function _csRenderNflProfileBox(pos, playerId) {
@@ -258,10 +258,10 @@ function _csRenderNflProfileBox(pos, playerId) {
   const me = (COLLEGE_SCOUTING.recent[pos] || []).find(p => p.id === playerId);
 
   box.innerHTML = `
+    ${targetVals ? _csRadarSvg(axes, targetVals, compVals, me ? me.name : 'Prospect', compObj ? compObj.name : null)
+                 : ''}
     ${_csMatchBox('🏈 NFL Profile Comp — „Profiliert wie …“', comps,
       'Kein Vergleich möglich (Production- oder Größen-Daten für diesen Prospect unvollständig).', extra,
       'csPickNflRadar', csState.nflRadar)}
-    ${targetVals ? _csRadarSvg(axes, targetVals, compVals, me ? me.name : 'Prospect', compObj ? compObj.name : null)
-                 : ''}
     <div class="page-sub" style="font-size:11px;margin-top:4px">Vergleichsbasis: ${stats.matched || 0} historisch gedraftete ${pos}s mit vollständigem Profil (aus ${stats.poolSize || 0} insgesamt gematcht). RAS = eigener, an ras.football angelehnter Athletik-Score (0–10) DES COMPS, nicht des Prospects selbst — der hat sein Combine/Draft noch vor sich. Radar-Achsen: Produktion + Größe/Gewicht (Matching-Features), nicht RAS/Draft.</div>`;
 }
