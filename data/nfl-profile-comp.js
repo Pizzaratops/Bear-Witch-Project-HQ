@@ -9,6 +9,10 @@
 //  angereichert mit dem TATSAECHLICHEN Draft-Ergebnis + RAS-Score DIESES
 //  Comps (nicht des Prospects selbst -- der hat beides noch nicht).
 //
+//  NFL_PROFILE_COMP.feats[Pos][id] = Perzentil (0-100) je Match-Feature, fuer
+//  Prospects UND deren Comps (gleiche id-Basis) -- Basis fuer die Radar-
+//  Grafik im Frontend (js/college-scouting-card.js).
+//
 //  WICHTIG (UI-Sprache, siehe Projekt-Doc Abschnitt 6): "Profiliert wie ...
 //  (Pre-Draft-Rollenarchetyp, KEINE Erfolgsprognose)" -- niemals mit College
 //  Production Comp vermischen oder als Talent-/Erfolgsvorhersage labeln.
@@ -16,7 +20,7 @@
 
 const NFL_PROFILE_COMP = {
   "meta": {
-    "builtAt": "2026-09-27T19:26:05.129Z",
+    "builtAt": "2026-09-28T07:22:20.074Z",
     "matchFeatures": {
       "QB": [
         "avgPpaPass",
@@ -132216,6 +132220,15397 @@ const NFL_PROFILE_COMP = {
       "matched": 158,
       "unmatched": 575,
       "targetsWithComps": 173
+    }
+  },
+  "feats": {
+    "QB": {
+      "nfl_2026_drewallar": {
+        "avgPpaPass": 47.8,
+        "avgPpaRush": 68.5,
+        "usagePass": 19.6,
+        "usageRush": 48.9,
+        "compPct": 56.5,
+        "heightIn": 93.5,
+        "weightLb": 96.7
+      },
+      "nfl_2018_joshallen": {
+        "avgPpaPass": 8.7,
+        "avgPpaRush": 57.6,
+        "usagePass": 83.7,
+        "usageRush": 75,
+        "compPct": 4.3,
+        "heightIn": 93.5,
+        "weightLb": 94.6
+      },
+      "nfl_2026_carsonbeck": {
+        "avgPpaPass": 73.9,
+        "avgPpaRush": 6.5,
+        "usagePass": 54.3,
+        "usageRush": 32.6,
+        "compPct": 90.2,
+        "heightIn": 83.7,
+        "weightLb": 72.8
+      },
+      "nfl_2023_stetsonbennett": {
+        "avgPpaPass": 81.5,
+        "avgPpaRush": 64.1,
+        "usagePass": 38,
+        "usageRush": 32.6,
+        "compPct": 67.4,
+        "heightIn": 3.3,
+        "weightLb": 1.1
+      },
+      "nfl_2021_ianbook": {
+        "avgPpaPass": 40.2,
+        "avgPpaRush": 58.7,
+        "usagePass": 80.4,
+        "usageRush": 73.9,
+        "compPct": 39.1,
+        "heightIn": 6.5,
+        "weightLb": 13
+      },
+      "nfl_2020_joeburrow": {
+        "avgPpaPass": 94.6,
+        "avgPpaRush": 68.5,
+        "usagePass": 42.4,
+        "usageRush": 63,
+        "compPct": 97.8,
+        "heightIn": 83.7,
+        "weightLb": 44.6
+      },
+      "nfl_2023_seanclifford": {
+        "avgPpaPass": 37,
+        "avgPpaRush": 44.6,
+        "usagePass": 4.3,
+        "usageRush": 42.4,
+        "compPct": 35.9,
+        "heightIn": 40.2,
+        "weightLb": 29.3
+      },
+      "nfl_2022_mattcorral": {
+        "avgPpaPass": 33.7,
+        "avgPpaRush": 87,
+        "usagePass": 13,
+        "usageRush": 83.7,
+        "compPct": 66.3,
+        "heightIn": 21.7,
+        "weightLb": 12
+      },
+      "nfl_2024_jaydendaniels": {
+        "avgPpaPass": 96.7,
+        "avgPpaRush": 100,
+        "usagePass": 14.1,
+        "usageRush": 93.5,
+        "compPct": 90.2,
+        "heightIn": 83.7,
+        "weightLb": 21.7
+      },
+      "nfl_2018_samdarnold": {
+        "avgPpaPass": 51.1,
+        "avgPpaRush": 19.6,
+        "usagePass": 79.3,
+        "usageRush": 34.8,
+        "compPct": 26.1,
+        "heightIn": 83.7,
+        "weightLb": 72.8
+      },
+      "nfl_2025_jaxsondart": {
+        "avgPpaPass": 88,
+        "avgPpaRush": 54.3,
+        "usagePass": 31.5,
+        "usageRush": 82.6,
+        "compPct": 75,
+        "heightIn": 40.2,
+        "weightLb": 72.8
+      },
+      "nfl_2023_maxduggan": {
+        "avgPpaPass": 43.5,
+        "avgPpaRush": 55.4,
+        "usagePass": 33.7,
+        "usageRush": 81.5,
+        "compPct": 29.3,
+        "heightIn": 40.2,
+        "weightLb": 21.7
+      },
+      "nfl_2020_jacobeason": {
+        "avgPpaPass": 18.5,
+        "avgPpaRush": 47.8,
+        "usagePass": 92.4,
+        "usageRush": 12,
+        "compPct": 33.7,
+        "heightIn": 98.9,
+        "weightLb": 85.9
+      },
+      "nfl_2021_samehlinger": {
+        "avgPpaPass": 27.2,
+        "avgPpaRush": 40.2,
+        "usagePass": 51.1,
+        "usageRush": 89.1,
+        "compPct": 9.8,
+        "heightIn": 62,
+        "weightLb": 83.7
+      },
+      "nfl_2018_dannyetling": {
+        "avgPpaPass": 41.3,
+        "avgPpaRush": 65.2,
+        "usagePass": 30.4,
+        "usageRush": 28.3,
+        "compPct": 8.7,
+        "heightIn": 40.2,
+        "weightLb": 40.2
+      },
+      "nfl_2025_quinnewers": {
+        "avgPpaPass": 28.3,
+        "avgPpaRush": 73.9,
+        "usagePass": 33.7,
+        "usageRush": 10.9,
+        "compPct": 52.2,
+        "heightIn": 40.2,
+        "weightLb": 21.7
+      },
+      "nfl_2018_lukefalk": {
+        "avgPpaPass": 4.3,
+        "avgPpaRush": 4.3,
+        "usagePass": 3.3,
+        "usageRush": 47.8,
+        "compPct": 59.8,
+        "heightIn": 83.7,
+        "weightLb": 75
+      },
+      "nfl_2021_justinfields": {
+        "avgPpaPass": 57.6,
+        "avgPpaRush": 96.7,
+        "usagePass": 100,
+        "usageRush": 70.7,
+        "compPct": 81.5,
+        "heightIn": 62,
+        "weightLb": 87
+      },
+      "nfl_2019_ryanfinley": {
+        "avgPpaPass": 62,
+        "avgPpaRush": 14.1,
+        "usagePass": 91.3,
+        "usageRush": 23.9,
+        "compPct": 62,
+        "heightIn": 83.7,
+        "weightLb": 29.3
+      },
+      "nfl_2020_jakefromm": {
+        "avgPpaPass": 25,
+        "avgPpaRush": 1.1,
+        "usagePass": 40.2,
+        "usageRush": 4.3,
+        "compPct": 15.2,
+        "heightIn": 40.2,
+        "weightLb": 72.8
+      },
+      "nfl_2025_dillongabriel": {
+        "avgPpaPass": 72.8,
+        "avgPpaRush": 33.7,
+        "usagePass": 52.2,
+        "usageRush": 45.7,
+        "compPct": 93.5,
+        "heightIn": 3.3,
+        "weightLb": 7.6
+      },
+      "nfl_2026_taylengreen": {
+        "avgPpaPass": 39.1,
+        "avgPpaRush": 93.5,
+        "usagePass": 8.7,
+        "usageRush": 91.3,
+        "compPct": 13,
+        "heightIn": 98.9,
+        "weightLb": 76.1
+      },
+      "nfl_2019_willgrier": {
+        "avgPpaPass": 51.1,
+        "avgPpaRush": 15.2,
+        "usagePass": 7.6,
+        "usageRush": 15.2,
+        "compPct": 60.9,
+        "heightIn": 40.2,
+        "weightLb": 29.3
+      },
+      "nfl_2023_jakehaener": {
+        "avgPpaPass": 52.2,
+        "avgPpaRush": 30.4,
+        "usagePass": 63,
+        "usageRush": 17.4,
+        "compPct": 87,
+        "heightIn": 21.7,
+        "weightLb": 4.3
+      },
+      "nfl_2023_jarenhall": {
+        "avgPpaPass": 70.7,
+        "avgPpaRush": 31.5,
+        "usagePass": 98.9,
+        "usageRush": 81.5,
+        "compPct": 54.3,
+        "heightIn": 21.7,
+        "weightLb": 12
+      },
+      "nfl_2019_dwaynehaskins": {
+        "avgPpaPass": 78.3,
+        "avgPpaRush": 9.8,
+        "usagePass": 56.5,
+        "usageRush": 41.3,
+        "compPct": 80.4,
+        "heightIn": 62,
+        "weightLb": 72.8
+      },
+      "nfl_2020_justinherbert": {
+        "avgPpaPass": 53.3,
+        "avgPpaRush": 41.3,
+        "usagePass": 64.1,
+        "usageRush": 20.7,
+        "compPct": 58.7,
+        "heightIn": 98.9,
+        "weightLb": 98.9
+      },
+      "nfl_2023_hendonhooker": {
+        "avgPpaPass": 69.6,
+        "avgPpaRush": 79.3,
+        "usagePass": 12,
+        "usageRush": 71.7,
+        "compPct": 79.3,
+        "heightIn": 83.7,
+        "weightLb": 54.3
+      },
+      "nfl_2025_willhoward": {
+        "avgPpaPass": 90.2,
+        "avgPpaRush": 46.7,
+        "usagePass": 26.1,
+        "usageRush": 65.2,
+        "compPct": 94.6,
+        "heightIn": 83.7,
+        "weightLb": 98.9
+      },
+      "nfl_2022_samhowell": {
+        "avgPpaPass": 13,
+        "avgPpaRush": 91.3,
+        "usagePass": 89.1,
+        "usageRush": 96.7,
+        "compPct": 22.8,
+        "heightIn": 21.7,
+        "weightLb": 72.8
+      },
+      "nfl_2020_jalenhurts": {
+        "avgPpaPass": 93.5,
+        "avgPpaRush": 72.8,
+        "usagePass": 22.8,
+        "usageRush": 98.9,
+        "compPct": 77.2,
+        "heightIn": 40.2,
+        "weightLb": 55.4
+      },
+      "nfl_2018_lamarjackson": {
+        "avgPpaPass": 42.4,
+        "avgPpaRush": 84.8,
+        "usagePass": 35.9,
+        "usageRush": 100,
+        "compPct": 7.6,
+        "heightIn": 62,
+        "weightLb": 22.8
+      },
+      "nfl_2019_danieljones": {
+        "avgPpaPass": 3.3,
+        "avgPpaRush": 42.4,
+        "usagePass": 66.3,
+        "usageRush": 87,
+        "compPct": 10.9,
+        "heightIn": 93.5,
+        "weightLb": 72.8
+      },
+      "nfl_2021_macjones": {
+        "avgPpaPass": 97.8,
+        "avgPpaRush": 62,
+        "usagePass": 47.8,
+        "usageRush": 6.5,
+        "compPct": 100,
+        "heightIn": 62,
+        "weightLb": 32.6
+      },
+      "nfl_2026_athankaliakmanis": {
+        "avgPpaPass": 34.8,
+        "avgPpaRush": 3.3,
+        "usagePass": 77.2,
+        "usageRush": 58.7,
+        "compPct": 20.7,
+        "heightIn": 62,
+        "weightLb": 29.3
+      },
+      "nfl_2026_cadeklubnik": {
+        "avgPpaPass": 10.9,
+        "avgPpaRush": 21.7,
+        "usagePass": 25,
+        "usageRush": 69.6,
+        "compPct": 47.8,
+        "heightIn": 40.2,
+        "weightLb": 21.7
+      },
+      "nfl_2021_trevorlawrence": {
+        "avgPpaPass": 80.4,
+        "avgPpaRush": 66.3,
+        "usagePass": 5.4,
+        "usageRush": 60.9,
+        "compPct": 73.9,
+        "heightIn": 98.9,
+        "weightLb": 72.8
+      },
+      "nfl_2024_devinleary": {
+        "avgPpaPass": 20.7,
+        "avgPpaRush": 21.7,
+        "usagePass": 96.7,
+        "usageRush": 15.2,
+        "compPct": 4.3,
+        "heightIn": 21.7,
+        "weightLb": 48.9
+      },
+      "nfl_2018_tannerlee": {
+        "avgPpaPass": 9.8,
+        "avgPpaRush": 17.4,
+        "usagePass": 35.9,
+        "usageRush": 5.4,
+        "compPct": 5.4,
+        "heightIn": 83.7,
+        "weightLb": 72.8
+      },
+      "nfl_2025_rileyleonard": {
+        "avgPpaPass": 15.2,
+        "avgPpaRush": 76.1,
+        "usagePass": 16.3,
+        "usageRush": 94.6,
+        "compPct": 57.6,
+        "heightIn": 83.7,
+        "weightLb": 44.6
+      },
+      "nfl_2023_willlevis": {
+        "avgPpaPass": 30.4,
+        "avgPpaRush": 35.9,
+        "usagePass": 96.7,
+        "usageRush": 40.2,
+        "compPct": 46.7,
+        "heightIn": 62,
+        "weightLb": 93.5
+      },
+      "nfl_2019_drewlock": {
+        "avgPpaPass": 63,
+        "avgPpaRush": 26.1,
+        "usagePass": 76.1,
+        "usageRush": 28.3,
+        "compPct": 25,
+        "heightIn": 83.7,
+        "weightLb": 83.7
+      },
+      "nfl_2020_jordanlove": {
+        "avgPpaPass": 5.4,
+        "avgPpaRush": 23.9,
+        "usagePass": 44.6,
+        "usageRush": 53.3,
+        "compPct": 17.4,
+        "heightIn": 83.7,
+        "weightLb": 83.7
+      },
+      "nfl_2020_jakeluton": {
+        "avgPpaPass": 30.4,
+        "avgPpaRush": 83.7,
+        "usagePass": 56.5,
+        "usageRush": 8.7,
+        "compPct": 19.6,
+        "heightIn": 100,
+        "weightLb": 88
+      },
+      "nfl_2024_drakemaye": {
+        "avgPpaPass": 47.8,
+        "avgPpaRush": 92.4,
+        "usagePass": 89.1,
+        "usageRush": 72.8,
+        "compPct": 28.3,
+        "heightIn": 83.7,
+        "weightLb": 91.3
+      },
+      "nfl_2018_bakermayfield": {
+        "avgPpaPass": 96.7,
+        "avgPpaRush": 51.1,
+        "usagePass": 46.7,
+        "usageRush": 54.3,
+        "compPct": 82.6,
+        "heightIn": 21.7,
+        "weightLb": 72.8
+      },
+      "nfl_2024_jjmccarthy": {
+        "avgPpaPass": 82.6,
+        "avgPpaRush": 88,
+        "usagePass": 37,
+        "usageRush": 25,
+        "compPct": 91.3,
+        "heightIn": 62,
+        "weightLb": 5.4
+      },
+      "nfl_2025_kylemccord": {
+        "avgPpaPass": 48.9,
+        "avgPpaRush": 70.7,
+        "usagePass": 85.9,
+        "usageRush": 46.7,
+        "compPct": 54.3,
+        "heightIn": 62,
+        "weightLb": 72.8
+      },
+      "nfl_2018_alexmcgough": {
+        "avgPpaPass": 44.6,
+        "avgPpaRush": 45.7,
+        "usagePass": 10.9,
+        "usageRush": 51.1,
+        "compPct": 46.7,
+        "heightIn": 62,
+        "weightLb": 54.3
+      },
+      "nfl_2023_tannermckee": {
+        "avgPpaPass": 6.5,
+        "avgPpaRush": 2.2,
+        "usagePass": 67.4,
+        "usageRush": 44.6,
+        "compPct": 19.6,
+        "heightIn": 98.9,
+        "weightLb": 91.3
+      },
+      "nfl_2019_tracemcsorley": {
+        "avgPpaPass": 1.1,
+        "avgPpaRush": 48.9,
+        "usagePass": 54.3,
+        "usageRush": 92.4,
+        "compPct": 1.1,
+        "heightIn": 6.5,
+        "weightLb": 6.5
+      },
+      "nfl_2026_fernandomendoza": {
+        "avgPpaPass": 85.9,
+        "avgPpaRush": 97.8,
+        "usagePass": 50,
+        "usageRush": 38,
+        "compPct": 88,
+        "heightIn": 93.5,
+        "weightLb": 83.7
+      },
+      "nfl_2025_grahammertz": {
+        "avgPpaPass": 47.8,
+        "avgPpaRush": 27.2,
+        "usagePass": 60.9,
+        "usageRush": 35.9,
+        "compPct": 92.4,
+        "heightIn": 62,
+        "weightLb": 44.6
+      },
+      "nfl_2021_davismills": {
+        "avgPpaPass": 59.8,
+        "avgPpaRush": 29.3,
+        "usagePass": 89.1,
+        "usageRush": 52.2,
+        "compPct": 52.2,
+        "heightIn": 83.7,
+        "weightLb": 29.3
+      },
+      "nfl_2025_jalenmilroe": {
+        "avgPpaPass": 27.2,
+        "avgPpaRush": 69.6,
+        "usagePass": 18.5,
+        "usageRush": 96.7,
+        "compPct": 34.8,
+        "heightIn": 40.2,
+        "weightLb": 83.7
+      },
+      "nfl_2024_joemilton": {
+        "avgPpaPass": 58.7,
+        "avgPpaRush": 78.3,
+        "usagePass": 9.8,
+        "usageRush": 56.5,
+        "compPct": 40.2,
+        "heightIn": 93.5,
+        "weightLb": 96.7
+      },
+      "nfl_2019_gardnerminshew": {
+        "avgPpaPass": 23.9,
+        "avgPpaRush": 52.2,
+        "usagePass": 84.8,
+        "usageRush": 67.4,
+        "compPct": 83.7,
+        "heightIn": 40.2,
+        "weightLb": 44.6
+      },
+      "nfl_2021_kellenmond": {
+        "avgPpaPass": 55.4,
+        "avgPpaRush": 25,
+        "usagePass": 91.3,
+        "usageRush": 67.4,
+        "compPct": 27.2,
+        "heightIn": 62,
+        "weightLb": 48.9
+      },
+      "nfl_2020_jamesmorgan": {
+        "avgPpaPass": 12,
+        "avgPpaRush": 50,
+        "usagePass": 65.2,
+        "usageRush": 9.8,
+        "compPct": 6.5,
+        "heightIn": 83.7,
+        "weightLb": 31.5
+      },
+      "nfl_2026_behrenmorton": {
+        "avgPpaPass": 56.5,
+        "avgPpaRush": 5.4,
+        "usagePass": 1.1,
+        "usageRush": 2.2,
+        "compPct": 52.2,
+        "heightIn": 40.2,
+        "weightLb": 72.8
+      },
+      "nfl_2019_kylermurray": {
+        "avgPpaPass": 100,
+        "avgPpaRush": 95.7,
+        "usagePass": 48.9,
+        "usageRush": 88,
+        "compPct": 71.7,
+        "heightIn": 1.1,
+        "weightLb": 3.3
+      },
+      "nfl_2024_bonix": {
+        "avgPpaPass": 91.3,
+        "avgPpaRush": 80.4,
+        "usagePass": 30.4,
+        "usageRush": 43.5,
+        "compPct": 100,
+        "heightIn": 40.2,
+        "weightLb": 48.9
+      },
+      "nfl_2026_garrettnussmeier": {
+        "avgPpaPass": 7.6,
+        "avgPpaRush": 44.6,
+        "usagePass": 23.9,
+        "usageRush": 16.3,
+        "compPct": 65.2,
+        "heightIn": 21.7,
+        "weightLb": 12
+      },
+      "nfl_2023_aidanoconnell": {
+        "avgPpaPass": 19.6,
+        "avgPpaRush": 34.8,
+        "usagePass": 83.7,
+        "usageRush": 4.3,
+        "compPct": 33.7,
+        "heightIn": 62,
+        "weightLb": 21.7
+      },
+      "nfl_2024_michaelpenix": {
+        "avgPpaPass": 77.2,
+        "avgPpaRush": 39.1,
+        "usagePass": 73.9,
+        "usageRush": 18.5,
+        "compPct": 43.5,
+        "heightIn": 62,
+        "weightLb": 31.5
+      },
+      "nfl_2022_kennypickett": {
+        "avgPpaPass": 71.7,
+        "avgPpaRush": 75,
+        "usagePass": 58.7,
+        "usageRush": 59.8,
+        "compPct": 64.1,
+        "heightIn": 62,
+        "weightLb": 72.8
+      },
+      "nfl_2024_michaelpratt": {
+        "avgPpaPass": 64.1,
+        "avgPpaRush": 37,
+        "usagePass": 83.7,
+        "usageRush": 78.3,
+        "compPct": 46.7,
+        "heightIn": 62,
+        "weightLb": 72.8
+      },
+      "nfl_2022_brockpurdy": {
+        "avgPpaPass": 65.2,
+        "avgPpaRush": 18.5,
+        "usagePass": 39.1,
+        "usageRush": 62,
+        "compPct": 85.9,
+        "heightIn": 21.7,
+        "weightLb": 72.8
+      },
+      "nfl_2024_spencerrattler": {
+        "avgPpaPass": 31.5,
+        "avgPpaRush": 71.7,
+        "usagePass": 68.5,
+        "usageRush": 68.5,
+        "compPct": 71.7,
+        "heightIn": 21.7,
+        "weightLb": 48.9
+      },
+      "nfl_2023_anthonyrichardson": {
+        "avgPpaPass": 21.7,
+        "avgPpaRush": 94.6,
+        "usagePass": 60.9,
+        "usageRush": 84.8,
+        "compPct": 2.2,
+        "heightIn": 83.7,
+        "weightLb": 93.5
+      },
+      "nfl_2022_desmondridder": {
+        "avgPpaPass": 32.6,
+        "avgPpaRush": 56.5,
+        "usagePass": 76.1,
+        "usageRush": 78.3,
+        "compPct": 41.3,
+        "heightIn": 83.7,
+        "weightLb": 40.2
+      },
+      "nfl_2018_joshrosen": {
+        "avgPpaPass": 22.8,
+        "avgPpaRush": 38,
+        "usagePass": 42.4,
+        "usageRush": 32.6,
+        "compPct": 22.8,
+        "heightIn": 83.7,
+        "weightLb": 54.3
+      },
+      "nfl_2025_kurtisrourke": {
+        "avgPpaPass": 87,
+        "avgPpaRush": 7.6,
+        "usagePass": 46.7,
+        "usageRush": 13,
+        "compPct": 76.1,
+        "heightIn": 93.5,
+        "weightLb": 73.9
+      },
+      "nfl_2018_masonrudolph": {
+        "avgPpaPass": 83.7,
+        "avgPpaRush": 81.5,
+        "usagePass": 70.7,
+        "usageRush": 33.7,
+        "compPct": 42.4,
+        "heightIn": 93.5,
+        "weightLb": 91.3
+      },
+      "nfl_2025_shedeursanders": {
+        "avgPpaPass": 38,
+        "avgPpaRush": 59.8,
+        "usagePass": 94.6,
+        "usageRush": 76.1,
+        "compPct": 96.7,
+        "heightIn": 40.2,
+        "weightLb": 40.2
+      },
+      "nfl_2025_tylershough": {
+        "avgPpaPass": 60.9,
+        "avgPpaRush": 28.3,
+        "usagePass": 73.9,
+        "usageRush": 21.7,
+        "compPct": 23.9,
+        "heightIn": 93.5,
+        "weightLb": 83.7
+      },
+      "nfl_2026_tysimpson": {
+        "avgPpaPass": 37,
+        "avgPpaRush": 32.6,
+        "usagePass": 21.7,
+        "usageRush": 55.4,
+        "compPct": 38,
+        "heightIn": 40.2,
+        "weightLb": 14.1
+      },
+      "nfl_2019_jarrettstidham": {
+        "avgPpaPass": 17.4,
+        "avgPpaRush": 10.9,
+        "usagePass": 73.9,
+        "usageRush": 37,
+        "compPct": 13,
+        "heightIn": 62,
+        "weightLb": 40.2
+      },
+      "nfl_2023_cjstroud": {
+        "avgPpaPass": 84.8,
+        "avgPpaRush": 22.8,
+        "usagePass": 57.6,
+        "usageRush": 23.9,
+        "compPct": 55.4,
+        "heightIn": 62,
+        "weightLb": 54.3
+      },
+      "nfl_2020_tuatagovailoa": {
+        "avgPpaPass": 98.9,
+        "avgPpaRush": 82.6,
+        "usagePass": 6.5,
+        "usageRush": 1.1,
+        "compPct": 84.8,
+        "heightIn": 21.7,
+        "weightLb": 54.3
+      },
+      "nfl_2023_dorianthompsonrobinson": {
+        "avgPpaPass": 55.4,
+        "avgPpaRush": 85.9,
+        "usagePass": 21.7,
+        "usageRush": 81.5,
+        "compPct": 79.3,
+        "heightIn": 21.7,
+        "weightLb": 12
+      },
+      "nfl_2019_claytonthorson": {
+        "avgPpaPass": 2.2,
+        "avgPpaRush": 60.9,
+        "usagePass": 43.5,
+        "usageRush": 32.6,
+        "compPct": 15.2,
+        "heightIn": 83.7,
+        "weightLb": 84.8
+      },
+      "nfl_2021_kyletrask": {
+        "avgPpaPass": 89.1,
+        "avgPpaRush": 12,
+        "usagePass": 62,
+        "usageRush": 58.7,
+        "compPct": 71.7,
+        "heightIn": 93.5,
+        "weightLb": 100
+      },
+      "nfl_2024_jordantravis": {
+        "avgPpaPass": 66.3,
+        "avgPpaRush": 53.3,
+        "usagePass": 15.2,
+        "usageRush": 65.2,
+        "compPct": 30.4,
+        "heightIn": 21.7,
+        "weightLb": 29.3
+      },
+      "nfl_2023_claytontune": {
+        "avgPpaPass": 79.3,
+        "avgPpaRush": 63,
+        "usagePass": 97.8,
+        "usageRush": 90.2,
+        "compPct": 64.1,
+        "heightIn": 62,
+        "weightLb": 72.8
+      },
+      "nfl_2018_mikewhite": {
+        "avgPpaPass": 17.4,
+        "avgPpaRush": 16.3,
+        "usagePass": 70.7,
+        "usageRush": 19.6,
+        "compPct": 48.9,
+        "heightIn": 83.7,
+        "weightLb": 83.7
+      },
+      "nfl_2024_calebwilliams": {
+        "avgPpaPass": 75,
+        "avgPpaRush": 77.2,
+        "usagePass": 28.3,
+        "usageRush": 85.9,
+        "compPct": 68.5,
+        "heightIn": 21.7,
+        "weightLb": 40.2
+      },
+      "nfl_2022_malikwillis": {
+        "avgPpaPass": 15.2,
+        "avgPpaRush": 98.9,
+        "usagePass": 18.5,
+        "usageRush": 97.8,
+        "compPct": 16.3,
+        "heightIn": 21.7,
+        "weightLb": 40.2
+      },
+      "nfl_2021_zachwilson": {
+        "avgPpaPass": 92.4,
+        "avgPpaRush": 89.1,
+        "usagePass": 2.2,
+        "usageRush": 50,
+        "compPct": 95.7,
+        "heightIn": 62,
+        "weightLb": 21.7
+      },
+      "nfl_2018_loganwoodside": {
+        "avgPpaPass": 68.5,
+        "avgPpaRush": 8.7,
+        "usagePass": 78.3,
+        "usageRush": 8.7,
+        "compPct": 33.7,
+        "heightIn": 40.2,
+        "weightLb": 21.7
+      },
+      "nfl_2023_bryceyoung": {
+        "avgPpaPass": 67.4,
+        "avgPpaRush": 90.2,
+        "usagePass": 27.2,
+        "usageRush": 26.1,
+        "compPct": 38,
+        "heightIn": 6.5,
+        "weightLb": 2.2
+      },
+      "nfl_2022_baileyzappe": {
+        "avgPpaPass": 76.1,
+        "avgPpaRush": 14.1,
+        "usagePass": 93.5,
+        "usageRush": 40.2,
+        "compPct": 73.9,
+        "heightIn": 40.2,
+        "weightLb": 40.2
+      },
+      "2025_4427313": {
+        "avgPpaPass": 9.8,
+        "avgPpaRush": 12,
+        "usagePass": 43.5,
+        "usageRush": 62,
+        "compPct": 5.4,
+        "heightIn": 6.5,
+        "weightLb": 4.3
+      },
+      "2025_4427966": {
+        "avgPpaPass": 10.9,
+        "avgPpaRush": 55.4,
+        "usagePass": 9.8,
+        "usageRush": 47.8,
+        "compPct": 60.9,
+        "heightIn": 40.2,
+        "weightLb": 32.6
+      },
+      "2025_4428993": {
+        "avgPpaPass": 60.9,
+        "avgPpaRush": 51.1,
+        "usagePass": 98.9,
+        "usageRush": 98.9,
+        "compPct": 79.3,
+        "heightIn": 62,
+        "weightLb": 40.2
+      },
+      "2025_4429149": {
+        "avgPpaPass": 9.8,
+        "avgPpaRush": 84.8,
+        "usagePass": 15.2,
+        "usageRush": 89.1,
+        "compPct": 68.5,
+        "heightIn": 62,
+        "weightLb": 21.7
+      },
+      "2025_4429582": {
+        "avgPpaPass": 75,
+        "avgPpaRush": 66.3,
+        "usagePass": 57.6,
+        "usageRush": 37,
+        "compPct": 71.7,
+        "heightIn": 83.7,
+        "weightLb": 83.7
+      },
+      "2025_4429801": {
+        "avgPpaPass": 38,
+        "avgPpaRush": 51.1,
+        "usagePass": 8.7,
+        "usageRush": 26.1,
+        "compPct": 39.1,
+        "heightIn": 62,
+        "weightLb": 100
+      },
+      "2025_4430841": {
+        "avgPpaPass": 73.9,
+        "avgPpaRush": 6.5,
+        "usagePass": 54.3,
+        "usageRush": 32.6,
+        "compPct": 90.2,
+        "heightIn": 83.7,
+        "weightLb": 72.8
+      },
+      "2025_4431091": {
+        "avgPpaPass": 3.3,
+        "avgPpaRush": 47.8,
+        "usagePass": 60.9,
+        "usageRush": 41.3,
+        "compPct": 0,
+        "heightIn": 62,
+        "weightLb": 4.3
+      },
+      "2025_4431114": {
+        "avgPpaPass": 8.7,
+        "avgPpaRush": 26.1,
+        "usagePass": 7.6,
+        "usageRush": 0,
+        "compPct": 4.3,
+        "heightIn": 62,
+        "weightLb": 72.8
+      },
+      "2025_4431325": {
+        "avgPpaPass": 39.1,
+        "avgPpaRush": 93.5,
+        "usagePass": 8.7,
+        "usageRush": 91.3,
+        "compPct": 13,
+        "heightIn": 98.9,
+        "weightLb": 76.1
+      },
+      "2025_4431387": {
+        "avgPpaPass": 19.6,
+        "avgPpaRush": 9.8,
+        "usagePass": 15.2,
+        "usageRush": 58.7,
+        "compPct": 10.9,
+        "heightIn": 62,
+        "weightLb": 12
+      },
+      "2025_4431416": {
+        "avgPpaPass": 0,
+        "avgPpaRush": 28.3,
+        "usagePass": 96.7,
+        "usageRush": 98.9,
+        "compPct": 4.3,
+        "heightIn": 40.2,
+        "weightLb": 0
+      },
+      "2025_4431465": {
+        "avgPpaPass": 56.5,
+        "avgPpaRush": 5.4,
+        "usagePass": 1.1,
+        "usageRush": 2.2,
+        "compPct": 52.2,
+        "heightIn": 40.2,
+        "weightLb": 72.8
+      },
+      "2025_4431580": {
+        "avgPpaPass": 2.2,
+        "avgPpaRush": 98.9,
+        "usagePass": 76.1,
+        "usageRush": 26.1,
+        "compPct": 33.7,
+        "heightIn": 40.2,
+        "weightLb": 21.7
+      },
+      "2025_4432691": {
+        "avgPpaPass": 41.3,
+        "avgPpaRush": 17.4,
+        "usagePass": 3.3,
+        "usageRush": 94.6,
+        "compPct": 58.7,
+        "heightIn": 40.2,
+        "weightLb": 83.7
+      },
+      "2025_4432722": {
+        "avgPpaPass": 34.8,
+        "avgPpaRush": 3.3,
+        "usagePass": 77.2,
+        "usageRush": 58.7,
+        "compPct": 20.7,
+        "heightIn": 62,
+        "weightLb": 29.3
+      },
+      "2025_4432759": {
+        "avgPpaPass": 9.8,
+        "avgPpaRush": 95.7,
+        "usagePass": 93.5,
+        "usageRush": 33.7,
+        "compPct": 9.8,
+        "heightIn": 83.7,
+        "weightLb": 72.8
+      },
+      "2025_4432767": {
+        "avgPpaPass": 9.8,
+        "avgPpaRush": 5.4,
+        "usagePass": 78.3,
+        "usageRush": 26.1,
+        "compPct": 8.7,
+        "heightIn": 21.7,
+        "weightLb": 40.2
+      },
+      "2025_4565187": {
+        "avgPpaPass": 10.9,
+        "avgPpaRush": 58.7,
+        "usagePass": 13,
+        "usageRush": 9.8,
+        "compPct": 54.3,
+        "heightIn": 93.5,
+        "weightLb": 83.7
+      },
+      "2025_4565315": {
+        "avgPpaPass": 8.7,
+        "avgPpaRush": 5.4,
+        "usagePass": 27.2,
+        "usageRush": 72.8,
+        "compPct": 30.4,
+        "heightIn": 21.7,
+        "weightLb": 21.7
+      },
+      "2025_4567747": {
+        "avgPpaPass": 7.6,
+        "avgPpaRush": 44.6,
+        "usagePass": 23.9,
+        "usageRush": 16.3,
+        "compPct": 65.2,
+        "heightIn": 21.7,
+        "weightLb": 12
+      },
+      "2025_4569535": {
+        "avgPpaPass": 37,
+        "avgPpaRush": 46.7,
+        "usagePass": 54.3,
+        "usageRush": 53.3,
+        "compPct": 48.9,
+        "heightIn": 93.5,
+        "weightLb": 72.8
+      },
+      "2025_4596472": {
+        "avgPpaPass": 25,
+        "avgPpaRush": 60.9,
+        "usagePass": 33.7,
+        "usageRush": 87,
+        "compPct": 19.6,
+        "heightIn": 6.5,
+        "weightLb": 72.8
+      },
+      "2025_4597679": {
+        "avgPpaPass": 57.6,
+        "avgPpaRush": 65.2,
+        "usagePass": 93.5,
+        "usageRush": 59.8,
+        "compPct": 65.2,
+        "heightIn": 40.2,
+        "weightLb": 12
+      },
+      "2025_4600403": {
+        "avgPpaPass": 10.9,
+        "avgPpaRush": 29.3,
+        "usagePass": 76.1,
+        "usageRush": 71.7,
+        "compPct": 28.3,
+        "heightIn": 40.2,
+        "weightLb": 91.3
+      },
+      "2025_4605998": {
+        "avgPpaPass": 1.1,
+        "avgPpaRush": 12,
+        "usagePass": 46.7,
+        "usageRush": 83.7,
+        "compPct": 2.2,
+        "heightIn": 6.5,
+        "weightLb": 12
+      },
+      "2025_4610131": {
+        "avgPpaPass": 15.2,
+        "avgPpaRush": 58.7,
+        "usagePass": 78.3,
+        "usageRush": 88,
+        "compPct": 19.6,
+        "heightIn": 6.5,
+        "weightLb": 12
+      },
+      "2025_4678010": {
+        "avgPpaPass": 2.2,
+        "avgPpaRush": 54.3,
+        "usagePass": 91.3,
+        "usageRush": 97.8,
+        "compPct": 4.3,
+        "heightIn": 40.2,
+        "weightLb": 96.7
+      },
+      "2025_4682518": {
+        "avgPpaPass": 3.3,
+        "avgPpaRush": 6.5,
+        "usagePass": 43.5,
+        "usageRush": 82.6,
+        "compPct": 16.3,
+        "heightIn": 6.5,
+        "weightLb": 29.3
+      },
+      "2025_4683291": {
+        "avgPpaPass": 72.8,
+        "avgPpaRush": 5.4,
+        "usagePass": 3.3,
+        "usageRush": 20.7,
+        "compPct": 83.7,
+        "heightIn": 83.7,
+        "weightLb": 21.7
+      },
+      "2025_4685311": {
+        "avgPpaPass": 0,
+        "avgPpaRush": 10.9,
+        "usagePass": 68.5,
+        "usageRush": 40.2,
+        "compPct": 6.5,
+        "heightIn": 93.5,
+        "weightLb": 91.3
+      },
+      "2025_4685345": {
+        "avgPpaPass": 7.6,
+        "avgPpaRush": 51.1,
+        "usagePass": 16.3,
+        "usageRush": 87,
+        "compPct": 29.3,
+        "heightIn": 21.7,
+        "weightLb": 12
+      },
+      "2025_4685401": {
+        "avgPpaPass": 60.9,
+        "avgPpaRush": 17.4,
+        "usagePass": 85.9,
+        "usageRush": 37,
+        "compPct": 52.2,
+        "heightIn": 40.2,
+        "weightLb": 4.3
+      },
+      "2025_4685413": {
+        "avgPpaPass": 10.9,
+        "avgPpaRush": 21.7,
+        "usagePass": 25,
+        "usageRush": 69.6,
+        "compPct": 47.8,
+        "heightIn": 40.2,
+        "weightLb": 21.7
+      },
+      "2025_4685454": {
+        "avgPpaPass": 84.8,
+        "avgPpaRush": 93.5,
+        "usagePass": 60.9,
+        "usageRush": 37,
+        "compPct": 52.2,
+        "heightIn": 83.7,
+        "weightLb": 91.3
+      },
+      "2025_4685497": {
+        "avgPpaPass": 4.3,
+        "avgPpaRush": 19.6,
+        "usagePass": 0,
+        "usageRush": 0,
+        "compPct": 6.5,
+        "heightIn": 93.5,
+        "weightLb": 98.9
+      },
+      "2025_4685522": {
+        "avgPpaPass": 37,
+        "avgPpaRush": 32.6,
+        "usagePass": 21.7,
+        "usageRush": 55.4,
+        "compPct": 38,
+        "heightIn": 40.2,
+        "weightLb": 14.1
+      },
+      "2025_4685574": {
+        "avgPpaPass": 38,
+        "avgPpaRush": 27.2,
+        "usagePass": 52.2,
+        "usageRush": 90.2,
+        "compPct": 42.4,
+        "heightIn": 62,
+        "weightLb": 21.7
+      },
+      "2025_4685578": {
+        "avgPpaPass": 42.4,
+        "avgPpaRush": 56.5,
+        "usagePass": 38,
+        "usageRush": 78.3,
+        "compPct": 79.3,
+        "heightIn": 21.7,
+        "weightLb": 40.2
+      },
+      "2025_4685696": {
+        "avgPpaPass": 9.8,
+        "avgPpaRush": 26.1,
+        "usagePass": 21.7,
+        "usageRush": 59.8,
+        "compPct": 65.2,
+        "heightIn": 40.2,
+        "weightLb": 14.1
+      },
+      "2025_4690158": {
+        "avgPpaPass": 18.5,
+        "avgPpaRush": 31.5,
+        "usagePass": 100,
+        "usageRush": 65.2,
+        "compPct": 16.3,
+        "heightIn": 40.2,
+        "weightLb": 0
+      },
+      "2025_4692530": {
+        "avgPpaPass": 10.9,
+        "avgPpaRush": 96.7,
+        "usagePass": 10.9,
+        "usageRush": 33.7,
+        "compPct": 39.1,
+        "heightIn": 6.5,
+        "weightLb": 1.1
+      },
+      "2025_4694149": {
+        "avgPpaPass": 28.3,
+        "avgPpaRush": 12,
+        "usagePass": 7.6,
+        "usageRush": 38,
+        "compPct": 6.5,
+        "heightIn": 62,
+        "weightLb": 96.7
+      },
+      "2025_4695400": {
+        "avgPpaPass": 9.8,
+        "avgPpaRush": 83.7,
+        "usagePass": 31.5,
+        "usageRush": 87,
+        "compPct": 28.3,
+        "heightIn": 40.2,
+        "weightLb": 96.7
+      },
+      "2025_4695600": {
+        "avgPpaPass": 9.8,
+        "avgPpaRush": 44.6,
+        "usagePass": 15.2,
+        "usageRush": 97.8,
+        "compPct": 7.6,
+        "heightIn": 40.2,
+        "weightLb": 21.7
+      },
+      "2025_4697512": {
+        "avgPpaPass": 12,
+        "avgPpaRush": 58.7,
+        "usagePass": 5.4,
+        "usageRush": 90.2,
+        "compPct": 7.6,
+        "heightIn": 40.2,
+        "weightLb": 72.8
+      },
+      "2025_4773919": {
+        "avgPpaPass": 32.6,
+        "avgPpaRush": 53.3,
+        "usagePass": 25,
+        "usageRush": 87,
+        "compPct": 6.5,
+        "heightIn": 1.1,
+        "weightLb": 1.1
+      },
+      "2025_4775136": {
+        "avgPpaPass": 28.3,
+        "avgPpaRush": 64.1,
+        "usagePass": 26.1,
+        "usageRush": 6.5,
+        "compPct": 65.2,
+        "heightIn": 21.7,
+        "weightLb": 1.1
+      },
+      "2025_4795295": {
+        "avgPpaPass": 39.1,
+        "avgPpaRush": 31.5,
+        "usagePass": 66.3,
+        "usageRush": 55.4,
+        "compPct": 52.2,
+        "heightIn": 62,
+        "weightLb": 83.7
+      },
+      "2025_4801299": {
+        "avgPpaPass": 12,
+        "avgPpaRush": 77.2,
+        "usagePass": 84.8,
+        "usageRush": 52.2,
+        "compPct": 10.9,
+        "heightIn": 21.7,
+        "weightLb": 14.1
+      },
+      "2025_4801307": {
+        "avgPpaPass": 9.8,
+        "avgPpaRush": 32.6,
+        "usagePass": 16.3,
+        "usageRush": 44.6,
+        "compPct": 28.3,
+        "heightIn": 83.7,
+        "weightLb": 29.3
+      },
+      "2025_4801717": {
+        "avgPpaPass": 9.8,
+        "avgPpaRush": 29.3,
+        "usagePass": 67.4,
+        "usageRush": 81.5,
+        "compPct": 30.4,
+        "heightIn": 1.1,
+        "weightLb": 1.1
+      },
+      "2025_4832918": {
+        "avgPpaPass": 9.8,
+        "avgPpaRush": 41.3,
+        "usagePass": 46.7,
+        "usageRush": 82.6,
+        "compPct": 4.3,
+        "heightIn": 62,
+        "weightLb": 72.8
+      },
+      "2025_4837248": {
+        "avgPpaPass": 85.9,
+        "avgPpaRush": 97.8,
+        "usagePass": 50,
+        "usageRush": 38,
+        "compPct": 88,
+        "heightIn": 93.5,
+        "weightLb": 83.7
+      },
+      "2025_4869553": {
+        "avgPpaPass": 7.6,
+        "avgPpaRush": 51.1,
+        "usagePass": 56.5,
+        "usageRush": 65.2,
+        "compPct": 66.3,
+        "heightIn": 40.2,
+        "weightLb": 21.7
+      },
+      "2025_4869991": {
+        "avgPpaPass": 10.9,
+        "avgPpaRush": 19.6,
+        "usagePass": 12,
+        "usageRush": 70.7,
+        "compPct": 62,
+        "heightIn": 93.5,
+        "weightLb": 96.7
+      },
+      "2025_4870513": {
+        "avgPpaPass": 19.6,
+        "avgPpaRush": 53.3,
+        "usagePass": 3.3,
+        "usageRush": 41.3,
+        "compPct": 6.5,
+        "heightIn": 1.1,
+        "weightLb": 13
+      },
+      "2025_4870799": {
+        "avgPpaPass": 0,
+        "avgPpaRush": 97.8,
+        "usagePass": 67.4,
+        "usageRush": 88,
+        "compPct": 35.9,
+        "heightIn": 93.5,
+        "weightLb": 40.2
+      },
+      "2025_4870857": {
+        "avgPpaPass": 9.8,
+        "avgPpaRush": 51.1,
+        "usagePass": 97.8,
+        "usageRush": 87,
+        "compPct": 7.6,
+        "heightIn": 62,
+        "weightLb": 4.3
+      },
+      "2025_4870900": {
+        "avgPpaPass": 9.8,
+        "avgPpaRush": 3.3,
+        "usagePass": 0,
+        "usageRush": 26.1,
+        "compPct": 59.8,
+        "heightIn": 40.2,
+        "weightLb": 21.7
+      },
+      "2025_4870906": {
+        "avgPpaPass": 17.4,
+        "avgPpaRush": 97.8,
+        "usagePass": 77.2,
+        "usageRush": 65.2,
+        "compPct": 16.3,
+        "heightIn": 83.7,
+        "weightLb": 73.9
+      },
+      "2025_4870921": {
+        "avgPpaPass": 68.5,
+        "avgPpaRush": 32.6,
+        "usagePass": 47.8,
+        "usageRush": 40.2,
+        "compPct": 85.9,
+        "heightIn": 62,
+        "weightLb": 13
+      },
+      "2025_4870971": {
+        "avgPpaPass": 60.9,
+        "avgPpaRush": 37,
+        "usagePass": 37,
+        "usageRush": 72.8,
+        "compPct": 19.6,
+        "heightIn": 21.7,
+        "weightLb": 0
+      },
+      "2025_4871091": {
+        "avgPpaPass": 9.8,
+        "avgPpaRush": 31.5,
+        "usagePass": 0,
+        "usageRush": 89.1,
+        "compPct": 6.5,
+        "heightIn": 40.2,
+        "weightLb": 83.7
+      },
+      "2025_4875127": {
+        "avgPpaPass": 8.7,
+        "avgPpaRush": 55.4,
+        "usagePass": 8.7,
+        "usageRush": 90.2,
+        "compPct": 15.2,
+        "heightIn": 62,
+        "weightLb": 98.9
+      },
+      "2025_4876066": {
+        "avgPpaPass": 3.3,
+        "avgPpaRush": 60.9,
+        "usagePass": 25,
+        "usageRush": 88,
+        "compPct": 23.9,
+        "heightIn": 6.5,
+        "weightLb": 14.1
+      },
+      "2025_4880272": {
+        "avgPpaPass": 77.2,
+        "avgPpaRush": 58.7,
+        "usagePass": 47.8,
+        "usageRush": 97.8,
+        "compPct": 55.4,
+        "heightIn": 62,
+        "weightLb": 96.7
+      },
+      "2025_4899046": {
+        "avgPpaPass": 76.1,
+        "avgPpaRush": 75,
+        "usagePass": 83.7,
+        "usageRush": 88,
+        "compPct": 16.3,
+        "heightIn": 62,
+        "weightLb": 96.7
+      },
+      "2025_4899468": {
+        "avgPpaPass": 1.1,
+        "avgPpaRush": 5.4,
+        "usagePass": 9.8,
+        "usageRush": 23.9,
+        "compPct": 4.3,
+        "heightIn": 83.7,
+        "weightLb": 91.3
+      },
+      "2025_4911529": {
+        "avgPpaPass": 71.7,
+        "avgPpaRush": 34.8,
+        "usagePass": 7.6,
+        "usageRush": 82.6,
+        "compPct": 54.3,
+        "heightIn": 6.5,
+        "weightLb": 12
+      },
+      "2025_4911929": {
+        "avgPpaPass": 10.9,
+        "avgPpaRush": 68.5,
+        "usagePass": 62,
+        "usageRush": 70.7,
+        "compPct": 6.5,
+        "heightIn": 3.3,
+        "weightLb": 21.7
+      },
+      "2025_4912119": {
+        "avgPpaPass": 4.3,
+        "avgPpaRush": 23.9,
+        "usagePass": 0,
+        "usageRush": 88,
+        "compPct": 6.5,
+        "heightIn": 6.5,
+        "weightLb": 14.1
+      },
+      "2025_4915980": {
+        "avgPpaPass": 7.6,
+        "avgPpaRush": 28.3,
+        "usagePass": 89.1,
+        "usageRush": 97.8,
+        "compPct": 20.7,
+        "heightIn": 21.7,
+        "weightLb": 76.1
+      },
+      "2025_4916436": {
+        "avgPpaPass": 41.3,
+        "avgPpaRush": 100,
+        "usagePass": 64.1,
+        "usageRush": 28.3,
+        "compPct": 75,
+        "heightIn": 6.5,
+        "weightLb": 6.5
+      },
+      "2025_4920227": {
+        "avgPpaPass": 7.6,
+        "avgPpaRush": 10.9,
+        "usagePass": 5.4,
+        "usageRush": 82.6,
+        "compPct": 42.4,
+        "heightIn": 6.5,
+        "weightLb": 6.5
+      },
+      "2025_5044387": {
+        "avgPpaPass": 41.3,
+        "avgPpaRush": 95.7,
+        "usagePass": 85.9,
+        "usageRush": 87,
+        "compPct": 52.2,
+        "heightIn": 6.5,
+        "weightLb": 12
+      },
+      "2025_5074245": {
+        "avgPpaPass": 2.2,
+        "avgPpaRush": 37,
+        "usagePass": 5.4,
+        "usageRush": 93.5,
+        "compPct": 28.3,
+        "heightIn": 21.7,
+        "weightLb": 21.7
+      },
+      "2025_5078810": {
+        "avgPpaPass": 8.7,
+        "avgPpaRush": 97.8,
+        "usagePass": 60.9,
+        "usageRush": 87,
+        "compPct": 13,
+        "heightIn": 40.2,
+        "weightLb": 44.6
+      },
+      "2025_5079301": {
+        "avgPpaPass": 42.4,
+        "avgPpaRush": 62,
+        "usagePass": 68.5,
+        "usageRush": 59.8,
+        "compPct": 68.5,
+        "heightIn": 98.9,
+        "weightLb": 31.5
+      },
+      "2025_5079369": {
+        "avgPpaPass": 66.3,
+        "avgPpaRush": 62,
+        "usagePass": 28.3,
+        "usageRush": 20.7,
+        "compPct": 56.5,
+        "heightIn": 40.2,
+        "weightLb": 40.2
+      },
+      "2025_5079555": {
+        "avgPpaPass": 3.3,
+        "avgPpaRush": 32.6,
+        "usagePass": 26.1,
+        "usageRush": 55.4,
+        "compPct": 27.2,
+        "heightIn": 62,
+        "weightLb": 98.9
+      },
+      "2025_5079572": {
+        "avgPpaPass": 10.9,
+        "avgPpaRush": 63,
+        "usagePass": 28.3,
+        "usageRush": 13,
+        "compPct": 91.3,
+        "heightIn": 62,
+        "weightLb": 91.3
+      },
+      "2025_5079653": {
+        "avgPpaPass": 38,
+        "avgPpaRush": 68.5,
+        "usagePass": 44.6,
+        "usageRush": 88,
+        "compPct": 77.2,
+        "heightIn": 3.3,
+        "weightLb": 1.1
+      },
+      "2025_5079712": {
+        "avgPpaPass": 91.3,
+        "avgPpaRush": 10.9,
+        "usagePass": 62,
+        "usageRush": 6.5,
+        "compPct": 97.8,
+        "heightIn": 21.7,
+        "weightLb": 32.6
+      },
+      "2025_5080403": {
+        "avgPpaPass": 8.7,
+        "avgPpaRush": 17.4,
+        "usagePass": 97.8,
+        "usageRush": 92.4,
+        "compPct": 55.4,
+        "heightIn": 21.7,
+        "weightLb": 14.1
+      },
+      "2025_5081504": {
+        "avgPpaPass": 83.7,
+        "avgPpaRush": 47.8,
+        "usagePass": 27.2,
+        "usageRush": 97.8,
+        "compPct": 15.2,
+        "heightIn": 40.2,
+        "weightLb": 3.3
+      },
+      "2025_5083171": {
+        "avgPpaPass": 3.3,
+        "avgPpaRush": 75,
+        "usagePass": 46.7,
+        "usageRush": 47.8,
+        "compPct": 42.4,
+        "heightIn": 40.2,
+        "weightLb": 14.1
+      },
+      "2025_5084084": {
+        "avgPpaPass": 59.8,
+        "avgPpaRush": 19.6,
+        "usagePass": 91.3,
+        "usageRush": 54.3,
+        "compPct": 54.3,
+        "heightIn": 6.5,
+        "weightLb": 1.1
+      },
+      "2025_5084180": {
+        "avgPpaPass": 84.8,
+        "avgPpaRush": 60.9,
+        "usagePass": 51.1,
+        "usageRush": 97.8,
+        "compPct": 82.6,
+        "heightIn": 6.5,
+        "weightLb": 13
+      },
+      "2025_5085337": {
+        "avgPpaPass": 2.2,
+        "avgPpaRush": 10.9,
+        "usagePass": 0,
+        "usageRush": 43.5,
+        "compPct": 20.7,
+        "heightIn": 6.5,
+        "weightLb": 4.3
+      },
+      "2025_5101124": {
+        "avgPpaPass": 47.8,
+        "avgPpaRush": 12,
+        "usagePass": 38,
+        "usageRush": 75,
+        "compPct": 55.4,
+        "heightIn": 1.1,
+        "weightLb": 0
+      },
+      "2025_5104738": {
+        "avgPpaPass": 3.3,
+        "avgPpaRush": 71.7,
+        "usagePass": 5.4,
+        "usageRush": 58.7,
+        "compPct": 6.5,
+        "heightIn": 83.7,
+        "weightLb": 72.8
+      },
+      "2025_5105849": {
+        "avgPpaPass": 41.3,
+        "avgPpaRush": 81.5,
+        "usagePass": 62,
+        "usageRush": 89.1,
+        "compPct": 28.3,
+        "heightIn": 3.3,
+        "weightLb": 21.7
+      },
+      "2025_5119841": {
+        "avgPpaPass": 23.9,
+        "avgPpaRush": 14.1,
+        "usagePass": 9.8,
+        "usageRush": 47.8,
+        "compPct": 4.3,
+        "heightIn": 40.2,
+        "weightLb": 3.3
+      },
+      "2025_5121169": {
+        "avgPpaPass": 57.6,
+        "avgPpaRush": 8.7,
+        "usagePass": 93.5,
+        "usageRush": 25,
+        "compPct": 58.7,
+        "heightIn": 62,
+        "weightLb": 12
+      },
+      "2025_5122054": {
+        "avgPpaPass": 3.3,
+        "avgPpaRush": 9.8,
+        "usagePass": 27.2,
+        "usageRush": 43.5,
+        "compPct": 6.5,
+        "heightIn": 62,
+        "weightLb": 21.7
+      },
+      "2025_5122157": {
+        "avgPpaPass": 3.3,
+        "avgPpaRush": 48.9,
+        "usagePass": 0,
+        "usageRush": 88,
+        "compPct": 16.3,
+        "heightIn": 6.5,
+        "weightLb": 4.3
+      },
+      "2025_5125715": {
+        "avgPpaPass": 75,
+        "avgPpaRush": 48.9,
+        "usagePass": 57.6,
+        "usageRush": 90.2,
+        "compPct": 8.7,
+        "heightIn": 40.2,
+        "weightLb": 29.3
+      },
+      "2025_5141367": {
+        "avgPpaPass": 19.6,
+        "avgPpaRush": 47.8,
+        "usagePass": 76.1,
+        "usageRush": 88,
+        "compPct": 41.3,
+        "heightIn": 40.2,
+        "weightLb": 91.3
+      },
+      "2025_5141378": {
+        "avgPpaPass": 18.5,
+        "avgPpaRush": 34.8,
+        "usagePass": 8.7,
+        "usageRush": 43.5,
+        "compPct": 52.2,
+        "heightIn": 93.5,
+        "weightLb": 72.8
+      },
+      "2025_5141695": {
+        "avgPpaPass": 7.6,
+        "avgPpaRush": 63,
+        "usagePass": 66.3,
+        "usageRush": 59.8,
+        "compPct": 5.4,
+        "heightIn": 93.5,
+        "weightLb": 91.3
+      },
+      "2025_5141741": {
+        "avgPpaPass": 7.6,
+        "avgPpaRush": 79.3,
+        "usagePass": 93.5,
+        "usageRush": 52.2,
+        "compPct": 9.8,
+        "heightIn": 83.7,
+        "weightLb": 87
+      },
+      "2025_5144959": {
+        "avgPpaPass": 6.5,
+        "avgPpaRush": 35.9,
+        "usagePass": 80.4,
+        "usageRush": 0,
+        "compPct": 27.2,
+        "heightIn": 93.5,
+        "weightLb": 91.3
+      },
+      "2025_5148803": {
+        "avgPpaPass": 60.9,
+        "avgPpaRush": 66.3,
+        "usagePass": 93.5,
+        "usageRush": 90.2,
+        "compPct": 83.7,
+        "heightIn": 6.5,
+        "weightLb": 3.3
+      },
+      "2025_5150611": {
+        "avgPpaPass": 47.8,
+        "avgPpaRush": 63,
+        "usagePass": 33.7,
+        "usageRush": 87,
+        "compPct": 17.4,
+        "heightIn": 21.7,
+        "weightLb": 12
+      },
+      "2025_5151948": {
+        "avgPpaPass": 70.7,
+        "avgPpaRush": 25,
+        "usagePass": 38,
+        "usageRush": 40.2,
+        "compPct": 64.1,
+        "heightIn": 62,
+        "weightLb": 83.7
+      },
+      "2025_5153782": {
+        "avgPpaPass": 19.6,
+        "avgPpaRush": 53.3,
+        "usagePass": 1.1,
+        "usageRush": 82.6,
+        "compPct": 41.3,
+        "heightIn": 83.7,
+        "weightLb": 12
+      },
+      "2025_5153846": {
+        "avgPpaPass": 12,
+        "avgPpaRush": 51.1,
+        "usagePass": 57.6,
+        "usageRush": 87,
+        "compPct": 22.8,
+        "heightIn": 40.2,
+        "weightLb": 40.2
+      },
+      "2025_5164313": {
+        "avgPpaPass": 8.7,
+        "avgPpaRush": 5.4,
+        "usagePass": 78.3,
+        "usageRush": 33.7,
+        "compPct": 33.7,
+        "heightIn": 62,
+        "weightLb": 83.7
+      },
+      "2025_5208095": {
+        "avgPpaPass": 23.9,
+        "avgPpaRush": 28.3,
+        "usagePass": 14.1,
+        "usageRush": 65.2,
+        "compPct": 28.3,
+        "heightIn": 40.2,
+        "weightLb": 40.2
+      },
+      "2025_5219834": {
+        "avgPpaPass": 76.1,
+        "avgPpaRush": 50,
+        "usagePass": 56.5,
+        "usageRush": 26.1,
+        "compPct": 68.5,
+        "heightIn": 62,
+        "weightLb": 40.2
+      },
+      "2025_5224011": {
+        "avgPpaPass": 2.2,
+        "avgPpaRush": 5.4,
+        "usagePass": 26.1,
+        "usageRush": 68.5,
+        "compPct": 6.5,
+        "heightIn": 6.5,
+        "weightLb": 0
+      }
+    },
+    "RB": {
+      "nfl_2023_israelabanikanda": {
+        "rushCarShare": 72.5,
+        "recYdShare": 41.2,
+        "avgPpaRush": 66.7,
+        "avgPpaPass": 83.7,
+        "usageRush": 85,
+        "heightIn": 65.4,
+        "weightLb": 64.1
+      },
+      "nfl_2023_devonachane": {
+        "rushCarShare": 87.6,
+        "recYdShare": 66,
+        "avgPpaRush": 19,
+        "avgPpaPass": 33.3,
+        "usageRush": 98.7,
+        "heightIn": 17.6,
+        "weightLb": 2.6
+      },
+      "nfl_2020_camakers": {
+        "rushCarShare": 80.4,
+        "recYdShare": 55.6,
+        "avgPpaRush": 15.7,
+        "avgPpaPass": 39.2,
+        "usageRush": 94.8,
+        "heightIn": 65.4,
+        "weightLb": 50.3
+      },
+      "nfl_2024_rasheenali": {
+        "rushCarShare": 74.5,
+        "recYdShare": 63.4,
+        "avgPpaRush": 34,
+        "avgPpaPass": 28.8,
+        "usageRush": 73.9,
+        "heightIn": 81,
+        "weightLb": 36.6
+      },
+      "nfl_2024_braelonallen": {
+        "rushCarShare": 49,
+        "recYdShare": 33.3,
+        "avgPpaRush": 55.6,
+        "avgPpaPass": 7.8,
+        "usageRush": 58.2,
+        "heightIn": 99.3,
+        "weightLb": 98.7
+      },
+      "nfl_2026_kaytronallen": {
+        "rushCarShare": 63.4,
+        "recYdShare": 15,
+        "avgPpaRush": 72.5,
+        "avgPpaPass": 11.8,
+        "usageRush": 65.4,
+        "heightIn": 65.4,
+        "weightLb": 68
+      },
+      "nfl_2025_lequintallen": {
+        "rushCarShare": 94.8,
+        "recYdShare": 89.5,
+        "avgPpaRush": 9.8,
+        "avgPpaPass": 68,
+        "usageRush": 88.9,
+        "heightIn": 81,
+        "weightLb": 21.6
+      },
+      "nfl_2022_tylerallgeier": {
+        "rushCarShare": 96.1,
+        "recYdShare": 48.4,
+        "avgPpaRush": 94.1,
+        "avgPpaPass": 30.7,
+        "usageRush": 88.2,
+        "heightIn": 65.4,
+        "weightLb": 79.7
+      },
+      "nfl_2019_rodneyanderson": {
+        "rushCarShare": 35.9,
+        "recYdShare": 46.4,
+        "avgPpaRush": 60.8,
+        "avgPpaPass": 99.3,
+        "usageRush": 31.4,
+        "heightIn": 93.5,
+        "weightLb": 79.7
+      },
+      "nfl_2019_ryquellarmstead": {
+        "rushCarShare": 57.5,
+        "recYdShare": 4.6,
+        "avgPpaRush": 44.4,
+        "avgPpaPass": 19,
+        "usageRush": 79.7,
+        "heightIn": 65.4,
+        "weightLb": 64.1
+      },
+      "nfl_2022_tylerbadie": {
+        "rushCarShare": 94.1,
+        "recYdShare": 88.2,
+        "avgPpaRush": 41.2,
+        "avgPpaPass": 28.1,
+        "usageRush": 97.4,
+        "heightIn": 5.2,
+        "weightLb": 5.9
+      },
+      "nfl_2018_kalenballage": {
+        "rushCarShare": 19.6,
+        "recYdShare": 12.4,
+        "avgPpaRush": 9.2,
+        "avgPpaPass": 0.7,
+        "usageRush": 16.3,
+        "heightIn": 100,
+        "weightLb": 94.8
+      },
+      "nfl_2018_saquonbarkley": {
+        "rushCarShare": 80.4,
+        "recYdShare": 98.7,
+        "avgPpaRush": 40.5,
+        "avgPpaPass": 77.1,
+        "usageRush": 69.3,
+        "heightIn": 65.4,
+        "weightLb": 94.8
+      },
+      "nfl_2020_enobenjamin": {
+        "rushCarShare": 93.5,
+        "recYdShare": 87.6,
+        "avgPpaRush": 5.2,
+        "avgPpaPass": 45.8,
+        "usageRush": 94.1,
+        "heightIn": 37.9,
+        "weightLb": 21.6
+      },
+      "nfl_2024_treybenson": {
+        "rushCarShare": 34.6,
+        "recYdShare": 55.6,
+        "avgPpaRush": 10.5,
+        "avgPpaPass": 74.5,
+        "usageRush": 26.1,
+        "heightIn": 93.5,
+        "weightLb": 83
+      },
+      "nfl_2023_tankbigsby": {
+        "rushCarShare": 39.2,
+        "recYdShare": 76.5,
+        "avgPpaRush": 7.2,
+        "avgPpaPass": 20.9,
+        "usageRush": 28.1,
+        "heightIn": 81,
+        "weightLb": 51.6
+      },
+      "nfl_2026_kaelonblack": {
+        "rushCarShare": 20.3,
+        "recYdShare": 2,
+        "avgPpaRush": 41.8,
+        "avgPpaPass": 26.1,
+        "usageRush": 15.7,
+        "heightIn": 37.9,
+        "weightLb": 45.1
+      },
+      "nfl_2025_jaydonblue": {
+        "rushCarShare": 9.2,
+        "recYdShare": 71.9,
+        "avgPpaRush": 16.3,
+        "avgPpaPass": 75.2,
+        "usageRush": 8.5,
+        "heightIn": 81,
+        "weightLb": 19.6
+      },
+      "nfl_2021_garybrightwell": {
+        "rushCarShare": 71.2,
+        "recYdShare": 45.8,
+        "avgPpaRush": 0.7,
+        "avgPpaPass": 11.1,
+        "usageRush": 69.9,
+        "heightIn": 93.5,
+        "weightLb": 70.6
+      },
+      "nfl_2024_jonathonbrooks": {
+        "rushCarShare": 37.3,
+        "recYdShare": 62.7,
+        "avgPpaRush": 48.4,
+        "avgPpaPass": 92.2,
+        "usageRush": 71.2,
+        "heightIn": 81,
+        "weightLb": 30.1
+      },
+      "nfl_2025_tahjbrooks": {
+        "rushCarShare": 97.4,
+        "recYdShare": 37.3,
+        "avgPpaRush": 37.9,
+        "avgPpaPass": 53.6,
+        "usageRush": 100,
+        "heightIn": 37.9,
+        "weightLb": 94.8
+      },
+      "nfl_2022_brittainbrown": {
+        "rushCarShare": 4.6,
+        "recYdShare": 35.3,
+        "avgPpaRush": 64.1,
+        "avgPpaPass": 85,
+        "usageRush": 7.8,
+        "heightIn": 93.5,
+        "weightLb": 45.1
+      },
+      "nfl_2023_chasebrown": {
+        "rushCarShare": 98.7,
+        "recYdShare": 77.8,
+        "avgPpaRush": 6.5,
+        "avgPpaPass": 53.6,
+        "usageRush": 92.2,
+        "heightIn": 65.4,
+        "weightLb": 28.1
+      },
+      "nfl_2020_raymondcalais": {
+        "rushCarShare": 5.2,
+        "recYdShare": 7.8,
+        "avgPpaRush": 90.8,
+        "avgPpaPass": 13.1,
+        "usageRush": 2.6,
+        "heightIn": 17.6,
+        "weightLb": 2.6
+      },
+      "nfl_2021_michaelcarter": {
+        "rushCarShare": 24.8,
+        "recYdShare": 66,
+        "avgPpaRush": 95.4,
+        "avgPpaPass": 71.9,
+        "usageRush": 23.5,
+        "heightIn": 5.2,
+        "weightLb": 13.1
+      },
+      "nfl_2022_tychandler": {
+        "rushCarShare": 36.6,
+        "recYdShare": 55.6,
+        "avgPpaRush": 71.9,
+        "avgPpaPass": 98,
+        "usageRush": 32.7,
+        "heightIn": 81,
+        "weightLb": 45.1
+      },
+      "nfl_2023_zachcharbonnet": {
+        "rushCarShare": 45.8,
+        "recYdShare": 83,
+        "avgPpaRush": 98.7,
+        "avgPpaPass": 43.1,
+        "usageRush": 64.7,
+        "heightIn": 93.5,
+        "weightLb": 79.7
+      },
+      "nfl_2026_demondclaiborne": {
+        "rushCarShare": 51.6,
+        "recYdShare": 32.7,
+        "avgPpaRush": 3.3,
+        "avgPpaPass": 9.8,
+        "usageRush": 45.1,
+        "heightIn": 37.9,
+        "weightLb": 9.8
+      },
+      "nfl_2026_jonahcoleman": {
+        "rushCarShare": 32,
+        "recYdShare": 90.8,
+        "avgPpaRush": 62.7,
+        "avgPpaPass": 94.1,
+        "usageRush": 33.3,
+        "heightIn": 17.6,
+        "weightLb": 89.5
+      },
+      "nfl_2022_snoopconner": {
+        "rushCarShare": 7.8,
+        "recYdShare": 10.5,
+        "avgPpaRush": 75.8,
+        "avgPpaPass": 27.5,
+        "usageRush": 6.5,
+        "heightIn": 37.9,
+        "weightLb": 64.1
+      },
+      "nfl_2022_jamescook": {
+        "rushCarShare": 6.5,
+        "recYdShare": 68,
+        "avgPpaRush": 59.5,
+        "avgPpaPass": 90.8,
+        "usageRush": 4.6,
+        "heightIn": 65.4,
+        "weightLb": 4.6
+      },
+      "nfl_2024_blakecorum": {
+        "rushCarShare": 70.6,
+        "recYdShare": 19.6,
+        "avgPpaRush": 58.8,
+        "avgPpaPass": 46.4,
+        "usageRush": 54.2,
+        "heightIn": 5.2,
+        "weightLb": 51.6
+      },
+      "nfl_2020_deejaydallas": {
+        "rushCarShare": 19.6,
+        "recYdShare": 26.1,
+        "avgPpaRush": 30.1,
+        "avgPpaPass": 39.2,
+        "usageRush": 37.9,
+        "heightIn": 37.9,
+        "weightLb": 64.1
+      },
+      "nfl_2022_tyriondavisprice": {
+        "rushCarShare": 77.8,
+        "recYdShare": 5.9,
+        "avgPpaRush": 21.6,
+        "avgPpaPass": 42.5,
+        "usageRush": 81.7,
+        "heightIn": 93.5,
+        "weightLb": 96.7
+      },
+      "nfl_2020_ajdillon": {
+        "rushCarShare": 79.1,
+        "recYdShare": 75.2,
+        "avgPpaRush": 35.3,
+        "avgPpaPass": 93.5,
+        "usageRush": 66.7,
+        "heightIn": 81,
+        "weightLb": 100
+      },
+      "nfl_2021_gerriddoaks": {
+        "rushCarShare": 45.8,
+        "recYdShare": 75.2,
+        "avgPpaRush": 7.8,
+        "avgPpaPass": 63.4,
+        "usageRush": 40.5,
+        "heightIn": 81,
+        "weightLb": 94.8
+      },
+      "nfl_2020_jkdobbins": {
+        "rushCarShare": 68,
+        "recYdShare": 58.8,
+        "avgPpaRush": 88.9,
+        "avgPpaPass": 85.6,
+        "usageRush": 56.2,
+        "heightIn": 37.9,
+        "weightLb": 68
+      },
+      "nfl_2022_trestanebner": {
+        "rushCarShare": 14.4,
+        "recYdShare": 85.6,
+        "avgPpaRush": 49.7,
+        "avgPpaPass": 69.3,
+        "usageRush": 11.8,
+        "heightIn": 65.4,
+        "weightLb": 32.7
+      },
+      "nfl_2020_clydeedwardshelaire": {
+        "rushCarShare": 59.5,
+        "recYdShare": 68,
+        "avgPpaRush": 92.8,
+        "avgPpaPass": 55.6,
+        "usageRush": 48.4,
+        "heightIn": 5.2,
+        "weightLb": 36.6
+      },
+      "nfl_2024_audricestime": {
+        "rushCarShare": 69.3,
+        "recYdShare": 28.8,
+        "avgPpaRush": 90.2,
+        "avgPpaPass": 74.5,
+        "usageRush": 71.9,
+        "heightIn": 65.4,
+        "weightLb": 88.2
+      },
+      "nfl_2021_travisetienne": {
+        "rushCarShare": 53.6,
+        "recYdShare": 97.4,
+        "avgPpaRush": 52.9,
+        "avgPpaPass": 82.4,
+        "usageRush": 41.8,
+        "heightIn": 37.9,
+        "weightLb": 28.1
+      },
+      "nfl_2025_trevoretienne": {
+        "rushCarShare": 20.9,
+        "recYdShare": 37.3,
+        "avgPpaRush": 37.3,
+        "avgPpaPass": 41.2,
+        "usageRush": 39.9,
+        "heightIn": 17.6,
+        "weightLb": 28.1
+      },
+      "nfl_2020_darryntonevans": {
+        "rushCarShare": 58.2,
+        "recYdShare": 61.4,
+        "avgPpaRush": 46.4,
+        "avgPpaPass": 79.1,
+        "usageRush": 45.8,
+        "heightIn": 65.4,
+        "weightLb": 19.6
+      },
+      "nfl_2023_zachevans": {
+        "rushCarShare": 9.8,
+        "recYdShare": 21.6,
+        "avgPpaRush": 83.7,
+        "avgPpaPass": 92.8,
+        "usageRush": 9.2,
+        "heightIn": 81,
+        "weightLb": 64.1
+      },
+      "nfl_2021_demetricfelton": {
+        "rushCarShare": 55.6,
+        "recYdShare": 86.9,
+        "avgPpaRush": 22.2,
+        "avgPpaPass": 68.6,
+        "usageRush": 67.3,
+        "heightIn": 37.9,
+        "weightLb": 19.6
+      },
+      "nfl_2022_jeromeford": {
+        "rushCarShare": 73.2,
+        "recYdShare": 55.6,
+        "avgPpaRush": 90.2,
+        "avgPpaPass": 58.2,
+        "usageRush": 72.5,
+        "heightIn": 65.4,
+        "weightLb": 64.1
+      },
+      "nfl_2018_roycefreeman": {
+        "rushCarShare": 47.1,
+        "recYdShare": 56.2,
+        "avgPpaRush": 65.4,
+        "avgPpaPass": 74.5,
+        "usageRush": 41.2,
+        "heightIn": 65.4,
+        "weightLb": 95.4
+      },
+      "nfl_2021_jakefunk": {
+        "rushCarShare": 52.3,
+        "recYdShare": 43.8,
+        "avgPpaRush": 96.1,
+        "avgPpaPass": 59.5,
+        "usageRush": 73.9,
+        "heightIn": 37.9,
+        "weightLb": 28.1
+      },
+      "nfl_2023_jahmyrgibbs": {
+        "rushCarShare": 30.1,
+        "recYdShare": 92.2,
+        "avgPpaRush": 24.2,
+        "avgPpaPass": 70.6,
+        "usageRush": 29.4,
+        "heightIn": 65.4,
+        "weightLb": 19.6
+      },
+      "nfl_2025_djgiddens": {
+        "rushCarShare": 65.4,
+        "recYdShare": 83.7,
+        "avgPpaRush": 49.7,
+        "avgPpaPass": 81,
+        "usageRush": 64.7,
+        "heightIn": 93.5,
+        "weightLb": 50.3
+      },
+      "nfl_2025_olliegordon": {
+        "rushCarShare": 86.9,
+        "recYdShare": 52.3,
+        "avgPpaRush": 23.5,
+        "avgPpaPass": 83.7,
+        "usageRush": 78.4,
+        "heightIn": 99.3,
+        "weightLb": 87.6
+      },
+      "nfl_2023_ericgray": {
+        "rushCarShare": 40.5,
+        "recYdShare": 60.1,
+        "avgPpaRush": 86.3,
+        "avgPpaPass": 10.5,
+        "usageRush": 36.6,
+        "heightIn": 37.9,
+        "weightLb": 45.8
+      },
+      "nfl_2024_isaacguerendo": {
+        "rushCarShare": 11.8,
+        "recYdShare": 62.7,
+        "avgPpaRush": 62.7,
+        "avgPpaPass": 79.7,
+        "usageRush": 11.8,
+        "heightIn": 93.5,
+        "weightLb": 87.6
+      },
+      "nfl_2018_derriusguice": {
+        "rushCarShare": 56.9,
+        "recYdShare": 34,
+        "avgPpaRush": 32.7,
+        "avgPpaPass": 76.5,
+        "usageRush": 53.6,
+        "heightIn": 65.4,
+        "weightLb": 50.3
+      },
+      "nfl_2022_breecehall": {
+        "rushCarShare": 99.3,
+        "recYdShare": 77.8,
+        "avgPpaRush": 45.1,
+        "avgPpaPass": 78.4,
+        "usageRush": 98,
+        "heightIn": 93.5,
+        "weightLb": 79.7
+      },
+      "nfl_2025_omarionhampton": {
+        "rushCarShare": 92.2,
+        "recYdShare": 95.4,
+        "avgPpaRush": 58.8,
+        "avgPpaPass": 90.2,
+        "usageRush": 92.8,
+        "heightIn": 81,
+        "weightLb": 79.7
+      },
+      "nfl_2019_damienharris": {
+        "rushCarShare": 13.7,
+        "recYdShare": 24.8,
+        "avgPpaRush": 43.8,
+        "avgPpaPass": 48.4,
+        "usageRush": 10.5,
+        "heightIn": 65.4,
+        "weightLb": 64.1
+      },
+      "nfl_2022_kevinharris": {
+        "rushCarShare": 28.8,
+        "recYdShare": 19,
+        "avgPpaRush": 11.8,
+        "avgPpaPass": 20.3,
+        "usageRush": 32,
+        "heightIn": 37.9,
+        "weightLb": 87.6
+      },
+      "nfl_2021_najeeharris": {
+        "rushCarShare": 86.3,
+        "recYdShare": 82.4,
+        "avgPpaRush": 68,
+        "avgPpaPass": 51.6,
+        "usageRush": 80.4,
+        "heightIn": 99.3,
+        "weightLb": 94.8
+      },
+      "nfl_2025_rjharvey": {
+        "rushCarShare": 64.1,
+        "recYdShare": 90.8,
+        "avgPpaRush": 96.7,
+        "avgPpaPass": 96.1,
+        "usageRush": 57.5,
+        "heightIn": 17.6,
+        "weightLb": 28.1
+      },
+      "nfl_2022_hassanhaskins": {
+        "rushCarShare": 73.9,
+        "recYdShare": 24.2,
+        "avgPpaRush": 77.1,
+        "avgPpaPass": 41.2,
+        "usageRush": 54.9,
+        "heightIn": 93.5,
+        "weightLb": 79.7
+      },
+      "nfl_2019_darrellhenderson": {
+        "rushCarShare": 35.9,
+        "recYdShare": 76.5,
+        "avgPpaRush": 99.3,
+        "avgPpaPass": 94.8,
+        "usageRush": 34,
+        "heightIn": 17.6,
+        "weightLb": 19.6
+      },
+      "nfl_2025_treveyonhenderson": {
+        "rushCarShare": 16.3,
+        "recYdShare": 58.8,
+        "avgPpaRush": 93.5,
+        "avgPpaPass": 62.1,
+        "usageRush": 14.4,
+        "heightIn": 37.9,
+        "weightLb": 32.7
+      },
+      "nfl_2021_khalilherbert": {
+        "rushCarShare": 26.8,
+        "recYdShare": 70.6,
+        "avgPpaRush": 81.7,
+        "avgPpaPass": 80.4,
+        "usageRush": 25.5,
+        "heightIn": 17.6,
+        "weightLb": 50.3
+      },
+      "nfl_2019_justicehill": {
+        "rushCarShare": 22.9,
+        "recYdShare": 5.2,
+        "avgPpaRush": 31.4,
+        "avgPpaPass": 21.6,
+        "usageRush": 39.9,
+        "heightIn": 37.9,
+        "weightLb": 4.6
+      },
+      "nfl_2021_kylinhill": {
+        "rushCarShare": 66,
+        "recYdShare": 69.9,
+        "avgPpaRush": 32,
+        "avgPpaPass": 25.5,
+        "usageRush": 58.8,
+        "heightIn": 65.4,
+        "weightLb": 45.1
+      },
+      "nfl_2018_nyheimhines": {
+        "rushCarShare": 51.6,
+        "recYdShare": 26.1,
+        "avgPpaRush": 19,
+        "avgPpaPass": 13.7,
+        "usageRush": 35.9,
+        "heightIn": 17.6,
+        "weightLb": 11.8
+      },
+      "nfl_2019_travishomer": {
+        "rushCarShare": 34,
+        "recYdShare": 75.2,
+        "avgPpaRush": 8.5,
+        "avgPpaPass": 60.1,
+        "usageRush": 22.9,
+        "heightIn": 65.4,
+        "weightLb": 9.8
+      },
+      "nfl_2021_chubahubbard": {
+        "rushCarShare": 15,
+        "recYdShare": 7.8,
+        "avgPpaRush": 29.4,
+        "avgPpaPass": 52.3,
+        "usageRush": 47.1,
+        "heightIn": 81,
+        "weightLb": 32.7
+      },
+      "nfl_2023_evanhull": {
+        "rushCarShare": 76.5,
+        "recYdShare": 100,
+        "avgPpaRush": 2.6,
+        "avgPpaPass": 87.6,
+        "usageRush": 60.8,
+        "heightIn": 65.4,
+        "weightLb": 45.1
+      },
+      "nfl_2025_jarquezhunter": {
+        "rushCarShare": 70.6,
+        "recYdShare": 37.3,
+        "avgPpaRush": 74.5,
+        "avgPpaPass": 67.3,
+        "usageRush": 62.7,
+        "heightIn": 37.9,
+        "weightLb": 36.6
+      },
+      "nfl_2020_jasonhuntley": {
+        "rushCarShare": 47.7,
+        "recYdShare": 66,
+        "avgPpaRush": 79.1,
+        "avgPpaPass": 17,
+        "usageRush": 42.5,
+        "heightIn": 17.6,
+        "weightLb": 5.2
+      },
+      "nfl_2022_keaontayingram": {
+        "rushCarShare": 46.4,
+        "recYdShare": 28.8,
+        "avgPpaRush": 58.8,
+        "avgPpaPass": 45.1,
+        "usageRush": 63.4,
+        "heightIn": 81,
+        "weightLb": 64.1
+      },
+      "nfl_2018_justinjackson": {
+        "rushCarShare": 88.2,
+        "recYdShare": 82.4,
+        "avgPpaRush": 13.1,
+        "avgPpaPass": 29.4,
+        "usageRush": 83,
+        "heightIn": 65.4,
+        "weightLb": 19.6
+      },
+      "nfl_2019_joshjacobs": {
+        "rushCarShare": 7.2,
+        "recYdShare": 41.2,
+        "avgPpaRush": 98,
+        "avgPpaPass": 86.9,
+        "usageRush": 6.5,
+        "heightIn": 37.9,
+        "weightLb": 65.4
+      },
+      "nfl_2025_jordanjames": {
+        "rushCarShare": 75.2,
+        "recYdShare": 43.8,
+        "avgPpaRush": 92.2,
+        "avgPpaPass": 54.2,
+        "usageRush": 60.1,
+        "heightIn": 37.9,
+        "weightLb": 28.1
+      },
+      "nfl_2025_ashtonjeanty": {
+        "rushCarShare": 100,
+        "recYdShare": 28.8,
+        "avgPpaRush": 82.4,
+        "avgPpaPass": 49.7,
+        "usageRush": 99.3,
+        "heightIn": 17.6,
+        "weightLb": 64.1
+      },
+      "nfl_2021_jermarjefferson": {
+        "rushCarShare": 84.3,
+        "recYdShare": 32.7,
+        "avgPpaRush": 47.7,
+        "avgPpaPass": 44.4,
+        "usageRush": 89.5,
+        "heightIn": 37.9,
+        "weightLb": 68
+      },
+      "nfl_2026_emmettjohnson": {
+        "rushCarShare": 93.5,
+        "recYdShare": 94.1,
+        "avgPpaRush": 52.3,
+        "avgPpaPass": 36.6,
+        "usageRush": 96.7,
+        "heightIn": 65.4,
+        "weightLb": 19.6
+      },
+      "nfl_2025_kalebjohnson": {
+        "rushCarShare": 76.5,
+        "recYdShare": 89.5,
+        "avgPpaRush": 54.2,
+        "avgPpaPass": 66.7,
+        "usageRush": 75.2,
+        "heightIn": 81,
+        "weightLb": 87.6
+      },
+      "nfl_2018_kerryonjohnson": {
+        "rushCarShare": 63.4,
+        "recYdShare": 49,
+        "avgPpaRush": 28.8,
+        "avgPpaPass": 74.5,
+        "usageRush": 77.1,
+        "heightIn": 81,
+        "weightLb": 50.3
+      },
+      "nfl_2023_roschonjohnson": {
+        "rushCarShare": 3.3,
+        "recYdShare": 24.2,
+        "avgPpaRush": 39.2,
+        "avgPpaPass": 6.5,
+        "usageRush": 5.2,
+        "heightIn": 99.3,
+        "weightLb": 83
+      },
+      "nfl_2019_tyjohnson": {
+        "rushCarShare": 2,
+        "recYdShare": 3.3,
+        "avgPpaRush": 78.4,
+        "avgPpaPass": 2,
+        "usageRush": 2,
+        "heightIn": 37.9,
+        "weightLb": 50.3
+      },
+      "nfl_2024_jawharjordan": {
+        "rushCarShare": 34,
+        "recYdShare": 68,
+        "avgPpaRush": 70.6,
+        "avgPpaPass": 78.4,
+        "usageRush": 35.3,
+        "heightIn": 37.9,
+        "weightLb": 2.6
+      },
+      "nfl_2025_quinshonjudkins": {
+        "rushCarShare": 38.6,
+        "recYdShare": 21.6,
+        "avgPpaRush": 70.6,
+        "avgPpaPass": 37.3,
+        "usageRush": 28.1,
+        "heightIn": 81,
+        "weightLb": 73.2
+      },
+      "nfl_2020_joshuakelley": {
+        "rushCarShare": 71.9,
+        "recYdShare": 10.5,
+        "avgPpaRush": 20.9,
+        "avgPpaPass": 31.4,
+        "usageRush": 79.1,
+        "heightIn": 65.4,
+        "weightLb": 73.2
+      },
+      "nfl_2018_johnkelly": {
+        "rushCarShare": 68.6,
+        "recYdShare": 98,
+        "avgPpaRush": 4.6,
+        "avgPpaPass": 32,
+        "usageRush": 83.7,
+        "heightIn": 17.6,
+        "weightLb": 28.1
+      },
+      "nfl_2024_marshawnlloyd": {
+        "rushCarShare": 28.1,
+        "recYdShare": 45.8,
+        "avgPpaRush": 80.4,
+        "avgPpaPass": 98.7,
+        "usageRush": 34.6,
+        "heightIn": 17.6,
+        "weightLb": 45.1
+      },
+      "nfl_2026_jeremiyahlove": {
+        "rushCarShare": 77.8,
+        "recYdShare": 82.4,
+        "avgPpaRush": 83,
+        "avgPpaPass": 75.8,
+        "usageRush": 56.2,
+        "heightIn": 81,
+        "weightLb": 52.9
+      },
+      "nfl_2019_brycelove": {
+        "rushCarShare": 58.8,
+        "recYdShare": 15,
+        "avgPpaRush": 2,
+        "avgPpaPass": 4.6,
+        "usageRush": 86.3,
+        "heightIn": 37.9,
+        "weightLb": 11.1
+      },
+      "nfl_2025_philmafah": {
+        "rushCarShare": 67.3,
+        "recYdShare": 11.1,
+        "avgPpaRush": 25.5,
+        "avgPpaPass": 3.9,
+        "usageRush": 66,
+        "heightIn": 93.5,
+        "weightLb": 94.8
+      },
+      "nfl_2025_damienmartinez": {
+        "rushCarShare": 40.5,
+        "recYdShare": 32.7,
+        "avgPpaRush": 87.6,
+        "avgPpaPass": 95.4,
+        "usageRush": 28.8,
+        "heightIn": 81,
+        "weightLb": 96.7
+      },
+      "nfl_2019_alexandermattison": {
+        "rushCarShare": 96.1,
+        "recYdShare": 32.7,
+        "avgPpaRush": 13.7,
+        "avgPpaPass": 19.6,
+        "usageRush": 91.5,
+        "heightIn": 65.4,
+        "weightLb": 73.2
+      },
+      "nfl_2023_dewaynemcbride": {
+        "rushCarShare": 63.4,
+        "recYdShare": 0.7,
+        "avgPpaRush": 97.4,
+        "avgPpaPass": 3.3,
+        "usageRush": 70.6,
+        "heightIn": 65.4,
+        "weightLb": 64.1
+      },
+      "nfl_2024_jasemcclellan": {
+        "rushCarShare": 26.8,
+        "recYdShare": 28.8,
+        "avgPpaRush": 26.8,
+        "avgPpaPass": 60.8,
+        "usageRush": 28.1,
+        "heightIn": 65.4,
+        "weightLb": 50.3
+      },
+      "nfl_2020_anthonymcfarland": {
+        "rushCarShare": 15.7,
+        "recYdShare": 50.3,
+        "avgPpaRush": 14.4,
+        "avgPpaPass": 6.5,
+        "usageRush": 18.3,
+        "heightIn": 17.6,
+        "weightLb": 12.4
+      },
+      "nfl_2026_sethmcgowan": {
+        "rushCarShare": 43.1,
+        "recYdShare": 42.5,
+        "avgPpaRush": 26.8,
+        "avgPpaPass": 14.4,
+        "usageRush": 46.4,
+        "heightIn": 93.5,
+        "weightLb": 64.1
+      },
+      "nfl_2023_kennymcintosh": {
+        "rushCarShare": 17.6,
+        "recYdShare": 91.5,
+        "avgPpaRush": 79.7,
+        "avgPpaPass": 65.4,
+        "usageRush": 13.7,
+        "heightIn": 93.5,
+        "weightLb": 45.1
+      },
+      "nfl_2023_kendremiller": {
+        "rushCarShare": 50.3,
+        "recYdShare": 17,
+        "avgPpaRush": 65.4,
+        "avgPpaPass": 30.1,
+        "usageRush": 43.8,
+        "heightIn": 81,
+        "weightLb": 79.7
+      },
+      "nfl_2021_elijahmitchell": {
+        "rushCarShare": 30.7,
+        "recYdShare": 58.8,
+        "avgPpaRush": 73.2,
+        "avgPpaPass": 56.2,
+        "usageRush": 21.6,
+        "heightIn": 65.4,
+        "weightLb": 70.6
+      },
+      "nfl_2025_kylemonangai": {
+        "rushCarShare": 81.7,
+        "recYdShare": 15,
+        "avgPpaRush": 17.6,
+        "avgPpaPass": 18.3,
+        "usageRush": 87.6,
+        "heightIn": 17.6,
+        "weightLb": 36.6
+      },
+      "nfl_2019_davidmontgomery": {
+        "rushCarShare": 90.8,
+        "recYdShare": 39.2,
+        "avgPpaRush": 17,
+        "avgPpaPass": 24.2,
+        "usageRush": 96.7,
+        "heightIn": 65.4,
+        "weightLb": 65.4
+      },
+      "nfl_2020_zackmoss": {
+        "rushCarShare": 49.7,
+        "recYdShare": 92.8,
+        "avgPpaRush": 68.6,
+        "avgPpaPass": 88.9,
+        "usageRush": 49,
+        "heightIn": 37.9,
+        "weightLb": 81
+      },
+      "nfl_2025_kalelmullings": {
+        "rushCarShare": 44.4,
+        "recYdShare": 8.5,
+        "avgPpaRush": 76.5,
+        "avgPpaPass": 32.7,
+        "usageRush": 43.8,
+        "heightIn": 99.3,
+        "weightLb": 97.4
+      },
+      "nfl_2025_devinneal": {
+        "rushCarShare": 79.1,
+        "recYdShare": 86.9,
+        "avgPpaRush": 85,
+        "avgPpaPass": 57.5,
+        "usageRush": 62.1,
+        "heightIn": 65.4,
+        "weightLb": 64.1
+      },
+      "nfl_2023_lewnichols": {
+        "rushCarShare": 49,
+        "recYdShare": 41.2,
+        "avgPpaRush": 1.3,
+        "avgPpaPass": 12.4,
+        "usageRush": 84.3,
+        "heightIn": 65.4,
+        "weightLb": 81
+      },
+      "nfl_2021_kenenwangwu": {
+        "rushCarShare": 1.3,
+        "recYdShare": 1.3,
+        "avgPpaRush": 3.9,
+        "avgPpaPass": 15.7,
+        "usageRush": 1.3,
+        "heightIn": 93.5,
+        "weightLb": 45.1
+      },
+      "nfl_2019_qadreeollison": {
+        "rushCarShare": 31.4,
+        "recYdShare": 18.3,
+        "avgPpaRush": 70.6,
+        "avgPpaPass": 9.2,
+        "usageRush": 21.6,
+        "heightIn": 99.3,
+        "weightLb": 94.8
+      },
+      "nfl_2018_rashaadpenny": {
+        "rushCarShare": 83.7,
+        "recYdShare": 61.4,
+        "avgPpaRush": 88.2,
+        "avgPpaPass": 24.8,
+        "usageRush": 74.5,
+        "heightIn": 65.4,
+        "weightLb": 79.7
+      },
+      "nfl_2020_lamicalperine": {
+        "rushCarShare": 30.1,
+        "recYdShare": 58.8,
+        "avgPpaRush": 12.4,
+        "avgPpaPass": 47.7,
+        "usageRush": 20.3,
+        "heightIn": 65.4,
+        "weightLb": 70.6
+      },
+      "nfl_2022_dameonpierce": {
+        "rushCarShare": 4.6,
+        "recYdShare": 55.6,
+        "avgPpaRush": 91.5,
+        "avgPpaPass": 96.7,
+        "usageRush": 3.3,
+        "heightIn": 37.9,
+        "weightLb": 64.1
+      },
+      "nfl_2019_tonypollard": {
+        "rushCarShare": 0.7,
+        "recYdShare": 96.7,
+        "avgPpaRush": 71.2,
+        "avgPpaPass": 39.9,
+        "usageRush": 0.7,
+        "heightIn": 81,
+        "weightLb": 32.7
+      },
+      "nfl_2026_jadarianprice": {
+        "rushCarShare": 17,
+        "recYdShare": 15,
+        "avgPpaRush": 51,
+        "avgPpaPass": 100,
+        "usageRush": 12.4,
+        "heightIn": 65.4,
+        "weightLb": 36.6
+      },
+      "nfl_2026_adamrandall": {
+        "rushCarShare": 52.9,
+        "recYdShare": 64.1,
+        "avgPpaRush": 28.1,
+        "avgPpaPass": 23.5,
+        "usageRush": 45.1,
+        "heightIn": 99.3,
+        "weightLb": 94.8
+      },
+      "nfl_2023_bijanrobinson": {
+        "rushCarShare": 90.2,
+        "recYdShare": 85.6,
+        "avgPpaRush": 81,
+        "avgPpaPass": 81.7,
+        "usageRush": 86.9,
+        "heightIn": 81,
+        "weightLb": 79.7
+      },
+      "nfl_2022_brianrobinson": {
+        "rushCarShare": 81,
+        "recYdShare": 48.4,
+        "avgPpaRush": 24.8,
+        "avgPpaPass": 66.7,
+        "usageRush": 82.4,
+        "heightIn": 93.5,
+        "weightLb": 89.5
+      },
+      "nfl_2023_chrisrodriguez": {
+        "rushCarShare": 43.1,
+        "recYdShare": 4.6,
+        "avgPpaRush": 27.5,
+        "avgPpaPass": 2.6,
+        "usageRush": 95.4,
+        "heightIn": 65.4,
+        "weightLb": 84.3
+      },
+      "nfl_2021_larryrountree": {
+        "rushCarShare": 96.7,
+        "recYdShare": 21.6,
+        "avgPpaRush": 11.8,
+        "avgPpaPass": 5.2,
+        "usageRush": 91.5,
+        "heightIn": 37.9,
+        "weightLb": 45.1
+      },
+      "nfl_2025_dylansampson": {
+        "rushCarShare": 63.4,
+        "recYdShare": 39.2,
+        "avgPpaRush": 67.3,
+        "avgPpaPass": 43.8,
+        "usageRush": 52.3,
+        "heightIn": 65.4,
+        "weightLb": 21.6
+      },
+      "nfl_2019_milessanders": {
+        "rushCarShare": 56.9,
+        "recYdShare": 35.3,
+        "avgPpaRush": 43.8,
+        "avgPpaPass": 7.2,
+        "usageRush": 47.7,
+        "heightIn": 65.4,
+        "weightLb": 30.1
+      },
+      "nfl_2018_boscarbrough": {
+        "rushCarShare": 5.9,
+        "recYdShare": 22.9,
+        "avgPpaRush": 35.9,
+        "avgPpaPass": 8.5,
+        "usageRush": 3.9,
+        "heightIn": 99.3,
+        "weightLb": 98
+      },
+      "nfl_2019_jordanscarlett": {
+        "rushCarShare": 12.4,
+        "recYdShare": 17,
+        "avgPpaRush": 73.9,
+        "avgPpaPass": 15,
+        "usageRush": 9.8,
+        "heightIn": 65.4,
+        "weightLb": 28.8
+      },
+      "nfl_2018_bostonscott": {
+        "rushCarShare": 37.9,
+        "recYdShare": 50.3,
+        "avgPpaRush": 61.4,
+        "avgPpaPass": 34,
+        "usageRush": 30.7,
+        "heightIn": 1.3,
+        "weightLb": 22.9
+      },
+      "nfl_2021_treysermon": {
+        "rushCarShare": 32.7,
+        "recYdShare": 32.7,
+        "avgPpaRush": 86.3,
+        "avgPpaPass": 16.3,
+        "usageRush": 22.9,
+        "heightIn": 93.5,
+        "weightLb": 64.1
+      },
+      "nfl_2024_willshipley": {
+        "rushCarShare": 24.2,
+        "recYdShare": 71.2,
+        "avgPpaRush": 15.7,
+        "avgPpaPass": 57.5,
+        "usageRush": 24.2,
+        "heightIn": 65.4,
+        "weightLb": 45.1
+      },
+      "nfl_2019_devinsingletary": {
+        "rushCarShare": 64.7,
+        "recYdShare": 3.3,
+        "avgPpaRush": 52.3,
+        "avgPpaPass": 1.3,
+        "usageRush": 52.9,
+        "heightIn": 17.6,
+        "weightLb": 19.6
+      },
+      "nfl_2026_nicholassingleton": {
+        "rushCarShare": 13.1,
+        "recYdShare": 79.1,
+        "avgPpaRush": 60.8,
+        "avgPpaPass": 35.9,
+        "usageRush": 15.7,
+        "heightIn": 81,
+        "weightLb": 84.3
+      },
+      "nfl_2025_brashardsmith": {
+        "rushCarShare": 60.8,
+        "recYdShare": 82.4,
+        "avgPpaRush": 35.3,
+        "avgPpaPass": 62.7,
+        "usageRush": 50.3,
+        "heightIn": 37.9,
+        "weightLb": 11.1
+      },
+      "nfl_2018_itosmith": {
+        "rushCarShare": 82.4,
+        "recYdShare": 94.1,
+        "avgPpaRush": 30.7,
+        "avgPpaPass": 41.8,
+        "usageRush": 68,
+        "heightIn": 17.6,
+        "weightLb": 9.8
+      },
+      "nfl_2019_bennysnell": {
+        "rushCarShare": 88.9,
+        "recYdShare": 39.2,
+        "avgPpaRush": 46.4,
+        "avgPpaPass": 26.8,
+        "usageRush": 81,
+        "heightIn": 65.4,
+        "weightLb": 83
+      },
+      "nfl_2023_tyjaespears": {
+        "rushCarShare": 54.9,
+        "recYdShare": 69.9,
+        "avgPpaRush": 94.8,
+        "avgPpaPass": 88.2,
+        "usageRush": 38.6,
+        "heightIn": 37.9,
+        "weightLb": 9.8
+      },
+      "nfl_2022_isaiahspiller": {
+        "rushCarShare": 60.1,
+        "recYdShare": 68.6,
+        "avgPpaRush": 23.5,
+        "avgPpaPass": 35.3,
+        "usageRush": 49.7,
+        "heightIn": 93.5,
+        "weightLb": 87.6
+      },
+      "nfl_2021_rhamondrestevenson": {
+        "rushCarShare": 10.5,
+        "recYdShare": 51.6,
+        "avgPpaRush": 77.8,
+        "avgPpaPass": 50.3,
+        "usageRush": 59.5,
+        "heightIn": 81,
+        "weightLb": 99.3
+      },
+      "nfl_2020_dandreswift": {
+        "rushCarShare": 44.4,
+        "recYdShare": 60.1,
+        "avgPpaRush": 36.6,
+        "avgPpaPass": 34.6,
+        "usageRush": 30.1,
+        "heightIn": 17.6,
+        "weightLb": 64.1
+      },
+      "nfl_2020_jonathantaylor": {
+        "rushCarShare": 85.6,
+        "recYdShare": 79.1,
+        "avgPpaRush": 42.5,
+        "avgPpaPass": 54.9,
+        "usageRush": 78.4,
+        "heightIn": 65.4,
+        "weightLb": 73.2
+      },
+      "nfl_2019_darwinthompson": {
+        "rushCarShare": 27.5,
+        "recYdShare": 82.4,
+        "avgPpaRush": 84.3,
+        "avgPpaPass": 97.4,
+        "usageRush": 19,
+        "heightIn": 5.2,
+        "weightLb": 4.6
+      },
+      "nfl_2024_tyronetracy": {
+        "rushCarShare": 11.1,
+        "recYdShare": 42.5,
+        "avgPpaRush": 66.7,
+        "avgPpaPass": 37.9,
+        "usageRush": 13.7,
+        "heightIn": 93.5,
+        "weightLb": 45.1
+      },
+      "nfl_2025_bhayshultuten": {
+        "rushCarShare": 41.2,
+        "recYdShare": 17.6,
+        "avgPpaRush": 64.1,
+        "avgPpaPass": 22.9,
+        "usageRush": 57.5,
+        "heightIn": 65.4,
+        "weightLb": 36.6
+      },
+      "nfl_2023_deucevaughn": {
+        "rushCarShare": 85,
+        "recYdShare": 95.4,
+        "avgPpaRush": 5.9,
+        "avgPpaPass": 64.1,
+        "usageRush": 75.8,
+        "heightIn": 1.3,
+        "weightLb": 0.7
+      },
+      "nfl_2020_keshawnvaughn": {
+        "rushCarShare": 89.5,
+        "recYdShare": 96.7,
+        "avgPpaRush": 34,
+        "avgPpaPass": 64.7,
+        "usageRush": 85.6,
+        "heightIn": 37.9,
+        "weightLb": 70.6
+      },
+      "nfl_2024_kimanividal": {
+        "rushCarShare": 98,
+        "recYdShare": 45.8,
+        "avgPpaRush": 55.6,
+        "avgPpaPass": 86.3,
+        "usageRush": 94.1,
+        "heightIn": 5.2,
+        "weightLb": 64.1
+      },
+      "nfl_2022_kennethwalker": {
+        "rushCarShare": 91.5,
+        "recYdShare": 12.4,
+        "avgPpaRush": 56.9,
+        "avgPpaPass": 61.4,
+        "usageRush": 90.2,
+        "heightIn": 37.9,
+        "weightLb": 45.1
+      },
+      "nfl_2018_markwalton": {
+        "rushCarShare": 2.6,
+        "recYdShare": 15.7,
+        "avgPpaRush": 20.3,
+        "avgPpaPass": 69.9,
+        "usageRush": 61.4,
+        "heightIn": 17.6,
+        "weightLb": 28.1
+      },
+      "nfl_2019_mikeweber": {
+        "rushCarShare": 23.5,
+        "recYdShare": 9.2,
+        "avgPpaRush": 40.5,
+        "avgPpaPass": 17.6,
+        "usageRush": 19.6,
+        "heightIn": 37.9,
+        "weightLb": 52.9
+      },
+      "nfl_2022_rachaadwhite": {
+        "rushCarShare": 41.8,
+        "recYdShare": 99.3,
+        "avgPpaRush": 75.2,
+        "avgPpaPass": 90.2,
+        "usageRush": 37.3,
+        "heightIn": 99.3,
+        "weightLb": 9.8
+      },
+      "nfl_2022_zamirwhite": {
+        "rushCarShare": 21.6,
+        "recYdShare": 7.8,
+        "avgPpaRush": 56.2,
+        "avgPpaPass": 22.2,
+        "usageRush": 17,
+        "heightIn": 81,
+        "weightLb": 64.1
+      },
+      "nfl_2019_kerrithwhyte": {
+        "rushCarShare": 8.5,
+        "recYdShare": 47.1,
+        "avgPpaRush": 87.6,
+        "avgPpaPass": 49,
+        "usageRush": 7.2,
+        "heightIn": 37.9,
+        "weightLb": 19.6
+      },
+      "nfl_2018_jordanwilkins": {
+        "rushCarShare": 54.9,
+        "recYdShare": 51.6,
+        "avgPpaRush": 53.6,
+        "avgPpaPass": 71.2,
+        "usageRush": 51,
+        "heightIn": 93.5,
+        "weightLb": 68
+      },
+      "nfl_2019_dexterwilliams": {
+        "rushCarShare": 22.2,
+        "recYdShare": 22.9,
+        "avgPpaRush": 39.2,
+        "avgPpaPass": 47.1,
+        "usageRush": 51.6,
+        "heightIn": 65.4,
+        "weightLb": 22.9
+      },
+      "nfl_2021_javontewilliams": {
+        "rushCarShare": 25.5,
+        "recYdShare": 75.2,
+        "avgPpaRush": 100,
+        "avgPpaPass": 91.5,
+        "usageRush": 24.8,
+        "heightIn": 37.9,
+        "weightLb": 79.7
+      },
+      "nfl_2022_kyrenwilliams": {
+        "rushCarShare": 67.3,
+        "recYdShare": 84.3,
+        "avgPpaRush": 19.6,
+        "avgPpaPass": 85,
+        "usageRush": 68.6,
+        "heightIn": 81,
+        "weightLb": 9.8
+      },
+      "nfl_2019_trayveonwilliams": {
+        "rushCarShare": 83,
+        "recYdShare": 75.2,
+        "avgPpaRush": 50.3,
+        "avgPpaPass": 59.5,
+        "usageRush": 76.5,
+        "heightIn": 17.6,
+        "weightLb": 19.6
+      },
+      "nfl_2024_jaylenwright": {
+        "rushCarShare": 18.3,
+        "recYdShare": 32.7,
+        "avgPpaRush": 47.7,
+        "avgPpaPass": 51,
+        "usageRush": 18.3,
+        "heightIn": 65.4,
+        "weightLb": 45.1
+      },
+      "2025_4258419": {
+        "rushCarShare": 2.6,
+        "recYdShare": 10.5,
+        "avgPpaRush": 11.8,
+        "avgPpaPass": 16.3,
+        "usageRush": 1.3,
+        "heightIn": 65.4,
+        "weightLb": 4.6
+      },
+      "2025_4427971": {
+        "rushCarShare": 65.4,
+        "recYdShare": 96.7,
+        "avgPpaRush": 28.1,
+        "avgPpaPass": 69.9,
+        "usageRush": 52.3,
+        "heightIn": 37.9,
+        "weightLb": 22.9
+      },
+      "2025_4429077": {
+        "rushCarShare": 4.6,
+        "recYdShare": 34,
+        "avgPpaRush": 17,
+        "avgPpaPass": 61.4,
+        "usageRush": 3.3,
+        "heightIn": 81,
+        "weightLb": 87.6
+      },
+      "2025_4430565": {
+        "rushCarShare": 11.1,
+        "recYdShare": 56.2,
+        "avgPpaRush": 2.6,
+        "avgPpaPass": 23.5,
+        "usageRush": 9.2,
+        "heightIn": 65.4,
+        "weightLb": 28.1
+      },
+      "2025_4430689": {
+        "rushCarShare": 60.1,
+        "recYdShare": 37.3,
+        "avgPpaRush": 15.7,
+        "avgPpaPass": 11.1,
+        "usageRush": 64.7,
+        "heightIn": 81,
+        "weightLb": 45.1
+      },
+      "2025_4430712": {
+        "rushCarShare": 14.4,
+        "recYdShare": 52.3,
+        "avgPpaRush": 35.9,
+        "avgPpaPass": 23.5,
+        "usageRush": 16.3,
+        "heightIn": 65.4,
+        "weightLb": 19.6
+      },
+      "2025_4430843": {
+        "rushCarShare": 7.2,
+        "recYdShare": 17.6,
+        "avgPpaRush": 11.8,
+        "avgPpaPass": 39.2,
+        "usageRush": 6.5,
+        "heightIn": 93.5,
+        "weightLb": 64.1
+      },
+      "2025_4430893": {
+        "rushCarShare": 45.8,
+        "recYdShare": 58.8,
+        "avgPpaRush": 32,
+        "avgPpaPass": 46.4,
+        "usageRush": 51.6,
+        "heightIn": 65.4,
+        "weightLb": 88.2
+      },
+      "2025_4430992": {
+        "rushCarShare": 52.9,
+        "recYdShare": 10.5,
+        "avgPpaRush": 37.3,
+        "avgPpaPass": 3.9,
+        "usageRush": 41.8,
+        "heightIn": 37.9,
+        "weightLb": 28.1
+      },
+      "2025_4431074": {
+        "rushCarShare": 47.7,
+        "recYdShare": 28.8,
+        "avgPpaRush": 30.1,
+        "avgPpaPass": 7.8,
+        "usageRush": 40.5,
+        "heightIn": 37.9,
+        "weightLb": 45.1
+      },
+      "2025_4431304": {
+        "rushCarShare": 60.8,
+        "recYdShare": 10.5,
+        "avgPpaRush": 46.4,
+        "avgPpaPass": 0.7,
+        "usageRush": 51.6,
+        "heightIn": 65.4,
+        "weightLb": 45.1
+      },
+      "2025_4431485": {
+        "rushCarShare": 8.5,
+        "recYdShare": 15,
+        "avgPpaRush": 50.3,
+        "avgPpaPass": 90.2,
+        "usageRush": 9.2,
+        "heightIn": 37.9,
+        "weightLb": 64.1
+      },
+      "2025_4431499": {
+        "rushCarShare": 60.8,
+        "recYdShare": 17.6,
+        "avgPpaRush": 52.3,
+        "avgPpaPass": 4.6,
+        "usageRush": 49.7,
+        "heightIn": 81,
+        "weightLb": 45.1
+      },
+      "2025_4432297": {
+        "rushCarShare": 4.6,
+        "recYdShare": 11.1,
+        "avgPpaRush": 9.2,
+        "avgPpaPass": 21.6,
+        "usageRush": 5.2,
+        "heightIn": 37.9,
+        "weightLb": 79.7
+      },
+      "2025_4432631": {
+        "rushCarShare": 9.8,
+        "recYdShare": 11.1,
+        "avgPpaRush": 65.4,
+        "avgPpaPass": 7.8,
+        "usageRush": 14.4,
+        "heightIn": 5.2,
+        "weightLb": 22.9
+      },
+      "2025_4432757": {
+        "rushCarShare": 2.6,
+        "recYdShare": 19,
+        "avgPpaRush": 46.4,
+        "avgPpaPass": 3.3,
+        "usageRush": 7.8,
+        "heightIn": 37.9,
+        "weightLb": 2.6
+      },
+      "2025_4565318": {
+        "rushCarShare": 2.6,
+        "recYdShare": 2,
+        "avgPpaRush": 20.3,
+        "avgPpaPass": 4.6,
+        "usageRush": 6.5,
+        "heightIn": 17.6,
+        "weightLb": 81
+      },
+      "2025_4565532": {
+        "rushCarShare": 31.4,
+        "recYdShare": 0,
+        "avgPpaRush": 9.2,
+        "avgPpaPass": 0,
+        "usageRush": 25.5,
+        "heightIn": 81,
+        "weightLb": 97.4
+      },
+      "2025_4568694": {
+        "rushCarShare": 20.9,
+        "recYdShare": 3.3,
+        "avgPpaRush": 20.3,
+        "avgPpaPass": 1.3,
+        "usageRush": 21.6,
+        "heightIn": 37.9,
+        "weightLb": 79.7
+      },
+      "2025_4576294": {
+        "rushCarShare": 7.2,
+        "recYdShare": 2,
+        "avgPpaRush": 17.6,
+        "avgPpaPass": 3.9,
+        "usageRush": 6.5,
+        "heightIn": 37.9,
+        "weightLb": 50.3
+      },
+      "2025_4594984": {
+        "rushCarShare": 16.3,
+        "recYdShare": 22.9,
+        "avgPpaRush": 4.6,
+        "avgPpaPass": 20.9,
+        "usageRush": 17,
+        "heightIn": 81,
+        "weightLb": 64.1
+      },
+      "2025_4599158": {
+        "rushCarShare": 60.1,
+        "recYdShare": 56.2,
+        "avgPpaRush": 0,
+        "avgPpaPass": 51,
+        "usageRush": 52.3,
+        "heightIn": 81,
+        "weightLb": 65.4
+      },
+      "2025_4602783": {
+        "rushCarShare": 2.6,
+        "recYdShare": 5.2,
+        "avgPpaRush": 37.3,
+        "avgPpaPass": 19,
+        "usageRush": 1.3,
+        "heightIn": 93.5,
+        "weightLb": 19.6
+      },
+      "2025_4607267": {
+        "rushCarShare": 2.6,
+        "recYdShare": 64.1,
+        "avgPpaRush": 4.6,
+        "avgPpaPass": 37.9,
+        "usageRush": 1.3,
+        "heightIn": 5.2,
+        "weightLb": 0.7
+      },
+      "2025_4608607": {
+        "rushCarShare": 41.8,
+        "recYdShare": 83.7,
+        "avgPpaRush": 61.4,
+        "avgPpaPass": 54.2,
+        "usageRush": 31.4,
+        "heightIn": 17.6,
+        "weightLb": 19.6
+      },
+      "2025_4611995": {
+        "rushCarShare": 15.7,
+        "recYdShare": 68,
+        "avgPpaRush": 0,
+        "avgPpaPass": 23.5,
+        "usageRush": 12.4,
+        "heightIn": 17.6,
+        "weightLb": 4.6
+      },
+      "2025_4612558": {
+        "rushCarShare": 12.4,
+        "recYdShare": 15,
+        "avgPpaRush": 75.8,
+        "avgPpaPass": 21.6,
+        "usageRush": 9.8,
+        "heightIn": 81,
+        "weightLb": 79.7
+      },
+      "2025_4612624": {
+        "rushCarShare": 2.6,
+        "recYdShare": 10.5,
+        "avgPpaRush": 0,
+        "avgPpaPass": 12.4,
+        "usageRush": 5.2,
+        "heightIn": 81,
+        "weightLb": 19.6
+      },
+      "2025_4613105": {
+        "rushCarShare": 20.9,
+        "recYdShare": 52.3,
+        "avgPpaRush": 20.9,
+        "avgPpaPass": 90.2,
+        "usageRush": 17,
+        "heightIn": 65.4,
+        "weightLb": 64.1
+      },
+      "2025_4676889": {
+        "rushCarShare": 41.2,
+        "recYdShare": 60.1,
+        "avgPpaRush": 5.9,
+        "avgPpaPass": 15,
+        "usageRush": 37.9,
+        "heightIn": 65.4,
+        "weightLb": 28.1
+      },
+      "2025_4680018": {
+        "rushCarShare": 9.8,
+        "recYdShare": 17,
+        "avgPpaRush": 0.7,
+        "avgPpaPass": 37.9,
+        "usageRush": 33.3,
+        "heightIn": 99.3,
+        "weightLb": 79.7
+      },
+      "2025_4683165": {
+        "rushCarShare": 2.6,
+        "recYdShare": 18.3,
+        "avgPpaRush": 90.8,
+        "avgPpaPass": 27.5,
+        "usageRush": 2,
+        "heightIn": 37.9,
+        "weightLb": 2.6
+      },
+      "2025_4683234": {
+        "rushCarShare": 5.9,
+        "recYdShare": 10.5,
+        "avgPpaRush": 59.5,
+        "avgPpaPass": 90.2,
+        "usageRush": 3.3,
+        "heightIn": 65.4,
+        "weightLb": 64.1
+      },
+      "2025_4685237": {
+        "rushCarShare": 2.6,
+        "recYdShare": 46.4,
+        "avgPpaRush": 3.3,
+        "avgPpaPass": 77.1,
+        "usageRush": 6.5,
+        "heightIn": 65.4,
+        "weightLb": 28.8
+      },
+      "2025_4685246": {
+        "rushCarShare": 63.4,
+        "recYdShare": 15,
+        "avgPpaRush": 72.5,
+        "avgPpaPass": 11.8,
+        "usageRush": 65.4,
+        "heightIn": 65.4,
+        "weightLb": 68
+      },
+      "2025_4685268": {
+        "rushCarShare": 43.1,
+        "recYdShare": 71.2,
+        "avgPpaRush": 20.3,
+        "avgPpaPass": 14.4,
+        "usageRush": 38.6,
+        "heightIn": 17.6,
+        "weightLb": 5.2
+      },
+      "2025_4685385": {
+        "rushCarShare": 96.7,
+        "recYdShare": 32.7,
+        "avgPpaRush": 4.6,
+        "avgPpaPass": 3.9,
+        "usageRush": 95.4,
+        "heightIn": 5.2,
+        "weightLb": 28.8
+      },
+      "2025_4685445": {
+        "rushCarShare": 8.5,
+        "recYdShare": 83.7,
+        "avgPpaRush": 22.2,
+        "avgPpaPass": 60.1,
+        "usageRush": 6.5,
+        "heightIn": 37.9,
+        "weightLb": 0.7
+      },
+      "2025_4685470": {
+        "rushCarShare": 2.6,
+        "recYdShare": 0,
+        "avgPpaRush": 31.4,
+        "avgPpaPass": 0,
+        "usageRush": 16.3,
+        "heightIn": 65.4,
+        "weightLb": 45.1
+      },
+      "2025_4685477": {
+        "rushCarShare": 19.6,
+        "recYdShare": 15,
+        "avgPpaRush": 0,
+        "avgPpaPass": 28.8,
+        "usageRush": 29.4,
+        "heightIn": 37.9,
+        "weightLb": 79.7
+      },
+      "2025_4685512": {
+        "rushCarShare": 17,
+        "recYdShare": 15,
+        "avgPpaRush": 51,
+        "avgPpaPass": 100,
+        "usageRush": 12.4,
+        "heightIn": 65.4,
+        "weightLb": 36.6
+      },
+      "2025_4685526": {
+        "rushCarShare": 52.9,
+        "recYdShare": 64.1,
+        "avgPpaRush": 28.1,
+        "avgPpaPass": 23.5,
+        "usageRush": 45.1,
+        "heightIn": 99.3,
+        "weightLb": 94.8
+      },
+      "2025_4685545": {
+        "rushCarShare": 7.2,
+        "recYdShare": 22.9,
+        "avgPpaRush": 75.2,
+        "avgPpaPass": 55.6,
+        "usageRush": 5.2,
+        "heightIn": 81,
+        "weightLb": 28.1
+      },
+      "2025_4685555": {
+        "rushCarShare": 13.1,
+        "recYdShare": 79.1,
+        "avgPpaRush": 60.8,
+        "avgPpaPass": 35.9,
+        "usageRush": 15.7,
+        "heightIn": 81,
+        "weightLb": 84.3
+      },
+      "2025_4686065": {
+        "rushCarShare": 28.8,
+        "recYdShare": 71.9,
+        "avgPpaRush": 25.5,
+        "avgPpaPass": 92.2,
+        "usageRush": 64.7,
+        "heightIn": 81,
+        "weightLb": 21.6
+      },
+      "2025_4686468": {
+        "rushCarShare": 43.1,
+        "recYdShare": 42.5,
+        "avgPpaRush": 26.8,
+        "avgPpaPass": 14.4,
+        "usageRush": 46.4,
+        "heightIn": 93.5,
+        "weightLb": 64.1
+      },
+      "2025_4686658": {
+        "rushCarShare": 53.6,
+        "recYdShare": 63.4,
+        "avgPpaRush": 25.5,
+        "avgPpaPass": 28.8,
+        "usageRush": 47.1,
+        "heightIn": 99.3,
+        "weightLb": 83
+      },
+      "2025_4688595": {
+        "rushCarShare": 7.8,
+        "recYdShare": 3.3,
+        "avgPpaRush": 3.3,
+        "avgPpaPass": 13.7,
+        "usageRush": 47.7,
+        "heightIn": 17.6,
+        "weightLb": 45.1
+      },
+      "2025_4688817": {
+        "rushCarShare": 2.6,
+        "recYdShare": 50.3,
+        "avgPpaRush": 17.6,
+        "avgPpaPass": 54.2,
+        "usageRush": 9.2,
+        "heightIn": 65.4,
+        "weightLb": 45.1
+      },
+      "2025_4688835": {
+        "rushCarShare": 36.6,
+        "recYdShare": 26.1,
+        "avgPpaRush": 13.1,
+        "avgPpaPass": 61.4,
+        "usageRush": 23.5,
+        "heightIn": 81,
+        "weightLb": 32.7
+      },
+      "2025_4689529": {
+        "rushCarShare": 7.8,
+        "recYdShare": 51.6,
+        "avgPpaRush": 4.6,
+        "avgPpaPass": 45.1,
+        "usageRush": 5.2,
+        "heightIn": 99.3,
+        "weightLb": 30.1
+      },
+      "2025_4691889": {
+        "rushCarShare": 6.5,
+        "recYdShare": 69.9,
+        "avgPpaRush": 78.4,
+        "avgPpaPass": 37.9,
+        "usageRush": 16.3,
+        "heightIn": 65.4,
+        "weightLb": 19.6
+      },
+      "2025_4694074": {
+        "rushCarShare": 20.9,
+        "recYdShare": 82.4,
+        "avgPpaRush": 9.8,
+        "avgPpaPass": 75.2,
+        "usageRush": 17,
+        "heightIn": 81,
+        "weightLb": 45.1
+      },
+      "2025_4695787": {
+        "rushCarShare": 80.4,
+        "recYdShare": 17.6,
+        "avgPpaRush": 4.6,
+        "avgPpaPass": 34,
+        "usageRush": 80.4,
+        "heightIn": 81,
+        "weightLb": 45.1
+      },
+      "2025_4696044": {
+        "rushCarShare": 20.3,
+        "recYdShare": 2,
+        "avgPpaRush": 41.8,
+        "avgPpaPass": 26.1,
+        "usageRush": 15.7,
+        "heightIn": 37.9,
+        "weightLb": 45.1
+      },
+      "2025_4698727": {
+        "rushCarShare": 2.6,
+        "recYdShare": 0.7,
+        "avgPpaRush": 0.7,
+        "avgPpaPass": 3.9,
+        "usageRush": 8.5,
+        "heightIn": 65.4,
+        "weightLb": 32.7
+      },
+      "2025_4700138": {
+        "rushCarShare": 7.8,
+        "recYdShare": 41.2,
+        "avgPpaRush": 2.6,
+        "avgPpaPass": 46.4,
+        "usageRush": 6.5,
+        "heightIn": 99.3,
+        "weightLb": 94.8
+      },
+      "2025_4702555": {
+        "rushCarShare": 32,
+        "recYdShare": 90.8,
+        "avgPpaRush": 62.7,
+        "avgPpaPass": 94.1,
+        "usageRush": 33.3,
+        "heightIn": 17.6,
+        "weightLb": 89.5
+      },
+      "2025_4705927": {
+        "rushCarShare": 56.9,
+        "recYdShare": 19,
+        "avgPpaRush": 17,
+        "avgPpaPass": 3.9,
+        "usageRush": 51.6,
+        "heightIn": 5.2,
+        "weightLb": 45.1
+      },
+      "2025_4713118": {
+        "rushCarShare": 53.6,
+        "recYdShare": 68.6,
+        "avgPpaRush": 25.5,
+        "avgPpaPass": 21.6,
+        "usageRush": 50.3,
+        "heightIn": 17.6,
+        "weightLb": 22.9
+      },
+      "2025_4717724": {
+        "rushCarShare": 57.5,
+        "recYdShare": 41.2,
+        "avgPpaRush": 17.6,
+        "avgPpaPass": 19.6,
+        "usageRush": 62.1,
+        "heightIn": 37.9,
+        "weightLb": 45.1
+      },
+      "2025_4794107": {
+        "rushCarShare": 4.6,
+        "recYdShare": 1.3,
+        "avgPpaRush": 46.4,
+        "avgPpaPass": 19.6,
+        "usageRush": 2.6,
+        "heightIn": 81,
+        "weightLb": 30.1
+      },
+      "2025_4804879": {
+        "rushCarShare": 2.6,
+        "recYdShare": 19,
+        "avgPpaRush": 9.2,
+        "avgPpaPass": 61.4,
+        "usageRush": 1.3,
+        "heightIn": 37.9,
+        "weightLb": 19.6
+      },
+      "2025_4805256": {
+        "rushCarShare": 7.2,
+        "recYdShare": 19.6,
+        "avgPpaRush": 47.7,
+        "avgPpaPass": 13.7,
+        "usageRush": 9.2,
+        "heightIn": 17.6,
+        "weightLb": 11.1
+      },
+      "2025_4808744": {
+        "rushCarShare": 0.7,
+        "recYdShare": 4.6,
+        "avgPpaRush": 35.3,
+        "avgPpaPass": 95.4,
+        "usageRush": 0.7,
+        "heightIn": 17.6,
+        "weightLb": 45.1
+      },
+      "2025_4816099": {
+        "rushCarShare": 2.6,
+        "recYdShare": 91.5,
+        "avgPpaRush": 8.5,
+        "avgPpaPass": 54.2,
+        "usageRush": 1.3,
+        "heightIn": 37.9,
+        "weightLb": 4.6
+      },
+      "2025_4816307": {
+        "rushCarShare": 7.8,
+        "recYdShare": 37.3,
+        "avgPpaRush": 9.2,
+        "avgPpaPass": 11.1,
+        "usageRush": 8.5,
+        "heightIn": 17.6,
+        "weightLb": 9.8
+      },
+      "2025_4827047": {
+        "rushCarShare": 2.6,
+        "recYdShare": 5.2,
+        "avgPpaRush": 7.2,
+        "avgPpaPass": 3.9,
+        "usageRush": 7.2,
+        "heightIn": 65.4,
+        "weightLb": 19.6
+      },
+      "2025_4832846": {
+        "rushCarShare": 51.6,
+        "recYdShare": 32.7,
+        "avgPpaRush": 3.3,
+        "avgPpaPass": 9.8,
+        "usageRush": 45.1,
+        "heightIn": 37.9,
+        "weightLb": 9.8
+      },
+      "2025_4832849": {
+        "rushCarShare": 40.5,
+        "recYdShare": 5.2,
+        "avgPpaRush": 7.2,
+        "avgPpaPass": 22.2,
+        "usageRush": 32,
+        "heightIn": 5.2,
+        "weightLb": 9.8
+      },
+      "2025_4832955": {
+        "rushCarShare": 93.5,
+        "recYdShare": 94.1,
+        "avgPpaRush": 52.3,
+        "avgPpaPass": 36.6,
+        "usageRush": 96.7,
+        "heightIn": 65.4,
+        "weightLb": 19.6
+      },
+      "2025_4837385": {
+        "rushCarShare": 11.1,
+        "recYdShare": 10.5,
+        "avgPpaRush": 10.5,
+        "avgPpaPass": 70.6,
+        "usageRush": 12.4,
+        "heightIn": 93.5,
+        "weightLb": 45.8
+      },
+      "2025_4838269": {
+        "rushCarShare": 23.5,
+        "recYdShare": 56.2,
+        "avgPpaRush": 83.7,
+        "avgPpaPass": 71.2,
+        "usageRush": 25.5,
+        "heightIn": 17.6,
+        "weightLb": 9.8
+      },
+      "2025_4840113": {
+        "rushCarShare": 3.3,
+        "recYdShare": 47.1,
+        "avgPpaRush": 44.4,
+        "avgPpaPass": 95.4,
+        "usageRush": 5.2,
+        "heightIn": 81,
+        "weightLb": 51.6
+      },
+      "2025_4869552": {
+        "rushCarShare": 0.7,
+        "recYdShare": 12.4,
+        "avgPpaRush": 8.5,
+        "avgPpaPass": 27.5,
+        "usageRush": 1.3,
+        "heightIn": 1.3,
+        "weightLb": 0.7
+      },
+      "2025_4869582": {
+        "rushCarShare": 7.8,
+        "recYdShare": 58.8,
+        "avgPpaRush": 4.6,
+        "avgPpaPass": 47.7,
+        "usageRush": 6.5,
+        "heightIn": 1.3,
+        "weightLb": 4.6
+      },
+      "2025_4870642": {
+        "rushCarShare": 46.4,
+        "recYdShare": 19,
+        "avgPpaRush": 20.3,
+        "avgPpaPass": 26.8,
+        "usageRush": 38.6,
+        "heightIn": 65.4,
+        "weightLb": 28.1
+      },
+      "2025_4870736": {
+        "rushCarShare": 45.8,
+        "recYdShare": 19,
+        "avgPpaRush": 40.5,
+        "avgPpaPass": 35.9,
+        "usageRush": 47.1,
+        "heightIn": 99.3,
+        "weightLb": 87.6
+      },
+      "2025_4870760": {
+        "rushCarShare": 9.8,
+        "recYdShare": 8.5,
+        "avgPpaRush": 94.8,
+        "avgPpaPass": 7.8,
+        "usageRush": 52.3,
+        "heightIn": 65.4,
+        "weightLb": 45.1
+      },
+      "2025_4870808": {
+        "rushCarShare": 77.8,
+        "recYdShare": 82.4,
+        "avgPpaRush": 83,
+        "avgPpaPass": 75.8,
+        "usageRush": 56.2,
+        "heightIn": 81,
+        "weightLb": 52.9
+      },
+      "2025_4870934": {
+        "rushCarShare": 10.5,
+        "recYdShare": 21.6,
+        "avgPpaRush": 35.3,
+        "avgPpaPass": 52.3,
+        "usageRush": 9.8,
+        "heightIn": 65.4,
+        "weightLb": 64.1
+      },
+      "2025_4870955": {
+        "rushCarShare": 0,
+        "recYdShare": 0.7,
+        "avgPpaRush": 52.9,
+        "avgPpaPass": 21.6,
+        "usageRush": 1.3,
+        "heightIn": 65.4,
+        "weightLb": 28.1
+      },
+      "2025_4871013": {
+        "rushCarShare": 20.9,
+        "recYdShare": 43.8,
+        "avgPpaRush": 3.3,
+        "avgPpaPass": 15,
+        "usageRush": 17,
+        "heightIn": 65.4,
+        "weightLb": 32.7
+      },
+      "2025_4871053": {
+        "rushCarShare": 41.8,
+        "recYdShare": 49,
+        "avgPpaRush": 3.9,
+        "avgPpaPass": 8.5,
+        "usageRush": 52.9,
+        "heightIn": 65.4,
+        "weightLb": 5.2
+      },
+      "2025_4871076": {
+        "rushCarShare": 23.5,
+        "recYdShare": 32.7,
+        "avgPpaRush": 4.6,
+        "avgPpaPass": 28.1,
+        "usageRush": 73.9,
+        "heightIn": 81,
+        "weightLb": 22.9
+      },
+      "2025_4875065": {
+        "rushCarShare": 2.6,
+        "recYdShare": 10.5,
+        "avgPpaRush": 5.9,
+        "avgPpaPass": 3.9,
+        "usageRush": 1.3,
+        "heightIn": 81,
+        "weightLb": 21.6
+      },
+      "2025_4875267": {
+        "rushCarShare": 2.6,
+        "recYdShare": 0.7,
+        "avgPpaRush": 4.6,
+        "avgPpaPass": 3.9,
+        "usageRush": 1.3,
+        "heightIn": 65.4,
+        "weightLb": 64.1
+      },
+      "2025_4875666": {
+        "rushCarShare": 2.6,
+        "recYdShare": 75.2,
+        "avgPpaRush": 3.3,
+        "avgPpaPass": 71.9,
+        "usageRush": 4.6,
+        "heightIn": 93.5,
+        "weightLb": 45.1
+      },
+      "2025_4875791": {
+        "rushCarShare": 31.4,
+        "recYdShare": 63.4,
+        "avgPpaRush": 4.6,
+        "avgPpaPass": 51.6,
+        "usageRush": 21.6,
+        "heightIn": 99.3,
+        "weightLb": 79.7
+      },
+      "2025_4876311": {
+        "rushCarShare": 2.6,
+        "recYdShare": 42.5,
+        "avgPpaRush": 4.6,
+        "avgPpaPass": 30.1,
+        "usageRush": 5.2,
+        "heightIn": 93.5,
+        "weightLb": 45.8
+      },
+      "2025_4876378": {
+        "rushCarShare": 11.1,
+        "recYdShare": 98,
+        "avgPpaRush": 17.6,
+        "avgPpaPass": 90.2,
+        "usageRush": 9.8,
+        "heightIn": 37.9,
+        "weightLb": 2.6
+      },
+      "2025_4877529": {
+        "rushCarShare": 2.6,
+        "recYdShare": 2,
+        "avgPpaRush": 37.3,
+        "avgPpaPass": 55.6,
+        "usageRush": 1.3,
+        "heightIn": 37.9,
+        "weightLb": 22.9
+      },
+      "2025_4878394": {
+        "rushCarShare": 3.3,
+        "recYdShare": 19.6,
+        "avgPpaRush": 10.5,
+        "avgPpaPass": 22.2,
+        "usageRush": 3.9,
+        "heightIn": 65.4,
+        "weightLb": 19.6
+      },
+      "2025_4879060": {
+        "rushCarShare": 2.6,
+        "recYdShare": 0,
+        "avgPpaRush": 41.2,
+        "avgPpaPass": 3.9,
+        "usageRush": 6.5,
+        "heightIn": 65.4,
+        "weightLb": 89.5
+      },
+      "2025_4880395": {
+        "rushCarShare": 25.5,
+        "recYdShare": 9.2,
+        "avgPpaRush": 2.6,
+        "avgPpaPass": 14.4,
+        "usageRush": 40.5,
+        "heightIn": 37.9,
+        "weightLb": 19.6
+      },
+      "2025_4880964": {
+        "rushCarShare": 2.6,
+        "recYdShare": 10.5,
+        "avgPpaRush": 35.3,
+        "avgPpaPass": 54.2,
+        "usageRush": 2,
+        "heightIn": 5.2,
+        "weightLb": 45.1
+      },
+      "2025_4888886": {
+        "rushCarShare": 23.5,
+        "recYdShare": 51.6,
+        "avgPpaRush": 0,
+        "avgPpaPass": 26.1,
+        "usageRush": 18.3,
+        "heightIn": 93.5,
+        "weightLb": 83
+      },
+      "2025_4897730": {
+        "rushCarShare": 19.6,
+        "recYdShare": 24.8,
+        "avgPpaRush": 2.6,
+        "avgPpaPass": 41.2,
+        "usageRush": 16.3,
+        "heightIn": 1.3,
+        "weightLb": 4.6
+      },
+      "2025_4899361": {
+        "rushCarShare": 2.6,
+        "recYdShare": 0.7,
+        "avgPpaRush": 48.4,
+        "avgPpaPass": 11.1,
+        "usageRush": 7.8,
+        "heightIn": 81,
+        "weightLb": 64.1
+      },
+      "2025_4899368": {
+        "rushCarShare": 96.7,
+        "recYdShare": 58.8,
+        "avgPpaRush": 3.3,
+        "avgPpaPass": 14.4,
+        "usageRush": 94.1,
+        "heightIn": 65.4,
+        "weightLb": 19.6
+      },
+      "2025_4912275": {
+        "rushCarShare": 2.6,
+        "recYdShare": 9.2,
+        "avgPpaRush": 48.4,
+        "avgPpaPass": 28.1,
+        "usageRush": 1.3,
+        "heightIn": 37.9,
+        "weightLb": 28.1
+      },
+      "2025_4912302": {
+        "rushCarShare": 0,
+        "recYdShare": 19,
+        "avgPpaRush": 97.4,
+        "avgPpaPass": 94.1,
+        "usageRush": 0,
+        "heightIn": 37.9,
+        "weightLb": 45.1
+      },
+      "2025_4912342": {
+        "rushCarShare": 35.9,
+        "recYdShare": 96.7,
+        "avgPpaRush": 56.9,
+        "avgPpaPass": 54.2,
+        "usageRush": 20.3,
+        "heightIn": 1.3,
+        "weightLb": 5.2
+      },
+      "2025_4912453": {
+        "rushCarShare": 72.5,
+        "recYdShare": 0,
+        "avgPpaRush": 68.6,
+        "avgPpaPass": 0,
+        "usageRush": 57.5,
+        "heightIn": 93.5,
+        "weightLb": 45.1
+      },
+      "2025_4917310": {
+        "rushCarShare": 15.7,
+        "recYdShare": 35.3,
+        "avgPpaRush": 9.2,
+        "avgPpaPass": 27.5,
+        "usageRush": 14.4,
+        "heightIn": 65.4,
+        "weightLb": 45.1
+      },
+      "2025_4918103": {
+        "rushCarShare": 65.4,
+        "recYdShare": 92.8,
+        "avgPpaRush": 46.4,
+        "avgPpaPass": 30.1,
+        "usageRush": 66,
+        "heightIn": 17.6,
+        "weightLb": 22.9
+      },
+      "2025_4918126": {
+        "rushCarShare": 64.7,
+        "recYdShare": 71.2,
+        "avgPpaRush": 36.6,
+        "avgPpaPass": 30.1,
+        "usageRush": 56.2,
+        "heightIn": 99.3,
+        "weightLb": 87.6
+      },
+      "2025_4920901": {
+        "rushCarShare": 41.8,
+        "recYdShare": 84.3,
+        "avgPpaRush": 4.6,
+        "avgPpaPass": 22.9,
+        "usageRush": 66.7,
+        "heightIn": 81,
+        "weightLb": 64.1
+      },
+      "2025_4921108": {
+        "rushCarShare": 40.5,
+        "recYdShare": 19,
+        "avgPpaRush": 94.8,
+        "avgPpaPass": 19.6,
+        "usageRush": 29.4,
+        "heightIn": 37.9,
+        "weightLb": 64.1
+      },
+      "2025_4921116": {
+        "rushCarShare": 7.8,
+        "recYdShare": 48.4,
+        "avgPpaRush": 85,
+        "avgPpaPass": 15,
+        "usageRush": 6.5,
+        "heightIn": 81,
+        "weightLb": 65.4
+      },
+      "2025_4922993": {
+        "rushCarShare": 4.6,
+        "recYdShare": 2,
+        "avgPpaRush": 10.5,
+        "avgPpaPass": 55.6,
+        "usageRush": 6.5,
+        "heightIn": 1.3,
+        "weightLb": 0
+      },
+      "2025_4923046": {
+        "rushCarShare": 8.5,
+        "recYdShare": 24.2,
+        "avgPpaRush": 84.3,
+        "avgPpaPass": 54.2,
+        "usageRush": 17,
+        "heightIn": 37.9,
+        "weightLb": 64.1
+      },
+      "2025_4923252": {
+        "rushCarShare": 13.1,
+        "recYdShare": 2,
+        "avgPpaRush": 2.6,
+        "avgPpaPass": 3.9,
+        "usageRush": 12.4,
+        "heightIn": 99.3,
+        "weightLb": 87.6
+      },
+      "2025_4941012": {
+        "rushCarShare": 19.6,
+        "recYdShare": 8.5,
+        "avgPpaRush": 25.5,
+        "avgPpaPass": 13.1,
+        "usageRush": 17,
+        "heightIn": 37.9,
+        "weightLb": 4.6
+      },
+      "2025_4954455": {
+        "rushCarShare": 40.5,
+        "recYdShare": 10.5,
+        "avgPpaRush": 20.3,
+        "avgPpaPass": 9.2,
+        "usageRush": 31.4,
+        "heightIn": 81,
+        "weightLb": 45.1
+      },
+      "2025_5030333": {
+        "rushCarShare": 14.4,
+        "recYdShare": 45.8,
+        "avgPpaRush": 83.7,
+        "avgPpaPass": 92.8,
+        "usageRush": 12.4,
+        "heightIn": 17.6,
+        "weightLb": 30.1
+      },
+      "2025_5075952": {
+        "rushCarShare": 2.6,
+        "recYdShare": 0,
+        "avgPpaRush": 0,
+        "avgPpaPass": 0,
+        "usageRush": 2,
+        "heightIn": 65.4,
+        "weightLb": 45.1
+      },
+      "2025_5076122": {
+        "rushCarShare": 64.7,
+        "recYdShare": 18.3,
+        "avgPpaRush": 61.4,
+        "avgPpaPass": 100,
+        "usageRush": 70.6,
+        "heightIn": 37.9,
+        "weightLb": 9.8
+      },
+      "2025_5077502": {
+        "rushCarShare": 47.1,
+        "recYdShare": 39.2,
+        "avgPpaRush": 17.6,
+        "avgPpaPass": 55.6,
+        "usageRush": 47.1,
+        "heightIn": 99.3,
+        "weightLb": 65.4
+      },
+      "2025_5078005": {
+        "rushCarShare": 21.6,
+        "recYdShare": 0.7,
+        "avgPpaRush": 10.5,
+        "avgPpaPass": 0,
+        "usageRush": 20.3,
+        "heightIn": 65.4,
+        "weightLb": 45.8
+      },
+      "2025_5078244": {
+        "rushCarShare": 55.6,
+        "recYdShare": 10.5,
+        "avgPpaRush": 42.5,
+        "avgPpaPass": 13.1,
+        "usageRush": 51.6,
+        "heightIn": 65.4,
+        "weightLb": 45.1
+      },
+      "2025_5078916": {
+        "rushCarShare": 55.6,
+        "recYdShare": 39.2,
+        "avgPpaRush": 19,
+        "avgPpaPass": 11.8,
+        "usageRush": 49.7,
+        "heightIn": 81,
+        "weightLb": 50.3
+      },
+      "2025_5079298": {
+        "rushCarShare": 11.1,
+        "recYdShare": 86.9,
+        "avgPpaRush": 11.8,
+        "avgPpaPass": 34,
+        "usageRush": 9.8,
+        "heightIn": 37.9,
+        "weightLb": 50.3
+      },
+      "2025_5079322": {
+        "rushCarShare": 93.5,
+        "recYdShare": 75.2,
+        "avgPpaRush": 28.8,
+        "avgPpaPass": 32.7,
+        "usageRush": 85.6,
+        "heightIn": 93.5,
+        "weightLb": 87.6
+      },
+      "2025_5079335": {
+        "rushCarShare": 2.6,
+        "recYdShare": 12.4,
+        "avgPpaRush": 20.9,
+        "avgPpaPass": 41.8,
+        "usageRush": 3.3,
+        "heightIn": 65.4,
+        "weightLb": 87.6
+      },
+      "2025_5079349": {
+        "rushCarShare": 9.8,
+        "recYdShare": 5.2,
+        "avgPpaRush": 96.1,
+        "avgPpaPass": 0,
+        "usageRush": 28.1,
+        "heightIn": 17.6,
+        "weightLb": 4.6
+      },
+      "2025_5079372": {
+        "rushCarShare": 7.2,
+        "recYdShare": 7.8,
+        "avgPpaRush": 9.8,
+        "avgPpaPass": 90.2,
+        "usageRush": 4.6,
+        "heightIn": 81,
+        "weightLb": 28.1
+      },
+      "2025_5079378": {
+        "rushCarShare": 3.3,
+        "recYdShare": 5.2,
+        "avgPpaRush": 4.6,
+        "avgPpaPass": 7.8,
+        "usageRush": 7.2,
+        "heightIn": 65.4,
+        "weightLb": 52.9
+      },
+      "2025_5079379": {
+        "rushCarShare": 21.6,
+        "recYdShare": 17,
+        "avgPpaRush": 5.9,
+        "avgPpaPass": 47.7,
+        "usageRush": 19,
+        "heightIn": 17.6,
+        "weightLb": 19.6
+      },
+      "2025_5079419": {
+        "rushCarShare": 0,
+        "recYdShare": 2,
+        "avgPpaRush": 17.6,
+        "avgPpaPass": 41.2,
+        "usageRush": 1.3,
+        "heightIn": 17.6,
+        "weightLb": 2.6
+      },
+      "2025_5079482": {
+        "rushCarShare": 2.6,
+        "recYdShare": 3.3,
+        "avgPpaRush": 3.3,
+        "avgPpaPass": 0,
+        "usageRush": 19,
+        "heightIn": 65.4,
+        "weightLb": 45.8
+      },
+      "2025_5079574": {
+        "rushCarShare": 21.6,
+        "recYdShare": 21.6,
+        "avgPpaRush": 71.2,
+        "avgPpaPass": 34,
+        "usageRush": 28.1,
+        "heightIn": 65.4,
+        "weightLb": 65.4
+      },
+      "2025_5079626": {
+        "rushCarShare": 7.8,
+        "recYdShare": 4.6,
+        "avgPpaRush": 1.3,
+        "avgPpaPass": 0,
+        "usageRush": 7.2,
+        "heightIn": 17.6,
+        "weightLb": 64.1
+      },
+      "2025_5079641": {
+        "rushCarShare": 7.2,
+        "recYdShare": 0.7,
+        "avgPpaRush": 8.5,
+        "avgPpaPass": 90.2,
+        "usageRush": 17,
+        "heightIn": 93.5,
+        "weightLb": 79.7
+      },
+      "2025_5079663": {
+        "rushCarShare": 12.4,
+        "recYdShare": 46.4,
+        "avgPpaRush": 29.4,
+        "avgPpaPass": 79.1,
+        "usageRush": 17,
+        "heightIn": 37.9,
+        "weightLb": 0.7
+      },
+      "2025_5079749": {
+        "rushCarShare": 20.9,
+        "recYdShare": 3.3,
+        "avgPpaRush": 13.1,
+        "avgPpaPass": 0,
+        "usageRush": 50.3,
+        "heightIn": 93.5,
+        "weightLb": 94.8
+      },
+      "2025_5081526": {
+        "rushCarShare": 11.1,
+        "recYdShare": 66,
+        "avgPpaRush": 85,
+        "avgPpaPass": 87.6,
+        "usageRush": 7.8,
+        "heightIn": 81,
+        "weightLb": 13.1
+      },
+      "2025_5081926": {
+        "rushCarShare": 21.6,
+        "recYdShare": 11.1,
+        "avgPpaRush": 31.4,
+        "avgPpaPass": 30.1,
+        "usageRush": 19,
+        "heightIn": 5.2,
+        "weightLb": 70.6
+      },
+      "2025_5081999": {
+        "rushCarShare": 5.9,
+        "recYdShare": 11.1,
+        "avgPpaRush": 59.5,
+        "avgPpaPass": 62.7,
+        "usageRush": 5.2,
+        "heightIn": 99.3,
+        "weightLb": 96.7
+      },
+      "2025_5082144": {
+        "rushCarShare": 0,
+        "recYdShare": 0,
+        "avgPpaRush": 2.6,
+        "avgPpaPass": 0,
+        "usageRush": 1.3,
+        "heightIn": 81,
+        "weightLb": 79.7
+      },
+      "2025_5082269": {
+        "rushCarShare": 40.5,
+        "recYdShare": 79.1,
+        "avgPpaRush": 0,
+        "avgPpaPass": 46.4,
+        "usageRush": 30.1,
+        "heightIn": 81,
+        "weightLb": 28.8
+      },
+      "2025_5082271": {
+        "rushCarShare": 18.3,
+        "recYdShare": 48.4,
+        "avgPpaRush": 10.5,
+        "avgPpaPass": 81,
+        "usageRush": 15.7,
+        "heightIn": 1.3,
+        "weightLb": 0
+      },
+      "2025_5083111": {
+        "rushCarShare": 13.1,
+        "recYdShare": 55.6,
+        "avgPpaRush": 1.3,
+        "avgPpaPass": 22.2,
+        "usageRush": 20.3,
+        "heightIn": 37.9,
+        "weightLb": 4.6
+      },
+      "2025_5084047": {
+        "rushCarShare": 21.6,
+        "recYdShare": 21.6,
+        "avgPpaRush": 21.6,
+        "avgPpaPass": 62.7,
+        "usageRush": 17,
+        "heightIn": 37.9,
+        "weightLb": 28.1
+      },
+      "2025_5084179": {
+        "rushCarShare": 7.2,
+        "recYdShare": 17,
+        "avgPpaRush": 71.2,
+        "avgPpaPass": 96.7,
+        "usageRush": 5.2,
+        "heightIn": 81,
+        "weightLb": 45.1
+      },
+      "2025_5084286": {
+        "rushCarShare": 21.6,
+        "recYdShare": 2,
+        "avgPpaRush": 0,
+        "avgPpaPass": 2,
+        "usageRush": 47.1,
+        "heightIn": 37.9,
+        "weightLb": 87.6
+      },
+      "2025_5084582": {
+        "rushCarShare": 81.7,
+        "recYdShare": 5.2,
+        "avgPpaRush": 19,
+        "avgPpaPass": 3.9,
+        "usageRush": 70.6,
+        "heightIn": 37.9,
+        "weightLb": 28.1
+      },
+      "2025_5084798": {
+        "rushCarShare": 20.9,
+        "recYdShare": 19,
+        "avgPpaRush": 66.7,
+        "avgPpaPass": 22.2,
+        "usageRush": 17,
+        "heightIn": 17.6,
+        "weightLb": 2.6
+      },
+      "2025_5085006": {
+        "rushCarShare": 20.9,
+        "recYdShare": 21.6,
+        "avgPpaRush": 47.7,
+        "avgPpaPass": 0,
+        "usageRush": 17,
+        "heightIn": 65.4,
+        "weightLb": 87.6
+      },
+      "2025_5086027": {
+        "rushCarShare": 58.2,
+        "recYdShare": 12.4,
+        "avgPpaRush": 32,
+        "avgPpaPass": 30.1,
+        "usageRush": 45.8,
+        "heightIn": 99.3,
+        "weightLb": 79.7
+      },
+      "2025_5086034": {
+        "rushCarShare": 85.6,
+        "recYdShare": 39.2,
+        "avgPpaRush": 66.7,
+        "avgPpaPass": 71.2,
+        "usageRush": 75.8,
+        "heightIn": 65.4,
+        "weightLb": 28.8
+      },
+      "2025_5086050": {
+        "rushCarShare": 2.6,
+        "recYdShare": 4.6,
+        "avgPpaRush": 75.8,
+        "avgPpaPass": 47.7,
+        "usageRush": 2,
+        "heightIn": 37.9,
+        "weightLb": 28.1
+      },
+      "2025_5086378": {
+        "rushCarShare": 2.6,
+        "recYdShare": 60.1,
+        "avgPpaRush": 0,
+        "avgPpaPass": 63.4,
+        "usageRush": 13.7,
+        "heightIn": 37.9,
+        "weightLb": 2.6
+      },
+      "2025_5086379": {
+        "rushCarShare": 17,
+        "recYdShare": 28.8,
+        "avgPpaRush": 0,
+        "avgPpaPass": 26.1,
+        "usageRush": 17,
+        "heightIn": 37.9,
+        "weightLb": 19.6
+      },
+      "2025_5086388": {
+        "rushCarShare": 88.2,
+        "recYdShare": 21.6,
+        "avgPpaRush": 36.6,
+        "avgPpaPass": 19,
+        "usageRush": 79.7,
+        "heightIn": 65.4,
+        "weightLb": 28.1
+      },
+      "2025_5086393": {
+        "rushCarShare": 19.6,
+        "recYdShare": 85.6,
+        "avgPpaRush": 35.3,
+        "avgPpaPass": 71.2,
+        "usageRush": 14.4,
+        "heightIn": 37.9,
+        "weightLb": 2.6
+      },
+      "2025_5086952": {
+        "rushCarShare": 20.9,
+        "recYdShare": 45.8,
+        "avgPpaRush": 3.3,
+        "avgPpaPass": 31.4,
+        "usageRush": 22.9,
+        "heightIn": 37.9,
+        "weightLb": 19.6
+      },
+      "2025_5093886": {
+        "rushCarShare": 31.4,
+        "recYdShare": 42.5,
+        "avgPpaRush": 13.7,
+        "avgPpaPass": 19,
+        "usageRush": 38.6,
+        "heightIn": 17.6,
+        "weightLb": 45.8
+      },
+      "2025_5097058": {
+        "rushCarShare": 14.4,
+        "recYdShare": 10.5,
+        "avgPpaRush": 29.4,
+        "avgPpaPass": 56.2,
+        "usageRush": 14.4,
+        "heightIn": 81,
+        "weightLb": 45.1
+      },
+      "2025_5099736": {
+        "rushCarShare": 2.6,
+        "recYdShare": 0.7,
+        "avgPpaRush": 35.3,
+        "avgPpaPass": 16.3,
+        "usageRush": 2,
+        "heightIn": 17.6,
+        "weightLb": 28.1
+      },
+      "2025_5106299": {
+        "rushCarShare": 20.9,
+        "recYdShare": 5.2,
+        "avgPpaRush": 4.6,
+        "avgPpaPass": 11.1,
+        "usageRush": 17,
+        "heightIn": 65.4,
+        "weightLb": 19.6
+      },
+      "2025_5107875": {
+        "rushCarShare": 20.9,
+        "recYdShare": 1.3,
+        "avgPpaRush": 2.6,
+        "avgPpaPass": 1.3,
+        "usageRush": 19,
+        "heightIn": 5.2,
+        "weightLb": 19.6
+      },
+      "2025_5110454": {
+        "rushCarShare": 0.7,
+        "recYdShare": 3.3,
+        "avgPpaRush": 3.3,
+        "avgPpaPass": 19.6,
+        "usageRush": 1.3,
+        "heightIn": 37.9,
+        "weightLb": 52.9
+      },
+      "2025_5114332": {
+        "rushCarShare": 7.2,
+        "recYdShare": 17,
+        "avgPpaRush": 0,
+        "avgPpaPass": 31.4,
+        "usageRush": 13.7,
+        "heightIn": 37.9,
+        "weightLb": 12.4
+      },
+      "2025_5120317": {
+        "rushCarShare": 2.6,
+        "recYdShare": 15.7,
+        "avgPpaRush": 0,
+        "avgPpaPass": 16.3,
+        "usageRush": 5.2,
+        "heightIn": 37.9,
+        "weightLb": 2.6
+      },
+      "2025_5121721": {
+        "rushCarShare": 60.8,
+        "recYdShare": 95.4,
+        "avgPpaRush": 8.5,
+        "avgPpaPass": 32.7,
+        "usageRush": 76.5,
+        "heightIn": 37.9,
+        "weightLb": 12.4
+      },
+      "2025_5122231": {
+        "rushCarShare": 19.6,
+        "recYdShare": 2,
+        "avgPpaRush": 10.5,
+        "avgPpaPass": 3.9,
+        "usageRush": 14.4,
+        "heightIn": 37.9,
+        "weightLb": 2.6
+      },
+      "2025_5122554": {
+        "rushCarShare": 2.6,
+        "recYdShare": 19,
+        "avgPpaRush": 11.8,
+        "avgPpaPass": 34,
+        "usageRush": 10.5,
+        "heightIn": 81,
+        "weightLb": 98
+      },
+      "2025_5124334": {
+        "rushCarShare": 0,
+        "recYdShare": 10.5,
+        "avgPpaRush": 12.4,
+        "avgPpaPass": 52.3,
+        "usageRush": 1.3,
+        "heightIn": 37.9,
+        "weightLb": 28.1
+      },
+      "2025_5125335": {
+        "rushCarShare": 22.2,
+        "recYdShare": 96.7,
+        "avgPpaRush": 10.5,
+        "avgPpaPass": 26.8,
+        "usageRush": 41.8,
+        "heightIn": 17.6,
+        "weightLb": 5.2
+      },
+      "2025_5125754": {
+        "rushCarShare": 21.6,
+        "recYdShare": 56.2,
+        "avgPpaRush": 44.4,
+        "avgPpaPass": 34,
+        "usageRush": 19,
+        "heightIn": 17.6,
+        "weightLb": 9.8
+      },
+      "2025_5125823": {
+        "rushCarShare": 9.8,
+        "recYdShare": 50.3,
+        "avgPpaRush": 22.2,
+        "avgPpaPass": 46.4,
+        "usageRush": 7.8,
+        "heightIn": 17.6,
+        "weightLb": 4.6
+      },
+      "2025_5126513": {
+        "rushCarShare": 11.8,
+        "recYdShare": 24.2,
+        "avgPpaRush": 4.6,
+        "avgPpaPass": 61.4,
+        "usageRush": 9.8,
+        "heightIn": 37.9,
+        "weightLb": 87.6
+      },
+      "2025_5141386": {
+        "rushCarShare": 18.3,
+        "recYdShare": 10.5,
+        "avgPpaRush": 0.7,
+        "avgPpaPass": 22.9,
+        "usageRush": 17,
+        "heightIn": 65.4,
+        "weightLb": 50.3
+      },
+      "2025_5141423": {
+        "rushCarShare": 5.9,
+        "recYdShare": 4.6,
+        "avgPpaRush": 98,
+        "avgPpaPass": 21.6,
+        "usageRush": 5.2,
+        "heightIn": 81,
+        "weightLb": 98
+      },
+      "2025_5141499": {
+        "rushCarShare": 2.6,
+        "recYdShare": 19,
+        "avgPpaRush": 100,
+        "avgPpaPass": 68,
+        "usageRush": 0.7,
+        "heightIn": 65.4,
+        "weightLb": 28.1
+      },
+      "2025_5141517": {
+        "rushCarShare": 44.4,
+        "recYdShare": 43.8,
+        "avgPpaRush": 21.6,
+        "avgPpaPass": 94.1,
+        "usageRush": 41.8,
+        "heightIn": 81,
+        "weightLb": 70.6
+      },
+      "2025_5141560": {
+        "rushCarShare": 2.6,
+        "recYdShare": 35.3,
+        "avgPpaRush": 10.5,
+        "avgPpaPass": 98,
+        "usageRush": 1.3,
+        "heightIn": 93.5,
+        "weightLb": 65.4
+      },
+      "2025_5141677": {
+        "rushCarShare": 26.8,
+        "recYdShare": 24.8,
+        "avgPpaRush": 10.5,
+        "avgPpaPass": 5.2,
+        "usageRush": 30.1,
+        "heightIn": 17.6,
+        "weightLb": 9.8
+      },
+      "2025_5141701": {
+        "rushCarShare": 0,
+        "recYdShare": 0,
+        "avgPpaRush": 8.5,
+        "avgPpaPass": 7.8,
+        "usageRush": 1.3,
+        "heightIn": 37.9,
+        "weightLb": 81
+      },
+      "2025_5142140": {
+        "rushCarShare": 0,
+        "recYdShare": 0.7,
+        "avgPpaRush": 85,
+        "avgPpaPass": 100,
+        "usageRush": 1.3,
+        "heightIn": 81,
+        "weightLb": 22.9
+      },
+      "2025_5143191": {
+        "rushCarShare": 40.5,
+        "recYdShare": 32.7,
+        "avgPpaRush": 9.2,
+        "avgPpaPass": 21.6,
+        "usageRush": 70.6,
+        "heightIn": 81,
+        "weightLb": 79.7
+      },
+      "2025_5146689": {
+        "rushCarShare": 2.6,
+        "recYdShare": 58.8,
+        "avgPpaRush": 7.2,
+        "avgPpaPass": 96.7,
+        "usageRush": 1.3,
+        "heightIn": 81,
+        "weightLb": 98
+      },
+      "2025_5146712": {
+        "rushCarShare": 37.3,
+        "recYdShare": 26.1,
+        "avgPpaRush": 20.3,
+        "avgPpaPass": 35.9,
+        "usageRush": 23.5,
+        "heightIn": 37.9,
+        "weightLb": 4.6
+      },
+      "2025_5146724": {
+        "rushCarShare": 44.4,
+        "recYdShare": 52.3,
+        "avgPpaRush": 7.8,
+        "avgPpaPass": 7.2,
+        "usageRush": 46.4,
+        "heightIn": 17.6,
+        "weightLb": 22.9
+      },
+      "2025_5146725": {
+        "rushCarShare": 9.2,
+        "recYdShare": 11.1,
+        "avgPpaRush": 40.5,
+        "avgPpaPass": 16.3,
+        "usageRush": 12.4,
+        "heightIn": 65.4,
+        "weightLb": 64.1
+      },
+      "2025_5147347": {
+        "rushCarShare": 8.5,
+        "recYdShare": 19,
+        "avgPpaRush": 4.6,
+        "avgPpaPass": 100,
+        "usageRush": 66,
+        "heightIn": 93.5,
+        "weightLb": 94.8
+      },
+      "2025_5147379": {
+        "rushCarShare": 20.9,
+        "recYdShare": 8.5,
+        "avgPpaRush": 32.7,
+        "avgPpaPass": 11.1,
+        "usageRush": 16.3,
+        "heightIn": 81,
+        "weightLb": 68
+      },
+      "2025_5147861": {
+        "rushCarShare": 8.5,
+        "recYdShare": 26.1,
+        "avgPpaRush": 25.5,
+        "avgPpaPass": 54.2,
+        "usageRush": 6.5,
+        "heightIn": 81,
+        "weightLb": 79.7
+      },
+      "2025_5148838": {
+        "rushCarShare": 2.6,
+        "recYdShare": 0,
+        "avgPpaRush": 75.8,
+        "avgPpaPass": 15,
+        "usageRush": 6.5,
+        "heightIn": 37.9,
+        "weightLb": 50.3
+      },
+      "2025_5149058": {
+        "rushCarShare": 10.5,
+        "recYdShare": 19.6,
+        "avgPpaRush": 3.3,
+        "avgPpaPass": 22.2,
+        "usageRush": 9.2,
+        "heightIn": 37.9,
+        "weightLb": 0.7
+      },
+      "2025_5149563": {
+        "rushCarShare": 0,
+        "recYdShare": 8.5,
+        "avgPpaRush": 2.6,
+        "avgPpaPass": 55.6,
+        "usageRush": 0.7,
+        "heightIn": 81,
+        "weightLb": 4.6
+      },
+      "2025_5149908": {
+        "rushCarShare": 2.6,
+        "recYdShare": 21.6,
+        "avgPpaRush": 44.4,
+        "avgPpaPass": 75.2,
+        "usageRush": 2,
+        "heightIn": 93.5,
+        "weightLb": 28.1
+      },
+      "2025_5150786": {
+        "rushCarShare": 2.6,
+        "recYdShare": 0,
+        "avgPpaRush": 26.8,
+        "avgPpaPass": 0,
+        "usageRush": 16.3,
+        "heightIn": 17.6,
+        "weightLb": 4.6
+      },
+      "2025_5151317": {
+        "rushCarShare": 32.7,
+        "recYdShare": 19,
+        "avgPpaRush": 59.5,
+        "avgPpaPass": 41.2,
+        "usageRush": 45.8,
+        "heightIn": 17.6,
+        "weightLb": 28.1
+      },
+      "2025_5151965": {
+        "rushCarShare": 28.8,
+        "recYdShare": 48.4,
+        "avgPpaRush": 1.3,
+        "avgPpaPass": 20.3,
+        "usageRush": 20.3,
+        "heightIn": 81,
+        "weightLb": 79.7
+      },
+      "2025_5152209": {
+        "rushCarShare": 31.4,
+        "recYdShare": 17,
+        "avgPpaRush": 35.3,
+        "avgPpaPass": 3.3,
+        "usageRush": 35.3,
+        "heightIn": 93.5,
+        "weightLb": 64.1
+      },
+      "2025_5153650": {
+        "rushCarShare": 11.1,
+        "recYdShare": 43.8,
+        "avgPpaRush": 7.2,
+        "avgPpaPass": 86.3,
+        "usageRush": 14.4,
+        "heightIn": 37.9,
+        "weightLb": 28.1
+      },
+      "2025_5154732": {
+        "rushCarShare": 24.2,
+        "recYdShare": 33.3,
+        "avgPpaRush": 9.2,
+        "avgPpaPass": 26.1,
+        "usageRush": 22.9,
+        "heightIn": 65.4,
+        "weightLb": 64.1
+      },
+      "2025_5155366": {
+        "rushCarShare": 7.2,
+        "recYdShare": 19,
+        "avgPpaRush": 83.7,
+        "avgPpaPass": 50.3,
+        "usageRush": 5.2,
+        "heightIn": 37.9,
+        "weightLb": 19.6
+      },
+      "2025_5156152": {
+        "rushCarShare": 32.7,
+        "recYdShare": 48.4,
+        "avgPpaRush": 2.6,
+        "avgPpaPass": 60.1,
+        "usageRush": 29.4,
+        "heightIn": 37.9,
+        "weightLb": 28.1
+      },
+      "2025_5156348": {
+        "rushCarShare": 2.6,
+        "recYdShare": 0.7,
+        "avgPpaRush": 10.5,
+        "avgPpaPass": 0,
+        "usageRush": 14.4,
+        "heightIn": 65.4,
+        "weightLb": 45.1
+      },
+      "2025_5156860": {
+        "rushCarShare": 30.1,
+        "recYdShare": 87.6,
+        "avgPpaRush": 20.9,
+        "avgPpaPass": 75.2,
+        "usageRush": 19,
+        "heightIn": 17.6,
+        "weightLb": 28.1
+      },
+      "2025_5156906": {
+        "rushCarShare": 22.9,
+        "recYdShare": 21.6,
+        "avgPpaRush": 0.7,
+        "avgPpaPass": 45.1,
+        "usageRush": 17,
+        "heightIn": 17.6,
+        "weightLb": 94.8
+      },
+      "2025_5156933": {
+        "rushCarShare": 9.2,
+        "recYdShare": 28.8,
+        "avgPpaRush": 10.5,
+        "avgPpaPass": 30.1,
+        "usageRush": 9.2,
+        "heightIn": 81,
+        "weightLb": 70.6
+      },
+      "2025_5156998": {
+        "rushCarShare": 7.2,
+        "recYdShare": 19,
+        "avgPpaRush": 20.3,
+        "avgPpaPass": 75.2,
+        "usageRush": 6.5,
+        "heightIn": 65.4,
+        "weightLb": 79.7
+      },
+      "2025_5157261": {
+        "rushCarShare": 15,
+        "recYdShare": 19,
+        "avgPpaRush": 2.6,
+        "avgPpaPass": 15,
+        "usageRush": 12.4,
+        "heightIn": 17.6,
+        "weightLb": 2.6
+      },
+      "2025_5159948": {
+        "rushCarShare": 2.6,
+        "recYdShare": 37.3,
+        "avgPpaRush": 30.1,
+        "avgPpaPass": 51,
+        "usageRush": 2,
+        "heightIn": 81,
+        "weightLb": 4.6
+      },
+      "2025_5160209": {
+        "rushCarShare": 7.8,
+        "recYdShare": 87.6,
+        "avgPpaRush": 28.1,
+        "avgPpaPass": 22.2,
+        "usageRush": 7.2,
+        "heightIn": 65.4,
+        "weightLb": 64.1
+      },
+      "2025_5161800": {
+        "rushCarShare": 20.3,
+        "recYdShare": 39.2,
+        "avgPpaRush": 7.2,
+        "avgPpaPass": 22.9,
+        "usageRush": 17,
+        "heightIn": 81,
+        "weightLb": 50.3
+      },
+      "2025_5164331": {
+        "rushCarShare": 0,
+        "recYdShare": 3.3,
+        "avgPpaRush": 73.2,
+        "avgPpaPass": 96.1,
+        "usageRush": 2,
+        "heightIn": 37.9,
+        "weightLb": 4.6
+      },
+      "2025_5164332": {
+        "rushCarShare": 64.1,
+        "recYdShare": 63.4,
+        "avgPpaRush": 25.5,
+        "avgPpaPass": 55.6,
+        "usageRush": 51.6,
+        "heightIn": 37.9,
+        "weightLb": 28.1
+      },
+      "2025_5166161": {
+        "rushCarShare": 2.6,
+        "recYdShare": 1.3,
+        "avgPpaRush": 44.4,
+        "avgPpaPass": 55.6,
+        "usageRush": 6.5,
+        "heightIn": 37.9,
+        "weightLb": 64.1
+      },
+      "2025_5167252": {
+        "rushCarShare": 7.8,
+        "recYdShare": 10.5,
+        "avgPpaRush": 21.6,
+        "avgPpaPass": 79.1,
+        "usageRush": 5.2,
+        "heightIn": 65.4,
+        "weightLb": 70.6
+      },
+      "2025_5173431": {
+        "rushCarShare": 13.1,
+        "recYdShare": 56.2,
+        "avgPpaRush": 46.4,
+        "avgPpaPass": 95.4,
+        "usageRush": 9.2,
+        "heightIn": 37.9,
+        "weightLb": 28.1
+      },
+      "2025_5175334": {
+        "rushCarShare": 21.6,
+        "recYdShare": 32.7,
+        "avgPpaRush": 0,
+        "avgPpaPass": 30.7,
+        "usageRush": 16.3,
+        "heightIn": 65.4,
+        "weightLb": 28.1
+      },
+      "2025_5184165": {
+        "rushCarShare": 2.6,
+        "recYdShare": 3.3,
+        "avgPpaRush": 17,
+        "avgPpaPass": 96.1,
+        "usageRush": 5.2,
+        "heightIn": 81,
+        "weightLb": 50.3
+      },
+      "2025_5186586": {
+        "rushCarShare": 2.6,
+        "recYdShare": 58.8,
+        "avgPpaRush": 0,
+        "avgPpaPass": 95.4,
+        "usageRush": 0,
+        "heightIn": 81,
+        "weightLb": 30.1
+      },
+      "2025_5192899": {
+        "rushCarShare": 23.5,
+        "recYdShare": 22.9,
+        "avgPpaRush": 13.7,
+        "avgPpaPass": 49.7,
+        "usageRush": 19,
+        "heightIn": 65.4,
+        "weightLb": 45.1
+      },
+      "2025_5193089": {
+        "rushCarShare": 2.6,
+        "recYdShare": 18.3,
+        "avgPpaRush": 0,
+        "avgPpaPass": 93.5,
+        "usageRush": 0.7,
+        "heightIn": 17.6,
+        "weightLb": 4.6
+      },
+      "2025_5193112": {
+        "rushCarShare": 18.3,
+        "recYdShare": 17.6,
+        "avgPpaRush": 10.5,
+        "avgPpaPass": 9.8,
+        "usageRush": 20.3,
+        "heightIn": 81,
+        "weightLb": 64.1
+      },
+      "2025_5193302": {
+        "rushCarShare": 11.1,
+        "recYdShare": 71.2,
+        "avgPpaRush": 3.3,
+        "avgPpaPass": 3.9,
+        "usageRush": 9.2,
+        "heightIn": 65.4,
+        "weightLb": 64.1
+      },
+      "2025_5193580": {
+        "rushCarShare": 47.1,
+        "recYdShare": 46.4,
+        "avgPpaRush": 31.4,
+        "avgPpaPass": 54.2,
+        "usageRush": 33.3,
+        "heightIn": 37.9,
+        "weightLb": 64.1
+      },
+      "2025_5194306": {
+        "rushCarShare": 0,
+        "recYdShare": 0,
+        "avgPpaRush": 90.8,
+        "avgPpaPass": 26.8,
+        "usageRush": 1.3,
+        "heightIn": 81,
+        "weightLb": 32.7
+      },
+      "2025_5194663": {
+        "rushCarShare": 2.6,
+        "recYdShare": 69.9,
+        "avgPpaRush": 3.3,
+        "avgPpaPass": 92.8,
+        "usageRush": 5.2,
+        "heightIn": 37.9,
+        "weightLb": 4.6
+      },
+      "2025_5197065": {
+        "rushCarShare": 68,
+        "recYdShare": 2,
+        "avgPpaRush": 82.4,
+        "avgPpaPass": 0,
+        "usageRush": 57.5,
+        "heightIn": 37.9,
+        "weightLb": 45.1
+      },
+      "2025_5203477": {
+        "rushCarShare": 2.6,
+        "recYdShare": 32.7,
+        "avgPpaRush": 26.8,
+        "avgPpaPass": 11.8,
+        "usageRush": 0.7,
+        "heightIn": 37.9,
+        "weightLb": 5.2
+      },
+      "2025_5207930": {
+        "rushCarShare": 0,
+        "recYdShare": 0,
+        "avgPpaRush": 28.1,
+        "avgPpaPass": 0,
+        "usageRush": 0,
+        "heightIn": 5.2,
+        "weightLb": 11.8
+      },
+      "2025_5209945": {
+        "rushCarShare": 84.3,
+        "recYdShare": 61.4,
+        "avgPpaRush": 37.3,
+        "avgPpaPass": 26.8,
+        "usageRush": 81.7,
+        "heightIn": 65.4,
+        "weightLb": 28.1
+      },
+      "2025_5218961": {
+        "rushCarShare": 12.4,
+        "recYdShare": 9.2,
+        "avgPpaRush": 4.6,
+        "avgPpaPass": 3.9,
+        "usageRush": 19,
+        "heightIn": 81,
+        "weightLb": 45.1
+      },
+      "2025_5219089": {
+        "rushCarShare": 2.6,
+        "recYdShare": 43.8,
+        "avgPpaRush": 5.2,
+        "avgPpaPass": 46.4,
+        "usageRush": 2.6,
+        "heightIn": 93.5,
+        "weightLb": 64.1
+      },
+      "2025_5219693": {
+        "rushCarShare": 2.6,
+        "recYdShare": 77.8,
+        "avgPpaRush": 94.1,
+        "avgPpaPass": 34,
+        "usageRush": 0.7,
+        "heightIn": 37.9,
+        "weightLb": 13.1
+      },
+      "2025_5220197": {
+        "rushCarShare": 13.1,
+        "recYdShare": 18.3,
+        "avgPpaRush": 22.2,
+        "avgPpaPass": 8.5,
+        "usageRush": 18.3,
+        "heightIn": 37.9,
+        "weightLb": 94.8
+      },
+      "2025_5220340": {
+        "rushCarShare": 2.6,
+        "recYdShare": 15.7,
+        "avgPpaRush": 13.7,
+        "avgPpaPass": 28.8,
+        "usageRush": 3.3,
+        "heightIn": 37.9,
+        "weightLb": 45.1
+      },
+      "2025_5220671": {
+        "rushCarShare": 2.6,
+        "recYdShare": 0,
+        "avgPpaRush": 1.3,
+        "avgPpaPass": 5.2,
+        "usageRush": 5.2,
+        "heightIn": 17.6,
+        "weightLb": 11.1
+      },
+      "2025_5223119": {
+        "rushCarShare": 3.3,
+        "recYdShare": 0,
+        "avgPpaRush": 32.7,
+        "avgPpaPass": 0,
+        "usageRush": 5.2,
+        "heightIn": 65.4,
+        "weightLb": 64.1
+      },
+      "2025_5223167": {
+        "rushCarShare": 19.6,
+        "recYdShare": 24.2,
+        "avgPpaRush": 47.7,
+        "avgPpaPass": 64.7,
+        "usageRush": 14.4,
+        "heightIn": 37.9,
+        "weightLb": 2.6
+      },
+      "2025_5228607": {
+        "rushCarShare": 10.5,
+        "recYdShare": 63.4,
+        "avgPpaRush": 14.4,
+        "avgPpaPass": 34,
+        "usageRush": 13.7,
+        "heightIn": 65.4,
+        "weightLb": 64.1
+      },
+      "2025_5233016": {
+        "rushCarShare": 40.5,
+        "recYdShare": 15.7,
+        "avgPpaRush": 14.4,
+        "avgPpaPass": 13.1,
+        "usageRush": 35.3,
+        "heightIn": 81,
+        "weightLb": 87.6
+      },
+      "2025_5258016": {
+        "rushCarShare": 64.7,
+        "recYdShare": 71.9,
+        "avgPpaRush": 96.1,
+        "avgPpaPass": 87.6,
+        "usageRush": 62.1,
+        "heightIn": 81,
+        "weightLb": 73.2
+      },
+      "2025_5258024": {
+        "rushCarShare": 13.1,
+        "recYdShare": 47.1,
+        "avgPpaRush": 5.9,
+        "avgPpaPass": 14.4,
+        "usageRush": 12.4,
+        "heightIn": 65.4,
+        "weightLb": 36.6
+      },
+      "2025_5258056": {
+        "rushCarShare": 12.4,
+        "recYdShare": 71.9,
+        "avgPpaRush": 10.5,
+        "avgPpaPass": 62.7,
+        "usageRush": 14.4,
+        "heightIn": 65.4,
+        "weightLb": 21.6
+      },
+      "2025_5260847": {
+        "rushCarShare": 14.4,
+        "recYdShare": 19.6,
+        "avgPpaRush": 37.3,
+        "avgPpaPass": 15,
+        "usageRush": 16.3,
+        "heightIn": 37.9,
+        "weightLb": 83
+      },
+      "2025_5265325": {
+        "rushCarShare": 2.6,
+        "recYdShare": 3.3,
+        "avgPpaRush": 2.6,
+        "avgPpaPass": 0,
+        "usageRush": 0.7,
+        "heightIn": 37.9,
+        "weightLb": 11.8
+      },
+      "2025_5294293": {
+        "rushCarShare": 11.8,
+        "recYdShare": 12.4,
+        "avgPpaRush": 0.7,
+        "avgPpaPass": 26.8,
+        "usageRush": 7.2,
+        "heightIn": 37.9,
+        "weightLb": 50.3
+      },
+      "2025_5295070": {
+        "rushCarShare": 9.8,
+        "recYdShare": 12.4,
+        "avgPpaRush": 5.9,
+        "avgPpaPass": 29.4,
+        "usageRush": 6.5,
+        "heightIn": 37.9,
+        "weightLb": 2.6
+      },
+      "2025_5295237": {
+        "rushCarShare": 2.6,
+        "recYdShare": 0,
+        "avgPpaRush": 1.3,
+        "avgPpaPass": 0,
+        "usageRush": 7.8,
+        "heightIn": 37.9,
+        "weightLb": 19.6
+      },
+      "2025_5295318": {
+        "rushCarShare": 7.2,
+        "recYdShare": 3.3,
+        "avgPpaRush": 85,
+        "avgPpaPass": 3.3,
+        "usageRush": 40.5,
+        "heightIn": 37.9,
+        "weightLb": 45.1
+      },
+      "2025_5295550": {
+        "rushCarShare": 55.6,
+        "recYdShare": 96.7,
+        "avgPpaRush": 2.6,
+        "avgPpaPass": 22.9,
+        "usageRush": 43.8,
+        "heightIn": 65.4,
+        "weightLb": 64.1
+      },
+      "2025_5295723": {
+        "rushCarShare": 11.8,
+        "recYdShare": 19,
+        "avgPpaRush": 13.7,
+        "avgPpaPass": 23.5,
+        "usageRush": 12.4,
+        "heightIn": 65.4,
+        "weightLb": 45.8
+      },
+      "2025_5295724": {
+        "rushCarShare": 2.6,
+        "recYdShare": 0.7,
+        "avgPpaRush": 34,
+        "avgPpaPass": 10.5,
+        "usageRush": 9.2,
+        "heightIn": 81,
+        "weightLb": 64.1
+      },
+      "2025_5295930": {
+        "rushCarShare": 2.6,
+        "recYdShare": 0.7,
+        "avgPpaRush": 79.1,
+        "avgPpaPass": 0,
+        "usageRush": 2,
+        "heightIn": 17.6,
+        "weightLb": 0.7
+      },
+      "2025_5296154": {
+        "rushCarShare": 47.1,
+        "recYdShare": 3.3,
+        "avgPpaRush": 26.8,
+        "avgPpaPass": 0,
+        "usageRush": 34,
+        "heightIn": 5.2,
+        "weightLb": 50.3
+      },
+      "2025_5296162": {
+        "rushCarShare": 2.6,
+        "recYdShare": 5.9,
+        "avgPpaRush": 2.6,
+        "avgPpaPass": 0,
+        "usageRush": 1.3,
+        "heightIn": 17.6,
+        "weightLb": 0.7
+      },
+      "2025_5296374": {
+        "rushCarShare": 2.6,
+        "recYdShare": 0.7,
+        "avgPpaRush": 41.2,
+        "avgPpaPass": 32.7,
+        "usageRush": 5.2,
+        "heightIn": 99.3,
+        "weightLb": 87.6
+      },
+      "2025_5296378": {
+        "rushCarShare": 11.1,
+        "recYdShare": 92.8,
+        "avgPpaRush": 5.2,
+        "avgPpaPass": 65.4,
+        "usageRush": 7.2,
+        "heightIn": 5.2,
+        "weightLb": 9.8
+      },
+      "2025_5296612": {
+        "rushCarShare": 17.6,
+        "recYdShare": 0.7,
+        "avgPpaRush": 20.3,
+        "avgPpaPass": 26.8,
+        "usageRush": 25.5,
+        "heightIn": 81,
+        "weightLb": 28.1
+      },
+      "2026_4685254": {
+        "rushCarShare": 93.5,
+        "recYdShare": 26.1,
+        "avgPpaRush": 7.2,
+        "avgPpaPass": 50.3,
+        "usageRush": 83.7,
+        "heightIn": 1.3,
+        "weightLb": 0.7
+      },
+      "2026_4685436": {
+        "rushCarShare": 99.3,
+        "recYdShare": 10.5,
+        "avgPpaRush": 100,
+        "avgPpaPass": 2.6,
+        "usageRush": 0,
+        "heightIn": 37.9,
+        "weightLb": 98
+      },
+      "2026_4685509": {
+        "rushCarShare": 23.5,
+        "recYdShare": 5.9,
+        "avgPpaRush": 81.7,
+        "avgPpaPass": 0,
+        "usageRush": 17,
+        "heightIn": 37.9,
+        "weightLb": 32.7
+      },
+      "2026_4870609": {
+        "rushCarShare": 47.1,
+        "recYdShare": 35.3,
+        "avgPpaRush": 90.2,
+        "avgPpaPass": 47.7,
+        "usageRush": 32.7,
+        "heightIn": 93.5,
+        "weightLb": 94.8
+      },
+      "2026_4870760": {
+        "rushCarShare": 91.5,
+        "recYdShare": 35.3,
+        "avgPpaRush": 28.8,
+        "avgPpaPass": 59.5,
+        "usageRush": 80.4,
+        "heightIn": 65.4,
+        "weightLb": 45.1
+      },
+      "2026_4899368": {
+        "rushCarShare": 60.8,
+        "recYdShare": 49,
+        "avgPpaRush": 83.7,
+        "avgPpaPass": 35.9,
+        "usageRush": 43.8,
+        "heightIn": 65.4,
+        "weightLb": 19.6
+      },
+      "2026_4911971": {
+        "rushCarShare": 41.8,
+        "recYdShare": 86.9,
+        "avgPpaRush": 97.4,
+        "avgPpaPass": 54.2,
+        "usageRush": 25.5,
+        "heightIn": 1.3,
+        "weightLb": 2.6
+      },
+      "2026_4912342": {
+        "rushCarShare": 22.9,
+        "recYdShare": 87.6,
+        "avgPpaRush": 100,
+        "avgPpaPass": 61.4,
+        "usageRush": 17,
+        "heightIn": 1.3,
+        "weightLb": 5.2
+      },
+      "2026_4918103": {
+        "rushCarShare": 60.1,
+        "recYdShare": 47.1,
+        "avgPpaRush": 4.6,
+        "avgPpaPass": 13.1,
+        "usageRush": 45.8,
+        "heightIn": 17.6,
+        "weightLb": 22.9
+      },
+      "2026_4918126": {
+        "rushCarShare": 41.8,
+        "recYdShare": 51.6,
+        "avgPpaRush": 98,
+        "avgPpaPass": 27.5,
+        "usageRush": 24.8,
+        "heightIn": 99.3,
+        "weightLb": 87.6
+      },
+      "2026_4921108": {
+        "rushCarShare": 22.2,
+        "recYdShare": 35.3,
+        "avgPpaRush": 71.2,
+        "avgPpaPass": 63.4,
+        "usageRush": 17,
+        "heightIn": 37.9,
+        "weightLb": 64.1
+      },
+      "2026_4921116": {
+        "rushCarShare": 96.1,
+        "recYdShare": 32.7,
+        "avgPpaRush": 9.2,
+        "avgPpaPass": 21.6,
+        "usageRush": 83.7,
+        "heightIn": 81,
+        "weightLb": 65.4
+      },
+      "2026_5079322": {
+        "rushCarShare": 73.2,
+        "recYdShare": 4.6,
+        "avgPpaRush": 100,
+        "avgPpaPass": 47.7,
+        "usageRush": 49.7,
+        "heightIn": 93.5,
+        "weightLb": 87.6
+      },
+      "2026_5079364": {
+        "rushCarShare": 19.6,
+        "recYdShare": 2,
+        "avgPpaRush": 96.1,
+        "avgPpaPass": 11.8,
+        "usageRush": 15.7,
+        "heightIn": 37.9,
+        "weightLb": 84.3
+      },
+      "2026_5079482": {
+        "rushCarShare": 56.9,
+        "recYdShare": 19,
+        "avgPpaRush": 2.6,
+        "avgPpaPass": 23.5,
+        "usageRush": 43.8,
+        "heightIn": 65.4,
+        "weightLb": 45.8
+      },
+      "2026_5079663": {
+        "rushCarShare": 83.7,
+        "recYdShare": 42.5,
+        "avgPpaRush": 2.6,
+        "avgPpaPass": 6.5,
+        "usageRush": 70.6,
+        "heightIn": 37.9,
+        "weightLb": 0.7
+      },
+      "2026_5085507": {
+        "rushCarShare": 46.4,
+        "recYdShare": 68,
+        "avgPpaRush": 94.8,
+        "avgPpaPass": 67.3,
+        "usageRush": 32.7,
+        "heightIn": 65.4,
+        "weightLb": 64.1
+      },
+      "2026_5086034": {
+        "rushCarShare": 53.6,
+        "recYdShare": 28.8,
+        "avgPpaRush": 3.3,
+        "avgPpaPass": 27.5,
+        "usageRush": 49.7,
+        "heightIn": 65.4,
+        "weightLb": 28.8
+      },
+      "2026_5088888": {
+        "rushCarShare": 31.4,
+        "recYdShare": 2,
+        "avgPpaRush": 82.4,
+        "avgPpaPass": 13.1,
+        "usageRush": 19,
+        "heightIn": 5.2,
+        "weightLb": 0.7
+      },
+      "2026_5091725": {
+        "rushCarShare": 64.7,
+        "recYdShare": 0.7,
+        "avgPpaRush": 26.8,
+        "avgPpaPass": 0,
+        "usageRush": 51.6,
+        "heightIn": 37.9,
+        "weightLb": 70.6
+      },
+      "2026_5095078": {
+        "rushCarShare": 24.8,
+        "recYdShare": 32.7,
+        "avgPpaRush": 96.1,
+        "avgPpaPass": 7.2,
+        "usageRush": 17,
+        "heightIn": 17.6,
+        "weightLb": 0.7
+      },
+      "2026_5107875": {
+        "rushCarShare": 2.6,
+        "recYdShare": 42.5,
+        "avgPpaRush": 100,
+        "avgPpaPass": 99.3,
+        "usageRush": 1.3,
+        "heightIn": 5.2,
+        "weightLb": 19.6
+      },
+      "2026_5123048": {
+        "rushCarShare": 19.6,
+        "recYdShare": 8.5,
+        "avgPpaRush": 98,
+        "avgPpaPass": 2,
+        "usageRush": 15.7,
+        "heightIn": 37.9,
+        "weightLb": 22.9
+      },
+      "2026_5125754": {
+        "rushCarShare": 37.3,
+        "recYdShare": 91.5,
+        "avgPpaRush": 20.3,
+        "avgPpaPass": 55.6,
+        "usageRush": 30.7,
+        "heightIn": 17.6,
+        "weightLb": 9.8
+      },
+      "2026_5126513": {
+        "rushCarShare": 39.2,
+        "recYdShare": 10.5,
+        "avgPpaRush": 39.2,
+        "avgPpaPass": 2,
+        "usageRush": 24.8,
+        "heightIn": 37.9,
+        "weightLb": 87.6
+      },
+      "2026_5136049": {
+        "rushCarShare": 21.6,
+        "recYdShare": 3.3,
+        "avgPpaRush": 94.8,
+        "avgPpaPass": 0,
+        "usageRush": 14.4,
+        "heightIn": 65.4,
+        "weightLb": 2.6
+      },
+      "2026_5141422": {
+        "rushCarShare": 50.3,
+        "recYdShare": 1.3,
+        "avgPpaRush": 52.9,
+        "avgPpaPass": 0,
+        "usageRush": 45.1,
+        "heightIn": 81,
+        "weightLb": 19.6
+      },
+      "2026_5141560": {
+        "rushCarShare": 63.4,
+        "recYdShare": 28.8,
+        "avgPpaRush": 48.4,
+        "avgPpaPass": 16.3,
+        "usageRush": 51,
+        "heightIn": 93.5,
+        "weightLb": 65.4
+      },
+      "2026_5145737": {
+        "rushCarShare": 37.3,
+        "recYdShare": 91.5,
+        "avgPpaRush": 31.4,
+        "avgPpaPass": 79.7,
+        "usageRush": 24.8,
+        "heightIn": 65.4,
+        "weightLb": 79.7
+      },
+      "2026_5146712": {
+        "rushCarShare": 85.6,
+        "recYdShare": 50.3,
+        "avgPpaRush": 73.9,
+        "avgPpaPass": 34,
+        "usageRush": 70.6,
+        "heightIn": 37.9,
+        "weightLb": 4.6
+      },
+      "2026_5146724": {
+        "rushCarShare": 23.5,
+        "recYdShare": 34,
+        "avgPpaRush": 91.5,
+        "avgPpaPass": 100,
+        "usageRush": 17,
+        "heightIn": 17.6,
+        "weightLb": 22.9
+      },
+      "2026_5147861": {
+        "rushCarShare": 98.7,
+        "recYdShare": 98,
+        "avgPpaRush": 20.3,
+        "avgPpaPass": 81,
+        "usageRush": 90.2,
+        "heightIn": 81,
+        "weightLb": 79.7
+      },
+      "2026_5164332": {
+        "rushCarShare": 89.5,
+        "recYdShare": 69.9,
+        "avgPpaRush": 94.8,
+        "avgPpaPass": 94.8,
+        "usageRush": 76.5,
+        "heightIn": 37.9,
+        "weightLb": 28.1
+      },
+      "2026_5173431": {
+        "rushCarShare": 32.7,
+        "recYdShare": 98,
+        "avgPpaRush": 94.8,
+        "avgPpaPass": 94.8,
+        "usageRush": 19,
+        "heightIn": 37.9,
+        "weightLb": 28.1
+      },
+      "2026_5209945": {
+        "rushCarShare": 88.2,
+        "recYdShare": 49,
+        "avgPpaRush": 73.2,
+        "avgPpaPass": 86.9,
+        "usageRush": 81,
+        "heightIn": 65.4,
+        "weightLb": 28.1
+      },
+      "2026_5219258": {
+        "rushCarShare": 35.9,
+        "recYdShare": 85.6,
+        "avgPpaRush": 81.7,
+        "avgPpaPass": 24.2,
+        "usageRush": 21.6,
+        "heightIn": 81,
+        "weightLb": 9.8
+      },
+      "2026_5220197": {
+        "rushCarShare": 73.2,
+        "recYdShare": 68.6,
+        "avgPpaRush": 82.4,
+        "avgPpaPass": 98,
+        "usageRush": 59.5,
+        "heightIn": 37.9,
+        "weightLb": 94.8
+      },
+      "2026_5220253": {
+        "rushCarShare": 67.3,
+        "recYdShare": 15.7,
+        "avgPpaRush": 20.3,
+        "avgPpaPass": 15,
+        "usageRush": 53.6,
+        "heightIn": 93.5,
+        "weightLb": 28.1
+      },
+      "2026_5222671": {
+        "rushCarShare": 40.5,
+        "recYdShare": 32.7,
+        "avgPpaRush": 92.2,
+        "avgPpaPass": 100,
+        "usageRush": 28.8,
+        "heightIn": 65.4,
+        "weightLb": 4.6
+      },
+      "2026_5223167": {
+        "rushCarShare": 46.4,
+        "recYdShare": 21.6,
+        "avgPpaRush": 35.3,
+        "avgPpaPass": 8.5,
+        "usageRush": 28.1,
+        "heightIn": 37.9,
+        "weightLb": 2.6
+      },
+      "2026_5233016": {
+        "rushCarShare": 60.1,
+        "recYdShare": 2,
+        "avgPpaRush": 59.5,
+        "avgPpaPass": 30.1,
+        "usageRush": 42.5,
+        "heightIn": 81,
+        "weightLb": 87.6
+      },
+      "2026_5233868": {
+        "rushCarShare": 46.4,
+        "recYdShare": 10.5,
+        "avgPpaRush": 22.2,
+        "avgPpaPass": 75.2,
+        "usageRush": 28.8,
+        "heightIn": 37.9,
+        "weightLb": 19.6
+      },
+      "2026_5254150": {
+        "rushCarShare": 37.3,
+        "recYdShare": 96.7,
+        "avgPpaRush": 13.1,
+        "avgPpaPass": 94.8,
+        "usageRush": 32.7,
+        "heightIn": 5.2,
+        "weightLb": 0
+      },
+      "2026_5258016": {
+        "rushCarShare": 86.3,
+        "recYdShare": 18.3,
+        "avgPpaRush": 13.7,
+        "avgPpaPass": 2,
+        "usageRush": 66.7,
+        "heightIn": 81,
+        "weightLb": 73.2
+      },
+      "2026_5265178": {
+        "rushCarShare": 40.5,
+        "recYdShare": 55.6,
+        "avgPpaRush": 91.5,
+        "avgPpaPass": 26.8,
+        "usageRush": 20.3,
+        "heightIn": 81,
+        "weightLb": 64.1
+      },
+      "2026_5290565": {
+        "rushCarShare": 12.4,
+        "recYdShare": 71.9,
+        "avgPpaRush": 100,
+        "avgPpaPass": 100,
+        "usageRush": 9.2,
+        "heightIn": 81,
+        "weightLb": 28.1
+      },
+      "2026_5296364": {
+        "rushCarShare": 43.1,
+        "recYdShare": 79.1,
+        "avgPpaRush": 36.6,
+        "avgPpaPass": 71.2,
+        "usageRush": 30.1,
+        "heightIn": 37.9,
+        "weightLb": 4.6
+      },
+      "2026_5394596": {
+        "rushCarShare": 81.7,
+        "recYdShare": 5.2,
+        "avgPpaRush": 25.5,
+        "avgPpaPass": 59.5,
+        "usageRush": 77.1,
+        "heightIn": 17.6,
+        "weightLb": 32.7
+      }
+    },
+    "WR": {
+      "nfl_2023_jordanaddison": {
+        "recShare": 24,
+        "ydShare": 20.6,
+        "tdShare": 21.4,
+        "avgPPA": 56.9,
+        "usageOverall": 51.1,
+        "heightIn": 40.1,
+        "weightLb": 8
+      },
+      "nfl_2020_brandonaiyuk": {
+        "recShare": 80.9,
+        "ydShare": 92,
+        "tdShare": 80.2,
+        "avgPPA": 59.9,
+        "usageOverall": 74.8,
+        "heightIn": 55.7,
+        "weightLb": 68.3
+      },
+      "nfl_2026_cyrusallen": {
+        "recShare": 54.2,
+        "ydShare": 35.5,
+        "tdShare": 83.2,
+        "avgPPA": 36.3,
+        "usageOverall": 43.9,
+        "heightIn": 26,
+        "weightLb": 14.5
+      },
+      "nfl_2019_jjarcegawhiteside": {
+        "recShare": 57.6,
+        "ydShare": 67.9,
+        "tdShare": 95.8,
+        "avgPPA": 80.9,
+        "usageOverall": 69.8,
+        "heightIn": 85.5,
+        "weightLb": 93.9
+      },
+      "nfl_2018_marcellateman": {
+        "recShare": 29,
+        "ydShare": 40.8,
+        "tdShare": 29.8,
+        "avgPPA": 92,
+        "usageOverall": 24.8,
+        "heightIn": 94.7,
+        "weightLb": 93.5
+      },
+      "nfl_2022_calvinaustin": {
+        "recShare": 79.4,
+        "ydShare": 78.2,
+        "tdShare": 60.7,
+        "avgPPA": 72.1,
+        "usageOverall": 55.3,
+        "heightIn": 5.7,
+        "weightLb": 1.1
+      },
+      "nfl_2025_elicayomanor": {
+        "recShare": 82.1,
+        "ydShare": 90.8,
+        "tdShare": 71,
+        "avgPPA": 77.5,
+        "usageOverall": 42,
+        "heightIn": 71.4,
+        "weightLb": 80.9
+      },
+      "nfl_2024_javonbaker": {
+        "recShare": 55.7,
+        "ydShare": 86.3,
+        "tdShare": 58.4,
+        "avgPPA": 98.9,
+        "usageOverall": 10.7,
+        "heightIn": 55.7,
+        "weightLb": 72.1
+      },
+      "nfl_2021_kawaanbaker": {
+        "recShare": 58.4,
+        "ydShare": 45,
+        "tdShare": 92,
+        "avgPPA": 8.4,
+        "usageOverall": 60.3,
+        "heightIn": 55.7,
+        "weightLb": 88.5
+      },
+      "nfl_2021_rashodbateman": {
+        "recShare": 93.5,
+        "ydShare": 86.3,
+        "tdShare": 55,
+        "avgPPA": 37,
+        "usageOverall": 89.7,
+        "heightIn": 71.4,
+        "weightLb": 80.9
+      },
+      "nfl_2025_jackbech": {
+        "recShare": 35.5,
+        "ydShare": 50.4,
+        "tdShare": 61.8,
+        "avgPPA": 80.2,
+        "usageOverall": 45.4,
+        "heightIn": 71.4,
+        "weightLb": 93.5
+      },
+      "nfl_2026_chrisbell": {
+        "recShare": 77.5,
+        "ydShare": 77.9,
+        "tdShare": 71,
+        "avgPPA": 17.2,
+        "usageOverall": 92.7,
+        "heightIn": 71.4,
+        "weightLb": 93.5
+      },
+      "nfl_2022_davidbell": {
+        "recShare": 58.4,
+        "ydShare": 62.2,
+        "tdShare": 16.8,
+        "avgPPA": 67.6,
+        "usageOverall": 91.2,
+        "heightIn": 71.4,
+        "weightLb": 67.6
+      },
+      "nfl_2023_ronniebell": {
+        "recShare": 72.5,
+        "ydShare": 66,
+        "tdShare": 17.9,
+        "avgPPA": 36.6,
+        "usageOverall": 37.8,
+        "heightIn": 40.1,
+        "weightLb": 37
+      },
+      "nfl_2026_skylerbell": {
+        "recShare": 92.7,
+        "ydShare": 87.8,
+        "tdShare": 88.9,
+        "avgPPA": 29.4,
+        "usageOverall": 98.1,
+        "heightIn": 40.1,
+        "weightLb": 23.7
+      },
+      "nfl_2026_malikbenson": {
+        "recShare": 12.6,
+        "ydShare": 22.9,
+        "tdShare": 22.5,
+        "avgPPA": 63.7,
+        "usageOverall": 4.2,
+        "heightIn": 55.7,
+        "weightLb": 47.7
+      },
+      "nfl_2026_germiebernard": {
+        "recShare": 32.8,
+        "ydShare": 34,
+        "tdShare": 31.7,
+        "avgPPA": 24,
+        "usageOverall": 80.9,
+        "heightIn": 55.7,
+        "weightLb": 59.5
+      },
+      "nfl_2018_braxtonberrios": {
+        "recShare": 63.7,
+        "ydShare": 31.3,
+        "tdShare": 74.4,
+        "avgPPA": 29.4,
+        "usageOverall": 40.5,
+        "heightIn": 5.7,
+        "weightLb": 24.4
+      },
+      "nfl_2026_lewisbond": {
+        "recShare": 89.3,
+        "ydShare": 71,
+        "tdShare": 4.6,
+        "avgPPA": 19.8,
+        "usageOverall": 90.1,
+        "heightIn": 26,
+        "weightLb": 37
+      },
+      "nfl_2026_denzelboston": {
+        "recShare": 66,
+        "ydShare": 61.8,
+        "tdShare": 85.5,
+        "avgPPA": 32.8,
+        "usageOverall": 84,
+        "heightIn": 94.7,
+        "weightLb": 74
+      },
+      "nfl_2023_kayshonboutte": {
+        "recShare": 16.8,
+        "ydShare": 9.9,
+        "tdShare": 8.8,
+        "avgPPA": 6.5,
+        "usageOverall": 31.7,
+        "heightIn": 40.1,
+        "weightLb": 67.6
+      },
+      "nfl_2020_lynnbowden": {
+        "recShare": 60.3,
+        "ydShare": 43.5,
+        "tdShare": 11.1,
+        "avgPPA": 2.3,
+        "usageOverall": 100,
+        "heightIn": 55.7,
+        "weightLb": 49.6
+      },
+      "nfl_2019_milesboykin": {
+        "recShare": 50.8,
+        "ydShare": 54.2,
+        "tdShare": 75.2,
+        "avgPPA": 33.2,
+        "usageOverall": 42,
+        "heightIn": 94.7,
+        "weightLb": 98.9
+      },
+      "nfl_2026_zachariahbranch": {
+        "recShare": 82.8,
+        "ydShare": 55,
+        "tdShare": 40.1,
+        "avgPPA": 21.4,
+        "usageOverall": 50,
+        "heightIn": 14.9,
+        "weightLb": 14.5
+      },
+      "nfl_2026_chrisbrazzell": {
+        "recShare": 45.8,
+        "ydShare": 57.3,
+        "tdShare": 74.4,
+        "avgPPA": 58,
+        "usageOverall": 50,
+        "heightIn": 98.9,
+        "weightLb": 56.9
+      },
+      "nfl_2023_jalenbrooks": {
+        "recShare": 8.4,
+        "ydShare": 11.8,
+        "tdShare": 3.1,
+        "avgPPA": 32.1,
+        "usageOverall": 6.1,
+        "heightIn": 71.4,
+        "weightLb": 67.6
+      },
+      "nfl_2019_ajbrown": {
+        "recShare": 86.6,
+        "ydShare": 79.4,
+        "tdShare": 49.2,
+        "avgPPA": 43.9,
+        "usageOverall": 79.4,
+        "heightIn": 55.7,
+        "weightLb": 98.1
+      },
+      "nfl_2026_barionbrown": {
+        "recShare": 29,
+        "ydShare": 17.9,
+        "tdShare": 4.6,
+        "avgPPA": 1.5,
+        "usageOverall": 50,
+        "heightIn": 26,
+        "weightLb": 23.7
+      },
+      "nfl_2021_dyamibrown": {
+        "recShare": 54.2,
+        "ydShare": 71.4,
+        "tdShare": 43.5,
+        "avgPPA": 72.1,
+        "usageOverall": 53.4,
+        "heightIn": 55.7,
+        "weightLb": 23.7
+      },
+      "nfl_2019_marquisebrown": {
+        "recShare": 79,
+        "ydShare": 66.8,
+        "tdShare": 37.8,
+        "avgPPA": 79,
+        "usageOverall": 68.3,
+        "heightIn": 14.9,
+        "weightLb": 1.9
+      },
+      "nfl_2025_lutherburden": {
+        "recShare": 65.3,
+        "ydShare": 39.7,
+        "tdShare": 88.2,
+        "avgPPA": 67.9,
+        "usageOverall": 27.9,
+        "heightIn": 26,
+        "weightLb": 72.1
+      },
+      "nfl_2026_deionburks": {
+        "recShare": 48.9,
+        "ydShare": 26.3,
+        "tdShare": 38.2,
+        "avgPPA": 2.7,
+        "usageOverall": 48.5,
+        "heightIn": 5.7,
+        "weightLb": 28.2
+      },
+      "nfl_2022_treylonburks": {
+        "recShare": 92.4,
+        "ydShare": 95.8,
+        "tdShare": 97.7,
+        "avgPPA": 72.9,
+        "usageOverall": 73.3,
+        "heightIn": 85.5,
+        "weightLb": 98.1
+      },
+      "nfl_2024_jermaineburton": {
+        "recShare": 34.4,
+        "ydShare": 53.1,
+        "tdShare": 75.2,
+        "avgPPA": 93.5,
+        "usageOverall": 13.4,
+        "heightIn": 40.1,
+        "weightLb": 42.4
+      },
+      "nfl_2018_deoncain": {
+        "recShare": 34.4,
+        "ydShare": 36.3,
+        "tdShare": 76.7,
+        "avgPPA": 9.9,
+        "usageOverall": 29.8,
+        "heightIn": 55.7,
+        "weightLb": 37
+      },
+      "nfl_2018_antoniocallaway": {
+        "recShare": 54.6,
+        "ydShare": 52.3,
+        "tdShare": 16.4,
+        "avgPPA": 13.7,
+        "usageOverall": 56.9,
+        "heightIn": 14.9,
+        "weightLb": 41.6
+      },
+      "nfl_2026_joshcameron": {
+        "recShare": 54.2,
+        "ydShare": 43.5,
+        "tdShare": 57.3,
+        "avgPPA": 19.1,
+        "usageOverall": 56.9,
+        "heightIn": 55.7,
+        "weightLb": 95.8
+      },
+      "nfl_2021_jalencamp": {
+        "recShare": 23.3,
+        "ydShare": 26,
+        "tdShare": 55,
+        "avgPPA": 40.8,
+        "usageOverall": 7.6,
+        "heightIn": 71.4,
+        "weightLb": 93.5
+      },
+      "nfl_2019_parriscampbell": {
+        "recShare": 54.2,
+        "ydShare": 25.2,
+        "tdShare": 32.4,
+        "avgPPA": 27.1,
+        "usageOverall": 51.1,
+        "heightIn": 55.7,
+        "weightLb": 72.1
+      },
+      "nfl_2018_dylancantrell": {
+        "recShare": 39.7,
+        "ydShare": 21.8,
+        "tdShare": 26,
+        "avgPPA": 16,
+        "usageOverall": 58.8,
+        "heightIn": 85.5,
+        "weightLb": 93.5
+      },
+      "nfl_2020_quintezcephus": {
+        "recShare": 64.9,
+        "ydShare": 78.6,
+        "tdShare": 81.3,
+        "avgPPA": 59.5,
+        "usageOverall": 32.4,
+        "heightIn": 55.7,
+        "weightLb": 68.7
+      },
+      "nfl_2018_djchark": {
+        "recShare": 54.2,
+        "ydShare": 81.7,
+        "tdShare": 18.7,
+        "avgPPA": 61.8,
+        "usageOverall": 35.5,
+        "heightIn": 85.5,
+        "weightLb": 25.2
+      },
+      "nfl_2021_jamarrchase": {
+        "recShare": 37.4,
+        "ydShare": 68.7,
+        "tdShare": 66.8,
+        "avgPPA": 86.6,
+        "usageOverall": 61.8,
+        "heightIn": 40.1,
+        "weightLb": 72.1
+      },
+      "nfl_2020_chaseclaypool": {
+        "recShare": 72.5,
+        "ydShare": 76.7,
+        "tdShare": 76.3,
+        "avgPPA": 23.3,
+        "usageOverall": 71.4,
+        "heightIn": 94.7,
+        "weightLb": 99.6
+      },
+      "nfl_2020_tyriecleveland": {
+        "recShare": 1.1,
+        "ydShare": 1.5,
+        "tdShare": 1.5,
+        "avgPPA": 22.9,
+        "usageOverall": 1.5,
+        "heightIn": 71.4,
+        "weightLb": 67.6
+      },
+      "nfl_2024_keoncoleman": {
+        "recShare": 35.9,
+        "ydShare": 21.8,
+        "tdShare": 90.8,
+        "avgPPA": 8.8,
+        "usageOverall": 54.2,
+        "heightIn": 94.7,
+        "weightLb": 88.5
+      },
+      "nfl_2026_kevincoleman": {
+        "recShare": 84,
+        "ydShare": 70.2,
+        "tdShare": 6.1,
+        "avgPPA": 20.2,
+        "usageOverall": 47.3,
+        "heightIn": 26,
+        "weightLb": 14.5
+      },
+      "nfl_2021_nicocollins": {
+        "recShare": 20.6,
+        "ydShare": 37,
+        "tdShare": 49.6,
+        "avgPPA": 64.9,
+        "usageOverall": 13.4,
+        "heightIn": 94.7,
+        "weightLb": 94.3
+      },
+      "nfl_2026_omarcooper": {
+        "recShare": 64.9,
+        "ydShare": 50,
+        "tdShare": 51.1,
+        "avgPPA": 58.8,
+        "usageOverall": 31.7,
+        "heightIn": 40.1,
+        "weightLb": 57.3
+      },
+      "nfl_2024_malachicorley": {
+        "recShare": 59.2,
+        "ydShare": 51.5,
+        "tdShare": 56.1,
+        "avgPPA": 57.3,
+        "usageOverall": 61.8,
+        "heightIn": 26,
+        "weightLb": 80.9
+      },
+      "nfl_2018_kekecoutee": {
+        "recShare": 74,
+        "ydShare": 80.9,
+        "tdShare": 55,
+        "avgPPA": 68.3,
+        "usageOverall": 73.3,
+        "heightIn": 26,
+        "weightLb": 14.5
+      },
+      "nfl_2024_jacobcowing": {
+        "recShare": 77.1,
+        "ydShare": 28.2,
+        "tdShare": 77.9,
+        "avgPPA": 52.7,
+        "usageOverall": 33.6,
+        "heightIn": 26,
+        "weightLb": 8
+      },
+      "nfl_2026_cjdaniels": {
+        "recShare": 14.5,
+        "ydShare": 9.2,
+        "tdShare": 31.7,
+        "avgPPA": 41.6,
+        "usageOverall": 24.8,
+        "heightIn": 71.4,
+        "weightLb": 67.6
+      },
+      "nfl_2021_frankdarby": {
+        "recShare": 12.2,
+        "ydShare": 23.7,
+        "tdShare": 80.2,
+        "avgPPA": 34.4,
+        "usageOverall": 16,
+        "heightIn": 55.7,
+        "weightLb": 56.9
+      },
+      "nfl_2021_jaelondarden": {
+        "recShare": 97.3,
+        "ydShare": 97.3,
+        "tdShare": 100,
+        "avgPPA": 33.6,
+        "usageOverall": 96.6,
+        "heightIn": 5.7,
+        "weightLb": 5
+      },
+      "nfl_2023_deriusdavis": {
+        "recShare": 15.6,
+        "ydShare": 8,
+        "tdShare": 14.1,
+        "avgPPA": 3.4,
+        "usageOverall": 11.5,
+        "heightIn": 14.9,
+        "weightLb": 8
+      },
+      "nfl_2025_chimeredike": {
+        "recShare": 40.5,
+        "ydShare": 57.3,
+        "tdShare": 11.1,
+        "avgPPA": 69.5,
+        "usageOverall": 13.4,
+        "heightIn": 40.1,
+        "weightLb": 47.7
+      },
+      "nfl_2022_jahandotson": {
+        "recShare": 91.2,
+        "ydShare": 86.3,
+        "tdShare": 95,
+        "avgPPA": 42.7,
+        "usageOverall": 87.8,
+        "heightIn": 26,
+        "weightLb": 16
+      },
+      "nfl_2022_romeodoubs": {
+        "recShare": 40.8,
+        "ydShare": 47.7,
+        "tdShare": 56.1,
+        "avgPPA": 74.4,
+        "usageOverall": 80.5,
+        "heightIn": 71.4,
+        "weightLb": 56.9
+      },
+      "nfl_2026_calebdouglas": {
+        "recShare": 23.3,
+        "ydShare": 32.1,
+        "tdShare": 29,
+        "avgPPA": 8,
+        "usageOverall": 37,
+        "heightIn": 94.7,
+        "weightLb": 80.9
+      },
+      "nfl_2023_demariodouglas": {
+        "recShare": 93.9,
+        "ydShare": 88.9,
+        "tdShare": 55,
+        "avgPPA": 86.3,
+        "usageOverall": 48.5,
+        "heightIn": 1.5,
+        "weightLb": 3.1
+      },
+      "nfl_2023_joshdowns": {
+        "recShare": 78.6,
+        "ydShare": 43.9,
+        "tdShare": 56.1,
+        "avgPPA": 42.4,
+        "usageOverall": 85.9,
+        "heightIn": 14.9,
+        "weightLb": 8
+      },
+      "nfl_2023_grantdubose": {
+        "recShare": 69.1,
+        "ydShare": 45.8,
+        "tdShare": 71,
+        "avgPPA": 88.9,
+        "usageOverall": 27.9,
+        "heightIn": 85.5,
+        "weightLb": 56.9
+      },
+      "nfl_2020_devinduvernay": {
+        "recShare": 95,
+        "ydShare": 92.4,
+        "tdShare": 50.4,
+        "avgPPA": 69.1,
+        "usageOverall": 87,
+        "heightIn": 26,
+        "weightLb": 80.9
+      },
+      "nfl_2020_bryanedwards": {
+        "recShare": 75.2,
+        "ydShare": 73.7,
+        "tdShare": 97.7,
+        "avgPPA": 11.5,
+        "usageOverall": 87,
+        "heightIn": 85.5,
+        "weightLb": 88.5
+      },
+      "nfl_2025_emekaegbuka": {
+        "recShare": 69.1,
+        "ydShare": 44.7,
+        "tdShare": 47.3,
+        "avgPPA": 63.4,
+        "usageOverall": 48.5,
+        "heightIn": 55.7,
+        "weightLb": 67.6
+      },
+      "nfl_2022_erikezukanma": {
+        "recShare": 37,
+        "ydShare": 30.2,
+        "tdShare": 34,
+        "avgPPA": 62.2,
+        "usageOverall": 56.9,
+        "heightIn": 85.5,
+        "weightLb": 93.5
+      },
+      "nfl_2021_simifehoko": {
+        "recShare": 71.4,
+        "ydShare": 85.1,
+        "tdShare": 88.2,
+        "avgPPA": 45,
+        "usageOverall": 85.9,
+        "heightIn": 94.7,
+        "weightLb": 93.5
+      },
+      "nfl_2025_taifelton": {
+        "recShare": 88.2,
+        "ydShare": 86.6,
+        "tdShare": 88.2,
+        "avgPPA": 75.6,
+        "usageOverall": 74.8,
+        "heightIn": 71.4,
+        "weightLb": 15.3
+      },
+      "nfl_2026_malachifields": {
+        "recShare": 22.5,
+        "ydShare": 27.1,
+        "tdShare": 26,
+        "avgPPA": 31.7,
+        "usageOverall": 24.8,
+        "heightIn": 94.7,
+        "weightLb": 94.7
+      },
+      "nfl_2021_dezfitzpatrick": {
+        "recShare": 48.1,
+        "ydShare": 75.2,
+        "tdShare": 13.7,
+        "avgPPA": 62.6,
+        "usageOverall": 26,
+        "heightIn": 71.4,
+        "weightLb": 80.9
+      },
+      "nfl_2023_zayflowers": {
+        "recShare": 85.9,
+        "ydShare": 91.2,
+        "tdShare": 99.6,
+        "avgPPA": 56.9,
+        "usageOverall": 84,
+        "heightIn": 14.9,
+        "weightLb": 4.6
+      },
+      "nfl_2024_troyfranklin": {
+        "recShare": 41.6,
+        "ydShare": 65.3,
+        "tdShare": 55,
+        "avgPPA": 95.8,
+        "usageOverall": 56.9,
+        "heightIn": 85.5,
+        "weightLb": 25.2
+      },
+      "nfl_2019_travisfulgham": {
+        "recShare": 48.1,
+        "ydShare": 72.5,
+        "tdShare": 88.2,
+        "avgPPA": 49.6,
+        "usageOverall": 59.9,
+        "heightIn": 85.5,
+        "weightLb": 72.1
+      },
+      "nfl_2018_russellgage": {
+        "recShare": 8.4,
+        "ydShare": 3.1,
+        "tdShare": 18.7,
+        "avgPPA": 9.2,
+        "usageOverall": 15.3,
+        "heightIn": 40.1,
+        "weightLb": 10.3
+      },
+      "nfl_2018_michaelgallup": {
+        "recShare": 95.4,
+        "ydShare": 92.7,
+        "tdShare": 40.5,
+        "avgPPA": 17.9,
+        "usageOverall": 95.8,
+        "heightIn": 55.7,
+        "weightLb": 56.9
+      },
+      "nfl_2020_antoniogandygolden": {
+        "recShare": 90.1,
+        "ydShare": 93.5,
+        "tdShare": 73.7,
+        "avgPPA": 22.5,
+        "usageOverall": 92.4,
+        "heightIn": 94.7,
+        "weightLb": 93.5
+      },
+      "nfl_2019_terrygodwin": {
+        "recShare": 3.1,
+        "ydShare": 5,
+        "tdShare": 9.2,
+        "avgPPA": 92,
+        "usageOverall": 1.1,
+        "heightIn": 26,
+        "weightLb": 23.7
+      },
+      "nfl_2025_matthewgolden": {
+        "recShare": 21.8,
+        "ydShare": 37,
+        "tdShare": 34.4,
+        "avgPPA": 87.4,
+        "usageOverall": 7.6,
+        "heightIn": 40.1,
+        "weightLb": 47.7
+      },
+      "nfl_2024_anthonygould": {
+        "recShare": 38.5,
+        "ydShare": 39.7,
+        "tdShare": 7.3,
+        "avgPPA": 78.2,
+        "usageOverall": 16,
+        "heightIn": 1.5,
+        "weightLb": 4.6
+      },
+      "nfl_2022_dannygray": {
+        "recShare": 18.7,
+        "ydShare": 34.4,
+        "tdShare": 37.4,
+        "avgPPA": 91.2,
+        "usageOverall": 37,
+        "heightIn": 55.7,
+        "weightLb": 14.5
+      },
+      "nfl_2023_antoinegreen": {
+        "recShare": 10.7,
+        "ydShare": 19.8,
+        "tdShare": 20.6,
+        "avgPPA": 74.8,
+        "usageOverall": 31.7,
+        "heightIn": 71.4,
+        "weightLb": 56.9
+      },
+      "nfl_2019_marcusgreen": {
+        "recShare": 43.9,
+        "ydShare": 64.1,
+        "tdShare": 93.9,
+        "avgPPA": 15.6,
+        "usageOverall": 73.3,
+        "heightIn": 1.5,
+        "weightLb": 28.2
+      },
+      "nfl_2018_daeseanhamilton": {
+        "recShare": 26,
+        "ydShare": 38.9,
+        "tdShare": 50.4,
+        "avgPPA": 81.7,
+        "usageOverall": 26.7,
+        "heightIn": 55.7,
+        "weightLb": 68.3
+      },
+      "nfl_2020_kjhamler": {
+        "recShare": 71,
+        "ydShare": 76.3,
+        "tdShare": 65.3,
+        "avgPPA": 11.1,
+        "usageOverall": 59.5,
+        "heightIn": 5.7,
+        "weightLb": 8.8
+      },
+      "nfl_2019_mecolehardman": {
+        "recShare": 14.5,
+        "ydShare": 15.6,
+        "tdShare": 26.7,
+        "avgPPA": 22.5,
+        "usageOverall": 10.7,
+        "heightIn": 26,
+        "weightLb": 16.4
+      },
+      "nfl_2019_kelvinharmon": {
+        "recShare": 66.8,
+        "ydShare": 67.6,
+        "tdShare": 55,
+        "avgPPA": 61.1,
+        "usageOverall": 65.3,
+        "heightIn": 85.5,
+        "weightLb": 82.8
+      },
+      "nfl_2025_treharris": {
+        "recShare": 43.9,
+        "ydShare": 42.4,
+        "tdShare": 35.5,
+        "avgPPA": 85.5,
+        "usageOverall": 68.3,
+        "heightIn": 71.4,
+        "weightLb": 67.6
+      },
+      "nfl_2021_jacobharris": {
+        "recShare": 9.9,
+        "ydShare": 13.4,
+        "tdShare": 42.4,
+        "avgPPA": 84.7,
+        "usageOverall": 3.4,
+        "heightIn": 98.9,
+        "weightLb": 81.7
+      },
+      "nfl_2024_marvinharrison": {
+        "recShare": 74,
+        "ydShare": 87.8,
+        "tdShare": 98.9,
+        "avgPPA": 95.4,
+        "usageOverall": 62.6,
+        "heightIn": 94.7,
+        "weightLb": 67.6
+      },
+      "nfl_2026_emmanuelhenderson": {
+        "recShare": 46.9,
+        "ydShare": 66.4,
+        "tdShare": 30.9,
+        "avgPPA": 12.2,
+        "usageOverall": 47.3,
+        "heightIn": 55.7,
+        "weightLb": 37
+      },
+      "nfl_2025_jaydenhiggins": {
+        "recShare": 91.2,
+        "ydShare": 81.7,
+        "tdShare": 77.5,
+        "avgPPA": 90.8,
+        "usageOverall": 54.2,
+        "heightIn": 94.7,
+        "weightLb": 80.9
+      },
+      "nfl_2020_teehiggins": {
+        "recShare": 27.9,
+        "ydShare": 58.8,
+        "tdShare": 66,
+        "avgPPA": 87.4,
+        "usageOverall": 21.4,
+        "heightIn": 94.7,
+        "weightLb": 88.5
+      },
+      "nfl_2020_johnhightower": {
+        "recShare": 27.1,
+        "ydShare": 52.3,
+        "tdShare": 43.5,
+        "avgPPA": 6.9,
+        "usageOverall": 55.3,
+        "heightIn": 71.4,
+        "weightLb": 4.6
+      },
+      "nfl_2020_kjhill": {
+        "recShare": 45.4,
+        "ydShare": 16.8,
+        "tdShare": 28.2,
+        "avgPPA": 25.2,
+        "usageOverall": 14.1,
+        "heightIn": 40.1,
+        "weightLb": 47.7
+      },
+      "nfl_2020_isaiahhodgins": {
+        "recShare": 93.1,
+        "ydShare": 94.3,
+        "tdShare": 88.9,
+        "avgPPA": 48.9,
+        "usageOverall": 92.4,
+        "heightIn": 94.7,
+        "weightLb": 74
+      },
+      "nfl_2025_jimmyhorn": {
+        "recShare": 5,
+        "ydShare": 2.3,
+        "tdShare": 1.1,
+        "avgPPA": 55,
+        "usageOverall": 9.2,
+        "heightIn": 14.9,
+        "weightLb": 3.1
+      },
+      "nfl_2025_toryhorton": {
+        "recShare": 5.3,
+        "ydShare": 4.6,
+        "tdShare": 5.7,
+        "avgPPA": 83.6,
+        "usageOverall": 21.4,
+        "heightIn": 71.4,
+        "weightLb": 37
+      },
+      "nfl_2026_tedhurst": {
+        "recShare": 67.9,
+        "ydShare": 80.9,
+        "tdShare": 49.2,
+        "avgPPA": 11.8,
+        "usageOverall": 87,
+        "heightIn": 85.5,
+        "weightLb": 23.7
+      },
+      "nfl_2023_xavierhutchinson": {
+        "recShare": 94.3,
+        "ydShare": 93.1,
+        "tdShare": 63.4,
+        "avgPPA": 45.8,
+        "usageOverall": 92.4,
+        "heightIn": 85.5,
+        "weightLb": 67.6
+      },
+      "nfl_2023_jalinhyatt": {
+        "recShare": 59.9,
+        "ydShare": 70.2,
+        "tdShare": 81.7,
+        "avgPPA": 81.7,
+        "usageOverall": 53.1,
+        "heightIn": 40.1,
+        "weightLb": 14.5
+      },
+      "nfl_2019_andyisabella": {
+        "recShare": 96.9,
+        "ydShare": 99.2,
+        "tdShare": 95.4,
+        "avgPPA": 47.7,
+        "usageOverall": 98.5,
+        "heightIn": 14.9,
+        "weightLb": 47.7
+      },
+      "nfl_2024_jhaquanjackson": {
+        "recShare": 7.3,
+        "ydShare": 11.1,
+        "tdShare": 15.6,
+        "avgPPA": 51.9,
+        "usageOverall": 13.4,
+        "heightIn": 26,
+        "weightLb": 23.7
+      },
+      "nfl_2018_richiejames": {
+        "recShare": 6.5,
+        "ydShare": 1.1,
+        "tdShare": 11.5,
+        "avgPPA": 0.8,
+        "usageOverall": 98.9,
+        "heightIn": 5.7,
+        "weightLb": 8.8
+      },
+      "nfl_2020_justinjefferson": {
+        "recShare": 72.5,
+        "ydShare": 51.5,
+        "tdShare": 58.8,
+        "avgPPA": 82.8,
+        "usageOverall": 68.3,
+        "heightIn": 85.5,
+        "weightLb": 40.1
+      },
+      "nfl_2020_vanjefferson": {
+        "recShare": 18.3,
+        "ydShare": 15.6,
+        "tdShare": 20.2,
+        "avgPPA": 64.9,
+        "usageOverall": 22.9,
+        "heightIn": 71.4,
+        "weightLb": 48.5
+      },
+      "nfl_2020_jauanjennings": {
+        "recShare": 85.5,
+        "ydShare": 84.7,
+        "tdShare": 84.7,
+        "avgPPA": 51.5,
+        "usageOverall": 69.8,
+        "heightIn": 85.5,
+        "weightLb": 72.1
+      },
+      "nfl_2019_garyjennings": {
+        "recShare": 31.3,
+        "ydShare": 32.8,
+        "tdShare": 72.1,
+        "avgPPA": 89.7,
+        "usageOverall": 29.8,
+        "heightIn": 71.4,
+        "weightLb": 88.5
+      },
+      "nfl_2020_jerryjeudy": {
+        "recShare": 77.1,
+        "ydShare": 54.2,
+        "tdShare": 26.3,
+        "avgPPA": 48.1,
+        "usageOverall": 71.4,
+        "heightIn": 55.7,
+        "weightLb": 40.1
+      },
+      "nfl_2020_collinjohnson": {
+        "recShare": 10.3,
+        "ydShare": 11.8,
+        "tdShare": 9.5,
+        "avgPPA": 23.7,
+        "usageOverall": 65.3,
+        "heightIn": 99.6,
+        "weightLb": 93.5
+      },
+      "nfl_2024_corneliusjohnson": {
+        "recShare": 27.9,
+        "ydShare": 21.8,
+        "tdShare": 2.7,
+        "avgPPA": 47.3,
+        "usageOverall": 11.5,
+        "heightIn": 85.5,
+        "weightLb": 72.1
+      },
+      "nfl_2019_diontaejohnson": {
+        "recShare": 51.9,
+        "ydShare": 51.5,
+        "tdShare": 42.4,
+        "avgPPA": 21.8,
+        "usageOverall": 35.5,
+        "heightIn": 26,
+        "weightLb": 15.3
+      },
+      "nfl_2019_keeseanjohnson": {
+        "recShare": 88.5,
+        "ydShare": 89.3,
+        "tdShare": 60.7,
+        "avgPPA": 29.8,
+        "usageOverall": 84,
+        "heightIn": 71.4,
+        "weightLb": 48.9
+      },
+      "nfl_2025_tezjohnson": {
+        "recShare": 68.3,
+        "ydShare": 40.8,
+        "tdShare": 71,
+        "avgPPA": 77.1,
+        "usageOverall": 53.1,
+        "heightIn": 14.9,
+        "weightLb": 0.8
+      },
+      "nfl_2020_tylerjohnson": {
+        "recShare": 98.1,
+        "ydShare": 96.6,
+        "tdShare": 84.4,
+        "avgPPA": 73.3,
+        "usageOverall": 77.1,
+        "heightIn": 71.4,
+        "weightLb": 67.6
+      },
+      "nfl_2023_quentinjohnston": {
+        "recShare": 42.7,
+        "ydShare": 59.9,
+        "tdShare": 20.2,
+        "avgPPA": 42,
+        "usageOverall": 53.1,
+        "heightIn": 94.7,
+        "weightLb": 88.5
+      },
+      "nfl_2023_charliejones": {
+        "recShare": 87.4,
+        "ydShare": 88.5,
+        "tdShare": 93.5,
+        "avgPPA": 56.9,
+        "usageOverall": 85.1,
+        "heightIn": 40.1,
+        "weightLb": 28.2
+      },
+      "nfl_2018_christiankirk": {
+        "recShare": 82.1,
+        "ydShare": 63,
+        "tdShare": 92.7,
+        "avgPPA": 16.8,
+        "usageOverall": 60.7,
+        "heightIn": 26,
+        "weightLb": 56.9
+      },
+      "nfl_2020_ceedeelamb": {
+        "recShare": 61.8,
+        "ydShare": 77.5,
+        "tdShare": 81.3,
+        "avgPPA": 83.2,
+        "usageOverall": 61.1,
+        "heightIn": 71.4,
+        "weightLb": 37.4
+      },
+      "nfl_2026_jakobilane": {
+        "recShare": 25.6,
+        "ydShare": 24.4,
+        "tdShare": 14.5,
+        "avgPPA": 61.8,
+        "usageOverall": 43.9,
+        "heightIn": 94.7,
+        "weightLb": 56.9
+      },
+      "nfl_2025_jaylinlane": {
+        "recShare": 35.5,
+        "ydShare": 22.9,
+        "tdShare": 12.2,
+        "avgPPA": 49.6,
+        "usageOverall": 19.1,
+        "heightIn": 14.9,
+        "weightLb": 40.1
+      },
+      "nfl_2018_jordanlasley": {
+        "recShare": 42.7,
+        "ydShare": 65.3,
+        "tdShare": 57.3,
+        "avgPPA": 48.9,
+        "usageOverall": 93.5,
+        "heightIn": 55.7,
+        "weightLb": 80.9
+      },
+      "nfl_2026_kendricklaw": {
+        "recShare": 59.9,
+        "ydShare": 36.3,
+        "tdShare": 26,
+        "avgPPA": 12.6,
+        "usageOverall": 31.7,
+        "heightIn": 40.1,
+        "weightLb": 67.6
+      },
+      "nfl_2024_xavierlegette": {
+        "recShare": 69.8,
+        "ydShare": 93.9,
+        "tdShare": 71,
+        "avgPPA": 80.5,
+        "usageOverall": 77.1,
+        "heightIn": 85.5,
+        "weightLb": 98.9
+      },
+      "nfl_2026_makailemon": {
+        "recShare": 82.8,
+        "ydShare": 71,
+        "tdShare": 85.5,
+        "avgPPA": 34.7,
+        "usageOverall": 89.7,
+        "heightIn": 26,
+        "weightLb": 47.7
+      },
+      "nfl_2022_drakelondon": {
+        "recShare": 80.2,
+        "ydShare": 72.5,
+        "tdShare": 71,
+        "avgPPA": 32.4,
+        "usageOverall": 99.2,
+        "heightIn": 98.9,
+        "weightLb": 80.9
+      },
+      "nfl_2025_dominiclovett": {
+        "recShare": 25.6,
+        "ydShare": 14.1,
+        "tdShare": 27.9,
+        "avgPPA": 13.4,
+        "usageOverall": 26.7,
+        "heightIn": 14.9,
+        "weightLb": 10.3
+      },
+      "nfl_2021_terracemarshall": {
+        "recShare": 38.5,
+        "ydShare": 44.3,
+        "tdShare": 84,
+        "avgPPA": 40.1,
+        "usageOverall": 79.4,
+        "heightIn": 85.5,
+        "weightLb": 56.9
+      },
+      "nfl_2024_lukemccaffrey": {
+        "recShare": 75.2,
+        "ydShare": 71.8,
+        "tdShare": 92.4,
+        "avgPPA": 50.4,
+        "usageOverall": 84.4,
+        "heightIn": 71.4,
+        "weightLb": 47.7
+      },
+      "nfl_2018_rayraymccloud": {
+        "recShare": 19.5,
+        "ydShare": 13.4,
+        "tdShare": 5,
+        "avgPPA": 4.2,
+        "usageOverall": 6.1,
+        "heightIn": 14.9,
+        "weightLb": 14.5
+      },
+      "nfl_2024_laddmcconkey": {
+        "recShare": 3.1,
+        "ydShare": 3.8,
+        "tdShare": 6.9,
+        "avgPPA": 93.9,
+        "usageOverall": 6.9,
+        "heightIn": 40.1,
+        "weightLb": 23.7
+      },
+      "nfl_2019_terrymclaurin": {
+        "recShare": 1.9,
+        "ydShare": 9.5,
+        "tdShare": 32.4,
+        "avgPPA": 100,
+        "usageOverall": 1.9,
+        "heightIn": 55.7,
+        "weightLb": 67.6
+      },
+      "nfl_2021_raceymcmath": {
+        "recShare": 0.4,
+        "ydShare": 0.4,
+        "tdShare": 3.4,
+        "avgPPA": 93.1,
+        "usageOverall": 0.4,
+        "heightIn": 85.5,
+        "weightLb": 95.8
+      },
+      "nfl_2024_jalenmcmillan": {
+        "recShare": 9.5,
+        "ydShare": 3.1,
+        "tdShare": 11.8,
+        "avgPPA": 28.2,
+        "usageOverall": 84,
+        "heightIn": 55.7,
+        "weightLb": 40.1
+      },
+      "nfl_2025_tetairoamcmillan": {
+        "recShare": 92,
+        "ydShare": 98.1,
+        "tdShare": 92,
+        "avgPPA": 96.9,
+        "usageOverall": 68.3,
+        "heightIn": 98.9,
+        "weightLb": 80.9
+      },
+      "nfl_2022_bomelton": {
+        "recShare": 63,
+        "ydShare": 61.8,
+        "tdShare": 71,
+        "avgPPA": 5,
+        "usageOverall": 65.3,
+        "heightIn": 26,
+        "weightLb": 37
+      },
+      "nfl_2019_dkmetcalf": {
+        "recShare": 3.4,
+        "ydShare": 8.4,
+        "tdShare": 36.6,
+        "avgPPA": 64.9,
+        "usageOverall": 25.6,
+        "heightIn": 94.7,
+        "weightLb": 98.1
+      },
+      "nfl_2022_johnmetchie": {
+        "recShare": 70.2,
+        "ydShare": 38.2,
+        "tdShare": 16.4,
+        "avgPPA": 30.5,
+        "usageOverall": 80.5,
+        "heightIn": 40.1,
+        "weightLb": 47.7
+      },
+      "nfl_2018_anthonymiller": {
+        "recShare": 91.2,
+        "ydShare": 84.4,
+        "tdShare": 93.5,
+        "avgPPA": 38.2,
+        "usageOverall": 94.3,
+        "heightIn": 26,
+        "weightLb": 37
+      },
+      "nfl_2019_scottmiller": {
+        "recShare": 81.3,
+        "ydShare": 95,
+        "tdShare": 61.8,
+        "avgPPA": 35.5,
+        "usageOverall": 88.9,
+        "heightIn": 14.9,
+        "weightLb": 0.8
+      },
+      "nfl_2021_daxmilne": {
+        "recShare": 70.6,
+        "ydShare": 69.5,
+        "tdShare": 41.2,
+        "avgPPA": 47.3,
+        "usageOverall": 75.6,
+        "heightIn": 40.1,
+        "weightLb": 37
+      },
+      "nfl_2020_denzelmims": {
+        "recShare": 63,
+        "ydShare": 65.6,
+        "tdShare": 97.7,
+        "avgPPA": 44.7,
+        "usageOverall": 65.3,
+        "heightIn": 85.5,
+        "weightLb": 88.5
+      },
+      "nfl_2023_marvinmims": {
+        "recShare": 48.5,
+        "ydShare": 80.2,
+        "tdShare": 34,
+        "avgPPA": 51.5,
+        "usageOverall": 19.5,
+        "heightIn": 26,
+        "weightLb": 17.2
+      },
+      "nfl_2023_jonathanmingo": {
+        "recShare": 46.9,
+        "ydShare": 61.1,
+        "tdShare": 36.6,
+        "avgPPA": 59.2,
+        "usageOverall": 15.3,
+        "heightIn": 71.4,
+        "weightLb": 98.1
+      },
+      "nfl_2024_adonaimitchell": {
+        "recShare": 24.8,
+        "ydShare": 28.2,
+        "tdShare": 90.8,
+        "avgPPA": 60.7,
+        "usageOverall": 22.9,
+        "heightIn": 94.7,
+        "weightLb": 48.1
+      },
+      "nfl_2019_dillonmitchell": {
+        "recShare": 87.8,
+        "ydShare": 91.6,
+        "tdShare": 73.7,
+        "avgPPA": 26,
+        "usageOverall": 84.7,
+        "heightIn": 55.7,
+        "weightLb": 28.2
+      },
+      "nfl_2020_darnellmooney": {
+        "recShare": 66.8,
+        "ydShare": 55.7,
+        "tdShare": 44.3,
+        "avgPPA": 4.6,
+        "usageOverall": 32.4,
+        "heightIn": 26,
+        "weightLb": 8
+      },
+      "nfl_2018_djmoore": {
+        "recShare": 100,
+        "ydShare": 100,
+        "tdShare": 98.5,
+        "avgPPA": 10.7,
+        "usageOverall": 97.3,
+        "heightIn": 26,
+        "weightLb": 88.5
+      },
+      "nfl_2021_elijahmoore": {
+        "recShare": 96.6,
+        "ydShare": 87.8,
+        "tdShare": 45.8,
+        "avgPPA": 53.4,
+        "usageOverall": 97.7,
+        "heightIn": 5.7,
+        "weightLb": 23.7
+      },
+      "nfl_2018_jmonmoore": {
+        "recShare": 74,
+        "ydShare": 58.8,
+        "tdShare": 36.6,
+        "avgPPA": 44.7,
+        "usageOverall": 43.9,
+        "heightIn": 85.5,
+        "weightLb": 67.6
+      },
+      "nfl_2021_rondalemoore": {
+        "recShare": 38.9,
+        "ydShare": 11.1,
+        "tdShare": 0.4,
+        "avgPPA": 3.8,
+        "usageOverall": 99.6,
+        "heightIn": 5.7,
+        "weightLb": 14.5
+      },
+      "nfl_2022_skyymoore": {
+        "recShare": 98.5,
+        "ydShare": 94.7,
+        "tdShare": 89.7,
+        "avgPPA": 85.9,
+        "usageOverall": 65.3,
+        "heightIn": 5.7,
+        "weightLb": 47.7
+      },
+      "nfl_2025_konatamumpfield": {
+        "recShare": 24.4,
+        "ydShare": 42.7,
+        "tdShare": 17.2,
+        "avgPPA": 94.7,
+        "usageOverall": 10.7,
+        "heightIn": 55.7,
+        "weightLb": 23.7
+      },
+      "nfl_2024_maliknabers": {
+        "recShare": 90.1,
+        "ydShare": 89.7,
+        "tdShare": 64.5,
+        "avgPPA": 76.3,
+        "usageOverall": 88.9,
+        "heightIn": 40.1,
+        "weightLb": 56.9
+      },
+      "nfl_2023_pukanacua": {
+        "recShare": 32.8,
+        "ydShare": 24,
+        "tdShare": 14.9,
+        "avgPPA": 55,
+        "usageOverall": 88.9,
+        "heightIn": 71.4,
+        "weightLb": 67.6
+      },
+      "nfl_2022_jalennailor": {
+        "recShare": 17.6,
+        "ydShare": 30.2,
+        "tdShare": 34,
+        "avgPPA": 45.4,
+        "usageOverall": 58.4,
+        "heightIn": 40.1,
+        "weightLb": 23.7
+      },
+      "nfl_2021_dazznewsome": {
+        "recShare": 54.2,
+        "ydShare": 23.7,
+        "tdShare": 22.5,
+        "avgPPA": 58.4,
+        "usageOverall": 21.4,
+        "heightIn": 26,
+        "weightLb": 37
+      },
+      "nfl_2021_trenixon": {
+        "recShare": 0.8,
+        "ydShare": 0.8,
+        "tdShare": 5.7,
+        "avgPPA": 18.3,
+        "usageOverall": 24.8,
+        "heightIn": 71.4,
+        "weightLb": 14.5
+      },
+      "nfl_2025_jaylinnoel": {
+        "recShare": 84.4,
+        "ydShare": 83.2,
+        "tdShare": 65.3,
+        "avgPPA": 69.8,
+        "usageOverall": 47.3,
+        "heightIn": 14.9,
+        "weightLb": 56.9
+      },
+      "nfl_2024_romeodunze": {
+        "recShare": 67.2,
+        "ydShare": 77.1,
+        "tdShare": 72.1,
+        "avgPPA": 84,
+        "usageOverall": 74.8,
+        "heightIn": 85.5,
+        "weightLb": 88.5
+      },
+      "nfl_2022_chrisolave": {
+        "recShare": 31.7,
+        "ydShare": 22.9,
+        "tdShare": 51.1,
+        "avgPPA": 28.6,
+        "usageOverall": 68.3,
+        "heightIn": 55.7,
+        "weightLb": 28.2
+      },
+      "nfl_2020_kjosborn": {
+        "recShare": 37,
+        "ydShare": 16,
+        "tdShare": 21,
+        "avgPPA": 10.3,
+        "usageOverall": 37.8,
+        "heightIn": 40.1,
+        "weightLb": 67.6
+      },
+      "nfl_2021_joshpalmer": {
+        "recShare": 30.5,
+        "ydShare": 41.6,
+        "tdShare": 55,
+        "avgPPA": 14.1,
+        "usageOverall": 33.6,
+        "heightIn": 71.4,
+        "weightLb": 80.9
+      },
+      "nfl_2024_tejhaunpalmer": {
+        "recShare": 17.9,
+        "ydShare": 48.1,
+        "tdShare": 64.5,
+        "avgPPA": 96.6,
+        "usageOverall": 5,
+        "heightIn": 71.4,
+        "weightLb": 80.9
+      },
+      "nfl_2023_treypalmer": {
+        "recShare": 95,
+        "ydShare": 95.4,
+        "tdShare": 98.1,
+        "avgPPA": 67.2,
+        "usageOverall": 78.6,
+        "heightIn": 55.7,
+        "weightLb": 37
+      },
+      "nfl_2020_dezmonpatmon": {
+        "recShare": 7.6,
+        "ydShare": 7.6,
+        "tdShare": 15.6,
+        "avgPPA": 19.1,
+        "usageOverall": 33.6,
+        "heightIn": 94.7,
+        "weightLb": 99.2
+      },
+      "nfl_2024_rickypearsall": {
+        "recShare": 57.6,
+        "ydShare": 76.3,
+        "tdShare": 26,
+        "avgPPA": 82.4,
+        "usageOverall": 43.9,
+        "heightIn": 55.7,
+        "weightLb": 40.1
+      },
+      "nfl_2020_donovanpeoplesjones": {
+        "recShare": 16.8,
+        "ydShare": 7.6,
+        "tdShare": 40.1,
+        "avgPPA": 16.4,
+        "usageOverall": 18.3,
+        "heightIn": 71.4,
+        "weightLb": 72.1
+      },
+      "nfl_2023_atperry": {
+        "recShare": 77.1,
+        "ydShare": 58.8,
+        "tdShare": 42.7,
+        "avgPPA": 41.6,
+        "usageOverall": 65.3,
+        "heightIn": 98.9,
+        "weightLb": 67.6
+      },
+      "nfl_2018_dantepettis": {
+        "recShare": 74.4,
+        "ydShare": 55.3,
+        "tdShare": 78.6,
+        "avgPPA": 7.6,
+        "usageOverall": 65.3,
+        "heightIn": 55.7,
+        "weightLb": 47.7
+      },
+      "nfl_2022_kylephilips": {
+        "recShare": 83.6,
+        "ydShare": 59.9,
+        "tdShare": 89.7,
+        "avgPPA": 92.4,
+        "usageOverall": 24.8,
+        "heightIn": 26,
+        "weightLb": 17.2
+      },
+      "nfl_2022_georgepickens": {
+        "recShare": 42.7,
+        "ydShare": 27.1,
+        "tdShare": 63.4,
+        "avgPPA": 74,
+        "usageOverall": 29.8,
+        "heightIn": 85.5,
+        "weightLb": 56.9
+      },
+      "nfl_2022_alecpierce": {
+        "recShare": 40.5,
+        "ydShare": 54.6,
+        "tdShare": 41.2,
+        "avgPPA": 35.9,
+        "usageOverall": 35.5,
+        "heightIn": 85.5,
+        "weightLb": 82.1
+      },
+      "nfl_2020_michaelpittman": {
+        "recShare": 80.2,
+        "ydShare": 67.6,
+        "tdShare": 62.6,
+        "avgPPA": 50.8,
+        "usageOverall": 81.3,
+        "heightIn": 94.7,
+        "weightLb": 93.5
+      },
+      "nfl_2024_jalynnpolk": {
+        "recShare": 30.5,
+        "ydShare": 38.2,
+        "tdShare": 38.5,
+        "avgPPA": 77.9,
+        "usageOverall": 50,
+        "heightIn": 71.4,
+        "weightLb": 59.5
+      },
+      "nfl_2021_cornellpowell": {
+        "recShare": 21.8,
+        "ydShare": 30.2,
+        "tdShare": 35.5,
+        "avgPPA": 66.4,
+        "usageOverall": 29.8,
+        "heightIn": 40.1,
+        "weightLb": 80.9
+      },
+      "nfl_2020_jamesproche": {
+        "recShare": 95.8,
+        "ydShare": 72.9,
+        "tdShare": 88.2,
+        "avgPPA": 24.4,
+        "usageOverall": 95,
+        "heightIn": 40.1,
+        "weightLb": 41.6
+      },
+      "nfl_2018_austinproehl": {
+        "recShare": 4.2,
+        "ydShare": 5.7,
+        "tdShare": 4.6,
+        "avgPPA": 60.3,
+        "usageOverall": 9.2,
+        "heightIn": 14.9,
+        "weightLb": 23.7
+      },
+      "nfl_2018_treyquinn": {
+        "recShare": 97.7,
+        "ydShare": 79.4,
+        "tdShare": 79,
+        "avgPPA": 26.3,
+        "usageOverall": 93.9,
+        "heightIn": 40.1,
+        "weightLb": 57.6
+      },
+      "nfl_2018_damionratley": {
+        "recShare": 8.8,
+        "ydShare": 30.5,
+        "tdShare": 49.2,
+        "avgPPA": 92.7,
+        "usageOverall": 3.8,
+        "heightIn": 85.5,
+        "weightLb": 37
+      },
+      "nfl_2020_jalenreagor": {
+        "recShare": 41.6,
+        "ydShare": 49.2,
+        "tdShare": 71,
+        "avgPPA": 3.1,
+        "usageOverall": 45.4,
+        "heightIn": 26,
+        "weightLb": 47.7
+      },
+      "nfl_2023_jaydenreed": {
+        "recShare": 46.9,
+        "ydShare": 35.5,
+        "tdShare": 30.9,
+        "avgPPA": 30.5,
+        "usageOverall": 42,
+        "heightIn": 40.1,
+        "weightLb": 23.7
+      },
+      "nfl_2020_joereed": {
+        "recShare": 57.6,
+        "ydShare": 19.1,
+        "tdShare": 59.9,
+        "avgPPA": 1.9,
+        "usageOverall": 80.5,
+        "heightIn": 55.7,
+        "weightLb": 88.5
+      },
+      "nfl_2019_hunterrenfrow": {
+        "recShare": 16.8,
+        "ydShare": 6.5,
+        "tdShare": 1.1,
+        "avgPPA": 6.1,
+        "usageOverall": 4.6,
+        "heightIn": 14.9,
+        "weightLb": 14.5
+      },
+      "nfl_2024_brendenrice": {
+        "recShare": 15.3,
+        "ydShare": 19.5,
+        "tdShare": 65.6,
+        "avgPPA": 99.2,
+        "usageOverall": 15.3,
+        "heightIn": 85.5,
+        "weightLb": 80.9
+      },
+      "nfl_2023_rasheerice": {
+        "recShare": 84.7,
+        "ydShare": 83.2,
+        "tdShare": 55,
+        "avgPPA": 73.7,
+        "usageOverall": 68.7,
+        "heightIn": 71.4,
+        "weightLb": 58.4
+      },
+      "nfl_2018_calvinridley": {
+        "recShare": 88.9,
+        "ydShare": 90.5,
+        "tdShare": 19.1,
+        "avgPPA": 31.3,
+        "usageOverall": 53.1,
+        "heightIn": 55.7,
+        "weightLb": 37
+      },
+      "nfl_2019_rileyridley": {
+        "recShare": 29.4,
+        "ydShare": 18.7,
+        "tdShare": 44.7,
+        "avgPPA": 68.7,
+        "usageOverall": 9.2,
+        "heightIn": 71.4,
+        "weightLb": 56.9
+      },
+      "nfl_2022_wandalerobinson": {
+        "recShare": 98.9,
+        "ydShare": 98.5,
+        "tdShare": 58.4,
+        "avgPPA": 26,
+        "usageOverall": 96.9,
+        "heightIn": 26,
+        "weightLb": 23.7
+      },
+      "nfl_2021_amarirodgers": {
+        "recShare": 61.1,
+        "ydShare": 46.6,
+        "tdShare": 35.5,
+        "avgPPA": 38.2,
+        "usageOverall": 58.4,
+        "heightIn": 14.9,
+        "weightLb": 80.9
+      },
+      "nfl_2025_jalenroyals": {
+        "recShare": 32.8,
+        "ydShare": 52.7,
+        "tdShare": 27.9,
+        "avgPPA": 95,
+        "usageOverall": 58.4,
+        "heightIn": 40.1,
+        "weightLb": 67.6
+      },
+      "nfl_2020_henryruggs": {
+        "recShare": 13,
+        "ydShare": 15.6,
+        "tdShare": 13.4,
+        "avgPPA": 82.1,
+        "usageOverall": 14.1,
+        "heightIn": 40.1,
+        "weightLb": 37
+      },
+      "nfl_2019_deebosamuel": {
+        "recShare": 55.3,
+        "ydShare": 48.5,
+        "tdShare": 72.9,
+        "avgPPA": 19.8,
+        "usageOverall": 75.6,
+        "heightIn": 40.1,
+        "weightLb": 80.9
+      },
+      "nfl_2026_elijahsarratt": {
+        "recShare": 50.8,
+        "ydShare": 30.2,
+        "tdShare": 66.4,
+        "avgPPA": 56.9,
+        "usageOverall": 47.3,
+        "heightIn": 71.4,
+        "weightLb": 74
+      },
+      "nfl_2021_anthonyschwartz": {
+        "recShare": 69.5,
+        "ydShare": 57.6,
+        "tdShare": 42.4,
+        "avgPPA": 5.7,
+        "usageOverall": 73.3,
+        "heightIn": 40.1,
+        "weightLb": 10.3
+      },
+      "nfl_2018_jaleelscott": {
+        "recShare": 35.5,
+        "ydShare": 45.4,
+        "tdShare": 61.8,
+        "avgPPA": 40.5,
+        "usageOverall": 77.1,
+        "heightIn": 99.6,
+        "weightLb": 88.5
+      },
+      "nfl_2023_tylerscott": {
+        "recShare": 51.9,
+        "ydShare": 65.3,
+        "tdShare": 82.4,
+        "avgPPA": 79.4,
+        "usageOverall": 58.4,
+        "heightIn": 26,
+        "weightLb": 23.7
+      },
+      "nfl_2022_khalilshakir": {
+        "recShare": 87.4,
+        "ydShare": 90.5,
+        "tdShare": 75.6,
+        "avgPPA": 71,
+        "usageOverall": 69.8,
+        "heightIn": 40.1,
+        "weightLb": 28.2
+      },
+      "nfl_2020_laviskashenault": {
+        "recShare": 50,
+        "ydShare": 57.3,
+        "tdShare": 34,
+        "avgPPA": 46.6,
+        "usageOverall": 77.9,
+        "heightIn": 71.4,
+        "weightLb": 93.5
+      },
+      "nfl_2021_benskowronek": {
+        "recShare": 11.1,
+        "ydShare": 14.1,
+        "tdShare": 71,
+        "avgPPA": 76,
+        "usageOverall": 10.7,
+        "heightIn": 85.5,
+        "weightLb": 95.8
+      },
+      "nfl_2019_dariusslayton": {
+        "recShare": 17.2,
+        "ydShare": 40.8,
+        "tdShare": 38.9,
+        "avgPPA": 53.1,
+        "usageOverall": 21.4,
+        "heightIn": 71.4,
+        "weightLb": 37
+      },
+      "nfl_2024_ainiassmith": {
+        "recShare": 36.3,
+        "ydShare": 38.5,
+        "tdShare": 8.4,
+        "avgPPA": 66.4,
+        "usageOverall": 27.9,
+        "heightIn": 14.9,
+        "weightLb": 56.9
+      },
+      "nfl_2026_anthonysmith": {
+        "recShare": 55,
+        "ydShare": 69.1,
+        "tdShare": 64.5,
+        "avgPPA": 34,
+        "usageOverall": 40.5,
+        "heightIn": 85.5,
+        "weightLb": 28.6
+      },
+      "nfl_2025_ariansmith": {
+        "recShare": 14.9,
+        "ydShare": 27.5,
+        "tdShare": 13,
+        "avgPPA": 72.5,
+        "usageOverall": 6.9,
+        "heightIn": 40.1,
+        "weightLb": 23.7
+      },
+      "nfl_2021_devontasmith": {
+        "recShare": 96.6,
+        "ydShare": 96.2,
+        "tdShare": 99.2,
+        "avgPPA": 85.1,
+        "usageOverall": 96.2,
+        "heightIn": 55.7,
+        "weightLb": 8
+      },
+      "nfl_2021_shismith": {
+        "recShare": 91.6,
+        "ydShare": 83.6,
+        "tdShare": 97.7,
+        "avgPPA": 5.3,
+        "usageOverall": 90.5,
+        "heightIn": 14.9,
+        "weightLb": 37
+      },
+      "nfl_2018_trequansmith": {
+        "recShare": 43.1,
+        "ydShare": 59.9,
+        "tdShare": 72.1,
+        "avgPPA": 88.2,
+        "usageOverall": 35.5,
+        "heightIn": 55.7,
+        "weightLb": 67.6
+      },
+      "nfl_2021_ihmirsmithmarsette": {
+        "recShare": 26.3,
+        "ydShare": 34,
+        "tdShare": 92,
+        "avgPPA": 27.5,
+        "usageOverall": 36.3,
+        "heightIn": 55.7,
+        "weightLb": 10.3
+      },
+      "nfl_2023_jaxonsmithnjigba": {
+        "recShare": 78.2,
+        "ydShare": 79.8,
+        "tdShare": 22.9,
+        "avgPPA": 90.5,
+        "usageOverall": 68.3,
+        "heightIn": 55.7,
+        "weightLb": 56.9
+      },
+      "nfl_2021_amonrastbrown": {
+        "recShare": 59.2,
+        "ydShare": 48.9,
+        "tdShare": 82.8,
+        "avgPPA": 38.5,
+        "usageOverall": 74.8,
+        "heightIn": 55.7,
+        "weightLb": 47.7
+      },
+      "nfl_2018_equanimeousstbrown": {
+        "recShare": 29,
+        "ydShare": 35.5,
+        "tdShare": 26,
+        "avgPPA": 1.1,
+        "usageOverall": 25.6,
+        "heightIn": 98.9,
+        "weightLb": 58.4
+      },
+      "nfl_2021_marquezstevenson": {
+        "recShare": 7.3,
+        "ydShare": 10.3,
+        "tdShare": 45.8,
+        "avgPPA": 50,
+        "usageOverall": 31.7,
+        "heightIn": 40.1,
+        "weightLb": 37
+      },
+      "nfl_2026_dezhaunstribling": {
+        "recShare": 20.6,
+        "ydShare": 16.8,
+        "tdShare": 37.4,
+        "avgPPA": 54.2,
+        "usageOverall": 9.2,
+        "heightIn": 71.4,
+        "weightLb": 56.9
+      },
+      "nfl_2018_courtlandsutton": {
+        "recShare": 64.9,
+        "ydShare": 64.1,
+        "tdShare": 72.5,
+        "avgPPA": 14.5,
+        "usageOverall": 78.6,
+        "heightIn": 94.7,
+        "weightLb": 88.9
+      },
+      "nfl_2020_freddieswain": {
+        "recShare": 9.5,
+        "ydShare": 6.9,
+        "tdShare": 29,
+        "avgPPA": 55.3,
+        "usageOverall": 18.3,
+        "heightIn": 40.1,
+        "weightLb": 49.6
+      },
+      "nfl_2018_audentate": {
+        "recShare": 38.5,
+        "ydShare": 32.8,
+        "tdShare": 94.7,
+        "avgPPA": 35.1,
+        "usageOverall": 21.4,
+        "heightIn": 98.9,
+        "weightLb": 98.1
+      },
+      "nfl_2026_carnelltate": {
+        "recShare": 21.8,
+        "ydShare": 42.4,
+        "tdShare": 49.2,
+        "avgPPA": 90.1,
+        "usageOverall": 45.4,
+        "heightIn": 85.5,
+        "weightLb": 47.7
+      },
+      "nfl_2025_isaacteslaa": {
+        "recShare": 6.5,
+        "ydShare": 13.4,
+        "tdShare": 21.8,
+        "avgPPA": 98.5,
+        "usageOverall": 2.3,
+        "heightIn": 94.7,
+        "weightLb": 89.3
+      },
+      "nfl_2024_brianthomas": {
+        "recShare": 63,
+        "ydShare": 57.3,
+        "tdShare": 80.5,
+        "avgPPA": 96.2,
+        "usageOverall": 40.5,
+        "heightIn": 94.7,
+        "weightLb": 67.6
+      },
+      "nfl_2026_zavionthomas": {
+        "recShare": 14.5,
+        "ydShare": 14.5,
+        "tdShare": 26,
+        "avgPPA": 9.5,
+        "usageOverall": 40.5,
+        "heightIn": 14.9,
+        "weightLb": 40.1
+      },
+      "nfl_2026_brenenthompson": {
+        "recShare": 60.7,
+        "ydShare": 84.4,
+        "tdShare": 59.5,
+        "avgPPA": 63,
+        "usageOverall": 42,
+        "heightIn": 5.7,
+        "weightLb": 3.1
+      },
+      "nfl_2025_dontethornton": {
+        "recShare": 6.5,
+        "ydShare": 41.2,
+        "tdShare": 55,
+        "avgPPA": 99.6,
+        "usageOverall": 1.1,
+        "heightIn": 98.9,
+        "weightLb": 82.8
+      },
+      "nfl_2022_tyquanthornton": {
+        "recShare": 72.9,
+        "ydShare": 82.4,
+        "tdShare": 84,
+        "avgPPA": 39.7,
+        "usageOverall": 53.1,
+        "heightIn": 85.5,
+        "weightLb": 14.5
+      },
+      "nfl_2024_jamarithrash": {
+        "recShare": 63.7,
+        "ydShare": 54.2,
+        "tdShare": 49.2,
+        "avgPPA": 89.3,
+        "usageOverall": 36.3,
+        "heightIn": 55.7,
+        "weightLb": 23.7
+      },
+      "nfl_2023_cedrictillman": {
+        "recShare": 11.5,
+        "ydShare": 1.9,
+        "tdShare": 7.6,
+        "avgPPA": 15.6,
+        "usageOverall": 73.3,
+        "heightIn": 85.5,
+        "weightLb": 88.5
+      },
+      "nfl_2022_jalentolbert": {
+        "recShare": 86.3,
+        "ydShare": 99.6,
+        "tdShare": 78.2,
+        "avgPPA": 75.6,
+        "usageOverall": 81.7,
+        "heightIn": 85.5,
+        "weightLb": 47.7
+      },
+      "nfl_2021_kadariustoney": {
+        "recShare": 50,
+        "ydShare": 33.2,
+        "tdShare": 30.9,
+        "avgPPA": 57.6,
+        "usageOverall": 84,
+        "heightIn": 40.1,
+        "weightLb": 41.6
+      },
+      "nfl_2022_samoritoure": {
+        "recShare": 48.1,
+        "ydShare": 63,
+        "tdShare": 77.1,
+        "avgPPA": 70.2,
+        "usageOverall": 17.6,
+        "heightIn": 85.5,
+        "weightLb": 37
+      },
+      "nfl_2023_tretucker": {
+        "recShare": 44.7,
+        "ydShare": 31.3,
+        "tdShare": 12.6,
+        "avgPPA": 52.7,
+        "usageOverall": 29.8,
+        "heightIn": 5.7,
+        "weightLb": 23.7
+      },
+      "nfl_2026_jordyntyson": {
+        "recShare": 66,
+        "ydShare": 46.6,
+        "tdShare": 82.1,
+        "avgPPA": 17.6,
+        "usageOverall": 91.2,
+        "heightIn": 71.4,
+        "weightLb": 56.9
+      },
+      "nfl_2019_johnursua": {
+        "recShare": 80.5,
+        "ydShare": 74.4,
+        "tdShare": 79.4,
+        "avgPPA": 26.7,
+        "usageOverall": 95.4,
+        "heightIn": 14.9,
+        "weightLb": 8
+      },
+      "nfl_2018_marquezvaldesscantling": {
+        "recShare": 77.9,
+        "ydShare": 68.3,
+        "tdShare": 40.1,
+        "avgPPA": 13,
+        "usageOverall": 40.5,
+        "heightIn": 98.9,
+        "weightLb": 74
+      },
+      "nfl_2024_devaughnvele": {
+        "recShare": 57.6,
+        "ydShare": 60.7,
+        "tdShare": 26,
+        "avgPPA": 65.3,
+        "usageOverall": 16.8,
+        "heightIn": 98.9,
+        "weightLb": 80.9
+      },
+      "nfl_2021_jaylenwaddle": {
+        "recShare": 1.5,
+        "ydShare": 6.1,
+        "tdShare": 9.9,
+        "avgPPA": 97.7,
+        "usageOverall": 45.4,
+        "heightIn": 14.9,
+        "weightLb": 16
+      },
+      "nfl_2024_devontezwalker": {
+        "recShare": 13.4,
+        "ydShare": 18.7,
+        "tdShare": 46.6,
+        "avgPPA": 24.8,
+        "usageOverall": 68.3,
+        "heightIn": 85.5,
+        "weightLb": 56.9
+      },
+      "nfl_2021_tylanwallace": {
+        "recShare": 83.6,
+        "ydShare": 88.2,
+        "tdShare": 71,
+        "avgPPA": 46.2,
+        "usageOverall": 68.3,
+        "heightIn": 40.1,
+        "weightLb": 37
+      },
+      "nfl_2024_caseywashington": {
+        "recShare": 34.4,
+        "ydShare": 28.6,
+        "tdShare": 17.9,
+        "avgPPA": 78.6,
+        "usageOverall": 16.8,
+        "heightIn": 71.4,
+        "weightLb": 56.9
+      },
+      "nfl_2023_parkerwashington": {
+        "recShare": 23.7,
+        "ydShare": 20.6,
+        "tdShare": 6.9,
+        "avgPPA": 43.5,
+        "usageOverall": 22.9,
+        "heightIn": 14.9,
+        "weightLb": 88.5
+      },
+      "nfl_2018_jameswashington": {
+        "recShare": 57.6,
+        "ydShare": 73.7,
+        "tdShare": 76.3,
+        "avgPPA": 67.2,
+        "usageOverall": 59.5,
+        "heightIn": 55.7,
+        "weightLb": 67.6
+      },
+      "nfl_2024_malikwashington": {
+        "recShare": 99.6,
+        "ydShare": 98.9,
+        "tdShare": 94.3,
+        "avgPPA": 53.8,
+        "usageOverall": 95,
+        "heightIn": 1.5,
+        "weightLb": 42.4
+      },
+      "nfl_2024_tahjwashington": {
+        "recShare": 34.4,
+        "ydShare": 46.9,
+        "tdShare": 29.8,
+        "avgPPA": 97.7,
+        "usageOverall": 19.1,
+        "heightIn": 14.9,
+        "weightLb": 8
+      },
+      "nfl_2025_jordanwatkins": {
+        "recShare": 22.5,
+        "ydShare": 26,
+        "tdShare": 57.3,
+        "avgPPA": 79.8,
+        "usageOverall": 22.9,
+        "heightIn": 26,
+        "weightLb": 37
+      },
+      "nfl_2020_quezwatkins": {
+        "recShare": 51.1,
+        "ydShare": 75.6,
+        "tdShare": 59.5,
+        "avgPPA": 43.1,
+        "usageOverall": 77.9,
+        "heightIn": 71.4,
+        "weightLb": 37
+      },
+      "nfl_2025_lajohntaywester": {
+        "recShare": 45.4,
+        "ydShare": 38.2,
+        "tdShare": 47.3,
+        "avgPPA": 88.5,
+        "usageOverall": 40.5,
+        "heightIn": 26,
+        "weightLb": 1.5
+      },
+      "nfl_2025_rickywhite": {
+        "recShare": 99.6,
+        "ydShare": 97.7,
+        "tdShare": 90.8,
+        "avgPPA": 87.8,
+        "usageOverall": 40.5,
+        "heightIn": 55.7,
+        "weightLb": 37
+      },
+      "nfl_2024_jordanwhittington": {
+        "recShare": 11.8,
+        "ydShare": 5.7,
+        "tdShare": 2.3,
+        "avgPPA": 39.7,
+        "usageOverall": 3.4,
+        "heightIn": 55.7,
+        "weightLb": 59.5
+      },
+      "nfl_2023_dontayvionwicks": {
+        "recShare": 20.6,
+        "ydShare": 25.2,
+        "tdShare": 55,
+        "avgPPA": 0.4,
+        "usageOverall": 77.1,
+        "heightIn": 71.4,
+        "weightLb": 72.1
+      },
+      "nfl_2026_antoniowilliams": {
+        "recShare": 27.1,
+        "ydShare": 17.2,
+        "tdShare": 20.2,
+        "avgPPA": 14.9,
+        "usageOverall": 71.4,
+        "heightIn": 26,
+        "weightLb": 37
+      },
+      "nfl_2026_cjwilliams": {
+        "recShare": 77.1,
+        "ydShare": 64.1,
+        "tdShare": 88.2,
+        "avgPPA": 28.2,
+        "usageOverall": 62.6,
+        "heightIn": 55.7,
+        "weightLb": 67.6
+      },
+      "nfl_2022_jamesonwilliams": {
+        "recShare": 44.3,
+        "ydShare": 75.2,
+        "tdShare": 62.2,
+        "avgPPA": 84.4,
+        "usageOverall": 51.1,
+        "heightIn": 71.4,
+        "weightLb": 28.2
+      },
+      "nfl_2025_kylewilliams": {
+        "recShare": 75.6,
+        "ydShare": 82.1,
+        "tdShare": 85.9,
+        "avgPPA": 94.3,
+        "usageOverall": 47.3,
+        "heightIn": 40.1,
+        "weightLb": 24.4
+      },
+      "nfl_2025_savionwilliams": {
+        "recShare": 30.5,
+        "ydShare": 12.2,
+        "tdShare": 27.9,
+        "avgPPA": 38.9,
+        "usageOverall": 93.5,
+        "heightIn": 98.9,
+        "weightLb": 98.1
+      },
+      "nfl_2021_sethwilliams": {
+        "recShare": 50,
+        "ydShare": 74,
+        "tdShare": 71,
+        "avgPPA": 7.3,
+        "usageOverall": 71.4,
+        "heightIn": 85.5,
+        "weightLb": 81.7
+      },
+      "nfl_2018_cedrickwilson": {
+        "recShare": 85.5,
+        "ydShare": 96.9,
+        "tdShare": 46.6,
+        "avgPPA": 30.9,
+        "usageOverall": 87.4,
+        "heightIn": 85.5,
+        "weightLb": 28.2
+      },
+      "nfl_2022_garrettwilson": {
+        "recShare": 39.7,
+        "ydShare": 32.1,
+        "tdShare": 43.9,
+        "avgPPA": 66.4,
+        "usageOverall": 84,
+        "heightIn": 40.1,
+        "weightLb": 41.6
+      },
+      "nfl_2024_johnnywilson": {
+        "recShare": 19.1,
+        "ydShare": 17.6,
+        "tdShare": 8,
+        "avgPPA": 70.6,
+        "usageOverall": 55.3,
+        "heightIn": 100,
+        "weightLb": 100
+      },
+      "nfl_2023_michaelwilson": {
+        "recShare": 4.2,
+        "ydShare": 9.2,
+        "tdShare": 45.8,
+        "avgPPA": 76.7,
+        "usageOverall": 35.5,
+        "heightIn": 71.4,
+        "weightLb": 74
+      },
+      "nfl_2024_romanwilson": {
+        "recShare": 31.3,
+        "ydShare": 47.7,
+        "tdShare": 97.7,
+        "avgPPA": 98.5,
+        "usageOverall": 6.1,
+        "heightIn": 40.1,
+        "weightLb": 40.1
+      },
+      "nfl_2018_javonwims": {
+        "recShare": 67.9,
+        "ydShare": 60.3,
+        "tdShare": 58.4,
+        "avgPPA": 72.1,
+        "usageOverall": 13.4,
+        "heightIn": 94.7,
+        "weightLb": 88.5
+      },
+      "nfl_2019_juwannwinfree": {
+        "recShare": 5,
+        "ydShare": 3.4,
+        "tdShare": 10.3,
+        "avgPPA": 20.6,
+        "usageOverall": 17.6,
+        "heightIn": 85.5,
+        "weightLb": 80.9
+      },
+      "nfl_2024_xavierworthy": {
+        "recShare": 61.8,
+        "ydShare": 50,
+        "tdShare": 26,
+        "avgPPA": 21,
+        "usageOverall": 43.9,
+        "heightIn": 55.7,
+        "weightLb": 4.6
+      },
+      "nfl_2026_colbieyoung": {
+        "recShare": 3.1,
+        "ydShare": 4.2,
+        "tdShare": 2.3,
+        "avgPPA": 38.2,
+        "usageOverall": 2.7,
+        "heightIn": 85.5,
+        "weightLb": 88.5
+      },
+      "2025_4244849": {
+        "recShare": 48.5,
+        "ydShare": 46.6,
+        "tdShare": 9.9,
+        "avgPPA": 40.5,
+        "usageOverall": 29.8,
+        "heightIn": 26,
+        "weightLb": 56.9
+      },
+      "2025_4429125": {
+        "recShare": 1.1,
+        "ydShare": 0.8,
+        "tdShare": 11.1,
+        "avgPPA": 29.4,
+        "usageOverall": 2.3,
+        "heightIn": 26,
+        "weightLb": 37.4
+      },
+      "2025_4429173": {
+        "recShare": 10.7,
+        "ydShare": 15.6,
+        "tdShare": 13.4,
+        "avgPPA": 11.5,
+        "usageOverall": 10.7,
+        "heightIn": 14.9,
+        "weightLb": 8
+      },
+      "2025_4429967": {
+        "recShare": 48.1,
+        "ydShare": 41.2,
+        "tdShare": 13,
+        "avgPPA": 24.8,
+        "usageOverall": 75.6,
+        "heightIn": 26,
+        "weightLb": 5
+      },
+      "2025_4430185": {
+        "recShare": 54.6,
+        "ydShare": 35.5,
+        "tdShare": 11.1,
+        "avgPPA": 1.5,
+        "usageOverall": 60.3,
+        "heightIn": 14.9,
+        "weightLb": 37
+      },
+      "2025_4430827": {
+        "recShare": 7.6,
+        "ydShare": 11.1,
+        "tdShare": 28.2,
+        "avgPPA": 67.9,
+        "usageOverall": 1.5,
+        "heightIn": 98.9,
+        "weightLb": 98.1
+      },
+      "2025_4430903": {
+        "recShare": 15.6,
+        "ydShare": 12.2,
+        "tdShare": 9.9,
+        "avgPPA": 6.1,
+        "usageOverall": 15.3,
+        "heightIn": 40.1,
+        "weightLb": 81.7
+      },
+      "2025_4431002": {
+        "recShare": 31.7,
+        "ydShare": 18.7,
+        "tdShare": 11.5,
+        "avgPPA": 4.2,
+        "usageOverall": 26,
+        "heightIn": 40.1,
+        "weightLb": 37.4
+      },
+      "2025_4431197": {
+        "recShare": 14.5,
+        "ydShare": 16.8,
+        "tdShare": 11.1,
+        "avgPPA": 3.4,
+        "usageOverall": 35.5,
+        "heightIn": 71.4,
+        "weightLb": 37
+      },
+      "2025_4431236": {
+        "recShare": 9.5,
+        "ydShare": 24,
+        "tdShare": 9.2,
+        "avgPPA": 9.9,
+        "usageOverall": 11.5,
+        "heightIn": 40.1,
+        "weightLb": 17.2
+      },
+      "2025_4431273": {
+        "recShare": 41.6,
+        "ydShare": 17.9,
+        "tdShare": 34,
+        "avgPPA": 7.6,
+        "usageOverall": 51.1,
+        "heightIn": 71.4,
+        "weightLb": 82.1
+      },
+      "2025_4431505": {
+        "recShare": 17.9,
+        "ydShare": 25.2,
+        "tdShare": 7.3,
+        "avgPPA": 0.8,
+        "usageOverall": 32.4,
+        "heightIn": 55.7,
+        "weightLb": 37
+      },
+      "2025_4431514": {
+        "recShare": 8.4,
+        "ydShare": 7.6,
+        "tdShare": 28.2,
+        "avgPPA": 65.3,
+        "usageOverall": 2.3,
+        "heightIn": 71.4,
+        "weightLb": 80.9
+      },
+      "2025_4431632": {
+        "recShare": 35.5,
+        "ydShare": 5,
+        "tdShare": 0.4,
+        "avgPPA": 0.8,
+        "usageOverall": 3.8,
+        "heightIn": 26,
+        "weightLb": 25.2
+      },
+      "2025_4431651": {
+        "recShare": 32.8,
+        "ydShare": 25.2,
+        "tdShare": 7.3,
+        "avgPPA": 9.9,
+        "usageOverall": 40.5,
+        "heightIn": 5.7,
+        "weightLb": 3.1
+      },
+      "2025_4432506": {
+        "recShare": 0.8,
+        "ydShare": 1.9,
+        "tdShare": 4.6,
+        "avgPPA": 68.3,
+        "usageOverall": 2.3,
+        "heightIn": 85.5,
+        "weightLb": 72.1
+      },
+      "2025_4432694": {
+        "recShare": 1.1,
+        "ydShare": 0.8,
+        "tdShare": 0.4,
+        "avgPPA": 4.2,
+        "usageOverall": 1.9,
+        "heightIn": 14.9,
+        "weightLb": 23.7
+      },
+      "2025_4432784": {
+        "recShare": 4.2,
+        "ydShare": 5,
+        "tdShare": 11.1,
+        "avgPPA": 1.5,
+        "usageOverall": 10.7,
+        "heightIn": 55.7,
+        "weightLb": 88.5
+      },
+      "2025_4433855": {
+        "recShare": 0.8,
+        "ydShare": 1.5,
+        "tdShare": 4.6,
+        "avgPPA": 3.4,
+        "usageOverall": 74.8,
+        "heightIn": 26,
+        "weightLb": 16
+      },
+      "2025_4433901": {
+        "recShare": 50.8,
+        "ydShare": 72.9,
+        "tdShare": 26,
+        "avgPPA": 6.1,
+        "usageOverall": 85.9,
+        "heightIn": 40.1,
+        "weightLb": 82.1
+      },
+      "2025_4433906": {
+        "recShare": 17.6,
+        "ydShare": 9.5,
+        "tdShare": 6.9,
+        "avgPPA": 8.4,
+        "usageOverall": 4.6,
+        "heightIn": 14.9,
+        "weightLb": 25.2
+      },
+      "2025_4565181": {
+        "recShare": 4.2,
+        "ydShare": 1.9,
+        "tdShare": 7.3,
+        "avgPPA": 13.7,
+        "usageOverall": 2.3,
+        "heightIn": 71.4,
+        "weightLb": 67.6
+      },
+      "2025_4567033": {
+        "recShare": 1.9,
+        "ydShare": 7.6,
+        "tdShare": 11.1,
+        "avgPPA": 22.5,
+        "usageOverall": 2.3,
+        "heightIn": 71.4,
+        "weightLb": 48.1
+      },
+      "2025_4568687": {
+        "recShare": 5,
+        "ydShare": 14.1,
+        "tdShare": 11.1,
+        "avgPPA": 13.7,
+        "usageOverall": 2.3,
+        "heightIn": 98.9,
+        "weightLb": 37
+      },
+      "2025_4569001": {
+        "recShare": 23.3,
+        "ydShare": 14.1,
+        "tdShare": 11.1,
+        "avgPPA": 11.5,
+        "usageOverall": 19.1,
+        "heightIn": 14.9,
+        "weightLb": 24.4
+      },
+      "2025_4570132": {
+        "recShare": 75.2,
+        "ydShare": 52.3,
+        "tdShare": 13.4,
+        "avgPPA": 32.4,
+        "usageOverall": 45.4,
+        "heightIn": 26,
+        "weightLb": 15.3
+      },
+      "2025_4570507": {
+        "recShare": 91.2,
+        "ydShare": 90.5,
+        "tdShare": 60.7,
+        "avgPPA": 2.7,
+        "usageOverall": 69.8,
+        "heightIn": 14.9,
+        "weightLb": 25.2
+      },
+      "2025_4575862": {
+        "recShare": 48.9,
+        "ydShare": 38.5,
+        "tdShare": 11.1,
+        "avgPPA": 6.1,
+        "usageOverall": 40.5,
+        "heightIn": 14.9,
+        "weightLb": 24.4
+      },
+      "2025_4592573": {
+        "recShare": 75.2,
+        "ydShare": 34,
+        "tdShare": 6.1,
+        "avgPPA": 3.4,
+        "usageOverall": 53.1,
+        "heightIn": 40.1,
+        "weightLb": 67.6
+      },
+      "2025_4592835": {
+        "recShare": 8.4,
+        "ydShare": 26,
+        "tdShare": 17.9,
+        "avgPPA": 34.7,
+        "usageOverall": 7.6,
+        "heightIn": 94.7,
+        "weightLb": 80.9
+      },
+      "2025_4594319": {
+        "recShare": 35.5,
+        "ydShare": 41.2,
+        "tdShare": 60.7,
+        "avgPPA": 0.8,
+        "usageOverall": 53.4,
+        "heightIn": 55.7,
+        "weightLb": 47.7
+      },
+      "2025_4594447": {
+        "recShare": 9.5,
+        "ydShare": 6.5,
+        "tdShare": 0.4,
+        "avgPPA": 3.4,
+        "usageOverall": 14.1,
+        "heightIn": 71.4,
+        "weightLb": 80.9
+      },
+      "2025_4596010": {
+        "recShare": 29.4,
+        "ydShare": 25.2,
+        "tdShare": 28.2,
+        "avgPPA": 23.7,
+        "usageOverall": 37.8,
+        "heightIn": 40.1,
+        "weightLb": 47.7
+      },
+      "2025_4596347": {
+        "recShare": 36.3,
+        "ydShare": 45.4,
+        "tdShare": 49.2,
+        "avgPPA": 10.3,
+        "usageOverall": 35.5,
+        "heightIn": 98.9,
+        "weightLb": 88.5
+      },
+      "2025_4597248": {
+        "recShare": 34.4,
+        "ydShare": 48.1,
+        "tdShare": 26,
+        "avgPPA": 2.7,
+        "usageOverall": 18.3,
+        "heightIn": 5.7,
+        "weightLb": 8.8
+      },
+      "2025_4600418": {
+        "recShare": 27.9,
+        "ydShare": 27.1,
+        "tdShare": 29,
+        "avgPPA": 9.9,
+        "usageOverall": 26,
+        "heightIn": 94.7,
+        "weightLb": 80.9
+      },
+      "2025_4602185": {
+        "recShare": 60.7,
+        "ydShare": 76.7,
+        "tdShare": 71,
+        "avgPPA": 40.8,
+        "usageOverall": 71.4,
+        "heightIn": 85.5,
+        "weightLb": 67.6
+      },
+      "2025_4602785": {
+        "recShare": 15.3,
+        "ydShare": 1.9,
+        "tdShare": 4.6,
+        "avgPPA": 10.3,
+        "usageOverall": 4.2,
+        "heightIn": 14.9,
+        "weightLb": 14.5
+      },
+      "2025_4602895": {
+        "recShare": 0.4,
+        "ydShare": 0.8,
+        "tdShare": 0.4,
+        "avgPPA": 8.4,
+        "usageOverall": 2.3,
+        "heightIn": 85.5,
+        "weightLb": 80.9
+      },
+      "2025_4602966": {
+        "recShare": 12.2,
+        "ydShare": 11.8,
+        "tdShare": 8.4,
+        "avgPPA": 4.2,
+        "usageOverall": 3.8,
+        "heightIn": 40.1,
+        "weightLb": 23.7
+      },
+      "2025_4603746": {
+        "recShare": 23.3,
+        "ydShare": 13.4,
+        "tdShare": 21.8,
+        "avgPPA": 68.3,
+        "usageOverall": 18.3,
+        "heightIn": 5.7,
+        "weightLb": 3.1
+      },
+      "2025_4604004": {
+        "recShare": 19.5,
+        "ydShare": 19.8,
+        "tdShare": 5.7,
+        "avgPPA": 32.1,
+        "usageOverall": 19.1,
+        "heightIn": 40.1,
+        "weightLb": 47.7
+      },
+      "2025_4605951": {
+        "recShare": 14.5,
+        "ydShare": 9.2,
+        "tdShare": 31.7,
+        "avgPPA": 41.6,
+        "usageOverall": 24.8,
+        "heightIn": 71.4,
+        "weightLb": 67.6
+      },
+      "2025_4608533": {
+        "recShare": 6.5,
+        "ydShare": 3.4,
+        "tdShare": 6.1,
+        "avgPPA": 1.5,
+        "usageOverall": 11.5,
+        "heightIn": 55.7,
+        "weightLb": 37
+      },
+      "2025_4612246": {
+        "recShare": 11.5,
+        "ydShare": 6.1,
+        "tdShare": 18.7,
+        "avgPPA": 24.4,
+        "usageOverall": 6.1,
+        "heightIn": 14.9,
+        "weightLb": 37
+      },
+      "2025_4612411": {
+        "recShare": 5.3,
+        "ydShare": 3.8,
+        "tdShare": 3.1,
+        "avgPPA": 50.8,
+        "usageOverall": 2.7,
+        "heightIn": 40.1,
+        "weightLb": 42.4
+      },
+      "2025_4613132": {
+        "recShare": 0.8,
+        "ydShare": 1.9,
+        "tdShare": 8.8,
+        "avgPPA": 5,
+        "usageOverall": 2.3,
+        "heightIn": 71.4,
+        "weightLb": 67.6
+      },
+      "2025_4635009": {
+        "recShare": 7.6,
+        "ydShare": 14.5,
+        "tdShare": 16.4,
+        "avgPPA": 34.7,
+        "usageOverall": 5,
+        "heightIn": 85.5,
+        "weightLb": 82.1
+      },
+      "2025_4682509": {
+        "recShare": 10.3,
+        "ydShare": 12.2,
+        "tdShare": 4.6,
+        "avgPPA": 1.5,
+        "usageOverall": 19.5,
+        "heightIn": 98.9,
+        "weightLb": 67.6
+      },
+      "2025_4682648": {
+        "recShare": 22.5,
+        "ydShare": 27.1,
+        "tdShare": 26,
+        "avgPPA": 31.7,
+        "usageOverall": 24.8,
+        "heightIn": 94.7,
+        "weightLb": 94.7
+      },
+      "2025_4682748": {
+        "recShare": 0.4,
+        "ydShare": 0.8,
+        "tdShare": 11.1,
+        "avgPPA": 68.3,
+        "usageOverall": 0.4,
+        "heightIn": 40.1,
+        "weightLb": 23.7
+      },
+      "2025_4682761": {
+        "recShare": 1.1,
+        "ydShare": 0.8,
+        "tdShare": 6.9,
+        "avgPPA": 53.8,
+        "usageOverall": 1.1,
+        "heightIn": 14.9,
+        "weightLb": 40.1
+      },
+      "2025_4683111": {
+        "recShare": 44.3,
+        "ydShare": 55.3,
+        "tdShare": 16.4,
+        "avgPPA": 13.4,
+        "usageOverall": 56.9,
+        "heightIn": 94.7,
+        "weightLb": 47.7
+      },
+      "2025_4683114": {
+        "recShare": 9.5,
+        "ydShare": 5,
+        "tdShare": 40.1,
+        "avgPPA": 16.8,
+        "usageOverall": 4.2,
+        "heightIn": 14.9,
+        "weightLb": 37
+      },
+      "2025_4683151": {
+        "recShare": 48.9,
+        "ydShare": 26.3,
+        "tdShare": 38.2,
+        "avgPPA": 2.7,
+        "usageOverall": 48.5,
+        "heightIn": 5.7,
+        "weightLb": 28.2
+      },
+      "2025_4683153": {
+        "recShare": 92.7,
+        "ydShare": 87.8,
+        "tdShare": 88.9,
+        "avgPPA": 29.4,
+        "usageOverall": 98.1,
+        "heightIn": 40.1,
+        "weightLb": 23.7
+      },
+      "2025_4683159": {
+        "recShare": 89.3,
+        "ydShare": 71,
+        "tdShare": 4.6,
+        "avgPPA": 19.8,
+        "usageOverall": 90.1,
+        "heightIn": 26,
+        "weightLb": 37
+      },
+      "2025_4683227": {
+        "recShare": 15.6,
+        "ydShare": 14.1,
+        "tdShare": 9.9,
+        "avgPPA": 19.8,
+        "usageOverall": 29.8,
+        "heightIn": 85.5,
+        "weightLb": 67.6
+      },
+      "2025_4683237": {
+        "recShare": 71.4,
+        "ydShare": 63,
+        "tdShare": 18.7,
+        "avgPPA": 3.4,
+        "usageOverall": 80.5,
+        "heightIn": 40.1,
+        "weightLb": 49.6
+      },
+      "2025_4683425": {
+        "recShare": 4.2,
+        "ydShare": 3.8,
+        "tdShare": 18.7,
+        "avgPPA": 4.2,
+        "usageOverall": 3.4,
+        "heightIn": 40.1,
+        "weightLb": 37
+      },
+      "2025_4683461": {
+        "recShare": 14.9,
+        "ydShare": 11.8,
+        "tdShare": 11.1,
+        "avgPPA": 42.7,
+        "usageOverall": 2.3,
+        "heightIn": 14.9,
+        "weightLb": 25.2
+      },
+      "2025_4683531": {
+        "recShare": 98.5,
+        "ydShare": 76.3,
+        "tdShare": 78.2,
+        "avgPPA": 1.5,
+        "usageOverall": 84,
+        "heightIn": 1.5,
+        "weightLb": 17.2
+      },
+      "2025_4683543": {
+        "recShare": 21.8,
+        "ydShare": 14.1,
+        "tdShare": 0.4,
+        "avgPPA": 18.3,
+        "usageOverall": 16,
+        "heightIn": 40.1,
+        "weightLb": 14.5
+      },
+      "2025_4683886": {
+        "recShare": 15.6,
+        "ydShare": 15.6,
+        "tdShare": 4.6,
+        "avgPPA": 26.3,
+        "usageOverall": 4.6,
+        "heightIn": 85.5,
+        "weightLb": 93.9
+      },
+      "2025_4684173": {
+        "recShare": 67.9,
+        "ydShare": 45,
+        "tdShare": 36.6,
+        "avgPPA": 63.4,
+        "usageOverall": 47.3,
+        "heightIn": 71.4,
+        "weightLb": 16
+      },
+      "2025_4685110": {
+        "recShare": 55,
+        "ydShare": 69.1,
+        "tdShare": 64.5,
+        "avgPPA": 34,
+        "usageOverall": 40.5,
+        "heightIn": 85.5,
+        "weightLb": 28.6
+      },
+      "2025_4685261": {
+        "recShare": 32.8,
+        "ydShare": 34,
+        "tdShare": 31.7,
+        "avgPPA": 24,
+        "usageOverall": 80.9,
+        "heightIn": 55.7,
+        "weightLb": 59.5
+      },
+      "2025_4685283": {
+        "recShare": 0.4,
+        "ydShare": 0.8,
+        "tdShare": 9.9,
+        "avgPPA": 80.5,
+        "usageOverall": 2.3,
+        "heightIn": 14.9,
+        "weightLb": 56.9
+      },
+      "2025_4685290": {
+        "recShare": 1.1,
+        "ydShare": 6.1,
+        "tdShare": 11.1,
+        "avgPPA": 34,
+        "usageOverall": 1.1,
+        "heightIn": 5.7,
+        "weightLb": 8.8
+      },
+      "2025_4685307": {
+        "recShare": 84,
+        "ydShare": 70.2,
+        "tdShare": 6.1,
+        "avgPPA": 20.2,
+        "usageOverall": 47.3,
+        "heightIn": 26,
+        "weightLb": 14.5
+      },
+      "2025_4685381": {
+        "recShare": 46.9,
+        "ydShare": 66.4,
+        "tdShare": 30.9,
+        "avgPPA": 12.2,
+        "usageOverall": 47.3,
+        "heightIn": 55.7,
+        "weightLb": 37
+      },
+      "2025_4685383": {
+        "recShare": 9.5,
+        "ydShare": 6.1,
+        "tdShare": 42.4,
+        "avgPPA": 77.9,
+        "usageOverall": 4.2,
+        "heightIn": 94.7,
+        "weightLb": 88.5
+      },
+      "2025_4685409": {
+        "recShare": 38.9,
+        "ydShare": 27.5,
+        "tdShare": 37.4,
+        "avgPPA": 23.7,
+        "usageOverall": 65.3,
+        "heightIn": 55.7,
+        "weightLb": 56.9
+      },
+      "2025_4685416": {
+        "recShare": 18.3,
+        "ydShare": 42.7,
+        "tdShare": 71,
+        "avgPPA": 13.7,
+        "usageOverall": 51.1,
+        "heightIn": 85.5,
+        "weightLb": 42.4
+      },
+      "2025_4685424": {
+        "recShare": 16.8,
+        "ydShare": 14.1,
+        "tdShare": 30.9,
+        "avgPPA": 3.8,
+        "usageOverall": 19.1,
+        "heightIn": 85.5,
+        "weightLb": 80.9
+      },
+      "2025_4685441": {
+        "recShare": 59.9,
+        "ydShare": 36.3,
+        "tdShare": 26,
+        "avgPPA": 12.6,
+        "usageOverall": 31.7,
+        "heightIn": 40.1,
+        "weightLb": 67.6
+      },
+      "2025_4685516": {
+        "recShare": 21.8,
+        "ydShare": 30.2,
+        "tdShare": 34,
+        "avgPPA": 74.8,
+        "usageOverall": 4.6,
+        "heightIn": 40.1,
+        "weightLb": 67.6
+      },
+      "2025_4685553": {
+        "recShare": 60.7,
+        "ydShare": 84.4,
+        "tdShare": 59.5,
+        "avgPPA": 63,
+        "usageOverall": 42,
+        "heightIn": 5.7,
+        "weightLb": 3.1
+      },
+      "2025_4685601": {
+        "recShare": 3.1,
+        "ydShare": 2.3,
+        "tdShare": 12.2,
+        "avgPPA": 3.4,
+        "usageOverall": 6.9,
+        "heightIn": 71.4,
+        "weightLb": 56.9
+      },
+      "2025_4685704": {
+        "recShare": 0.4,
+        "ydShare": 1.9,
+        "tdShare": 34,
+        "avgPPA": 44.7,
+        "usageOverall": 1.1,
+        "heightIn": 55.7,
+        "weightLb": 37
+      },
+      "2025_4686093": {
+        "recShare": 9.9,
+        "ydShare": 3.8,
+        "tdShare": 11.5,
+        "avgPPA": 28.2,
+        "usageOverall": 2.3,
+        "heightIn": 94.7,
+        "weightLb": 58.4
+      },
+      "2025_4687189": {
+        "recShare": 50,
+        "ydShare": 55.3,
+        "tdShare": 14.9,
+        "avgPPA": 27.5,
+        "usageOverall": 43.9,
+        "heightIn": 40.1,
+        "weightLb": 41.6
+      },
+      "2025_4690298": {
+        "recShare": 3.4,
+        "ydShare": 1.5,
+        "tdShare": 11.1,
+        "avgPPA": 5,
+        "usageOverall": 6.9,
+        "heightIn": 55.7,
+        "weightLb": 47.7
+      },
+      "2025_4690461": {
+        "recShare": 12.2,
+        "ydShare": 11.1,
+        "tdShare": 0.4,
+        "avgPPA": 8,
+        "usageOverall": 3.4,
+        "heightIn": 71.4,
+        "weightLb": 16.4
+      },
+      "2025_4691138": {
+        "recShare": 6.5,
+        "ydShare": 6.9,
+        "tdShare": 0.4,
+        "avgPPA": 27.5,
+        "usageOverall": 31.7,
+        "heightIn": 1.5,
+        "weightLb": 28.2
+      },
+      "2025_4692796": {
+        "recShare": 10.3,
+        "ydShare": 16,
+        "tdShare": 21.8,
+        "avgPPA": 33.2,
+        "usageOverall": 2.3,
+        "heightIn": 55.7,
+        "weightLb": 48.1
+      },
+      "2025_4693817": {
+        "recShare": 5.3,
+        "ydShare": 5,
+        "tdShare": 21.8,
+        "avgPPA": 1.5,
+        "usageOverall": 3.4,
+        "heightIn": 40.1,
+        "weightLb": 47.7
+      },
+      "2025_4696972": {
+        "recShare": 5.3,
+        "ydShare": 16,
+        "tdShare": 42.4,
+        "avgPPA": 3.8,
+        "usageOverall": 3.8,
+        "heightIn": 55.7,
+        "weightLb": 37.4
+      },
+      "2025_4697844": {
+        "recShare": 18.3,
+        "ydShare": 32.8,
+        "tdShare": 42.4,
+        "avgPPA": 3.1,
+        "usageOverall": 19.5,
+        "heightIn": 71.4,
+        "weightLb": 72.1
+      },
+      "2025_4698597": {
+        "recShare": 29,
+        "ydShare": 17.9,
+        "tdShare": 4.6,
+        "avgPPA": 1.5,
+        "usageOverall": 50,
+        "heightIn": 26,
+        "weightLb": 23.7
+      },
+      "2025_4699354": {
+        "recShare": 27.1,
+        "ydShare": 26,
+        "tdShare": 14.5,
+        "avgPPA": 43.9,
+        "usageOverall": 27.9,
+        "heightIn": 55.7,
+        "weightLb": 47.7
+      },
+      "2025_4701951": {
+        "recShare": 37,
+        "ydShare": 42.7,
+        "tdShare": 9.9,
+        "avgPPA": 12.6,
+        "usageOverall": 56.9,
+        "heightIn": 40.1,
+        "weightLb": 28.2
+      },
+      "2025_4702830": {
+        "recShare": 0.4,
+        "ydShare": 1.9,
+        "tdShare": 7.3,
+        "avgPPA": 38.2,
+        "usageOverall": 4.6,
+        "heightIn": 71.4,
+        "weightLb": 37
+      },
+      "2025_4702908": {
+        "recShare": 0.4,
+        "ydShare": 0.8,
+        "tdShare": 1.5,
+        "avgPPA": 13.7,
+        "usageOverall": 1.9,
+        "heightIn": 40.1,
+        "weightLb": 37
+      },
+      "2025_4705557": {
+        "recShare": 0.4,
+        "ydShare": 0.8,
+        "tdShare": 4.6,
+        "avgPPA": 59.2,
+        "usageOverall": 1.1,
+        "heightIn": 0,
+        "weightLb": 1.1
+      },
+      "2025_4705595": {
+        "recShare": 8.4,
+        "ydShare": 5,
+        "tdShare": 11.1,
+        "avgPPA": 11.5,
+        "usageOverall": 22.9,
+        "heightIn": 5.7,
+        "weightLb": 23.7
+      },
+      "2025_4705859": {
+        "recShare": 40.8,
+        "ydShare": 17.2,
+        "tdShare": 13.4,
+        "avgPPA": 16,
+        "usageOverall": 47.3,
+        "heightIn": 1.5,
+        "weightLb": 23.7
+      },
+      "2025_4708621": {
+        "recShare": 32.8,
+        "ydShare": 39.7,
+        "tdShare": 28.2,
+        "avgPPA": 13,
+        "usageOverall": 58.8,
+        "heightIn": 26,
+        "weightLb": 37
+      },
+      "2025_4709669": {
+        "recShare": 23.3,
+        "ydShare": 26,
+        "tdShare": 7.3,
+        "avgPPA": 63.7,
+        "usageOverall": 3.8,
+        "heightIn": 85.5,
+        "weightLb": 67.6
+      },
+      "2025_4709678": {
+        "recShare": 19.5,
+        "ydShare": 26.3,
+        "tdShare": 62.2,
+        "avgPPA": 44.7,
+        "usageOverall": 6.1,
+        "heightIn": 14.9,
+        "weightLb": 3.1
+      },
+      "2025_4710344": {
+        "recShare": 5.3,
+        "ydShare": 11.8,
+        "tdShare": 26,
+        "avgPPA": 9.9,
+        "usageOverall": 4.2,
+        "heightIn": 55.7,
+        "weightLb": 37
+      },
+      "2025_4710714": {
+        "recShare": 20.6,
+        "ydShare": 16.8,
+        "tdShare": 37.4,
+        "avgPPA": 54.2,
+        "usageOverall": 9.2,
+        "heightIn": 71.4,
+        "weightLb": 56.9
+      },
+      "2025_4710843": {
+        "recShare": 17.6,
+        "ydShare": 11.8,
+        "tdShare": 14.9,
+        "avgPPA": 0,
+        "usageOverall": 51.1,
+        "heightIn": 55.7,
+        "weightLb": 37
+      },
+      "2025_4712579": {
+        "recShare": 3.4,
+        "ydShare": 0.8,
+        "tdShare": 8,
+        "avgPPA": 1.9,
+        "usageOverall": 6.1,
+        "heightIn": 55.7,
+        "weightLb": 80.9
+      },
+      "2025_4713277": {
+        "recShare": 23.7,
+        "ydShare": 25.2,
+        "tdShare": 11.1,
+        "avgPPA": 13,
+        "usageOverall": 33.6,
+        "heightIn": 26,
+        "weightLb": 14.5
+      },
+      "2025_4714341": {
+        "recShare": 0.8,
+        "ydShare": 1.5,
+        "tdShare": 30.9,
+        "avgPPA": 92.4,
+        "usageOverall": 5,
+        "heightIn": 14.9,
+        "weightLb": 25.2
+      },
+      "2025_4714388": {
+        "recShare": 45.4,
+        "ydShare": 53.1,
+        "tdShare": 82.1,
+        "avgPPA": 13,
+        "usageOverall": 55.3,
+        "heightIn": 94.7,
+        "weightLb": 80.9
+      },
+      "2025_4717430": {
+        "recShare": 5.3,
+        "ydShare": 14.5,
+        "tdShare": 8.8,
+        "avgPPA": 11.5,
+        "usageOverall": 19.5,
+        "heightIn": 85.5,
+        "weightLb": 82.1
+      },
+      "2025_4718457": {
+        "recShare": 0.4,
+        "ydShare": 0.8,
+        "tdShare": 15.6,
+        "avgPPA": 40.1,
+        "usageOverall": 0.4,
+        "heightIn": 98.9,
+        "weightLb": 67.6
+      },
+      "2025_4723820": {
+        "recShare": 64.9,
+        "ydShare": 50,
+        "tdShare": 51.1,
+        "avgPPA": 58.8,
+        "usageOverall": 31.7,
+        "heightIn": 40.1,
+        "weightLb": 57.3
+      },
+      "2025_4726152": {
+        "recShare": 27.9,
+        "ydShare": 30.2,
+        "tdShare": 13.4,
+        "avgPPA": 11.5,
+        "usageOverall": 27.9,
+        "heightIn": 5.7,
+        "weightLb": 3.1
+      },
+      "2025_4804878": {
+        "recShare": 48.1,
+        "ydShare": 61.8,
+        "tdShare": 26.7,
+        "avgPPA": 21.4,
+        "usageOverall": 69.8,
+        "heightIn": 55.7,
+        "weightLb": 47.7
+      },
+      "2025_4804883": {
+        "recShare": 0.4,
+        "ydShare": 1.5,
+        "tdShare": 4.6,
+        "avgPPA": 1.5,
+        "usageOverall": 2.3,
+        "heightIn": 55.7,
+        "weightLb": 14.5
+      },
+      "2025_4808759": {
+        "recShare": 63,
+        "ydShare": 84.4,
+        "tdShare": 98.9,
+        "avgPPA": 59.9,
+        "usageOverall": 55.3,
+        "heightIn": 71.4,
+        "weightLb": 56.9
+      },
+      "2025_4814930": {
+        "recShare": 80.9,
+        "ydShare": 63,
+        "tdShare": 11.5,
+        "avgPPA": 44.7,
+        "usageOverall": 60.7,
+        "heightIn": 26,
+        "weightLb": 23.7
+      },
+      "2025_4819228": {
+        "recShare": 18.3,
+        "ydShare": 17.2,
+        "tdShare": 13.4,
+        "avgPPA": 28.2,
+        "usageOverall": 3.4,
+        "heightIn": 55.7,
+        "weightLb": 68.7
+      },
+      "2025_4826505": {
+        "recShare": 12.2,
+        "ydShare": 9.2,
+        "tdShare": 14.1,
+        "avgPPA": 12.2,
+        "usageOverall": 4.2,
+        "heightIn": 71.4,
+        "weightLb": 80.9
+      },
+      "2025_4831976": {
+        "recShare": 15.6,
+        "ydShare": 19.8,
+        "tdShare": 63.4,
+        "avgPPA": 5.3,
+        "usageOverall": 26,
+        "heightIn": 40.1,
+        "weightLb": 67.6
+      },
+      "2025_4832800": {
+        "recShare": 66,
+        "ydShare": 61.8,
+        "tdShare": 85.5,
+        "avgPPA": 32.8,
+        "usageOverall": 84,
+        "heightIn": 94.7,
+        "weightLb": 74
+      },
+      "2025_4832804": {
+        "recShare": 26,
+        "ydShare": 24.4,
+        "tdShare": 37.8,
+        "avgPPA": 21.4,
+        "usageOverall": 45.4,
+        "heightIn": 40.1,
+        "weightLb": 37
+      },
+      "2025_4833073": {
+        "recShare": 1.5,
+        "ydShare": 1.9,
+        "tdShare": 0.4,
+        "avgPPA": 3.1,
+        "usageOverall": 10.7,
+        "heightIn": 26,
+        "weightLb": 37
+      },
+      "2025_4834817": {
+        "recShare": 9.5,
+        "ydShare": 17.6,
+        "tdShare": 19.1,
+        "avgPPA": 19.8,
+        "usageOverall": 25.6,
+        "heightIn": 55.7,
+        "weightLb": 23.7
+      },
+      "2025_4837193": {
+        "recShare": 19.5,
+        "ydShare": 17.2,
+        "tdShare": 37.8,
+        "avgPPA": 53.8,
+        "usageOverall": 22.9,
+        "heightIn": 55.7,
+        "weightLb": 1.1
+      },
+      "2025_4837194": {
+        "recShare": 12.2,
+        "ydShare": 7.6,
+        "tdShare": 1.5,
+        "avgPPA": 5.7,
+        "usageOverall": 2.3,
+        "heightIn": 40.1,
+        "weightLb": 47.7
+      },
+      "2025_4837200": {
+        "recShare": 91.6,
+        "ydShare": 79.8,
+        "tdShare": 82.1,
+        "avgPPA": 24.4,
+        "usageOverall": 81.7,
+        "heightIn": 1.5,
+        "weightLb": 16
+      },
+      "2025_4837269": {
+        "recShare": 16.8,
+        "ydShare": 12.2,
+        "tdShare": 4.6,
+        "avgPPA": 36.6,
+        "usageOverall": 2.3,
+        "heightIn": 5.7,
+        "weightLb": 8
+      },
+      "2025_4838549": {
+        "recShare": 60.7,
+        "ydShare": 92.7,
+        "tdShare": 76.7,
+        "avgPPA": 14.5,
+        "usageOverall": 53.4,
+        "heightIn": 5.7,
+        "weightLb": 3.1
+      },
+      "2025_4838556": {
+        "recShare": 0.8,
+        "ydShare": 1.9,
+        "tdShare": 11.1,
+        "avgPPA": 4.6,
+        "usageOverall": 2.3,
+        "heightIn": 98.9,
+        "weightLb": 57.3
+      },
+      "2025_4869132": {
+        "recShare": 27.1,
+        "ydShare": 19.1,
+        "tdShare": 20.2,
+        "avgPPA": 9.9,
+        "usageOverall": 29.8,
+        "heightIn": 85.5,
+        "weightLb": 37
+      },
+      "2025_4869340": {
+        "recShare": 15.6,
+        "ydShare": 14.1,
+        "tdShare": 12.6,
+        "avgPPA": 10.3,
+        "usageOverall": 6.9,
+        "heightIn": 26,
+        "weightLb": 41.6
+      },
+      "2025_4869422": {
+        "recShare": 68.3,
+        "ydShare": 65.6,
+        "tdShare": 21.8,
+        "avgPPA": 20.6,
+        "usageOverall": 77.1,
+        "heightIn": 85.5,
+        "weightLb": 80.9
+      },
+      "2025_4869443": {
+        "recShare": 16.8,
+        "ydShare": 25.2,
+        "tdShare": 18.7,
+        "avgPPA": 2.7,
+        "usageOverall": 40.5,
+        "heightIn": 5.7,
+        "weightLb": 14.5
+      },
+      "2025_4869497": {
+        "recShare": 26,
+        "ydShare": 24.4,
+        "tdShare": 21.8,
+        "avgPPA": 6.9,
+        "usageOverall": 2.3,
+        "heightIn": 94.7,
+        "weightLb": 67.6
+      },
+      "2025_4869520": {
+        "recShare": 17.2,
+        "ydShare": 16,
+        "tdShare": 0.4,
+        "avgPPA": 1.5,
+        "usageOverall": 53.1,
+        "heightIn": 40.1,
+        "weightLb": 16
+      },
+      "2025_4869599": {
+        "recShare": 4.2,
+        "ydShare": 5,
+        "tdShare": 13.7,
+        "avgPPA": 6.5,
+        "usageOverall": 3.8,
+        "heightIn": 14.9,
+        "weightLb": 14.5
+      },
+      "2025_4869603": {
+        "recShare": 46.9,
+        "ydShare": 16,
+        "tdShare": 11.5,
+        "avgPPA": 16,
+        "usageOverall": 21.4,
+        "heightIn": 40.1,
+        "weightLb": 47.7
+      },
+      "2025_4869645": {
+        "recShare": 23.3,
+        "ydShare": 32.1,
+        "tdShare": 29,
+        "avgPPA": 8,
+        "usageOverall": 37,
+        "heightIn": 94.7,
+        "weightLb": 80.9
+      },
+      "2025_4869694": {
+        "recShare": 66.8,
+        "ydShare": 60.3,
+        "tdShare": 21.8,
+        "avgPPA": 21,
+        "usageOverall": 24.8,
+        "heightIn": 40.1,
+        "weightLb": 47.7
+      },
+      "2025_4869730": {
+        "recShare": 71.4,
+        "ydShare": 89.3,
+        "tdShare": 14.9,
+        "avgPPA": 16.8,
+        "usageOverall": 60.3,
+        "heightIn": 55.7,
+        "weightLb": 47.7
+      },
+      "2025_4869748": {
+        "recShare": 14.5,
+        "ydShare": 14.5,
+        "tdShare": 26,
+        "avgPPA": 9.5,
+        "usageOverall": 40.5,
+        "heightIn": 14.9,
+        "weightLb": 40.1
+      },
+      "2025_4869816": {
+        "recShare": 37.4,
+        "ydShare": 44.3,
+        "tdShare": 11.1,
+        "avgPPA": 10.7,
+        "usageOverall": 21.4,
+        "heightIn": 40.1,
+        "weightLb": 37
+      },
+      "2025_4869961": {
+        "recShare": 77.5,
+        "ydShare": 77.9,
+        "tdShare": 71,
+        "avgPPA": 17.2,
+        "usageOverall": 92.7,
+        "heightIn": 71.4,
+        "weightLb": 93.5
+      },
+      "2025_4869965": {
+        "recShare": 1.1,
+        "ydShare": 1.9,
+        "tdShare": 22.5,
+        "avgPPA": 59.9,
+        "usageOverall": 1.9,
+        "heightIn": 26,
+        "weightLb": 37
+      },
+      "2025_4870612": {
+        "recShare": 82.8,
+        "ydShare": 55,
+        "tdShare": 40.1,
+        "avgPPA": 21.4,
+        "usageOverall": 50,
+        "heightIn": 14.9,
+        "weightLb": 14.5
+      },
+      "2025_4870635": {
+        "recShare": 18.3,
+        "ydShare": 12.2,
+        "tdShare": 11.1,
+        "avgPPA": 4.2,
+        "usageOverall": 17.6,
+        "heightIn": 14.9,
+        "weightLb": 8.8
+      },
+      "2025_4870653": {
+        "recShare": 67.2,
+        "ydShare": 59.9,
+        "tdShare": 74.4,
+        "avgPPA": 24.4,
+        "usageOverall": 65.3,
+        "heightIn": 26,
+        "weightLb": 37
+      },
+      "2025_4870656": {
+        "recShare": 41.6,
+        "ydShare": 32.1,
+        "tdShare": 11.1,
+        "avgPPA": 13.7,
+        "usageOverall": 29.8,
+        "heightIn": 26,
+        "weightLb": 37
+      },
+      "2025_4870713": {
+        "recShare": 7.3,
+        "ydShare": 6.1,
+        "tdShare": 0.4,
+        "avgPPA": 0.8,
+        "usageOverall": 22.9,
+        "heightIn": 71.4,
+        "weightLb": 81.7
+      },
+      "2025_4870745": {
+        "recShare": 15.6,
+        "ydShare": 40.8,
+        "tdShare": 93.5,
+        "avgPPA": 83.6,
+        "usageOverall": 7.6,
+        "heightIn": 98.9,
+        "weightLb": 100
+      },
+      "2025_4870795": {
+        "recShare": 82.8,
+        "ydShare": 71,
+        "tdShare": 85.5,
+        "avgPPA": 34.7,
+        "usageOverall": 89.7,
+        "heightIn": 26,
+        "weightLb": 47.7
+      },
+      "2025_4870826": {
+        "recShare": 0.8,
+        "ydShare": 1.9,
+        "tdShare": 11.1,
+        "avgPPA": 6.5,
+        "usageOverall": 3.8,
+        "heightIn": 55.7,
+        "weightLb": 48.5
+      },
+      "2025_4870835": {
+        "recShare": 7.6,
+        "ydShare": 0.4,
+        "tdShare": 9.2,
+        "avgPPA": 14.5,
+        "usageOverall": 3.8,
+        "heightIn": 40.1,
+        "weightLb": 48.5
+      },
+      "2025_4870842": {
+        "recShare": 17.6,
+        "ydShare": 26.3,
+        "tdShare": 60.7,
+        "avgPPA": 35.5,
+        "usageOverall": 32.4,
+        "heightIn": 40.1,
+        "weightLb": 16
+      },
+      "2025_4870847": {
+        "recShare": 25.6,
+        "ydShare": 24.4,
+        "tdShare": 14.5,
+        "avgPPA": 61.8,
+        "usageOverall": 43.9,
+        "heightIn": 94.7,
+        "weightLb": 56.9
+      },
+      "2025_4870850": {
+        "recShare": 45.4,
+        "ydShare": 82.1,
+        "tdShare": 93.9,
+        "avgPPA": 46.2,
+        "usageOverall": 45.4,
+        "heightIn": 71.4,
+        "weightLb": 88.5
+      },
+      "2025_4870858": {
+        "recShare": 11.5,
+        "ydShare": 8,
+        "tdShare": 11.1,
+        "avgPPA": 32.1,
+        "usageOverall": 3.4,
+        "heightIn": 26,
+        "weightLb": 14.5
+      },
+      "2025_4870860": {
+        "recShare": 15.6,
+        "ydShare": 14.1,
+        "tdShare": 13.4,
+        "avgPPA": 58.4,
+        "usageOverall": 7.6,
+        "heightIn": 40.1,
+        "weightLb": 37
+      },
+      "2025_4870922": {
+        "recShare": 81.3,
+        "ydShare": 88.9,
+        "tdShare": 59.5,
+        "avgPPA": 44.7,
+        "usageOverall": 58.8,
+        "heightIn": 99.6,
+        "weightLb": 99.6
+      },
+      "2025_4870929": {
+        "recShare": 6.5,
+        "ydShare": 6.1,
+        "tdShare": 7.3,
+        "avgPPA": 25.2,
+        "usageOverall": 4.6,
+        "heightIn": 71.4,
+        "weightLb": 68.3
+      },
+      "2025_4870965": {
+        "recShare": 7.6,
+        "ydShare": 10.3,
+        "tdShare": 0.4,
+        "avgPPA": 3.4,
+        "usageOverall": 18.3,
+        "heightIn": 26,
+        "weightLb": 47.7
+      },
+      "2025_4871010": {
+        "recShare": 23.7,
+        "ydShare": 51.5,
+        "tdShare": 97.7,
+        "avgPPA": 26,
+        "usageOverall": 53.4,
+        "heightIn": 94.7,
+        "weightLb": 68.3
+      },
+      "2025_4871022": {
+        "recShare": 12.2,
+        "ydShare": 5.7,
+        "tdShare": 21.8,
+        "avgPPA": 2.7,
+        "usageOverall": 4.6,
+        "heightIn": 26,
+        "weightLb": 14.5
+      },
+      "2025_4871023": {
+        "recShare": 21.8,
+        "ydShare": 42.4,
+        "tdShare": 49.2,
+        "avgPPA": 90.1,
+        "usageOverall": 45.4,
+        "heightIn": 85.5,
+        "weightLb": 47.7
+      },
+      "2025_4871062": {
+        "recShare": 27.1,
+        "ydShare": 17.9,
+        "tdShare": 19.1,
+        "avgPPA": 9.9,
+        "usageOverall": 37.8,
+        "heightIn": 26,
+        "weightLb": 8
+      },
+      "2025_4871088": {
+        "recShare": 1.5,
+        "ydShare": 0.8,
+        "tdShare": 0.4,
+        "avgPPA": 0.8,
+        "usageOverall": 1.1,
+        "heightIn": 85.5,
+        "weightLb": 67.6
+      },
+      "2025_4872957": {
+        "recShare": 26.3,
+        "ydShare": 21.8,
+        "tdShare": 12.6,
+        "avgPPA": 33.6,
+        "usageOverall": 26.7,
+        "heightIn": 5.7,
+        "weightLb": 1.1
+      },
+      "2025_4875272": {
+        "recShare": 23.7,
+        "ydShare": 34.4,
+        "tdShare": 4.6,
+        "avgPPA": 28.2,
+        "usageOverall": 45.4,
+        "heightIn": 94.7,
+        "weightLb": 67.6
+      },
+      "2025_4875803": {
+        "recShare": 3.4,
+        "ydShare": 0.8,
+        "tdShare": 0.4,
+        "avgPPA": 4.6,
+        "usageOverall": 2.3,
+        "heightIn": 85.5,
+        "weightLb": 67.6
+      },
+      "2025_4876752": {
+        "recShare": 59.9,
+        "ydShare": 62.2,
+        "tdShare": 74.4,
+        "avgPPA": 19.8,
+        "usageOverall": 58.4,
+        "heightIn": 14.9,
+        "weightLb": 23.7
+      },
+      "2025_4877021": {
+        "recShare": 15.6,
+        "ydShare": 11.1,
+        "tdShare": 17.2,
+        "avgPPA": 0,
+        "usageOverall": 15.3,
+        "heightIn": 14.9,
+        "weightLb": 1.5
+      },
+      "2025_4877024": {
+        "recShare": 1.9,
+        "ydShare": 9.5,
+        "tdShare": 0.4,
+        "avgPPA": 52.7,
+        "usageOverall": 0.4,
+        "heightIn": 0,
+        "weightLb": 16.4
+      },
+      "2025_4877558": {
+        "recShare": 27.1,
+        "ydShare": 27.5,
+        "tdShare": 40.5,
+        "avgPPA": 13,
+        "usageOverall": 33.6,
+        "heightIn": 14.9,
+        "weightLb": 1.1
+      },
+      "2025_4877664": {
+        "recShare": 24.8,
+        "ydShare": 14.1,
+        "tdShare": 8.8,
+        "avgPPA": 9.9,
+        "usageOverall": 37,
+        "heightIn": 71.4,
+        "weightLb": 67.6
+      },
+      "2025_4877738": {
+        "recShare": 31.3,
+        "ydShare": 16,
+        "tdShare": 80.2,
+        "avgPPA": 4.2,
+        "usageOverall": 6.1,
+        "heightIn": 71.4,
+        "weightLb": 98.1
+      },
+      "2025_4878112": {
+        "recShare": 1.1,
+        "ydShare": 5,
+        "tdShare": 8.4,
+        "avgPPA": 43.5,
+        "usageOverall": 0,
+        "heightIn": 55.7,
+        "weightLb": 14.5
+      },
+      "2025_4879194": {
+        "recShare": 54.2,
+        "ydShare": 43.5,
+        "tdShare": 57.3,
+        "avgPPA": 19.1,
+        "usageOverall": 56.9,
+        "heightIn": 55.7,
+        "weightLb": 95.8
+      },
+      "2025_4879567": {
+        "recShare": 72.9,
+        "ydShare": 72.5,
+        "tdShare": 13.4,
+        "avgPPA": 9.2,
+        "usageOverall": 62.6,
+        "heightIn": 71.4,
+        "weightLb": 47.7
+      },
+      "2025_4879677": {
+        "recShare": 24,
+        "ydShare": 14.5,
+        "tdShare": 0.4,
+        "avgPPA": 14.1,
+        "usageOverall": 35.5,
+        "heightIn": 14.9,
+        "weightLb": 1.9
+      },
+      "2025_4879999": {
+        "recShare": 4.2,
+        "ydShare": 1.9,
+        "tdShare": 4.6,
+        "avgPPA": 3.4,
+        "usageOverall": 2.3,
+        "heightIn": 40.1,
+        "weightLb": 23.7
+      },
+      "2025_4880281": {
+        "recShare": 66,
+        "ydShare": 46.6,
+        "tdShare": 82.1,
+        "avgPPA": 17.6,
+        "usageOverall": 91.2,
+        "heightIn": 71.4,
+        "weightLb": 56.9
+      },
+      "2025_4882122": {
+        "recShare": 11.5,
+        "ydShare": 8,
+        "tdShare": 11.1,
+        "avgPPA": 16,
+        "usageOverall": 3.4,
+        "heightIn": 85.5,
+        "weightLb": 48.1
+      },
+      "2025_4885466": {
+        "recShare": 15.3,
+        "ydShare": 14.1,
+        "tdShare": 27.9,
+        "avgPPA": 28.2,
+        "usageOverall": 19.1,
+        "heightIn": 98.9,
+        "weightLb": 88.5
+      },
+      "2025_4888706": {
+        "recShare": 70.6,
+        "ydShare": 69.5,
+        "tdShare": 71,
+        "avgPPA": 6.5,
+        "usageOverall": 84,
+        "heightIn": 26,
+        "weightLb": 23.7
+      },
+      "2025_4888723": {
+        "recShare": 6.5,
+        "ydShare": 9.9,
+        "tdShare": 11.1,
+        "avgPPA": 24,
+        "usageOverall": 6.9,
+        "heightIn": 71.4,
+        "weightLb": 41.6
+      },
+      "2025_4891198": {
+        "recShare": 1.1,
+        "ydShare": 3.8,
+        "tdShare": 40.5,
+        "avgPPA": 49.6,
+        "usageOverall": 2.3,
+        "heightIn": 94.7,
+        "weightLb": 88.5
+      },
+      "2025_4894839": {
+        "recShare": 5.3,
+        "ydShare": 1.9,
+        "tdShare": 6.1,
+        "avgPPA": 0,
+        "usageOverall": 26,
+        "heightIn": 0,
+        "weightLb": 1.9
+      },
+      "2025_4895711": {
+        "recShare": 14.5,
+        "ydShare": 27.5,
+        "tdShare": 84,
+        "avgPPA": 8.8,
+        "usageOverall": 11.5,
+        "heightIn": 40.1,
+        "weightLb": 47.7
+      },
+      "2025_4896289": {
+        "recShare": 69.8,
+        "ydShare": 41.2,
+        "tdShare": 99.6,
+        "avgPPA": 1.9,
+        "usageOverall": 31.7,
+        "heightIn": 5.7,
+        "weightLb": 15.3
+      },
+      "2025_4898828": {
+        "recShare": 18.3,
+        "ydShare": 17.6,
+        "tdShare": 16.4,
+        "avgPPA": 16,
+        "usageOverall": 26.7,
+        "heightIn": 1.5,
+        "weightLb": 8
+      },
+      "2025_4899704": {
+        "recShare": 0.4,
+        "ydShare": 0.8,
+        "tdShare": 9.9,
+        "avgPPA": 50,
+        "usageOverall": 1.9,
+        "heightIn": 71.4,
+        "weightLb": 88.5
+      },
+      "2025_4900640": {
+        "recShare": 5.3,
+        "ydShare": 3.4,
+        "tdShare": 26,
+        "avgPPA": 76,
+        "usageOverall": 1.9,
+        "heightIn": 14.9,
+        "weightLb": 48.9
+      },
+      "2025_4900879": {
+        "recShare": 82.8,
+        "ydShare": 75.2,
+        "tdShare": 0.4,
+        "avgPPA": 0.8,
+        "usageOverall": 98.9,
+        "heightIn": 26,
+        "weightLb": 48.1
+      },
+      "2025_4907543": {
+        "recShare": 29.4,
+        "ydShare": 48.5,
+        "tdShare": 21.8,
+        "avgPPA": 38.2,
+        "usageOverall": 32.4,
+        "heightIn": 55.7,
+        "weightLb": 37
+      },
+      "2025_4907573": {
+        "recShare": 44.7,
+        "ydShare": 14.1,
+        "tdShare": 11.1,
+        "avgPPA": 2.3,
+        "usageOverall": 80.5,
+        "heightIn": 5.7,
+        "weightLb": 14.5
+      },
+      "2025_4907671": {
+        "recShare": 79.4,
+        "ydShare": 55.3,
+        "tdShare": 26,
+        "avgPPA": 4.2,
+        "usageOverall": 54.2,
+        "heightIn": 26,
+        "weightLb": 14.5
+      },
+      "2025_4910239": {
+        "recShare": 1.5,
+        "ydShare": 5,
+        "tdShare": 58.4,
+        "avgPPA": 3.4,
+        "usageOverall": 24.8,
+        "heightIn": 85.5,
+        "weightLb": 80.9
+      },
+      "2025_4912067": {
+        "recShare": 17.6,
+        "ydShare": 21.8,
+        "tdShare": 11.1,
+        "avgPPA": 11.8,
+        "usageOverall": 15.3,
+        "heightIn": 85.5,
+        "weightLb": 58.4
+      },
+      "2025_4912130": {
+        "recShare": 32.8,
+        "ydShare": 50,
+        "tdShare": 49.2,
+        "avgPPA": 37,
+        "usageOverall": 26.7,
+        "heightIn": 40.1,
+        "weightLb": 56.9
+      },
+      "2025_4912218": {
+        "recShare": 54.2,
+        "ydShare": 35.5,
+        "tdShare": 83.2,
+        "avgPPA": 36.3,
+        "usageOverall": 43.9,
+        "heightIn": 26,
+        "weightLb": 14.5
+      },
+      "2025_4912286": {
+        "recShare": 69.8,
+        "ydShare": 66.8,
+        "tdShare": 75.6,
+        "avgPPA": 19.8,
+        "usageOverall": 79.4,
+        "heightIn": 14.9,
+        "weightLb": 8
+      },
+      "2025_4914830": {
+        "recShare": 71.4,
+        "ydShare": 50,
+        "tdShare": 29,
+        "avgPPA": 24.8,
+        "usageOverall": 84.4,
+        "heightIn": 5.7,
+        "weightLb": 37
+      },
+      "2025_4916941": {
+        "recShare": 17.9,
+        "ydShare": 15.6,
+        "tdShare": 20.2,
+        "avgPPA": 38.5,
+        "usageOverall": 3.8,
+        "heightIn": 71.4,
+        "weightLb": 67.6
+      },
+      "2025_4917048": {
+        "recShare": 4.2,
+        "ydShare": 9.5,
+        "tdShare": 13.4,
+        "avgPPA": 23.7,
+        "usageOverall": 11.5,
+        "heightIn": 26,
+        "weightLb": 37
+      },
+      "2025_4917054": {
+        "recShare": 17.2,
+        "ydShare": 9.2,
+        "tdShare": 11.1,
+        "avgPPA": 10.3,
+        "usageOverall": 18.3,
+        "heightIn": 40.1,
+        "weightLb": 47.7
+      },
+      "2025_4917349": {
+        "recShare": 12.6,
+        "ydShare": 28.6,
+        "tdShare": 11.1,
+        "avgPPA": 50.8,
+        "usageOverall": 3.8,
+        "heightIn": 14.9,
+        "weightLb": 28.2
+      },
+      "2025_4918108": {
+        "recShare": 84,
+        "ydShare": 74,
+        "tdShare": 26,
+        "avgPPA": 4.6,
+        "usageOverall": 65.3,
+        "heightIn": 71.4,
+        "weightLb": 67.6
+      },
+      "2025_4918417": {
+        "recShare": 24,
+        "ydShare": 53.1,
+        "tdShare": 18.7,
+        "avgPPA": 11.5,
+        "usageOverall": 22.9,
+        "heightIn": 55.7,
+        "weightLb": 42.4
+      },
+      "2025_4921110": {
+        "recShare": 96.6,
+        "ydShare": 97.7,
+        "tdShare": 97.7,
+        "avgPPA": 40.1,
+        "usageOverall": 77.9,
+        "heightIn": 40.1,
+        "weightLb": 47.7
+      },
+      "2025_4921113": {
+        "recShare": 11.1,
+        "ydShare": 6.5,
+        "tdShare": 12.2,
+        "avgPPA": 0.8,
+        "usageOverall": 3.8,
+        "heightIn": 85.5,
+        "weightLb": 89.3
+      },
+      "2025_4921306": {
+        "recShare": 15.6,
+        "ydShare": 14.1,
+        "tdShare": 12.2,
+        "avgPPA": 1.5,
+        "usageOverall": 24.8,
+        "heightIn": 1.5,
+        "weightLb": 16
+      },
+      "2025_4922992": {
+        "recShare": 19.1,
+        "ydShare": 26,
+        "tdShare": 82.1,
+        "avgPPA": 4.2,
+        "usageOverall": 19.1,
+        "heightIn": 71.4,
+        "weightLb": 8.8
+      },
+      "2025_4923226": {
+        "recShare": 13,
+        "ydShare": 17.9,
+        "tdShare": 30.9,
+        "avgPPA": 14.5,
+        "usageOverall": 13.4,
+        "heightIn": 55.7,
+        "weightLb": 88.5
+      },
+      "2025_4923295": {
+        "recShare": 21.8,
+        "ydShare": 19.8,
+        "tdShare": 17.2,
+        "avgPPA": 20.6,
+        "usageOverall": 25.6,
+        "heightIn": 55.7,
+        "weightLb": 56.9
+      },
+      "2025_5017177": {
+        "recShare": 37.4,
+        "ydShare": 7.6,
+        "tdShare": 5,
+        "avgPPA": 0,
+        "usageOverall": 51.1,
+        "heightIn": 5.7,
+        "weightLb": 15.3
+      },
+      "2025_5031157": {
+        "recShare": 12.2,
+        "ydShare": 26,
+        "tdShare": 42.4,
+        "avgPPA": 16.8,
+        "usageOverall": 31.7,
+        "heightIn": 98.9,
+        "weightLb": 93.5
+      },
+      "2025_5069231": {
+        "recShare": 17.9,
+        "ydShare": 77.9,
+        "tdShare": 93.5,
+        "avgPPA": 70.2,
+        "usageOverall": 6.1,
+        "heightIn": 100,
+        "weightLb": 93.5
+      },
+      "2025_5075390": {
+        "recShare": 51.9,
+        "ydShare": 44.3,
+        "tdShare": 36.6,
+        "avgPPA": 25.2,
+        "usageOverall": 62.6,
+        "heightIn": 94.7,
+        "weightLb": 88.5
+      },
+      "2025_5075529": {
+        "recShare": 34.4,
+        "ydShare": 14.1,
+        "tdShare": 7.3,
+        "avgPPA": 0.8,
+        "usageOverall": 16.8,
+        "heightIn": 55.7,
+        "weightLb": 23.7
+      },
+      "2025_5075962": {
+        "recShare": 15.6,
+        "ydShare": 23.7,
+        "tdShare": 0.4,
+        "avgPPA": 43.9,
+        "usageOverall": 1.5,
+        "heightIn": 55.7,
+        "weightLb": 68.7
+      },
+      "2025_5076106": {
+        "recShare": 9.5,
+        "ydShare": 9.5,
+        "tdShare": 12.2,
+        "avgPPA": 2.3,
+        "usageOverall": 6.9,
+        "heightIn": 26,
+        "weightLb": 37
+      },
+      "2025_5076952": {
+        "recShare": 50,
+        "ydShare": 38.5,
+        "tdShare": 38.2,
+        "avgPPA": 9.9,
+        "usageOverall": 58.4,
+        "heightIn": 40.1,
+        "weightLb": 47.7
+      },
+      "2025_5077060": {
+        "recShare": 80.2,
+        "ydShare": 86.6,
+        "tdShare": 93.5,
+        "avgPPA": 59.2,
+        "usageOverall": 53.4,
+        "heightIn": 40.1,
+        "weightLb": 67.6
+      },
+      "2025_5077873": {
+        "recShare": 70.6,
+        "ydShare": 74.4,
+        "tdShare": 21.8,
+        "avgPPA": 34.7,
+        "usageOverall": 55.3,
+        "heightIn": 5.7,
+        "weightLb": 8
+      },
+      "2025_5078165": {
+        "recShare": 36.3,
+        "ydShare": 28.6,
+        "tdShare": 37.8,
+        "avgPPA": 55.3,
+        "usageOverall": 40.5,
+        "heightIn": 26,
+        "weightLb": 56.9
+      },
+      "2025_5078225": {
+        "recShare": 59.2,
+        "ydShare": 49.2,
+        "tdShare": 16.4,
+        "avgPPA": 6.5,
+        "usageOverall": 50,
+        "heightIn": 85.5,
+        "weightLb": 81.7
+      },
+      "2025_5078227": {
+        "recShare": 7.6,
+        "ydShare": 5,
+        "tdShare": 14.5,
+        "avgPPA": 1.5,
+        "usageOverall": 2.3,
+        "heightIn": 5.7,
+        "weightLb": 47.7
+      },
+      "2025_5078312": {
+        "recShare": 21.8,
+        "ydShare": 30.2,
+        "tdShare": 30.9,
+        "avgPPA": 12.6,
+        "usageOverall": 26.7,
+        "heightIn": 55.7,
+        "weightLb": 67.6
+      },
+      "2025_5078453": {
+        "recShare": 0.4,
+        "ydShare": 1.5,
+        "tdShare": 11.1,
+        "avgPPA": 42,
+        "usageOverall": 0.4,
+        "heightIn": 71.4,
+        "weightLb": 56.9
+      },
+      "2025_5079345": {
+        "recShare": 60.3,
+        "ydShare": 58.8,
+        "tdShare": 14.5,
+        "avgPPA": 40.1,
+        "usageOverall": 59.9,
+        "heightIn": 5.7,
+        "weightLb": 14.5
+      },
+      "2025_5079376": {
+        "recShare": 71,
+        "ydShare": 74,
+        "tdShare": 92.7,
+        "avgPPA": 4.2,
+        "usageOverall": 56.9,
+        "heightIn": 85.5,
+        "weightLb": 59.5
+      },
+      "2025_5079501": {
+        "recShare": 3.4,
+        "ydShare": 1.5,
+        "tdShare": 11.1,
+        "avgPPA": 23.7,
+        "usageOverall": 1.1,
+        "heightIn": 14.9,
+        "weightLb": 3.1
+      },
+      "2025_5079519": {
+        "recShare": 9.5,
+        "ydShare": 11.1,
+        "tdShare": 9.9,
+        "avgPPA": 32.4,
+        "usageOverall": 2.3,
+        "heightIn": 40.1,
+        "weightLb": 47.7
+      },
+      "2025_5079524": {
+        "recShare": 4.2,
+        "ydShare": 0.8,
+        "tdShare": 7.3,
+        "avgPPA": 1.5,
+        "usageOverall": 2.3,
+        "heightIn": 85.5,
+        "weightLb": 57.6
+      },
+      "2025_5079556": {
+        "recShare": 6.5,
+        "ydShare": 14.1,
+        "tdShare": 29,
+        "avgPPA": 3.4,
+        "usageOverall": 3.8,
+        "heightIn": 85.5,
+        "weightLb": 56.9
+      },
+      "2025_5079580": {
+        "recShare": 29,
+        "ydShare": 32.1,
+        "tdShare": 14.5,
+        "avgPPA": 44.7,
+        "usageOverall": 19.5,
+        "heightIn": 55.7,
+        "weightLb": 48.9
+      },
+      "2025_5079600": {
+        "recShare": 67.2,
+        "ydShare": 48.5,
+        "tdShare": 59.5,
+        "avgPPA": 2.3,
+        "usageOverall": 84.7,
+        "heightIn": 85.5,
+        "weightLb": 82.1
+      },
+      "2025_5079613": {
+        "recShare": 5.3,
+        "ydShare": 5.7,
+        "tdShare": 10.3,
+        "avgPPA": 10.3,
+        "usageOverall": 19.5,
+        "heightIn": 71.4,
+        "weightLb": 49.6
+      },
+      "2025_5079687": {
+        "recShare": 74.4,
+        "ydShare": 72.5,
+        "tdShare": 93.5,
+        "avgPPA": 24,
+        "usageOverall": 62.6,
+        "heightIn": 71.4,
+        "weightLb": 37
+      },
+      "2025_5079691": {
+        "recShare": 6.5,
+        "ydShare": 24,
+        "tdShare": 20.2,
+        "avgPPA": 17.9,
+        "usageOverall": 4.6,
+        "heightIn": 40.1,
+        "weightLb": 14.5
+      },
+      "2025_5079720": {
+        "recShare": 80.5,
+        "ydShare": 81.7,
+        "tdShare": 78.2,
+        "avgPPA": 75.6,
+        "usageOverall": 81.7,
+        "heightIn": 94.7,
+        "weightLb": 94.3
+      },
+      "2025_5080703": {
+        "recShare": 67.9,
+        "ydShare": 75.2,
+        "tdShare": 93.9,
+        "avgPPA": 16,
+        "usageOverall": 61.1,
+        "heightIn": 14.9,
+        "weightLb": 23.7
+      },
+      "2025_5080819": {
+        "recShare": 0.4,
+        "ydShare": 7.6,
+        "tdShare": 30.9,
+        "avgPPA": 47.3,
+        "usageOverall": 19.5,
+        "heightIn": 85.5,
+        "weightLb": 47.7
+      },
+      "2025_5081131": {
+        "recShare": 75.6,
+        "ydShare": 71.8,
+        "tdShare": 77.1,
+        "avgPPA": 13.7,
+        "usageOverall": 68.3,
+        "heightIn": 5.7,
+        "weightLb": 37
+      },
+      "2025_5081213": {
+        "recShare": 1.5,
+        "ydShare": 1.9,
+        "tdShare": 16.4,
+        "avgPPA": 0.8,
+        "usageOverall": 3.4,
+        "heightIn": 71.4,
+        "weightLb": 67.6
+      },
+      "2025_5081250": {
+        "recShare": 19.5,
+        "ydShare": 27.5,
+        "tdShare": 6.9,
+        "avgPPA": 59.9,
+        "usageOverall": 16.8,
+        "heightIn": 94.7,
+        "weightLb": 56.9
+      },
+      "2025_5081367": {
+        "recShare": 1.5,
+        "ydShare": 6.5,
+        "tdShare": 9.2,
+        "avgPPA": 34.7,
+        "usageOverall": 32.4,
+        "heightIn": 71.4,
+        "weightLb": 56.9
+      },
+      "2025_5081432": {
+        "recShare": 27.1,
+        "ydShare": 17.2,
+        "tdShare": 20.2,
+        "avgPPA": 14.9,
+        "usageOverall": 71.4,
+        "heightIn": 26,
+        "weightLb": 37
+      },
+      "2025_5081508": {
+        "recShare": 100,
+        "ydShare": 100,
+        "tdShare": 97.7,
+        "avgPPA": 19.8,
+        "usageOverall": 98.1,
+        "heightIn": 40.1,
+        "weightLb": 68.3
+      },
+      "2025_5081997": {
+        "recShare": 55.7,
+        "ydShare": 70.2,
+        "tdShare": 93.9,
+        "avgPPA": 67.6,
+        "usageOverall": 55.3,
+        "heightIn": 71.4,
+        "weightLb": 48.5
+      },
+      "2025_5082142": {
+        "recShare": 100,
+        "ydShare": 96.9,
+        "tdShare": 71,
+        "avgPPA": 0.8,
+        "usageOverall": 96.6,
+        "heightIn": 40.1,
+        "weightLb": 47.7
+      },
+      "2025_5082584": {
+        "recShare": 29.4,
+        "ydShare": 16,
+        "tdShare": 42.4,
+        "avgPPA": 0.8,
+        "usageOverall": 24.8,
+        "heightIn": 26,
+        "weightLb": 28.2
+      },
+      "2025_5082601": {
+        "recShare": 5.3,
+        "ydShare": 16,
+        "tdShare": 26,
+        "avgPPA": 2.7,
+        "usageOverall": 6.9,
+        "heightIn": 71.4,
+        "weightLb": 81.7
+      },
+      "2025_5083068": {
+        "recShare": 80.2,
+        "ydShare": 37,
+        "tdShare": 55,
+        "avgPPA": 0,
+        "usageOverall": 87,
+        "heightIn": 14.9,
+        "weightLb": 8.8
+      },
+      "2025_5083205": {
+        "recShare": 12.6,
+        "ydShare": 19.1,
+        "tdShare": 81.3,
+        "avgPPA": 21.8,
+        "usageOverall": 10.7,
+        "heightIn": 55.7,
+        "weightLb": 37
+      },
+      "2025_5083370": {
+        "recShare": 24.4,
+        "ydShare": 14.5,
+        "tdShare": 30.9,
+        "avgPPA": 11.5,
+        "usageOverall": 19.1,
+        "heightIn": 40.1,
+        "weightLb": 3.1
+      },
+      "2025_5083747": {
+        "recShare": 1.5,
+        "ydShare": 0.8,
+        "tdShare": 30.9,
+        "avgPPA": 45,
+        "usageOverall": 2.3,
+        "heightIn": 98.9,
+        "weightLb": 74
+      },
+      "2025_5084133": {
+        "recShare": 50,
+        "ydShare": 71,
+        "tdShare": 92.4,
+        "avgPPA": 6.5,
+        "usageOverall": 37,
+        "heightIn": 98.9,
+        "weightLb": 80.9
+      },
+      "2025_5084135": {
+        "recShare": 48.9,
+        "ydShare": 34,
+        "tdShare": 45.8,
+        "avgPPA": 17.9,
+        "usageOverall": 75.6,
+        "heightIn": 71.4,
+        "weightLb": 14.5
+      },
+      "2025_5084658": {
+        "recShare": 13,
+        "ydShare": 25.2,
+        "tdShare": 21.8,
+        "avgPPA": 68.3,
+        "usageOverall": 5,
+        "heightIn": 71.4,
+        "weightLb": 56.9
+      },
+      "2025_5084771": {
+        "recShare": 70.2,
+        "ydShare": 86.3,
+        "tdShare": 64.5,
+        "avgPPA": 70.6,
+        "usageOverall": 58.8,
+        "heightIn": 99.6,
+        "weightLb": 98.1
+      },
+      "2025_5084772": {
+        "recShare": 21.8,
+        "ydShare": 32.8,
+        "tdShare": 18.7,
+        "avgPPA": 28.2,
+        "usageOverall": 19.1,
+        "heightIn": 94.7,
+        "weightLb": 80.9
+      },
+      "2025_5084802": {
+        "recShare": 4.2,
+        "ydShare": 14.1,
+        "tdShare": 11.1,
+        "avgPPA": 16,
+        "usageOverall": 4.6,
+        "heightIn": 71.4,
+        "weightLb": 37
+      },
+      "2025_5084967": {
+        "recShare": 74.4,
+        "ydShare": 69.1,
+        "tdShare": 84.7,
+        "avgPPA": 26.7,
+        "usageOverall": 68.7,
+        "heightIn": 1.5,
+        "weightLb": 3.1
+      },
+      "2025_5085024": {
+        "recShare": 77.1,
+        "ydShare": 64.1,
+        "tdShare": 88.2,
+        "avgPPA": 28.2,
+        "usageOverall": 62.6,
+        "heightIn": 55.7,
+        "weightLb": 67.6
+      },
+      "2025_5085137": {
+        "recShare": 96.6,
+        "ydShare": 83.6,
+        "tdShare": 14.5,
+        "avgPPA": 4.6,
+        "usageOverall": 84,
+        "heightIn": 1.5,
+        "weightLb": 23.7
+      },
+      "2025_5085496": {
+        "recShare": 50.8,
+        "ydShare": 43.5,
+        "tdShare": 4.6,
+        "avgPPA": 20.6,
+        "usageOverall": 37,
+        "heightIn": 0,
+        "weightLb": 0.8
+      },
+      "2025_5086096": {
+        "recShare": 12.2,
+        "ydShare": 6.9,
+        "tdShare": 13.7,
+        "avgPPA": 72.1,
+        "usageOverall": 2.3,
+        "heightIn": 55.7,
+        "weightLb": 14.5
+      },
+      "2025_5088153": {
+        "recShare": 12.2,
+        "ydShare": 21.8,
+        "tdShare": 13.7,
+        "avgPPA": 64.9,
+        "usageOverall": 7.6,
+        "heightIn": 55.7,
+        "weightLb": 42.4
+      },
+      "2025_5088338": {
+        "recShare": 50.8,
+        "ydShare": 30.2,
+        "tdShare": 66.4,
+        "avgPPA": 56.9,
+        "usageOverall": 47.3,
+        "heightIn": 71.4,
+        "weightLb": 74
+      },
+      "2025_5089003": {
+        "recShare": 31.7,
+        "ydShare": 17.2,
+        "tdShare": 13.4,
+        "avgPPA": 4.2,
+        "usageOverall": 55.3,
+        "heightIn": 40.1,
+        "weightLb": 47.7
+      },
+      "2025_5089070": {
+        "recShare": 4.2,
+        "ydShare": 0.8,
+        "tdShare": 9.9,
+        "avgPPA": 29.4,
+        "usageOverall": 2.3,
+        "heightIn": 55.7,
+        "weightLb": 48.1
+      },
+      "2025_5089545": {
+        "recShare": 15.6,
+        "ydShare": 14.1,
+        "tdShare": 11.1,
+        "avgPPA": 10.3,
+        "usageOverall": 5,
+        "heightIn": 26,
+        "weightLb": 4.6
+      },
+      "2025_5091739": {
+        "recShare": 45.8,
+        "ydShare": 57.3,
+        "tdShare": 74.4,
+        "avgPPA": 58,
+        "usageOverall": 50,
+        "heightIn": 98.9,
+        "weightLb": 56.9
+      },
+      "2025_5091830": {
+        "recShare": 11.5,
+        "ydShare": 14.5,
+        "tdShare": 11.5,
+        "avgPPA": 10.3,
+        "usageOverall": 17.6,
+        "heightIn": 1.5,
+        "weightLb": 1.1
+      },
+      "2025_5092483": {
+        "recShare": 50,
+        "ydShare": 57.6,
+        "tdShare": 88.2,
+        "avgPPA": 13.7,
+        "usageOverall": 59.5,
+        "heightIn": 94.7,
+        "weightLb": 56.9
+      },
+      "2025_5092508": {
+        "recShare": 3.1,
+        "ydShare": 4.2,
+        "tdShare": 2.3,
+        "avgPPA": 38.2,
+        "usageOverall": 2.7,
+        "heightIn": 85.5,
+        "weightLb": 88.5
+      },
+      "2025_5092787": {
+        "recShare": 4.2,
+        "ydShare": 16.8,
+        "tdShare": 42.4,
+        "avgPPA": 32.8,
+        "usageOverall": 2.3,
+        "heightIn": 71.4,
+        "weightLb": 68.7
+      },
+      "2025_5093009": {
+        "recShare": 4.2,
+        "ydShare": 14.1,
+        "tdShare": 37.4,
+        "avgPPA": 32.4,
+        "usageOverall": 6.1,
+        "heightIn": 85.5,
+        "weightLb": 56.9
+      },
+      "2025_5093183": {
+        "recShare": 86.3,
+        "ydShare": 74.4,
+        "tdShare": 49.2,
+        "avgPPA": 20.6,
+        "usageOverall": 87.4,
+        "heightIn": 40.1,
+        "weightLb": 37
+      },
+      "2025_5093837": {
+        "recShare": 4.2,
+        "ydShare": 3.8,
+        "tdShare": 6.9,
+        "avgPPA": 3.4,
+        "usageOverall": 11.5,
+        "heightIn": 55.7,
+        "weightLb": 47.7
+      },
+      "2025_5095360": {
+        "recShare": 72.9,
+        "ydShare": 38.5,
+        "tdShare": 49.2,
+        "avgPPA": 0.8,
+        "usageOverall": 69.8,
+        "heightIn": 14.9,
+        "weightLb": 17.2
+      },
+      "2025_5095915": {
+        "recShare": 5,
+        "ydShare": 9.2,
+        "tdShare": 3.1,
+        "avgPPA": 0,
+        "usageOverall": 3.8,
+        "heightIn": 71.4,
+        "weightLb": 47.7
+      },
+      "2025_5096863": {
+        "recShare": 14.9,
+        "ydShare": 14.1,
+        "tdShare": 15.6,
+        "avgPPA": 0.4,
+        "usageOverall": 24.8,
+        "heightIn": 5.7,
+        "weightLb": 3.1
+      },
+      "2025_5100582": {
+        "recShare": 15.3,
+        "ydShare": 11.1,
+        "tdShare": 11.5,
+        "avgPPA": 14.5,
+        "usageOverall": 14.1,
+        "heightIn": 55.7,
+        "weightLb": 88.5
+      },
+      "2025_5102556": {
+        "recShare": 1.1,
+        "ydShare": 5,
+        "tdShare": 13,
+        "avgPPA": 3.1,
+        "usageOverall": 3.4,
+        "heightIn": 14.9,
+        "weightLb": 23.7
+      },
+      "2025_5104888": {
+        "recShare": 27.1,
+        "ydShare": 17.9,
+        "tdShare": 8.4,
+        "avgPPA": 0,
+        "usageOverall": 53.1,
+        "heightIn": 5.7,
+        "weightLb": 3.1
+      },
+      "2025_5110019": {
+        "recShare": 19.1,
+        "ydShare": 19.5,
+        "tdShare": 42.4,
+        "avgPPA": 16.8,
+        "usageOverall": 7.6,
+        "heightIn": 5.7,
+        "weightLb": 0
+      },
+      "2025_5112674": {
+        "recShare": 4.2,
+        "ydShare": 14.1,
+        "tdShare": 49.2,
+        "avgPPA": 73.7,
+        "usageOverall": 33.6,
+        "heightIn": 71.4,
+        "weightLb": 47.7
+      },
+      "2025_5114311": {
+        "recShare": 13.4,
+        "ydShare": 50.4,
+        "tdShare": 82.1,
+        "avgPPA": 43.9,
+        "usageOverall": 53.1,
+        "heightIn": 71.4,
+        "weightLb": 57.6
+      },
+      "2025_5117836": {
+        "recShare": 19.5,
+        "ydShare": 7.6,
+        "tdShare": 0.4,
+        "avgPPA": 3.4,
+        "usageOverall": 3.4,
+        "heightIn": 55.7,
+        "weightLb": 56.9
+      },
+      "2025_5120454": {
+        "recShare": 11.5,
+        "ydShare": 14.1,
+        "tdShare": 6.9,
+        "avgPPA": 1.5,
+        "usageOverall": 33.6,
+        "heightIn": 55.7,
+        "weightLb": 16.4
+      },
+      "2025_5121334": {
+        "recShare": 39.7,
+        "ydShare": 70.2,
+        "tdShare": 49.2,
+        "avgPPA": 29.8,
+        "usageOverall": 81.7,
+        "heightIn": 26,
+        "weightLb": 8
+      },
+      "2025_5121384": {
+        "recShare": 8.4,
+        "ydShare": 2.3,
+        "tdShare": 0.4,
+        "avgPPA": 4.2,
+        "usageOverall": 3.4,
+        "heightIn": 71.4,
+        "weightLb": 56.9
+      },
+      "2025_5121601": {
+        "recShare": 11.8,
+        "ydShare": 12.2,
+        "tdShare": 26,
+        "avgPPA": 1.9,
+        "usageOverall": 22.9,
+        "heightIn": 85.5,
+        "weightLb": 1.1
+      },
+      "2025_5121616": {
+        "recShare": 3.1,
+        "ydShare": 1.9,
+        "tdShare": 6.1,
+        "avgPPA": 3.4,
+        "usageOverall": 3.4,
+        "heightIn": 14.9,
+        "weightLb": 37
+      },
+      "2025_5121664": {
+        "recShare": 9.5,
+        "ydShare": 3.4,
+        "tdShare": 4.6,
+        "avgPPA": 0.8,
+        "usageOverall": 3.8,
+        "heightIn": 55.7,
+        "weightLb": 23.7
+      },
+      "2025_5121750": {
+        "recShare": 26.3,
+        "ydShare": 16.8,
+        "tdShare": 21.8,
+        "avgPPA": 43.1,
+        "usageOverall": 24.8,
+        "heightIn": 1.5,
+        "weightLb": 24.4
+      },
+      "2025_5121879": {
+        "recShare": 31.7,
+        "ydShare": 46.6,
+        "tdShare": 41.2,
+        "avgPPA": 67.2,
+        "usageOverall": 27.9,
+        "heightIn": 85.5,
+        "weightLb": 93.5
+      },
+      "2025_5122006": {
+        "recShare": 5,
+        "ydShare": 1.9,
+        "tdShare": 1.1,
+        "avgPPA": 16,
+        "usageOverall": 3.8,
+        "heightIn": 26,
+        "weightLb": 37
+      },
+      "2025_5122072": {
+        "recShare": 12.2,
+        "ydShare": 23.7,
+        "tdShare": 45.8,
+        "avgPPA": 0.8,
+        "usageOverall": 43.9,
+        "heightIn": 55.7,
+        "weightLb": 23.7
+      },
+      "2025_5122076": {
+        "recShare": 67.2,
+        "ydShare": 46.9,
+        "tdShare": 5,
+        "avgPPA": 6.5,
+        "usageOverall": 26.7,
+        "heightIn": 85.5,
+        "weightLb": 93.5
+      },
+      "2025_5125819": {
+        "recShare": 13,
+        "ydShare": 24.4,
+        "tdShare": 58.4,
+        "avgPPA": 3.4,
+        "usageOverall": 17.6,
+        "heightIn": 55.7,
+        "weightLb": 23.7
+      },
+      "2025_5125905": {
+        "recShare": 1.1,
+        "ydShare": 2.3,
+        "tdShare": 13.7,
+        "avgPPA": 34.7,
+        "usageOverall": 59.5,
+        "heightIn": 71.4,
+        "weightLb": 3.1
+      },
+      "2025_5126534": {
+        "recShare": 6.5,
+        "ydShare": 23.7,
+        "tdShare": 60.7,
+        "avgPPA": 23.7,
+        "usageOverall": 2.3,
+        "heightIn": 85.5,
+        "weightLb": 67.6
+      },
+      "2025_5127885": {
+        "recShare": 50,
+        "ydShare": 48.1,
+        "tdShare": 45.8,
+        "avgPPA": 1.5,
+        "usageOverall": 68.7,
+        "heightIn": 71.4,
+        "weightLb": 37
+      },
+      "2025_5130792": {
+        "recShare": 15.3,
+        "ydShare": 24.4,
+        "tdShare": 45.8,
+        "avgPPA": 4.2,
+        "usageOverall": 32.4,
+        "heightIn": 55.7,
+        "weightLb": 47.7
+      },
+      "2025_5132253": {
+        "recShare": 7.6,
+        "ydShare": 9.2,
+        "tdShare": 42.4,
+        "avgPPA": 17.6,
+        "usageOverall": 2.7,
+        "heightIn": 94.7,
+        "weightLb": 67.6
+      },
+      "2025_5132629": {
+        "recShare": 59.9,
+        "ydShare": 34.4,
+        "tdShare": 37.4,
+        "avgPPA": 14.9,
+        "usageOverall": 53.1,
+        "heightIn": 40.1,
+        "weightLb": 37
+      },
+      "2025_5139057": {
+        "recShare": 4.2,
+        "ydShare": 11.8,
+        "tdShare": 21.8,
+        "avgPPA": 16.4,
+        "usageOverall": 1.5,
+        "heightIn": 40.1,
+        "weightLb": 41.6
+      },
+      "2025_5141362": {
+        "recShare": 1.1,
+        "ydShare": 1.1,
+        "tdShare": 0.4,
+        "avgPPA": 51.9,
+        "usageOverall": 2.3,
+        "heightIn": 5.7,
+        "weightLb": 47.7
+      },
+      "2025_5141394": {
+        "recShare": 3.4,
+        "ydShare": 3.8,
+        "tdShare": 5.7,
+        "avgPPA": 6.1,
+        "usageOverall": 3.8,
+        "heightIn": 5.7,
+        "weightLb": 48.5
+      },
+      "2025_5141471": {
+        "recShare": 9.5,
+        "ydShare": 6.1,
+        "tdShare": 6.1,
+        "avgPPA": 1.9,
+        "usageOverall": 3.8,
+        "heightIn": 55.7,
+        "weightLb": 16.4
+      },
+      "2025_5141572": {
+        "recShare": 54.2,
+        "ydShare": 57.3,
+        "tdShare": 78.2,
+        "avgPPA": 48.9,
+        "usageOverall": 26,
+        "heightIn": 40.1,
+        "weightLb": 37
+      },
+      "2025_5141582": {
+        "recShare": 11.5,
+        "ydShare": 14.5,
+        "tdShare": 12.2,
+        "avgPPA": 7.6,
+        "usageOverall": 3.8,
+        "heightIn": 71.4,
+        "weightLb": 80.9
+      },
+      "2025_5141586": {
+        "recShare": 5.3,
+        "ydShare": 6.5,
+        "tdShare": 9.9,
+        "avgPPA": 12.6,
+        "usageOverall": 19.5,
+        "heightIn": 26,
+        "weightLb": 47.7
+      },
+      "2025_5141697": {
+        "recShare": 0.8,
+        "ydShare": 0.8,
+        "tdShare": 1.5,
+        "avgPPA": 29.8,
+        "usageOverall": 1.9,
+        "heightIn": 14.9,
+        "weightLb": 16
+      },
+      "2025_5141711": {
+        "recShare": 15.3,
+        "ydShare": 17.2,
+        "tdShare": 11.1,
+        "avgPPA": 31.3,
+        "usageOverall": 26,
+        "heightIn": 40.1,
+        "weightLb": 17.2
+      },
+      "2025_5141975": {
+        "recShare": 9.5,
+        "ydShare": 11.1,
+        "tdShare": 7.3,
+        "avgPPA": 82.8,
+        "usageOverall": 3.4,
+        "heightIn": 40.1,
+        "weightLb": 37
+      },
+      "2025_5142600": {
+        "recShare": 4.2,
+        "ydShare": 3.1,
+        "tdShare": 0.4,
+        "avgPPA": 3.4,
+        "usageOverall": 6.1,
+        "heightIn": 71.4,
+        "weightLb": 47.7
+      },
+      "2025_5144962": {
+        "recShare": 6.5,
+        "ydShare": 16,
+        "tdShare": 28.2,
+        "avgPPA": 15.6,
+        "usageOverall": 22.9,
+        "heightIn": 55.7,
+        "weightLb": 80.9
+      },
+      "2025_5146719": {
+        "recShare": 9.5,
+        "ydShare": 1.9,
+        "tdShare": 12.6,
+        "avgPPA": 0.8,
+        "usageOverall": 4.6,
+        "heightIn": 55.7,
+        "weightLb": 47.7
+      },
+      "2025_5146735": {
+        "recShare": 7.6,
+        "ydShare": 17.6,
+        "tdShare": 8.8,
+        "avgPPA": 94.7,
+        "usageOverall": 2.3,
+        "heightIn": 94.7,
+        "weightLb": 68.7
+      },
+      "2025_5146753": {
+        "recShare": 8.8,
+        "ydShare": 15.6,
+        "tdShare": 13.4,
+        "avgPPA": 12.6,
+        "usageOverall": 2.3,
+        "heightIn": 94.7,
+        "weightLb": 48.1
+      },
+      "2025_5147053": {
+        "recShare": 48.5,
+        "ydShare": 14.1,
+        "tdShare": 4.6,
+        "avgPPA": 0,
+        "usageOverall": 37.8,
+        "heightIn": 5.7,
+        "weightLb": 1.1
+      },
+      "2025_5148535": {
+        "recShare": 15.3,
+        "ydShare": 25.2,
+        "tdShare": 62.2,
+        "avgPPA": 13.7,
+        "usageOverall": 3.4,
+        "heightIn": 55.7,
+        "weightLb": 48.9
+      },
+      "2025_5148787": {
+        "recShare": 48.5,
+        "ydShare": 65.3,
+        "tdShare": 55,
+        "avgPPA": 68.7,
+        "usageOverall": 45.4,
+        "heightIn": 40.1,
+        "weightLb": 49.6
+      },
+      "2025_5148822": {
+        "recShare": 23.3,
+        "ydShare": 17.6,
+        "tdShare": 16.4,
+        "avgPPA": 3.8,
+        "usageOverall": 36.3,
+        "heightIn": 0,
+        "weightLb": 1.9
+      },
+      "2025_5149007": {
+        "recShare": 15.6,
+        "ydShare": 5,
+        "tdShare": 4.6,
+        "avgPPA": 26.3,
+        "usageOverall": 17.6,
+        "heightIn": 0,
+        "weightLb": 0
+      },
+      "2025_5150247": {
+        "recShare": 12.6,
+        "ydShare": 22.9,
+        "tdShare": 22.5,
+        "avgPPA": 63.7,
+        "usageOverall": 4.2,
+        "heightIn": 55.7,
+        "weightLb": 47.7
+      },
+      "2025_5150424": {
+        "recShare": 55.3,
+        "ydShare": 28.2,
+        "tdShare": 15.6,
+        "avgPPA": 52.7,
+        "usageOverall": 26.7,
+        "heightIn": 26,
+        "weightLb": 23.7
+      },
+      "2025_5150460": {
+        "recShare": 1.5,
+        "ydShare": 3.8,
+        "tdShare": 6.1,
+        "avgPPA": 49.6,
+        "usageOverall": 2.3,
+        "heightIn": 71.4,
+        "weightLb": 67.6
+      },
+      "2025_5150904": {
+        "recShare": 29,
+        "ydShare": 43.9,
+        "tdShare": 82.1,
+        "avgPPA": 1.5,
+        "usageOverall": 19.5,
+        "heightIn": 71.4,
+        "weightLb": 23.7
+      },
+      "2025_5151048": {
+        "recShare": 45.8,
+        "ydShare": 26,
+        "tdShare": 0.4,
+        "avgPPA": 1.5,
+        "usageOverall": 58.4,
+        "heightIn": 1.5,
+        "weightLb": 8
+      },
+      "2025_5151274": {
+        "recShare": 69.5,
+        "ydShare": 50.4,
+        "tdShare": 49.2,
+        "avgPPA": 0,
+        "usageOverall": 33.6,
+        "heightIn": 26,
+        "weightLb": 23.7
+      },
+      "2025_5151339": {
+        "recShare": 1.1,
+        "ydShare": 3.1,
+        "tdShare": 7.3,
+        "avgPPA": 34,
+        "usageOverall": 6.9,
+        "heightIn": 71.4,
+        "weightLb": 56.9
+      },
+      "2025_5151472": {
+        "recShare": 3.4,
+        "ydShare": 2.3,
+        "tdShare": 11.1,
+        "avgPPA": 30.5,
+        "usageOverall": 3.8,
+        "heightIn": 40.1,
+        "weightLb": 80.9
+      },
+      "2025_5151662": {
+        "recShare": 15.3,
+        "ydShare": 16,
+        "tdShare": 42.4,
+        "avgPPA": 42,
+        "usageOverall": 15.3,
+        "heightIn": 14.9,
+        "weightLb": 37
+      },
+      "2025_5151941": {
+        "recShare": 18.3,
+        "ydShare": 27.1,
+        "tdShare": 60.7,
+        "avgPPA": 74,
+        "usageOverall": 1.1,
+        "heightIn": 55.7,
+        "weightLb": 56.9
+      },
+      "2025_5151976": {
+        "recShare": 11.1,
+        "ydShare": 5,
+        "tdShare": 9.9,
+        "avgPPA": 16.8,
+        "usageOverall": 6.9,
+        "heightIn": 40.1,
+        "weightLb": 23.7
+      },
+      "2025_5152158": {
+        "recShare": 11.5,
+        "ydShare": 11.1,
+        "tdShare": 7.3,
+        "avgPPA": 4.2,
+        "usageOverall": 14.1,
+        "heightIn": 40.1,
+        "weightLb": 14.5
+      },
+      "2025_5152162": {
+        "recShare": 4.2,
+        "ydShare": 1.5,
+        "tdShare": 0.4,
+        "avgPPA": 3.1,
+        "usageOverall": 2.3,
+        "heightIn": 26,
+        "weightLb": 8
+      },
+      "2025_5152414": {
+        "recShare": 93.1,
+        "ydShare": 92,
+        "tdShare": 94.7,
+        "avgPPA": 52.7,
+        "usageOverall": 78.6,
+        "heightIn": 26,
+        "weightLb": 15.3
+      },
+      "2025_5152815": {
+        "recShare": 92.4,
+        "ydShare": 93.9,
+        "tdShare": 99.6,
+        "avgPPA": 3.1,
+        "usageOverall": 98.5,
+        "heightIn": 5.7,
+        "weightLb": 8
+      },
+      "2025_5153056": {
+        "recShare": 34.4,
+        "ydShare": 19.1,
+        "tdShare": 36.6,
+        "avgPPA": 20.6,
+        "usageOverall": 26.7,
+        "heightIn": 14.9,
+        "weightLb": 8
+      },
+      "2025_5153074": {
+        "recShare": 24,
+        "ydShare": 25.2,
+        "tdShare": 16.4,
+        "avgPPA": 7.6,
+        "usageOverall": 25.6,
+        "heightIn": 40.1,
+        "weightLb": 40.1
+      },
+      "2025_5153730": {
+        "recShare": 30.5,
+        "ydShare": 19.1,
+        "tdShare": 59.9,
+        "avgPPA": 5.7,
+        "usageOverall": 61.8,
+        "heightIn": 1.5,
+        "weightLb": 3.1
+      },
+      "2025_5153852": {
+        "recShare": 4.2,
+        "ydShare": 0.8,
+        "tdShare": 2.7,
+        "avgPPA": 1.5,
+        "usageOverall": 2.3,
+        "heightIn": 1.5,
+        "weightLb": 8
+      },
+      "2025_5153994": {
+        "recShare": 19.5,
+        "ydShare": 30.2,
+        "tdShare": 21.8,
+        "avgPPA": 90.5,
+        "usageOverall": 3.4,
+        "heightIn": 71.4,
+        "weightLb": 89.3
+      },
+      "2025_5154734": {
+        "recShare": 91.2,
+        "ydShare": 91.2,
+        "tdShare": 93.9,
+        "avgPPA": 33.2,
+        "usageOverall": 75.6,
+        "heightIn": 71.4,
+        "weightLb": 56.9
+      },
+      "2025_5155179": {
+        "recShare": 93.1,
+        "ydShare": 65.6,
+        "tdShare": 59.5,
+        "avgPPA": 4.2,
+        "usageOverall": 98.1,
+        "heightIn": 0,
+        "weightLb": 3.1
+      },
+      "2025_5155519": {
+        "recShare": 17.9,
+        "ydShare": 14.5,
+        "tdShare": 36.6,
+        "avgPPA": 60.7,
+        "usageOverall": 6.1,
+        "heightIn": 85.5,
+        "weightLb": 68.7
+      },
+      "2025_5156162": {
+        "recShare": 12.6,
+        "ydShare": 16.8,
+        "tdShare": 55,
+        "avgPPA": 43.9,
+        "usageOverall": 11.5,
+        "heightIn": 55.7,
+        "weightLb": 67.6
+      },
+      "2025_5157187": {
+        "recShare": 0.4,
+        "ydShare": 1.5,
+        "tdShare": 3.1,
+        "avgPPA": 3.4,
+        "usageOverall": 2.3,
+        "heightIn": 14.9,
+        "weightLb": 14.5
+      },
+      "2025_5157266": {
+        "recShare": 19.5,
+        "ydShare": 12.2,
+        "tdShare": 11.1,
+        "avgPPA": 1.5,
+        "usageOverall": 16,
+        "heightIn": 14.9,
+        "weightLb": 8.8
+      },
+      "2025_5157287": {
+        "recShare": 23.3,
+        "ydShare": 16,
+        "tdShare": 55,
+        "avgPPA": 2.3,
+        "usageOverall": 42,
+        "heightIn": 71.4,
+        "weightLb": 3.1
+      },
+      "2025_5157331": {
+        "recShare": 11.5,
+        "ydShare": 14.1,
+        "tdShare": 49.2,
+        "avgPPA": 48.1,
+        "usageOverall": 2.3,
+        "heightIn": 40.1,
+        "weightLb": 49.6
+      },
+      "2025_5158829": {
+        "recShare": 39.7,
+        "ydShare": 25.2,
+        "tdShare": 20.2,
+        "avgPPA": 4.2,
+        "usageOverall": 53.1,
+        "heightIn": 0,
+        "weightLb": 0.8
+      },
+      "2025_5159139": {
+        "recShare": 51.9,
+        "ydShare": 34.4,
+        "tdShare": 82.8,
+        "avgPPA": 10.7,
+        "usageOverall": 78.6,
+        "heightIn": 55.7,
+        "weightLb": 57.3
+      },
+      "2025_5159175": {
+        "recShare": 88.2,
+        "ydShare": 70.2,
+        "tdShare": 62.2,
+        "avgPPA": 8.4,
+        "usageOverall": 89.7,
+        "heightIn": 26,
+        "weightLb": 28.2
+      },
+      "2025_5159362": {
+        "recShare": 35.5,
+        "ydShare": 14.1,
+        "tdShare": 12.2,
+        "avgPPA": 0.8,
+        "usageOverall": 59.9,
+        "heightIn": 14.9,
+        "weightLb": 24.4
+      },
+      "2025_5159831": {
+        "recShare": 1.5,
+        "ydShare": 4.6,
+        "tdShare": 9.9,
+        "avgPPA": 0.8,
+        "usageOverall": 2.3,
+        "heightIn": 5.7,
+        "weightLb": 37
+      },
+      "2025_5161162": {
+        "recShare": 11.1,
+        "ydShare": 6.1,
+        "tdShare": 6.1,
+        "avgPPA": 2.7,
+        "usageOverall": 10.7,
+        "heightIn": 40.1,
+        "weightLb": 14.5
+      },
+      "2025_5164351": {
+        "recShare": 10.3,
+        "ydShare": 9.9,
+        "tdShare": 26,
+        "avgPPA": 3.4,
+        "usageOverall": 2.3,
+        "heightIn": 40.1,
+        "weightLb": 37
+      },
+      "2025_5164749": {
+        "recShare": 4.2,
+        "ydShare": 3.1,
+        "tdShare": 0.4,
+        "avgPPA": 4.2,
+        "usageOverall": 3.8,
+        "heightIn": 40.1,
+        "weightLb": 37
+      },
+      "2025_5166797": {
+        "recShare": 21.8,
+        "ydShare": 17.6,
+        "tdShare": 46.6,
+        "avgPPA": 43.9,
+        "usageOverall": 11.5,
+        "heightIn": 26,
+        "weightLb": 17.2
+      },
+      "2025_5179622": {
+        "recShare": 5,
+        "ydShare": 5.7,
+        "tdShare": 7.3,
+        "avgPPA": 32.4,
+        "usageOverall": 43.9,
+        "heightIn": 26,
+        "weightLb": 14.5
+      },
+      "2025_5189530": {
+        "recShare": 26,
+        "ydShare": 26,
+        "tdShare": 38.2,
+        "avgPPA": 20.6,
+        "usageOverall": 26.7,
+        "heightIn": 71.4,
+        "weightLb": 56.9
+      },
+      "2025_5193217": {
+        "recShare": 17.6,
+        "ydShare": 26,
+        "tdShare": 26,
+        "avgPPA": 20.6,
+        "usageOverall": 19.5,
+        "heightIn": 55.7,
+        "weightLb": 14.5
+      },
+      "2025_5193274": {
+        "recShare": 8.4,
+        "ydShare": 32.8,
+        "tdShare": 75.6,
+        "avgPPA": 35.9,
+        "usageOverall": 13.4,
+        "heightIn": 14.9,
+        "weightLb": 47.7
+      },
+      "2025_5193298": {
+        "recShare": 48.1,
+        "ydShare": 42.7,
+        "tdShare": 60.7,
+        "avgPPA": 9.9,
+        "usageOverall": 32.4,
+        "heightIn": 26,
+        "weightLb": 4.6
+      },
+      "2025_5194795": {
+        "recShare": 75.6,
+        "ydShare": 43.9,
+        "tdShare": 55,
+        "avgPPA": 34,
+        "usageOverall": 37,
+        "heightIn": 40.1,
+        "weightLb": 37
+      },
+      "2025_5195952": {
+        "recShare": 6.5,
+        "ydShare": 42.4,
+        "tdShare": 55,
+        "avgPPA": 7.3,
+        "usageOverall": 16,
+        "heightIn": 55.7,
+        "weightLb": 14.5
+      },
+      "2025_5207842": {
+        "recShare": 0.4,
+        "ydShare": 0.8,
+        "tdShare": 7.3,
+        "avgPPA": 6.5,
+        "usageOverall": 2.3,
+        "heightIn": 71.4,
+        "weightLb": 14.5
+      },
+      "2025_5209679": {
+        "recShare": 14.5,
+        "ydShare": 14.5,
+        "tdShare": 41.2,
+        "avgPPA": 48.9,
+        "usageOverall": 9.2,
+        "heightIn": 85.5,
+        "weightLb": 82.1
+      },
+      "2025_5211694": {
+        "recShare": 1.1,
+        "ydShare": 5,
+        "tdShare": 11.1,
+        "avgPPA": 67.2,
+        "usageOverall": 32.4,
+        "heightIn": 14.9,
+        "weightLb": 8
+      },
+      "2025_5214557": {
+        "recShare": 6.5,
+        "ydShare": 12.2,
+        "tdShare": 21,
+        "avgPPA": 15.6,
+        "usageOverall": 2.7,
+        "heightIn": 85.5,
+        "weightLb": 98.1
+      },
+      "2025_5217700": {
+        "recShare": 0.8,
+        "ydShare": 1.5,
+        "tdShare": 6.9,
+        "avgPPA": 5.7,
+        "usageOverall": 1.9,
+        "heightIn": 14.9,
+        "weightLb": 14.5
+      },
+      "2025_5218633": {
+        "recShare": 44.7,
+        "ydShare": 51.5,
+        "tdShare": 42.4,
+        "avgPPA": 4.6,
+        "usageOverall": 71.4,
+        "heightIn": 71.4,
+        "weightLb": 82.8
+      },
+      "2025_5218753": {
+        "recShare": 23.3,
+        "ydShare": 44.7,
+        "tdShare": 20.2,
+        "avgPPA": 16.8,
+        "usageOverall": 33.6,
+        "heightIn": 85.5,
+        "weightLb": 56.9
+      },
+      "2025_5218787": {
+        "recShare": 34.4,
+        "ydShare": 30.2,
+        "tdShare": 13.4,
+        "avgPPA": 4.2,
+        "usageOverall": 35.5,
+        "heightIn": 1.5,
+        "weightLb": 3.1
+      },
+      "2025_5218988": {
+        "recShare": 1.9,
+        "ydShare": 1.5,
+        "tdShare": 9.9,
+        "avgPPA": 8.4,
+        "usageOverall": 2.3,
+        "heightIn": 26,
+        "weightLb": 23.7
+      },
+      "2025_5219086": {
+        "recShare": 19.1,
+        "ydShare": 26.3,
+        "tdShare": 18.7,
+        "avgPPA": 4.2,
+        "usageOverall": 43.9,
+        "heightIn": 94.7,
+        "weightLb": 89.3
+      },
+      "2025_5219136": {
+        "recShare": 11.8,
+        "ydShare": 9.2,
+        "tdShare": 0.4,
+        "avgPPA": 5.3,
+        "usageOverall": 13.4,
+        "heightIn": 14.9,
+        "weightLb": 3.1
+      },
+      "2025_5219436": {
+        "recShare": 43.1,
+        "ydShare": 91.2,
+        "tdShare": 71,
+        "avgPPA": 99.2,
+        "usageOverall": 1.1,
+        "heightIn": 55.7,
+        "weightLb": 74
+      },
+      "2025_5220256": {
+        "recShare": 30.5,
+        "ydShare": 50,
+        "tdShare": 92.7,
+        "avgPPA": 28.2,
+        "usageOverall": 7.6,
+        "heightIn": 85.5,
+        "weightLb": 37
+      },
+      "2025_5220596": {
+        "recShare": 48.5,
+        "ydShare": 38.5,
+        "tdShare": 11.1,
+        "avgPPA": 13.7,
+        "usageOverall": 59.5,
+        "heightIn": 40.1,
+        "weightLb": 16
+      },
+      "2025_5220680": {
+        "recShare": 67.9,
+        "ydShare": 80.9,
+        "tdShare": 49.2,
+        "avgPPA": 11.8,
+        "usageOverall": 87,
+        "heightIn": 85.5,
+        "weightLb": 23.7
+      },
+      "2025_5221074": {
+        "recShare": 10.3,
+        "ydShare": 17.2,
+        "tdShare": 13.7,
+        "avgPPA": 59.9,
+        "usageOverall": 7.6,
+        "heightIn": 1.5,
+        "weightLb": 0
+      },
+      "2025_5221079": {
+        "recShare": 6.5,
+        "ydShare": 5,
+        "tdShare": 5.7,
+        "avgPPA": 3.4,
+        "usageOverall": 3.8,
+        "heightIn": 94.7,
+        "weightLb": 80.9
+      },
+      "2025_5221381": {
+        "recShare": 43.9,
+        "ydShare": 32.8,
+        "tdShare": 14.9,
+        "avgPPA": 12.6,
+        "usageOverall": 27.9,
+        "heightIn": 1.5,
+        "weightLb": 5
+      },
+      "2025_5222394": {
+        "recShare": 40.5,
+        "ydShare": 32.1,
+        "tdShare": 26,
+        "avgPPA": 32.4,
+        "usageOverall": 16,
+        "heightIn": 40.1,
+        "weightLb": 14.5
+      },
+      "2025_5224764": {
+        "recShare": 37,
+        "ydShare": 37,
+        "tdShare": 11.1,
+        "avgPPA": 4.2,
+        "usageOverall": 56.9,
+        "heightIn": 40.1,
+        "weightLb": 37
+      },
+      "2025_5225416": {
+        "recShare": 15.6,
+        "ydShare": 5,
+        "tdShare": 12.2,
+        "avgPPA": 10.3,
+        "usageOverall": 4.6,
+        "heightIn": 55.7,
+        "weightLb": 1.1
+      },
+      "2025_5226313": {
+        "recShare": 23.3,
+        "ydShare": 50,
+        "tdShare": 55,
+        "avgPPA": 73.7,
+        "usageOverall": 26,
+        "heightIn": 40.1,
+        "weightLb": 16.4
+      },
+      "2025_5227998": {
+        "recShare": 4.2,
+        "ydShare": 0.8,
+        "tdShare": 4.6,
+        "avgPPA": 10.7,
+        "usageOverall": 2.3,
+        "heightIn": 98.9,
+        "weightLb": 72.1
+      },
+      "2025_5231354": {
+        "recShare": 21.8,
+        "ydShare": 14.1,
+        "tdShare": 6.9,
+        "avgPPA": 3.8,
+        "usageOverall": 15.3,
+        "heightIn": 14.9,
+        "weightLb": 1.1
+      },
+      "2025_5238876": {
+        "recShare": 10.3,
+        "ydShare": 11.8,
+        "tdShare": 7.3,
+        "avgPPA": 74,
+        "usageOverall": 1.9,
+        "heightIn": 5.7,
+        "weightLb": 3.1
+      },
+      "2025_5265446": {
+        "recShare": 5.3,
+        "ydShare": 1.5,
+        "tdShare": 21.8,
+        "avgPPA": 3.4,
+        "usageOverall": 6.1,
+        "heightIn": 55.7,
+        "weightLb": 1.1
+      },
+      "2025_5279633": {
+        "recShare": 12.6,
+        "ydShare": 17.9,
+        "tdShare": 0.4,
+        "avgPPA": 2.3,
+        "usageOverall": 24.8,
+        "heightIn": 40.1,
+        "weightLb": 47.7
+      },
+      "2025_5294063": {
+        "recShare": 23.3,
+        "ydShare": 33.2,
+        "tdShare": 37.8,
+        "avgPPA": 19.8,
+        "usageOverall": 60.7,
+        "heightIn": 14.9,
+        "weightLb": 8
+      },
+      "2025_5295811": {
+        "recShare": 23.7,
+        "ydShare": 31.3,
+        "tdShare": 0.4,
+        "avgPPA": 19.8,
+        "usageOverall": 24.8,
+        "heightIn": 26,
+        "weightLb": 8.8
+      },
+      "2025_5295918": {
+        "recShare": 38.9,
+        "ydShare": 58.8,
+        "tdShare": 21.8,
+        "avgPPA": 68.3,
+        "usageOverall": 11.5,
+        "heightIn": 71.4,
+        "weightLb": 37
+      },
+      "2025_5295920": {
+        "recShare": 48.5,
+        "ydShare": 50.4,
+        "tdShare": 38.9,
+        "avgPPA": 11.5,
+        "usageOverall": 27.9,
+        "heightIn": 85.5,
+        "weightLb": 88.5
+      },
+      "2025_5295981": {
+        "recShare": 23.3,
+        "ydShare": 26,
+        "tdShare": 36.6,
+        "avgPPA": 70.6,
+        "usageOverall": 13.4,
+        "heightIn": 55.7,
+        "weightLb": 47.7
+      },
+      "2025_5296027": {
+        "recShare": 14.5,
+        "ydShare": 1.5,
+        "tdShare": 1.5,
+        "avgPPA": 0.8,
+        "usageOverall": 26,
+        "heightIn": 26,
+        "weightLb": 37
+      },
+      "2025_5296067": {
+        "recShare": 1.9,
+        "ydShare": 3.1,
+        "tdShare": 11.1,
+        "avgPPA": 32.1,
+        "usageOverall": 1.9,
+        "heightIn": 55.7,
+        "weightLb": 15.3
+      },
+      "2025_5296150": {
+        "recShare": 95.8,
+        "ydShare": 97.3,
+        "tdShare": 79.4,
+        "avgPPA": 29.8,
+        "usageOverall": 29.8,
+        "heightIn": 26,
+        "weightLb": 56.9
+      },
+      "2025_5296407": {
+        "recShare": 12.2,
+        "ydShare": 11.8,
+        "tdShare": 30.9,
+        "avgPPA": 7.6,
+        "usageOverall": 53.1,
+        "heightIn": 85.5,
+        "weightLb": 88.5
+      },
+      "2025_5296438": {
+        "recShare": 5.3,
+        "ydShare": 6.1,
+        "tdShare": 26,
+        "avgPPA": 76,
+        "usageOverall": 2.3,
+        "heightIn": 71.4,
+        "weightLb": 14.5
+      },
+      "2025_5296558": {
+        "recShare": 9.5,
+        "ydShare": 3.8,
+        "tdShare": 9.9,
+        "avgPPA": 0,
+        "usageOverall": 15.3,
+        "heightIn": 1.5,
+        "weightLb": 0.8
+      },
+      "2025_5302266": {
+        "recShare": 38.9,
+        "ydShare": 50,
+        "tdShare": 26,
+        "avgPPA": 0.8,
+        "usageOverall": 22.9,
+        "heightIn": 71.4,
+        "weightLb": 14.5
+      },
+      "2026_4680024": {
+        "recShare": 31.7,
+        "ydShare": 47.7,
+        "tdShare": 16.4,
+        "avgPPA": 88.9,
+        "usageOverall": 6.9,
+        "heightIn": 26,
+        "weightLb": 37
+      },
+      "2026_4685565": {
+        "recShare": 45.8,
+        "ydShare": 26,
+        "tdShare": 29,
+        "avgPPA": 23.7,
+        "usageOverall": 55.3,
+        "heightIn": 40.1,
+        "weightLb": 3.1
+      },
+      "2026_4691315": {
+        "recShare": 70.2,
+        "ydShare": 88.9,
+        "tdShare": 82.1,
+        "avgPPA": 48.1,
+        "usageOverall": 69.8,
+        "heightIn": 85.5,
+        "weightLb": 23.7
+      },
+      "2026_4714046": {
+        "recShare": 93.1,
+        "ydShare": 75.2,
+        "tdShare": 13.4,
+        "avgPPA": 10.3,
+        "usageOverall": 94.3,
+        "heightIn": 40.1,
+        "weightLb": 14.5
+      },
+      "2026_4717430": {
+        "recShare": 82.8,
+        "ydShare": 96.6,
+        "tdShare": 16.4,
+        "avgPPA": 53.1,
+        "usageOverall": 85.9,
+        "heightIn": 85.5,
+        "weightLb": 82.1
+      },
+      "2026_4808767": {
+        "recShare": 59.9,
+        "ydShare": 35.5,
+        "tdShare": 42.4,
+        "avgPPA": 48.9,
+        "usageOverall": 48.5,
+        "heightIn": 26,
+        "weightLb": 47.7
+      },
+      "2026_4831976": {
+        "recShare": 70.2,
+        "ydShare": 58.8,
+        "tdShare": 13.4,
+        "avgPPA": 14.1,
+        "usageOverall": 59.9,
+        "heightIn": 40.1,
+        "weightLb": 67.6
+      },
+      "2026_4869422": {
+        "recShare": 46.9,
+        "ydShare": 48.9,
+        "tdShare": 78.2,
+        "avgPPA": 42.4,
+        "usageOverall": 50,
+        "heightIn": 85.5,
+        "weightLb": 80.9
+      },
+      "2026_4869443": {
+        "recShare": 57.6,
+        "ydShare": 50,
+        "tdShare": 71,
+        "avgPPA": 0.4,
+        "usageOverall": 80.9,
+        "heightIn": 5.7,
+        "weightLb": 14.5
+      },
+      "2026_4869601": {
+        "recShare": 94.3,
+        "ydShare": 99.6,
+        "tdShare": 100,
+        "avgPPA": 16.4,
+        "usageOverall": 94.3,
+        "heightIn": 94.7,
+        "weightLb": 37.4
+      },
+      "2026_4870858": {
+        "recShare": 92,
+        "ydShare": 93.1,
+        "tdShare": 78.2,
+        "avgPPA": 38.5,
+        "usageOverall": 62.6,
+        "heightIn": 26,
+        "weightLb": 14.5
+      },
+      "2026_4870922": {
+        "recShare": 48.9,
+        "ydShare": 62.2,
+        "tdShare": 71,
+        "avgPPA": 47.7,
+        "usageOverall": 21.4,
+        "heightIn": 99.6,
+        "weightLb": 99.6
+      },
+      "2026_4871062": {
+        "recShare": 59.9,
+        "ydShare": 62.2,
+        "tdShare": 11.1,
+        "avgPPA": 55.3,
+        "usageOverall": 53.4,
+        "heightIn": 26,
+        "weightLb": 8
+      },
+      "2026_4879999": {
+        "recShare": 79.4,
+        "ydShare": 79.8,
+        "tdShare": 71,
+        "avgPPA": 33.2,
+        "usageOverall": 80.9,
+        "heightIn": 40.1,
+        "weightLb": 23.7
+      },
+      "2026_4891198": {
+        "recShare": 29.4,
+        "ydShare": 41.6,
+        "tdShare": 78.2,
+        "avgPPA": 91.2,
+        "usageOverall": 36.3,
+        "heightIn": 94.7,
+        "weightLb": 88.5
+      },
+      "2026_4896289": {
+        "recShare": 96.6,
+        "ydShare": 79.4,
+        "tdShare": 34,
+        "avgPPA": 13.7,
+        "usageOverall": 88.9,
+        "heightIn": 5.7,
+        "weightLb": 15.3
+      },
+      "2026_4907671": {
+        "recShare": 91.2,
+        "ydShare": 79.4,
+        "tdShare": 26,
+        "avgPPA": 32.8,
+        "usageOverall": 77.9,
+        "heightIn": 26,
+        "weightLb": 14.5
+      },
+      "2026_4914830": {
+        "recShare": 54.6,
+        "ydShare": 67.6,
+        "tdShare": 42.4,
+        "avgPPA": 6.5,
+        "usageOverall": 62.6,
+        "heightIn": 5.7,
+        "weightLb": 37
+      },
+      "2026_4920163": {
+        "recShare": 82.8,
+        "ydShare": 78.6,
+        "tdShare": 42.4,
+        "avgPPA": 20.6,
+        "usageOverall": 79.4,
+        "heightIn": 71.4,
+        "weightLb": 47.7
+      },
+      "2026_4923226": {
+        "recShare": 96.6,
+        "ydShare": 97.3,
+        "tdShare": 100,
+        "avgPPA": 84.7,
+        "usageOverall": 93.5,
+        "heightIn": 55.7,
+        "weightLb": 88.5
+      },
+      "2026_4923295": {
+        "recShare": 36.3,
+        "ydShare": 66,
+        "tdShare": 16.4,
+        "avgPPA": 61.8,
+        "usageOverall": 48.5,
+        "heightIn": 55.7,
+        "weightLb": 56.9
+      },
+      "2026_5031157": {
+        "recShare": 92.4,
+        "ydShare": 99.2,
+        "tdShare": 99.2,
+        "avgPPA": 78.6,
+        "usageOverall": 87.4,
+        "heightIn": 98.9,
+        "weightLb": 93.5
+      },
+      "2026_5075390": {
+        "recShare": 24,
+        "ydShare": 38.2,
+        "tdShare": 0.4,
+        "avgPPA": 3.4,
+        "usageOverall": 59.5,
+        "heightIn": 94.7,
+        "weightLb": 88.5
+      },
+      "2026_5077060": {
+        "recShare": 84.4,
+        "ydShare": 62.2,
+        "tdShare": 60.7,
+        "avgPPA": 64.9,
+        "usageOverall": 60.3,
+        "heightIn": 40.1,
+        "weightLb": 67.6
+      },
+      "2026_5078165": {
+        "recShare": 78.6,
+        "ydShare": 95.8,
+        "tdShare": 97.7,
+        "avgPPA": 28.6,
+        "usageOverall": 62.6,
+        "heightIn": 26,
+        "weightLb": 56.9
+      },
+      "2026_5079475": {
+        "recShare": 35.9,
+        "ydShare": 72.5,
+        "tdShare": 26,
+        "avgPPA": 98.5,
+        "usageOverall": 16,
+        "heightIn": 71.4,
+        "weightLb": 67.6
+      },
+      "2026_5079524": {
+        "recShare": 58.4,
+        "ydShare": 76.7,
+        "tdShare": 99.6,
+        "avgPPA": 69.5,
+        "usageOverall": 26.7,
+        "heightIn": 85.5,
+        "weightLb": 57.6
+      },
+      "2026_5079580": {
+        "recShare": 44.7,
+        "ydShare": 82.1,
+        "tdShare": 79.4,
+        "avgPPA": 0.8,
+        "usageOverall": 53.4,
+        "heightIn": 55.7,
+        "weightLb": 48.9
+      },
+      "2026_5079720": {
+        "recShare": 93.5,
+        "ydShare": 97.3,
+        "tdShare": 98.9,
+        "avgPPA": 85.5,
+        "usageOverall": 97.3,
+        "heightIn": 94.7,
+        "weightLb": 94.3
+      },
+      "2026_5080703": {
+        "recShare": 78.6,
+        "ydShare": 71,
+        "tdShare": 42.4,
+        "avgPPA": 7.6,
+        "usageOverall": 84,
+        "heightIn": 14.9,
+        "weightLb": 23.7
+      },
+      "2026_5081172": {
+        "recShare": 59.9,
+        "ydShare": 84.4,
+        "tdShare": 99.6,
+        "avgPPA": 67.2,
+        "usageOverall": 53.1,
+        "heightIn": 14.9,
+        "weightLb": 1.1
+      },
+      "2026_5081209": {
+        "recShare": 92.7,
+        "ydShare": 88.5,
+        "tdShare": 97.7,
+        "avgPPA": 48.9,
+        "usageOverall": 84,
+        "heightIn": 71.4,
+        "weightLb": 80.9
+      },
+      "2026_5082584": {
+        "recShare": 70.2,
+        "ydShare": 97.3,
+        "tdShare": 97.7,
+        "avgPPA": 82.4,
+        "usageOverall": 13.4,
+        "heightIn": 26,
+        "weightLb": 28.2
+      },
+      "2026_5082587": {
+        "recShare": 65.3,
+        "ydShare": 86.6,
+        "tdShare": 99.6,
+        "avgPPA": 11.5,
+        "usageOverall": 81.7,
+        "heightIn": 40.1,
+        "weightLb": 4.6
+      },
+      "2026_5083747": {
+        "recShare": 38.5,
+        "ydShare": 55,
+        "tdShare": 71,
+        "avgPPA": 69.8,
+        "usageOverall": 37,
+        "heightIn": 98.9,
+        "weightLb": 74
+      },
+      "2026_5084771": {
+        "recShare": 96.9,
+        "ydShare": 99.6,
+        "tdShare": 99.6,
+        "avgPPA": 87.8,
+        "usageOverall": 96.9,
+        "heightIn": 99.6,
+        "weightLb": 98.1
+      },
+      "2026_5086096": {
+        "recShare": 34.4,
+        "ydShare": 50.4,
+        "tdShare": 79.4,
+        "avgPPA": 13.7,
+        "usageOverall": 36.3,
+        "heightIn": 55.7,
+        "weightLb": 14.5
+      },
+      "2026_5088336": {
+        "recShare": 74.4,
+        "ydShare": 97.3,
+        "tdShare": 97.7,
+        "avgPPA": 99.2,
+        "usageOverall": 16.8,
+        "heightIn": 40.1,
+        "weightLb": 56.9
+      },
+      "2026_5091830": {
+        "recShare": 98.5,
+        "ydShare": 95.4,
+        "tdShare": 97.7,
+        "avgPPA": 6.9,
+        "usageOverall": 98.1,
+        "heightIn": 1.5,
+        "weightLb": 1.1
+      },
+      "2026_5092483": {
+        "recShare": 70.6,
+        "ydShare": 77.1,
+        "tdShare": 71,
+        "avgPPA": 71,
+        "usageOverall": 53.1,
+        "heightIn": 94.7,
+        "weightLb": 56.9
+      },
+      "2026_5102556": {
+        "recShare": 8.4,
+        "ydShare": 19.1,
+        "tdShare": 6.1,
+        "avgPPA": 0,
+        "usageOverall": 27.9,
+        "heightIn": 14.9,
+        "weightLb": 23.7
+      },
+      "2026_5114311": {
+        "recShare": 12.2,
+        "ydShare": 43.5,
+        "tdShare": 71,
+        "avgPPA": 91.2,
+        "usageOverall": 3.8,
+        "heightIn": 71.4,
+        "weightLb": 57.6
+      },
+      "2026_5121750": {
+        "recShare": 67.2,
+        "ydShare": 34.4,
+        "tdShare": 13.4,
+        "avgPPA": 60.7,
+        "usageOverall": 26.7,
+        "heightIn": 1.5,
+        "weightLb": 24.4
+      },
+      "2026_5121879": {
+        "recShare": 72.9,
+        "ydShare": 65.6,
+        "tdShare": 13.4,
+        "avgPPA": 13,
+        "usageOverall": 65.3,
+        "heightIn": 85.5,
+        "weightLb": 93.5
+      },
+      "2026_5122082": {
+        "recShare": 26,
+        "ydShare": 26,
+        "tdShare": 11.1,
+        "avgPPA": 35.9,
+        "usageOverall": 19.5,
+        "heightIn": 71.4,
+        "weightLb": 48.1
+      },
+      "2026_5125905": {
+        "recShare": 18.7,
+        "ydShare": 26,
+        "tdShare": 11.1,
+        "avgPPA": 69.5,
+        "usageOverall": 17.6,
+        "heightIn": 71.4,
+        "weightLb": 3.1
+      },
+      "2026_5141394": {
+        "recShare": 48.5,
+        "ydShare": 38.9,
+        "tdShare": 11.1,
+        "avgPPA": 13,
+        "usageOverall": 24.8,
+        "heightIn": 5.7,
+        "weightLb": 48.5
+      },
+      "2026_5141525": {
+        "recShare": 26,
+        "ydShare": 88.9,
+        "tdShare": 34,
+        "avgPPA": 98.9,
+        "usageOverall": 29.8,
+        "heightIn": 26,
+        "weightLb": 58.4
+      },
+      "2026_5141582": {
+        "recShare": 77.5,
+        "ydShare": 75.2,
+        "tdShare": 92.7,
+        "avgPPA": 63.4,
+        "usageOverall": 60.3,
+        "heightIn": 71.4,
+        "weightLb": 80.9
+      },
+      "2026_5141697": {
+        "recShare": 66.8,
+        "ydShare": 55.3,
+        "tdShare": 71,
+        "avgPPA": 65.3,
+        "usageOverall": 42,
+        "heightIn": 14.9,
+        "weightLb": 16
+      },
+      "2026_5141711": {
+        "recShare": 48.5,
+        "ydShare": 68.7,
+        "tdShare": 79.4,
+        "avgPPA": 48.9,
+        "usageOverall": 16.8,
+        "heightIn": 40.1,
+        "weightLb": 17.2
+      },
+      "2026_5146735": {
+        "recShare": 91.2,
+        "ydShare": 96.6,
+        "tdShare": 93.5,
+        "avgPPA": 96.2,
+        "usageOverall": 48.5,
+        "heightIn": 94.7,
+        "weightLb": 68.7
+      },
+      "2026_5148784": {
+        "recShare": 24.8,
+        "ydShare": 80.2,
+        "tdShare": 88.2,
+        "avgPPA": 43.9,
+        "usageOverall": 32.4,
+        "heightIn": 71.4,
+        "weightLb": 68.7
+      },
+      "2026_5148787": {
+        "recShare": 50,
+        "ydShare": 75.6,
+        "tdShare": 42.4,
+        "avgPPA": 85.1,
+        "usageOverall": 26,
+        "heightIn": 40.1,
+        "weightLb": 49.6
+      },
+      "2026_5152158": {
+        "recShare": 70.2,
+        "ydShare": 82.4,
+        "tdShare": 97.7,
+        "avgPPA": 64.9,
+        "usageOverall": 68.3,
+        "heightIn": 40.1,
+        "weightLb": 14.5
+      },
+      "2026_5153074": {
+        "recShare": 96.6,
+        "ydShare": 98.5,
+        "tdShare": 79.4,
+        "avgPPA": 76,
+        "usageOverall": 92.4,
+        "heightIn": 40.1,
+        "weightLb": 40.1
+      },
+      "2026_5153399": {
+        "recShare": 59.9,
+        "ydShare": 42.4,
+        "tdShare": 60.7,
+        "avgPPA": 70.2,
+        "usageOverall": 60.3,
+        "heightIn": 40.1,
+        "weightLb": 3.1
+      },
+      "2026_5153730": {
+        "recShare": 85.9,
+        "ydShare": 73.7,
+        "tdShare": 0.4,
+        "avgPPA": 0.8,
+        "usageOverall": 90.1,
+        "heightIn": 1.5,
+        "weightLb": 3.1
+      },
+      "2026_5159175": {
+        "recShare": 85.9,
+        "ydShare": 94.3,
+        "tdShare": 76.7,
+        "avgPPA": 91.2,
+        "usageOverall": 78.6,
+        "heightIn": 26,
+        "weightLb": 28.2
+      },
+      "2026_5160469": {
+        "recShare": 5.3,
+        "ydShare": 14.1,
+        "tdShare": 55,
+        "avgPPA": 94.3,
+        "usageOverall": 18.3,
+        "heightIn": 14.9,
+        "weightLb": 14.5
+      },
+      "2026_5161013": {
+        "recShare": 42.7,
+        "ydShare": 40.8,
+        "tdShare": 29,
+        "avgPPA": 51.9,
+        "usageOverall": 37,
+        "heightIn": 71.4,
+        "weightLb": 56.9
+      },
+      "2026_5162858": {
+        "recShare": 29.4,
+        "ydShare": 49.2,
+        "tdShare": 14.5,
+        "avgPPA": 89.3,
+        "usageOverall": 6.1,
+        "heightIn": 26,
+        "weightLb": 14.5
+      },
+      "2026_5164749": {
+        "recShare": 38.9,
+        "ydShare": 55.7,
+        "tdShare": 13.4,
+        "avgPPA": 7.6,
+        "usageOverall": 73.3,
+        "heightIn": 40.1,
+        "weightLb": 37
+      },
+      "2026_5166797": {
+        "recShare": 88.9,
+        "ydShare": 57.3,
+        "tdShare": 11.1,
+        "avgPPA": 3.1,
+        "usageOverall": 89.7,
+        "heightIn": 26,
+        "weightLb": 17.2
+      },
+      "2026_5189530": {
+        "recShare": 75.2,
+        "ydShare": 92.7,
+        "tdShare": 99.6,
+        "avgPPA": 66.4,
+        "usageOverall": 69.8,
+        "heightIn": 71.4,
+        "weightLb": 56.9
+      },
+      "2026_5193298": {
+        "recShare": 92,
+        "ydShare": 61.1,
+        "tdShare": 88.2,
+        "avgPPA": 8.4,
+        "usageOverall": 96.2,
+        "heightIn": 26,
+        "weightLb": 4.6
+      },
+      "2026_5200482": {
+        "recShare": 75.6,
+        "ydShare": 73.7,
+        "tdShare": 13.4,
+        "avgPPA": 45.4,
+        "usageOverall": 58.8,
+        "heightIn": 40.1,
+        "weightLb": 67.6
+      },
+      "2026_5214557": {
+        "recShare": 93.5,
+        "ydShare": 99.6,
+        "tdShare": 99.6,
+        "avgPPA": 83.2,
+        "usageOverall": 75.6,
+        "heightIn": 85.5,
+        "weightLb": 98.1
+      },
+      "2026_5218381": {
+        "recShare": 59.9,
+        "ydShare": 98.1,
+        "tdShare": 42.4,
+        "avgPPA": 76,
+        "usageOverall": 73.3,
+        "heightIn": 5.7,
+        "weightLb": 25.2
+      },
+      "2026_5218891": {
+        "recShare": 60.7,
+        "ydShare": 75.6,
+        "tdShare": 97.7,
+        "avgPPA": 16.4,
+        "usageOverall": 55.3,
+        "heightIn": 14.9,
+        "weightLb": 37.4
+      },
+      "2026_5224764": {
+        "recShare": 83.6,
+        "ydShare": 62.2,
+        "tdShare": 97.7,
+        "avgPPA": 16.4,
+        "usageOverall": 62.6,
+        "heightIn": 40.1,
+        "weightLb": 37
+      },
+      "2026_5228002": {
+        "recShare": 80.2,
+        "ydShare": 83.2,
+        "tdShare": 13.4,
+        "avgPPA": 70.6,
+        "usageOverall": 40.5,
+        "heightIn": 26,
+        "weightLb": 23.7
+      },
+      "2026_5228764": {
+        "recShare": 93.1,
+        "ydShare": 97.7,
+        "tdShare": 99.6,
+        "avgPPA": 67.6,
+        "usageOverall": 60.7,
+        "heightIn": 26,
+        "weightLb": 37
+      },
+      "2026_5229489": {
+        "recShare": 59.9,
+        "ydShare": 78.2,
+        "tdShare": 97.7,
+        "avgPPA": 70.2,
+        "usageOverall": 26.7,
+        "heightIn": 71.4,
+        "weightLb": 72.1
+      },
+      "2026_5232343": {
+        "recShare": 35.5,
+        "ydShare": 38.5,
+        "tdShare": 60.7,
+        "avgPPA": 61.8,
+        "usageOverall": 37.8,
+        "heightIn": 85.5,
+        "weightLb": 48.9
+      },
+      "2026_5279329": {
+        "recShare": 66.8,
+        "ydShare": 96.9,
+        "tdShare": 71,
+        "avgPPA": 98.5,
+        "usageOverall": 40.5,
+        "heightIn": 55.7,
+        "weightLb": 8
+      },
+      "2026_5289510": {
+        "recShare": 43.9,
+        "ydShare": 96.6,
+        "tdShare": 97.7,
+        "avgPPA": 93.1,
+        "usageOverall": 80.9,
+        "heightIn": 14.9,
+        "weightLb": 4.6
+      },
+      "2026_5290573": {
+        "recShare": 70.6,
+        "ydShare": 82.4,
+        "tdShare": 11.1,
+        "avgPPA": 50.8,
+        "usageOverall": 55.3,
+        "heightIn": 71.4,
+        "weightLb": 49.6
+      },
+      "2026_5294063": {
+        "recShare": 69.5,
+        "ydShare": 61.8,
+        "tdShare": 11.1,
+        "avgPPA": 70.6,
+        "usageOverall": 58.8,
+        "heightIn": 14.9,
+        "weightLb": 8
+      },
+      "2026_5295811": {
+        "recShare": 54.6,
+        "ydShare": 48.5,
+        "tdShare": 42.4,
+        "avgPPA": 73.3,
+        "usageOverall": 22.9,
+        "heightIn": 26,
+        "weightLb": 8.8
+      },
+      "2026_5296150": {
+        "recShare": 93.1,
+        "ydShare": 65.3,
+        "tdShare": 99.6,
+        "avgPPA": 4.2,
+        "usageOverall": 93.5,
+        "heightIn": 26,
+        "weightLb": 56.9
+      },
+      "2026_5300543": {
+        "recShare": 35.9,
+        "ydShare": 50.4,
+        "tdShare": 88.2,
+        "avgPPA": 82.4,
+        "usageOverall": 37,
+        "heightIn": 40.1,
+        "weightLb": 23.7
+      }
+    },
+    "TE": {
+      "nfl_2024_erickall": {
+        "recShare": 32.8,
+        "ydShare": 69.7,
+        "tdShare": 94.1,
+        "avgPPA": 96.6,
+        "usageOverall": 34.5,
+        "heightIn": 73.1,
+        "weightLb": 62.2
+      },
+      "nfl_2023_davisallen": {
+        "recShare": 41.2,
+        "ydShare": 47.1,
+        "tdShare": 68.1,
+        "avgPPA": 37,
+        "usageOverall": 24.4,
+        "heightIn": 93.3,
+        "weightLb": 62.2
+      },
+      "nfl_2018_markandrews": {
+        "recShare": 82.4,
+        "ydShare": 73.9,
+        "tdShare": 55.5,
+        "avgPPA": 69.7,
+        "usageOverall": 78.2,
+        "heightIn": 73.1,
+        "weightLb": 73.1
+      },
+      "nfl_2025_elijaharroyo": {
+        "recShare": 24.4,
+        "ydShare": 39.5,
+        "tdShare": 56.3,
+        "avgPPA": 99.2,
+        "usageOverall": 22.7,
+        "heightIn": 38.7,
+        "weightLb": 38.7
+      },
+      "nfl_2020_devinasiasi": {
+        "recShare": 68.1,
+        "ydShare": 81.5,
+        "tdShare": 59.7,
+        "avgPPA": 83.2,
+        "usageOverall": 66.4,
+        "heightIn": 10.1,
+        "weightLb": 100
+      },
+      "nfl_2024_ajbarner": {
+        "recShare": 15.1,
+        "ydShare": 11.8,
+        "tdShare": 10.1,
+        "avgPPA": 82.4,
+        "usageOverall": 10.1,
+        "heightIn": 93.3,
+        "weightLb": 68.1
+      },
+      "nfl_2025_gavinbartholomew": {
+        "recShare": 36.1,
+        "ydShare": 19.3,
+        "tdShare": 47.1,
+        "avgPPA": 39.5,
+        "usageOverall": 20.2,
+        "heightIn": 73.1,
+        "weightLb": 62.2
+      },
+      "nfl_2021_johnbates": {
+        "recShare": 7.6,
+        "ydShare": 9.2,
+        "tdShare": 8.4,
+        "avgPPA": 32.8,
+        "usageOverall": 16,
+        "heightIn": 93.3,
+        "weightLb": 79.8
+      },
+      "nfl_2024_jaheimbell": {
+        "recShare": 55.5,
+        "ydShare": 49.6,
+        "tdShare": 22.7,
+        "avgPPA": 8.4,
+        "usageOverall": 76.5,
+        "heightIn": 10.1,
+        "weightLb": 9.2
+      },
+      "nfl_2022_danielbellinger": {
+        "recShare": 54.6,
+        "ydShare": 57.1,
+        "tdShare": 39.5,
+        "avgPPA": 15.1,
+        "usageOverall": 37.8,
+        "heightIn": 93.3,
+        "weightLb": 78.2
+      },
+      "nfl_2026_dallenbentley": {
+        "recShare": 84.9,
+        "ydShare": 85.7,
+        "tdShare": 73.1,
+        "avgPPA": 9.2,
+        "usageOverall": 74.8,
+        "heightIn": 38.7,
+        "weightLb": 93.3
+      },
+      "nfl_2026_nateboerkircher": {
+        "recShare": 8.4,
+        "ydShare": 2.5,
+        "tdShare": 33.6,
+        "avgPPA": 66.4,
+        "usageOverall": 6.7,
+        "heightIn": 38.7,
+        "weightLb": 62.2
+      },
+      "nfl_2024_brockbowers": {
+        "recShare": 69.7,
+        "ydShare": 62.2,
+        "tdShare": 66.4,
+        "avgPPA": 57.1,
+        "usageOverall": 88.2,
+        "heightIn": 38.7,
+        "weightLb": 19.3
+      },
+      "nfl_2020_harrisonbryant": {
+        "recShare": 85.7,
+        "ydShare": 90.8,
+        "tdShare": 75.6,
+        "avgPPA": 48.7,
+        "usageOverall": 85.7,
+        "heightIn": 73.1,
+        "weightLb": 19.3
+      },
+      "nfl_2022_grantcalcaterra": {
+        "recShare": 31.1,
+        "ydShare": 38.7,
+        "tdShare": 28.6,
+        "avgPPA": 85.7,
+        "usageOverall": 52.9,
+        "heightIn": 38.7,
+        "weightLb": 26.1
+      },
+      "nfl_2018_tylerconklin": {
+        "recShare": 42,
+        "ydShare": 57.1,
+        "tdShare": 60.5,
+        "avgPPA": 24.4,
+        "usageOverall": 97.5,
+        "heightIn": 38.7,
+        "weightLb": 19.3
+      },
+      "nfl_2026_joshcuevas": {
+        "recShare": 25.2,
+        "ydShare": 24.4,
+        "tdShare": 39.5,
+        "avgPPA": 27.7,
+        "usageOverall": 58,
+        "heightIn": 10.1,
+        "weightLb": 79.8
+      },
+      "nfl_2024_devinculp": {
+        "recShare": 0.8,
+        "ydShare": 0.8,
+        "tdShare": 11.8,
+        "avgPPA": 74.8,
+        "usageOverall": 2.5,
+        "heightIn": 38.7,
+        "weightLb": 7.6
+      },
+      "nfl_2020_tylerdavis": {
+        "recShare": 26.9,
+        "ydShare": 26.9,
+        "tdShare": 89.9,
+        "avgPPA": 47.1,
+        "usageOverall": 26.9,
+        "heightIn": 38.7,
+        "weightLb": 62.2
+      },
+      "nfl_2020_josiahdeguara": {
+        "recShare": 77.3,
+        "ydShare": 76.5,
+        "tdShare": 97.5,
+        "avgPPA": 52.9,
+        "usageOverall": 46.2,
+        "heightIn": 10.1,
+        "weightLb": 19.3
+      },
+      "nfl_2026_oscardelp": {
+        "recShare": 5,
+        "ydShare": 15.1,
+        "tdShare": 9.2,
+        "avgPPA": 21.8,
+        "usageOverall": 4.2,
+        "heightIn": 73.1,
+        "weightLb": 38.7
+      },
+      "nfl_2018_willdissly": {
+        "recShare": 14.3,
+        "ydShare": 20.2,
+        "tdShare": 29.4,
+        "avgPPA": 54.6,
+        "usageOverall": 14.3,
+        "heightIn": 38.7,
+        "weightLb": 95.8
+      },
+      "nfl_2022_gregdulcich": {
+        "recShare": 84,
+        "ydShare": 94.1,
+        "tdShare": 71.4,
+        "avgPPA": 97.5,
+        "usageOverall": 50.4,
+        "heightIn": 38.7,
+        "weightLb": 26.1
+      },
+      "nfl_2023_paynedurham": {
+        "recShare": 56.3,
+        "ydShare": 50.4,
+        "tdShare": 92.4,
+        "avgPPA": 30.3,
+        "usageOverall": 58.8,
+        "heightIn": 73.1,
+        "weightLb": 78.2
+      },
+      "nfl_2026_jackendries": {
+        "recShare": 37.8,
+        "ydShare": 26.9,
+        "tdShare": 30.3,
+        "avgPPA": 1.7,
+        "usageOverall": 43.7,
+        "heightIn": 38.7,
+        "weightLb": 19.3
+      },
+      "nfl_2025_mitchellevans": {
+        "recShare": 50.4,
+        "ydShare": 41.2,
+        "tdShare": 39.5,
+        "avgPPA": 54.6,
+        "usageOverall": 37.8,
+        "heightIn": 73.1,
+        "weightLb": 89.1
+      },
+      "nfl_2025_haroldfannin": {
+        "recShare": 100,
+        "ydShare": 100,
+        "tdShare": 100,
+        "avgPPA": 62.2,
+        "usageOverall": 100,
+        "heightIn": 38.7,
+        "weightLb": 0.8
+      },
+      "nfl_2019_noahfant": {
+        "recShare": 63,
+        "ydShare": 67.2,
+        "tdShare": 81.5,
+        "avgPPA": 49.6,
+        "usageOverall": 64.7,
+        "heightIn": 73.1,
+        "weightLb": 21
+      },
+      "nfl_2022_jakeferguson": {
+        "recShare": 93.3,
+        "ydShare": 83.2,
+        "tdShare": 87.4,
+        "avgPPA": 56.3,
+        "usageOverall": 47.9,
+        "heightIn": 73.1,
+        "weightLb": 26.1
+      },
+      "nfl_2025_terranceferguson": {
+        "recShare": 37.8,
+        "ydShare": 54.6,
+        "tdShare": 27.7,
+        "avgPPA": 88.2,
+        "usageOverall": 46.2,
+        "heightIn": 73.1,
+        "weightLb": 78.2
+      },
+      "nfl_2025_thomasfidone": {
+        "recShare": 35.3,
+        "ydShare": 37,
+        "tdShare": 6.7,
+        "avgPPA": 66.4,
+        "usageOverall": 26.1,
+        "heightIn": 93.3,
+        "weightLb": 78.2
+      },
+      "nfl_2021_patfreiermuth": {
+        "recShare": 35.3,
+        "ydShare": 44.5,
+        "tdShare": 13.4,
+        "avgPPA": 59.7,
+        "usageOverall": 89.9,
+        "heightIn": 73.1,
+        "weightLb": 83.2
+      },
+      "nfl_2018_troyfumagalli": {
+        "recShare": 89.1,
+        "ydShare": 80.7,
+        "tdShare": 54.6,
+        "avgPPA": 31.9,
+        "usageOverall": 74.8,
+        "heightIn": 93.3,
+        "weightLb": 43.7
+      },
+      "nfl_2025_orondegadsden": {
+        "recShare": 75.6,
+        "ydShare": 74.8,
+        "tdShare": 65.5,
+        "avgPPA": 94.1,
+        "usageOverall": 71.4,
+        "heightIn": 73.1,
+        "weightLb": 6.7
+      },
+      "nfl_2019_zachgentry": {
+        "recShare": 51.3,
+        "ydShare": 70.6,
+        "tdShare": 23.5,
+        "avgPPA": 89.1,
+        "usageOverall": 29.4,
+        "heightIn": 100,
+        "weightLb": 90.8
+      },
+      "nfl_2018_mikegesicki": {
+        "recShare": 78.2,
+        "ydShare": 52.9,
+        "tdShare": 88.2,
+        "avgPPA": 18.5,
+        "usageOverall": 70.6,
+        "heightIn": 93.3,
+        "weightLb": 62.2
+      },
+      "nfl_2021_kylengranson": {
+        "recShare": 47.9,
+        "ydShare": 64.7,
+        "tdShare": 71.4,
+        "avgPPA": 38.7,
+        "usageOverall": 63,
+        "heightIn": 10.1,
+        "weightLb": 5.9
+      },
+      "nfl_2021_noahgray": {
+        "recShare": 40.3,
+        "ydShare": 30.3,
+        "tdShare": 59.7,
+        "avgPPA": 31.1,
+        "usageOverall": 29.4,
+        "heightIn": 38.7,
+        "weightLb": 19.3
+      },
+      "nfl_2025_jacksonhawes": {
+        "recShare": 4.2,
+        "ydShare": 4.2,
+        "tdShare": 6.7,
+        "avgPPA": 100,
+        "usageOverall": 0.8,
+        "heightIn": 73.1,
+        "weightLb": 89.1
+      },
+      "nfl_2025_gunnarhelm": {
+        "recShare": 68.1,
+        "ydShare": 68.1,
+        "tdShare": 58,
+        "avgPPA": 78.2,
+        "usageOverall": 50.4,
+        "heightIn": 73.1,
+        "weightLb": 62.2
+      },
+      "nfl_2026_matthewhibner": {
+        "recShare": 21,
+        "ydShare": 31.9,
+        "tdShare": 50.4,
+        "avgPPA": 70.6,
+        "usageOverall": 31.1,
+        "heightIn": 73.1,
+        "weightLb": 68.9
+      },
+      "nfl_2019_tjhockenson": {
+        "recShare": 84,
+        "ydShare": 91.6,
+        "tdShare": 73.1,
+        "avgPPA": 89.9,
+        "usageOverall": 63,
+        "heightIn": 73.1,
+        "weightLb": 62.2
+      },
+      "nfl_2020_brycenhopkins": {
+        "recShare": 80.7,
+        "ydShare": 86.6,
+        "tdShare": 76.5,
+        "avgPPA": 42,
+        "usageOverall": 90.8,
+        "heightIn": 73.1,
+        "weightLb": 38.7
+      },
+      "nfl_2018_haydenhurst": {
+        "recShare": 74.8,
+        "ydShare": 78.2,
+        "tdShare": 32.8,
+        "avgPPA": 14.3,
+        "usageOverall": 74.8,
+        "heightIn": 73.1,
+        "weightLb": 62.2
+      },
+      "nfl_2018_ryanizzo": {
+        "recShare": 20.2,
+        "ydShare": 36.1,
+        "tdShare": 49.6,
+        "avgPPA": 80.7,
+        "usageOverall": 32.8,
+        "heightIn": 73.1,
+        "weightLb": 38.7
+      },
+      "nfl_2024_theojohnson": {
+        "recShare": 46.2,
+        "ydShare": 35.3,
+        "tdShare": 75.6,
+        "avgPPA": 86.6,
+        "usageOverall": 18.5,
+        "heightIn": 93.3,
+        "weightLb": 93.3
+      },
+      "nfl_2026_justinjoly": {
+        "recShare": 73.9,
+        "ydShare": 58,
+        "tdShare": 85.7,
+        "avgPPA": 25.2,
+        "usageOverall": 75.6,
+        "heightIn": 10.1,
+        "weightLb": 68.1
+      },
+      "nfl_2021_brevinjordan": {
+        "recShare": 59.7,
+        "ydShare": 73.9,
+        "tdShare": 85.7,
+        "avgPPA": 88.2,
+        "usageOverall": 85.7,
+        "heightIn": 10.1,
+        "weightLb": 38.7
+      },
+      "nfl_2026_willkacmarek": {
+        "recShare": 1.7,
+        "ydShare": 1.7,
+        "tdShare": 15.1,
+        "avgPPA": 55.5,
+        "usageOverall": 6.7,
+        "heightIn": 93.3,
+        "weightLb": 83.2
+      },
+      "nfl_2026_jarenkanak": {
+        "recShare": 66.4,
+        "ydShare": 66.4,
+        "tdShare": 6.7,
+        "avgPPA": 28.6,
+        "usageOverall": 46.2,
+        "heightIn": 0.8,
+        "weightLb": 2.5
+      },
+      "nfl_2020_daltonkeene": {
+        "recShare": 26.1,
+        "ydShare": 16.8,
+        "tdShare": 68.1,
+        "avgPPA": 16.8,
+        "usageOverall": 37.8,
+        "heightIn": 38.7,
+        "weightLb": 68.1
+      },
+      "nfl_2023_daltonkincaid": {
+        "recShare": 90.8,
+        "ydShare": 89.9,
+        "tdShare": 79.8,
+        "avgPPA": 77.3,
+        "usageOverall": 79,
+        "heightIn": 38.7,
+        "weightLb": 19.3
+      },
+      "nfl_2026_maxklare": {
+        "recShare": 45.4,
+        "ydShare": 33.6,
+        "tdShare": 15.1,
+        "avgPPA": 13.4,
+        "usageOverall": 56.3,
+        "heightIn": 73.1,
+        "weightLb": 27.7
+      },
+      "nfl_2026_marlinklein": {
+        "recShare": 30.3,
+        "ydShare": 21.8,
+        "tdShare": 26.1,
+        "avgPPA": 2.5,
+        "usageOverall": 38.7,
+        "heightIn": 93.3,
+        "weightLb": 62.2
+      },
+      "nfl_2020_colekmet": {
+        "recShare": 68.9,
+        "ydShare": 60.5,
+        "tdShare": 52.9,
+        "avgPPA": 71.4,
+        "usageOverall": 68.9,
+        "heightIn": 73.1,
+        "weightLb": 62.2
+      },
+      "nfl_2019_dawsonknox": {
+        "recShare": 2.5,
+        "ydShare": 6.7,
+        "tdShare": 6.7,
+        "avgPPA": 96.6,
+        "usageOverall": 2.5,
+        "heightIn": 38.7,
+        "weightLb": 62.2
+      },
+      "nfl_2022_charliekolar": {
+        "recShare": 81.5,
+        "ydShare": 85.7,
+        "tdShare": 87.4,
+        "avgPPA": 73.1,
+        "usageOverall": 77.3,
+        "heightIn": 93.3,
+        "weightLb": 89.1
+      },
+      "nfl_2026_tannerkoziol": {
+        "recShare": 96.6,
+        "ydShare": 92.4,
+        "tdShare": 73.9,
+        "avgPPA": 34.5,
+        "usageOverall": 82.4,
+        "heightIn": 98.3,
+        "weightLb": 19.3
+      },
+      "nfl_2023_zackkuntz": {
+        "recShare": 95,
+        "ydShare": 88.2,
+        "tdShare": 94.1,
+        "avgPPA": 41.2,
+        "usageOverall": 79.8,
+        "heightIn": 100,
+        "weightLb": 68.1
+      },
+      "nfl_2023_samlaporta": {
+        "recShare": 95.8,
+        "ydShare": 95.8,
+        "tdShare": 49.6,
+        "avgPPA": 38.7,
+        "usageOverall": 88.2,
+        "heightIn": 38.7,
+        "weightLb": 44.5
+      },
+      "nfl_2025_lukelachey": {
+        "recShare": 70.6,
+        "ydShare": 44.5,
+        "tdShare": 6.7,
+        "avgPPA": 29.4,
+        "usageOverall": 16.8,
+        "heightIn": 93.3,
+        "weightLb": 42
+      },
+      "nfl_2023_cameronlatu": {
+        "recShare": 24.4,
+        "ydShare": 23.5,
+        "tdShare": 31.1,
+        "avgPPA": 10.9,
+        "usageOverall": 53.8,
+        "heightIn": 73.1,
+        "weightLb": 29.4
+      },
+      "nfl_2022_isaiahlikely": {
+        "recShare": 93.3,
+        "ydShare": 93.3,
+        "tdShare": 96.6,
+        "avgPPA": 62.2,
+        "usageOverall": 86.6,
+        "heightIn": 38.7,
+        "weightLb": 19.3
+      },
+      "nfl_2021_hunterlong": {
+        "recShare": 89.9,
+        "ydShare": 84,
+        "tdShare": 71.4,
+        "avgPPA": 11.8,
+        "usageOverall": 97.5,
+        "heightIn": 73.1,
+        "weightLb": 72.3
+      },
+      "nfl_2025_colstonloveland": {
+        "recShare": 94.1,
+        "ydShare": 98.3,
+        "tdShare": 99.2,
+        "avgPPA": 84,
+        "usageOverall": 80.7,
+        "heightIn": 73.1,
+        "weightLb": 38.7
+      },
+      "nfl_2019_alizemack": {
+        "recShare": 43.7,
+        "ydShare": 27.7,
+        "tdShare": 42.9,
+        "avgPPA": 7.6,
+        "usageOverall": 40.3,
+        "heightIn": 38.7,
+        "weightLb": 29.4
+      },
+      "nfl_2023_willmallory": {
+        "recShare": 64.7,
+        "ydShare": 71.4,
+        "tdShare": 54.6,
+        "avgPPA": 68.9,
+        "usageOverall": 63,
+        "heightIn": 73.1,
+        "weightLb": 38.7
+      },
+      "nfl_2025_molikimatavao": {
+        "recShare": 58.8,
+        "ydShare": 65.5,
+        "tdShare": 36.1,
+        "avgPPA": 93.3,
+        "usageOverall": 58,
+        "heightIn": 93.3,
+        "weightLb": 91.6
+      },
+      "nfl_2023_michaelmayer": {
+        "recShare": 97.5,
+        "ydShare": 95,
+        "tdShare": 95.8,
+        "avgPPA": 50.4,
+        "usageOverall": 89.1,
+        "heightIn": 38.7,
+        "weightLb": 95
+      },
+      "nfl_2022_treymcbride": {
+        "recShare": 99.2,
+        "ydShare": 99.2,
+        "tdShare": 19.3,
+        "avgPPA": 75.6,
+        "usageOverall": 97.5,
+        "heightIn": 38.7,
+        "weightLb": 89.1
+      },
+      "nfl_2021_tremckitty": {
+        "recShare": 11.8,
+        "ydShare": 7.6,
+        "tdShare": 6.7,
+        "avgPPA": 35.3,
+        "usageOverall": 11.8,
+        "heightIn": 73.1,
+        "weightLb": 38.7
+      },
+      "nfl_2024_tannermclachlan": {
+        "recShare": 44.5,
+        "ydShare": 40.3,
+        "tdShare": 32.8,
+        "avgPPA": 67.2,
+        "usageOverall": 50.4,
+        "heightIn": 73.1,
+        "weightLb": 38.7
+      },
+      "nfl_2022_jamesmitchell": {
+        "recShare": 66.4,
+        "ydShare": 76.5,
+        "tdShare": 92.4,
+        "avgPPA": 45.4,
+        "usageOverall": 60.5,
+        "heightIn": 10.1,
+        "weightLb": 26.1
+      },
+      "nfl_2019_fostermoreau": {
+        "recShare": 20.2,
+        "ydShare": 17.6,
+        "tdShare": 36.1,
+        "avgPPA": 44.5,
+        "usageOverall": 10.1,
+        "heightIn": 93.3,
+        "weightLb": 78.2
+      },
+      "nfl_2022_nickmuse": {
+        "recShare": 18.5,
+        "ydShare": 15.1,
+        "tdShare": 26.1,
+        "avgPPA": 5,
+        "usageOverall": 26.1,
+        "heightIn": 38.7,
+        "weightLb": 62.2
+      },
+      "nfl_2023_lukemusgrave": {
+        "recShare": 3.4,
+        "ydShare": 5.9,
+        "tdShare": 16,
+        "avgPPA": 98.3,
+        "usageOverall": 85.7,
+        "heightIn": 93.3,
+        "weightLb": 62.2
+      },
+      "nfl_2019_isaacnauta": {
+        "recShare": 32.8,
+        "ydShare": 47.1,
+        "tdShare": 24.4,
+        "avgPPA": 52.9,
+        "usageOverall": 14.3,
+        "heightIn": 38.7,
+        "weightLb": 19.3
+      },
+      "nfl_2020_albertokwuegbunam": {
+        "recShare": 28.6,
+        "ydShare": 29.4,
+        "tdShare": 95,
+        "avgPPA": 81.5,
+        "usageOverall": 34.5,
+        "heightIn": 73.1,
+        "weightLb": 78.2
+      },
+      "nfl_2019_josholiver": {
+        "recShare": 86.6,
+        "ydShare": 87.4,
+        "tdShare": 61.3,
+        "avgPPA": 10.1,
+        "usageOverall": 95,
+        "heightIn": 73.1,
+        "weightLb": 62.2
+      },
+      "nfl_2022_cadeotton": {
+        "recShare": 28.6,
+        "ydShare": 18.5,
+        "tdShare": 19.3,
+        "avgPPA": 3.4,
+        "usageOverall": 56.3,
+        "heightIn": 73.1,
+        "weightLb": 19.3
+      },
+      "nfl_2020_colbyparkinson": {
+        "recShare": 73.9,
+        "ydShare": 73.9,
+        "tdShare": 12.6,
+        "avgPPA": 17.6,
+        "usageOverall": 81.5,
+        "heightIn": 98.3,
+        "weightLb": 68.1
+      },
+      "nfl_2021_kylepitts": {
+        "recShare": 43.7,
+        "ydShare": 64.7,
+        "tdShare": 82.4,
+        "avgPPA": 79,
+        "usageOverall": 98.3,
+        "heightIn": 93.3,
+        "weightLb": 41.2
+      },
+      "nfl_2022_teaganquitoriano": {
+        "recShare": 16,
+        "ydShare": 10.9,
+        "tdShare": 52.1,
+        "avgPPA": 46.2,
+        "usageOverall": 5,
+        "heightIn": 93.3,
+        "weightLb": 95
+      },
+      "nfl_2026_eliraridon": {
+        "recShare": 53.8,
+        "ydShare": 60.5,
+        "tdShare": 6.7,
+        "avgPPA": 19.3,
+        "usageOverall": 52.9,
+        "heightIn": 98.3,
+        "weightLb": 68.1
+      },
+      "nfl_2024_tipreiman": {
+        "recShare": 5.9,
+        "ydShare": 5,
+        "tdShare": 42.9,
+        "avgPPA": 85.7,
+        "usageOverall": 3.4,
+        "heightIn": 73.1,
+        "weightLb": 97.5
+      },
+      "nfl_2026_samroush": {
+        "recShare": 88.2,
+        "ydShare": 80.7,
+        "tdShare": 49.6,
+        "avgPPA": 4.2,
+        "usageOverall": 85.7,
+        "heightIn": 73.1,
+        "weightLb": 89.1
+      },
+      "nfl_2026_joeroyer": {
+        "recShare": 39.5,
+        "ydShare": 48.7,
+        "tdShare": 47.1,
+        "avgPPA": 42.9,
+        "usageOverall": 29.4,
+        "heightIn": 73.1,
+        "weightLb": 62.2
+      },
+      "nfl_2022_jeremyruckert": {
+        "recShare": 6.7,
+        "ydShare": 3.4,
+        "tdShare": 17.6,
+        "avgPPA": 26.1,
+        "usageOverall": 22.7,
+        "heightIn": 73.1,
+        "weightLb": 72.3
+      },
+      "nfl_2026_carsenryan": {
+        "recShare": 73.9,
+        "ydShare": 78.2,
+        "tdShare": 64.7,
+        "avgPPA": 22.7,
+        "usageOverall": 42,
+        "heightIn": 38.7,
+        "weightLb": 62.2
+      },
+      "nfl_2026_kenyonsadiq": {
+        "recShare": 63.9,
+        "ydShare": 52.1,
+        "tdShare": 79.8,
+        "avgPPA": 20.2,
+        "usageOverall": 69.7,
+        "heightIn": 10.1,
+        "weightLb": 38.7
+      },
+      "nfl_2019_drewsample": {
+        "recShare": 17.6,
+        "ydShare": 8.4,
+        "tdShare": 52.1,
+        "avgPPA": 52.9,
+        "usageOverall": 16,
+        "heightIn": 73.1,
+        "weightLb": 89.9
+      },
+      "nfl_2024_jatavionsanders": {
+        "recShare": 47.9,
+        "ydShare": 64.7,
+        "tdShare": 22.7,
+        "avgPPA": 79.8,
+        "usageOverall": 41.2,
+        "heightIn": 38.7,
+        "weightLb": 27.7
+      },
+      "nfl_2023_lukeschoonmaker": {
+        "recShare": 53.8,
+        "ydShare": 47.1,
+        "tdShare": 42.9,
+        "avgPPA": 68.9,
+        "usageOverall": 37.8,
+        "heightIn": 93.3,
+        "weightLb": 62.2
+      },
+      "nfl_2018_daltonschultz": {
+        "recShare": 22.7,
+        "ydShare": 12.6,
+        "tdShare": 42.9,
+        "avgPPA": 6.7,
+        "usageOverall": 22.7,
+        "heightIn": 93.3,
+        "weightLb": 26.1
+      },
+      "nfl_2026_bauersharp": {
+        "recShare": 11.8,
+        "ydShare": 13.4,
+        "tdShare": 27.7,
+        "avgPPA": 0.8,
+        "usageOverall": 24.4,
+        "heightIn": 73.1,
+        "weightLb": 41.2
+      },
+      "nfl_2024_bensinnott": {
+        "recShare": 79.8,
+        "ydShare": 83.2,
+        "tdShare": 64.7,
+        "avgPPA": 92.4,
+        "usageOverall": 60.5,
+        "heightIn": 38.7,
+        "weightLb": 38.7
+      },
+      "nfl_2019_irvsmith": {
+        "recShare": 50.4,
+        "ydShare": 51.3,
+        "tdShare": 44.5,
+        "avgPPA": 40.3,
+        "usageOverall": 43.7,
+        "heightIn": 38.7,
+        "weightLb": 21
+      },
+      "nfl_2019_kadensmith": {
+        "recShare": 71.4,
+        "ydShare": 68.9,
+        "tdShare": 21,
+        "avgPPA": 58.8,
+        "usageOverall": 92.4,
+        "heightIn": 73.1,
+        "weightLb": 72.3
+      },
+      "nfl_2018_durhamsmythe": {
+        "recShare": 13.4,
+        "ydShare": 25.2,
+        "tdShare": 10.9,
+        "avgPPA": 16,
+        "usageOverall": 10.1,
+        "heightIn": 73.1,
+        "weightLb": 81.5
+      },
+      "nfl_2019_jacesternberger": {
+        "recShare": 79.8,
+        "ydShare": 89.1,
+        "tdShare": 98.3,
+        "avgPPA": 60.5,
+        "usageOverall": 68.1,
+        "heightIn": 38.7,
+        "weightLb": 62.2
+      },
+      "nfl_2024_cadestover": {
+        "recShare": 61.3,
+        "ydShare": 61.3,
+        "tdShare": 62.2,
+        "avgPPA": 91.6,
+        "usageOverall": 66.4,
+        "heightIn": 38.7,
+        "weightLb": 68.1
+      },
+      "nfl_2026_elistowers": {
+        "recShare": 88.2,
+        "ydShare": 80.7,
+        "tdShare": 43.7,
+        "avgPPA": 37,
+        "usageOverall": 92.4,
+        "heightIn": 38.7,
+        "weightLb": 5.9
+      },
+      "nfl_2023_brentonstrange": {
+        "recShare": 30.3,
+        "ydShare": 28.6,
+        "tdShare": 57.1,
+        "avgPPA": 90.8,
+        "usageOverall": 14.3,
+        "heightIn": 10.1,
+        "weightLb": 41.2
+      },
+      "nfl_2020_stephensullivan": {
+        "recShare": 21.8,
+        "ydShare": 35.3,
+        "tdShare": 36.1,
+        "avgPPA": 63.9,
+        "usageOverall": 31.1,
+        "heightIn": 73.1,
+        "weightLb": 26.1
+      },
+      "nfl_2019_tommysweeney": {
+        "recShare": 63,
+        "ydShare": 42.9,
+        "tdShare": 37,
+        "avgPPA": 12.6,
+        "usageOverall": 32.8,
+        "heightIn": 73.1,
+        "weightLb": 89.1
+      },
+      "nfl_2025_masontaylor": {
+        "recShare": 60.5,
+        "ydShare": 42.9,
+        "tdShare": 21,
+        "avgPPA": 26.9,
+        "usageOverall": 74.8,
+        "heightIn": 93.3,
+        "weightLb": 72.3
+      },
+      "nfl_2018_ianthomas": {
+        "recShare": 11.8,
+        "ydShare": 31.9,
+        "tdShare": 64.7,
+        "avgPPA": 95,
+        "usageOverall": 20.2,
+        "heightIn": 73.1,
+        "weightLb": 43.7
+      },
+      "nfl_2026_seydoutraore": {
+        "recShare": 48.7,
+        "ydShare": 33.6,
+        "tdShare": 77.3,
+        "avgPPA": 33.6,
+        "usageOverall": 40.3,
+        "heightIn": 38.7,
+        "weightLb": 5.9
+      },
+      "nfl_2021_tommytremble": {
+        "recShare": 11.8,
+        "ydShare": 10.9,
+        "tdShare": 6.7,
+        "avgPPA": 5.9,
+        "usageOverall": 10.1,
+        "heightIn": 10.1,
+        "weightLb": 2.5
+      },
+      "nfl_2022_coleturner": {
+        "recShare": 58,
+        "ydShare": 53.8,
+        "tdShare": 83.2,
+        "avgPPA": 58,
+        "usageOverall": 95,
+        "heightIn": 93.3,
+        "weightLb": 19.3
+      },
+      "nfl_2025_tylerwarren": {
+        "recShare": 98.3,
+        "ydShare": 97.5,
+        "tdShare": 84,
+        "avgPPA": 64.7,
+        "usageOverall": 99.2,
+        "heightIn": 93.3,
+        "weightLb": 81.5
+      },
+      "nfl_2019_kahalewarring": {
+        "recShare": 77.3,
+        "ydShare": 57.1,
+        "tdShare": 68.9,
+        "avgPPA": 21,
+        "usageOverall": 67.2,
+        "heightIn": 93.3,
+        "weightLb": 62.2
+      },
+      "nfl_2023_darnellwashington": {
+        "recShare": 13.4,
+        "ydShare": 21.8,
+        "tdShare": 17.6,
+        "avgPPA": 63.9,
+        "usageOverall": 11.8,
+        "heightIn": 98.3,
+        "weightLb": 97.5
+      },
+      "nfl_2019_trevonwesco": {
+        "recShare": 16.8,
+        "ydShare": 16,
+        "tdShare": 7.6,
+        "avgPPA": 23.5,
+        "usageOverall": 17.6,
+        "heightIn": 38.7,
+        "weightLb": 98.3
+      },
+      "nfl_2023_joshwhyle": {
+        "recShare": 39.5,
+        "ydShare": 23.5,
+        "tdShare": 45.4,
+        "avgPPA": 47.9,
+        "usageOverall": 47.9,
+        "heightIn": 93.3,
+        "weightLb": 62.2
+      },
+      "nfl_2024_jaredwiley": {
+        "recShare": 53.8,
+        "ydShare": 48.7,
+        "tdShare": 89.1,
+        "avgPPA": 76.5,
+        "usageOverall": 56.3,
+        "heightIn": 98.3,
+        "weightLb": 89.1
+      },
+      "nfl_2023_braydenwillis": {
+        "recShare": 57.1,
+        "ydShare": 58.8,
+        "tdShare": 81.5,
+        "avgPPA": 43.7,
+        "usageOverall": 52.9,
+        "heightIn": 38.7,
+        "weightLb": 9.2
+      },
+      "nfl_2019_calebwilson": {
+        "recShare": 91.6,
+        "ydShare": 96.6,
+        "tdShare": 92.4,
+        "avgPPA": 73.1,
+        "usageOverall": 93.3,
+        "heightIn": 38.7,
+        "weightLb": 5.9
+      },
+      "nfl_2022_jelaniwoods": {
+        "recShare": 35.3,
+        "ydShare": 38.7,
+        "tdShare": 79.8,
+        "avgPPA": 73.9,
+        "usageOverall": 64.7,
+        "heightIn": 98.3,
+        "weightLb": 99.2
+      },
+      "2025_4428451": {
+        "recShare": 0,
+        "ydShare": 3.4,
+        "tdShare": 6.7,
+        "avgPPA": 29.4,
+        "usageOverall": 3.4,
+        "heightIn": 73.1,
+        "weightLb": 19.3
+      },
+      "2025_4431009": {
+        "recShare": 35.3,
+        "ydShare": 35.3,
+        "tdShare": 36.1,
+        "avgPPA": 6.7,
+        "usageOverall": 24.4,
+        "heightIn": 10.1,
+        "weightLb": 43.7
+      },
+      "2025_4431051": {
+        "recShare": 32.8,
+        "ydShare": 28.6,
+        "tdShare": 10.1,
+        "avgPPA": 18.5,
+        "usageOverall": 67.2,
+        "heightIn": 38.7,
+        "weightLb": 19.3
+      },
+      "2025_4431081": {
+        "recShare": 5.9,
+        "ydShare": 5,
+        "tdShare": 87.4,
+        "avgPPA": 1.7,
+        "usageOverall": 22.7,
+        "heightIn": 38.7,
+        "weightLb": 38.7
+      },
+      "2025_4431461": {
+        "recShare": 55.5,
+        "ydShare": 38.7,
+        "tdShare": 64.7,
+        "avgPPA": 6.7,
+        "usageOverall": 47.9,
+        "heightIn": 38.7,
+        "weightLb": 78.2
+      },
+      "2025_4431574": {
+        "recShare": 88.2,
+        "ydShare": 80.7,
+        "tdShare": 43.7,
+        "avgPPA": 37,
+        "usageOverall": 92.4,
+        "heightIn": 38.7,
+        "weightLb": 5.9
+      },
+      "2025_4432260": {
+        "recShare": 21,
+        "ydShare": 31.9,
+        "tdShare": 50.4,
+        "avgPPA": 70.6,
+        "usageOverall": 31.1,
+        "heightIn": 73.1,
+        "weightLb": 68.9
+      },
+      "2025_4432744": {
+        "recShare": 16,
+        "ydShare": 11.8,
+        "tdShare": 19.3,
+        "avgPPA": 31.9,
+        "usageOverall": 5,
+        "heightIn": 38.7,
+        "weightLb": 38.7
+      },
+      "2025_4565859": {
+        "recShare": 39.5,
+        "ydShare": 48.7,
+        "tdShare": 47.1,
+        "avgPPA": 42.9,
+        "usageOverall": 29.4,
+        "heightIn": 73.1,
+        "weightLb": 62.2
+      },
+      "2025_4566198": {
+        "recShare": 24.4,
+        "ydShare": 30.3,
+        "tdShare": 50.4,
+        "avgPPA": 24.4,
+        "usageOverall": 42,
+        "heightIn": 38.7,
+        "weightLb": 62.2
+      },
+      "2025_4569262": {
+        "recShare": 0,
+        "ydShare": 0.8,
+        "tdShare": 27.7,
+        "avgPPA": 32.8,
+        "usageOverall": 3.4,
+        "heightIn": 93.3,
+        "weightLb": 99.2
+      },
+      "2025_4569727": {
+        "recShare": 4.2,
+        "ydShare": 1.7,
+        "tdShare": 6.7,
+        "avgPPA": 0.8,
+        "usageOverall": 31.1,
+        "heightIn": 73.1,
+        "weightLb": 19.3
+      },
+      "2025_4583089": {
+        "recShare": 0,
+        "ydShare": 1.7,
+        "tdShare": 39.5,
+        "avgPPA": 95,
+        "usageOverall": 0.8,
+        "heightIn": 0.8,
+        "weightLb": 19.3
+      },
+      "2025_4588298": {
+        "recShare": 21.8,
+        "ydShare": 12.6,
+        "tdShare": 68.1,
+        "avgPPA": 2.5,
+        "usageOverall": 41.2,
+        "heightIn": 73.1,
+        "weightLb": 62.2
+      },
+      "2025_4594749": {
+        "recShare": 63,
+        "ydShare": 71.4,
+        "tdShare": 62.2,
+        "avgPPA": 11.8,
+        "usageOverall": 89.1,
+        "heightIn": 38.7,
+        "weightLb": 19.3
+      },
+      "2025_4602192": {
+        "recShare": 0.8,
+        "ydShare": 1.7,
+        "tdShare": 36.1,
+        "avgPPA": 94.1,
+        "usageOverall": 0.8,
+        "heightIn": 73.1,
+        "weightLb": 0.8
+      },
+      "2025_4603191": {
+        "recShare": 14.3,
+        "ydShare": 5.9,
+        "tdShare": 23.5,
+        "avgPPA": 6.7,
+        "usageOverall": 26.1,
+        "heightIn": 73.1,
+        "weightLb": 62.2
+      },
+      "2025_4608858": {
+        "recShare": 68.9,
+        "ydShare": 60.5,
+        "tdShare": 6.7,
+        "avgPPA": 7.6,
+        "usageOverall": 74.8,
+        "heightIn": 38.7,
+        "weightLb": 38.7
+      },
+      "2025_4608936": {
+        "recShare": 4.2,
+        "ydShare": 1.7,
+        "tdShare": 6.7,
+        "avgPPA": 0,
+        "usageOverall": 5,
+        "heightIn": 0.8,
+        "weightLb": 38.7
+      },
+      "2025_4612189": {
+        "recShare": 2.5,
+        "ydShare": 1.7,
+        "tdShare": 21,
+        "avgPPA": 8.4,
+        "usageOverall": 3.4,
+        "heightIn": 10.1,
+        "weightLb": 5.9
+      },
+      "2025_4612824": {
+        "recShare": 7.6,
+        "ydShare": 6.7,
+        "tdShare": 21,
+        "avgPPA": 1.7,
+        "usageOverall": 18.5,
+        "heightIn": 38.7,
+        "weightLb": 19.3
+      },
+      "2025_4683210": {
+        "recShare": 20.2,
+        "ydShare": 3.4,
+        "tdShare": 6.7,
+        "avgPPA": 4.2,
+        "usageOverall": 17.6,
+        "heightIn": 73.1,
+        "weightLb": 68.1
+      },
+      "2025_4683571": {
+        "recShare": 17.6,
+        "ydShare": 8.4,
+        "tdShare": 32.8,
+        "avgPPA": 31.1,
+        "usageOverall": 18.5,
+        "heightIn": 38.7,
+        "weightLb": 19.3
+      },
+      "2025_4685504": {
+        "recShare": 88.2,
+        "ydShare": 80.7,
+        "tdShare": 49.6,
+        "avgPPA": 4.2,
+        "usageOverall": 85.7,
+        "heightIn": 73.1,
+        "weightLb": 89.1
+      },
+      "2025_4685540": {
+        "recShare": 73.9,
+        "ydShare": 78.2,
+        "tdShare": 64.7,
+        "avgPPA": 22.7,
+        "usageOverall": 42,
+        "heightIn": 38.7,
+        "weightLb": 62.2
+      },
+      "2025_4685560": {
+        "recShare": 7.6,
+        "ydShare": 7.6,
+        "tdShare": 32.8,
+        "avgPPA": 10.9,
+        "usageOverall": 0.8,
+        "heightIn": 73.1,
+        "weightLb": 0.8
+      },
+      "2025_4686248": {
+        "recShare": 8.4,
+        "ydShare": 2.5,
+        "tdShare": 33.6,
+        "avgPPA": 66.4,
+        "usageOverall": 6.7,
+        "heightIn": 38.7,
+        "weightLb": 62.2
+      },
+      "2025_4687017": {
+        "recShare": 31.1,
+        "ydShare": 18.5,
+        "tdShare": 6.7,
+        "avgPPA": 0.8,
+        "usageOverall": 53.8,
+        "heightIn": 0.8,
+        "weightLb": 0
+      },
+      "2025_4687486": {
+        "recShare": 43.7,
+        "ydShare": 19.3,
+        "tdShare": 23.5,
+        "avgPPA": 2.5,
+        "usageOverall": 43.7,
+        "heightIn": 10.1,
+        "weightLb": 19.3
+      },
+      "2025_4693236": {
+        "recShare": 7.6,
+        "ydShare": 12.6,
+        "tdShare": 59.7,
+        "avgPPA": 85.7,
+        "usageOverall": 4.2,
+        "heightIn": 10.1,
+        "weightLb": 5.9
+      },
+      "2025_4693370": {
+        "recShare": 26.1,
+        "ydShare": 20.2,
+        "tdShare": 10.1,
+        "avgPPA": 39.5,
+        "usageOverall": 16.8,
+        "heightIn": 0.8,
+        "weightLb": 27.7
+      },
+      "2025_4695195": {
+        "recShare": 80.7,
+        "ydShare": 81.5,
+        "tdShare": 64.7,
+        "avgPPA": 4.2,
+        "usageOverall": 47.9,
+        "heightIn": 10.1,
+        "weightLb": 78.2
+      },
+      "2025_4695223": {
+        "recShare": 0,
+        "ydShare": 0.8,
+        "tdShare": 19.3,
+        "avgPPA": 98.3,
+        "usageOverall": 0.8,
+        "heightIn": 73.1,
+        "weightLb": 19.3
+      },
+      "2025_4695705": {
+        "recShare": 30.3,
+        "ydShare": 21.8,
+        "tdShare": 26.1,
+        "avgPPA": 2.5,
+        "usageOverall": 38.7,
+        "heightIn": 93.3,
+        "weightLb": 62.2
+      },
+      "2025_4699678": {
+        "recShare": 4.2,
+        "ydShare": 6.7,
+        "tdShare": 39.5,
+        "avgPPA": 71.4,
+        "usageOverall": 3.4,
+        "heightIn": 38.7,
+        "weightLb": 68.1
+      },
+      "2025_4702559": {
+        "recShare": 5,
+        "ydShare": 15.1,
+        "tdShare": 9.2,
+        "avgPPA": 21.8,
+        "usageOverall": 4.2,
+        "heightIn": 73.1,
+        "weightLb": 38.7
+      },
+      "2025_4702913": {
+        "recShare": 16.8,
+        "ydShare": 16.8,
+        "tdShare": 21,
+        "avgPPA": 7.6,
+        "usageOverall": 26.9,
+        "heightIn": 38.7,
+        "weightLb": 19.3
+      },
+      "2025_4708354": {
+        "recShare": 66.4,
+        "ydShare": 50.4,
+        "tdShare": 27.7,
+        "avgPPA": 2.5,
+        "usageOverall": 75.6,
+        "heightIn": 10.1,
+        "weightLb": 29.4
+      },
+      "2025_4708490": {
+        "recShare": 26.9,
+        "ydShare": 20.2,
+        "tdShare": 21,
+        "avgPPA": 6.7,
+        "usageOverall": 69.7,
+        "heightIn": 73.1,
+        "weightLb": 62.2
+      },
+      "2025_4709804": {
+        "recShare": 6.7,
+        "ydShare": 7.6,
+        "tdShare": 10.1,
+        "avgPPA": 48.7,
+        "usageOverall": 14.3,
+        "heightIn": 73.1,
+        "weightLb": 38.7
+      },
+      "2025_4710711": {
+        "recShare": 26.9,
+        "ydShare": 15.1,
+        "tdShare": 19.3,
+        "avgPPA": 33.6,
+        "usageOverall": 24.4,
+        "heightIn": 38.7,
+        "weightLb": 62.2
+      },
+      "2025_4714379": {
+        "recShare": 48.7,
+        "ydShare": 33.6,
+        "tdShare": 77.3,
+        "avgPPA": 33.6,
+        "usageOverall": 40.3,
+        "heightIn": 38.7,
+        "weightLb": 5.9
+      },
+      "2025_4746099": {
+        "recShare": 26.9,
+        "ydShare": 8.4,
+        "tdShare": 6.7,
+        "avgPPA": 1.7,
+        "usageOverall": 24.4,
+        "heightIn": 10.1,
+        "weightLb": 68.9
+      },
+      "2025_4749402": {
+        "recShare": 88.2,
+        "ydShare": 91.6,
+        "tdShare": 50.4,
+        "avgPPA": 10.1,
+        "usageOverall": 70.6,
+        "heightIn": 38.7,
+        "weightLb": 5.9
+      },
+      "2025_4799991": {
+        "recShare": 2.5,
+        "ydShare": 3.4,
+        "tdShare": 19.3,
+        "avgPPA": 71.4,
+        "usageOverall": 5,
+        "heightIn": 98.3,
+        "weightLb": 78.2
+      },
+      "2025_4801276": {
+        "recShare": 26.9,
+        "ydShare": 27.7,
+        "tdShare": 13.4,
+        "avgPPA": 6.7,
+        "usageOverall": 37.8,
+        "heightIn": 73.1,
+        "weightLb": 68.9
+      },
+      "2025_4804882": {
+        "recShare": 75.6,
+        "ydShare": 60.5,
+        "tdShare": 94.1,
+        "avgPPA": 7.6,
+        "usageOverall": 77.3,
+        "heightIn": 73.1,
+        "weightLb": 44.5
+      },
+      "2025_4816104": {
+        "recShare": 7.6,
+        "ydShare": 16.8,
+        "tdShare": 49.6,
+        "avgPPA": 41.2,
+        "usageOverall": 5,
+        "heightIn": 73.1,
+        "weightLb": 83.2
+      },
+      "2025_4816323": {
+        "recShare": 6.7,
+        "ydShare": 1.7,
+        "tdShare": 32.8,
+        "avgPPA": 6.7,
+        "usageOverall": 10.1,
+        "heightIn": 10.1,
+        "weightLb": 38.7
+      },
+      "2025_4819215": {
+        "recShare": 6.7,
+        "ydShare": 11.8,
+        "tdShare": 43.7,
+        "avgPPA": 28.6,
+        "usageOverall": 22.7,
+        "heightIn": 38.7,
+        "weightLb": 42
+      },
+      "2025_4819226": {
+        "recShare": 54.6,
+        "ydShare": 74.8,
+        "tdShare": 99.2,
+        "avgPPA": 43.7,
+        "usageOverall": 50.4,
+        "heightIn": 93.3,
+        "weightLb": 89.1
+      },
+      "2025_4831959": {
+        "recShare": 53.8,
+        "ydShare": 60.5,
+        "tdShare": 6.7,
+        "avgPPA": 19.3,
+        "usageOverall": 52.9,
+        "heightIn": 98.3,
+        "weightLb": 68.1
+      },
+      "2025_4832029": {
+        "recShare": 2.5,
+        "ydShare": 0.8,
+        "tdShare": 7.6,
+        "avgPPA": 0.8,
+        "usageOverall": 6.7,
+        "heightIn": 73.1,
+        "weightLb": 38.7
+      },
+      "2025_4832827": {
+        "recShare": 55.5,
+        "ydShare": 42.9,
+        "tdShare": 49.6,
+        "avgPPA": 26.9,
+        "usageOverall": 40.3,
+        "heightIn": 73.1,
+        "weightLb": 38.7
+      },
+      "2025_4833029": {
+        "recShare": 45.4,
+        "ydShare": 33.6,
+        "tdShare": 15.1,
+        "avgPPA": 13.4,
+        "usageOverall": 56.3,
+        "heightIn": 73.1,
+        "weightLb": 27.7
+      },
+      "2025_4838696": {
+        "recShare": 28.6,
+        "ydShare": 44.5,
+        "tdShare": 62.2,
+        "avgPPA": 38.7,
+        "usageOverall": 32.8,
+        "heightIn": 38.7,
+        "weightLb": 78.2
+      },
+      "2025_4867887": {
+        "recShare": 71.4,
+        "ydShare": 60.5,
+        "tdShare": 49.6,
+        "avgPPA": 16,
+        "usageOverall": 68.1,
+        "heightIn": 0.8,
+        "weightLb": 38.7
+      },
+      "2025_4869390": {
+        "recShare": 4.2,
+        "ydShare": 1.7,
+        "tdShare": 15.1,
+        "avgPPA": 10.9,
+        "usageOverall": 5,
+        "heightIn": 38.7,
+        "weightLb": 38.7
+      },
+      "2025_4869519": {
+        "recShare": 32.8,
+        "ydShare": 28.6,
+        "tdShare": 16,
+        "avgPPA": 29.4,
+        "usageOverall": 43.7,
+        "heightIn": 93.3,
+        "weightLb": 42
+      },
+      "2025_4869602": {
+        "recShare": 64.7,
+        "ydShare": 58.8,
+        "tdShare": 54.6,
+        "avgPPA": 7.6,
+        "usageOverall": 32.8,
+        "heightIn": 38.7,
+        "weightLb": 7.6
+      },
+      "2025_4869728": {
+        "recShare": 30.3,
+        "ydShare": 28.6,
+        "tdShare": 58,
+        "avgPPA": 56.3,
+        "usageOverall": 40.3,
+        "heightIn": 10.1,
+        "weightLb": 62.2
+      },
+      "2025_4869745": {
+        "recShare": 4.2,
+        "ydShare": 6.7,
+        "tdShare": 33.6,
+        "avgPPA": 34.5,
+        "usageOverall": 16.8,
+        "heightIn": 73.1,
+        "weightLb": 19.3
+      },
+      "2025_4870608": {
+        "recShare": 73.9,
+        "ydShare": 62.2,
+        "tdShare": 97.5,
+        "avgPPA": 34.5,
+        "usageOverall": 42,
+        "heightIn": 98.3,
+        "weightLb": 62.2
+      },
+      "2025_4870683": {
+        "recShare": 5,
+        "ydShare": 6.7,
+        "tdShare": 21,
+        "avgPPA": 42,
+        "usageOverall": 17.6,
+        "heightIn": 73.1,
+        "weightLb": 42
+      },
+      "2025_4870728": {
+        "recShare": 4.2,
+        "ydShare": 2.5,
+        "tdShare": 23.5,
+        "avgPPA": 0.8,
+        "usageOverall": 100,
+        "heightIn": 10.1,
+        "weightLb": 89.1
+      },
+      "2025_4870843": {
+        "recShare": 7.6,
+        "ydShare": 1.7,
+        "tdShare": 8.4,
+        "avgPPA": 100,
+        "usageOverall": 29.4,
+        "heightIn": 93.3,
+        "weightLb": 81.5
+      },
+      "2025_4870869": {
+        "recShare": 43.7,
+        "ydShare": 24.4,
+        "tdShare": 94.1,
+        "avgPPA": 4.2,
+        "usageOverall": 40.3,
+        "heightIn": 93.3,
+        "weightLb": 78.2
+      },
+      "2025_4870874": {
+        "recShare": 2.5,
+        "ydShare": 1.7,
+        "tdShare": 52.1,
+        "avgPPA": 24.4,
+        "usageOverall": 3.4,
+        "heightIn": 38.7,
+        "weightLb": 19.3
+      },
+      "2025_4870954": {
+        "recShare": 28.6,
+        "ydShare": 6.7,
+        "tdShare": 27.7,
+        "avgPPA": 26.9,
+        "usageOverall": 52.9,
+        "heightIn": 0.8,
+        "weightLb": 19.3
+      },
+      "2025_4871003": {
+        "recShare": 4.2,
+        "ydShare": 1.7,
+        "tdShare": 13.4,
+        "avgPPA": 12.6,
+        "usageOverall": 2.5,
+        "heightIn": 38.7,
+        "weightLb": 0
+      },
+      "2025_4873485": {
+        "recShare": 0.8,
+        "ydShare": 1.7,
+        "tdShare": 12.6,
+        "avgPPA": 4.2,
+        "usageOverall": 4.2,
+        "heightIn": 38.7,
+        "weightLb": 21
+      },
+      "2025_4876132": {
+        "recShare": 25.2,
+        "ydShare": 24.4,
+        "tdShare": 39.5,
+        "avgPPA": 27.7,
+        "usageOverall": 58,
+        "heightIn": 10.1,
+        "weightLb": 79.8
+      },
+      "2025_4877034": {
+        "recShare": 66.4,
+        "ydShare": 66.4,
+        "tdShare": 6.7,
+        "avgPPA": 28.6,
+        "usageOverall": 46.2,
+        "heightIn": 0.8,
+        "weightLb": 2.5
+      },
+      "2025_4877733": {
+        "recShare": 42,
+        "ydShare": 41.2,
+        "tdShare": 50.4,
+        "avgPPA": 4.2,
+        "usageOverall": 17.6,
+        "heightIn": 0.8,
+        "weightLb": 0
+      },
+      "2025_4878109": {
+        "recShare": 37.8,
+        "ydShare": 23.5,
+        "tdShare": 32.8,
+        "avgPPA": 1.7,
+        "usageOverall": 47.9,
+        "heightIn": 100,
+        "weightLb": 97.5
+      },
+      "2025_4879073": {
+        "recShare": 18.5,
+        "ydShare": 27.7,
+        "tdShare": 32.8,
+        "avgPPA": 14.3,
+        "usageOverall": 17.6,
+        "heightIn": 38.7,
+        "weightLb": 62.2
+      },
+      "2025_4879572": {
+        "recShare": 4.2,
+        "ydShare": 6.7,
+        "tdShare": 21,
+        "avgPPA": 2.5,
+        "usageOverall": 26.9,
+        "heightIn": 73.1,
+        "weightLb": 62.2
+      },
+      "2025_4879574": {
+        "recShare": 26.9,
+        "ydShare": 12.6,
+        "tdShare": 21,
+        "avgPPA": 2.5,
+        "usageOverall": 46.2,
+        "heightIn": 38.7,
+        "weightLb": 27.7
+      },
+      "2025_4880236": {
+        "recShare": 1.7,
+        "ydShare": 1.7,
+        "tdShare": 15.1,
+        "avgPPA": 55.5,
+        "usageOverall": 6.7,
+        "heightIn": 93.3,
+        "weightLb": 83.2
+      },
+      "2025_4880449": {
+        "recShare": 51.3,
+        "ydShare": 38.7,
+        "tdShare": 27.7,
+        "avgPPA": 6.7,
+        "usageOverall": 11.8,
+        "heightIn": 10.1,
+        "weightLb": 0
+      },
+      "2025_4890373": {
+        "recShare": 11.8,
+        "ydShare": 13.4,
+        "tdShare": 27.7,
+        "avgPPA": 0.8,
+        "usageOverall": 24.4,
+        "heightIn": 73.1,
+        "weightLb": 41.2
+      },
+      "2025_4898018": {
+        "recShare": 0,
+        "ydShare": 0.8,
+        "tdShare": 6.7,
+        "avgPPA": 17.6,
+        "usageOverall": 0.8,
+        "heightIn": 0.8,
+        "weightLb": 7.6
+      },
+      "2025_4899360": {
+        "recShare": 17.6,
+        "ydShare": 18.5,
+        "tdShare": 26.1,
+        "avgPPA": 18.5,
+        "usageOverall": 18.5,
+        "heightIn": 73.1,
+        "weightLb": 78.2
+      },
+      "2025_4899418": {
+        "recShare": 4.2,
+        "ydShare": 12.6,
+        "tdShare": 54.6,
+        "avgPPA": 19.3,
+        "usageOverall": 38.7,
+        "heightIn": 38.7,
+        "weightLb": 0
+      },
+      "2025_4899484": {
+        "recShare": 16,
+        "ydShare": 8.4,
+        "tdShare": 60.5,
+        "avgPPA": 37,
+        "usageOverall": 16,
+        "heightIn": 38.7,
+        "weightLb": 26.1
+      },
+      "2025_4907786": {
+        "recShare": 37.8,
+        "ydShare": 53.8,
+        "tdShare": 99.2,
+        "avgPPA": 62.2,
+        "usageOverall": 69.7,
+        "heightIn": 73.1,
+        "weightLb": 19.3
+      },
+      "2025_4908552": {
+        "recShare": 90.8,
+        "ydShare": 81.5,
+        "tdShare": 75.6,
+        "avgPPA": 7.6,
+        "usageOverall": 86.6,
+        "heightIn": 38.7,
+        "weightLb": 78.2
+      },
+      "2025_4910711": {
+        "recShare": 18.5,
+        "ydShare": 15.1,
+        "tdShare": 47.1,
+        "avgPPA": 6.7,
+        "usageOverall": 34.5,
+        "heightIn": 10.1,
+        "weightLb": 38.7
+      },
+      "2025_4912052": {
+        "recShare": 73.9,
+        "ydShare": 58,
+        "tdShare": 85.7,
+        "avgPPA": 25.2,
+        "usageOverall": 75.6,
+        "heightIn": 10.1,
+        "weightLb": 68.1
+      },
+      "2025_4917427": {
+        "recShare": 96.6,
+        "ydShare": 92.4,
+        "tdShare": 73.9,
+        "avgPPA": 34.5,
+        "usageOverall": 82.4,
+        "heightIn": 98.3,
+        "weightLb": 19.3
+      },
+      "2025_4922988": {
+        "recShare": 21,
+        "ydShare": 42.9,
+        "tdShare": 26.1,
+        "avgPPA": 94.1,
+        "usageOverall": 20.2,
+        "heightIn": 73.1,
+        "weightLb": 81.5
+      },
+      "2025_4922996": {
+        "recShare": 70.6,
+        "ydShare": 76.5,
+        "tdShare": 99.2,
+        "avgPPA": 10.1,
+        "usageOverall": 70.6,
+        "heightIn": 0.8,
+        "weightLb": 19.3
+      },
+      "2025_5024359": {
+        "recShare": 16,
+        "ydShare": 5,
+        "tdShare": 52.1,
+        "avgPPA": 2.5,
+        "usageOverall": 14.3,
+        "heightIn": 10.1,
+        "weightLb": 27.7
+      },
+      "2025_5041960": {
+        "recShare": 8.4,
+        "ydShare": 18.5,
+        "tdShare": 45.4,
+        "avgPPA": 26.1,
+        "usageOverall": 14.3,
+        "heightIn": 38.7,
+        "weightLb": 5.9
+      },
+      "2025_5077877": {
+        "recShare": 4.2,
+        "ydShare": 1.7,
+        "tdShare": 54.6,
+        "avgPPA": 1.7,
+        "usageOverall": 5,
+        "heightIn": 73.1,
+        "weightLb": 89.1
+      },
+      "2025_5078160": {
+        "recShare": 40.3,
+        "ydShare": 37,
+        "tdShare": 68.9,
+        "avgPPA": 7.6,
+        "usageOverall": 43.7,
+        "heightIn": 38.7,
+        "weightLb": 95
+      },
+      "2025_5079324": {
+        "recShare": 4.2,
+        "ydShare": 3.4,
+        "tdShare": 45.4,
+        "avgPPA": 34.5,
+        "usageOverall": 14.3,
+        "heightIn": 38.7,
+        "weightLb": 62.2
+      },
+      "2025_5079373": {
+        "recShare": 35.3,
+        "ydShare": 28.6,
+        "tdShare": 21,
+        "avgPPA": 7.6,
+        "usageOverall": 31.1,
+        "heightIn": 38.7,
+        "weightLb": 44.5
+      },
+      "2025_5079420": {
+        "recShare": 26.9,
+        "ydShare": 50.4,
+        "tdShare": 94.1,
+        "avgPPA": 31.1,
+        "usageOverall": 67.2,
+        "heightIn": 98.3,
+        "weightLb": 7.6
+      },
+      "2025_5079503": {
+        "recShare": 4.2,
+        "ydShare": 1.7,
+        "tdShare": 26.1,
+        "avgPPA": 7.6,
+        "usageOverall": 5,
+        "heightIn": 10.1,
+        "weightLb": 26.1
+      },
+      "2025_5079647": {
+        "recShare": 3.4,
+        "ydShare": 0.8,
+        "tdShare": 21,
+        "avgPPA": 7.6,
+        "usageOverall": 14.3,
+        "heightIn": 73.1,
+        "weightLb": 19.3
+      },
+      "2025_5080547": {
+        "recShare": 46.2,
+        "ydShare": 78.2,
+        "tdShare": 68.9,
+        "avgPPA": 78.2,
+        "usageOverall": 41.2,
+        "heightIn": 93.3,
+        "weightLb": 95
+      },
+      "2025_5080888": {
+        "recShare": 14.3,
+        "ydShare": 7.6,
+        "tdShare": 10.1,
+        "avgPPA": 5.9,
+        "usageOverall": 5,
+        "heightIn": 73.1,
+        "weightLb": 62.2
+      },
+      "2025_5081107": {
+        "recShare": 26.9,
+        "ydShare": 26.9,
+        "tdShare": 23.5,
+        "avgPPA": 16,
+        "usageOverall": 26.9,
+        "heightIn": 10.1,
+        "weightLb": 62.2
+      },
+      "2025_5081611": {
+        "recShare": 46.2,
+        "ydShare": 33.6,
+        "tdShare": 68.9,
+        "avgPPA": 15.1,
+        "usageOverall": 11.8,
+        "heightIn": 38.7,
+        "weightLb": 41.2
+      },
+      "2025_5082284": {
+        "recShare": 69.7,
+        "ydShare": 64.7,
+        "tdShare": 71.4,
+        "avgPPA": 38.7,
+        "usageOverall": 42,
+        "heightIn": 38.7,
+        "weightLb": 19.3
+      },
+      "2025_5082370": {
+        "recShare": 21.8,
+        "ydShare": 25.2,
+        "tdShare": 64.7,
+        "avgPPA": 45.4,
+        "usageOverall": 18.5,
+        "heightIn": 38.7,
+        "weightLb": 62.2
+      },
+      "2025_5083041": {
+        "recShare": 16,
+        "ydShare": 1.7,
+        "tdShare": 8.4,
+        "avgPPA": 2.5,
+        "usageOverall": 5,
+        "heightIn": 0,
+        "weightLb": 0.8
+      },
+      "2025_5083315": {
+        "recShare": 63.9,
+        "ydShare": 52.1,
+        "tdShare": 79.8,
+        "avgPPA": 20.2,
+        "usageOverall": 69.7,
+        "heightIn": 10.1,
+        "weightLb": 38.7
+      },
+      "2025_5083509": {
+        "recShare": 11.8,
+        "ydShare": 61.3,
+        "tdShare": 59.7,
+        "avgPPA": 100,
+        "usageOverall": 14.3,
+        "heightIn": 10.1,
+        "weightLb": 6.7
+      },
+      "2025_5085189": {
+        "recShare": 37.8,
+        "ydShare": 26.9,
+        "tdShare": 30.3,
+        "avgPPA": 1.7,
+        "usageOverall": 43.7,
+        "heightIn": 38.7,
+        "weightLb": 19.3
+      },
+      "2025_5086956": {
+        "recShare": 4.2,
+        "ydShare": 1.7,
+        "tdShare": 23.5,
+        "avgPPA": 5.9,
+        "usageOverall": 11.8,
+        "heightIn": 38.7,
+        "weightLb": 62.2
+      },
+      "2025_5088143": {
+        "recShare": 28.6,
+        "ydShare": 13.4,
+        "tdShare": 64.7,
+        "avgPPA": 45.4,
+        "usageOverall": 18.5,
+        "heightIn": 73.1,
+        "weightLb": 62.2
+      },
+      "2025_5088628": {
+        "recShare": 7.6,
+        "ydShare": 12.6,
+        "tdShare": 26.1,
+        "avgPPA": 28.6,
+        "usageOverall": 16,
+        "heightIn": 38.7,
+        "weightLb": 38.7
+      },
+      "2025_5089453": {
+        "recShare": 16.8,
+        "ydShare": 6.7,
+        "tdShare": 21,
+        "avgPPA": 15.1,
+        "usageOverall": 31.1,
+        "heightIn": 73.1,
+        "weightLb": 78.2
+      },
+      "2025_5092410": {
+        "recShare": 46.2,
+        "ydShare": 28.6,
+        "tdShare": 54.6,
+        "avgPPA": 0,
+        "usageOverall": 75.6,
+        "heightIn": 10.1,
+        "weightLb": 38.7
+      },
+      "2025_5092954": {
+        "recShare": 17.6,
+        "ydShare": 20.2,
+        "tdShare": 97.5,
+        "avgPPA": 5,
+        "usageOverall": 29.4,
+        "heightIn": 93.3,
+        "weightLb": 89.1
+      },
+      "2025_5097365": {
+        "recShare": 0,
+        "ydShare": 0,
+        "tdShare": 30.3,
+        "avgPPA": 17.6,
+        "usageOverall": 2.5,
+        "heightIn": 73.1,
+        "weightLb": 5.9
+      },
+      "2025_5120299": {
+        "recShare": 17.6,
+        "ydShare": 26.9,
+        "tdShare": 49.6,
+        "avgPPA": 6.7,
+        "usageOverall": 64.7,
+        "heightIn": 73.1,
+        "weightLb": 19.3
+      },
+      "2025_5121453": {
+        "recShare": 80.7,
+        "ydShare": 81.5,
+        "tdShare": 6.7,
+        "avgPPA": 28.6,
+        "usageOverall": 41.2,
+        "heightIn": 93.3,
+        "weightLb": 41.2
+      },
+      "2025_5121720": {
+        "recShare": 18.5,
+        "ydShare": 20.2,
+        "tdShare": 49.6,
+        "avgPPA": 13.4,
+        "usageOverall": 31.1,
+        "heightIn": 73.1,
+        "weightLb": 19.3
+      },
+      "2025_5121998": {
+        "recShare": 6.7,
+        "ydShare": 5.9,
+        "tdShare": 33.6,
+        "avgPPA": 85.7,
+        "usageOverall": 3.4,
+        "heightIn": 10.1,
+        "weightLb": 43.7
+      },
+      "2025_5122018": {
+        "recShare": 26.9,
+        "ydShare": 20.2,
+        "tdShare": 97.5,
+        "avgPPA": 24.4,
+        "usageOverall": 16.8,
+        "heightIn": 93.3,
+        "weightLb": 97.5
+      },
+      "2025_5136838": {
+        "recShare": 20.2,
+        "ydShare": 38.7,
+        "tdShare": 19.3,
+        "avgPPA": 21,
+        "usageOverall": 26.1,
+        "heightIn": 38.7,
+        "weightLb": 44.5
+      },
+      "2025_5138451": {
+        "recShare": 28.6,
+        "ydShare": 25.2,
+        "tdShare": 6.7,
+        "avgPPA": 7.6,
+        "usageOverall": 18.5,
+        "heightIn": 38.7,
+        "weightLb": 62.2
+      },
+      "2025_5142591": {
+        "recShare": 0,
+        "ydShare": 0,
+        "tdShare": 7.6,
+        "avgPPA": 38.7,
+        "usageOverall": 0.8,
+        "heightIn": 93.3,
+        "weightLb": 93.3
+      },
+      "2025_5151498": {
+        "recShare": 26.1,
+        "ydShare": 21.8,
+        "tdShare": 64.7,
+        "avgPPA": 10.1,
+        "usageOverall": 18.5,
+        "heightIn": 38.7,
+        "weightLb": 0
+      },
+      "2025_5151528": {
+        "recShare": 32.8,
+        "ydShare": 47.1,
+        "tdShare": 49.6,
+        "avgPPA": 17.6,
+        "usageOverall": 50.4,
+        "heightIn": 38.7,
+        "weightLb": 38.7
+      },
+      "2025_5151942": {
+        "recShare": 86.6,
+        "ydShare": 81.5,
+        "tdShare": 99.2,
+        "avgPPA": 88.2,
+        "usageOverall": 14.3,
+        "heightIn": 73.1,
+        "weightLb": 5.9
+      },
+      "2025_5154262": {
+        "recShare": 40.3,
+        "ydShare": 64.7,
+        "tdShare": 13.4,
+        "avgPPA": 6.7,
+        "usageOverall": 70.6,
+        "heightIn": 10.1,
+        "weightLb": 38.7
+      },
+      "2025_5156928": {
+        "recShare": 57.1,
+        "ydShare": 28.6,
+        "tdShare": 23.5,
+        "avgPPA": 0.8,
+        "usageOverall": 50.4,
+        "heightIn": 93.3,
+        "weightLb": 95
+      },
+      "2025_5159802": {
+        "recShare": 84.9,
+        "ydShare": 85.7,
+        "tdShare": 73.1,
+        "avgPPA": 9.2,
+        "usageOverall": 74.8,
+        "heightIn": 38.7,
+        "weightLb": 93.3
+      },
+      "2025_5160086": {
+        "recShare": 18.5,
+        "ydShare": 21.8,
+        "tdShare": 26.1,
+        "avgPPA": 6.7,
+        "usageOverall": 18.5,
+        "heightIn": 10.1,
+        "weightLb": 5.9
+      },
+      "2025_5165154": {
+        "recShare": 26.1,
+        "ydShare": 27.7,
+        "tdShare": 64.7,
+        "avgPPA": 15.1,
+        "usageOverall": 68.9,
+        "heightIn": 38.7,
+        "weightLb": 38.7
+      },
+      "2025_5194666": {
+        "recShare": 17.6,
+        "ydShare": 16.8,
+        "tdShare": 49.6,
+        "avgPPA": 28.6,
+        "usageOverall": 18.5,
+        "heightIn": 10.1,
+        "weightLb": 0
+      },
+      "2025_5197034": {
+        "recShare": 0.8,
+        "ydShare": 1.7,
+        "tdShare": 21,
+        "avgPPA": 95,
+        "usageOverall": 0.8,
+        "heightIn": 10.1,
+        "weightLb": 26.1
+      },
+      "2025_5218664": {
+        "recShare": 18.5,
+        "ydShare": 16.8,
+        "tdShare": 27.7,
+        "avgPPA": 19.3,
+        "usageOverall": 26.9,
+        "heightIn": 73.1,
+        "weightLb": 38.7
+      },
+      "2025_5218907": {
+        "recShare": 0.8,
+        "ydShare": 1.7,
+        "tdShare": 6.7,
+        "avgPPA": 48.7,
+        "usageOverall": 5,
+        "heightIn": 10.1,
+        "weightLb": 7.6
+      },
+      "2025_5218931": {
+        "recShare": 61.3,
+        "ydShare": 87.4,
+        "tdShare": 77.3,
+        "avgPPA": 48.7,
+        "usageOverall": 52.9,
+        "heightIn": 38.7,
+        "weightLb": 21
+      },
+      "2025_5219572": {
+        "recShare": 16,
+        "ydShare": 19.3,
+        "tdShare": 58,
+        "avgPPA": 41.2,
+        "usageOverall": 5,
+        "heightIn": 73.1,
+        "weightLb": 38.7
+      },
+      "2025_5220352": {
+        "recShare": 41.2,
+        "ydShare": 38.7,
+        "tdShare": 23.5,
+        "avgPPA": 6.7,
+        "usageOverall": 42,
+        "heightIn": 73.1,
+        "weightLb": 21
+      },
+      "2025_5221043": {
+        "recShare": 5,
+        "ydShare": 1.7,
+        "tdShare": 21,
+        "avgPPA": 39.5,
+        "usageOverall": 6.7,
+        "heightIn": 38.7,
+        "weightLb": 38.7
+      },
+      "2025_5227539": {
+        "recShare": 4.2,
+        "ydShare": 1.7,
+        "tdShare": 21,
+        "avgPPA": 10.9,
+        "usageOverall": 14.3,
+        "heightIn": 93.3,
+        "weightLb": 0.8
+      },
+      "2025_5227784": {
+        "recShare": 4.2,
+        "ydShare": 3.4,
+        "tdShare": 54.6,
+        "avgPPA": 21.8,
+        "usageOverall": 11.8,
+        "heightIn": 10.1,
+        "weightLb": 0.8
+      },
+      "2025_5229332": {
+        "recShare": 5.9,
+        "ydShare": 18.5,
+        "tdShare": 59.7,
+        "avgPPA": 62.2,
+        "usageOverall": 32.8,
+        "heightIn": 10.1,
+        "weightLb": 0
+      },
+      "2025_5250264": {
+        "recShare": 14.3,
+        "ydShare": 18.5,
+        "tdShare": 64.7,
+        "avgPPA": 16,
+        "usageOverall": 32.8,
+        "heightIn": 10.1,
+        "weightLb": 19.3
+      },
+      "2025_5295532": {
+        "recShare": 55.5,
+        "ydShare": 38.7,
+        "tdShare": 54.6,
+        "avgPPA": 6.7,
+        "usageOverall": 63,
+        "heightIn": 73.1,
+        "weightLb": 26.1
+      },
+      "2025_5295982": {
+        "recShare": 17.6,
+        "ydShare": 13.4,
+        "tdShare": 49.6,
+        "avgPPA": 25.2,
+        "usageOverall": 17.6,
+        "heightIn": 10.1,
+        "weightLb": 0
+      },
+      "2025_5296040": {
+        "recShare": 5,
+        "ydShare": 1.7,
+        "tdShare": 6.7,
+        "avgPPA": 1.7,
+        "usageOverall": 3.4,
+        "heightIn": 0.8,
+        "weightLb": 5.9
+      },
+      "2026_4869728": {
+        "recShare": 80.7,
+        "ydShare": 84,
+        "tdShare": 6.7,
+        "avgPPA": 7.6,
+        "usageOverall": 71.4,
+        "heightIn": 10.1,
+        "weightLb": 62.2
+      },
+      "2026_4871039": {
+        "recShare": 89.1,
+        "ydShare": 94.1,
+        "tdShare": 94.1,
+        "avgPPA": 0.8,
+        "usageOverall": 93.3,
+        "heightIn": 93.3,
+        "weightLb": 62.2
+      },
+      "2026_4885469": {
+        "recShare": 56.3,
+        "ydShare": 53.8,
+        "tdShare": 49.6,
+        "avgPPA": 6.7,
+        "usageOverall": 68.1,
+        "heightIn": 73.1,
+        "weightLb": 19.3
+      },
+      "2026_4900351": {
+        "recShare": 16,
+        "ydShare": 58.8,
+        "tdShare": 59.7,
+        "avgPPA": 82.4,
+        "usageOverall": 16,
+        "heightIn": 38.7,
+        "weightLb": 19.3
+      },
+      "2026_4907786": {
+        "recShare": 90.8,
+        "ydShare": 94.1,
+        "tdShare": 77.3,
+        "avgPPA": 47.1,
+        "usageOverall": 77.3,
+        "heightIn": 73.1,
+        "weightLb": 19.3
+      },
+      "2026_4922988": {
+        "recShare": 22.7,
+        "ydShare": 38.7,
+        "tdShare": 21,
+        "avgPPA": 94.1,
+        "usageOverall": 85.7,
+        "heightIn": 73.1,
+        "weightLb": 81.5
+      },
+      "2026_5079420": {
+        "recShare": 69.7,
+        "ydShare": 71.4,
+        "tdShare": 54.6,
+        "avgPPA": 97.5,
+        "usageOverall": 69.7,
+        "heightIn": 98.3,
+        "weightLb": 7.6
+      },
+      "2026_5079647": {
+        "recShare": 31.1,
+        "ydShare": 58.8,
+        "tdShare": 39.5,
+        "avgPPA": 59.7,
+        "usageOverall": 75.6,
+        "heightIn": 73.1,
+        "weightLb": 19.3
+      },
+      "2026_5080888": {
+        "recShare": 81.5,
+        "ydShare": 74.8,
+        "tdShare": 94.1,
+        "avgPPA": 15.1,
+        "usageOverall": 69.7,
+        "heightIn": 73.1,
+        "weightLb": 62.2
+      },
+      "2026_5088952": {
+        "recShare": 43.7,
+        "ydShare": 30.3,
+        "tdShare": 23.5,
+        "avgPPA": 24.4,
+        "usageOverall": 66.4,
+        "heightIn": 73.1,
+        "weightLb": 19.3
+      },
+      "2026_5120299": {
+        "recShare": 89.9,
+        "ydShare": 87.4,
+        "tdShare": 50.4,
+        "avgPPA": 32.8,
+        "usageOverall": 81.5,
+        "heightIn": 73.1,
+        "weightLb": 19.3
+      },
+      "2026_5122018": {
+        "recShare": 55.5,
+        "ydShare": 80.7,
+        "tdShare": 49.6,
+        "avgPPA": 19.3,
+        "usageOverall": 52.9,
+        "heightIn": 93.3,
+        "weightLb": 97.5
+      },
+      "2026_5138451": {
+        "recShare": 93.3,
+        "ydShare": 87.4,
+        "tdShare": 99.2,
+        "avgPPA": 26.1,
+        "usageOverall": 97.5,
+        "heightIn": 38.7,
+        "weightLb": 62.2
+      },
+      "2026_5164338": {
+        "recShare": 43.7,
+        "ydShare": 68.1,
+        "tdShare": 39.5,
+        "avgPPA": 98.3,
+        "usageOverall": 26.9,
+        "heightIn": 38.7,
+        "weightLb": 91.6
+      },
+      "2026_5214448": {
+        "recShare": 74.8,
+        "ydShare": 73.9,
+        "tdShare": 6.7,
+        "avgPPA": 6.7,
+        "usageOverall": 58,
+        "heightIn": 73.1,
+        "weightLb": 72.3
+      },
+      "2026_5215337": {
+        "recShare": 68.1,
+        "ydShare": 68.9,
+        "tdShare": 49.6,
+        "avgPPA": 44.5,
+        "usageOverall": 42,
+        "heightIn": 10.1,
+        "weightLb": 0
+      },
+      "2026_5215395": {
+        "recShare": 39.5,
+        "ydShare": 87.4,
+        "tdShare": 100,
+        "avgPPA": 100,
+        "usageOverall": 5,
+        "heightIn": 73.1,
+        "weightLb": 19.3
+      },
+      "2026_5215629": {
+        "recShare": 86.6,
+        "ydShare": 80.7,
+        "tdShare": 6.7,
+        "avgPPA": 7.6,
+        "usageOverall": 88.2,
+        "heightIn": 100,
+        "weightLb": 97.5
+      },
+      "2026_5219572": {
+        "recShare": 89.9,
+        "ydShare": 94.1,
+        "tdShare": 77.3,
+        "avgPPA": 54.6,
+        "usageOverall": 26.1,
+        "heightIn": 73.1,
+        "weightLb": 38.7
+      },
+      "2026_5220352": {
+        "recShare": 88.2,
+        "ydShare": 94.1,
+        "tdShare": 89.9,
+        "avgPPA": 100,
+        "usageOverall": 67.2,
+        "heightIn": 73.1,
+        "weightLb": 21
+      },
+      "2026_5264686": {
+        "recShare": 70.6,
+        "ydShare": 37,
+        "tdShare": 49.6,
+        "avgPPA": 10.9,
+        "usageOverall": 68.9,
+        "heightIn": 38.7,
+        "weightLb": 38.7
+      },
+      "2026_5265478": {
+        "recShare": 4.2,
+        "ydShare": 47.1,
+        "tdShare": 73.1,
+        "avgPPA": 98.3,
+        "usageOverall": 0.8,
+        "heightIn": 10.1,
+        "weightLb": 0
+      },
+      "2026_5328488": {
+        "recShare": 85.7,
+        "ydShare": 92.4,
+        "tdShare": 6.7,
+        "avgPPA": 90.8,
+        "usageOverall": 58.8,
+        "heightIn": 93.3,
+        "weightLb": 19.3
+      },
+      "2026_5391236": {
+        "recShare": 85.7,
+        "ydShare": 84,
+        "tdShare": 99.2,
+        "avgPPA": 71.4,
+        "usageOverall": 77.3,
+        "heightIn": 38.7,
+        "weightLb": 0
+      }
     }
   }
 };
