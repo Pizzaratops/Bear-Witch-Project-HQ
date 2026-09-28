@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-09-28T16:12:07.433Z",
+  "generatedAt": "2026-09-28T22:43:22.723Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -187,6 +187,17 @@ const STATUS_REPORT_DATA = {
           "name": "Caleb Williams",
           "pos": "QB",
           "nfl": "CHI",
+          "isStarter": false,
+          "status": "O",
+          "flag": false,
+          "lastGamePoints": null,
+          "last3AvgPoints": null,
+          "projPoints": null
+        },
+        {
+          "name": "Tyreek Hill",
+          "pos": "WR",
+          "nfl": "FA",
           "isStarter": false,
           "status": "O",
           "flag": false,
@@ -823,7 +834,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 1.3,
           "last3AvgPoints": 1.3,
-          "projPoints": 9
+          "projPoints": 9.1
         },
         {
           "name": "Luther Burden",
@@ -834,7 +845,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 6.2,
           "last3AvgPoints": 7.9,
-          "projPoints": 9.7
+          "projPoints": 9.8
         },
         {
           "name": "David Njoku",
@@ -967,7 +978,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 4,
           "last3AvgPoints": 8,
-          "projPoints": 7.4
+          "projPoints": 7.5
         },
         {
           "name": "Eddy Pineiro",
@@ -1100,7 +1111,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 1.3,
           "last3AvgPoints": 1.3,
-          "projPoints": 9
+          "projPoints": 9.1
         },
         {
           "name": "Luther Burden",
@@ -1111,7 +1122,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 6.2,
           "last3AvgPoints": 7.9,
-          "projPoints": 9.7
+          "projPoints": 9.8
         },
         {
           "name": "Denzel Boston",
@@ -1199,7 +1210,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 27.7,
           "last3AvgPoints": 18,
-          "projPoints": 15.3
+          "projPoints": 15.2
         },
         {
           "name": "Rhamondre Stevenson",
@@ -1343,7 +1354,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 0.8,
           "last3AvgPoints": 0.8,
-          "projPoints": 7.3
+          "projPoints": 7.4
         },
         {
           "name": "Jeremiyah Love",
@@ -1597,7 +1608,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
-          "projPoints": 11.8
+          "projPoints": 12
         },
         {
           "name": "Hunter Henry",
@@ -1917,7 +1928,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 1.3,
           "last3AvgPoints": 1.3,
-          "projPoints": 9
+          "projPoints": 9.1
         },
         {
           "name": "Luther Burden",
@@ -1928,7 +1939,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 6.2,
           "last3AvgPoints": 7.9,
-          "projPoints": 9.7
+          "projPoints": 9.8
         },
         {
           "name": "Omar Cooper",
@@ -2359,7 +2370,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 1.3,
           "last3AvgPoints": 1.3,
-          "projPoints": 9
+          "projPoints": 9.1
         },
         {
           "name": "TreVeyon Henderson",
@@ -2708,7 +2719,7 @@ const STATUS_REPORT_DATA = {
           "pos": "TE",
           "nfl": "LAR",
           "isStarter": false,
-          "status": null,
+          "status": "D",
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
@@ -3185,7 +3196,7 @@ const STATUS_REPORT_DATA = {
           "pos": "RB",
           "nfl": "MIA",
           "isStarter": true,
-          "status": "O",
+          "status": "IR",
           "flag": true,
           "lastGamePoints": 12.3,
           "last3AvgPoints": 11.5,
@@ -3421,7 +3432,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 7,
           "last3AvgPoints": 6.5,
-          "projPoints": 6
+          "projPoints": 6.1
         },
         {
           "name": "Los Angeles Chargers",
@@ -3443,7 +3454,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 4,
           "last3AvgPoints": 4,
-          "projPoints": 8.7
+          "projPoints": 8.8
         }
       ],
       "flaggedCount": 0
@@ -3841,7 +3852,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 18.2,
           "last3AvgPoints": 21.5,
-          "projPoints": 18.4
+          "projPoints": 18.5
         },
         {
           "name": "Jauan Jennings",
