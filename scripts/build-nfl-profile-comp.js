@@ -153,6 +153,35 @@ function buildHistoricalPool(seasonsData, athleticProfiles, pos) {
   return { pool, matched, unmatched };
 }
 
+// Perzentil (0-100) von `val` innerhalb der aufsteigend sortierten `sortedAsc`
+// -- identisch zu percentile() in sync-college-scouting.js.
+function percentile(val, sortedAsc) {
+  if (val == null || !sortedAsc.length) return null;
+  let lo = 0, hi = sortedAsc.length;
+  while (lo < hi) { const mid = (lo + hi) >> 1; if (sortedAsc[mid] <= val) lo = mid + 1; else hi = mid; }
+  return round((lo / sortedAsc.length) * 100, 1);
+}
+
+// Perzentil-Werte je Feature, fuer historische Pool-Spieler UND aktuelle
+// Prospects (`extraRows`) -- Verteilung wird NUR aus dem historischen `pool`
+// gebildet (das ist die Vergleichs-Population fuer "profiliert wie"), aber
+// auf beide Gruppen angewandt, damit Prospect und Comp direkt vergleichbar
+// sind (Basis fuer die Radar-Grafik im Frontend).
+function buildFeaturePercentiles(pool, extraRows, features) {
+  const complete = pool.filter(p => features.every(f => p[f] != null && !Number.isNaN(p[f])));
+  if (complete.length < 30) return {};
+  const sorted = {};
+  features.forEach(f => { sorted[f] = complete.map(p => p[f]).sort((a, b) => a - b); });
+  const byId = {};
+  [...pool, ...extraRows].forEach(p => {
+    if (!features.every(f => p[f] != null && !Number.isNaN(p[f]))) return;
+    const o = {};
+    features.forEach(f => { o[f] = percentile(p[f], sorted[f]); });
+    byId[p.id] = o;
+  });
+  return byId;
+}
+
 // Berechnet fuer jeden `target` (aktueller Prospect) die COMPS_N naechsten
 // Nachbarn aus dem historischen `pool`, per Mahalanobis auf MATCH_FEATURES.
 // Reine Funktion, keine Datei-I/O -- unit-testbar.
@@ -199,13 +228,14 @@ function main() {
   const athleticProfiles = loadVm(PROFILES_FILE, 'NFL_DRAFT_ATHLETIC_PROFILES');
   if (!athleticProfiles) { console.error(`FEHLER: ${PROFILES_FILE} nicht gefunden -- erst scripts/build-nfl-draft-athletic-profiles.js laufen lassen (oder das gelieferte File einspielen).`); process.exit(1); }
 
-  const output = { meta: { builtAt: new Date().toISOString(), matchFeatures: MATCH_FEATURES }, comps: {}, stats: {} };
+  const output = { meta: { builtAt: new Date().toISOString(), matchFeatures: MATCH_FEATURES }, comps: {}, stats: {}, feats: {} };
 
   POS.forEach(pos => {
     const { pool, matched, unmatched } = buildHistoricalPool(scouting.seasons, athleticProfiles, pos);
     const targets = (scouting.recent && scouting.recent[pos]) || [];
     const comps = computeProfileComps(pool, targets, MATCH_FEATURES[pos]);
     output.comps[pos] = comps;
+    output.feats[pos] = buildFeaturePercentiles(pool, targets, MATCH_FEATURES[pos]);
     output.stats[pos] = { poolSize: pool.length, matched, unmatched, targetsWithComps: Object.keys(comps).length };
     console.log(`${pos}: ${matched} gedraftete Spieler per Name gematcht (${unmatched} nicht gefunden), Pool ${pool.length}, Comps fuer ${Object.keys(comps).length}/${targets.length} aktuelle Prospects.`);
   });
@@ -221,6 +251,10 @@ function main() {
 //  angereichert mit dem TATSAECHLICHEN Draft-Ergebnis + RAS-Score DIESES
 //  Comps (nicht des Prospects selbst -- der hat beides noch nicht).
 //
+//  NFL_PROFILE_COMP.feats[Pos][id] = Perzentil (0-100) je Match-Feature, fuer
+//  Prospects UND deren Comps (gleiche id-Basis) -- Basis fuer die Radar-
+//  Grafik im Frontend (js/college-scouting-card.js).
+//
 //  WICHTIG (UI-Sprache, siehe Projekt-Doc Abschnitt 6): "Profiliert wie ...
 //  (Pre-Draft-Rollenarchetyp, KEINE Erfolgsprognose)" -- niemals mit College
 //  Production Comp vermischen oder als Talent-/Erfolgsvorhersage labeln.
@@ -234,4 +268,4 @@ const NFL_PROFILE_COMP = ${JSON.stringify(output, null, 2)};
 
 if (require.main === module) { main(); }
 
-module.exports = { buildHistoricalPool, computeProfileComps, nameKey, MATCH_FEATURES, PROD_FEATURES };
+module.exports = { buildHistoricalPool, computeProfileComps, nameKey, MATCH_FEATURES, PROD_FEATURES, percentile, buildFeaturePercentiles };

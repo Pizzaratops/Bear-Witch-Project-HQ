@@ -42,6 +42,10 @@
 //  nicht fuer den gesamten historischen Pool -- der dient nur als
 //  Vergleichs-Universum.
 //
+//  COLLEGE_SCOUTING.feats[Pos][playerId] = Perzentil (0-100) je Feature --
+//  Basis fuer die Radar/Spider-Grafik im Frontend (Prospect vs. Comp auf den
+//  Vergleichs-Features, siehe js/college-scouting-card.js).
+//
 //  Schreibt data/college-scouting.js -> COLLEGE_SCOUTING
 //  Usage:
 //    CFBD_API_KEY=... node scripts/sync-college-scouting.js
@@ -330,6 +334,36 @@ const FEATURES = {
   QB: ['avgPpaPass', 'avgPpaRush', 'usagePass', 'usageRush', 'compPct'],
 };
 
+// Perzentil (0-100) von `val` innerhalb der aufsteigend sortierten `sortedAsc`
+// -- Grundlage fuer die Radar/Spider-Grafik im Frontend (macht Features mit
+// unterschiedlichen Einheiten/Skalen auf einer gemeinsamen 0-100-Achse
+// vergleichbar). Gleiche Methodik wie computeRasScore in
+// build-nfl-draft-athletic-profiles.js.
+function percentile(val, sortedAsc) {
+  if (val == null || !sortedAsc.length) return null;
+  let lo = 0, hi = sortedAsc.length;
+  while (lo < hi) { const mid = (lo + hi) >> 1; if (sortedAsc[mid] <= val) lo = mid + 1; else hi = mid; }
+  return round((lo / sortedAsc.length) * 100, 1);
+}
+
+// Perzentil-Werte je Feature fuer JEDEN Spieler im `pool` (nicht nur die
+// Comp-Targets) -- Basis fuer die Radar-Grafik im Frontend: dieselbe id
+// (year_playerId, siehe buildYearRecords) wird sowohl fuer aktuelle
+// Prospects als auch fuer deren Comps verwendet, also reicht EINE Map.
+function buildFeaturePercentiles(pool, features) {
+  const complete = pool.filter(p => features.every(f => p[f] != null && !Number.isNaN(p[f])));
+  if (complete.length < 30) return {};
+  const sorted = {};
+  features.forEach(f => { sorted[f] = complete.map(p => p[f]).sort((a, b) => a - b); });
+  const byId = {};
+  complete.forEach(p => {
+    const o = {};
+    features.forEach(f => { o[f] = percentile(p[f], sorted[f]); });
+    byId[p.id] = o;
+  });
+  return byId;
+}
+
 // Berechnet fuer jeden Spieler in `targets` die COMPS_N naechsten Nachbarn
 // aus `pool` (per Mahalanobis, auf denselben Z-standardisierten Features).
 // Gibt { [playerId]: [{id,name,team,year,dist}, ...] } zurueck.
@@ -429,6 +463,7 @@ async function main() {
     seasons: seasonsData, // Cache-Grundlage FUER DIESES SCRIPT + vollstaendige Historie
     recent: {}, // kleine, direkt frontend-taugliche Teilmenge (nur die Draft-relevanten Prospects)
     comps: {},
+    feats: {}, // Perzentil-Werte je Feature+Spieler-Saison -- Basis fuer die Radar-Grafik im Frontend
   };
 
   for (const pos of ['WR', 'TE', 'RB', 'QB']) {
@@ -437,6 +472,7 @@ async function main() {
     const targets = pool.filter(p => recentYears.has(p.year));
     output.recent[pos] = targets;
     output.comps[pos] = computeComps(pool, targets, FEATURES[pos]);
+    output.feats[pos] = buildFeaturePercentiles(pool, FEATURES[pos]);
     console.log(`${pos}: Pool ${pool.length} Spieler-Saisons, Comps fuer ${Object.keys(output.comps[pos]).length} aktuelle Spieler berechnet.`);
   }
 
@@ -476,4 +512,4 @@ if (require.main === module) {
   main().catch(e => { console.error('❌ College Scouting Sync fehlgeschlagen:', e.message); process.exit(1); });
 }
 
-module.exports = { buildYearRecords, computeComps, currentSeason, FEATURES };
+module.exports = { buildYearRecords, computeComps, currentSeason, FEATURES, percentile, buildFeaturePercentiles };
