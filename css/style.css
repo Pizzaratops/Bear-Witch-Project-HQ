@@ -845,6 +845,33 @@ table.db-table td:nth-child(2) { text-align: left; font-weight: 600; }
 .dna-chip a { cursor: pointer; color: var(--muted); }
 .dna-open-btn { margin-left: auto; background: none; border: 1px solid var(--border); border-radius: 8px; cursor: pointer; font-size: 13px; padding: 2px 7px; }
 .dna-open-btn:hover { border-color: var(--accent); background: var(--accent-light); }
+
+/* College Scouting: Radar/Spider-Grafik (Prospect vs. gewählter Comp) */
+.cs-match-pickable { border: 1px solid transparent; }
+.cs-match-picked { border-color: var(--accent); background: var(--accent-light); }
+.cs-radar-wrap { margin-top: 12px; padding-top: 12px; border-top: 1px dashed var(--border); }
+.cs-radar-svg { display: block; margin: 0 auto; overflow: visible; }
+.cs-radar-ring { fill: none; stroke: var(--border); stroke-width: 1; }
+.cs-radar-axis { stroke: var(--border); stroke-width: 1; }
+.cs-radar-label { fill: var(--muted); font-size: 9px; font-weight: 700; }
+.cs-radar-poly { stroke-width: 2; fill-opacity: .18; }
+.cs-radar-poly-target { stroke: var(--accent2); fill: var(--accent2); }
+.cs-radar-poly-comp { stroke: var(--accent); fill: var(--accent); }
+.cs-radar-dot { stroke: var(--surface2); stroke-width: 1.5; }
+.cs-radar-dot-target { fill: var(--accent2); }
+.cs-radar-dot-comp { fill: var(--accent); }
+.cs-radar-legend { display: flex; gap: 14px; justify-content: center; font-size: 11px; font-weight: 700; margin-top: 2px; }
+.cs-radar-legend span { display: inline-flex; align-items: center; gap: 5px; }
+.cs-radar-swatch { width: 9px; height: 9px; border-radius: 50%; display: inline-block; }
+.cs-radar-swatch-target { background: var(--accent2); }
+.cs-radar-swatch-comp { background: var(--accent); }
+.cs-radar-table { margin-top: 8px; font-size: 11px; }
+.cs-radar-row { display: grid; grid-template-columns: 1fr 56px 56px; gap: 6px; padding: 3px 2px; border-bottom: 1px solid var(--border); }
+.cs-radar-row-head { color: var(--muted); font-weight: 800; text-transform: uppercase; font-size: 9px; letter-spacing: .5px; border-bottom: 1px solid var(--border); }
+.cs-radar-row-label { color: var(--muted); }
+.cs-radar-row-val { text-align: right; font-weight: 700; }
+.cs-radar-row-target { color: var(--accent2); text-align: right; }
+.cs-radar-row-comp { color: var(--accent); text-align: right; }
 @media (max-width: 900px) {
   .dna-layout { grid-template-columns: 1fr; }
   .dna-side { position: static; }
