@@ -3,7 +3,7 @@
 // ============================================================
 //  AUTO-GENERIERT von scripts/sync-espn-weekly-scores.js über die
 //  GitHub Action ".github/workflows/sync-espn-weekly-scores.yml".
-//  Zuletzt synchronisiert: 2026-09-29T00:10:51.550Z
+//  Zuletzt synchronisiert: 2026-09-29T08:07:28.571Z
 //
 //  teamId hier ist bereits unsere eigene Team-ID aus data/teams.js
 //  (uebersetzt beim Sync per Namensabgleich, wie in
@@ -158,6 +158,80 @@ const WEEKLY_SCORES = {
     "points": 94.4,
     "opponentId": "the-lamartrix",
     "opponentPoints": 100.6
+   }
+  ],
+  "3": [
+   {
+    "teamId": "fred-bulls",
+    "points": 118.56,
+    "opponentId": "lion-cereals",
+    "opponentPoints": 77.42
+   },
+   {
+    "teamId": "lion-cereals",
+    "points": 77.42,
+    "opponentId": "fred-bulls",
+    "opponentPoints": 118.56
+   },
+   {
+    "teamId": "charged-up",
+    "points": 110.06,
+    "opponentId": "london-nopunts",
+    "opponentPoints": 100.62
+   },
+   {
+    "teamId": "london-nopunts",
+    "points": 100.62,
+    "opponentId": "charged-up",
+    "opponentPoints": 110.06
+   },
+   {
+    "teamId": "beastmode",
+    "points": 126.76,
+    "opponentId": "running-bisons",
+    "opponentPoints": 101.04
+   },
+   {
+    "teamId": "running-bisons",
+    "points": 101.04,
+    "opponentId": "beastmode",
+    "opponentPoints": 126.76
+   },
+   {
+    "teamId": "vice-city-crackheads",
+    "points": 106.24,
+    "opponentId": "angry-ducks",
+    "opponentPoints": 118.14
+   },
+   {
+    "teamId": "angry-ducks",
+    "points": 118.14,
+    "opponentId": "vice-city-crackheads",
+    "opponentPoints": 106.24
+   },
+   {
+    "teamId": "burrowhead-dancers",
+    "points": 90.48,
+    "opponentId": "the-lamartrix",
+    "opponentPoints": 112.24
+   },
+   {
+    "teamId": "the-lamartrix",
+    "points": 112.24,
+    "opponentId": "burrowhead-dancers",
+    "opponentPoints": 90.48
+   },
+   {
+    "teamId": "team-beermode",
+    "points": 139.4,
+    "opponentId": "bear-witch-project",
+    "opponentPoints": 120.54
+   },
+   {
+    "teamId": "bear-witch-project",
+    "points": 120.54,
+    "opponentId": "team-beermode",
+    "opponentPoints": 139.4
    }
   ]
  }
