@@ -24,7 +24,7 @@
 
 const COLLEGE_SCOUTING = {
   "meta": {
-    "lastSync": "2026-09-29T08:15:53.988Z",
+    "lastSync": "2026-09-29T14:42:33.015Z",
     "currentSeason": 2026,
     "years": [
       2013,
@@ -232940,24 +232940,6 @@ const COLLEGE_SCOUTING = {
         "weightLb": 250
       },
       {
-        "id": "2024_5089453",
-        "rawId": "5089453",
-        "name": "Miles Kitselman",
-        "team": "Tennessee",
-        "conf": "SEC",
-        "year": 2024,
-        "rec": 22,
-        "yds": 301,
-        "td": 4,
-        "recShare": 9.3,
-        "ydShare": 10.5,
-        "tdShare": 19,
-        "usageOverall": 4.4,
-        "avgPPA": 1.114,
-        "heightIn": 77,
-        "weightLb": 255
-      },
-      {
         "id": "2024_5092410",
         "rawId": "5092410",
         "name": "Dorian Fleming",
@@ -234666,24 +234648,6 @@ const COLLEGE_SCOUTING = {
         "avgPPA": 0.6,
         "heightIn": 76,
         "weightLb": 245
-      },
-      {
-        "id": "2025_5089453",
-        "rawId": "5089453",
-        "name": "Miles Kitselman",
-        "team": "Tennessee",
-        "conf": "SEC",
-        "year": 2025,
-        "rec": 26,
-        "yds": 253,
-        "td": 2,
-        "recShare": 8.9,
-        "ydShare": 6.6,
-        "tdShare": 7.7,
-        "usageOverall": 5.2,
-        "avgPPA": 0.514,
-        "heightIn": 77,
-        "weightLb": 255
       },
       {
         "id": "2025_5092410",
@@ -343313,78 +343277,6 @@ const COLLEGE_SCOUTING = {
           "dist": 2.091
         }
       ],
-      "2024_5089453": [
-        {
-          "id": "2019_4360400",
-          "name": "Daniel Barker",
-          "team": "Illinois",
-          "year": 2019,
-          "dist": 0.513
-        },
-        {
-          "id": "2021_4372026",
-          "name": "Cameron Latu",
-          "team": "Alabama",
-          "year": 2021,
-          "dist": 0.564
-        },
-        {
-          "id": "2023_4869534",
-          "name": "Amari Niblack",
-          "team": "Alabama",
-          "year": 2023,
-          "dist": 0.63
-        },
-        {
-          "id": "2023_4431045",
-          "name": "John Copenhaver",
-          "team": "North Carolina",
-          "year": 2023,
-          "dist": 0.652
-        },
-        {
-          "id": "2023_4702913",
-          "name": "R.J. Maryland",
-          "team": "SMU",
-          "year": 2023,
-          "dist": 0.679
-        },
-        {
-          "id": "2016_3124879",
-          "name": "Maaseiah Francis",
-          "team": "South Alabama",
-          "year": 2016,
-          "dist": 0.691
-        },
-        {
-          "id": "2023_4361660",
-          "name": "Trent Pennix",
-          "team": "NC State",
-          "year": 2023,
-          "dist": 0.694
-        },
-        {
-          "id": "2015_546740",
-          "name": "Jordan Leggett",
-          "team": "Clemson",
-          "year": 2015,
-          "dist": 0.716
-        },
-        {
-          "id": "2020_4362523",
-          "name": "Will Mallory",
-          "team": "Miami",
-          "year": 2020,
-          "dist": 0.729
-        },
-        {
-          "id": "2023_4702556",
-          "name": "Arlis Boardingham",
-          "team": "Florida",
-          "year": 2023,
-          "dist": 0.73
-        }
-      ],
       "2024_5092410": [
         {
           "id": "2022_4360290",
@@ -350223,78 +350115,6 @@ const COLLEGE_SCOUTING = {
           "team": "Michigan State",
           "year": 2018,
           "dist": 0.611
-        }
-      ],
-      "2025_5089453": [
-        {
-          "id": "2023_4430482",
-          "name": "Joshua Simon",
-          "team": "South Carolina",
-          "year": 2023,
-          "dist": 0.337
-        },
-        {
-          "id": "2014_515567",
-          "name": "Ryan Malleck",
-          "team": "Virginia Tech",
-          "year": 2014,
-          "dist": 0.407
-        },
-        {
-          "id": "2024_5120299",
-          "name": "Patrick Overmyer",
-          "team": "UTSA",
-          "year": 2024,
-          "dist": 0.507
-        },
-        {
-          "id": "2018_4240023",
-          "name": "Tre' McKitty",
-          "team": "Florida State",
-          "year": 2018,
-          "dist": 0.521
-        },
-        {
-          "id": "2022_4361112",
-          "name": "Devin Culp",
-          "team": "Washington",
-          "year": 2022,
-          "dist": 0.532
-        },
-        {
-          "id": "2021_4361372",
-          "name": "Jeremy Ruckert",
-          "team": "Ohio State",
-          "year": 2021,
-          "dist": 0.572
-        },
-        {
-          "id": "2014_502997",
-          "name": "Taylor Barnhill",
-          "team": "UNLV",
-          "year": 2014,
-          "dist": 0.605
-        },
-        {
-          "id": "2015_534207",
-          "name": "Andrew Price",
-          "team": "UNLV",
-          "year": 2015,
-          "dist": 0.62
-        },
-        {
-          "id": "2016_545589",
-          "name": "Cethan Carter",
-          "team": "Nebraska",
-          "year": 2016,
-          "dist": 0.627
-        },
-        {
-          "id": "2025_4603191",
-          "name": "David Larkins",
-          "team": "App State",
-          "year": 2025,
-          "dist": 0.632
         }
       ],
       "2025_5092410": [
