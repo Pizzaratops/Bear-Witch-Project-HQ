@@ -18,7 +18,23 @@
 // ============================================================
 
 const CS_POSITIONS = ['WR', 'RB', 'TE', 'QB'];
-let csState = { pos: 'WR', search: '', sel: null, prodRadar: null, nflRadar: null };
+// Jahres-Fenster fuer die Prospect-Liste (1 = nur laufende Saison, 4 = das
+// Maximum, das COLLEGE_SCOUTING.recent ueberhaupt enthaelt -- siehe
+// RECENT_SEASONS_FOR_COMPS in sync-college-scouting.js. Groesser als 4 waere
+// hier sinnlos, weil die Comps/Feats-Daten dafuer gar nicht gespeichert sind).
+const CS_YEAR_WINDOWS = [1, 2, 3, 4];
+let csState = { pos: 'WR', search: '', sel: null, prodRadar: null, nflRadar: null, yearWindow: 2 };
+
+function _csYearWindowLabel(n) {
+  const cur = (typeof COLLEGE_SCOUTING !== 'undefined' && COLLEGE_SCOUTING.meta.currentSeason) || new Date().getFullYear();
+  if (n === 1) return `Nur ${cur}`;
+  if (n >= 4) return 'Letzte 4 Jahre';
+  return `${cur - n + 1}–${cur}`;
+}
+function _csYearFilter(p) {
+  const cur = COLLEGE_SCOUTING.meta.currentSeason;
+  return p.year > cur - csState.yearWindow;
+}
 
 const CS_PRIMARY_STAT = { WR: 'yds', TE: 'yds', RB: 'rushYds', QB: 'passYds' };
 const CS_PRIMARY_LABEL = { WR: 'Rec-Yds', TE: 'Rec-Yds', RB: 'Rush-Yds', QB: 'Pass-Yds' };
@@ -46,6 +62,7 @@ function showCollegeScouting() {
 }
 
 function csSetPos(p) { csState.pos = p; csState.sel = null; csState.search = ''; renderCollegeScouting(); }
+function csSetYearWindow(n) { csState.yearWindow = n; csState.sel = null; renderCollegeScouting(); }
 function csSelect(id) { csState.sel = id; csState.prodRadar = null; csState.nflRadar = null; _csRenderList(); _csRenderMain(); }
 function csPickProdRadar(id) { csState.prodRadar = id; _csRenderProdBox(); }
 function csPickNflRadar(id) { csState.nflRadar = id; _csRenderNflProfileBox(csState.pos, csState.sel); }
@@ -118,21 +135,24 @@ function renderCollegeScouting() {
     return;
   }
   const pos = csState.pos;
-  const all = (COLLEGE_SCOUTING.recent[pos] || []).slice();
+  const all = (COLLEGE_SCOUTING.recent[pos] || []).filter(_csYearFilter);
   if (!csState.sel || !all.some(p => p.id === csState.sel)) {
     const sorted = all.slice().sort((a, b) => (b[CS_PRIMARY_STAT[pos]] || 0) - (a[CS_PRIMARY_STAT[pos]] || 0));
     csState.sel = (sorted[0] || {}).id || null;
   }
+  const cur = COLLEGE_SCOUTING.meta.currentSeason;
+  const yearsShown = COLLEGE_SCOUTING.meta.years.filter(y => y > cur - csState.yearWindow);
   wrap.innerHTML = `
     <div class="dna-controls">
       <div class="rr-tb-group">${CS_POSITIONS.map(p => `<button class="rr-tb-btn${p === pos ? ' rr-tb-active' : ''}" onclick="csSetPos('${p}')">${p}</button>`).join('')}</div>
+      <div class="rr-tb-group">${CS_YEAR_WINDOWS.map(n => `<button class="rr-tb-btn${n === csState.yearWindow ? ' rr-tb-active' : ''}" onclick="csSetYearWindow(${n})">${_csYearWindowLabel(n)}</button>`).join('')}</div>
     </div>
     <div class="dna-layout">
       <div class="dna-side">
         <input class="dna-search" placeholder="🔍 Prospect suchen …" value="${csState.search.replace(/"/g, '&quot;')}" oninput="csState.search=this.value;_csRenderList()">
         <div class="dna-list-head"><span>Prospect</span><span title="${CS_PRIMARY_LABEL[pos]} in der jeweils letzten erfassten College-Saison">${CS_PRIMARY_LABEL[pos]}</span></div>
         <div class="dna-list" id="csList"></div>
-        <div class="dna-foot">${all.length} ${pos}-Prospects (letzte ${COLLEGE_SCOUTING.meta.years.slice(-2).join('/')} Jahrgänge, Mindest-Volumen erfüllt).</div>
+        <div class="dna-foot">${all.length} ${pos}-Prospects (Jahrgänge ${yearsShown.join('/')}, Mindest-Volumen erfüllt).</div>
       </div>
       <div class="dna-main" id="csMain"></div>
     </div>
@@ -152,6 +172,7 @@ function _csRenderList() {
   const q = _csKey(csState.search);
   const stat = CS_PRIMARY_STAT[pos];
   const list = (COLLEGE_SCOUTING.recent[pos] || [])
+    .filter(_csYearFilter)
     .filter(p => !q || _csKey(p.name).includes(q))
     .sort((a, b) => (b[stat] || 0) - (a[stat] || 0));
   host.innerHTML = list.length ? list.map((p, i) => `

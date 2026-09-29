@@ -46,6 +46,16 @@
 //  Basis fuer die Radar/Spider-Grafik im Frontend (Prospect vs. Comp auf den
 //  Vergleichs-Features, siehe js/college-scouting-card.js).
 //
+//  DRAFTED-FILTER (28.09.2026 ergaenzt): "recent" enthaelt sonst auch
+//  Spieler, die zwischen ihrer College-Saison und dem naechsten Sync
+//  bereits gedraftet wurden (z.B. 2025er Stars nach dem NFL Draft 2026) --
+//  die sind keine Prospects mehr. Wird per Namens-Abgleich gegen die
+//  zuletzt gebaute data/nfl-draft-athletic-profiles.js rausgefiltert (siehe
+//  loadProDepartedSet -- frisch bei jedem Lauf gegen nflverse players.csv
+//  ("rookie_season"-Feld, deckt Draft UND Undrafted Free Agents ab, siehe
+//  Kommentar dort). Betrifft nur die Anzeige-Liste, nicht den historischen
+//  Pool.
+//
 //  Schreibt data/college-scouting.js -> COLLEGE_SCOUTING
 //  Usage:
 //    CFBD_API_KEY=... node scripts/sync-college-scouting.js
@@ -67,6 +77,92 @@ const API_KEY = process.env.CFBD_API_KEY;
 const REBUILD = process.env.COLLEGE_REBUILD === '1';
 const HIST_START = 2013;
 
+// Normalisierter Name-Key -- identisch zur Logik in build-nfl-profile-comp.js
+// / build-nfl-draft-athletic-profiles.js (dort die Quelle der Wahrheit).
+function nameKey(name) {
+  if (!name) return '';
+  return name
+    .normalize('NFD').replace(/[̀-ͯ]/g, '')
+    .toLowerCase()
+    .replace(/\b(jr|sr|ii|iii|iv|v)\.?\b/g, '')
+    .replace(/[^a-z0-9]/g, '');
+}
+
+// ---- Fetch + CSV-Parse fuer nflverse players.csv (identische Helper wie in
+// build-nfl-draft-athletic-profiles.js) -- braucht KEINEN CFBD-Key, laeuft
+// gegen GitHub-Release-Assets (in der Cloud-Sandbox egress-gesperrt, aber
+// von GitHub Actions aus erreichbar, siehe Projekt-Doc).
+function getBuffer(url) {
+  return new Promise((resolve, reject) => {
+    https.get(url, { headers: { 'User-Agent': 'bear-witch-project-hq-bot' } }, res => {
+      if (res.statusCode >= 300 && res.statusCode < 400 && res.headers.location) {
+        return getBuffer(res.headers.location).then(resolve, reject);
+      }
+      if (res.statusCode !== 200) { reject(new Error(`${res.statusCode} ${url}`)); res.resume(); return; }
+      const chunks = [];
+      res.on('data', c => chunks.push(c));
+      res.on('end', () => resolve(Buffer.concat(chunks)));
+    }).on('error', reject);
+  });
+}
+function splitCsvLine(line) {
+  const out = []; let cur = ''; let inQ = false;
+  for (let i = 0; i < line.length; i++) {
+    const c = line[i];
+    if (inQ) { if (c === '"') { if (line[i + 1] === '"') { cur += '"'; i++; } else inQ = false; } else cur += c; }
+    else { if (c === '"') inQ = true; else if (c === ',') { out.push(cur); cur = ''; } else cur += c; }
+  }
+  out.push(cur);
+  return out;
+}
+function parseCsv(text) {
+  const lines = text.split('\n').filter(l => l.length);
+  const headers = splitCsvLine(lines[0]);
+  const rows = [];
+  for (let i = 1; i < lines.length; i++) {
+    const vals = splitCsvLine(lines[i]);
+    if (vals.length !== headers.length) continue;
+    const o = {}; headers.forEach((h, j) => { o[h] = vals[j]; }); rows.push(o);
+  }
+  return rows;
+}
+
+// Baut ein Set aus "collegeSeasonYear|nameKey" fuer Spieler, die die NFL
+// bereits erreicht haben -- gedraftet ODER als Undrafted Free Agent (UDFA)
+// unterschrieben. Quelle: nflverse players.csv, Feld "rookie_season" --
+// im Gegensatz zu "draft_year" (nur bei ~Haelfte gesetzt, nur Gedraftete)
+// ist rookie_season fuer ALLE ~24.800 jemals in der NFL registrierten
+// Spieler gesetzt (geprueft 28.09.2026), erfasst also auch UDFA-Signings.
+// FRISCH bei jedem Lauf geholt (nicht aus dem lokalen, ggf. 1 Tag alten
+// nfl-draft-athletic-profiles.js) -- kein CFBD-Call, zaehlt nicht gegen
+// das Free-Tier-Limit. Bei Netzwerkfehler: leeres Set, Filter faellt weich
+// aus (Production Comp bleibt unberuehrt).
+//
+// GRENZE (bewusst akzeptiert, siehe Doc): Spieler, die das College OHNE
+// NFL-Signing verlassen (Karriereende, Transfer aus der FBS-Erfassung
+// raus etc.) sind darueber NICHT erfassbar -- es gibt keine oeffentliche
+// "hat aufgehoert"-Liste. Die loesen sich von selbst: sobald eine spaetere
+// Saison synced wird und der Name dort NICHT wieder auftaucht, faellt der
+// Spieler ohnehin aus dem RECENT_SEASONS_FOR_COMPS-Fenster raus.
+async function loadProDepartedSet() {
+  try {
+    const rows = parseCsv((await getBuffer('https://github.com/nflverse/nflverse-data/releases/download/players/players.csv')).toString('utf8'));
+    const departed = new Set();
+    rows.forEach(r => {
+      const rookieYear = r.rookie_season ? Number(r.rookie_season) : null;
+      if (!rookieYear) return;
+      const key = nameKey(r.display_name);
+      if (!key) return;
+      departed.add(`${rookieYear - 1}|${key}`);
+      departed.add(`${rookieYear - 2}|${key}`);
+    });
+    return departed;
+  } catch (e) {
+    console.warn(`nflverse players.csv nicht ladbar (${e.message}) -- Pro-Departed-Filter fuer diesen Lauf uebersprungen.`);
+    return new Set();
+  }
+}
+
 const FBS_CONFERENCES = new Set([
   'SEC', 'Big Ten', 'ACC', 'Big 12', 'American Athletic', 'Mid-American',
   'Sun Belt', 'Conference USA', 'Mountain West', 'Pac-12', 'FBS Independents',
@@ -81,7 +177,10 @@ const MIN_VOLUME = {
   TE: { key: 'YDS', val: 150 },
   QB: { key: 'pass_YDS', val: 1500 },
 };
-const RECENT_SEASONS_FOR_COMPS = 2; // fuer diese vielen juengsten Jahrgaenge werden Comps gespeichert
+const RECENT_SEASONS_FOR_COMPS = 4; // fuer diese vielen juengsten Jahrgaenge werden Comps gespeichert
+                                     // (Frontend bietet einen Jahres-Filter 1/2/3/4 Jahre darauf an,
+                                     // siehe js/college-scouting-card.js CS_YEAR_WINDOWS -- muss <= diesem
+                                     // Wert bleiben, sonst laeuft der groesste Filter ins Leere)
 const COMPS_N = 10;
 
 function currentSeason() {
@@ -458,6 +557,8 @@ async function main() {
   // ---- Comps fuer die juengsten Jahrgaenge (Pool selbst wird NICHT nochmal
   // separat gespeichert -- steht schon vollstaendig in `seasons`, siehe unten) ----
   const recentYears = new Set(ALL_YEARS.slice(-RECENT_SEASONS_FOR_COMPS));
+  const proDepartedSet = await loadProDepartedSet();
+  let proDepartedFiltered = 0;
   const output = {
     meta: { lastSync: new Date().toISOString(), currentSeason: CURRENT, years: ALL_YEARS, features: FEATURES },
     seasons: seasonsData, // Cache-Grundlage FUER DIESES SCRIPT + vollstaendige Historie
@@ -469,12 +570,19 @@ async function main() {
   for (const pos of ['WR', 'TE', 'RB', 'QB']) {
     const pool = [];
     ALL_YEARS.forEach(y => { if (seasonsData[y]) pool.push(...seasonsData[y][pos]); });
-    const targets = pool.filter(p => recentYears.has(p.year));
+    const targets = pool
+      .filter(p => recentYears.has(p.year))
+      .filter(p => {
+        const departed = proDepartedSet.has(`${p.year}|${nameKey(p.name)}`);
+        if (departed) proDepartedFiltered++;
+        return !departed;
+      });
     output.recent[pos] = targets;
     output.comps[pos] = computeComps(pool, targets, FEATURES[pos]);
     output.feats[pos] = buildFeaturePercentiles(pool, FEATURES[pos]);
     console.log(`${pos}: Pool ${pool.length} Spieler-Saisons, Comps fuer ${Object.keys(output.comps[pos]).length} aktuelle Spieler berechnet.`);
   }
+  if (proDepartedFiltered) console.log(`(${proDepartedFiltered} bereits in der NFL registrierte Spieler (Draft ODER UDFA) aus "recent" gefiltert -- nflverse players.csv, frisch geholt.)`);
 
   const body = `// ============================================================
 //  COLLEGE_SCOUTING — College Production Comp (WR, TE, RB, QB)
@@ -512,4 +620,4 @@ if (require.main === module) {
   main().catch(e => { console.error('❌ College Scouting Sync fehlgeschlagen:', e.message); process.exit(1); });
 }
 
-module.exports = { buildYearRecords, computeComps, currentSeason, FEATURES, percentile, buildFeaturePercentiles };
+module.exports = { buildYearRecords, computeComps, currentSeason, FEATURES, percentile, buildFeaturePercentiles, nameKey, loadProDepartedSet, parseCsv };
