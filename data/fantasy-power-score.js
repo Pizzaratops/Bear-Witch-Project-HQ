@@ -4,7 +4,7 @@
 //  AUTO-GENERIERT von scripts/sync-fantasy-position-score.js über die
 //  GitHub Action ".github/workflows/sync-fantasy-position-score.yml".
 //  Nicht von Hand editieren.
-//  Zuletzt synchronisiert: 2026-09-29T00:21:06.690Z
+//  Zuletzt synchronisiert: 2026-09-29T08:25:11.185Z
 //
 //  6 Kategorien: Points Scored, Points Allowed, Points by QB/RB/WR/TE
 //  (FLEX zaehlt nach echter Spieler-Position, K/DST fliessen in keine
@@ -1002,6 +1002,480 @@ const FANTASY_POWER_SCORE = {
             "rbPts": 6,
             "wrPts": 11,
             "tePts": 7
+          }
+        }
+      ]
+    },
+    "3": {
+      "cumulative": [
+        {
+          "teamId": "bear-witch-project",
+          "values": {
+            "pointsFor": 114.87,
+            "pointsAgainst": 114.79,
+            "qbPts": 15.64,
+            "rbPts": 27.5,
+            "wrPts": 45.6,
+            "tePts": 2.8
+          },
+          "ranks": {
+            "pointsFor": 7,
+            "pointsAgainst": 5,
+            "qbPts": 8,
+            "rbPts": 7,
+            "wrPts": 4,
+            "tePts": 11
+          },
+          "gamesPlayed": 3
+        },
+        {
+          "teamId": "burrowhead-dancers",
+          "values": {
+            "pointsFor": 87.64,
+            "pointsAgainst": 115.49,
+            "qbPts": 10.94,
+            "rbPts": 25.7,
+            "wrPts": 30.93,
+            "tePts": 10.73
+          },
+          "ranks": {
+            "pointsFor": 11,
+            "pointsAgainst": 6,
+            "qbPts": 11,
+            "rbPts": 9,
+            "wrPts": 9,
+            "tePts": 6
+          },
+          "gamesPlayed": 3
+        },
+        {
+          "teamId": "fred-bulls",
+          "values": {
+            "pointsFor": 113.65,
+            "pointsAgainst": 96.07,
+            "qbPts": 17.25,
+            "rbPts": 33.4,
+            "wrPts": 32.97,
+            "tePts": 16.37
+          },
+          "ranks": {
+            "pointsFor": 8,
+            "pointsAgainst": 2,
+            "qbPts": 7,
+            "rbPts": 5,
+            "wrPts": 8,
+            "tePts": 4
+          },
+          "gamesPlayed": 3
+        },
+        {
+          "teamId": "lion-cereals",
+          "values": {
+            "pointsFor": 84.4,
+            "pointsAgainst": 119.75,
+            "qbPts": 13.83,
+            "rbPts": 15.17,
+            "wrPts": 20.2,
+            "tePts": 16.87
+          },
+          "ranks": {
+            "pointsFor": 12,
+            "pointsAgainst": 9,
+            "qbPts": 10,
+            "rbPts": 12,
+            "wrPts": 12,
+            "tePts": 3
+          },
+          "gamesPlayed": 3
+        },
+        {
+          "teamId": "vice-city-crackheads",
+          "values": {
+            "pointsFor": 135.11,
+            "pointsAgainst": 100.87,
+            "qbPts": 23.67,
+            "rbPts": 42.63,
+            "wrPts": 34,
+            "tePts": 17.8
+          },
+          "ranks": {
+            "pointsFor": 2,
+            "pointsAgainst": 4,
+            "qbPts": 3,
+            "rbPts": 3,
+            "wrPts": 7,
+            "tePts": 2
+          },
+          "gamesPlayed": 3
+        },
+        {
+          "teamId": "beastmode",
+          "values": {
+            "pointsFor": 141.51,
+            "pointsAgainst": 95.86,
+            "qbPts": 31.31,
+            "rbPts": 42.63,
+            "wrPts": 37.2,
+            "tePts": 19.7
+          },
+          "ranks": {
+            "pointsFor": 1,
+            "pointsAgainst": 1,
+            "qbPts": 1,
+            "rbPts": 4,
+            "wrPts": 6,
+            "tePts": 1
+          },
+          "gamesPlayed": 3
+        },
+        {
+          "teamId": "angry-ducks",
+          "values": {
+            "pointsFor": 116.64,
+            "pointsAgainst": 117.97,
+            "qbPts": 26.95,
+            "rbPts": 27.03,
+            "wrPts": 47.12,
+            "tePts": 7.53
+          },
+          "ranks": {
+            "pointsFor": 5,
+            "pointsAgainst": 8,
+            "qbPts": 2,
+            "rbPts": 8,
+            "wrPts": 2,
+            "tePts": 9
+          },
+          "gamesPlayed": 3
+        },
+        {
+          "teamId": "team-beermode",
+          "values": {
+            "pointsFor": 127.15,
+            "pointsAgainst": 116.61,
+            "qbPts": 14.45,
+            "rbPts": 49.7,
+            "wrPts": 45.67,
+            "tePts": 1.33
+          },
+          "ranks": {
+            "pointsFor": 3,
+            "pointsAgainst": 7,
+            "qbPts": 9,
+            "rbPts": 1,
+            "wrPts": 3,
+            "tePts": 12
+          },
+          "gamesPlayed": 3
+        },
+        {
+          "teamId": "running-bisons",
+          "values": {
+            "pointsFor": 115.32,
+            "pointsAgainst": 120.11,
+            "qbPts": 20.95,
+            "rbPts": 47.43,
+            "wrPts": 22.43,
+            "tePts": 8.5
+          },
+          "ranks": {
+            "pointsFor": 6,
+            "pointsAgainst": 10,
+            "qbPts": 4,
+            "rbPts": 2,
+            "wrPts": 11,
+            "tePts": 7
+          },
+          "gamesPlayed": 3
+        },
+        {
+          "teamId": "the-lamartrix",
+          "values": {
+            "pointsFor": 118.77,
+            "pointsAgainst": 97.49,
+            "qbPts": 20.07,
+            "rbPts": 25.53,
+            "wrPts": 56.63,
+            "tePts": 7.87
+          },
+          "ranks": {
+            "pointsFor": 4,
+            "pointsAgainst": 3,
+            "qbPts": 5,
+            "rbPts": 10,
+            "wrPts": 1,
+            "tePts": 8
+          },
+          "gamesPlayed": 3
+        },
+        {
+          "teamId": "charged-up",
+          "values": {
+            "pointsFor": 96,
+            "pointsAgainst": 122.53,
+            "qbPts": 7.2,
+            "rbPts": 23.3,
+            "wrPts": 42.03,
+            "tePts": 13.13
+          },
+          "ranks": {
+            "pointsFor": 10,
+            "pointsAgainst": 11,
+            "qbPts": 12,
+            "rbPts": 11,
+            "wrPts": 5,
+            "tePts": 5
+          },
+          "gamesPlayed": 3
+        },
+        {
+          "teamId": "london-nopunts",
+          "values": {
+            "pointsFor": 99.13,
+            "pointsAgainst": 132.66,
+            "qbPts": 17.83,
+            "rbPts": 30.63,
+            "wrPts": 28.83,
+            "tePts": 4.83
+          },
+          "ranks": {
+            "pointsFor": 9,
+            "pointsAgainst": 12,
+            "qbPts": 6,
+            "rbPts": 6,
+            "wrPts": 10,
+            "tePts": 10
+          },
+          "gamesPlayed": 3
+        }
+      ],
+      "weekly": [
+        {
+          "teamId": "bear-witch-project",
+          "values": {
+            "pointsFor": 120.54,
+            "pointsAgainst": 139.4,
+            "qbPts": 13.64,
+            "rbPts": 28.7,
+            "wrPts": 47.1,
+            "tePts": 7.1
+          },
+          "ranks": {
+            "pointsFor": 3,
+            "pointsAgainst": 12,
+            "qbPts": 8,
+            "rbPts": 9,
+            "wrPts": 3,
+            "tePts": 8
+          }
+        },
+        {
+          "teamId": "burrowhead-dancers",
+          "values": {
+            "pointsFor": 90.48,
+            "pointsAgainst": 112.24,
+            "qbPts": 11.68,
+            "rbPts": 30.3,
+            "wrPts": 33.2,
+            "tePts": 9.3
+          },
+          "ranks": {
+            "pointsFor": 11,
+            "pointsAgainst": 7,
+            "qbPts": 10,
+            "rbPts": 7,
+            "wrPts": 7,
+            "tePts": 6
+          }
+        },
+        {
+          "teamId": "fred-bulls",
+          "values": {
+            "pointsFor": 118.56,
+            "pointsAgainst": 77.42,
+            "qbPts": 19.36,
+            "rbPts": 30.3,
+            "wrPts": 40,
+            "tePts": 13.9
+          },
+          "ranks": {
+            "pointsFor": 4,
+            "pointsAgainst": 1,
+            "qbPts": 4,
+            "rbPts": 8,
+            "wrPts": 5,
+            "tePts": 5
+          }
+        },
+        {
+          "teamId": "lion-cereals",
+          "values": {
+            "pointsFor": 77.42,
+            "pointsAgainst": 118.56,
+            "qbPts": 10.42,
+            "rbPts": 7,
+            "wrPts": 22.4,
+            "tePts": 27.6
+          },
+          "ranks": {
+            "pointsFor": 12,
+            "pointsAgainst": 9,
+            "qbPts": 11,
+            "rbPts": 12,
+            "wrPts": 10,
+            "tePts": 2
+          }
+        },
+        {
+          "teamId": "vice-city-crackheads",
+          "values": {
+            "pointsFor": 106.24,
+            "pointsAgainst": 118.14,
+            "qbPts": 15.94,
+            "rbPts": 30.4,
+            "wrPts": 15.7,
+            "tePts": 32.2
+          },
+          "ranks": {
+            "pointsFor": 8,
+            "pointsAgainst": 8,
+            "qbPts": 7,
+            "rbPts": 6,
+            "wrPts": 12,
+            "tePts": 1
+          }
+        },
+        {
+          "teamId": "beastmode",
+          "values": {
+            "pointsFor": 126.76,
+            "pointsAgainst": 101.04,
+            "qbPts": 17.46,
+            "rbPts": 54.7,
+            "wrPts": 29.1,
+            "tePts": 16.5
+          },
+          "ranks": {
+            "pointsFor": 2,
+            "pointsAgainst": 4,
+            "qbPts": 6,
+            "rbPts": 2,
+            "wrPts": 8,
+            "tePts": 3
+          }
+        },
+        {
+          "teamId": "angry-ducks",
+          "values": {
+            "pointsFor": 118.14,
+            "pointsAgainst": 106.24,
+            "qbPts": 31.28,
+            "rbPts": 34.8,
+            "wrPts": 42.96,
+            "tePts": 3.1
+          },
+          "ranks": {
+            "pointsFor": 5,
+            "pointsAgainst": 5,
+            "qbPts": 1,
+            "rbPts": 4,
+            "wrPts": 4,
+            "tePts": 10
+          }
+        },
+        {
+          "teamId": "team-beermode",
+          "values": {
+            "pointsFor": 139.4,
+            "pointsAgainst": 120.54,
+            "qbPts": 23.8,
+            "rbPts": 65.2,
+            "wrPts": 24.9,
+            "tePts": 1.5
+          },
+          "ranks": {
+            "pointsFor": 1,
+            "pointsAgainst": 10,
+            "qbPts": 2,
+            "rbPts": 1,
+            "wrPts": 9,
+            "tePts": 11
+          }
+        },
+        {
+          "teamId": "running-bisons",
+          "values": {
+            "pointsFor": 101.04,
+            "pointsAgainst": 126.76,
+            "qbPts": 18.94,
+            "rbPts": 38.6,
+            "wrPts": 19.1,
+            "tePts": 7.4
+          },
+          "ranks": {
+            "pointsFor": 9,
+            "pointsAgainst": 11,
+            "qbPts": 5,
+            "rbPts": 3,
+            "wrPts": 11,
+            "tePts": 7
+          }
+        },
+        {
+          "teamId": "the-lamartrix",
+          "values": {
+            "pointsFor": 112.24,
+            "pointsAgainst": 90.48,
+            "qbPts": 20.44,
+            "rbPts": 24.6,
+            "wrPts": 53.4,
+            "tePts": 3.8
+          },
+          "ranks": {
+            "pointsFor": 6,
+            "pointsAgainst": 2,
+            "qbPts": 3,
+            "rbPts": 10,
+            "wrPts": 2,
+            "tePts": 9
+          }
+        },
+        {
+          "teamId": "charged-up",
+          "values": {
+            "pointsFor": 110.06,
+            "pointsAgainst": 100.62,
+            "qbPts": 3.76,
+            "rbPts": 15.4,
+            "wrPts": 65.2,
+            "tePts": 14.7
+          },
+          "ranks": {
+            "pointsFor": 7,
+            "pointsAgainst": 3,
+            "qbPts": 12,
+            "rbPts": 11,
+            "wrPts": 1,
+            "tePts": 4
+          }
+        },
+        {
+          "teamId": "london-nopunts",
+          "values": {
+            "pointsFor": 100.62,
+            "pointsAgainst": 110.06,
+            "qbPts": 12.62,
+            "rbPts": 30.7,
+            "wrPts": 37.3,
+            "tePts": 0
+          },
+          "ranks": {
+            "pointsFor": 10,
+            "pointsAgainst": 6,
+            "qbPts": 9,
+            "rbPts": 5,
+            "wrPts": 6,
+            "tePts": 12
           }
         }
       ]
