@@ -3,6 +3,39 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<script>
+// ============================================================
+//  MFHFB HQ — Weiterleitung (Cutover 29.09.2026)
+// ============================================================
+//  Diese Seite ist in den Hub umgezogen: https://pizzaratops.github.io/MFHFBHQ/#/bwp
+//  Alte Links (#standings, #roster-<id>, …) landen auf der passenden Hub-Seite.
+//  Ausnahmen (bleiben hier):
+//    - #statusreport          (Felix nutzt den Status Report vorerst hier)
+//    - ?legacy=1              (alte Seite bewusst öffnen; gilt für die ganze Sitzung)
+//    - Einbettung im iframe   (Hub-Legacy-Ansicht)
+// ============================================================
+(function () {
+  var hash = location.hash.slice(1);
+  var stay = window.self !== window.top || hash.indexOf('statusreport') === 0;
+  try {
+    if (/(^|[?&])legacy=1/.test(location.search)) sessionStorage.setItem('bwp-legacy', '1');
+    if (sessionStorage.getItem('bwp-legacy') === '1') stay = true;
+  } catch (e) { if (/(^|[?&])legacy=1/.test(location.search)) stay = true; }
+  if (stay) return;
+  var MAP = {
+    home: '', standings: 'standings', seasonrolling: 'rolling', weekbyweek: 'weekly', matchups: 'matchups',
+    draftboard: 'draftboard', keepers: 'keepers', futureboards: 'futurepicks', trade: 'trade', tradehistory: 'tradehistory',
+    dynastyboard: 'dynastyboard', rolling: 'dynrolling', teamaverages: 'teamaverages', playerrankings: 'players',
+    playerprojections: 'players/proj', playerdna: 'playerdna', collegescouting: 'collegescouting', nflrankings: 'nflrankings',
+    nflmatchup: 'nflmatchup', nflteams: 'nflteams', dues: 'dues', leaguehistory: 'leaguehistory', erklaerung: 'erklaerung'
+  };
+  var sub = '';
+  if (hash.indexOf('roster-') === 0) sub = 'teams/' + hash.slice(7);
+  else if (hash.indexOf('nflteam-') === 0) sub = 'nflteams/' + hash.slice(8);
+  else if (MAP[hash] != null) sub = MAP[hash];
+  location.replace('https://pizzaratops.github.io/MFHFBHQ/#/bwp' + (sub ? '/' + sub : ''));
+})();
+</script>
 <title>Bear Witch Project HQ 🐻🏈</title>
 <link rel="manifest" href="manifest.json">
 <meta name="apple-mobile-web-app-capable" content="yes">
