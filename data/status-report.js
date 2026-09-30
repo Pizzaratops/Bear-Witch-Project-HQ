@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-09-29T21:37:16.858Z",
+  "generatedAt": "2026-09-30T00:50:50.700Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -856,7 +856,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 8.9,
           "last3AvgPoints": 10.4,
-          "projPoints": 16.8
+          "projPoints": 16.6
         },
         {
           "name": "David Montgomery",
@@ -1398,7 +1398,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 4.3,
-          "projPoints": 9
+          "projPoints": null
         },
         {
           "name": "Amon-Ra St. Brown",
@@ -1740,7 +1740,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 31.3,
           "last3AvgPoints": 27.3,
-          "projPoints": 19.5
+          "projPoints": 19.6
         },
         {
           "name": "Rashid Shaheed",
@@ -1994,7 +1994,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 8.9,
           "last3AvgPoints": 10.4,
-          "projPoints": 16.8
+          "projPoints": 16.6
         },
         {
           "name": "Devin Singletary",
@@ -2281,7 +2281,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 31.3,
           "last3AvgPoints": 27.3,
-          "projPoints": 19.5
+          "projPoints": 19.6
         },
         {
           "name": "Jordan Mason",
@@ -2414,7 +2414,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 18.3,
           "last3AvgPoints": 9.7,
-          "projPoints": 8.7
+          "projPoints": 8.6
         },
         {
           "name": "Mike Evans",
@@ -2425,7 +2425,7 @@ const STATUS_REPORT_DATA = {
           "flag": true,
           "lastGamePoints": 12.4,
           "last3AvgPoints": 12.6,
-          "projPoints": 13.4
+          "projPoints": 13.5
         },
         {
           "name": "DJ Moore",
@@ -3218,7 +3218,7 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "DEN",
           "isStarter": true,
-          "status": null,
+          "status": "Q",
           "flag": false,
           "lastGamePoints": 6.4,
           "last3AvgPoints": 9.8,
@@ -3731,7 +3731,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 7.3,
           "last3AvgPoints": 14.8,
-          "projPoints": 11.2
+          "projPoints": 11
         },
         {
           "name": "Derrick Henry",
@@ -3808,7 +3808,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 15.4,
           "last3AvgPoints": 13.3,
-          "projPoints": 8.9
+          "projPoints": 9
         },
         {
           "name": "Jerry Jeudy",
