@@ -33348,7 +33348,7 @@ const NFL_DRAFT_ATHLETIC_PROFILES = {
       "draftRound": 1,
       "draftPick": 29,
       "heightIn": 70,
-      "weightLb": 192,
+      "weightLb": 185,
       "ras": {
         "overall": 5.64,
         "measuredCount": 8,
