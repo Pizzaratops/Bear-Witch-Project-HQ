@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-10-03T07:14:02.725Z",
+  "generatedAt": "2026-10-03T12:49:32.146Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -856,7 +856,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 8.9,
           "last3AvgPoints": 10.4,
-          "projPoints": 16.9
+          "projPoints": 17.1
         },
         {
           "name": "David Montgomery",
@@ -1067,7 +1067,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 3.8,
           "last3AvgPoints": 17.4,
-          "projPoints": 14.9
+          "projPoints": 15
         },
         {
           "name": "Pat Bryant",
@@ -1409,7 +1409,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 9.9,
           "last3AvgPoints": 21.4,
-          "projPoints": 15.2
+          "projPoints": 15.3
         },
         {
           "name": "Parker Washington",
@@ -1652,7 +1652,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 0.9,
           "last3AvgPoints": 1.4,
-          "projPoints": 2.3
+          "projPoints": 2.4
         },
         {
           "name": "Courtland Sutton",
@@ -1939,7 +1939,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 5.9,
           "last3AvgPoints": 3.4,
-          "projPoints": 10
+          "projPoints": 10.1
         },
         {
           "name": "Demarcus Robinson",
@@ -1983,7 +1983,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 8.9,
           "last3AvgPoints": 10.4,
-          "projPoints": 16.9
+          "projPoints": 17.1
         },
         {
           "name": "Devin Singletary",
@@ -2116,7 +2116,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 3.8,
           "last3AvgPoints": 17.4,
-          "projPoints": 14.9
+          "projPoints": 15
         },
         {
           "name": "Woody Marks",
@@ -2403,7 +2403,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 18.3,
           "last3AvgPoints": 9.7,
-          "projPoints": 8.7
+          "projPoints": 8.8
         },
         {
           "name": "Mike Evans",
@@ -3609,7 +3609,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 3.3,
           "last3AvgPoints": 13.1,
-          "projPoints": 11.3
+          "projPoints": 11.4
         },
         {
           "name": "Rachaad White",
@@ -3679,6 +3679,17 @@ const STATUS_REPORT_DATA = {
       "record": "6-0-0",
       "players": [
         {
+          "name": "George Holani",
+          "pos": "RB",
+          "nfl": "SEA",
+          "isStarter": false,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 10.8,
+          "last3AvgPoints": 5.4,
+          "projPoints": 7.2
+        },
+        {
           "name": "Kaleb Johnson",
           "pos": "RB",
           "nfl": "GB",
@@ -3731,7 +3742,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 20.7,
           "last3AvgPoints": 21.9,
-          "projPoints": 14.6
+          "projPoints": 14.7
         },
         {
           "name": "Stefon Diggs",
@@ -3742,7 +3753,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 7.3,
           "last3AvgPoints": 14.8,
-          "projPoints": 12.1
+          "projPoints": 12
         },
         {
           "name": "Derrick Henry",
@@ -3921,21 +3932,10 @@ const STATUS_REPORT_DATA = {
           "projPoints": 12.9
         },
         {
-          "name": "Green Bay Packers",
-          "pos": "DEF",
-          "nfl": "GB",
-          "isStarter": true,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": -2,
-          "last3AvgPoints": 1.3,
-          "projPoints": 8.7
-        },
-        {
           "name": "San Francisco 49ers",
           "pos": "DEF",
           "nfl": "SF",
-          "isStarter": false,
+          "isStarter": true,
           "status": null,
           "flag": false,
           "lastGamePoints": 1,
