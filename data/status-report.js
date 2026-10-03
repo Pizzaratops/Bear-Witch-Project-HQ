@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-10-03T00:48:28.604Z",
+  "generatedAt": "2026-10-03T07:14:02.725Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -1221,7 +1221,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 16.5,
           "last3AvgPoints": 19.7,
-          "projPoints": 17.6
+          "projPoints": 17.5
         },
         {
           "name": "Sean Tucker",
@@ -1564,7 +1564,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 4.4,
           "last3AvgPoints": 2.3,
-          "projPoints": 7.7
+          "projPoints": 7.6
         },
         {
           "name": "Sam Roush",
@@ -1652,7 +1652,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 0.9,
           "last3AvgPoints": 1.4,
-          "projPoints": 2.4
+          "projPoints": 2.3
         },
         {
           "name": "Courtland Sutton",
@@ -1939,7 +1939,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 5.9,
           "last3AvgPoints": 3.4,
-          "projPoints": 10.1
+          "projPoints": 10
         },
         {
           "name": "Demarcus Robinson",
@@ -2542,9 +2542,9 @@ const STATUS_REPORT_DATA = {
           "name": "Justin Jefferson",
           "pos": "WR",
           "nfl": "MIN",
-          "isStarter": true,
+          "isStarter": false,
           "status": "O",
-          "flag": true,
+          "flag": false,
           "lastGamePoints": 5.2,
           "last3AvgPoints": 5.2,
           "projPoints": 0
@@ -2564,7 +2564,7 @@ const STATUS_REPORT_DATA = {
           "name": "Emeka Egbuka",
           "pos": "WR",
           "nfl": "TB",
-          "isStarter": false,
+          "isStarter": true,
           "status": null,
           "flag": false,
           "lastGamePoints": 11.2,
@@ -2704,7 +2704,7 @@ const STATUS_REPORT_DATA = {
           "projPoints": 9
         }
       ],
-      "flaggedCount": 1
+      "flaggedCount": 0
     },
     {
       "id": "felix-espn-320102468",
@@ -3609,7 +3609,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 3.3,
           "last3AvgPoints": 13.1,
-          "projPoints": 11.4
+          "projPoints": 11.3
         },
         {
           "name": "Rachaad White",
@@ -3731,7 +3731,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 20.7,
           "last3AvgPoints": 21.9,
-          "projPoints": 14.7
+          "projPoints": 14.6
         },
         {
           "name": "Stefon Diggs",
@@ -3841,7 +3841,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 13.6,
           "last3AvgPoints": 18.8,
-          "projPoints": 16.6
+          "projPoints": 16.5
         },
         {
           "name": "Jauan Jennings",
