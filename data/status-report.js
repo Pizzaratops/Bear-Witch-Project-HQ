@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-10-03T17:40:44.212Z",
+  "generatedAt": "2026-10-03T20:18:53.482Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -1045,7 +1045,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 3.8,
           "last3AvgPoints": 5.4,
-          "projPoints": 8
+          "projPoints": 7.9
         },
         {
           "name": "Rome Odunze",
@@ -1166,7 +1166,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 5.5,
           "last3AvgPoints": 7.5,
-          "projPoints": 9
+          "projPoints": 8.9
         },
         {
           "name": "Lamar Jackson",
@@ -3731,7 +3731,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": -0.1,
           "last3AvgPoints": -0.1,
-          "projPoints": 13.2
+          "projPoints": 13.1
         },
         {
           "name": "Davante Adams",
