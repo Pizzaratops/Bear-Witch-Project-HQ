@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-10-05T16:33:04.126Z",
+  "generatedAt": "2026-10-05T23:26:47.945Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -78,7 +78,7 @@ const STATUS_REPORT_DATA = {
           "pos": "RB",
           "nfl": "ARI",
           "isStarter": true,
-          "status": null,
+          "status": "Q",
           "flag": false,
           "lastGamePoints": 21.9,
           "last3AvgPoints": 21.9,
@@ -3532,7 +3532,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 24.8,
           "last3AvgPoints": 24.1,
-          "projPoints": 17.8
+          "projPoints": 17.6
         },
         {
           "name": "Omar Cooper",
@@ -3620,7 +3620,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 19.7,
           "last3AvgPoints": 23.5,
-          "projPoints": 18.8
+          "projPoints": 18.6
         },
         {
           "name": "Jameson Williams",
@@ -3786,7 +3786,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 5.1,
           "last3AvgPoints": 6.2,
-          "projPoints": 9.8
+          "projPoints": 9.7
         },
         {
           "name": "Mike Gesicki",
@@ -3874,7 +3874,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 19.7,
           "last3AvgPoints": 23.5,
-          "projPoints": 18.8
+          "projPoints": 18.6
         },
         {
           "name": "Malik Willis",
