@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-10-05T00:18:23.797Z",
+  "generatedAt": "2026-10-05T07:51:48.258Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -1144,7 +1144,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 19.4,
           "last3AvgPoints": 21.9,
-          "projPoints": 18.2
+          "projPoints": 18.6
         },
         {
           "name": "Chris Godwin",
@@ -1398,7 +1398,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 9.9,
           "last3AvgPoints": 21.4,
-          "projPoints": 15.8
+          "projPoints": 16.1
         },
         {
           "name": "Parker Washington",
@@ -3631,7 +3631,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 8.9,
           "last3AvgPoints": 7.6,
-          "projPoints": 11.6
+          "projPoints": 11.8
         },
         {
           "name": "Kenneth Walker",
