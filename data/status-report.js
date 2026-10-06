@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-10-05T23:26:47.945Z",
+  "generatedAt": "2026-10-06T03:41:45.801Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -1310,7 +1310,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 5.4,
           "last3AvgPoints": 10.2,
-          "projPoints": 8.2
+          "projPoints": 8.8
         },
         {
           "name": "Omarion Hampton",
@@ -1339,7 +1339,7 @@ const STATUS_REPORT_DATA = {
           "pos": "RB",
           "nfl": "ARI",
           "isStarter": true,
-          "status": null,
+          "status": "Q",
           "flag": false,
           "lastGamePoints": 19.4,
           "last3AvgPoints": 12.5,
@@ -2366,7 +2366,7 @@ const STATUS_REPORT_DATA = {
           "pos": "RB",
           "nfl": "ARI",
           "isStarter": true,
-          "status": null,
+          "status": "Q",
           "flag": false,
           "lastGamePoints": 21.9,
           "last3AvgPoints": 14.1,
@@ -3532,7 +3532,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 24.8,
           "last3AvgPoints": 24.1,
-          "projPoints": 17.6
+          "projPoints": 17.9
         },
         {
           "name": "Omar Cooper",
@@ -3620,7 +3620,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 19.7,
           "last3AvgPoints": 23.5,
-          "projPoints": 18.6
+          "projPoints": 19
         },
         {
           "name": "Jameson Williams",
@@ -3782,11 +3782,11 @@ const STATUS_REPORT_DATA = {
           "pos": "RB",
           "nfl": "NO",
           "isStarter": true,
-          "status": null,
+          "status": "Q",
           "flag": false,
           "lastGamePoints": 5.1,
           "last3AvgPoints": 6.2,
-          "projPoints": 9.7
+          "projPoints": 9.8
         },
         {
           "name": "Mike Gesicki",
@@ -3874,7 +3874,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 19.7,
           "last3AvgPoints": 23.5,
-          "projPoints": 18.6
+          "projPoints": 19
         },
         {
           "name": "Malik Willis",
