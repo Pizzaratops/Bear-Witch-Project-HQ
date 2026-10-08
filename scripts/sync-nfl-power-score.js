@@ -6,10 +6,10 @@
 //  dieser Woche, und isoliert NUR diese Woche) den Liga-Rang (1-32) in
 //  6 Kategorien:
 //
-//    1. Passing Offense   -> EPA/Play (Passing)
+//    1. Passing Offense   -> EPA/Dropback (Passing-EPA / (Attempts+Sacks))
 //    2. Turnover-Diff.     -> Takeaways minus Giveaways
-//    3. Pass Defense       -> EPA/Play zugelassen (Passing)
-//    4. Rush Defense       -> Yards/Spiel zugelassen (Rushing)
+//    3. Pass Defense       -> EPA/Dropback zugelassen
+//    4. Rush Defense       -> EPA/Carry zugelassen
 //    5. Points Scored      -> Punkte/Spiel
 //    6. Points Allowed     -> Punkte/Spiel zugelassen
 //
@@ -21,6 +21,21 @@
 //  -0.20) -- deshalb dort bewusst bei Yards geblieben statt blind auf
 //  EPA umzustellen. Turnover-Differential (r=0.61) ersetzt die
 //  schwaechste Kategorie (Rushing Offense, r=0.34/0.32).
+//
+//  Update 10/2026 (Rush Defense auf EPA/Carry, EPA pro Dropback statt
+//  Summe pro Spiel): Rushing Yards/Spiel zugelassen misst vor allem, WIE
+//  OFT der Gegner läuft (r=0.83 mit Gegner-Carries/Spiel; die wiederum
+//  r=-0.65 mit Win%) -- also Spielverlauf ("wer führt, wird angelaufen")
+//  statt Run-Defense-Qualität. Die hohe Sieg-Korrelation (-0.49) war
+//  dadurch zum Großteil doppelt gezählte Teamstärke, die Points Allowed
+//  schon abbildet. Gegen externe Defense-Rankings (DVOA/PFF/EPA-Composite,
+//  Stand Woche 4/2026) passt EPA/Carry deutlich besser: Spearman 0.85
+//  statt 0.62. Preis: EPA/Carry ist von Woche zu Woche rauschiger
+//  (Split-Half r=0.17 vs 0.33) -- früh in der Saison also mit Vorsicht
+//  lesen. Passing-EPA jetzt pro Dropback statt Summe/Spiel (Label
+//  sagte schon immer EPA/Play); Ranking praktisch identisch
+//  (Win-r 0.76 vs 0.75 Offense, -0.56 Defense).
+//  Kumulativ = Summe EPA / Summe Plays (nicht Mittel der Spielwerte).
 //
 //  Quelle: nflverse (siehe scripts/lib/nflverse.js) -- kein ESPN, keine
 //  Secrets noetig, dieselbe Quelle wie scripts/sync-espn-nfl-standings.js.
@@ -40,15 +55,29 @@ const ROOT = path.join(__dirname, '..');
 const OUT = path.join(ROOT, 'data', 'nfl-power-score.js');
 
 const CATEGORIES = [
-  { key: 'passOffEpa', label: 'Passing Offense', unit: 'EPA/Play', better: 'high' },
+  { key: 'passOffEpa', label: 'Passing Offense', unit: 'EPA/Dropback', better: 'high', num: 'passOffEpaSum', den: 'passOffDb', dec: 3 },
   { key: 'turnoverDiff', label: 'Turnover-Differential', unit: 'pro Spiel', better: 'high' },
-  { key: 'passDefEpa', label: 'Pass Defense', unit: 'EPA/Play zugelassen', better: 'low' },
-  { key: 'rushDefYds', label: 'Rush Defense', unit: 'Yards/Spiel zugelassen', better: 'low' },
+  { key: 'passDefEpa', label: 'Pass Defense', unit: 'EPA/Dropback zugelassen', better: 'low', num: 'passDefEpaSum', den: 'passDefDb', dec: 3 },
+  { key: 'rushDefEpa', label: 'Rush Defense', unit: 'EPA/Carry zugelassen', better: 'low', num: 'rushDefEpaSum', den: 'rushDefCar', dec: 3 },
   { key: 'pointsFor', label: 'Points Scored', unit: 'pro Spiel', better: 'high' },
   { key: 'pointsAgainst', label: 'Points Allowed', unit: 'pro Spiel zugelassen', better: 'low' },
 ];
 
-function round2(n) { return Math.round(n * 100) / 100; }
+function roundN(n, dec) { const f = Math.pow(10, dec || 2); return Math.round(n * f) / f; }
+
+// Wert einer Kategorie über eine Liste von Spielen: Raten-Kategorien
+// (num/den) als Summe/Summe, alle anderen als Mittelwert pro Spiel.
+function catValue(cat, games) {
+  if (!games.length) return null;
+  if (cat.num) {
+    const den = games.reduce((s, g) => s + g[cat.den], 0);
+    return den > 0 ? roundN(games.reduce((s, g) => s + g[cat.num], 0) / den, cat.dec) : null;
+  }
+  return roundN(games.reduce((s, g) => s + g[cat.key], 0) / games.length, cat.dec);
+}
+
+// Kategorien-Definition fürs Frontend ohne interne Felder (num/den/dec).
+const CATEGORIES_OUT = CATEGORIES.map(({ key, label, unit, better }) => ({ key, label, unit, better }));
 
 // Berechnet Rang 1-32 je Kategorie fuer eine Liste von {abbr, values}.
 // null-Werte (Bye-Week bei "weekly", oder noch kein Spiel bei "cumulative"
@@ -124,10 +153,14 @@ async function main() {
     perfByGameTeam[`${r.game_id}|${abbr}`] = {
       week: pts.week,
       abbr,
-      passOffEpa: Number(r.passing_epa) || 0,
+      // Dropbacks = Pass-Attempts + Sacks (passing_epa enthält die Sacks)
+      passOffEpaSum: Number(r.passing_epa) || 0,
+      passOffDb: (Number(r.attempts) || 0) + (Number(r.sacks_suffered) || 0),
       turnoverDiff: oppGiveaways - ownGiveaways,          // Takeaways (= Gegner-Giveaways) minus eigene Giveaways
-      passDefEpa: Number(oppRow.passing_epa) || 0,         // Gegner-Passing-EPA in diesem Spiel = von uns zugelassen
-      rushDefYds: Number(oppRow.rushing_yards) || 0,       // Gegner-Rushing-Yards in diesem Spiel = von uns zugelassen
+      passDefEpaSum: Number(oppRow.passing_epa) || 0,      // Gegner-Passing-EPA in diesem Spiel = von uns zugelassen
+      passDefDb: (Number(oppRow.attempts) || 0) + (Number(oppRow.sacks_suffered) || 0),
+      rushDefEpaSum: Number(oppRow.rushing_epa) || 0,      // Gegner-Rushing-EPA in diesem Spiel = von uns zugelassen
+      rushDefCar: Number(oppRow.carries) || 0,
       pointsFor: pts.pointsFor,
       pointsAgainst: pts.pointsAgainst,
     };
@@ -143,7 +176,7 @@ async function main() {
     const weeklyList = allAbbrs.map(abbr => {
       const p = perfList.find(x => x.abbr === abbr && x.week === uptoWeek);
       const values = {};
-      CATEGORIES.forEach(cat => { values[cat.key] = p ? round2(p[cat.key]) : null; });
+      CATEGORIES.forEach(cat => { values[cat.key] = p ? catValue(cat, [p]) : null; });
       return { abbr, values, ranks: {} };
     });
     assignRanks(weeklyList);
@@ -152,9 +185,7 @@ async function main() {
     const cumulativeList = allAbbrs.map(abbr => {
       const games = perfList.filter(x => x.abbr === abbr && x.week <= uptoWeek);
       const values = {};
-      CATEGORIES.forEach(cat => {
-        values[cat.key] = games.length ? round2(games.reduce((s, g) => s + g[cat.key], 0) / games.length) : null;
-      });
+      CATEGORIES.forEach(cat => { values[cat.key] = catValue(cat, games); });
       return { abbr, values, ranks: {}, gamesPlayed: games.length };
     });
     assignRanks(cumulativeList);
@@ -173,8 +204,9 @@ async function main() {
 //
 //  6 Kategorien, datengestützt ausgewählt (siehe Kommentar oben im
 //  Script für die Korrelationsanalyse gegen echte Season-Siege
-//  2021–2025): Passing Offense (EPA/Play), Turnover-Differential,
-//  Pass Defense (EPA/Play zugelassen), Rush Defense (Yards zugelassen),
+//  2021–2025, Update 10/2026): Passing Offense (EPA/Dropback),
+//  Turnover-Differential, Pass Defense (EPA/Dropback zugelassen),
+//  Rush Defense (EPA/Carry zugelassen),
 //  Points Scored, Points Allowed.
 //
 //  NFL_POWER_SCORE[season].categories = [{key,label,unit,better}, ...]
@@ -194,7 +226,7 @@ async function main() {
 
 const NFL_POWER_SCORE = {
   ${season}: {
-    categories: ${JSON.stringify(CATEGORIES, null, 2).split('\n').join('\n    ')},
+    categories: ${JSON.stringify(CATEGORIES_OUT, null, 2).split('\n').join('\n    ')},
     weeks: ${JSON.stringify(weeksOut, null, 2).split('\n').join('\n    ')}
   }
 };
