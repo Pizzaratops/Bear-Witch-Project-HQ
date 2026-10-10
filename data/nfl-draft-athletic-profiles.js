@@ -20883,6 +20883,18 @@ const NFL_DRAFT_ATHLETIC_PROFILES = {
       "draftCapitalScore": 0.165
     },
     {
+      "nameKey": "jammiller",
+      "name": "Jam Miller",
+      "college": "Alabama",
+      "draftYear": 2026,
+      "draftRound": 7,
+      "draftPick": 245,
+      "heightIn": 70,
+      "weightLb": 218,
+      "ras": null,
+      "draftCapitalScore": 0.165
+    },
+    {
       "nameKey": "kendremiller",
       "name": "Kendre Miller",
       "college": "TCU",
