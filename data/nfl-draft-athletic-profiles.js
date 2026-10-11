@@ -20079,6 +20079,18 @@ const NFL_DRAFT_ATHLETIC_PROFILES = {
       "draftCapitalScore": 0.523
     },
     {
+      "nameKey": "scottmatlock",
+      "name": "Scott Matlock",
+      "college": "Boise State",
+      "draftYear": 2023,
+      "draftRound": 6,
+      "draftPick": 200,
+      "heightIn": 76,
+      "weightLb": 296,
+      "ras": null,
+      "draftCapitalScore": 0.149
+    },
+    {
       "nameKey": "iramatthews",
       "name": "Ira Matthews",
       "college": "Wisconsin",
