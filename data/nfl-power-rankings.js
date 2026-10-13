@@ -5,7 +5,7 @@
 //  GitHub Action ".github/workflows/sync-espn-nfl-standings.yml".
 //  Nicht von Hand editieren — Änderungen werden beim nächsten Sync
 //  überschrieben.
-//  Zuletzt synchronisiert: 2026-10-13T01:43:26.587Z
+//  Zuletzt synchronisiert: 2026-10-13T14:41:24.366Z
 //
 //  Quelle: nflverse/nfldata (GitHub-gehostet, MIT-lizenziert), NICHT
 //  ESPN -- ESPNs öffentliche Sport-API blockt GitHub-Actions-Server
@@ -1583,12 +1583,12 @@ const NFL_STANDINGS = {
         "abbr": "BUF",
         "conference": "AFC",
         "division": "East",
-        "wins": 3,
+        "wins": 4,
         "losses": 1,
         "ties": 0,
-        "winPct": 0.75,
-        "pf": 127,
-        "pa": 107
+        "winPct": 0.8,
+        "pf": 164,
+        "pa": 141
       },
       {
         "name": "Miami Dolphins",
@@ -1932,11 +1932,11 @@ const NFL_STANDINGS = {
         "conference": "NFC",
         "division": "West",
         "wins": 2,
-        "losses": 2,
+        "losses": 3,
         "ties": 0,
-        "winPct": 0.5,
-        "pf": 85,
-        "pa": 83
+        "winPct": 0.4,
+        "pf": 119,
+        "pa": 120
       },
       {
         "name": "San Francisco 49ers",
@@ -2877,10 +2877,10 @@ const NFL_OFFDEF = {
     "5": [
       {
         "abbr": "BUF",
-        "off": 0.2008477910245767,
-        "def": 0.10927906824916914,
-        "offRank": 2,
-        "defRank": 28
+        "off": 0.22067838174314058,
+        "def": 0.1382035983520237,
+        "offRank": 1,
+        "defRank": 30
       },
       {
         "abbr": "MIA",
@@ -2893,7 +2893,7 @@ const NFL_OFFDEF = {
         "abbr": "NE",
         "off": 0.05966885362576763,
         "def": 0.017535085421183035,
-        "offRank": 10,
+        "offRank": 11,
         "defRank": 17
       },
       {
@@ -2901,7 +2901,7 @@ const NFL_OFFDEF = {
         "off": -0.037318558691455055,
         "def": -0.081886397007393,
         "offRank": 21,
-        "defRank": 5
+        "defRank": 4
       },
       {
         "abbr": "BAL",
@@ -2936,7 +2936,7 @@ const NFL_OFFDEF = {
         "off": -0.0033776435559644325,
         "def": -0.04576005778609327,
         "offRank": 14,
-        "defRank": 10
+        "defRank": 9
       },
       {
         "abbr": "IND",
@@ -2950,7 +2950,7 @@ const NFL_OFFDEF = {
         "off": 0.15329836785496526,
         "def": -0.08706945696265896,
         "offRank": 6,
-        "defRank": 4
+        "defRank": 3
       },
       {
         "abbr": "TEN",
@@ -2971,7 +2971,7 @@ const NFL_OFFDEF = {
         "off": 0.15619705036409876,
         "def": -0.050146157469548126,
         "offRank": 5,
-        "defRank": 9
+        "defRank": 8
       },
       {
         "abbr": "LV",
@@ -2985,7 +2985,7 @@ const NFL_OFFDEF = {
         "off": -0.19922909669628033,
         "def": -0.07235715462534918,
         "offRank": 32,
-        "defRank": 6
+        "defRank": 5
       },
       {
         "abbr": "DAL",
@@ -3019,7 +3019,7 @@ const NFL_OFFDEF = {
         "abbr": "CHI",
         "off": 0.0282714784009577,
         "def": 0.039302627674680124,
-        "offRank": 11,
+        "offRank": 12,
         "defRank": 21
       },
       {
@@ -3062,35 +3062,35 @@ const NFL_OFFDEF = {
         "off": -0.045013920179266004,
         "def": 0.13109665058851114,
         "offRank": 22,
-        "defRank": 30
+        "defRank": 29
       },
       {
         "abbr": "TB",
         "off": -0.08312760473344816,
         "def": -0.06798977610333765,
         "offRank": 26,
-        "defRank": 7
+        "defRank": 6
       },
       {
         "abbr": "ARI",
         "off": -0.027261747945502526,
         "def": 0.12416064184055288,
         "offRank": 17,
-        "defRank": 29
+        "defRank": 28
       },
       {
         "abbr": "LAR",
-        "off": 0.023736741683838516,
-        "def": -0.1271464272846432,
-        "offRank": 12,
-        "defRank": 3
+        "off": 0.07097643865904933,
+        "def": -0.04316253015140188,
+        "offRank": 10,
+        "defRank": 10
       },
       {
         "abbr": "SF",
         "off": 0.2028506414754812,
         "def": -0.0541010129217115,
-        "offRank": 1,
-        "defRank": 8
+        "offRank": 2,
+        "defRank": 7
       },
       {
         "abbr": "SEA",
