@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-10-15T08:40:00.387Z",
+  "generatedAt": "2026-10-15T14:31:28.343Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -516,17 +516,6 @@ const STATUS_REPORT_DATA = {
           "projPoints": 21.4
         },
         {
-          "name": "Dalton Kincaid",
-          "pos": "TE",
-          "nfl": "BUF",
-          "isStarter": true,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 3.7,
-          "last3AvgPoints": 3.1,
-          "projPoints": 8.1
-        },
-        {
           "name": "Dontayvion Wicks",
           "pos": "WR",
           "nfl": "PHI",
@@ -569,6 +558,17 @@ const STATUS_REPORT_DATA = {
           "lastGamePoints": 14.8,
           "last3AvgPoints": 14.8,
           "projPoints": 0
+        },
+        {
+          "name": "Kenneth Walker III",
+          "pos": "RB",
+          "nfl": "KC",
+          "isStarter": true,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 0,
+          "last3AvgPoints": 17.4,
+          "projPoints": 22.7
         }
       ],
       "flaggedCount": 0
@@ -812,7 +812,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 11.6,
           "last3AvgPoints": 13.2,
-          "projPoints": 11.8
+          "projPoints": 11.9
         },
         {
           "name": "Tory Horton",
@@ -2160,7 +2160,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 12.5,
           "last3AvgPoints": 9.9,
-          "projPoints": 13.6
+          "projPoints": 13.7
         },
         {
           "name": "Tory Horton",
@@ -2959,17 +2959,6 @@ const STATUS_REPORT_DATA = {
           "projPoints": 16.1
         },
         {
-          "name": "Jordan Addison",
-          "pos": "WR",
-          "nfl": "MIN",
-          "isStarter": false,
-          "status": "Q",
-          "flag": false,
-          "lastGamePoints": 0,
-          "last3AvgPoints": 9.7,
-          "projPoints": 0
-        },
-        {
           "name": "Broncos D/ST",
           "pos": "DST",
           "nfl": "DEN",
@@ -3067,6 +3056,17 @@ const STATUS_REPORT_DATA = {
           "lastGamePoints": null,
           "last3AvgPoints": null,
           "projPoints": 20.9
+        },
+        {
+          "name": "James Cook III",
+          "pos": "RB",
+          "nfl": "BUF",
+          "isStarter": true,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 22.8,
+          "last3AvgPoints": 19.5,
+          "projPoints": 19.3
         }
       ],
       "flaggedCount": 0
@@ -3753,7 +3753,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 15.2,
           "last3AvgPoints": 10.5,
-          "projPoints": 5.4
+          "projPoints": 5.3
         },
         {
           "name": "Germie Bernard",
