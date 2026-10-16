@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-10-16T08:34:57.053Z",
+  "generatedAt": "2026-10-16T14:23:49.125Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -442,7 +442,7 @@ const STATUS_REPORT_DATA = {
           "name": "Aaron Jones Sr.",
           "pos": "RB",
           "nfl": "MIN",
-          "isStarter": true,
+          "isStarter": false,
           "status": null,
           "flag": false,
           "lastGamePoints": 18.7,
@@ -878,7 +878,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 11.1,
           "last3AvgPoints": 9.6,
-          "projPoints": 14.7
+          "projPoints": 14.8
         },
         {
           "name": "David Montgomery",
@@ -1111,7 +1111,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 8,
           "last3AvgPoints": 13.2,
-          "projPoints": 9
+          "projPoints": 8.9
         },
         {
           "name": "Colston Loveland",
@@ -1199,7 +1199,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 19.7,
-          "projPoints": 20.4
+          "projPoints": 20.2
         },
         {
           "name": "Tua Tagovailoa",
@@ -1321,7 +1321,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 6.6,
-          "projPoints": 2.1
+          "projPoints": 2
         },
         {
           "name": "Jalen Coker",
@@ -2005,7 +2005,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 11.1,
           "last3AvgPoints": 9.6,
-          "projPoints": 14.7
+          "projPoints": 14.8
         },
         {
           "name": "Brian Robinson",
@@ -2160,7 +2160,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 12.5,
           "last3AvgPoints": 9.9,
-          "projPoints": 13.7
+          "projPoints": 13.8
         },
         {
           "name": "Tory Horton",
@@ -3421,7 +3421,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 5,
           "last3AvgPoints": 8.3,
-          "projPoints": 8.8
+          "projPoints": 8.7
         },
         {
           "name": "Cam Little",
@@ -3443,7 +3443,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 7,
           "last3AvgPoints": 6.7,
-          "projPoints": 8.8
+          "projPoints": 8.7
         },
         {
           "name": "Chicago Bears",
