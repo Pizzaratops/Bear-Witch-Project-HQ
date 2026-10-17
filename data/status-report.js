@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-10-17T21:50:42.901Z",
+  "generatedAt": "2026-10-17T23:36:16.442Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -1365,7 +1365,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 4.4,
           "last3AvgPoints": 7.4,
-          "projPoints": 7.2
+          "projPoints": 7.3
         },
         {
           "name": "Colston Loveland",
@@ -1685,7 +1685,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 0.9,
-          "projPoints": 0.6
+          "projPoints": 0.9
         },
         {
           "name": "Courtland Sutton",
@@ -2138,7 +2138,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 10.6,
-          "projPoints": 11.3
+          "projPoints": 11.2
         },
         {
           "name": "Ricky Pearsall",
@@ -2193,7 +2193,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 4.9,
           "last3AvgPoints": 7.9,
-          "projPoints": 8
+          "projPoints": 8.2
         },
         {
           "name": "TreVeyon Henderson",
@@ -3532,7 +3532,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 10.6,
-          "projPoints": 11.3
+          "projPoints": 11.2
         },
         {
           "name": "Kimani Vidal",
@@ -3543,7 +3543,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 12.6,
           "last3AvgPoints": 9.1,
-          "projPoints": 6.8
+          "projPoints": 7
         },
         {
           "name": "Tyrone Tracy",
@@ -3874,7 +3874,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 9.8,
           "last3AvgPoints": 9.8,
-          "projPoints": 10
+          "projPoints": 10.2
         },
         {
           "name": "Deebo Samuel",
