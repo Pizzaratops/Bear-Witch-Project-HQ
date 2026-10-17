@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-10-17T11:49:09.588Z",
+  "generatedAt": "2026-10-17T14:35:20.312Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -281,7 +281,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 10.9,
           "last3AvgPoints": 8.8,
-          "projPoints": 9
+          "projPoints": 9.5
         },
         {
           "name": "Rome Odunze",
@@ -442,7 +442,7 @@ const STATUS_REPORT_DATA = {
           "name": "Aaron Jones Sr.",
           "pos": "RB",
           "nfl": "MIN",
-          "isStarter": true,
+          "isStarter": false,
           "status": null,
           "flag": false,
           "lastGamePoints": 18.7,
@@ -1465,7 +1465,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 8.8,
-          "projPoints": 6
+          "projPoints": 6.1
         },
         {
           "name": "Joe Milton",
@@ -2038,7 +2038,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
-          "projPoints": 11.8
+          "projPoints": 11.9
         },
         {
           "name": "Jaxon Smith-Njigba",
@@ -2083,7 +2083,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 8.8,
-          "projPoints": 6.7
+          "projPoints": 6.8
         },
         {
           "name": "Caleb Williams",
@@ -2376,7 +2376,7 @@ const STATUS_REPORT_DATA = {
           "name": "TreVeyon Henderson",
           "pos": "RB",
           "nfl": "NE",
-          "isStarter": false,
+          "isStarter": true,
           "status": "Q",
           "flag": false,
           "lastGamePoints": 4.8,
@@ -2387,9 +2387,9 @@ const STATUS_REPORT_DATA = {
           "name": "Kyle Monangai",
           "pos": "RB",
           "nfl": "CHI",
-          "isStarter": true,
+          "isStarter": false,
           "status": "O",
-          "flag": true,
+          "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 15.6,
           "projPoints": null
@@ -2469,7 +2469,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 2.9,
           "last3AvgPoints": 21.5,
-          "projPoints": 19.7
+          "projPoints": 19.8
         },
         {
           "name": "Justin Herbert",
@@ -2527,7 +2527,7 @@ const STATUS_REPORT_DATA = {
           "projPoints": null
         }
       ],
-      "flaggedCount": 1
+      "flaggedCount": 0
     },
     {
       "id": "felix-espn-91260355",
@@ -3476,7 +3476,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 7,
           "last3AvgPoints": 4.3,
-          "projPoints": 6.4
+          "projPoints": 6.5
         }
       ],
       "flaggedCount": 0
@@ -3863,7 +3863,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 9.8,
           "last3AvgPoints": 9.8,
-          "projPoints": 10.5
+          "projPoints": 10.6
         },
         {
           "name": "Deebo Samuel",
