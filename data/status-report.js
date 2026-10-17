@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-10-17T06:35:08.020Z",
+  "generatedAt": "2026-10-17T11:49:09.588Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -442,7 +442,7 @@ const STATUS_REPORT_DATA = {
           "name": "Aaron Jones Sr.",
           "pos": "RB",
           "nfl": "MIN",
-          "isStarter": false,
+          "isStarter": true,
           "status": null,
           "flag": false,
           "lastGamePoints": 18.7,
@@ -1442,7 +1442,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 27.4,
           "last3AvgPoints": 13.5,
-          "projPoints": 12.6
+          "projPoints": 12.7
         }
       ],
       "flaggedCount": 1
@@ -1520,7 +1520,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 10.6,
           "last3AvgPoints": 12.2,
-          "projPoints": 11.1
+          "projPoints": 11
         },
         {
           "name": "Quinn Ewers",
@@ -1773,7 +1773,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 27.4,
           "last3AvgPoints": 13.5,
-          "projPoints": 12.6
+          "projPoints": 12.7
         },
         {
           "name": "Kayshon Boutte",
