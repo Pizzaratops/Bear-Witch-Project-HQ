@@ -5,7 +5,7 @@
 //  GitHub Action ".github/workflows/sync-espn-nfl-standings.yml".
 //  Nicht von Hand editieren — Änderungen werden beim nächsten Sync
 //  überschrieben.
-//  Zuletzt synchronisiert: 2026-10-18T11:52:41.535Z
+//  Zuletzt synchronisiert: 2026-10-18T12:30:35.028Z
 //
 //  Quelle: nflverse/nfldata (GitHub-gehostet, MIT-lizenziert), NICHT
 //  ESPN -- ESPNs öffentliche Sport-API blockt GitHub-Actions-Server
