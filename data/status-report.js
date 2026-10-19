@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-10-19T09:24:05.232Z",
+  "generatedAt": "2026-10-19T16:41:28.331Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -746,7 +746,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 32.3,
           "last3AvgPoints": 32.3,
-          "projPoints": 17.3
+          "projPoints": 17.2
         },
         {
           "name": "Brock Bowers",
@@ -1630,7 +1630,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 7.2,
           "last3AvgPoints": 7.2,
-          "projPoints": 5
+          "projPoints": 3.6
         },
         {
           "name": "Hunter Henry",
@@ -1674,7 +1674,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 4.9,
           "last3AvgPoints": 14.4,
-          "projPoints": 12.6
+          "projPoints": 12.5
         },
         {
           "name": "Johnny Mundt",
@@ -1762,7 +1762,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 17.2,
           "last3AvgPoints": 22.7,
-          "projPoints": 22.4
+          "projPoints": 22.2
         },
         {
           "name": "Rashid Shaheed",
@@ -1840,7 +1840,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 32.3,
           "last3AvgPoints": 32.3,
-          "projPoints": 17.3
+          "projPoints": 17.2
         },
         {
           "name": "Blake Corum",
@@ -2303,7 +2303,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 17.2,
           "last3AvgPoints": 22.7,
-          "projPoints": 22.4
+          "projPoints": 22.2
         },
         {
           "name": "Jordan Mason",
@@ -2447,7 +2447,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 26.3,
           "last3AvgPoints": 17.1,
-          "projPoints": 16.4
+          "projPoints": 16.3
         },
         {
           "name": "DJ Moore",
@@ -2502,7 +2502,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 3,
           "last3AvgPoints": 7.1,
-          "projPoints": 11
+          "projPoints": 10.9
         },
         {
           "name": "Chase Brown",
@@ -3510,7 +3510,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 32.3,
           "last3AvgPoints": 32.3,
-          "projPoints": 17.3
+          "projPoints": 17.2
         },
         {
           "name": "Blake Corum",
@@ -3653,7 +3653,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 17.3,
           "last3AvgPoints": 18.3,
-          "projPoints": 20.8
+          "projPoints": 20.7
         },
         {
           "name": "Isaiah Likely",
@@ -3675,7 +3675,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 3,
           "last3AvgPoints": 7.1,
-          "projPoints": 11
+          "projPoints": 10.9
         },
         {
           "name": "Chris Olave",
