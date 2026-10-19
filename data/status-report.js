@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-10-19T02:14:55.541Z",
+  "generatedAt": "2026-10-19T09:24:05.232Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -442,7 +442,7 @@ const STATUS_REPORT_DATA = {
           "name": "Aaron Jones Sr.",
           "pos": "RB",
           "nfl": "MIN",
-          "isStarter": false,
+          "isStarter": true,
           "status": null,
           "flag": false,
           "lastGamePoints": 18.7,
