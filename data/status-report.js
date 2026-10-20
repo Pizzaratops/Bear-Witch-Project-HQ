@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-10-19T21:49:50.911Z",
+  "generatedAt": "2026-10-20T00:47:03.931Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -255,7 +255,7 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "NE",
           "isStarter": false,
-          "status": null,
+          "status": "Q",
           "flag": false,
           "lastGamePoints": 0,
           "last3AvgPoints": 0,
@@ -746,7 +746,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 32.3,
           "last3AvgPoints": 32.3,
-          "projPoints": 17.6
+          "projPoints": 17.7
         },
         {
           "name": "Brock Bowers",
@@ -1674,7 +1674,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 4.9,
           "last3AvgPoints": 14.4,
-          "projPoints": 12.6
+          "projPoints": 12.4
         },
         {
           "name": "Johnny Mundt",
@@ -1762,7 +1762,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 17.2,
           "last3AvgPoints": 22.7,
-          "projPoints": 22.4
+          "projPoints": 21.9
         },
         {
           "name": "Rashid Shaheed",
@@ -1840,7 +1840,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 32.3,
           "last3AvgPoints": 32.3,
-          "projPoints": 17.6
+          "projPoints": 17.7
         },
         {
           "name": "Blake Corum",
@@ -2303,7 +2303,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 17.2,
           "last3AvgPoints": 22.7,
-          "projPoints": 22.4
+          "projPoints": 21.9
         },
         {
           "name": "Jordan Mason",
@@ -2443,11 +2443,11 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "SF",
           "isStarter": true,
-          "status": "Q",
+          "status": null,
           "flag": false,
           "lastGamePoints": 26.3,
           "last3AvgPoints": 17.1,
-          "projPoints": 16.8
+          "projPoints": 16.6
         },
         {
           "name": "DJ Moore",
@@ -2502,7 +2502,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 3,
           "last3AvgPoints": 7.1,
-          "projPoints": 10.8
+          "projPoints": 10.9
         },
         {
           "name": "Chase Brown",
@@ -3510,7 +3510,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 32.3,
           "last3AvgPoints": 32.3,
-          "projPoints": 17.6
+          "projPoints": 17.7
         },
         {
           "name": "Blake Corum",
@@ -3653,7 +3653,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 17.3,
           "last3AvgPoints": 18.3,
-          "projPoints": 20.9
+          "projPoints": 20.6
         },
         {
           "name": "Isaiah Likely",
@@ -3675,7 +3675,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 3,
           "last3AvgPoints": 7.1,
-          "projPoints": 10.8
+          "projPoints": 10.9
         },
         {
           "name": "Chris Olave",
@@ -3793,8 +3793,8 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "LAR",
           "isStarter": true,
-          "status": null,
-          "flag": false,
+          "status": "O",
+          "flag": true,
           "lastGamePoints": 22.1,
           "last3AvgPoints": 16.7,
           "projPoints": null
@@ -3804,7 +3804,7 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "WAS",
           "isStarter": true,
-          "status": "Q",
+          "status": null,
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 7.9,
@@ -3995,10 +3995,10 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 20,
           "last3AvgPoints": 8.7,
-          "projPoints": 7.3
+          "projPoints": 7.2
         }
       ],
-      "flaggedCount": 0
+      "flaggedCount": 1
     }
   ]
 };
