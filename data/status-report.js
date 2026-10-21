@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-10-21T02:23:23.475Z",
+  "generatedAt": "2026-10-21T08:58:04.430Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -132,7 +132,7 @@ const STATUS_REPORT_DATA = {
           "name": "Ollie Gordon II",
           "pos": "RB",
           "nfl": "MIA",
-          "isStarter": false,
+          "isStarter": true,
           "status": null,
           "flag": false,
           "lastGamePoints": 0,
@@ -143,7 +143,7 @@ const STATUS_REPORT_DATA = {
           "name": "Keaton Mitchell",
           "pos": "RB",
           "nfl": "LAC",
-          "isStarter": true,
+          "isStarter": false,
           "status": null,
           "flag": false,
           "lastGamePoints": 0.4,
@@ -195,15 +195,15 @@ const STATUS_REPORT_DATA = {
           "projPoints": null
         },
         {
-          "name": "Kimani Vidal",
-          "pos": "RB",
-          "nfl": "LAC",
+          "name": "Omar Cooper Jr.",
+          "pos": "WR",
+          "nfl": "NYJ",
           "isStarter": false,
           "status": null,
           "flag": false,
-          "lastGamePoints": 7,
-          "last3AvgPoints": 7,
-          "projPoints": 0
+          "lastGamePoints": null,
+          "last3AvgPoints": null,
+          "projPoints": 7.4
         }
       ],
       "flaggedCount": 0
@@ -704,9 +704,9 @@ const STATUS_REPORT_DATA = {
           "projPoints": null
         },
         {
-          "name": "Kimani Vidal",
+          "name": "Ollie Gordon II",
           "pos": "RB",
-          "nfl": "LAC",
+          "nfl": "MIA",
           "isStarter": false,
           "status": null,
           "flag": false,
@@ -955,7 +955,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 25.4,
           "last3AvgPoints": 20.3,
-          "projPoints": 23.5
+          "projPoints": 23.6
         },
         {
           "name": "Denver Broncos",
@@ -1089,7 +1089,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 15.7,
           "last3AvgPoints": 15.7,
-          "projPoints": 15.8
+          "projPoints": 15.7
         },
         {
           "name": "Pat Bryant",
@@ -1188,7 +1188,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 7.7,
           "last3AvgPoints": 7.9,
-          "projPoints": 9.8
+          "projPoints": 9.7
         },
         {
           "name": "Lamar Jackson",
@@ -1254,7 +1254,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 4.4,
-          "projPoints": 1.4
+          "projPoints": 1.5
         },
         {
           "name": "Keaton Mitchell",
@@ -1332,7 +1332,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 12.7,
           "last3AvgPoints": 12.7,
-          "projPoints": 13.1
+          "projPoints": 13
         },
         {
           "name": "Kirk Cousins",
@@ -1398,7 +1398,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 11.5,
           "last3AvgPoints": 14.3,
-          "projPoints": 16
+          "projPoints": 16.1
         },
         {
           "name": "DJ Moore",
@@ -1509,7 +1509,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 1.7,
           "last3AvgPoints": 4.1,
-          "projPoints": 3.2
+          "projPoints": 3.1
         },
         {
           "name": "Bhayshul Tuten",
@@ -2060,7 +2060,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 25.4,
           "last3AvgPoints": 20.3,
-          "projPoints": 23.5
+          "projPoints": 23.6
         },
         {
           "name": "Denver Broncos",
@@ -2160,7 +2160,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 15.7,
           "last3AvgPoints": 15.7,
-          "projPoints": 15.8
+          "projPoints": 15.7
         },
         {
           "name": "Woody Marks",
@@ -2726,15 +2726,15 @@ const STATUS_REPORT_DATA = {
           "projPoints": 19.6
         },
         {
-          "name": "Buccaneers D/ST",
-          "pos": "DST",
-          "nfl": "TB",
+          "name": "DeMario Douglas",
+          "pos": "WR",
+          "nfl": "NE",
           "isStarter": false,
           "status": null,
           "flag": false,
-          "lastGamePoints": 7,
-          "last3AvgPoints": 7,
-          "projPoints": 4.6
+          "lastGamePoints": null,
+          "last3AvgPoints": null,
+          "projPoints": 10.5
         }
       ],
       "flaggedCount": 0
@@ -3158,17 +3158,6 @@ const STATUS_REPORT_DATA = {
           "projPoints": null
         },
         {
-          "name": "Kyle Monangai",
-          "pos": "RB",
-          "nfl": "CHI",
-          "isStarter": false,
-          "status": "Q",
-          "flag": false,
-          "lastGamePoints": null,
-          "last3AvgPoints": null,
-          "projPoints": null
-        },
-        {
           "name": "Javonte Williams",
           "pos": "RB",
           "nfl": "DAL",
@@ -3202,9 +3191,20 @@ const STATUS_REPORT_DATA = {
           "projPoints": null
         },
         {
-          "name": "Keon Coleman",
+          "name": "Puka Nacua",
           "pos": "WR",
-          "nfl": "BUF",
+          "nfl": "LAR",
+          "isStarter": true,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": null,
+          "last3AvgPoints": null,
+          "projPoints": null
+        },
+        {
+          "name": "Sam LaPorta",
+          "pos": "TE",
+          "nfl": "DET",
           "isStarter": false,
           "status": null,
           "flag": false,
@@ -3300,17 +3300,6 @@ const STATUS_REPORT_DATA = {
           "lastGamePoints": 3.6,
           "last3AvgPoints": 13.2,
           "projPoints": 11.5
-        },
-        {
-          "name": "Courtland Sutton",
-          "pos": "WR",
-          "nfl": "DEN",
-          "isStarter": false,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 3.9,
-          "last3AvgPoints": 5,
-          "projPoints": 8.9
         },
         {
           "name": "Jaylen Warren",
@@ -3410,6 +3399,17 @@ const STATUS_REPORT_DATA = {
           "lastGamePoints": 9,
           "last3AvgPoints": 9,
           "projPoints": 9.7
+        },
+        {
+          "name": "Jordan Love",
+          "pos": "QB",
+          "nfl": "GB",
+          "isStarter": false,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": null,
+          "last3AvgPoints": null,
+          "projPoints": 19.6
         }
       ],
       "flaggedCount": 0
@@ -3781,7 +3781,7 @@ const STATUS_REPORT_DATA = {
           "name": "Jalon Daniels",
           "pos": "QB",
           "nfl": "TB",
-          "isStarter": true,
+          "isStarter": false,
           "status": null,
           "flag": false,
           "lastGamePoints": 13.2,
@@ -3946,7 +3946,7 @@ const STATUS_REPORT_DATA = {
           "name": "Malik Willis",
           "pos": "QB",
           "nfl": "MIA",
-          "isStarter": false,
+          "isStarter": true,
           "status": null,
           "flag": false,
           "lastGamePoints": null,
@@ -3968,7 +3968,7 @@ const STATUS_REPORT_DATA = {
           "name": "Kayshon Boutte",
           "pos": "WR",
           "nfl": "HOU",
-          "isStarter": true,
+          "isStarter": false,
           "status": null,
           "flag": false,
           "lastGamePoints": 3.6,
@@ -3979,9 +3979,9 @@ const STATUS_REPORT_DATA = {
           "name": "Jordan Addison",
           "pos": "WR",
           "nfl": "MIN",
-          "isStarter": false,
+          "isStarter": true,
           "status": "O",
-          "flag": false,
+          "flag": true,
           "lastGamePoints": null,
           "last3AvgPoints": 9.1,
           "projPoints": 8.4
@@ -3998,7 +3998,7 @@ const STATUS_REPORT_DATA = {
           "projPoints": 6.9
         }
       ],
-      "flaggedCount": 0
+      "flaggedCount": 1
     }
   ]
 };
