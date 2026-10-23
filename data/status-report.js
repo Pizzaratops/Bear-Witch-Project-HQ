@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-10-23T08:55:03.661Z",
+  "generatedAt": "2026-10-23T14:31:27.638Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -375,7 +375,7 @@ const STATUS_REPORT_DATA = {
           "name": "Kirk Cousins",
           "pos": "QB",
           "nfl": "LV",
-          "isStarter": true,
+          "isStarter": false,
           "status": null,
           "flag": false,
           "lastGamePoints": 18.5,
@@ -812,7 +812,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 2.3,
           "last3AvgPoints": 4.9,
-          "projPoints": 3.4
+          "projPoints": 3.3
         },
         {
           "name": "Emeka Egbuka",
@@ -944,7 +944,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 25.4,
           "last3AvgPoints": 20.3,
-          "projPoints": 23.5
+          "projPoints": 23.4
         },
         {
           "name": "Denver Broncos",
@@ -1288,7 +1288,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 5.2,
           "last3AvgPoints": 14.3,
-          "projPoints": 7.3
+          "projPoints": 7.4
         },
         {
           "name": "Blake Corum",
@@ -1586,7 +1586,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 7.3,
           "last3AvgPoints": 4.9,
-          "projPoints": 9.3
+          "projPoints": 9.2
         },
         {
           "name": "Brandin Cooks",
@@ -1884,7 +1884,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 2.3,
           "last3AvgPoints": 4.9,
-          "projPoints": 3.4
+          "projPoints": 3.3
         },
         {
           "name": "Emeka Egbuka",
@@ -2005,7 +2005,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 25.4,
           "last3AvgPoints": 20.3,
-          "projPoints": 23.5
+          "projPoints": 23.4
         },
         {
           "name": "Denver Broncos",
@@ -2127,7 +2127,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 2.3,
           "last3AvgPoints": 4.9,
-          "projPoints": 3.4
+          "projPoints": 3.3
         },
         {
           "name": "Omarion Hampton",
@@ -2315,7 +2315,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 14.3,
           "last3AvgPoints": 12.7,
-          "projPoints": 9.1
+          "projPoints": 9
         },
         {
           "name": "Colston Loveland",
@@ -2797,7 +2797,7 @@ const STATUS_REPORT_DATA = {
           "pos": "?",
           "nfl": "PIT",
           "isStarter": true,
-          "status": "Q",
+          "status": null,
           "flag": false,
           "lastGamePoints": 1.5,
           "last3AvgPoints": 6.3,
@@ -3510,7 +3510,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 2.3,
           "last3AvgPoints": 4.9,
-          "projPoints": 3.4
+          "projPoints": 3.3
         },
         {
           "name": "Mason Taylor",
@@ -3543,7 +3543,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 27,
           "last3AvgPoints": 14.9,
-          "projPoints": 16
+          "projPoints": 16.1
         },
         {
           "name": "Omar Cooper Jr.",
