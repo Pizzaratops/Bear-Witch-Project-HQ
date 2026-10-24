@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-10-24T02:21:46.538Z",
+  "generatedAt": "2026-10-24T08:28:24.346Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -1421,6 +1421,17 @@ const STATUS_REPORT_DATA = {
           "lastGamePoints": null,
           "last3AvgPoints": 10.7,
           "projPoints": 16.2
+        },
+        {
+          "name": "Michael Mayer",
+          "pos": "TE",
+          "nfl": "LV",
+          "isStarter": false,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 13,
+          "last3AvgPoints": 8.6,
+          "projPoints": 5.5
         },
         {
           "name": "Parker Washington",
@@ -3025,17 +3036,6 @@ const STATUS_REPORT_DATA = {
           "projPoints": 18.5
         },
         {
-          "name": "RJ Harvey",
-          "pos": "RB",
-          "nfl": "DEN",
-          "isStarter": true,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 14.6,
-          "last3AvgPoints": 7.7,
-          "projPoints": 11.4
-        },
-        {
           "name": "James Cook III",
           "pos": "RB",
           "nfl": "BUF",
@@ -3056,6 +3056,17 @@ const STATUS_REPORT_DATA = {
           "lastGamePoints": null,
           "last3AvgPoints": null,
           "projPoints": 11.1
+        },
+        {
+          "name": "Derrick Henry",
+          "pos": "RB",
+          "nfl": "BAL",
+          "isStarter": true,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 5,
+          "last3AvgPoints": 14,
+          "projPoints": 20.1
         }
       ],
       "flaggedCount": 0
