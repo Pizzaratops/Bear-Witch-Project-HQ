@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-10-24T19:56:46.392Z",
+  "generatedAt": "2026-10-24T22:10:09.117Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -944,7 +944,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 25.4,
           "last3AvgPoints": 20.3,
-          "projPoints": 24.1
+          "projPoints": 24
         },
         {
           "name": "Denver Broncos",
@@ -1210,7 +1210,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 20.5,
           "last3AvgPoints": 20.5,
-          "projPoints": 14.1
+          "projPoints": null
         },
         {
           "name": "Rhamondre Stevenson",
@@ -1575,7 +1575,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 3.4,
           "last3AvgPoints": 4.8,
-          "projPoints": 4.9
+          "projPoints": 7
         },
         {
           "name": "Sam Roush",
@@ -1674,7 +1674,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 0.9,
           "last3AvgPoints": 0.9,
-          "projPoints": 0.7
+          "projPoints": 1.5
         },
         {
           "name": "Courtland Sutton",
@@ -1961,7 +1961,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 4.9,
           "last3AvgPoints": 6.6,
-          "projPoints": 6.3
+          "projPoints": 9
         },
         {
           "name": "Brandin Cooks",
@@ -2049,7 +2049,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 25.4,
           "last3AvgPoints": 20.3,
-          "projPoints": 24.1
+          "projPoints": 24
         },
         {
           "name": "Denver Broncos",
@@ -2480,7 +2480,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 16,
           "last3AvgPoints": 20.1,
-          "projPoints": 17.2
+          "projPoints": 17.3
         },
         {
           "name": "Justin Herbert",
@@ -2896,7 +2896,7 @@ const STATUS_REPORT_DATA = {
           "pos": "?",
           "nfl": "BAL",
           "isStarter": false,
-          "status": "O",
+          "status": "IR",
           "flag": false,
           "lastGamePoints": 5,
           "last3AvgPoints": 5,
@@ -3454,7 +3454,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 9,
           "last3AvgPoints": 7.7,
-          "projPoints": 6
+          "projPoints": 5.9
         },
         {
           "name": "Chicago Bears",
@@ -3819,7 +3819,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 5,
           "last3AvgPoints": 14,
-          "projPoints": 16.4
+          "projPoints": 16.9
         },
         {
           "name": "Ka'imi Fairbairn",
@@ -3863,7 +3863,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 12.1,
           "last3AvgPoints": 11,
-          "projPoints": 10.9
+          "projPoints": 11.6
         },
         {
           "name": "Deebo Samuel Sr.",
