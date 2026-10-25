@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-10-25T17:28:13.602Z",
+  "generatedAt": "2026-10-25T20:06:57.124Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -199,7 +199,7 @@ const STATUS_REPORT_DATA = {
           "pos": "RB",
           "nfl": "NYG",
           "isStarter": false,
-          "status": null,
+          "status": "Q",
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
@@ -432,7 +432,7 @@ const STATUS_REPORT_DATA = {
           "pos": "RB",
           "nfl": "MIN",
           "isStarter": true,
-          "status": null,
+          "status": "Q",
           "flag": false,
           "lastGamePoints": 0,
           "last3AvgPoints": 11.8,
@@ -530,7 +530,7 @@ const STATUS_REPORT_DATA = {
           "name": "Parker Washington",
           "pos": "WR",
           "nfl": "JAX",
-          "isStarter": false,
+          "isStarter": true,
           "status": null,
           "flag": false,
           "lastGamePoints": 10.4,
@@ -542,7 +542,7 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "HOU",
           "isStarter": true,
-          "status": null,
+          "status": "Q",
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
@@ -955,7 +955,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 14,
           "last3AvgPoints": 10.7,
-          "projPoints": 8.2
+          "projPoints": 8.3
         }
       ],
       "flaggedCount": 0
@@ -1056,7 +1056,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 1,
           "last3AvgPoints": 9.2,
-          "projPoints": 5
+          "projPoints": 5.1
         },
         {
           "name": "Rome Odunze",
@@ -1232,7 +1232,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 12.3,
           "last3AvgPoints": 14.7,
-          "projPoints": 15.3
+          "projPoints": 15.4
         },
         {
           "name": "Sean Tucker",
@@ -1553,7 +1553,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
-          "projPoints": 0.5
+          "projPoints": null
         },
         {
           "name": "Nicholas Singleton",
@@ -2016,7 +2016,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
-          "projPoints": 11.9
+          "projPoints": 12
         },
         {
           "name": "Treylon Burks",
@@ -2071,7 +2071,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 14,
           "last3AvgPoints": 10.7,
-          "projPoints": 8.2
+          "projPoints": 8.3
         }
       ],
       "flaggedCount": 0
@@ -2359,7 +2359,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 4.5,
           "last3AvgPoints": 8.7,
-          "projPoints": 19.2
+          "projPoints": 19.4
         },
         {
           "name": "Xavier Worthy",
@@ -3039,8 +3039,8 @@ const STATUS_REPORT_DATA = {
           "name": "Puka Nacua",
           "pos": "WR",
           "nfl": "LAR",
-          "isStarter": false,
-          "status": "Q",
+          "isStarter": true,
+          "status": null,
           "flag": false,
           "lastGamePoints": 14,
           "last3AvgPoints": 26.5,
@@ -3061,7 +3061,7 @@ const STATUS_REPORT_DATA = {
           "name": "James Cook III",
           "pos": "RB",
           "nfl": "BUF",
-          "isStarter": true,
+          "isStarter": false,
           "status": null,
           "flag": false,
           "lastGamePoints": 24.3,
@@ -3183,8 +3183,8 @@ const STATUS_REPORT_DATA = {
           "name": "Puka Nacua",
           "pos": "WR",
           "nfl": "LAR",
-          "isStarter": false,
-          "status": "Q",
+          "isStarter": true,
+          "status": null,
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
@@ -3227,7 +3227,7 @@ const STATUS_REPORT_DATA = {
           "name": "Makai Lemon",
           "pos": "WR",
           "nfl": "PHI",
-          "isStarter": true,
+          "isStarter": false,
           "status": null,
           "flag": false,
           "lastGamePoints": null,
@@ -3288,7 +3288,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 6.4,
           "last3AvgPoints": 8.6,
-          "projPoints": 11.2
+          "projPoints": 11.1
         },
         {
           "name": "D'Andre Swift",
@@ -3431,7 +3431,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
-          "projPoints": 7.3
+          "projPoints": 7.2
         }
       ],
       "flaggedCount": 0
@@ -3775,7 +3775,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": -0.2,
           "last3AvgPoints": 1.5,
-          "projPoints": 0.2
+          "projPoints": null
         },
         {
           "name": "Jaylin Noel",
