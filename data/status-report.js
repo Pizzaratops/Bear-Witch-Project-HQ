@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-10-26T02:09:42.843Z",
+  "generatedAt": "2026-10-26T09:27:54.997Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -530,7 +530,7 @@ const STATUS_REPORT_DATA = {
           "name": "Parker Washington",
           "pos": "WR",
           "nfl": "JAX",
-          "isStarter": false,
+          "isStarter": true,
           "status": null,
           "flag": false,
           "lastGamePoints": 10.4,
@@ -1575,7 +1575,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 3.4,
           "last3AvgPoints": 4.8,
-          "projPoints": 7
+          "projPoints": 6.9
         },
         {
           "name": "Sam Roush",
@@ -1972,7 +1972,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 4.9,
           "last3AvgPoints": 6.6,
-          "projPoints": 9
+          "projPoints": 8.9
         },
         {
           "name": "Brandin Cooks",
@@ -2491,7 +2491,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 16,
           "last3AvgPoints": 20.1,
-          "projPoints": 17.3
+          "projPoints": 17.2
         },
         {
           "name": "Justin Herbert",
@@ -3454,7 +3454,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 1,
           "last3AvgPoints": 5.3,
-          "projPoints": 8.9
+          "projPoints": 8.8
         },
         {
           "name": "Cam Little",
@@ -3885,7 +3885,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 12.1,
           "last3AvgPoints": 11,
-          "projPoints": 11.6
+          "projPoints": 11.5
         },
         {
           "name": "Deebo Samuel Sr.",
