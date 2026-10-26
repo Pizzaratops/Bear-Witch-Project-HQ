@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-10-26T09:27:54.997Z",
+  "generatedAt": "2026-10-26T16:21:30.475Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -25,8 +25,8 @@ const STATUS_REPORT_DATA = {
           "isStarter": true,
           "status": null,
           "flag": false,
-          "lastGamePoints": 13.3,
-          "last3AvgPoints": 16.9,
+          "lastGamePoints": null,
+          "last3AvgPoints": 18.8,
           "projPoints": 13.2
         },
         {
@@ -36,8 +36,8 @@ const STATUS_REPORT_DATA = {
           "isStarter": true,
           "status": null,
           "flag": false,
-          "lastGamePoints": 10.9,
-          "last3AvgPoints": 17.4,
+          "lastGamePoints": null,
+          "last3AvgPoints": 20.7,
           "projPoints": 16.7
         },
         {
@@ -47,8 +47,8 @@ const STATUS_REPORT_DATA = {
           "isStarter": true,
           "status": null,
           "flag": false,
-          "lastGamePoints": 8.4,
-          "last3AvgPoints": 12.5,
+          "lastGamePoints": null,
+          "last3AvgPoints": 14.6,
           "projPoints": 15.1
         },
         {
@@ -58,8 +58,8 @@ const STATUS_REPORT_DATA = {
           "isStarter": false,
           "status": "O",
           "flag": false,
-          "lastGamePoints": 0,
-          "last3AvgPoints": 1.8,
+          "lastGamePoints": null,
+          "last3AvgPoints": 2.7,
           "projPoints": 0
         },
         {
@@ -69,8 +69,8 @@ const STATUS_REPORT_DATA = {
           "isStarter": true,
           "status": null,
           "flag": false,
-          "lastGamePoints": 18.5,
-          "last3AvgPoints": 11.4,
+          "lastGamePoints": null,
+          "last3AvgPoints": 7.8,
           "projPoints": 11.5
         },
         {
@@ -80,8 +80,8 @@ const STATUS_REPORT_DATA = {
           "isStarter": false,
           "status": "O",
           "flag": false,
-          "lastGamePoints": 0,
-          "last3AvgPoints": 2.9,
+          "lastGamePoints": null,
+          "last3AvgPoints": 4.4,
           "projPoints": 0
         },
         {
@@ -91,8 +91,8 @@ const STATUS_REPORT_DATA = {
           "isStarter": false,
           "status": null,
           "flag": false,
-          "lastGamePoints": 19.8,
-          "last3AvgPoints": 13.8,
+          "lastGamePoints": null,
+          "last3AvgPoints": 10.8,
           "projPoints": 17.7
         },
         {
@@ -102,8 +102,8 @@ const STATUS_REPORT_DATA = {
           "isStarter": false,
           "status": null,
           "flag": false,
-          "lastGamePoints": 8.7,
-          "last3AvgPoints": 12.3,
+          "lastGamePoints": null,
+          "last3AvgPoints": 14.1,
           "projPoints": 12.1
         },
         {
@@ -113,8 +113,8 @@ const STATUS_REPORT_DATA = {
           "isStarter": false,
           "status": "O",
           "flag": false,
-          "lastGamePoints": 4.4,
-          "last3AvgPoints": 6.8,
+          "lastGamePoints": null,
+          "last3AvgPoints": 8.1,
           "projPoints": 0
         },
         {
@@ -124,8 +124,8 @@ const STATUS_REPORT_DATA = {
           "isStarter": true,
           "status": null,
           "flag": false,
-          "lastGamePoints": 0,
-          "last3AvgPoints": 10.9,
+          "lastGamePoints": null,
+          "last3AvgPoints": 16.4,
           "projPoints": 11.8
         },
         {
@@ -135,8 +135,8 @@ const STATUS_REPORT_DATA = {
           "isStarter": false,
           "status": null,
           "flag": false,
-          "lastGamePoints": 0.4,
-          "last3AvgPoints": 5.9,
+          "lastGamePoints": null,
+          "last3AvgPoints": 8.6,
           "projPoints": 0
         },
         {
@@ -146,8 +146,8 @@ const STATUS_REPORT_DATA = {
           "isStarter": true,
           "status": null,
           "flag": false,
-          "lastGamePoints": 16.5,
-          "last3AvgPoints": 8.3,
+          "lastGamePoints": null,
+          "last3AvgPoints": 0,
           "projPoints": 17.6
         },
         {
@@ -157,8 +157,8 @@ const STATUS_REPORT_DATA = {
           "isStarter": true,
           "status": null,
           "flag": false,
-          "lastGamePoints": 0,
-          "last3AvgPoints": 8,
+          "lastGamePoints": null,
+          "last3AvgPoints": 16,
           "projPoints": 11.5
         },
         {
@@ -168,8 +168,8 @@ const STATUS_REPORT_DATA = {
           "isStarter": true,
           "status": null,
           "flag": false,
-          "lastGamePoints": 15,
-          "last3AvgPoints": 15,
+          "lastGamePoints": null,
+          "last3AvgPoints": null,
           "projPoints": null
         },
         {
@@ -1144,7 +1144,7 @@ const STATUS_REPORT_DATA = {
           "flag": true,
           "lastGamePoints": null,
           "last3AvgPoints": null,
-          "projPoints": null
+          "projPoints": 1
         },
         {
           "name": "Eli Raridon",
@@ -1575,7 +1575,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 3.4,
           "last3AvgPoints": 4.8,
-          "projPoints": 6.9
+          "projPoints": 7
         },
         {
           "name": "Sam Roush",
@@ -1972,7 +1972,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 4.9,
           "last3AvgPoints": 6.6,
-          "projPoints": 8.9
+          "projPoints": 9
         },
         {
           "name": "Brandin Cooks",
@@ -2491,7 +2491,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 16,
           "last3AvgPoints": 20.1,
-          "projPoints": 17.2
+          "projPoints": 17.3
         },
         {
           "name": "Justin Herbert",
@@ -2556,8 +2556,8 @@ const STATUS_REPORT_DATA = {
           "isStarter": false,
           "status": "Q",
           "flag": false,
-          "lastGamePoints": 0,
-          "last3AvgPoints": 4.9,
+          "lastGamePoints": null,
+          "last3AvgPoints": 7.4,
           "projPoints": 7.8
         },
         {
@@ -2567,8 +2567,8 @@ const STATUS_REPORT_DATA = {
           "isStarter": true,
           "status": null,
           "flag": false,
-          "lastGamePoints": 0,
-          "last3AvgPoints": 18.5,
+          "lastGamePoints": null,
+          "last3AvgPoints": 27.7,
           "projPoints": 26
         },
         {
@@ -2578,8 +2578,8 @@ const STATUS_REPORT_DATA = {
           "isStarter": true,
           "status": null,
           "flag": false,
-          "lastGamePoints": 0,
-          "last3AvgPoints": 6.3,
+          "lastGamePoints": null,
+          "last3AvgPoints": 9.4,
           "projPoints": 18.5
         },
         {
@@ -2589,8 +2589,8 @@ const STATUS_REPORT_DATA = {
           "isStarter": true,
           "status": null,
           "flag": false,
-          "lastGamePoints": 23,
-          "last3AvgPoints": 15.3,
+          "lastGamePoints": null,
+          "last3AvgPoints": 11.5,
           "projPoints": 9.8
         },
         {
@@ -2600,8 +2600,8 @@ const STATUS_REPORT_DATA = {
           "isStarter": false,
           "status": "O",
           "flag": false,
-          "lastGamePoints": 17.8,
-          "last3AvgPoints": 12.8,
+          "lastGamePoints": null,
+          "last3AvgPoints": 10.3,
           "projPoints": 0
         },
         {
@@ -2611,8 +2611,8 @@ const STATUS_REPORT_DATA = {
           "isStarter": false,
           "status": null,
           "flag": false,
-          "lastGamePoints": 4.5,
-          "last3AvgPoints": 8.7,
+          "lastGamePoints": null,
+          "last3AvgPoints": 10.8,
           "projPoints": 16.1
         },
         {
@@ -2622,8 +2622,8 @@ const STATUS_REPORT_DATA = {
           "isStarter": true,
           "status": null,
           "flag": false,
-          "lastGamePoints": 14.3,
-          "last3AvgPoints": 14.2,
+          "lastGamePoints": null,
+          "last3AvgPoints": 14.1,
           "projPoints": 15.7
         },
         {
@@ -2633,8 +2633,8 @@ const STATUS_REPORT_DATA = {
           "isStarter": true,
           "status": null,
           "flag": false,
-          "lastGamePoints": 23,
-          "last3AvgPoints": 15.9,
+          "lastGamePoints": null,
+          "last3AvgPoints": 12.4,
           "projPoints": 16.3
         },
         {
@@ -2644,7 +2644,7 @@ const STATUS_REPORT_DATA = {
           "isStarter": false,
           "status": "IR",
           "flag": false,
-          "lastGamePoints": 0,
+          "lastGamePoints": null,
           "last3AvgPoints": 0,
           "projPoints": 0
         },
@@ -2655,8 +2655,8 @@ const STATUS_REPORT_DATA = {
           "isStarter": false,
           "status": null,
           "flag": false,
-          "lastGamePoints": 27,
-          "last3AvgPoints": 14.2,
+          "lastGamePoints": null,
+          "last3AvgPoints": 7.9,
           "projPoints": 15.3
         },
         {
@@ -2666,8 +2666,8 @@ const STATUS_REPORT_DATA = {
           "isStarter": false,
           "status": null,
           "flag": false,
-          "lastGamePoints": 5.2,
-          "last3AvgPoints": 9.2,
+          "lastGamePoints": null,
+          "last3AvgPoints": 11.2,
           "projPoints": 8.4
         },
         {
@@ -2677,8 +2677,8 @@ const STATUS_REPORT_DATA = {
           "isStarter": true,
           "status": null,
           "flag": false,
-          "lastGamePoints": 2.5,
-          "last3AvgPoints": 9.7,
+          "lastGamePoints": null,
+          "last3AvgPoints": 13.3,
           "projPoints": 12
         },
         {
@@ -2688,8 +2688,8 @@ const STATUS_REPORT_DATA = {
           "isStarter": false,
           "status": null,
           "flag": false,
-          "lastGamePoints": 9.4,
-          "last3AvgPoints": 13.2,
+          "lastGamePoints": null,
+          "last3AvgPoints": 15.2,
           "projPoints": 0
         },
         {
@@ -2699,8 +2699,8 @@ const STATUS_REPORT_DATA = {
           "isStarter": true,
           "status": null,
           "flag": false,
-          "lastGamePoints": 0,
-          "last3AvgPoints": 7.7,
+          "lastGamePoints": null,
+          "last3AvgPoints": 11.5,
           "projPoints": 8.1
         },
         {
@@ -2710,8 +2710,8 @@ const STATUS_REPORT_DATA = {
           "isStarter": true,
           "status": null,
           "flag": false,
-          "lastGamePoints": 9,
-          "last3AvgPoints": 15.3,
+          "lastGamePoints": null,
+          "last3AvgPoints": 18.5,
           "projPoints": 9.7
         },
         {
@@ -2721,8 +2721,8 @@ const STATUS_REPORT_DATA = {
           "isStarter": true,
           "status": null,
           "flag": false,
-          "lastGamePoints": 20.2,
-          "last3AvgPoints": 20.2,
+          "lastGamePoints": null,
+          "last3AvgPoints": null,
           "projPoints": 19.6
         },
         {
@@ -3454,7 +3454,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 1,
           "last3AvgPoints": 5.3,
-          "projPoints": 8.8
+          "projPoints": 8.9
         },
         {
           "name": "Cam Little",
