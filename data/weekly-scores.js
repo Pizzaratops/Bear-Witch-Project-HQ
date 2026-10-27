@@ -3,7 +3,7 @@
 // ============================================================
 //  AUTO-GENERIERT von scripts/sync-espn-weekly-scores.js über die
 //  GitHub Action ".github/workflows/sync-espn-weekly-scores.yml".
-//  Zuletzt synchronisiert: 2026-10-26T23:33:31.317Z
+//  Zuletzt synchronisiert: 2026-10-27T13:02:17.198Z
 //
 //  teamId hier ist bereits unsere eigene Team-ID aus data/teams.js
 //  (uebersetzt beim Sync per Namensabgleich, wie in
@@ -454,6 +454,80 @@ const WEEKLY_SCORES = {
     "points": 124.2,
     "opponentId": "vice-city-crackheads",
     "opponentPoints": 118.94
+   }
+  ],
+  "7": [
+   {
+    "teamId": "the-lamartrix",
+    "points": 125.4,
+    "opponentId": "lion-cereals",
+    "opponentPoints": 117.3
+   },
+   {
+    "teamId": "lion-cereals",
+    "points": 117.3,
+    "opponentId": "the-lamartrix",
+    "opponentPoints": 125.4
+   },
+   {
+    "teamId": "angry-ducks",
+    "points": 124.82,
+    "opponentId": "bear-witch-project",
+    "opponentPoints": 106.02
+   },
+   {
+    "teamId": "bear-witch-project",
+    "points": 106.02,
+    "opponentId": "angry-ducks",
+    "opponentPoints": 124.82
+   },
+   {
+    "teamId": "running-bisons",
+    "points": 119.18,
+    "opponentId": "team-beermode",
+    "opponentPoints": 106.16
+   },
+   {
+    "teamId": "team-beermode",
+    "points": 106.16,
+    "opponentId": "running-bisons",
+    "opponentPoints": 119.18
+   },
+   {
+    "teamId": "london-nopunts",
+    "points": 100.72,
+    "opponentId": "burrowhead-dancers",
+    "opponentPoints": 91.32
+   },
+   {
+    "teamId": "burrowhead-dancers",
+    "points": 91.32,
+    "opponentId": "london-nopunts",
+    "opponentPoints": 100.72
+   },
+   {
+    "teamId": "fred-bulls",
+    "points": 110.62,
+    "opponentId": "vice-city-crackheads",
+    "opponentPoints": 69.1
+   },
+   {
+    "teamId": "vice-city-crackheads",
+    "points": 69.1,
+    "opponentId": "fred-bulls",
+    "opponentPoints": 110.62
+   },
+   {
+    "teamId": "charged-up",
+    "points": 139.24,
+    "opponentId": "beastmode",
+    "opponentPoints": 122.38
+   },
+   {
+    "teamId": "beastmode",
+    "points": 122.38,
+    "opponentId": "charged-up",
+    "opponentPoints": 139.24
    }
   ]
  }
