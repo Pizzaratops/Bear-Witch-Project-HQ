@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-10-26T22:02:09.560Z",
+  "generatedAt": "2026-10-27T02:46:26.132Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -530,7 +530,7 @@ const STATUS_REPORT_DATA = {
           "name": "Parker Washington",
           "pos": "WR",
           "nfl": "JAX",
-          "isStarter": true,
+          "isStarter": false,
           "status": null,
           "flag": false,
           "lastGamePoints": 10.4,
@@ -1074,7 +1074,7 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "CAR",
           "isStarter": true,
-          "status": null,
+          "status": "Q",
           "flag": false,
           "lastGamePoints": 15.7,
           "last3AvgPoints": 15.7,
@@ -1140,8 +1140,8 @@ const STATUS_REPORT_DATA = {
           "pos": "TE",
           "nfl": "PHI",
           "isStarter": true,
-          "status": "IR",
-          "flag": true,
+          "status": null,
+          "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
           "projPoints": 1
@@ -1268,7 +1268,7 @@ const STATUS_REPORT_DATA = {
           "projPoints": null
         }
       ],
-      "flaggedCount": 3
+      "flaggedCount": 2
     },
     {
       "id": "beyaz-sleeper-1401860041555881984",
@@ -1317,7 +1317,7 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "CAR",
           "isStarter": true,
-          "status": null,
+          "status": "Q",
           "flag": false,
           "lastGamePoints": 12.7,
           "last3AvgPoints": 12.7,
@@ -1416,7 +1416,7 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "DET",
           "isStarter": true,
-          "status": null,
+          "status": "Q",
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 10.7,
@@ -1769,7 +1769,7 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "SEA",
           "isStarter": false,
-          "status": null,
+          "status": "O",
           "flag": false,
           "lastGamePoints": 9.3,
           "last3AvgPoints": 8.1,
@@ -2156,7 +2156,7 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "CAR",
           "isStarter": true,
-          "status": null,
+          "status": "Q",
           "flag": false,
           "lastGamePoints": 15.7,
           "last3AvgPoints": 15.7,
