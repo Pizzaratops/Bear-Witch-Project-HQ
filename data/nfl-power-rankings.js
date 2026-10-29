@@ -5,7 +5,7 @@
 //  GitHub Action ".github/workflows/sync-espn-nfl-standings.yml".
 //  Nicht von Hand editieren — Änderungen werden beim nächsten Sync
 //  überschrieben.
-//  Zuletzt synchronisiert: 2026-10-29T15:01:51.930Z
+//  Zuletzt synchronisiert: 2026-10-29T23:08:02.502Z
 //
 //  Quelle: nflverse/nfldata (GitHub-gehostet, MIT-lizenziert), NICHT
 //  ESPN -- ESPNs öffentliche Sport-API blockt GitHub-Actions-Server
@@ -4221,7 +4221,7 @@ const NFL_OFFDEF = {
       {
         "abbr": "NYG",
         "off": 0.0033231336242044527,
-        "def": 0.0005846046386333881,
+        "def": 0.0005846046386333849,
         "offRank": 15,
         "defRank": 16
       },
