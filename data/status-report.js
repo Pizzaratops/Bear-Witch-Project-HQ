@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-10-28T20:40:00.049Z",
+  "generatedAt": "2026-10-29T01:21:42.892Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -23,7 +23,7 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "DAL",
           "isStarter": true,
-          "status": null,
+          "status": "Q",
           "flag": false,
           "lastGamePoints": 15.7,
           "last3AvgPoints": 19,
@@ -107,17 +107,6 @@ const STATUS_REPORT_DATA = {
           "projPoints": 10.8
         },
         {
-          "name": "Dontayvion Wicks",
-          "pos": "WR",
-          "nfl": "PHI",
-          "isStarter": false,
-          "status": "Q",
-          "flag": false,
-          "lastGamePoints": 0,
-          "last3AvgPoints": 5.2,
-          "projPoints": 8.1
-        },
-        {
           "name": "Ollie Gordon II",
           "pos": "RB",
           "nfl": "MIA",
@@ -166,8 +155,8 @@ const STATUS_REPORT_DATA = {
           "pos": "RB",
           "nfl": "PHI",
           "isStarter": true,
-          "status": "Q",
-          "flag": false,
+          "status": "IR",
+          "flag": true,
           "lastGamePoints": 11.8,
           "last3AvgPoints": 13.4,
           "projPoints": null
@@ -204,9 +193,20 @@ const STATUS_REPORT_DATA = {
           "lastGamePoints": null,
           "last3AvgPoints": null,
           "projPoints": 3.7
+        },
+        {
+          "name": "Antonio Williams",
+          "pos": "WR",
+          "nfl": "WSH",
+          "isStarter": false,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": null,
+          "last3AvgPoints": null,
+          "projPoints": 8.2
         }
       ],
-      "flaggedCount": 0
+      "flaggedCount": 1
     },
     {
       "id": "beyaz-espn-320102468",
@@ -391,7 +391,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 18.5,
           "last3AvgPoints": 12.3,
-          "projPoints": 8.8
+          "projPoints": 8.6
         },
         {
           "name": "Elijah Ponder",
@@ -576,7 +576,7 @@ const STATUS_REPORT_DATA = {
           "pos": "RB",
           "nfl": "DET",
           "isStarter": true,
-          "status": null,
+          "status": "Q",
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
@@ -620,7 +620,7 @@ const STATUS_REPORT_DATA = {
           "pos": "TE",
           "nfl": "LV",
           "isStarter": true,
-          "status": null,
+          "status": "Q",
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
@@ -735,14 +735,14 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 26.7,
-          "projPoints": 18
+          "projPoints": 18.1
         },
         {
           "name": "Brock Bowers",
           "pos": "TE",
           "nfl": "LV",
           "isStarter": false,
-          "status": null,
+          "status": "Q",
           "flag": false,
           "lastGamePoints": 13.3,
           "last3AvgPoints": 15.8,
@@ -757,7 +757,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 10.9,
           "last3AvgPoints": 7.6,
-          "projPoints": 10.1
+          "projPoints": 10.2
         },
         {
           "name": "Brian Thomas Jr.",
@@ -768,7 +768,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
-          "projPoints": 3.5
+          "projPoints": 3.4
         },
         {
           "name": "Ricky Pearsall",
@@ -819,7 +819,7 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "TB",
           "isStarter": false,
-          "status": "O",
+          "status": "Q",
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 17.5,
@@ -907,7 +907,7 @@ const STATUS_REPORT_DATA = {
           "pos": "RB",
           "nfl": "ATL",
           "isStarter": false,
-          "status": "O",
+          "status": "Q",
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 2.3,
@@ -918,7 +918,7 @@ const STATUS_REPORT_DATA = {
           "pos": "RB",
           "nfl": "NYJ",
           "isStarter": false,
-          "status": "O",
+          "status": "Q",
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
@@ -1067,14 +1067,14 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 10.9,
           "last3AvgPoints": 7.6,
-          "projPoints": 10.1
+          "projPoints": 10.2
         },
         {
           "name": "Jalen Coker",
           "pos": "WR",
           "nfl": "CAR",
           "isStarter": true,
-          "status": "Q",
+          "status": null,
           "flag": false,
           "lastGamePoints": 1.9,
           "last3AvgPoints": 8.8,
@@ -1133,7 +1133,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 5.7,
           "last3AvgPoints": 7.3,
-          "projPoints": 10.5
+          "projPoints": 10.6
         },
         {
           "name": "Eli Stowers",
@@ -1177,15 +1177,15 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 6.7,
           "last3AvgPoints": 7.1,
-          "projPoints": 10.3
+          "projPoints": 10.2
         },
         {
           "name": "Lamar Jackson",
           "pos": "QB",
           "nfl": "BAL",
           "isStarter": true,
-          "status": "O",
-          "flag": true,
+          "status": "Q",
+          "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
           "projPoints": 20.4
@@ -1206,11 +1206,11 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "PHI",
           "isStarter": true,
-          "status": "O",
-          "flag": true,
+          "status": "Q",
+          "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 20.5,
-          "projPoints": 11.4
+          "projPoints": 12
         },
         {
           "name": "Rhamondre Stevenson",
@@ -1268,7 +1268,7 @@ const STATUS_REPORT_DATA = {
           "projPoints": 6.8
         }
       ],
-      "flaggedCount": 2
+      "flaggedCount": 0
     },
     {
       "id": "beyaz-sleeper-1401860041555881984",
@@ -1317,7 +1317,7 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "CAR",
           "isStarter": true,
-          "status": "Q",
+          "status": null,
           "flag": false,
           "lastGamePoints": 1.4,
           "last3AvgPoints": 7.1,
@@ -1354,14 +1354,14 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 16.4,
           "last3AvgPoints": 11.6,
-          "projPoints": 7.7
+          "projPoints": 7.8
         },
         {
           "name": "Jeremiyah Love",
           "pos": "RB",
           "nfl": "ARI",
           "isStarter": false,
-          "status": "O",
+          "status": "Q",
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 2.2,
@@ -1394,7 +1394,7 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "BUF",
           "isStarter": false,
-          "status": "O",
+          "status": "Q",
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
@@ -1509,7 +1509,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 16.7,
-          "projPoints": 13.7
+          "projPoints": 13.8
         },
         {
           "name": "Quinn Ewers",
@@ -1549,7 +1549,7 @@ const STATUS_REPORT_DATA = {
           "pos": "TE",
           "nfl": "LAR",
           "isStarter": false,
-          "status": "O",
+          "status": null,
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
@@ -1560,7 +1560,7 @@ const STATUS_REPORT_DATA = {
           "pos": "RB",
           "nfl": "TEN",
           "isStarter": false,
-          "status": "O",
+          "status": null,
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
@@ -1575,7 +1575,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 16.2,
           "last3AvgPoints": 8.8,
-          "projPoints": 6.1
+          "projPoints": 6.4
         },
         {
           "name": "Sam Roush",
@@ -1619,7 +1619,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 10.6,
           "last3AvgPoints": 11.8,
-          "projPoints": 7.7
+          "projPoints": 7.6
         },
         {
           "name": "Demarcus Robinson",
@@ -1703,7 +1703,7 @@ const STATUS_REPORT_DATA = {
           "pos": "RB",
           "nfl": "CAR",
           "isStarter": false,
-          "status": "O",
+          "status": null,
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
@@ -1714,7 +1714,7 @@ const STATUS_REPORT_DATA = {
           "pos": "TE",
           "nfl": "LAR",
           "isStarter": true,
-          "status": null,
+          "status": "Q",
           "flag": false,
           "lastGamePoints": 7.3,
           "last3AvgPoints": 6.6,
@@ -1740,7 +1740,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 2.5,
-          "projPoints": 6.3
+          "projPoints": 6.2
         },
         {
           "name": "Brock Purdy",
@@ -1758,7 +1758,7 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "SEA",
           "isStarter": false,
-          "status": "O",
+          "status": "Q",
           "flag": false,
           "lastGamePoints": 1.1,
           "last3AvgPoints": 4.6,
@@ -1803,7 +1803,7 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "KC",
           "isStarter": false,
-          "status": "O",
+          "status": "Q",
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
@@ -1829,7 +1829,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 26.7,
-          "projPoints": 18
+          "projPoints": 18.1
         },
         {
           "name": "Blake Corum",
@@ -1847,7 +1847,7 @@ const STATUS_REPORT_DATA = {
           "pos": "TE",
           "nfl": "LV",
           "isStarter": true,
-          "status": null,
+          "status": "Q",
           "flag": false,
           "lastGamePoints": 13.3,
           "last3AvgPoints": 15.8,
@@ -1862,7 +1862,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 10.9,
           "last3AvgPoints": 7.6,
-          "projPoints": 10.1
+          "projPoints": 10.2
         },
         {
           "name": "Tyrone Tracy Jr.",
@@ -1913,7 +1913,7 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "TB",
           "isStarter": false,
-          "status": "O",
+          "status": "Q",
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 17.5,
@@ -1961,7 +1961,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 19.7,
           "last3AvgPoints": 11.3,
-          "projPoints": 7.8
+          "projPoints": 8.3
         },
         {
           "name": "Brandin Cooks",
@@ -2023,7 +2023,7 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "WAS",
           "isStarter": false,
-          "status": null,
+          "status": "Q",
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 7.6,
@@ -2045,7 +2045,7 @@ const STATUS_REPORT_DATA = {
           "pos": "RB",
           "nfl": "ATL",
           "isStarter": false,
-          "status": "O",
+          "status": "Q",
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 2.3,
@@ -2056,7 +2056,7 @@ const STATUS_REPORT_DATA = {
           "pos": "RB",
           "nfl": "NYJ",
           "isStarter": false,
-          "status": "O",
+          "status": "Q",
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
@@ -2127,7 +2127,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 10.9,
           "last3AvgPoints": 7.6,
-          "projPoints": 10.1
+          "projPoints": 10.2
         },
         {
           "name": "Troy Franklin",
@@ -2145,7 +2145,7 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "LAC",
           "isStarter": false,
-          "status": "O",
+          "status": "Q",
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 2.7,
@@ -2167,7 +2167,7 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "CAR",
           "isStarter": true,
-          "status": "Q",
+          "status": null,
           "flag": false,
           "lastGamePoints": 1.9,
           "last3AvgPoints": 8.8,
@@ -2233,7 +2233,7 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "TEN",
           "isStarter": true,
-          "status": null,
+          "status": "Q",
           "flag": false,
           "lastGamePoints": 9.9,
           "last3AvgPoints": 10.2,
@@ -2244,7 +2244,7 @@ const STATUS_REPORT_DATA = {
           "pos": "RB",
           "nfl": "TEN",
           "isStarter": false,
-          "status": "O",
+          "status": null,
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
@@ -2255,7 +2255,7 @@ const STATUS_REPORT_DATA = {
           "pos": "QB",
           "nfl": "PIT",
           "isStarter": false,
-          "status": "O",
+          "status": null,
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
@@ -2266,7 +2266,7 @@ const STATUS_REPORT_DATA = {
           "pos": "RB",
           "nfl": "MIN",
           "isStarter": false,
-          "status": "O",
+          "status": null,
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 1.6,
@@ -2281,7 +2281,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 14.1,
           "last3AvgPoints": 14.1,
-          "projPoints": 9.5
+          "projPoints": 9.4
         },
         {
           "name": "Aaron Jones Sr.",
@@ -2376,7 +2376,7 @@ const STATUS_REPORT_DATA = {
           "name": "Xavier Worthy",
           "pos": "WR",
           "nfl": "KC",
-          "isStarter": true,
+          "isStarter": false,
           "status": null,
           "flag": false,
           "lastGamePoints": 4.1,
@@ -2410,7 +2410,7 @@ const STATUS_REPORT_DATA = {
           "pos": "RB",
           "nfl": "CHI",
           "isStarter": false,
-          "status": "O",
+          "status": "Q",
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
@@ -2421,7 +2421,7 @@ const STATUS_REPORT_DATA = {
           "pos": "RB",
           "nfl": "ARI",
           "isStarter": false,
-          "status": "O",
+          "status": "Q",
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 2.2,
@@ -2453,7 +2453,7 @@ const STATUS_REPORT_DATA = {
           "name": "Keenan Allen",
           "pos": "WR",
           "nfl": "IND",
-          "isStarter": false,
+          "isStarter": true,
           "status": null,
           "flag": false,
           "lastGamePoints": 6.1,
@@ -2476,8 +2476,8 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "BUF",
           "isStarter": true,
-          "status": "O",
-          "flag": true,
+          "status": "Q",
+          "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
           "projPoints": 14.7
@@ -2524,7 +2524,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 9.4,
-          "projPoints": 10.7
+          "projPoints": 10.8
         },
         {
           "name": "Chase Brown",
@@ -2535,21 +2535,21 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 9.8,
           "last3AvgPoints": 8.4,
-          "projPoints": 17.9
+          "projPoints": 17.8
         },
         {
           "name": "Zach Charbonnet",
           "pos": "RB",
           "nfl": "SEA",
           "isStarter": false,
-          "status": "O",
+          "status": "Q",
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
           "projPoints": 9.1
         }
       ],
-      "flaggedCount": 1
+      "flaggedCount": 0
     },
     {
       "id": "felix-espn-91260355",
@@ -2576,7 +2576,7 @@ const STATUS_REPORT_DATA = {
           "pos": "RB",
           "nfl": "DET",
           "isStarter": true,
-          "status": null,
+          "status": "Q",
           "flag": false,
           "lastGamePoints": 17.3,
           "last3AvgPoints": 18.3,
@@ -3095,7 +3095,7 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "WSH",
           "isStarter": true,
-          "status": null,
+          "status": "Q",
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 16.4,
@@ -3162,7 +3162,7 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "DAL",
           "isStarter": false,
-          "status": null,
+          "status": "Q",
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
@@ -3372,7 +3372,7 @@ const STATUS_REPORT_DATA = {
           "pos": "TE",
           "nfl": "BUF",
           "isStarter": false,
-          "status": null,
+          "status": "Q",
           "flag": false,
           "lastGamePoints": 0,
           "last3AvgPoints": 4.8,
@@ -3520,7 +3520,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": -4,
           "last3AvgPoints": 2,
-          "projPoints": 5.9
+          "projPoints": 5.8
         }
       ],
       "flaggedCount": 0
@@ -3543,7 +3543,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 26.7,
-          "projPoints": 18
+          "projPoints": 18.1
         },
         {
           "name": "Blake Corum",
@@ -3561,8 +3561,8 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "LAC",
           "isStarter": true,
-          "status": "O",
-          "flag": true,
+          "status": "Q",
+          "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 2.7,
           "projPoints": 11
@@ -3616,8 +3616,8 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "TB",
           "isStarter": true,
-          "status": "O",
-          "flag": true,
+          "status": "Q",
+          "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 17.5,
           "projPoints": 11.5
@@ -3675,7 +3675,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 14.1,
           "last3AvgPoints": 14.1,
-          "projPoints": 9.5
+          "projPoints": 9.4
         },
         {
           "name": "Christian McCaffrey",
@@ -3708,7 +3708,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 9.4,
-          "projPoints": 10.7
+          "projPoints": 10.8
         },
         {
           "name": "Chris Olave",
@@ -3755,7 +3755,7 @@ const STATUS_REPORT_DATA = {
           "projPoints": 3.5
         }
       ],
-      "flaggedCount": 4
+      "flaggedCount": 2
     },
     {
       "id": "felix-sleeper-1312799736218017792",
@@ -3782,7 +3782,7 @@ const STATUS_REPORT_DATA = {
           "pos": "RB",
           "nfl": "GB",
           "isStarter": false,
-          "status": "O",
+          "status": null,
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 1.2,
@@ -3793,7 +3793,7 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "HOU",
           "isStarter": false,
-          "status": "Q",
+          "status": "IR",
           "flag": false,
           "lastGamePoints": 1.7,
           "last3AvgPoints": 12.5,
@@ -3837,7 +3837,7 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "WAS",
           "isStarter": true,
-          "status": null,
+          "status": "Q",
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 16.4,
@@ -3885,7 +3885,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 9.8,
           "last3AvgPoints": 10.6,
-          "projPoints": 10.1
+          "projPoints": 10.2
         },
         {
           "name": "Deebo Samuel Sr.",
@@ -3918,14 +3918,14 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 6.1,
           "last3AvgPoints": 7.3,
-          "projPoints": 3
+          "projPoints": 3.4
         },
         {
           "name": "Colby Parkinson",
           "pos": "TE",
           "nfl": "LAR",
           "isStarter": true,
-          "status": null,
+          "status": "Q",
           "flag": false,
           "lastGamePoints": 9.8,
           "last3AvgPoints": 8.4,
@@ -3973,7 +3973,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 26,
           "last3AvgPoints": 23.5,
-          "projPoints": 13.8
+          "projPoints": 13.7
         },
         {
           "name": "De'Von Achane",
@@ -4015,8 +4015,8 @@ const STATUS_REPORT_DATA = {
           "isStarter": false,
           "status": null,
           "flag": false,
-          "lastGamePoints": -1,
-          "last3AvgPoints": 8,
+          "lastGamePoints": null,
+          "last3AvgPoints": 12.5,
           "projPoints": null
         },
         {
