@@ -5,7 +5,7 @@
 //  GitHub Action ".github/workflows/sync-espn-nfl-standings.yml".
 //  Nicht von Hand editieren — Änderungen werden beim nächsten Sync
 //  überschrieben.
-//  Zuletzt synchronisiert: 2026-11-01T14:50:01.233Z
+//  Zuletzt synchronisiert: 2026-11-01T22:37:17.753Z
 //
 //  Quelle: nflverse/nfldata (GitHub-gehostet, MIT-lizenziert), NICHT
 //  ESPN -- ESPNs öffentliche Sport-API blockt GitHub-Actions-Server
@@ -2741,12 +2741,12 @@ const NFL_STANDINGS = {
         "abbr": "BUF",
         "conference": "AFC",
         "division": "East",
-        "wins": 5,
+        "wins": 6,
         "losses": 1,
         "ties": 0,
-        "winPct": 0.8333333333333334,
-        "pf": 197,
-        "pa": 171
+        "winPct": 0.8571428571428571,
+        "pf": 233,
+        "pa": 181
       },
       {
         "name": "Miami Dolphins",
@@ -2778,11 +2778,11 @@ const NFL_STANDINGS = {
         "conference": "AFC",
         "division": "East",
         "wins": 2,
-        "losses": 5,
+        "losses": 6,
         "ties": 0,
-        "winPct": 0.2857142857142857,
-        "pf": 137,
-        "pa": 150
+        "winPct": 0.25,
+        "pf": 170,
+        "pa": 188
       },
       {
         "name": "Baltimore Ravens",
@@ -2790,23 +2790,23 @@ const NFL_STANDINGS = {
         "conference": "AFC",
         "division": "North",
         "wins": 4,
-        "losses": 3,
+        "losses": 4,
         "ties": 0,
-        "winPct": 0.5714285714285714,
-        "pf": 169,
-        "pa": 167
+        "winPct": 0.5,
+        "pf": 179,
+        "pa": 203
       },
       {
         "name": "Cincinnati Bengals",
         "abbr": "CIN",
         "conference": "AFC",
         "division": "North",
-        "wins": 4,
+        "wins": 5,
         "losses": 2,
         "ties": 0,
-        "winPct": 0.6666666666666666,
-        "pf": 163,
-        "pa": 122
+        "winPct": 0.7142857142857143,
+        "pf": 206,
+        "pa": 158
       },
       {
         "name": "Cleveland Browns",
@@ -2814,23 +2814,23 @@ const NFL_STANDINGS = {
         "conference": "AFC",
         "division": "North",
         "wins": 5,
-        "losses": 2,
+        "losses": 3,
         "ties": 0,
-        "winPct": 0.7142857142857143,
-        "pf": 133,
-        "pa": 146
+        "winPct": 0.625,
+        "pf": 139,
+        "pa": 173
       },
       {
         "name": "Pittsburgh Steelers",
         "abbr": "PIT",
         "conference": "AFC",
         "division": "North",
-        "wins": 5,
+        "wins": 6,
         "losses": 2,
         "ties": 0,
-        "winPct": 0.7142857142857143,
-        "pf": 153,
-        "pa": 138
+        "winPct": 0.75,
+        "pf": 180,
+        "pa": 144
       },
       {
         "name": "Houston Texans",
@@ -2850,23 +2850,23 @@ const NFL_STANDINGS = {
         "conference": "AFC",
         "division": "South",
         "wins": 2,
-        "losses": 5,
+        "losses": 6,
         "ties": 0,
-        "winPct": 0.2857142857142857,
-        "pf": 154,
-        "pa": 180
+        "winPct": 0.25,
+        "pf": 161,
+        "pa": 222
       },
       {
         "name": "Jacksonville Jaguars",
         "abbr": "JAX",
         "conference": "AFC",
         "division": "South",
-        "wins": 4,
+        "wins": 5,
         "losses": 2,
         "ties": 0,
-        "winPct": 0.6666666666666666,
-        "pf": 154,
-        "pa": 104
+        "winPct": 0.7142857142857143,
+        "pf": 196,
+        "pa": 111
       },
       {
         "name": "Tennessee Titans",
@@ -2874,11 +2874,11 @@ const NFL_STANDINGS = {
         "conference": "AFC",
         "division": "South",
         "wins": 1,
-        "losses": 6,
+        "losses": 7,
         "ties": 0,
-        "winPct": 0.14285714285714285,
-        "pf": 108,
-        "pa": 156
+        "winPct": 0.125,
+        "pf": 144,
+        "pa": 199
       },
       {
         "name": "Denver Broncos",
@@ -2909,12 +2909,12 @@ const NFL_STANDINGS = {
         "abbr": "LV",
         "conference": "AFC",
         "division": "West",
-        "wins": 3,
+        "wins": 4,
         "losses": 4,
         "ties": 0,
-        "winPct": 0.42857142857142855,
-        "pf": 183,
-        "pa": 197
+        "winPct": 0.5,
+        "pf": 221,
+        "pa": 230
       },
       {
         "name": "Los Angeles Chargers",
@@ -2934,11 +2934,11 @@ const NFL_STANDINGS = {
         "conference": "NFC",
         "division": "East",
         "wins": 3,
-        "losses": 4,
+        "losses": 5,
         "ties": 0,
-        "winPct": 0.42857142857142855,
-        "pf": 189,
-        "pa": 180
+        "winPct": 0.375,
+        "pf": 219,
+        "pa": 213
       },
       {
         "name": "New York Giants",
@@ -2993,12 +2993,12 @@ const NFL_STANDINGS = {
         "abbr": "DET",
         "conference": "NFC",
         "division": "North",
-        "wins": 4,
+        "wins": 5,
         "losses": 2,
         "ties": 0,
-        "winPct": 0.6666666666666666,
-        "pf": 184,
-        "pa": 165
+        "winPct": 0.7142857142857143,
+        "pf": 203,
+        "pa": 180
       },
       {
         "name": "Green Bay Packers",
@@ -3018,11 +3018,11 @@ const NFL_STANDINGS = {
         "conference": "NFC",
         "division": "North",
         "wins": 6,
-        "losses": 0,
+        "losses": 1,
         "ties": 0,
-        "winPct": 1,
-        "pf": 125,
-        "pa": 74
+        "winPct": 0.8571428571428571,
+        "pf": 140,
+        "pa": 93
       },
       {
         "name": "Atlanta Falcons",
@@ -3030,11 +3030,11 @@ const NFL_STANDINGS = {
         "conference": "NFC",
         "division": "South",
         "wins": 3,
-        "losses": 4,
+        "losses": 5,
         "ties": 0,
-        "winPct": 0.42857142857142855,
+        "winPct": 0.375,
         "pf": 171,
-        "pa": 173
+        "pa": 189
       },
       {
         "name": "Carolina Panthers",
@@ -3065,11 +3065,11 @@ const NFL_STANDINGS = {
         "abbr": "TB",
         "conference": "NFC",
         "division": "South",
-        "wins": 2,
+        "wins": 3,
         "losses": 5,
         "ties": 0,
-        "winPct": 0.2857142857142857,
-        "pf": 162,
+        "winPct": 0.375,
+        "pf": 178,
         "pa": 151
       },
       {
@@ -3077,12 +3077,12 @@ const NFL_STANDINGS = {
         "abbr": "ARI",
         "conference": "NFC",
         "division": "West",
-        "wins": 2,
+        "wins": 3,
         "losses": 5,
         "ties": 0,
-        "winPct": 0.2857142857142857,
-        "pf": 142,
-        "pa": 208
+        "winPct": 0.375,
+        "pf": 175,
+        "pa": 238
       },
       {
         "name": "Los Angeles Rams",
@@ -4607,7 +4607,7 @@ const NFL_OFFDEF = {
       {
         "abbr": "NYG",
         "off": 0.0033231336242044527,
-        "def": 0.0005846046386333881,
+        "def": 0.0005846046386333849,
         "offRank": 15,
         "defRank": 16
       },
@@ -4833,7 +4833,7 @@ const NFL_OFFDEF = {
       {
         "abbr": "NYG",
         "off": 0.0033231336242044527,
-        "def": 0.0005846046386333881,
+        "def": 0.0005846046386333849,
         "offRank": 16,
         "defRank": 16
       },
