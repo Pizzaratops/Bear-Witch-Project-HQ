@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-11-07T01:25:01.849Z",
+  "generatedAt": "2026-11-07T07:57:05.841Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -878,7 +878,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 8.5,
           "last3AvgPoints": 9.6,
-          "projPoints": 15
+          "projPoints": 15.2
         },
         {
           "name": "David Montgomery",
@@ -1387,7 +1387,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 25.4,
           "last3AvgPoints": 14.6,
-          "projPoints": 21.1
+          "projPoints": 21.3
         },
         {
           "name": "DJ Moore",
@@ -1608,7 +1608,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 9.2,
           "last3AvgPoints": 7.6,
-          "projPoints": 10.9
+          "projPoints": 11
         },
         {
           "name": "Hunter Henry",
@@ -1641,7 +1641,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 7.2,
           "last3AvgPoints": 5.9,
-          "projPoints": 6.5
+          "projPoints": 6.4
         },
         {
           "name": "George Kittle",
@@ -1807,7 +1807,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 18.3,
           "last3AvgPoints": 18.3,
-          "projPoints": 15.6
+          "projPoints": 15.8
         },
         {
           "name": "Caleb Williams",
@@ -1950,7 +1950,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 22.4,
-          "projPoints": 14.1
+          "projPoints": 14.2
         },
         {
           "name": "Makai Lemon",
@@ -2348,7 +2348,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 4.3,
           "last3AvgPoints": 7.6,
-          "projPoints": 10.2
+          "projPoints": 10.3
         },
         {
           "name": "Colston Loveland",
@@ -2414,7 +2414,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 2.9,
           "last3AvgPoints": 3.8,
-          "projPoints": 6.7
+          "projPoints": 6.8
         },
         {
           "name": "Keenan Allen",
@@ -3399,7 +3399,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 12,
           "last3AvgPoints": 9,
-          "projPoints": 10
+          "projPoints": 9.9
         },
         {
           "name": "Cam Little",
@@ -3543,7 +3543,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 4.9,
           "last3AvgPoints": 12.5,
-          "projPoints": 7.6
+          "projPoints": 7.7
         },
         {
           "name": "Emeka Egbuka",
@@ -3576,7 +3576,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 22.4,
-          "projPoints": 14.1
+          "projPoints": 14.2
         },
         {
           "name": "Malachi Fields",
@@ -3664,7 +3664,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 17,
           "last3AvgPoints": 21.6,
-          "projPoints": 13.2
+          "projPoints": 13.3
         },
         {
           "name": "Kenneth Walker III",
@@ -3675,7 +3675,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 12.4,
           "last3AvgPoints": 16.7,
-          "projPoints": 21.8
+          "projPoints": 21.9
         },
         {
           "name": "Jalen Nailor",
