@@ -308,7 +308,7 @@ const NFL_DRAFT_ATHLETIC_PROFILES = {
       "draftRound": 2,
       "draftPick": 40,
       "heightIn": 74,
-      "weightLb": 217,
+      "weightLb": 215,
       "ras": {
         "overall": 5.34,
         "measuredCount": 7,
@@ -1277,26 +1277,6 @@ const NFL_DRAFT_ATHLETIC_PROFILES = {
       "draftCapitalScore": 0.373
     },
     {
-      "nameKey": "bjcoleman",
-      "name": "B.J. Coleman",
-      "college": "Tennessee-Chattanooga",
-      "draftYear": 2012,
-      "draftRound": 7,
-      "draftPick": 243,
-      "heightIn": 75,
-      "weightLb": 231,
-      "ras": {
-        "overall": 4.39,
-        "measuredCount": 6,
-        "size": 6.66,
-        "speed": 2.25,
-        "explosion": 3.41,
-        "agility": 5.23,
-        "strength": null
-      },
-      "draftCapitalScore": 0.37
-    },
-    {
       "nameKey": "reggiecollier",
       "name": "Reggie Collier",
       "college": "Southern Mississippi",
@@ -1936,7 +1916,7 @@ const NFL_DRAFT_ATHLETIC_PROFILES = {
       "draftRound": 3,
       "draftPick": 92,
       "heightIn": 76,
-      "weightLb": 230,
+      "weightLb": 231,
       "ras": {
         "overall": 5.35,
         "measuredCount": 6,
@@ -4344,7 +4324,7 @@ const NFL_DRAFT_ATHLETIC_PROFILES = {
       "draftRound": 1,
       "draftPick": 10,
       "heightIn": 77,
-      "weightLb": 225,
+      "weightLb": 227,
       "ras": {
         "overall": 5.01,
         "measuredCount": 3,
@@ -9257,8 +9237,8 @@ const NFL_DRAFT_ATHLETIC_PROFILES = {
       "draftYear": 2011,
       "draftRound": 7,
       "draftPick": 225,
-      "heightIn": 73,
-      "weightLb": 223,
+      "heightIn": 72,
+      "weightLb": 230,
       "ras": {
         "overall": 7.8,
         "measuredCount": 8,
@@ -10073,7 +10053,7 @@ const NFL_DRAFT_ATHLETIC_PROFILES = {
       "draftYear": 2011,
       "draftRound": 7,
       "draftPick": 232,
-      "heightIn": 69,
+      "heightIn": 70,
       "weightLb": 210,
       "ras": null,
       "draftCapitalScore": 0.165
@@ -14759,26 +14739,6 @@ const NFL_DRAFT_ATHLETIC_PROFILES = {
       "draftCapitalScore": 0.165
     },
     {
-      "nameKey": "terranceganaway",
-      "name": "Terrance Ganaway",
-      "college": "Baylor; Houston; Texarkana College",
-      "draftYear": 2012,
-      "draftRound": 6,
-      "draftPick": 202,
-      "heightIn": 72,
-      "weightLb": 240,
-      "ras": {
-        "overall": 5.36,
-        "measuredCount": 7,
-        "size": 7.34,
-        "speed": 3.04,
-        "explosion": 6.55,
-        "agility": 4.51,
-        "strength": null
-      },
-      "draftCapitalScore": 0.149
-    },
-    {
       "nameKey": "earlgant",
       "name": "Earl Gant",
       "college": "Missouri",
@@ -16581,18 +16541,6 @@ const NFL_DRAFT_ATHLETIC_PROFILES = {
         "strength": 2.68
       },
       "draftCapitalScore": 0.165
-    },
-    {
-      "nameKey": "jacobhester",
-      "name": "Jacob Hester",
-      "college": "LSU",
-      "draftYear": 2008,
-      "draftRound": 3,
-      "draftPick": 69,
-      "heightIn": 71,
-      "weightLb": 235,
-      "ras": null,
-      "draftCapitalScore": 0.372
     },
     {
       "nameKey": "craigheyward",
@@ -23354,7 +23302,7 @@ const NFL_DRAFT_ATHLETIC_PROFILES = {
       "draftRound": 5,
       "draftPick": 173,
       "heightIn": 69,
-      "weightLb": 213,
+      "weightLb": 207,
       "ras": {
         "overall": 5.59,
         "measuredCount": 8,
@@ -26550,7 +26498,7 @@ const NFL_DRAFT_ATHLETIC_PROFILES = {
       "draftRound": 5,
       "draftPick": 133,
       "heightIn": 70,
-      "weightLb": 202,
+      "weightLb": 204,
       "ras": {
         "overall": 4.35,
         "measuredCount": 7,
@@ -26909,18 +26857,6 @@ const NFL_DRAFT_ATHLETIC_PROFILES = {
         "strength": 6.83
       },
       "draftCapitalScore": 0.372
-    },
-    {
-      "nameKey": "eddiewilliams",
-      "name": "Eddie Williams",
-      "college": "Idaho",
-      "draftYear": 2009,
-      "draftRound": 7,
-      "draftPick": 221,
-      "heightIn": 73,
-      "weightLb": 242,
-      "ras": null,
-      "draftCapitalScore": 0.165
     },
     {
       "nameKey": "scottwilliams",
@@ -27763,26 +27699,6 @@ const NFL_DRAFT_ATHLETIC_PROFILES = {
         "strength": 0
       },
       "draftCapitalScore": 0.331
-    },
-    {
-      "nameKey": "joeadams",
-      "name": "Joe Adams",
-      "college": "Arkansas",
-      "draftYear": 2012,
-      "draftRound": 4,
-      "draftPick": 104,
-      "heightIn": 71,
-      "weightLb": 190,
-      "ras": {
-        "overall": 3.63,
-        "measuredCount": 6,
-        "size": 1.13,
-        "speed": 4.97,
-        "explosion": 5.49,
-        "agility": 2.93,
-        "strength": null
-      },
-      "draftCapitalScore": 0.489
     },
     {
       "nameKey": "davanteadams",
@@ -35332,7 +35248,7 @@ const NFL_DRAFT_ATHLETIC_PROFILES = {
       "draftRound": 6,
       "draftPick": 198,
       "heightIn": 75,
-      "weightLb": 220,
+      "weightLb": 216,
       "ras": {
         "overall": 5.87,
         "measuredCount": 8,
@@ -41747,7 +41663,7 @@ const NFL_DRAFT_ATHLETIC_PROFILES = {
       "draftYear": 2010,
       "draftRound": 5,
       "draftPick": 165,
-      "heightIn": 75,
+      "heightIn": 74,
       "weightLb": 220,
       "ras": {
         "overall": 3.95,
@@ -43052,7 +42968,7 @@ const NFL_DRAFT_ATHLETIC_PROFILES = {
       "draftRound": 5,
       "draftPick": 172,
       "heightIn": 74,
-      "weightLb": 215,
+      "weightLb": 220,
       "ras": {
         "overall": 7.56,
         "measuredCount": 6,
@@ -45380,7 +45296,7 @@ const NFL_DRAFT_ATHLETIC_PROFILES = {
       "draftRound": 3,
       "draftPick": 75,
       "heightIn": 74,
-      "weightLb": 205,
+      "weightLb": 194,
       "ras": {
         "overall": 7.25,
         "measuredCount": 8,
@@ -47276,7 +47192,7 @@ const NFL_DRAFT_ATHLETIC_PROFILES = {
       "draftRound": 4,
       "draftPick": 103,
       "heightIn": 74,
-      "weightLb": 228,
+      "weightLb": 208,
       "ras": {
         "overall": 5.96,
         "measuredCount": 4,
@@ -49955,26 +49871,6 @@ const NFL_DRAFT_ATHLETIC_PROFILES = {
         "strength": null
       },
       "draftCapitalScore": 0.489
-    },
-    {
-      "nameKey": "jordanwhite",
-      "name": "Jordan White",
-      "college": "Western Michigan",
-      "draftYear": 2012,
-      "draftRound": 7,
-      "draftPick": 244,
-      "heightIn": 72,
-      "weightLb": 215,
-      "ras": {
-        "overall": 4.18,
-        "measuredCount": 8,
-        "size": 4.68,
-        "speed": 1.13,
-        "explosion": 3.6,
-        "agility": 7.53,
-        "strength": 3.99
-      },
-      "draftCapitalScore": 0.25
     },
     {
       "nameKey": "kevinwhite",
@@ -53222,7 +53118,7 @@ const NFL_DRAFT_ATHLETIC_PROFILES = {
       "draftRound": 3,
       "draftPick": 81,
       "heightIn": 75,
-      "weightLb": 243,
+      "weightLb": 255,
       "ras": {
         "overall": 4.81,
         "measuredCount": 8,
@@ -53977,18 +53873,6 @@ const NFL_DRAFT_ATHLETIC_PROFILES = {
       "weightLb": 227,
       "ras": null,
       "draftCapitalScore": 0.338
-    },
-    {
-      "nameKey": "drakedunsmore",
-      "name": "Drake Dunsmore",
-      "college": "Northwestern",
-      "draftYear": 2012,
-      "draftRound": 7,
-      "draftPick": 233,
-      "heightIn": 75,
-      "weightLb": 235,
-      "ras": null,
-      "draftCapitalScore": 0.174
     },
     {
       "nameKey": "patdunsmore",
@@ -59670,7 +59554,7 @@ const NFL_DRAFT_ATHLETIC_PROFILES = {
       "draftRound": 2,
       "draftPick": 64,
       "heightIn": 76,
-      "weightLb": 264,
+      "weightLb": 258,
       "ras": {
         "overall": 4.27,
         "measuredCount": 8,
