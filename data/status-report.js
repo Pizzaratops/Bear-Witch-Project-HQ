@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-11-09T01:17:33.813Z",
+  "generatedAt": "2026-11-09T08:50:02.703Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -790,7 +790,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 12,
-          "projPoints": 9.2
+          "projPoints": 9.1
         },
         {
           "name": "Bhayshul Tuten",
@@ -1387,7 +1387,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 14.6,
           "last3AvgPoints": 14.6,
-          "projPoints": 10.8
+          "projPoints": 10.7
         },
         {
           "name": "Devin Singletary",
@@ -1983,7 +1983,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 16,
           "last3AvgPoints": 16.5,
-          "projPoints": 8.3
+          "projPoints": 8.2
         },
         {
           "name": "Treylon Burks",
@@ -2447,7 +2447,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 16.6,
           "last3AvgPoints": 16.6,
-          "projPoints": 12.8
+          "projPoints": 12.7
         },
         {
           "name": "David Montgomery",
@@ -3940,7 +3940,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 11.6,
           "last3AvgPoints": 8,
-          "projPoints": 9.2
+          "projPoints": 9.1
         },
         {
           "name": "San Francisco 49ers",
