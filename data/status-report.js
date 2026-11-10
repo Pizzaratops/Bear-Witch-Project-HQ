@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-11-09T20:15:52.880Z",
+  "generatedAt": "2026-11-10T03:52:49.093Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -664,7 +664,7 @@ const STATUS_REPORT_DATA = {
           "pos": "RB",
           "nfl": "GB",
           "isStarter": false,
-          "status": "Q",
+          "status": "O",
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
@@ -841,7 +841,7 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "CHI",
           "isStarter": false,
-          "status": null,
+          "status": "Q",
           "flag": false,
           "lastGamePoints": 18.6,
           "last3AvgPoints": 19.9,
@@ -1118,7 +1118,7 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "CHI",
           "isStarter": true,
-          "status": null,
+          "status": "Q",
           "flag": false,
           "lastGamePoints": 18.6,
           "last3AvgPoints": 19.9,
@@ -1387,7 +1387,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 14.6,
           "last3AvgPoints": 14.6,
-          "projPoints": 11
+          "projPoints": 10.7
         },
         {
           "name": "Devin Singletary",
@@ -1924,7 +1924,7 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "CHI",
           "isStarter": true,
-          "status": null,
+          "status": "Q",
           "flag": false,
           "lastGamePoints": 18.6,
           "last3AvgPoints": 19.9,
@@ -1968,8 +1968,8 @@ const STATUS_REPORT_DATA = {
           "pos": "RB",
           "nfl": "GB",
           "isStarter": true,
-          "status": "Q",
-          "flag": false,
+          "status": "O",
+          "flag": true,
           "lastGamePoints": 23.2,
           "last3AvgPoints": 21.7,
           "projPoints": 15
@@ -2052,7 +2052,7 @@ const STATUS_REPORT_DATA = {
           "projPoints": 8.3
         }
       ],
-      "flaggedCount": 0
+      "flaggedCount": 1
     },
     {
       "id": "beyaz-sleeper-1312748395584036864",
@@ -2233,7 +2233,7 @@ const STATUS_REPORT_DATA = {
           "pos": "RB",
           "nfl": "MIN",
           "isStarter": false,
-          "status": "O",
+          "status": "IR",
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
@@ -2259,7 +2259,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 6,
           "last3AvgPoints": 4.8,
-          "projPoints": 9.8
+          "projPoints": 9.9
         },
         {
           "name": "Kyler Murray",
@@ -2292,7 +2292,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 2,
           "last3AvgPoints": 4.4,
-          "projPoints": 8.6
+          "projPoints": 8.4
         },
         {
           "name": "Brenton Strange",
@@ -2447,7 +2447,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 16.6,
           "last3AvgPoints": 16.6,
-          "projPoints": 13
+          "projPoints": 12.8
         },
         {
           "name": "David Montgomery",
@@ -2996,8 +2996,8 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "LAR",
           "isStarter": true,
-          "status": "Q",
-          "flag": false,
+          "status": "D",
+          "flag": true,
           "lastGamePoints": 25,
           "last3AvgPoints": 20.3,
           "projPoints": 24.2
@@ -3058,7 +3058,7 @@ const STATUS_REPORT_DATA = {
           "projPoints": 20.9
         }
       ],
-      "flaggedCount": 0
+      "flaggedCount": 1
     },
     {
       "id": "felix-espn-1340233816",
@@ -3118,8 +3118,8 @@ const STATUS_REPORT_DATA = {
           "pos": "WR",
           "nfl": "LAR",
           "isStarter": true,
-          "status": "Q",
-          "flag": false,
+          "status": "D",
+          "flag": true,
           "lastGamePoints": null,
           "last3AvgPoints": null,
           "projPoints": null
@@ -3180,7 +3180,7 @@ const STATUS_REPORT_DATA = {
           "projPoints": null
         }
       ],
-      "flaggedCount": 0
+      "flaggedCount": 1
     },
     {
       "id": "felix-espn-519920608",
@@ -3841,7 +3841,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 5.3,
           "last3AvgPoints": 5,
-          "projPoints": 4.9
+          "projPoints": 5
         },
         {
           "name": "Jerry Jeudy",
@@ -3903,7 +3903,7 @@ const STATUS_REPORT_DATA = {
           "pos": "QB",
           "nfl": "MIA",
           "isStarter": true,
-          "status": null,
+          "status": "Q",
           "flag": false,
           "lastGamePoints": 15.6,
           "last3AvgPoints": 20.8,
@@ -3940,7 +3940,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 11.6,
           "last3AvgPoints": 8,
-          "projPoints": 9.3
+          "projPoints": 9.5
         },
         {
           "name": "San Francisco 49ers",
