@@ -3,7 +3,7 @@
 // ============================================================
 //  AUTO-GENERIERT von scripts/sync-espn-weekly-scores.js über die
 //  GitHub Action ".github/workflows/sync-espn-weekly-scores.yml".
-//  Zuletzt synchronisiert: 2026-11-10T02:32:07.770Z
+//  Zuletzt synchronisiert: 2026-11-10T15:27:07.782Z
 //
 //  teamId hier ist bereits unsere eigene Team-ID aus data/teams.js
 //  (uebersetzt beim Sync per Namensabgleich, wie in
@@ -602,6 +602,80 @@ const WEEKLY_SCORES = {
     "points": 111.58,
     "opponentId": "charged-up",
     "opponentPoints": 115.06
+   }
+  ],
+  "9": [
+   {
+    "teamId": "team-beermode",
+    "points": 119.38,
+    "opponentId": "lion-cereals",
+    "opponentPoints": 102.62
+   },
+   {
+    "teamId": "lion-cereals",
+    "points": 102.62,
+    "opponentId": "team-beermode",
+    "opponentPoints": 119.38
+   },
+   {
+    "teamId": "bear-witch-project",
+    "points": 85.06,
+    "opponentId": "burrowhead-dancers",
+    "opponentPoints": 74.9
+   },
+   {
+    "teamId": "burrowhead-dancers",
+    "points": 74.9,
+    "opponentId": "bear-witch-project",
+    "opponentPoints": 85.06
+   },
+   {
+    "teamId": "the-lamartrix",
+    "points": 127.74,
+    "opponentId": "vice-city-crackheads",
+    "opponentPoints": 88.16
+   },
+   {
+    "teamId": "vice-city-crackheads",
+    "points": 88.16,
+    "opponentId": "the-lamartrix",
+    "opponentPoints": 127.74
+   },
+   {
+    "teamId": "angry-ducks",
+    "points": 93.6,
+    "opponentId": "beastmode",
+    "opponentPoints": 143.66
+   },
+   {
+    "teamId": "beastmode",
+    "points": 143.66,
+    "opponentId": "angry-ducks",
+    "opponentPoints": 93.6
+   },
+   {
+    "teamId": "running-bisons",
+    "points": 116.14,
+    "opponentId": "charged-up",
+    "opponentPoints": 126.46
+   },
+   {
+    "teamId": "charged-up",
+    "points": 126.46,
+    "opponentId": "running-bisons",
+    "opponentPoints": 116.14
+   },
+   {
+    "teamId": "london-nopunts",
+    "points": 92.22,
+    "opponentId": "fred-bulls",
+    "opponentPoints": 123.26
+   },
+   {
+    "teamId": "fred-bulls",
+    "points": 123.26,
+    "opponentId": "london-nopunts",
+    "opponentPoints": 92.22
    }
   ]
  }
