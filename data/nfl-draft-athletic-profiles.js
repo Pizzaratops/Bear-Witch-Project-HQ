@@ -1285,7 +1285,15 @@ const NFL_DRAFT_ATHLETIC_PROFILES = {
       "draftPick": 243,
       "heightIn": 75,
       "weightLb": 231,
-      "ras": null,
+      "ras": {
+        "overall": 4.39,
+        "measuredCount": 6,
+        "size": 6.66,
+        "speed": 2.25,
+        "explosion": 3.41,
+        "agility": 5.23,
+        "strength": null
+      },
       "draftCapitalScore": 0.37
     },
     {
@@ -13832,7 +13840,7 @@ const NFL_DRAFT_ATHLETIC_PROFILES = {
     },
     {
       "nameKey": "audricestime",
-      "name": "Audric Estimé",
+      "name": "Audric Estime",
       "college": "Notre Dame",
       "draftYear": 2024,
       "draftRound": 5,
@@ -14759,7 +14767,15 @@ const NFL_DRAFT_ATHLETIC_PROFILES = {
       "draftPick": 202,
       "heightIn": 72,
       "weightLb": 240,
-      "ras": null,
+      "ras": {
+        "overall": 5.36,
+        "measuredCount": 7,
+        "size": 7.34,
+        "speed": 3.04,
+        "explosion": 6.55,
+        "agility": 4.51,
+        "strength": null
+      },
       "draftCapitalScore": 0.149
     },
     {
@@ -27757,7 +27773,15 @@ const NFL_DRAFT_ATHLETIC_PROFILES = {
       "draftPick": 104,
       "heightIn": 71,
       "weightLb": 190,
-      "ras": null,
+      "ras": {
+        "overall": 3.63,
+        "measuredCount": 6,
+        "size": 1.13,
+        "speed": 4.97,
+        "explosion": 5.49,
+        "agility": 2.93,
+        "strength": null
+      },
       "draftCapitalScore": 0.489
     },
     {
@@ -49941,7 +49965,15 @@ const NFL_DRAFT_ATHLETIC_PROFILES = {
       "draftPick": 244,
       "heightIn": 72,
       "weightLb": 215,
-      "ras": null,
+      "ras": {
+        "overall": 4.18,
+        "measuredCount": 8,
+        "size": 4.68,
+        "speed": 1.13,
+        "explosion": 3.6,
+        "agility": 7.53,
+        "strength": 3.99
+      },
       "draftCapitalScore": 0.25
     },
     {
