@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-11-14T00:32:21.772Z",
+  "generatedAt": "2026-11-14T08:15:44.977Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -3852,7 +3852,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 5.7,
           "last3AvgPoints": 5.9,
-          "projPoints": 3.5
+          "projPoints": 3.6
         },
         {
           "name": "Colby Parkinson",
