@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-11-14T08:15:44.977Z",
+  "generatedAt": "2026-11-14T16:13:15.788Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -2870,17 +2870,6 @@ const STATUS_REPORT_DATA = {
           "projPoints": 0
         },
         {
-          "name": "Greg Rousseau",
-          "pos": "?",
-          "nfl": "BUF",
-          "isStarter": true,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 9,
-          "last3AvgPoints": 9.9,
-          "projPoints": 7.7
-        },
-        {
           "name": "Jameson Williams",
           "pos": "WR",
           "nfl": "DET",
@@ -2901,6 +2890,17 @@ const STATUS_REPORT_DATA = {
           "lastGamePoints": null,
           "last3AvgPoints": null,
           "projPoints": 12.6
+        },
+        {
+          "name": "David Bailey",
+          "pos": "?",
+          "nfl": "NYJ",
+          "isStarter": true,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 26.5,
+          "last3AvgPoints": 16.9,
+          "projPoints": 10.2
         }
       ],
       "flaggedCount": 0
