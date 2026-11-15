@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-11-15T01:25:32.731Z",
+  "generatedAt": "2026-11-15T08:35:44.056Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -203,7 +203,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
-          "projPoints": 5.6
+          "projPoints": 5.5
         }
       ],
       "flaggedCount": 0
@@ -911,7 +911,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 9.1,
           "last3AvgPoints": 13.4,
-          "projPoints": 17.1
+          "projPoints": 17
         },
         {
           "name": "Brian Robinson Jr.",
@@ -1243,7 +1243,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 12.4,
           "last3AvgPoints": 19.9,
-          "projPoints": 15
+          "projPoints": 14.7
         },
         {
           "name": "Sean Tucker",
@@ -1332,7 +1332,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 2.7,
           "last3AvgPoints": 8.3,
-          "projPoints": 6.4
+          "projPoints": 6.3
         },
         {
           "name": "Omarion Hampton",
@@ -1542,7 +1542,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 3,
           "last3AvgPoints": 2.5,
-          "projPoints": 6.4
+          "projPoints": 6.3
         },
         {
           "name": "Max Klare",
@@ -1707,7 +1707,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 3.3,
           "last3AvgPoints": 5.3,
-          "projPoints": 5.9
+          "projPoints": 5.8
         },
         {
           "name": "Tutu Atwell",
@@ -2005,7 +2005,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 16.8,
           "last3AvgPoints": 14.2,
-          "projPoints": 16.4
+          "projPoints": 16.3
         },
         {
           "name": "Breece Hall",
@@ -2746,7 +2746,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 9.4,
           "last3AvgPoints": 11.7,
-          "projPoints": 17.8
+          "projPoints": 17.9
         },
         {
           "name": "Trevor Lawrence",
@@ -3044,7 +3044,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 9.4,
           "last3AvgPoints": 11.7,
-          "projPoints": 17.8
+          "projPoints": 17.9
         },
         {
           "name": "Packers D/ST",
@@ -3055,7 +3055,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
-          "projPoints": 5.6
+          "projPoints": 5.5
         }
       ],
       "flaggedCount": 0
@@ -3576,7 +3576,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 19.7,
           "last3AvgPoints": 17.3,
-          "projPoints": 17.6
+          "projPoints": 17.5
         },
         {
           "name": "Omar Cooper Jr.",
@@ -3664,7 +3664,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 16.8,
           "last3AvgPoints": 14.2,
-          "projPoints": 16.4
+          "projPoints": 16.3
         },
         {
           "name": "Jameson Williams",
@@ -3874,7 +3874,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 5.3,
           "last3AvgPoints": 7.6,
-          "projPoints": 7.4
+          "projPoints": 7.3
         },
         {
           "name": "Jalen Hurts",
@@ -3907,7 +3907,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
-          "projPoints": 8.7
+          "projPoints": 8.6
         },
         {
           "name": "Malik Willis",
