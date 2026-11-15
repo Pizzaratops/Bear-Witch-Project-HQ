@@ -5,7 +5,7 @@
 //  GitHub Action ".github/workflows/sync-espn-nfl-standings.yml".
 //  Nicht von Hand editieren — Änderungen werden beim nächsten Sync
 //  überschrieben.
-//  Zuletzt synchronisiert: 2026-11-15T15:28:31.379Z
+//  Zuletzt synchronisiert: 2026-11-15T23:20:06.276Z
 //
 //  Quelle: nflverse/nfldata (GitHub-gehostet, MIT-lizenziert), NICHT
 //  ESPN -- ESPNs öffentliche Sport-API blockt GitHub-Actions-Server
@@ -3513,12 +3513,12 @@ const NFL_STANDINGS = {
         "abbr": "BUF",
         "conference": "AFC",
         "division": "East",
-        "wins": 7,
+        "wins": 8,
         "losses": 1,
         "ties": 0,
-        "winPct": 0.875,
-        "pf": 256,
-        "pa": 187
+        "winPct": 0.8888888888888888,
+        "pf": 287,
+        "pa": 199
       },
       {
         "name": "Miami Dolphins",
@@ -3526,11 +3526,11 @@ const NFL_STANDINGS = {
         "conference": "AFC",
         "division": "East",
         "wins": 1,
-        "losses": 7,
+        "losses": 8,
         "ties": 0,
-        "winPct": 0.125,
-        "pf": 126,
-        "pa": 200
+        "winPct": 0.1111111111111111,
+        "pf": 148,
+        "pa": 224
       },
       {
         "name": "New England Patriots",
@@ -3538,11 +3538,11 @@ const NFL_STANDINGS = {
         "conference": "AFC",
         "division": "East",
         "wins": 5,
-        "losses": 4,
+        "losses": 5,
         "ties": 0,
-        "winPct": 0.5555555555555556,
-        "pf": 211,
-        "pa": 207
+        "winPct": 0.5,
+        "pf": 221,
+        "pa": 242
       },
       {
         "name": "New York Jets",
@@ -3550,11 +3550,11 @@ const NFL_STANDINGS = {
         "conference": "AFC",
         "division": "East",
         "wins": 2,
-        "losses": 7,
+        "losses": 8,
         "ties": 0,
-        "winPct": 0.2222222222222222,
-        "pf": 182,
-        "pa": 223
+        "winPct": 0.2,
+        "pf": 194,
+        "pa": 254
       },
       {
         "name": "Baltimore Ravens",
@@ -3585,12 +3585,12 @@ const NFL_STANDINGS = {
         "abbr": "CLE",
         "conference": "AFC",
         "division": "North",
-        "wins": 5,
+        "wins": 6,
         "losses": 4,
         "ties": 0,
-        "winPct": 0.5555555555555556,
-        "pf": 161,
-        "pa": 196
+        "winPct": 0.6,
+        "pf": 188,
+        "pa": 220
       },
       {
         "name": "Pittsburgh Steelers",
@@ -3610,35 +3610,35 @@ const NFL_STANDINGS = {
         "conference": "AFC",
         "division": "South",
         "wins": 3,
-        "losses": 5,
+        "losses": 6,
         "ties": 0,
-        "winPct": 0.375,
-        "pf": 209,
-        "pa": 192
+        "winPct": 0.3333333333333333,
+        "pf": 233,
+        "pa": 219
       },
       {
         "name": "Indianapolis Colts",
         "abbr": "IND",
         "conference": "AFC",
         "division": "South",
-        "wins": 2,
+        "wins": 3,
         "losses": 7,
         "ties": 0,
-        "winPct": 0.2222222222222222,
-        "pf": 184,
-        "pa": 249
+        "winPct": 0.3,
+        "pf": 208,
+        "pa": 271
       },
       {
         "name": "Jacksonville Jaguars",
         "abbr": "JAX",
         "conference": "AFC",
         "division": "South",
-        "wins": 6,
+        "wins": 7,
         "losses": 2,
         "ties": 0,
-        "winPct": 0.75,
-        "pf": 229,
-        "pa": 121
+        "winPct": 0.7777777777777778,
+        "pf": 269,
+        "pa": 144
       },
       {
         "name": "Tennessee Titans",
@@ -3646,11 +3646,11 @@ const NFL_STANDINGS = {
         "conference": "AFC",
         "division": "South",
         "wins": 1,
-        "losses": 7,
+        "losses": 8,
         "ties": 0,
-        "winPct": 0.125,
-        "pf": 144,
-        "pa": 199
+        "winPct": 0.1111111111111111,
+        "pf": 167,
+        "pa": 239
       },
       {
         "name": "Denver Broncos",
@@ -3669,12 +3669,12 @@ const NFL_STANDINGS = {
         "abbr": "KC",
         "conference": "AFC",
         "division": "West",
-        "wins": 6,
+        "wins": 7,
         "losses": 2,
         "ties": 0,
-        "winPct": 0.75,
-        "pf": 202,
-        "pa": 143
+        "winPct": 0.7777777777777778,
+        "pf": 237,
+        "pa": 156
       },
       {
         "name": "Las Vegas Raiders",
@@ -3765,12 +3765,12 @@ const NFL_STANDINGS = {
         "abbr": "DET",
         "conference": "NFC",
         "division": "North",
-        "wins": 6,
+        "wins": 7,
         "losses": 2,
         "ties": 0,
-        "winPct": 0.75,
-        "pf": 222,
-        "pa": 189
+        "winPct": 0.7777777777777778,
+        "pf": 257,
+        "pa": 199
       },
       {
         "name": "Green Bay Packers",
@@ -3778,23 +3778,23 @@ const NFL_STANDINGS = {
         "conference": "NFC",
         "division": "North",
         "wins": 6,
-        "losses": 3,
+        "losses": 4,
         "ties": 0,
-        "winPct": 0.6666666666666666,
-        "pf": 216,
-        "pa": 191
+        "winPct": 0.6,
+        "pf": 226,
+        "pa": 221
       },
       {
         "name": "Minnesota Vikings",
         "abbr": "MIN",
         "conference": "NFC",
         "division": "North",
-        "wins": 6,
+        "wins": 7,
         "losses": 2,
         "ties": 0,
-        "winPct": 0.75,
-        "pf": 146,
-        "pa": 116
+        "winPct": 0.7777777777777778,
+        "pf": 176,
+        "pa": 126
       },
       {
         "name": "Atlanta Falcons",
@@ -3802,23 +3802,23 @@ const NFL_STANDINGS = {
         "conference": "NFC",
         "division": "South",
         "wins": 3,
-        "losses": 6,
+        "losses": 7,
         "ties": 0,
-        "winPct": 0.3333333333333333,
-        "pf": 188,
-        "pa": 223
+        "winPct": 0.3,
+        "pf": 201,
+        "pa": 258
       },
       {
         "name": "Carolina Panthers",
         "abbr": "CAR",
         "conference": "NFC",
         "division": "South",
-        "wins": 3,
+        "wins": 4,
         "losses": 5,
         "ties": 0,
-        "winPct": 0.375,
-        "pf": 199,
-        "pa": 219
+        "winPct": 0.4444444444444444,
+        "pf": 219,
+        "pa": 236
       },
       {
         "name": "New Orleans Saints",
@@ -3826,11 +3826,11 @@ const NFL_STANDINGS = {
         "conference": "NFC",
         "division": "South",
         "wins": 3,
-        "losses": 5,
+        "losses": 6,
         "ties": 0,
-        "winPct": 0.375,
-        "pf": 185,
-        "pa": 216
+        "winPct": 0.3333333333333333,
+        "pf": 202,
+        "pa": 236
       },
       {
         "name": "Tampa Bay Buccaneers",
@@ -5379,7 +5379,7 @@ const NFL_OFFDEF = {
       {
         "abbr": "NYG",
         "off": 0.0033231336242044527,
-        "def": 0.0005846046386333849,
+        "def": 0.0005846046386333881,
         "offRank": 15,
         "defRank": 16
       },
@@ -5605,7 +5605,7 @@ const NFL_OFFDEF = {
       {
         "abbr": "NYG",
         "off": 0.0033231336242044527,
-        "def": 0.0005846046386333849,
+        "def": 0.0005846046386333881,
         "offRank": 18,
         "defRank": 16
       },
@@ -5633,7 +5633,7 @@ const NFL_OFFDEF = {
       {
         "abbr": "DET",
         "off": 0.11609985165708357,
-        "def": 0.09924855864278681,
+        "def": 0.09924855864278685,
         "offRank": 6,
         "defRank": 30
       },
@@ -5646,7 +5646,7 @@ const NFL_OFFDEF = {
       },
       {
         "abbr": "MIN",
-        "off": -0.09834762872412335,
+        "off": -0.09834762872412332,
         "def": -0.18273820648565417,
         "offRank": 29,
         "defRank": 1
@@ -5859,7 +5859,7 @@ const NFL_OFFDEF = {
       {
         "abbr": "DET",
         "off": 0.09729656741776674,
-        "def": 0.06898273630338478,
+        "def": 0.0689827363033848,
         "offRank": 7,
         "defRank": 26
       },
@@ -5937,38 +5937,38 @@ const NFL_OFFDEF = {
     "10": [
       {
         "abbr": "BUF",
-        "off": 0.14884642284941277,
-        "def": -0.01032144538351909,
+        "off": 0.16809739319178482,
+        "def": -0.015165999122364873,
         "offRank": 3,
-        "defRank": 13
+        "defRank": 12
       },
       {
         "abbr": "MIA",
-        "off": -0.0619669530997931,
-        "def": 0.1038768146161429,
-        "offRank": 24,
-        "defRank": 32
+        "off": -0.08650841154087272,
+        "def": 0.05972556433191291,
+        "offRank": 26,
+        "defRank": 25
       },
       {
         "abbr": "NE",
-        "off": 0.06796528523141399,
-        "def": 0.05648744413268294,
-        "offRank": 8,
-        "defRank": 23
+        "off": 0.03181637035492127,
+        "def": 0.08084418192128533,
+        "offRank": 11,
+        "defRank": 29
       },
       {
         "abbr": "NYJ",
-        "off": -0.00327850353808585,
-        "def": 0.03416034454563955,
-        "offRank": 16,
-        "defRank": 19
+        "off": -0.00880816165767851,
+        "def": 0.0617081062620108,
+        "offRank": 18,
+        "defRank": 26
       },
       {
         "abbr": "BAL",
         "off": -0.008741270901804092,
         "def": 0.05570207793343784,
-        "offRank": 18,
-        "defRank": 22
+        "offRank": 17,
+        "defRank": 24
       },
       {
         "abbr": "CIN",
@@ -5979,80 +5979,80 @@ const NFL_OFFDEF = {
       },
       {
         "abbr": "CLE",
-        "off": -0.07023199376640608,
-        "def": -0.004276814498013031,
-        "offRank": 26,
-        "defRank": 15
+        "off": -0.06663202283414825,
+        "def": -0.009602532909607319,
+        "offRank": 25,
+        "defRank": 14
       },
       {
         "abbr": "PIT",
         "off": -0.03710538123608463,
         "def": -0.06351504303828681,
-        "offRank": 21,
+        "offRank": 20,
         "defRank": 7
       },
       {
         "abbr": "HOU",
-        "off": 0.051595451439961144,
-        "def": 0.003370136945804871,
+        "off": 0.03922992139862586,
+        "def": -0.0012878029539980537,
         "offRank": 9,
-        "defRank": 17
+        "defRank": 16
       },
       {
         "abbr": "IND",
-        "off": -0.11942993952754,
-        "def": 0.06993489536405588,
-        "offRank": 29,
-        "defRank": 27
+        "off": -0.1360874324072834,
+        "def": 0.03566659957625737,
+        "offRank": 30,
+        "defRank": 21
       },
       {
         "abbr": "JAX",
-        "off": 0.15975153505072723,
-        "def": -0.12868267171886438,
+        "off": 0.17058708852074744,
+        "def": -0.11975988917307387,
         "offRank": 2,
         "defRank": 3
       },
       {
         "abbr": "TEN",
-        "off": -0.06265933609878875,
-        "def": 0.0630705532469299,
-        "offRank": 25,
-        "defRank": 25
+        "off": -0.0609103805487386,
+        "def": 0.08469516139167264,
+        "offRank": 24,
+        "defRank": 30
       },
       {
         "abbr": "DEN",
         "off": -0.022887787784716222,
         "def": -0.004839523575249502,
-        "offRank": 20,
-        "defRank": 14
+        "offRank": 19,
+        "defRank": 15
       },
       {
         "abbr": "KC",
-        "off": 0.12066140281581315,
-        "def": -0.06331153476652959,
+        "off": 0.12952060359479975,
+        "def": -0.08800362104674483,
         "offRank": 5,
-        "defRank": 8
+        "defRank": 6
       },
       {
         "abbr": "LV",
         "off": 0.006214910938789883,
         "def": 0.10001345460140988,
         "offRank": 15,
-        "defRank": 31
+        "defRank": 32
       },
       {
         "abbr": "LAC",
         "off": -0.24291654900602347,
         "def": -0.01039347195829884,
         "offRank": 32,
-        "defRank": 12
+        "defRank": 13
       },
       {
         "abbr": "DAL",
         "off": 0.11315476428747168,
         "def": 0.09851648516190004,
-        "offRank": 6,
-        "defRank": 30
+        "offRank": 7,
+        "defRank": 31
       },
       {
         "abbr": "NYG",
@@ -6065,64 +6065,64 @@ const NFL_OFFDEF = {
         "abbr": "PHI",
         "off": -0.1477172907211927,
         "def": 0.07241492375471757,
-        "offRank": 30,
-        "defRank": 28
+        "offRank": 31,
+        "defRank": 27
       },
       {
         "abbr": "WSH",
         "off": -0.006528630062653954,
         "def": 0.05365313986588888,
-        "offRank": 17,
-        "defRank": 21
+        "offRank": 16,
+        "defRank": 23
       },
       {
         "abbr": "CHI",
         "off": 0.036643736644870556,
         "def": -0.042181817568857624,
-        "offRank": 12,
+        "offRank": 10,
         "defRank": 9
       },
       {
         "abbr": "DET",
-        "off": 0.09729656741776674,
-        "def": 0.06898273630338478,
-        "offRank": 7,
-        "defRank": 26
+        "off": 0.11722715613216682,
+        "def": 0.0300973878827271,
+        "offRank": 6,
+        "defRank": 20
       },
       {
         "abbr": "GB",
-        "off": 0.042461163420477704,
-        "def": -0.06539287761304871,
-        "offRank": 11,
-        "defRank": 6
+        "off": 0.020006416210764235,
+        "def": -0.05030671054395327,
+        "offRank": 12,
+        "defRank": 8
       },
       {
         "abbr": "MIN",
-        "off": -0.16607085767508864,
-        "def": -0.16011511137338594,
-        "offRank": 31,
+        "off": -0.13442144766616151,
+        "def": -0.16786776507577386,
+        "offRank": 29,
         "defRank": 2
       },
       {
         "abbr": "ATL",
-        "off": -0.07468544206718448,
-        "def": 0.0014184372095236851,
+        "off": -0.09715140331380144,
+        "def": 0.021024145714026384,
         "offRank": 27,
-        "defRank": 16
+        "defRank": 19
       },
       {
         "abbr": "CAR",
-        "off": 0.032256973966357544,
-        "def": 0.04698470750887453,
+        "off": 0.016759026905575174,
+        "def": 0.006344560128869451,
         "offRank": 13,
-        "defRank": 20
+        "defRank": 17
       },
       {
         "abbr": "NO",
-        "off": -0.022124634291312867,
-        "def": 0.061222329227271576,
-        "offRank": 19,
-        "defRank": 24
+        "off": -0.055577396576114296,
+        "def": 0.04240680392645385,
+        "offRank": 23,
+        "defRank": 22
       },
       {
         "abbr": "TB",
@@ -6135,14 +6135,14 @@ const NFL_OFFDEF = {
         "abbr": "ARI",
         "off": -0.03880558467744074,
         "def": 0.08052115801772444,
-        "offRank": 22,
-        "defRank": 29
+        "offRank": 21,
+        "defRank": 28
       },
       {
         "abbr": "LAR",
         "off": 0.04625754122715457,
         "def": -0.11142430849859786,
-        "offRank": 10,
+        "offRank": 8,
         "defRank": 4
       },
       {
@@ -6156,7 +6156,7 @@ const NFL_OFFDEF = {
         "abbr": "SEA",
         "off": -0.048472838918165596,
         "def": -0.0981785273835346,
-        "offRank": 23,
+        "offRank": 22,
         "defRank": 5
       }
     ]
