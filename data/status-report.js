@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-11-16T12:12:09.416Z",
+  "generatedAt": "2026-11-16T23:06:09.690Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -321,7 +321,7 @@ const STATUS_REPORT_DATA = {
           "pos": "?",
           "nfl": "DET",
           "isStarter": true,
-          "status": "D",
+          "status": "O",
           "flag": true,
           "lastGamePoints": 2.3,
           "last3AvgPoints": 5.4,
@@ -867,7 +867,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
-          "projPoints": 4.9
+          "projPoints": 5
         },
         {
           "name": "Daniel Jones",
@@ -972,108 +972,74 @@ const STATUS_REPORT_DATA = {
       "flaggedCount": 0
     },
     {
-      "id": "beyaz-sleeper-1402417765519781888",
+      "id": "beyaz-sleeper-1312799736218017792",
       "platform": "sleeper",
       "owner": "Bear Down",
-      "leagueName": "Double Doink",
+      "leagueName": "Dynasty of Pretend Experts (real)",
       "emoji": "💤",
-      "teamName": "Milchreis",
-      "record": "11-6-1",
+      "teamName": "Tokyo Titi Twisters",
+      "record": "14-4-0",
       "players": [
         {
-          "name": "Cairo Santos",
-          "pos": "K",
+          "name": "Rashee Rice",
+          "pos": "WR",
+          "nfl": "KC",
+          "isStarter": true,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 9.9,
+          "last3AvgPoints": 14.1,
+          "projPoints": 14.9
+        },
+        {
+          "name": "Caleb Williams",
+          "pos": "QB",
           "nfl": "CHI",
           "isStarter": false,
           "status": null,
           "flag": false,
-          "lastGamePoints": 9,
-          "last3AvgPoints": 11.3,
+          "lastGamePoints": 16.8,
+          "last3AvgPoints": 17.6,
           "projPoints": null
         },
         {
-          "name": "Eddy Pineiro",
-          "pos": "K",
-          "nfl": "SF",
-          "isStarter": false,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 8,
-          "last3AvgPoints": 4.5,
-          "projPoints": 8
-        },
-        {
-          "name": "Cameron Dicker",
-          "pos": "K",
-          "nfl": "LAC",
+          "name": "Jayden Daniels",
+          "pos": "QB",
+          "nfl": "WAS",
           "isStarter": true,
           "status": null,
           "flag": false,
-          "lastGamePoints": 13,
-          "last3AvgPoints": 12,
-          "projPoints": 7.2
+          "lastGamePoints": 14.6,
+          "last3AvgPoints": 14.8,
+          "projPoints": 18.7
         },
         {
-          "name": "Houston Texans",
-          "pos": "DEF",
-          "nfl": "HOU",
-          "isStarter": false,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 13,
-          "last3AvgPoints": 8,
-          "projPoints": 8.2
-        },
-        {
-          "name": "Jacksonville Jaguars",
-          "pos": "DEF",
-          "nfl": "JAX",
-          "isStarter": false,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 11,
-          "last3AvgPoints": 15.5,
-          "projPoints": 8.6
-        },
-        {
-          "name": "Minnesota Vikings",
-          "pos": "DEF",
-          "nfl": "MIN",
-          "isStarter": true,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 6,
-          "last3AvgPoints": 7.7,
-          "projPoints": 6.7
-        }
-      ],
-      "flaggedCount": 0
-    },
-    {
-      "id": "beyaz-sleeper-1402001617124884480",
-      "platform": "sleeper",
-      "owner": "Bear Down",
-      "leagueName": "Draft and Stash",
-      "emoji": "💤",
-      "teamName": "Milchreis",
-      "record": "9-9-0",
-      "players": [
-        {
-          "name": "MarShawn Lloyd",
+          "name": "Blake Corum",
           "pos": "RB",
-          "nfl": "GB",
+          "nfl": "LAR",
           "isStarter": true,
           "status": null,
           "flag": false,
-          "lastGamePoints": null,
-          "last3AvgPoints": 4.1,
-          "projPoints": 5.8
+          "lastGamePoints": 11.8,
+          "last3AvgPoints": 14.1,
+          "projPoints": 11.1
+        },
+        {
+          "name": "Brock Bowers",
+          "pos": "TE",
+          "nfl": "LV",
+          "isStarter": true,
+          "status": "O",
+          "flag": true,
+          "lastGamePoints": 22.3,
+          "last3AvgPoints": 21.3,
+          "projPoints": 15.2
         },
         {
           "name": "Rome Odunze",
           "pos": "WR",
           "nfl": "CHI",
-          "isStarter": true,
+          "isStarter": false,
           "status": null,
           "flag": false,
           "lastGamePoints": 16,
@@ -1081,43 +1047,65 @@ const STATUS_REPORT_DATA = {
           "projPoints": null
         },
         {
-          "name": "Jalen Coker",
+          "name": "Xavier Worthy",
           "pos": "WR",
-          "nfl": "CAR",
-          "isStarter": true,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 6.6,
-          "last3AvgPoints": 6,
-          "projPoints": 13.2
-        },
-        {
-          "name": "Pat Bryant",
-          "pos": "WR",
-          "nfl": "DEN",
+          "nfl": "KC",
           "isStarter": false,
           "status": null,
           "flag": false,
-          "lastGamePoints": 15.6,
-          "last3AvgPoints": 15.6,
+          "lastGamePoints": 10.8,
+          "last3AvgPoints": 6.4,
+          "projPoints": 8.3
+        },
+        {
+          "name": "Tyrone Tracy Jr.",
+          "pos": "RB",
+          "nfl": "NYG",
+          "isStarter": false,
+          "status": "IR",
+          "flag": false,
+          "lastGamePoints": null,
+          "last3AvgPoints": 8.7,
           "projPoints": null
         },
         {
-          "name": "Quinshon Judkins",
+          "name": "Cam Skattebo",
           "pos": "RB",
-          "nfl": "CLE",
+          "nfl": "NYG",
           "isStarter": true,
           "status": null,
           "flag": false,
-          "lastGamePoints": 5.5,
-          "last3AvgPoints": 11.9,
-          "projPoints": 9.9
+          "lastGamePoints": null,
+          "last3AvgPoints": 19.1,
+          "projPoints": 12.4
+        },
+        {
+          "name": "Tory Horton",
+          "pos": "WR",
+          "nfl": "SEA",
+          "isStarter": false,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 4.2,
+          "last3AvgPoints": 5.9,
+          "projPoints": 2.9
+        },
+        {
+          "name": "Emeka Egbuka",
+          "pos": "WR",
+          "nfl": "TB",
+          "isStarter": false,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 6.9,
+          "last3AvgPoints": 6.9,
+          "projPoints": null
         },
         {
           "name": "Colston Loveland",
           "pos": "TE",
           "nfl": "CHI",
-          "isStarter": true,
+          "isStarter": false,
           "status": null,
           "flag": false,
           "lastGamePoints": 9.4,
@@ -1128,7 +1116,7 @@ const STATUS_REPORT_DATA = {
           "name": "Luther Burden III",
           "pos": "WR",
           "nfl": "CHI",
-          "isStarter": true,
+          "isStarter": false,
           "status": "Q",
           "flag": false,
           "lastGamePoints": 20.7,
@@ -1136,316 +1124,128 @@ const STATUS_REPORT_DATA = {
           "projPoints": null
         },
         {
-          "name": "Denzel Boston",
+          "name": "Omar Cooper Jr.",
           "pos": "WR",
-          "nfl": "CLE",
+          "nfl": "NYJ",
           "isStarter": false,
-          "status": null,
+          "status": "O",
           "flag": false,
-          "lastGamePoints": 15.8,
-          "last3AvgPoints": 10.4,
-          "projPoints": 10.7
+          "lastGamePoints": 13.8,
+          "last3AvgPoints": 18.2,
+          "projPoints": 8.5
         },
         {
-          "name": "Eli Stowers",
-          "pos": "TE",
+          "name": "Makai Lemon",
+          "pos": "WR",
           "nfl": "PHI",
-          "isStarter": true,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": null,
-          "last3AvgPoints": 8.3,
-          "projPoints": null
-        },
-        {
-          "name": "Eli Raridon",
-          "pos": "TE",
-          "nfl": "NE",
           "isStarter": false,
           "status": null,
           "flag": false,
-          "lastGamePoints": 8.2,
-          "last3AvgPoints": 8.1,
-          "projPoints": 6
-        },
-        {
-          "name": "Jared Goff",
-          "pos": "QB",
-          "nfl": "DET",
-          "isStarter": true,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 6.3,
-          "last3AvgPoints": 11.4,
-          "projPoints": 18.7
-        },
-        {
-          "name": "Chris Godwin Jr.",
-          "pos": "WR",
-          "nfl": "TB",
-          "isStarter": true,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 4.8,
-          "last3AvgPoints": 5.8,
+          "lastGamePoints": 12.1,
+          "last3AvgPoints": 14.5,
           "projPoints": null
         },
         {
-          "name": "Lamar Jackson",
-          "pos": "QB",
+          "name": "Derrick Henry",
+          "pos": "RB",
           "nfl": "BAL",
           "isStarter": true,
-          "status": "IR",
-          "flag": true,
-          "lastGamePoints": null,
-          "last3AvgPoints": null,
-          "projPoints": null
-        },
-        {
-          "name": "Tua Tagovailoa",
-          "pos": "QB",
-          "nfl": "ATL",
-          "isStarter": false,
           "status": null,
           "flag": false,
-          "lastGamePoints": null,
-          "last3AvgPoints": null,
-          "projPoints": null
+          "lastGamePoints": 5.6,
+          "last3AvgPoints": 8.5,
+          "projPoints": 15.4
         },
         {
-          "name": "DeVonta Smith",
-          "pos": "WR",
-          "nfl": "PHI",
-          "isStarter": true,
-          "status": "O",
-          "flag": true,
-          "lastGamePoints": null,
-          "last3AvgPoints": null,
-          "projPoints": null
-        },
-        {
-          "name": "Rhamondre Stevenson",
+          "name": "Josh Jacobs",
           "pos": "RB",
-          "nfl": "NE",
-          "isStarter": true,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 14.8,
-          "last3AvgPoints": 16.4,
-          "projPoints": 12.6
-        },
-        {
-          "name": "Trey McBride",
-          "pos": "TE",
-          "nfl": "ARI",
-          "isStarter": true,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 12.4,
-          "last3AvgPoints": 19.9,
-          "projPoints": 14.6
-        },
-        {
-          "name": "Sean Tucker",
-          "pos": "RB",
-          "nfl": "TB",
-          "isStarter": false,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": null,
-          "last3AvgPoints": 11.2,
-          "projPoints": null
-        },
-        {
-          "name": "Keaton Mitchell",
-          "pos": "RB",
-          "nfl": "LAC",
-          "isStarter": true,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 7.7,
-          "last3AvgPoints": 6.5,
-          "projPoints": 6.2
-        },
-        {
-          "name": "Quentin Johnston",
-          "pos": "WR",
-          "nfl": "LAC",
-          "isStarter": true,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 13.3,
-          "last3AvgPoints": 10.5,
-          "projPoints": 8.7
-        }
-      ],
-      "flaggedCount": 2
-    },
-    {
-      "id": "beyaz-sleeper-1401860041555881984",
-      "platform": "sleeper",
-      "owner": "Bear Down",
-      "leagueName": "Big leagues ",
-      "emoji": "💤",
-      "teamName": "Milchreis",
-      "record": "3-15-0",
-      "players": [
-        {
-          "name": "Blake Corum",
-          "pos": "RB",
-          "nfl": "LAR",
-          "isStarter": true,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 11.8,
-          "last3AvgPoints": 13.9,
-          "projPoints": 10.6
-        },
-        {
-          "name": "Marvin Harrison Jr.",
-          "pos": "WR",
-          "nfl": "HOU",
+          "nfl": "GB",
           "isStarter": false,
           "status": "O",
           "flag": false,
-          "lastGamePoints": 3,
-          "last3AvgPoints": 5.1,
+          "lastGamePoints": 0.5,
+          "last3AvgPoints": 14.6,
           "projPoints": null
         },
         {
-          "name": "Jalen Coker",
-          "pos": "WR",
-          "nfl": "CAR",
-          "isStarter": true,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 4.6,
-          "last3AvgPoints": 4.9,
-          "projPoints": 11
-        },
-        {
-          "name": "Devaughn Vele",
-          "pos": "WR",
-          "nfl": "NO",
-          "isStarter": false,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 2.7,
-          "last3AvgPoints": 8.3,
-          "projPoints": 6
-        },
-        {
-          "name": "Omarion Hampton",
-          "pos": "RB",
-          "nfl": "LAC",
-          "isStarter": false,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 6,
-          "last3AvgPoints": 4.9,
-          "projPoints": 7.2
-        },
-        {
-          "name": "Colston Loveland",
-          "pos": "TE",
-          "nfl": "CHI",
-          "isStarter": false,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 7.4,
-          "last3AvgPoints": 10.6,
-          "projPoints": null
-        },
-        {
-          "name": "Jeremiyah Love",
-          "pos": "RB",
-          "nfl": "ARI",
-          "isStarter": false,
-          "status": "IR",
-          "flag": false,
-          "lastGamePoints": null,
-          "last3AvgPoints": 2.3,
-          "projPoints": null
-        },
-        {
-          "name": "Darren Waller",
-          "pos": "TE",
-          "nfl": "CAR",
-          "isStarter": true,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 19,
-          "last3AvgPoints": 10.7,
-          "projPoints": 7.4
-        },
-        {
-          "name": "Patrick Mahomes",
-          "pos": "QB",
-          "nfl": "KC",
-          "isStarter": true,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 16.5,
-          "last3AvgPoints": 16.3,
-          "projPoints": 20
-        },
-        {
-          "name": "DJ Moore",
-          "pos": "WR",
+          "name": "Tyler Bass",
+          "pos": "K",
           "nfl": "BUF",
           "isStarter": true,
           "status": null,
           "flag": false,
-          "lastGamePoints": 5.1,
-          "last3AvgPoints": 9.9,
-          "projPoints": 10.2
+          "lastGamePoints": 13,
+          "last3AvgPoints": 14.5,
+          "projPoints": 8.5
         },
         {
-          "name": "Devin Singletary",
-          "pos": "RB",
-          "nfl": "NYG",
+          "name": "Treylon Burks",
+          "pos": "WR",
+          "nfl": "WAS",
           "isStarter": false,
           "status": null,
           "flag": false,
-          "lastGamePoints": 4.9,
-          "last3AvgPoints": 9,
-          "projPoints": 7.5
-        },
-        {
-          "name": "Rico Dowdle",
-          "pos": "RB",
-          "nfl": "PIT",
-          "isStarter": true,
-          "status": null,
-          "flag": false,
           "lastGamePoints": null,
-          "last3AvgPoints": 11.6,
-          "projPoints": 8.9
+          "last3AvgPoints": 11.1,
+          "projPoints": 5.5
         },
         {
-          "name": "Amon-Ra St. Brown",
+          "name": "Chris Olave",
           "pos": "WR",
-          "nfl": "DET",
+          "nfl": "NO",
           "isStarter": true,
           "status": null,
           "flag": false,
-          "lastGamePoints": 12.6,
-          "last3AvgPoints": 13.8,
-          "projPoints": 15.9
+          "lastGamePoints": 16.8,
+          "last3AvgPoints": 14.2,
+          "projPoints": 16.2
         },
         {
-          "name": "Parker Washington",
-          "pos": "WR",
-          "nfl": "JAX",
+          "name": "Breece Hall",
+          "pos": "RB",
+          "nfl": "NYJ",
           "isStarter": true,
           "status": null,
           "flag": false,
-          "lastGamePoints": 13.1,
-          "last3AvgPoints": 8.1,
-          "projPoints": 12.5
+          "lastGamePoints": 11.7,
+          "last3AvgPoints": 11.7,
+          "projPoints": 12
+        },
+        {
+          "name": "Jaxon Smith-Njigba",
+          "pos": "WR",
+          "nfl": "SEA",
+          "isStarter": true,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 12.1,
+          "last3AvgPoints": 22.4,
+          "projPoints": 22.9
+        },
+        {
+          "name": "Denver Broncos",
+          "pos": "DEF",
+          "nfl": "DEN",
+          "isStarter": false,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 9,
+          "last3AvgPoints": 5,
+          "projPoints": null
+        },
+        {
+          "name": "Green Bay Packers",
+          "pos": "DEF",
+          "nfl": "GB",
+          "isStarter": true,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 13,
+          "last3AvgPoints": 11,
+          "projPoints": 7.9
         }
       ],
-      "flaggedCount": 0
+      "flaggedCount": 1
     },
     {
       "id": "beyaz-sleeper-1318211269970399232",
@@ -1779,282 +1579,6 @@ const STATUS_REPORT_DATA = {
       "flaggedCount": 0
     },
     {
-      "id": "beyaz-sleeper-1312799736218017792",
-      "platform": "sleeper",
-      "owner": "Bear Down",
-      "leagueName": "Dynasty of Pretend Experts (real)",
-      "emoji": "💤",
-      "teamName": "Tokyo Titi Twisters",
-      "record": "14-4-0",
-      "players": [
-        {
-          "name": "Rashee Rice",
-          "pos": "WR",
-          "nfl": "KC",
-          "isStarter": true,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 9.9,
-          "last3AvgPoints": 14.1,
-          "projPoints": 14.9
-        },
-        {
-          "name": "Caleb Williams",
-          "pos": "QB",
-          "nfl": "CHI",
-          "isStarter": false,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 16.8,
-          "last3AvgPoints": 17.6,
-          "projPoints": null
-        },
-        {
-          "name": "Jayden Daniels",
-          "pos": "QB",
-          "nfl": "WAS",
-          "isStarter": true,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 14.6,
-          "last3AvgPoints": 14.8,
-          "projPoints": 18.7
-        },
-        {
-          "name": "Blake Corum",
-          "pos": "RB",
-          "nfl": "LAR",
-          "isStarter": true,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 11.8,
-          "last3AvgPoints": 14.1,
-          "projPoints": 11.1
-        },
-        {
-          "name": "Brock Bowers",
-          "pos": "TE",
-          "nfl": "LV",
-          "isStarter": true,
-          "status": "O",
-          "flag": true,
-          "lastGamePoints": 22.3,
-          "last3AvgPoints": 21.3,
-          "projPoints": 15.2
-        },
-        {
-          "name": "Rome Odunze",
-          "pos": "WR",
-          "nfl": "CHI",
-          "isStarter": false,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 16,
-          "last3AvgPoints": 13.2,
-          "projPoints": null
-        },
-        {
-          "name": "Xavier Worthy",
-          "pos": "WR",
-          "nfl": "KC",
-          "isStarter": false,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 10.8,
-          "last3AvgPoints": 6.4,
-          "projPoints": 8.3
-        },
-        {
-          "name": "Tyrone Tracy Jr.",
-          "pos": "RB",
-          "nfl": "NYG",
-          "isStarter": false,
-          "status": "IR",
-          "flag": false,
-          "lastGamePoints": null,
-          "last3AvgPoints": 8.7,
-          "projPoints": null
-        },
-        {
-          "name": "Cam Skattebo",
-          "pos": "RB",
-          "nfl": "NYG",
-          "isStarter": true,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": null,
-          "last3AvgPoints": 19.1,
-          "projPoints": 12.4
-        },
-        {
-          "name": "Tory Horton",
-          "pos": "WR",
-          "nfl": "SEA",
-          "isStarter": false,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 4.2,
-          "last3AvgPoints": 5.9,
-          "projPoints": 2.9
-        },
-        {
-          "name": "Emeka Egbuka",
-          "pos": "WR",
-          "nfl": "TB",
-          "isStarter": false,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 6.9,
-          "last3AvgPoints": 6.9,
-          "projPoints": null
-        },
-        {
-          "name": "Colston Loveland",
-          "pos": "TE",
-          "nfl": "CHI",
-          "isStarter": false,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 9.4,
-          "last3AvgPoints": 13.6,
-          "projPoints": null
-        },
-        {
-          "name": "Luther Burden III",
-          "pos": "WR",
-          "nfl": "CHI",
-          "isStarter": false,
-          "status": "Q",
-          "flag": false,
-          "lastGamePoints": 20.7,
-          "last3AvgPoints": 21,
-          "projPoints": null
-        },
-        {
-          "name": "Omar Cooper Jr.",
-          "pos": "WR",
-          "nfl": "NYJ",
-          "isStarter": false,
-          "status": "O",
-          "flag": false,
-          "lastGamePoints": 13.8,
-          "last3AvgPoints": 18.2,
-          "projPoints": 8.5
-        },
-        {
-          "name": "Makai Lemon",
-          "pos": "WR",
-          "nfl": "PHI",
-          "isStarter": false,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 12.1,
-          "last3AvgPoints": 14.5,
-          "projPoints": null
-        },
-        {
-          "name": "Derrick Henry",
-          "pos": "RB",
-          "nfl": "BAL",
-          "isStarter": true,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 5.6,
-          "last3AvgPoints": 8.5,
-          "projPoints": 15.6
-        },
-        {
-          "name": "Josh Jacobs",
-          "pos": "RB",
-          "nfl": "GB",
-          "isStarter": false,
-          "status": "O",
-          "flag": false,
-          "lastGamePoints": 0.5,
-          "last3AvgPoints": 14.6,
-          "projPoints": null
-        },
-        {
-          "name": "Tyler Bass",
-          "pos": "K",
-          "nfl": "BUF",
-          "isStarter": true,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 13,
-          "last3AvgPoints": 14.5,
-          "projPoints": 8.5
-        },
-        {
-          "name": "Treylon Burks",
-          "pos": "WR",
-          "nfl": "WAS",
-          "isStarter": false,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": null,
-          "last3AvgPoints": 11.1,
-          "projPoints": 5.5
-        },
-        {
-          "name": "Chris Olave",
-          "pos": "WR",
-          "nfl": "NO",
-          "isStarter": true,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 16.8,
-          "last3AvgPoints": 14.2,
-          "projPoints": 16.2
-        },
-        {
-          "name": "Breece Hall",
-          "pos": "RB",
-          "nfl": "NYJ",
-          "isStarter": true,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 11.7,
-          "last3AvgPoints": 11.7,
-          "projPoints": 12
-        },
-        {
-          "name": "Jaxon Smith-Njigba",
-          "pos": "WR",
-          "nfl": "SEA",
-          "isStarter": true,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 12.1,
-          "last3AvgPoints": 22.4,
-          "projPoints": 22.9
-        },
-        {
-          "name": "Denver Broncos",
-          "pos": "DEF",
-          "nfl": "DEN",
-          "isStarter": false,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 9,
-          "last3AvgPoints": 5,
-          "projPoints": null
-        },
-        {
-          "name": "Green Bay Packers",
-          "pos": "DEF",
-          "nfl": "GB",
-          "isStarter": true,
-          "status": null,
-          "flag": false,
-          "lastGamePoints": 13,
-          "last3AvgPoints": 11,
-          "projPoints": 7.9
-        }
-      ],
-      "flaggedCount": 1
-    },
-    {
       "id": "beyaz-sleeper-1312748395584036864",
       "platform": "sleeper",
       "owner": "Bear Down",
@@ -2320,6 +1844,172 @@ const STATUS_REPORT_DATA = {
       "flaggedCount": 1
     },
     {
+      "id": "beyaz-sleeper-1401860041555881984",
+      "platform": "sleeper",
+      "owner": "Bear Down",
+      "leagueName": "Big leagues ",
+      "emoji": "💤",
+      "teamName": "Milchreis",
+      "record": "3-15-0",
+      "players": [
+        {
+          "name": "Blake Corum",
+          "pos": "RB",
+          "nfl": "LAR",
+          "isStarter": true,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 11.8,
+          "last3AvgPoints": 13.9,
+          "projPoints": 10.6
+        },
+        {
+          "name": "Marvin Harrison Jr.",
+          "pos": "WR",
+          "nfl": "HOU",
+          "isStarter": false,
+          "status": "O",
+          "flag": false,
+          "lastGamePoints": 3,
+          "last3AvgPoints": 5.1,
+          "projPoints": null
+        },
+        {
+          "name": "Jalen Coker",
+          "pos": "WR",
+          "nfl": "CAR",
+          "isStarter": true,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 4.6,
+          "last3AvgPoints": 4.9,
+          "projPoints": 11
+        },
+        {
+          "name": "Devaughn Vele",
+          "pos": "WR",
+          "nfl": "NO",
+          "isStarter": false,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 2.7,
+          "last3AvgPoints": 8.3,
+          "projPoints": 6
+        },
+        {
+          "name": "Omarion Hampton",
+          "pos": "RB",
+          "nfl": "LAC",
+          "isStarter": false,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 6,
+          "last3AvgPoints": 4.9,
+          "projPoints": 7.2
+        },
+        {
+          "name": "Colston Loveland",
+          "pos": "TE",
+          "nfl": "CHI",
+          "isStarter": false,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 7.4,
+          "last3AvgPoints": 10.6,
+          "projPoints": null
+        },
+        {
+          "name": "Jeremiyah Love",
+          "pos": "RB",
+          "nfl": "ARI",
+          "isStarter": false,
+          "status": "IR",
+          "flag": false,
+          "lastGamePoints": null,
+          "last3AvgPoints": 2.3,
+          "projPoints": null
+        },
+        {
+          "name": "Darren Waller",
+          "pos": "TE",
+          "nfl": "CAR",
+          "isStarter": true,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 19,
+          "last3AvgPoints": 10.7,
+          "projPoints": 7.4
+        },
+        {
+          "name": "Patrick Mahomes",
+          "pos": "QB",
+          "nfl": "KC",
+          "isStarter": true,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 16.5,
+          "last3AvgPoints": 16.3,
+          "projPoints": 20
+        },
+        {
+          "name": "DJ Moore",
+          "pos": "WR",
+          "nfl": "BUF",
+          "isStarter": true,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 5.1,
+          "last3AvgPoints": 9.9,
+          "projPoints": 10.2
+        },
+        {
+          "name": "Devin Singletary",
+          "pos": "RB",
+          "nfl": "NYG",
+          "isStarter": false,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 4.9,
+          "last3AvgPoints": 9,
+          "projPoints": 7.5
+        },
+        {
+          "name": "Rico Dowdle",
+          "pos": "RB",
+          "nfl": "PIT",
+          "isStarter": true,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": null,
+          "last3AvgPoints": 11.6,
+          "projPoints": 8.9
+        },
+        {
+          "name": "Amon-Ra St. Brown",
+          "pos": "WR",
+          "nfl": "DET",
+          "isStarter": true,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 12.6,
+          "last3AvgPoints": 13.8,
+          "projPoints": 15.9
+        },
+        {
+          "name": "Parker Washington",
+          "pos": "WR",
+          "nfl": "JAX",
+          "isStarter": true,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 13.1,
+          "last3AvgPoints": 8.1,
+          "projPoints": 12.5
+        }
+      ],
+      "flaggedCount": 0
+    },
+    {
       "id": "beyaz-sleeper-1312955101303824384",
       "platform": "sleeper",
       "owner": "Bear Down",
@@ -2480,7 +2170,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 11.4,
           "last3AvgPoints": 10.6,
-          "projPoints": 13.9
+          "projPoints": 14.5
         },
         {
           "name": "Rachaad White",
@@ -2517,6 +2207,316 @@ const STATUS_REPORT_DATA = {
         }
       ],
       "flaggedCount": 0
+    },
+    {
+      "id": "beyaz-sleeper-1402417765519781888",
+      "platform": "sleeper",
+      "owner": "Bear Down",
+      "leagueName": "Double Doink",
+      "emoji": "💤",
+      "teamName": "Milchreis",
+      "record": "11-6-1",
+      "players": [
+        {
+          "name": "Cairo Santos",
+          "pos": "K",
+          "nfl": "CHI",
+          "isStarter": false,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 9,
+          "last3AvgPoints": 11.3,
+          "projPoints": null
+        },
+        {
+          "name": "Eddy Pineiro",
+          "pos": "K",
+          "nfl": "SF",
+          "isStarter": false,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 8,
+          "last3AvgPoints": 4.5,
+          "projPoints": 8
+        },
+        {
+          "name": "Cameron Dicker",
+          "pos": "K",
+          "nfl": "LAC",
+          "isStarter": true,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 13,
+          "last3AvgPoints": 12,
+          "projPoints": 7.3
+        },
+        {
+          "name": "Houston Texans",
+          "pos": "DEF",
+          "nfl": "HOU",
+          "isStarter": false,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 13,
+          "last3AvgPoints": 8,
+          "projPoints": 8.2
+        },
+        {
+          "name": "Jacksonville Jaguars",
+          "pos": "DEF",
+          "nfl": "JAX",
+          "isStarter": false,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 11,
+          "last3AvgPoints": 15.5,
+          "projPoints": 8.6
+        },
+        {
+          "name": "Minnesota Vikings",
+          "pos": "DEF",
+          "nfl": "MIN",
+          "isStarter": true,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 6,
+          "last3AvgPoints": 7.7,
+          "projPoints": 6.7
+        }
+      ],
+      "flaggedCount": 0
+    },
+    {
+      "id": "beyaz-sleeper-1402001617124884480",
+      "platform": "sleeper",
+      "owner": "Bear Down",
+      "leagueName": "Draft and Stash",
+      "emoji": "💤",
+      "teamName": "Milchreis",
+      "record": "9-9-0",
+      "players": [
+        {
+          "name": "MarShawn Lloyd",
+          "pos": "RB",
+          "nfl": "GB",
+          "isStarter": true,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": null,
+          "last3AvgPoints": 4.1,
+          "projPoints": 5.8
+        },
+        {
+          "name": "Rome Odunze",
+          "pos": "WR",
+          "nfl": "CHI",
+          "isStarter": true,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 16,
+          "last3AvgPoints": 13.2,
+          "projPoints": null
+        },
+        {
+          "name": "Jalen Coker",
+          "pos": "WR",
+          "nfl": "CAR",
+          "isStarter": true,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 6.6,
+          "last3AvgPoints": 6,
+          "projPoints": 13.2
+        },
+        {
+          "name": "Pat Bryant",
+          "pos": "WR",
+          "nfl": "DEN",
+          "isStarter": false,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 15.6,
+          "last3AvgPoints": 15.6,
+          "projPoints": null
+        },
+        {
+          "name": "Quinshon Judkins",
+          "pos": "RB",
+          "nfl": "CLE",
+          "isStarter": true,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 5.5,
+          "last3AvgPoints": 11.9,
+          "projPoints": 9.9
+        },
+        {
+          "name": "Colston Loveland",
+          "pos": "TE",
+          "nfl": "CHI",
+          "isStarter": true,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 9.4,
+          "last3AvgPoints": 13.6,
+          "projPoints": null
+        },
+        {
+          "name": "Luther Burden III",
+          "pos": "WR",
+          "nfl": "CHI",
+          "isStarter": true,
+          "status": "Q",
+          "flag": false,
+          "lastGamePoints": 20.7,
+          "last3AvgPoints": 21,
+          "projPoints": null
+        },
+        {
+          "name": "Denzel Boston",
+          "pos": "WR",
+          "nfl": "CLE",
+          "isStarter": false,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 15.8,
+          "last3AvgPoints": 10.4,
+          "projPoints": 10.7
+        },
+        {
+          "name": "Eli Stowers",
+          "pos": "TE",
+          "nfl": "PHI",
+          "isStarter": true,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": null,
+          "last3AvgPoints": 8.3,
+          "projPoints": null
+        },
+        {
+          "name": "Eli Raridon",
+          "pos": "TE",
+          "nfl": "NE",
+          "isStarter": false,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 8.2,
+          "last3AvgPoints": 8.1,
+          "projPoints": 6
+        },
+        {
+          "name": "Jared Goff",
+          "pos": "QB",
+          "nfl": "DET",
+          "isStarter": true,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 6.3,
+          "last3AvgPoints": 11.4,
+          "projPoints": 18.7
+        },
+        {
+          "name": "Chris Godwin Jr.",
+          "pos": "WR",
+          "nfl": "TB",
+          "isStarter": true,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 4.8,
+          "last3AvgPoints": 5.8,
+          "projPoints": null
+        },
+        {
+          "name": "Lamar Jackson",
+          "pos": "QB",
+          "nfl": "BAL",
+          "isStarter": true,
+          "status": "IR",
+          "flag": true,
+          "lastGamePoints": null,
+          "last3AvgPoints": null,
+          "projPoints": null
+        },
+        {
+          "name": "Tua Tagovailoa",
+          "pos": "QB",
+          "nfl": "ATL",
+          "isStarter": false,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": null,
+          "last3AvgPoints": null,
+          "projPoints": null
+        },
+        {
+          "name": "DeVonta Smith",
+          "pos": "WR",
+          "nfl": "PHI",
+          "isStarter": true,
+          "status": "O",
+          "flag": true,
+          "lastGamePoints": null,
+          "last3AvgPoints": null,
+          "projPoints": null
+        },
+        {
+          "name": "Rhamondre Stevenson",
+          "pos": "RB",
+          "nfl": "NE",
+          "isStarter": true,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 14.8,
+          "last3AvgPoints": 16.4,
+          "projPoints": 12.6
+        },
+        {
+          "name": "Trey McBride",
+          "pos": "TE",
+          "nfl": "ARI",
+          "isStarter": true,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 12.4,
+          "last3AvgPoints": 19.9,
+          "projPoints": 14.6
+        },
+        {
+          "name": "Sean Tucker",
+          "pos": "RB",
+          "nfl": "TB",
+          "isStarter": false,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": null,
+          "last3AvgPoints": 11.2,
+          "projPoints": null
+        },
+        {
+          "name": "Keaton Mitchell",
+          "pos": "RB",
+          "nfl": "LAC",
+          "isStarter": true,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 7.7,
+          "last3AvgPoints": 6.5,
+          "projPoints": 6.1
+        },
+        {
+          "name": "Quentin Johnston",
+          "pos": "WR",
+          "nfl": "LAC",
+          "isStarter": true,
+          "status": null,
+          "flag": false,
+          "lastGamePoints": 13.3,
+          "last3AvgPoints": 10.5,
+          "projPoints": 9
+        }
+      ],
+      "flaggedCount": 2
     },
     {
       "id": "felix-espn-91260355",
@@ -3029,8 +3029,8 @@ const STATUS_REPORT_DATA = {
           "pos": "QB",
           "nfl": "NE",
           "isStarter": true,
-          "status": "Q",
-          "flag": false,
+          "status": "D",
+          "flag": true,
           "lastGamePoints": 18.3,
           "last3AvgPoints": 22.7,
           "projPoints": 22
@@ -3058,7 +3058,7 @@ const STATUS_REPORT_DATA = {
           "projPoints": 5.5
         }
       ],
-      "flaggedCount": 0
+      "flaggedCount": 1
     },
     {
       "id": "felix-espn-1340233816",
@@ -3107,8 +3107,8 @@ const STATUS_REPORT_DATA = {
           "pos": "QB",
           "nfl": "NE",
           "isStarter": true,
-          "status": "Q",
-          "flag": false,
+          "status": "D",
+          "flag": true,
           "lastGamePoints": null,
           "last3AvgPoints": null,
           "projPoints": null
@@ -3191,7 +3191,7 @@ const STATUS_REPORT_DATA = {
           "projPoints": null
         }
       ],
-      "flaggedCount": 0
+      "flaggedCount": 1
     },
     {
       "id": "felix-espn-519920608",
@@ -3432,7 +3432,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 2,
           "last3AvgPoints": 0.7,
-          "projPoints": 8.4
+          "projPoints": 8.5
         },
         {
           "name": "Chicago Bears",
@@ -3454,7 +3454,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": -1,
           "last3AvgPoints": 1,
-          "projPoints": 5.7
+          "projPoints": 5.8
         },
         {
           "name": "Philadelphia Eagles",
@@ -3521,7 +3521,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 4.6,
           "last3AvgPoints": 4.8,
-          "projPoints": 6.8
+          "projPoints": 6.9
         },
         {
           "name": "Tyrone Tracy Jr.",
