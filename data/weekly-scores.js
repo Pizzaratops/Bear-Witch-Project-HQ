@@ -3,7 +3,7 @@
 // ============================================================
 //  AUTO-GENERIERT von scripts/sync-espn-weekly-scores.js über die
 //  GitHub Action ".github/workflows/sync-espn-weekly-scores.yml".
-//  Zuletzt synchronisiert: 2026-11-17T02:45:25.699Z
+//  Zuletzt synchronisiert: 2026-11-17T16:44:57.415Z
 //
 //  teamId hier ist bereits unsere eigene Team-ID aus data/teams.js
 //  (uebersetzt beim Sync per Namensabgleich, wie in
@@ -676,6 +676,80 @@ const WEEKLY_SCORES = {
     "points": 123.26,
     "opponentId": "london-nopunts",
     "opponentPoints": 92.22
+   }
+  ],
+  "10": [
+   {
+    "teamId": "lion-cereals",
+    "points": 75.06,
+    "opponentId": "burrowhead-dancers",
+    "opponentPoints": 97.14
+   },
+   {
+    "teamId": "burrowhead-dancers",
+    "points": 97.14,
+    "opponentId": "lion-cereals",
+    "opponentPoints": 75.06
+   },
+   {
+    "teamId": "vice-city-crackheads",
+    "points": 150.78,
+    "opponentId": "team-beermode",
+    "opponentPoints": 193.4
+   },
+   {
+    "teamId": "team-beermode",
+    "points": 193.4,
+    "opponentId": "vice-city-crackheads",
+    "opponentPoints": 150.78
+   },
+   {
+    "teamId": "beastmode",
+    "points": 149.04,
+    "opponentId": "bear-witch-project",
+    "opponentPoints": 139.7
+   },
+   {
+    "teamId": "bear-witch-project",
+    "points": 139.7,
+    "opponentId": "beastmode",
+    "opponentPoints": 149.04
+   },
+   {
+    "teamId": "charged-up",
+    "points": 91.82,
+    "opponentId": "the-lamartrix",
+    "opponentPoints": 80.58
+   },
+   {
+    "teamId": "the-lamartrix",
+    "points": 80.58,
+    "opponentId": "charged-up",
+    "opponentPoints": 91.82
+   },
+   {
+    "teamId": "fred-bulls",
+    "points": 87.66,
+    "opponentId": "angry-ducks",
+    "opponentPoints": 144.96
+   },
+   {
+    "teamId": "angry-ducks",
+    "points": 144.96,
+    "opponentId": "fred-bulls",
+    "opponentPoints": 87.66
+   },
+   {
+    "teamId": "london-nopunts",
+    "points": 94.68,
+    "opponentId": "running-bisons",
+    "opponentPoints": 138.96
+   },
+   {
+    "teamId": "running-bisons",
+    "points": 138.96,
+    "opponentId": "london-nopunts",
+    "opponentPoints": 94.68
    }
   ]
  }
