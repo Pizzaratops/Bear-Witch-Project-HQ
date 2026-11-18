@@ -20,7 +20,7 @@
 
 const NFL_PROFILE_COMP = {
   "meta": {
-    "builtAt": "2026-11-18T17:00:49.934Z",
+    "builtAt": "2026-11-18T17:41:24.774Z",
     "matchFeatures": {
       "QB": [
         "avgPpaPass",
@@ -225522,128 +225522,6 @@ const NFL_PROFILE_COMP = {
           "draftCapitalScore": 0.261
         }
       ],
-      "2025_4594319": [
-        {
-          "id": "nfl_2018_deoncain",
-          "name": "Deon Cain",
-          "team": "Clemson",
-          "year": 2017,
-          "dist": 1.257,
-          "draftYear": 2018,
-          "draftRound": 6,
-          "draftPick": 185,
-          "ras": 4.39,
-          "draftCapitalScore": 0.261
-        },
-        {
-          "id": "nfl_2020_jalenreagor",
-          "name": "Jalen Reagor",
-          "team": "TCU",
-          "year": 2019,
-          "dist": 1.368,
-          "draftYear": 2020,
-          "draftRound": 1,
-          "draftPick": 21,
-          "ras": 5.56,
-          "draftCapitalScore": 0.68
-        },
-        {
-          "id": "nfl_2023_dontayvionwicks",
-          "name": "Dontayvion Wicks",
-          "team": "Virginia",
-          "year": 2022,
-          "dist": 1.37,
-          "draftYear": 2023,
-          "draftRound": 5,
-          "draftPick": 159,
-          "ras": 5.13,
-          "draftCapitalScore": 0.331
-        },
-        {
-          "id": "nfl_2022_bomelton",
-          "name": "Bo Melton",
-          "team": "Rutgers",
-          "year": 2021,
-          "dist": 1.472,
-          "draftYear": 2022,
-          "draftRound": 7,
-          "draftPick": 229,
-          "ras": 5.6,
-          "draftCapitalScore": 0.25
-        },
-        {
-          "id": "nfl_2021_joshpalmer",
-          "name": "Josh Palmer",
-          "team": "Tennessee",
-          "year": 2020,
-          "dist": 1.606,
-          "draftYear": 2021,
-          "draftRound": 3,
-          "draftPick": 77,
-          "ras": null,
-          "draftCapitalScore": 0.489
-        },
-        {
-          "id": "nfl_2021_sethwilliams",
-          "name": "Seth Williams",
-          "team": "Auburn",
-          "year": 2020,
-          "dist": 1.915,
-          "draftYear": 2021,
-          "draftRound": 6,
-          "draftPick": 219,
-          "ras": 4.67,
-          "draftCapitalScore": 0.261
-        },
-        {
-          "id": "nfl_2026_calebdouglas",
-          "name": "Caleb Douglas",
-          "team": "Texas Tech",
-          "year": 2025,
-          "dist": 1.927,
-          "draftYear": 2026,
-          "draftRound": 3,
-          "draftPick": 75,
-          "ras": 6.85,
-          "draftCapitalScore": 0.489
-        },
-        {
-          "id": "nfl_2026_emmanuelhenderson",
-          "name": "Emmanuel Henderson Jr.",
-          "team": "Kansas",
-          "year": 2025,
-          "dist": 2.067,
-          "draftYear": 2026,
-          "draftRound": 6,
-          "draftPick": 199,
-          "ras": null,
-          "draftCapitalScore": 0.261
-        },
-        {
-          "id": "nfl_2019_mecolehardman",
-          "name": "Mecole Hardman",
-          "team": "Georgia",
-          "year": 2018,
-          "dist": 2.103,
-          "draftYear": 2019,
-          "draftRound": 2,
-          "draftPick": 56,
-          "ras": 5.57,
-          "draftCapitalScore": 0.593
-        },
-        {
-          "id": "nfl_2018_dantepettis",
-          "name": "Dante Pettis",
-          "team": "Washington",
-          "year": 2017,
-          "dist": 2.117,
-          "draftYear": 2018,
-          "draftRound": 2,
-          "draftPick": 44,
-          "ras": 2.19,
-          "draftCapitalScore": 0.593
-        }
-      ],
       "2025_4594447": [
         {
           "id": "nfl_2023_jalenbrooks",
@@ -359133,7 +359011,7 @@ const NFL_PROFILE_COMP = {
       "poolSize": 362,
       "matched": 362,
       "unmatched": 1137,
-      "targetsWithComps": 1331
+      "targetsWithComps": 1330
     },
     "TE": {
       "poolSize": 158,
@@ -380342,15 +380220,6 @@ const NFL_PROFILE_COMP = {
         "usageOverall": 7.6,
         "heightIn": 94.7,
         "weightLb": 80.9
-      },
-      "2025_4594319": {
-        "recShare": 35.5,
-        "ydShare": 41.2,
-        "tdShare": 60.7,
-        "avgPPA": 0.8,
-        "usageOverall": 53.4,
-        "heightIn": 55.7,
-        "weightLb": 47.7
       },
       "2025_4594447": {
         "recShare": 9.5,

@@ -24,7 +24,7 @@
 
 const COLLEGE_SCOUTING = {
   "meta": {
-    "lastSync": "2026-11-18T16:59:49.203Z",
+    "lastSync": "2026-11-18T17:40:23.889Z",
     "currentSeason": 2026,
     "years": [
       2013,
@@ -233860,24 +233860,6 @@ const COLLEGE_SCOUTING = {
         "weightLb": 210
       },
       {
-        "id": "2025_4594319",
-        "rawId": "4594319",
-        "name": "Brady Boyd",
-        "team": "Utah State",
-        "conf": "Mountain West",
-        "year": 2025,
-        "rec": 46,
-        "yds": 743,
-        "td": 8,
-        "recShare": 19,
-        "ydShare": 23.1,
-        "tdShare": 30.8,
-        "usageOverall": 10.5,
-        "avgPPA": 0.203,
-        "heightIn": 73,
-        "weightLb": 195
-      },
-      {
         "id": "2025_4594447",
         "rawId": "4594447",
         "name": "Donnie Gray",
@@ -323569,78 +323551,6 @@ const COLLEGE_SCOUTING = {
           "team": "Fresno State",
           "year": 2017,
           "dist": 0.771
-        }
-      ],
-      "2025_4594319": [
-        {
-          "id": "2026_4685383",
-          "name": "Isaiah Horton",
-          "team": "Texas A&M",
-          "year": 2026,
-          "dist": 0.553
-        },
-        {
-          "id": "2019_4241802",
-          "name": "Jalen Reagor",
-          "team": "TCU",
-          "year": 2019,
-          "dist": 0.567
-        },
-        {
-          "id": "2026_4895711",
-          "name": "Chris Reed",
-          "team": "Sam Houston",
-          "year": 2026,
-          "dist": 0.671
-        },
-        {
-          "id": "2026_5127885",
-          "name": "Kwazi Gilmer",
-          "team": "Nebraska",
-          "year": 2026,
-          "dist": 0.758
-        },
-        {
-          "id": "2025_5130792",
-          "name": "Nitro Tuggle",
-          "team": "Purdue",
-          "year": 2025,
-          "dist": 0.832
-        },
-        {
-          "id": "2015_3124114",
-          "name": "Cortez Lewis",
-          "team": "Wake Forest",
-          "year": 2015,
-          "dist": 0.908
-        },
-        {
-          "id": "2026_5156879",
-          "name": "Jaylen Hampton",
-          "team": "Charlotte",
-          "year": 2026,
-          "dist": 0.928
-        },
-        {
-          "id": "2026_4870922",
-          "name": "Duce Robinson",
-          "team": "Florida State",
-          "year": 2026,
-          "dist": 0.93
-        },
-        {
-          "id": "2016_3120078",
-          "name": "T.L. Ford II",
-          "team": "Charlotte",
-          "year": 2016,
-          "dist": 0.963
-        },
-        {
-          "id": "2016_3128852",
-          "name": "Thomas Owens",
-          "team": "Florida International",
-          "year": 2016,
-          "dist": 0.999
         }
       ],
       "2025_4594447": [
