@@ -4,7 +4,7 @@
 //  AUTO-GENERIERT von scripts/sync-nfl-power-score.js über die GitHub
 //  Action ".github/workflows/sync-nfl-power-score.yml". Nicht von Hand
 //  editieren — Änderungen werden beim nächsten Sync überschrieben.
-//  Zuletzt synchronisiert: 2026-11-20T01:44:59.370Z
+//  Zuletzt synchronisiert: 2026-11-20T15:49:48.971Z
 //
 //  6 Kategorien, datengestützt ausgewählt (siehe Kommentar oben im
 //  Script für die Korrelationsanalyse gegen echte Season-Siege
@@ -12605,6 +12605,1260 @@ const NFL_POWER_SCORE = {
               "rushDefEpa": 6,
               "pointsFor": 18,
               "pointsAgainst": 6
+            }
+          }
+        ]
+      },
+      "11": {
+        "cumulative": [
+          {
+            "abbr": "BUF",
+            "values": {
+              "passOffEpa": 0.191,
+              "turnoverDiff": 0,
+              "passDefEpa": 0.011,
+              "rushDefEpa": -0.03,
+              "pointsFor": 31.89,
+              "pointsAgainst": 22.11
+            },
+            "ranks": {
+              "passOffEpa": 5,
+              "turnoverDiff": 17,
+              "passDefEpa": 14,
+              "rushDefEpa": 21,
+              "pointsFor": 1,
+              "pointsAgainst": 15
+            },
+            "gamesPlayed": 9
+          },
+          {
+            "abbr": "MIA",
+            "values": {
+              "passOffEpa": -0.076,
+              "turnoverDiff": -0.22,
+              "passDefEpa": 0.192,
+              "rushDefEpa": -0.081,
+              "pointsFor": 16.44,
+              "pointsAgainst": 24.89
+            },
+            "ranks": {
+              "passOffEpa": 27,
+              "turnoverDiff": 20,
+              "passDefEpa": 29,
+              "rushDefEpa": 9,
+              "pointsFor": 30,
+              "pointsAgainst": 21
+            },
+            "gamesPlayed": 9
+          },
+          {
+            "abbr": "NE",
+            "values": {
+              "passOffEpa": 0.091,
+              "turnoverDiff": -1,
+              "passDefEpa": 0.143,
+              "rushDefEpa": -0.032,
+              "pointsFor": 22.1,
+              "pointsAgainst": 24.2
+            },
+            "ranks": {
+              "passOffEpa": 13,
+              "turnoverDiff": 31,
+              "passDefEpa": 26,
+              "rushDefEpa": 20,
+              "pointsFor": 18,
+              "pointsAgainst": 18
+            },
+            "gamesPlayed": 10
+          },
+          {
+            "abbr": "NYJ",
+            "values": {
+              "passOffEpa": 0.043,
+              "turnoverDiff": 0.3,
+              "passDefEpa": 0.147,
+              "rushDefEpa": -0.028,
+              "pointsFor": 19.4,
+              "pointsAgainst": 25.4
+            },
+            "ranks": {
+              "passOffEpa": 18,
+              "turnoverDiff": 11,
+              "passDefEpa": 27,
+              "rushDefEpa": 22,
+              "pointsFor": 25,
+              "pointsAgainst": 22
+            },
+            "gamesPlayed": 10
+          },
+          {
+            "abbr": "BAL",
+            "values": {
+              "passOffEpa": 0.052,
+              "turnoverDiff": -0.4,
+              "passDefEpa": 0.131,
+              "rushDefEpa": -0.052,
+              "pointsFor": 20.9,
+              "pointsAgainst": 25.9
+            },
+            "ranks": {
+              "passOffEpa": 16,
+              "turnoverDiff": 25,
+              "passDefEpa": 25,
+              "rushDefEpa": 16,
+              "pointsFor": 22,
+              "pointsAgainst": 24
+            },
+            "gamesPlayed": 10
+          },
+          {
+            "abbr": "CIN",
+            "values": {
+              "passOffEpa": 0.271,
+              "turnoverDiff": 0.22,
+              "passDefEpa": 0,
+              "rushDefEpa": 0.022,
+              "pointsFor": 30.89,
+              "pointsAgainst": 21.44
+            },
+            "ranks": {
+              "passOffEpa": 3,
+              "turnoverDiff": 13,
+              "passDefEpa": 11,
+              "rushDefEpa": 30,
+              "pointsFor": 3,
+              "pointsAgainst": 10
+            },
+            "gamesPlayed": 9
+          },
+          {
+            "abbr": "CLE",
+            "values": {
+              "passOffEpa": 0.005,
+              "turnoverDiff": 0.1,
+              "passDefEpa": -0.003,
+              "rushDefEpa": -0.004,
+              "pointsFor": 18.8,
+              "pointsAgainst": 22
+            },
+            "ranks": {
+              "passOffEpa": 22,
+              "turnoverDiff": 16,
+              "passDefEpa": 9,
+              "rushDefEpa": 27,
+              "pointsFor": 27,
+              "pointsAgainst": 13
+            },
+            "gamesPlayed": 10
+          },
+          {
+            "abbr": "PIT",
+            "values": {
+              "passOffEpa": -0.069,
+              "turnoverDiff": 0.56,
+              "passDefEpa": 0.035,
+              "rushDefEpa": -0.068,
+              "pointsFor": 22,
+              "pointsAgainst": 20.22
+            },
+            "ranks": {
+              "passOffEpa": 26,
+              "turnoverDiff": 6,
+              "passDefEpa": 15,
+              "rushDefEpa": 11,
+              "pointsFor": 19,
+              "pointsAgainst": 7
+            },
+            "gamesPlayed": 9
+          },
+          {
+            "abbr": "HOU",
+            "values": {
+              "passOffEpa": 0.137,
+              "turnoverDiff": 0.4,
+              "passDefEpa": 0.004,
+              "rushDefEpa": -0.061,
+              "pointsFor": 25.9,
+              "pointsAgainst": 22.2
+            },
+            "ranks": {
+              "passOffEpa": 9,
+              "turnoverDiff": 9,
+              "passDefEpa": 13,
+              "rushDefEpa": 13,
+              "pointsFor": 9,
+              "pointsAgainst": 17
+            },
+            "gamesPlayed": 10
+          },
+          {
+            "abbr": "IND",
+            "values": {
+              "passOffEpa": -0.193,
+              "turnoverDiff": -1.09,
+              "passDefEpa": 0.069,
+              "rushDefEpa": -0.011,
+              "pointsFor": 19.18,
+              "pointsAgainst": 27
+            },
+            "ranks": {
+              "passOffEpa": 31,
+              "turnoverDiff": 32,
+              "passDefEpa": 18,
+              "rushDefEpa": 23,
+              "pointsFor": 26,
+              "pointsAgainst": 29
+            },
+            "gamesPlayed": 11
+          },
+          {
+            "abbr": "JAX",
+            "values": {
+              "passOffEpa": 0.284,
+              "turnoverDiff": 1,
+              "passDefEpa": -0.083,
+              "rushDefEpa": -0.096,
+              "pointsFor": 29.89,
+              "pointsAgainst": 16
+            },
+            "ranks": {
+              "passOffEpa": 2,
+              "turnoverDiff": 1,
+              "passDefEpa": 5,
+              "rushDefEpa": 2,
+              "pointsFor": 4,
+              "pointsAgainst": 2
+            },
+            "gamesPlayed": 9
+          },
+          {
+            "abbr": "TEN",
+            "values": {
+              "passOffEpa": -0.066,
+              "turnoverDiff": -0.11,
+              "passDefEpa": 0.196,
+              "rushDefEpa": -0.06,
+              "pointsFor": 18.56,
+              "pointsAgainst": 26.56
+            },
+            "ranks": {
+              "passOffEpa": 25,
+              "turnoverDiff": 19,
+              "passDefEpa": 30,
+              "rushDefEpa": 14,
+              "pointsFor": 28,
+              "pointsAgainst": 27
+            },
+            "gamesPlayed": 9
+          },
+          {
+            "abbr": "DEN",
+            "values": {
+              "passOffEpa": 0.019,
+              "turnoverDiff": 0.56,
+              "passDefEpa": -0.001,
+              "rushDefEpa": 0.015,
+              "pointsFor": 22,
+              "pointsAgainst": 20.67
+            },
+            "ranks": {
+              "passOffEpa": 20,
+              "turnoverDiff": 7,
+              "passDefEpa": 10,
+              "rushDefEpa": 29,
+              "pointsFor": 20,
+              "pointsAgainst": 9
+            },
+            "gamesPlayed": 9
+          },
+          {
+            "abbr": "KC",
+            "values": {
+              "passOffEpa": 0.155,
+              "turnoverDiff": 0.67,
+              "passDefEpa": -0.06,
+              "rushDefEpa": -0.082,
+              "pointsFor": 26.33,
+              "pointsAgainst": 17.33
+            },
+            "ranks": {
+              "passOffEpa": 7,
+              "turnoverDiff": 5,
+              "passDefEpa": 6,
+              "rushDefEpa": 7,
+              "pointsFor": 8,
+              "pointsAgainst": 3
+            },
+            "gamesPlayed": 9
+          },
+          {
+            "abbr": "LV",
+            "values": {
+              "passOffEpa": 0.12,
+              "turnoverDiff": 0.3,
+              "passDefEpa": 0.183,
+              "rushDefEpa": -0.006,
+              "pointsFor": 25.1,
+              "pointsAgainst": 28.9
+            },
+            "ranks": {
+              "passOffEpa": 10,
+              "turnoverDiff": 12,
+              "passDefEpa": 28,
+              "rushDefEpa": 25,
+              "pointsFor": 10,
+              "pointsAgainst": 31
+            },
+            "gamesPlayed": 10
+          },
+          {
+            "abbr": "LAC",
+            "values": {
+              "passOffEpa": -0.18,
+              "turnoverDiff": -0.56,
+              "passDefEpa": 0.071,
+              "rushDefEpa": -0.072,
+              "pointsFor": 16,
+              "pointsAgainst": 26.56
+            },
+            "ranks": {
+              "passOffEpa": 30,
+              "turnoverDiff": 28,
+              "passDefEpa": 19,
+              "rushDefEpa": 10,
+              "pointsFor": 32,
+              "pointsAgainst": 28
+            },
+            "gamesPlayed": 9
+          },
+          {
+            "abbr": "DAL",
+            "values": {
+              "passOffEpa": 0.158,
+              "turnoverDiff": -0.3,
+              "passDefEpa": 0.203,
+              "rushDefEpa": 0.028,
+              "pointsFor": 28.6,
+              "pointsAgainst": 28.2
+            },
+            "ranks": {
+              "passOffEpa": 6,
+              "turnoverDiff": 22,
+              "passDefEpa": 31,
+              "rushDefEpa": 31,
+              "pointsFor": 5,
+              "pointsAgainst": 30
+            },
+            "gamesPlayed": 10
+          },
+          {
+            "abbr": "NYG",
+            "values": {
+              "passOffEpa": 0.062,
+              "turnoverDiff": -0.22,
+              "passDefEpa": -0.014,
+              "rushDefEpa": -0.004,
+              "pointsFor": 22.56,
+              "pointsAgainst": 21.78
+            },
+            "ranks": {
+              "passOffEpa": 15,
+              "turnoverDiff": 21,
+              "passDefEpa": 8,
+              "rushDefEpa": 28,
+              "pointsFor": 14,
+              "pointsAgainst": 11
+            },
+            "gamesPlayed": 9
+          },
+          {
+            "abbr": "PHI",
+            "values": {
+              "passOffEpa": -0.112,
+              "turnoverDiff": -0.44,
+              "passDefEpa": 0.126,
+              "rushDefEpa": -0.005,
+              "pointsFor": 16.44,
+              "pointsAgainst": 24.56
+            },
+            "ranks": {
+              "passOffEpa": 28,
+              "turnoverDiff": 26,
+              "passDefEpa": 24,
+              "rushDefEpa": 26,
+              "pointsFor": 31,
+              "pointsAgainst": 19
+            },
+            "gamesPlayed": 9
+          },
+          {
+            "abbr": "WSH",
+            "values": {
+              "passOffEpa": 0.02,
+              "turnoverDiff": 0.78,
+              "passDefEpa": 0.057,
+              "rushDefEpa": 0.038,
+              "pointsFor": 21.78,
+              "pointsAgainst": 24.78
+            },
+            "ranks": {
+              "passOffEpa": 19,
+              "turnoverDiff": 3,
+              "passDefEpa": 16,
+              "rushDefEpa": 32,
+              "pointsFor": 21,
+              "pointsAgainst": 20
+            },
+            "gamesPlayed": 9
+          },
+          {
+            "abbr": "CHI",
+            "values": {
+              "passOffEpa": 0.096,
+              "turnoverDiff": -0.44,
+              "passDefEpa": 0,
+              "rushDefEpa": -0.042,
+              "pointsFor": 26.78,
+              "pointsAgainst": 20.44
+            },
+            "ranks": {
+              "passOffEpa": 12,
+              "turnoverDiff": 27,
+              "passDefEpa": 12,
+              "rushDefEpa": 18,
+              "pointsFor": 7,
+              "pointsAgainst": 8
+            },
+            "gamesPlayed": 9
+          },
+          {
+            "abbr": "DET",
+            "values": {
+              "passOffEpa": 0.203,
+              "turnoverDiff": 0.22,
+              "passDefEpa": 0.093,
+              "rushDefEpa": -0.082,
+              "pointsFor": 28.56,
+              "pointsAgainst": 22.11
+            },
+            "ranks": {
+              "passOffEpa": 4,
+              "turnoverDiff": 14,
+              "passDefEpa": 22,
+              "rushDefEpa": 8,
+              "pointsFor": 6,
+              "pointsAgainst": 16
+            },
+            "gamesPlayed": 9
+          },
+          {
+            "abbr": "GB",
+            "values": {
+              "passOffEpa": 0.14,
+              "turnoverDiff": 0.5,
+              "passDefEpa": -0.018,
+              "rushDefEpa": -0.047,
+              "pointsFor": 22.6,
+              "pointsAgainst": 22.1
+            },
+            "ranks": {
+              "passOffEpa": 8,
+              "turnoverDiff": 8,
+              "passDefEpa": 7,
+              "rushDefEpa": 17,
+              "pointsFor": 13,
+              "pointsAgainst": 14
+            },
+            "gamesPlayed": 10
+          },
+          {
+            "abbr": "MIN",
+            "values": {
+              "passOffEpa": -0.061,
+              "turnoverDiff": 0.89,
+              "passDefEpa": -0.153,
+              "rushDefEpa": -0.085,
+              "pointsFor": 19.56,
+              "pointsAgainst": 14
+            },
+            "ranks": {
+              "passOffEpa": 24,
+              "turnoverDiff": 2,
+              "passDefEpa": 1,
+              "rushDefEpa": 5,
+              "pointsFor": 24,
+              "pointsAgainst": 1
+            },
+            "gamesPlayed": 9
+          },
+          {
+            "abbr": "ATL",
+            "values": {
+              "passOffEpa": -0.143,
+              "turnoverDiff": -0.9,
+              "passDefEpa": 0.107,
+              "rushDefEpa": -0.086,
+              "pointsFor": 20.1,
+              "pointsAgainst": 25.8
+            },
+            "ranks": {
+              "passOffEpa": 29,
+              "turnoverDiff": 30,
+              "passDefEpa": 23,
+              "rushDefEpa": 4,
+              "pointsFor": 23,
+              "pointsAgainst": 23
+            },
+            "gamesPlayed": 10
+          },
+          {
+            "abbr": "CAR",
+            "values": {
+              "passOffEpa": 0.046,
+              "turnoverDiff": 0.11,
+              "passDefEpa": 0.059,
+              "rushDefEpa": -0.035,
+              "pointsFor": 24.33,
+              "pointsAgainst": 26.22
+            },
+            "ranks": {
+              "passOffEpa": 17,
+              "turnoverDiff": 15,
+              "passDefEpa": 17,
+              "rushDefEpa": 19,
+              "pointsFor": 12,
+              "pointsAgainst": 25
+            },
+            "gamesPlayed": 9
+          },
+          {
+            "abbr": "NO",
+            "values": {
+              "passOffEpa": 0.016,
+              "turnoverDiff": -0.89,
+              "passDefEpa": 0.079,
+              "rushDefEpa": -0.01,
+              "pointsFor": 22.44,
+              "pointsAgainst": 26.22
+            },
+            "ranks": {
+              "passOffEpa": 21,
+              "turnoverDiff": 29,
+              "passDefEpa": 21,
+              "rushDefEpa": 24,
+              "pointsFor": 15,
+              "pointsAgainst": 26
+            },
+            "gamesPlayed": 9
+          },
+          {
+            "abbr": "TB",
+            "values": {
+              "passOffEpa": -0.193,
+              "turnoverDiff": 0.78,
+              "passDefEpa": -0.145,
+              "rushDefEpa": -0.084,
+              "pointsFor": 22.44,
+              "pointsAgainst": 19.78
+            },
+            "ranks": {
+              "passOffEpa": 32,
+              "turnoverDiff": 4,
+              "passDefEpa": 2,
+              "rushDefEpa": 6,
+              "pointsFor": 16,
+              "pointsAgainst": 6
+            },
+            "gamesPlayed": 9
+          },
+          {
+            "abbr": "ARI",
+            "values": {
+              "passOffEpa": -0.057,
+              "turnoverDiff": -0.1,
+              "passDefEpa": 0.228,
+              "rushDefEpa": -0.053,
+              "pointsFor": 18.4,
+              "pointsAgainst": 28.9
+            },
+            "ranks": {
+              "passOffEpa": 23,
+              "turnoverDiff": 18,
+              "passDefEpa": 32,
+              "rushDefEpa": 15,
+              "pointsFor": 29,
+              "pointsAgainst": 32
+            },
+            "gamesPlayed": 10
+          },
+          {
+            "abbr": "LAR",
+            "values": {
+              "passOffEpa": 0.119,
+              "turnoverDiff": -0.3,
+              "passDefEpa": -0.119,
+              "rushDefEpa": -0.096,
+              "pointsFor": 24.8,
+              "pointsAgainst": 18.7
+            },
+            "ranks": {
+              "passOffEpa": 11,
+              "turnoverDiff": 23,
+              "passDefEpa": 3,
+              "rushDefEpa": 3,
+              "pointsFor": 11,
+              "pointsAgainst": 5
+            },
+            "gamesPlayed": 10
+          },
+          {
+            "abbr": "SF",
+            "values": {
+              "passOffEpa": 0.304,
+              "turnoverDiff": 0.33,
+              "passDefEpa": 0.072,
+              "rushDefEpa": -0.103,
+              "pointsFor": 31.22,
+              "pointsAgainst": 21.78
+            },
+            "ranks": {
+              "passOffEpa": 1,
+              "turnoverDiff": 10,
+              "passDefEpa": 20,
+              "rushDefEpa": 1,
+              "pointsFor": 2,
+              "pointsAgainst": 12
+            },
+            "gamesPlayed": 9
+          },
+          {
+            "abbr": "SEA",
+            "values": {
+              "passOffEpa": 0.067,
+              "turnoverDiff": -0.3,
+              "passDefEpa": -0.094,
+              "rushDefEpa": -0.064,
+              "pointsFor": 22.3,
+              "pointsAgainst": 17.5
+            },
+            "ranks": {
+              "passOffEpa": 14,
+              "turnoverDiff": 24,
+              "passDefEpa": 4,
+              "rushDefEpa": 12,
+              "pointsFor": 17,
+              "pointsAgainst": 4
+            },
+            "gamesPlayed": 10
+          }
+        ],
+        "weekly": [
+          {
+            "abbr": "BUF",
+            "values": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            },
+            "ranks": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            }
+          },
+          {
+            "abbr": "MIA",
+            "values": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            },
+            "ranks": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            }
+          },
+          {
+            "abbr": "NE",
+            "values": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            },
+            "ranks": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            }
+          },
+          {
+            "abbr": "NYJ",
+            "values": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            },
+            "ranks": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            }
+          },
+          {
+            "abbr": "BAL",
+            "values": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            },
+            "ranks": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            }
+          },
+          {
+            "abbr": "CIN",
+            "values": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            },
+            "ranks": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            }
+          },
+          {
+            "abbr": "CLE",
+            "values": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            },
+            "ranks": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            }
+          },
+          {
+            "abbr": "PIT",
+            "values": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            },
+            "ranks": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            }
+          },
+          {
+            "abbr": "HOU",
+            "values": {
+              "passOffEpa": 0.266,
+              "turnoverDiff": 0,
+              "passDefEpa": -0.318,
+              "rushDefEpa": -0.299,
+              "pointsFor": 26,
+              "pointsAgainst": 3
+            },
+            "ranks": {
+              "passOffEpa": 1,
+              "turnoverDiff": 1,
+              "passDefEpa": 1,
+              "rushDefEpa": 1,
+              "pointsFor": 1,
+              "pointsAgainst": 1
+            }
+          },
+          {
+            "abbr": "IND",
+            "values": {
+              "passOffEpa": -0.318,
+              "turnoverDiff": 0,
+              "passDefEpa": 0.266,
+              "rushDefEpa": -0.172,
+              "pointsFor": 3,
+              "pointsAgainst": 26
+            },
+            "ranks": {
+              "passOffEpa": 2,
+              "turnoverDiff": 2,
+              "passDefEpa": 2,
+              "rushDefEpa": 2,
+              "pointsFor": 2,
+              "pointsAgainst": 2
+            }
+          },
+          {
+            "abbr": "JAX",
+            "values": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            },
+            "ranks": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            }
+          },
+          {
+            "abbr": "TEN",
+            "values": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            },
+            "ranks": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            }
+          },
+          {
+            "abbr": "DEN",
+            "values": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            },
+            "ranks": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            }
+          },
+          {
+            "abbr": "KC",
+            "values": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            },
+            "ranks": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            }
+          },
+          {
+            "abbr": "LV",
+            "values": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            },
+            "ranks": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            }
+          },
+          {
+            "abbr": "LAC",
+            "values": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            },
+            "ranks": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            }
+          },
+          {
+            "abbr": "DAL",
+            "values": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            },
+            "ranks": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            }
+          },
+          {
+            "abbr": "NYG",
+            "values": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            },
+            "ranks": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            }
+          },
+          {
+            "abbr": "PHI",
+            "values": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            },
+            "ranks": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            }
+          },
+          {
+            "abbr": "WSH",
+            "values": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            },
+            "ranks": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            }
+          },
+          {
+            "abbr": "CHI",
+            "values": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            },
+            "ranks": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            }
+          },
+          {
+            "abbr": "DET",
+            "values": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            },
+            "ranks": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            }
+          },
+          {
+            "abbr": "GB",
+            "values": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            },
+            "ranks": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            }
+          },
+          {
+            "abbr": "MIN",
+            "values": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            },
+            "ranks": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            }
+          },
+          {
+            "abbr": "ATL",
+            "values": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            },
+            "ranks": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            }
+          },
+          {
+            "abbr": "CAR",
+            "values": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            },
+            "ranks": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            }
+          },
+          {
+            "abbr": "NO",
+            "values": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            },
+            "ranks": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            }
+          },
+          {
+            "abbr": "TB",
+            "values": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            },
+            "ranks": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            }
+          },
+          {
+            "abbr": "ARI",
+            "values": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            },
+            "ranks": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            }
+          },
+          {
+            "abbr": "LAR",
+            "values": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            },
+            "ranks": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            }
+          },
+          {
+            "abbr": "SF",
+            "values": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            },
+            "ranks": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            }
+          },
+          {
+            "abbr": "SEA",
+            "values": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
+            },
+            "ranks": {
+              "passOffEpa": null,
+              "turnoverDiff": null,
+              "passDefEpa": null,
+              "rushDefEpa": null,
+              "pointsFor": null,
+              "pointsAgainst": null
             }
           }
         ]
