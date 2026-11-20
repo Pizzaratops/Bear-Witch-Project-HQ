@@ -24,7 +24,7 @@
 
 const COLLEGE_SCOUTING = {
   "meta": {
-    "lastSync": "2026-11-19T17:48:46.415Z",
+    "lastSync": "2026-11-20T16:46:44.238Z",
     "currentSeason": 2026,
     "years": [
       2013,
@@ -207868,11 +207868,11 @@ const COLLEGE_SCOUTING = {
           "rec": 22,
           "yds": 316,
           "td": 4,
-          "recShare": 17.5,
-          "ydShare": 18.9,
-          "tdShare": 28.6,
-          "usageOverall": 8.9,
-          "avgPPA": 0.341,
+          "recShare": 16.3,
+          "ydShare": 17.7,
+          "tdShare": 25,
+          "usageOverall": 8.8,
+          "avgPPA": 0.253,
           "heightIn": 69,
           "weightLb": 170
         },
@@ -210097,14 +210097,14 @@ const COLLEGE_SCOUTING = {
           "team": "Temple",
           "conf": "American Athletic",
           "year": 2026,
-          "rec": 24,
-          "yds": 347,
-          "td": 3,
-          "recShare": 19,
-          "ydShare": 20.8,
-          "tdShare": 21.4,
-          "usageOverall": 7.8,
-          "avgPPA": 0.277,
+          "rec": 26,
+          "yds": 378,
+          "td": 4,
+          "recShare": 19.3,
+          "ydShare": 21.2,
+          "tdShare": 25,
+          "usageOverall": 7.6,
+          "avgPPA": 0.307,
           "heightIn": 76,
           "weightLb": 225
         },
@@ -210169,14 +210169,14 @@ const COLLEGE_SCOUTING = {
           "team": "Temple",
           "conf": "American Athletic",
           "year": 2026,
-          "rec": 26,
-          "yds": 395,
-          "td": 2,
-          "recShare": 20.6,
-          "ydShare": 23.6,
-          "tdShare": 14.3,
-          "usageOverall": 10.4,
-          "avgPPA": 0.394,
+          "rec": 30,
+          "yds": 449,
+          "td": 3,
+          "recShare": 22.2,
+          "ydShare": 25.2,
+          "tdShare": 18.8,
+          "usageOverall": 11,
+          "avgPPA": 0.452,
           "heightIn": 72,
           "weightLb": 195
         },
@@ -213445,14 +213445,14 @@ const COLLEGE_SCOUTING = {
           "team": "Rice",
           "conf": "American Athletic",
           "year": 2026,
-          "rec": 20,
-          "yds": 257,
+          "rec": 26,
+          "yds": 306,
           "td": 0,
-          "recShare": 32.3,
-          "ydShare": 29.7,
+          "recShare": 34.2,
+          "ydShare": 28.9,
           "tdShare": 0,
-          "usageOverall": 7.5,
-          "avgPPA": 0.228,
+          "usageOverall": 8.2,
+          "avgPPA": 0.33,
           "heightIn": 70,
           "weightLb": 187
         },
@@ -214746,9 +214746,9 @@ const COLLEGE_SCOUTING = {
           "rec": 18,
           "yds": 273,
           "td": 2,
-          "recShare": 14.3,
-          "ydShare": 16.3,
-          "tdShare": 14.3,
+          "recShare": 13.3,
+          "ydShare": 15.3,
+          "tdShare": 12.5,
           "usageOverall": 6.1,
           "avgPPA": 0.837,
           "heightIn": 78,
@@ -219103,7 +219103,7 @@ const COLLEGE_SCOUTING = {
           "rushCar": 113,
           "rushTd": 3,
           "recYds": null,
-          "rushCarShare": 22.9,
+          "rushCarShare": 20.7,
           "recYdShare": 0,
           "usageRush": 23.3,
           "avgPpaRush": -0.002,
@@ -219118,14 +219118,14 @@ const COLLEGE_SCOUTING = {
           "team": "Rice",
           "conf": "American Athletic",
           "year": 2026,
-          "rushYds": 396,
-          "rushCar": 97,
-          "rushTd": 2,
+          "rushYds": 533,
+          "rushCar": 114,
+          "rushTd": 3,
           "recYds": 14,
-          "rushCarShare": 19.7,
-          "recYdShare": 1.6,
-          "usageRush": 22.7,
-          "avgPpaRush": -0.055,
+          "rushCarShare": 20.9,
+          "recYdShare": 1.3,
+          "usageRush": 23.9,
+          "avgPpaRush": 0.039,
           "avgPpaPass": 0.038,
           "heightIn": 68,
           "weightLb": 197
@@ -220087,15 +220087,15 @@ const COLLEGE_SCOUTING = {
           "team": "Temple",
           "conf": "American Athletic",
           "year": 2026,
-          "rushYds": 653,
-          "rushCar": 116,
+          "rushYds": 751,
+          "rushCar": 131,
           "rushTd": 3,
-          "recYds": 74,
-          "rushCarShare": 34.5,
-          "recYdShare": 4.4,
-          "usageRush": 35.7,
-          "avgPpaRush": 0.107,
-          "avgPpaPass": -0.078,
+          "recYds": 83,
+          "rushCarShare": 35.3,
+          "recYdShare": 4.7,
+          "usageRush": 36.2,
+          "avgPpaRush": 0.092,
+          "avgPpaPass": -0.064,
           "heightIn": 70,
           "weightLb": 190
         },
@@ -240062,11 +240062,11 @@ const COLLEGE_SCOUTING = {
         "rec": 22,
         "yds": 316,
         "td": 4,
-        "recShare": 17.5,
-        "ydShare": 18.9,
-        "tdShare": 28.6,
-        "usageOverall": 8.9,
-        "avgPPA": 0.341,
+        "recShare": 16.3,
+        "ydShare": 17.7,
+        "tdShare": 25,
+        "usageOverall": 8.8,
+        "avgPPA": 0.253,
         "heightIn": 69,
         "weightLb": 170
       },
@@ -242291,14 +242291,14 @@ const COLLEGE_SCOUTING = {
         "team": "Temple",
         "conf": "American Athletic",
         "year": 2026,
-        "rec": 24,
-        "yds": 347,
-        "td": 3,
-        "recShare": 19,
-        "ydShare": 20.8,
-        "tdShare": 21.4,
-        "usageOverall": 7.8,
-        "avgPPA": 0.277,
+        "rec": 26,
+        "yds": 378,
+        "td": 4,
+        "recShare": 19.3,
+        "ydShare": 21.2,
+        "tdShare": 25,
+        "usageOverall": 7.6,
+        "avgPPA": 0.307,
         "heightIn": 76,
         "weightLb": 225
       },
@@ -242363,14 +242363,14 @@ const COLLEGE_SCOUTING = {
         "team": "Temple",
         "conf": "American Athletic",
         "year": 2026,
-        "rec": 26,
-        "yds": 395,
-        "td": 2,
-        "recShare": 20.6,
-        "ydShare": 23.6,
-        "tdShare": 14.3,
-        "usageOverall": 10.4,
-        "avgPPA": 0.394,
+        "rec": 30,
+        "yds": 449,
+        "td": 3,
+        "recShare": 22.2,
+        "ydShare": 25.2,
+        "tdShare": 18.8,
+        "usageOverall": 11,
+        "avgPPA": 0.452,
         "heightIn": 72,
         "weightLb": 195
       },
@@ -245639,14 +245639,14 @@ const COLLEGE_SCOUTING = {
         "team": "Rice",
         "conf": "American Athletic",
         "year": 2026,
-        "rec": 20,
-        "yds": 257,
+        "rec": 26,
+        "yds": 306,
         "td": 0,
-        "recShare": 32.3,
-        "ydShare": 29.7,
+        "recShare": 34.2,
+        "ydShare": 28.9,
         "tdShare": 0,
-        "usageOverall": 7.5,
-        "avgPPA": 0.228,
+        "usageOverall": 8.2,
+        "avgPPA": 0.33,
         "heightIn": 70,
         "weightLb": 187
       },
@@ -252430,9 +252430,9 @@ const COLLEGE_SCOUTING = {
         "rec": 18,
         "yds": 273,
         "td": 2,
-        "recShare": 14.3,
-        "ydShare": 16.3,
-        "tdShare": 14.3,
+        "recShare": 13.3,
+        "ydShare": 15.3,
+        "tdShare": 12.5,
         "usageOverall": 6.1,
         "avgPPA": 0.837,
         "heightIn": 78,
@@ -268738,7 +268738,7 @@ const COLLEGE_SCOUTING = {
         "rushCar": 113,
         "rushTd": 3,
         "recYds": null,
-        "rushCarShare": 22.9,
+        "rushCarShare": 20.7,
         "recYdShare": 0,
         "usageRush": 23.3,
         "avgPpaRush": -0.002,
@@ -268753,14 +268753,14 @@ const COLLEGE_SCOUTING = {
         "team": "Rice",
         "conf": "American Athletic",
         "year": 2026,
-        "rushYds": 396,
-        "rushCar": 97,
-        "rushTd": 2,
+        "rushYds": 533,
+        "rushCar": 114,
+        "rushTd": 3,
         "recYds": 14,
-        "rushCarShare": 19.7,
-        "recYdShare": 1.6,
-        "usageRush": 22.7,
-        "avgPpaRush": -0.055,
+        "rushCarShare": 20.9,
+        "recYdShare": 1.3,
+        "usageRush": 23.9,
+        "avgPpaRush": 0.039,
         "avgPpaPass": 0.038,
         "heightIn": 68,
         "weightLb": 197
@@ -269722,15 +269722,15 @@ const COLLEGE_SCOUTING = {
         "team": "Temple",
         "conf": "American Athletic",
         "year": 2026,
-        "rushYds": 653,
-        "rushCar": 116,
+        "rushYds": 751,
+        "rushCar": 131,
         "rushTd": 3,
-        "recYds": 74,
-        "rushCarShare": 34.5,
-        "recYdShare": 4.4,
-        "usageRush": 35.7,
-        "avgPpaRush": 0.107,
-        "avgPpaPass": -0.078,
+        "recYds": 83,
+        "rushCarShare": 35.3,
+        "recYdShare": 4.7,
+        "usageRush": 36.2,
+        "avgPpaRush": 0.092,
+        "avgPpaPass": -0.064,
         "heightIn": 70,
         "weightLb": 190
       },
@@ -277005,7 +277005,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kofi Hughes",
           "team": "Indiana",
           "year": 2013,
-          "dist": 0.509
+          "dist": 0.508
         },
         {
           "id": "2016_545561",
@@ -277112,7 +277112,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dres Anderson",
           "team": "Utah",
           "year": 2013,
-          "dist": 1.238
+          "dist": 1.239
         }
       ],
       "2023_4360278": [
@@ -277221,7 +277221,7 @@ const COLLEGE_SCOUTING = {
           "name": "Willie Byrn",
           "team": "Virginia Tech",
           "year": 2014,
-          "dist": 0.669
+          "dist": 0.67
         },
         {
           "id": "2025_5117836",
@@ -277256,7 +277256,7 @@ const COLLEGE_SCOUTING = {
           "name": "Darius Cannon",
           "team": "Jacksonville State",
           "year": 2026,
-          "dist": 0.905
+          "dist": 0.906
         }
       ],
       "2023_4361092": [
@@ -277272,7 +277272,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ezekiel Avit",
           "team": "Fresno State",
           "year": 2025,
-          "dist": 0.431
+          "dist": 0.432
         },
         {
           "id": "2016_3133377",
@@ -277307,7 +277307,7 @@ const COLLEGE_SCOUTING = {
           "name": "Maudrecus Humphrey",
           "team": "UAB",
           "year": 2014,
-          "dist": 0.508
+          "dist": 0.507
         },
         {
           "id": "2022_4428796",
@@ -277430,14 +277430,14 @@ const COLLEGE_SCOUTING = {
           "name": "Flynn Nagel",
           "team": "Northwestern",
           "year": 2018,
-          "dist": 0.544
+          "dist": 0.545
         },
         {
           "id": "2023_4710843",
           "name": "Jasaiah Gathings",
           "team": "Akron",
           "year": 2023,
-          "dist": 0.545
+          "dist": 0.546
         },
         {
           "id": "2025_4575862",
@@ -277537,7 +277537,7 @@ const COLLEGE_SCOUTING = {
           "name": "Brandon Reilly",
           "team": "Nebraska",
           "year": 2015,
-          "dist": 0.829
+          "dist": 0.83
         },
         {
           "id": "2017_3916204",
@@ -277602,14 +277602,14 @@ const COLLEGE_SCOUTING = {
           "name": "Christan Horn",
           "team": "App State",
           "year": 2022,
-          "dist": 0.63
+          "dist": 0.629
         },
         {
           "id": "2022_4569912",
           "name": "Wyatt Wieland",
           "team": "Wyoming",
           "year": 2022,
-          "dist": 0.653
+          "dist": 0.654
         },
         {
           "id": "2023_4430804",
@@ -277769,7 +277769,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kristoff Williams",
           "team": "Washington State",
           "year": 2013,
-          "dist": 0.375
+          "dist": 0.374
         },
         {
           "id": "2024_4432387",
@@ -278020,7 +278020,7 @@ const COLLEGE_SCOUTING = {
           "name": "Brennan Ridley",
           "team": "Bowling Green",
           "year": 2026,
-          "dist": 0.495
+          "dist": 0.496
         },
         {
           "id": "2026_5078227",
@@ -278078,7 +278078,7 @@ const COLLEGE_SCOUTING = {
           "name": "RaJae' Johnson",
           "team": "Troy",
           "year": 2022,
-          "dist": 0.608
+          "dist": 0.609
         },
         {
           "id": "2019_4362310",
@@ -278099,7 +278099,7 @@ const COLLEGE_SCOUTING = {
           "name": "Nic Anderson",
           "team": "Oklahoma",
           "year": 2023,
-          "dist": 0.685
+          "dist": 0.686
         },
         {
           "id": "2019_4360930",
@@ -278178,21 +278178,21 @@ const COLLEGE_SCOUTING = {
           "name": "Terrance Greene Jr.",
           "team": "James Madison",
           "year": 2022,
-          "dist": 0.9
+          "dist": 0.901
         },
         {
           "id": "2017_4064980",
           "name": "Damonte Coxie",
           "team": "Memphis",
           "year": 2017,
-          "dist": 0.95
+          "dist": 0.949
         },
         {
           "id": "2013_545480",
           "name": "Drew Wolitarsky",
           "team": "Minnesota",
           "year": 2013,
-          "dist": 0.967
+          "dist": 0.968
         }
       ],
       "2023_4366625": [
@@ -278243,7 +278243,7 @@ const COLLEGE_SCOUTING = {
           "name": "Elijah Sarratt",
           "team": "Indiana",
           "year": 2024,
-          "dist": 1.157
+          "dist": 1.156
         },
         {
           "id": "2023_4686374",
@@ -278308,20 +278308,20 @@ const COLLEGE_SCOUTING = {
           "name": "Shocky Jacques-Louis",
           "team": "Pittsburgh",
           "year": 2019,
-          "dist": 0.59
-        },
-        {
-          "id": "2020_4045291",
-          "name": "Taysir Mack",
-          "team": "Pittsburgh",
-          "year": 2020,
-          "dist": 0.594
+          "dist": 0.589
         },
         {
           "id": "2018_4039301",
           "name": "Courtney Lark",
           "team": "Houston",
           "year": 2018,
+          "dist": 0.594
+        },
+        {
+          "id": "2020_4045291",
+          "name": "Taysir Mack",
+          "team": "Pittsburgh",
+          "year": 2020,
           "dist": 0.594
         },
         {
@@ -278408,7 +278408,7 @@ const COLLEGE_SCOUTING = {
           "name": "Justin Holmes",
           "team": "San José State",
           "year": 2016,
-          "dist": 0.569
+          "dist": 0.57
         }
       ],
       "2023_4370358": [
@@ -278582,7 +278582,7 @@ const COLLEGE_SCOUTING = {
           "name": "Bug Howard",
           "team": "North Carolina",
           "year": 2016,
-          "dist": 0.606
+          "dist": 0.605
         },
         {
           "id": "2019_4362560",
@@ -278682,7 +278682,7 @@ const COLLEGE_SCOUTING = {
           "name": "Neil Pau'u",
           "team": "BYU",
           "year": 2020,
-          "dist": 0.579
+          "dist": 0.58
         },
         {
           "id": "2022_4430089",
@@ -278833,7 +278833,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jay Jones",
           "team": "Eastern Michigan",
           "year": 2013,
-          "dist": 0.568
+          "dist": 0.569
         },
         {
           "id": "2021_4361915",
@@ -278956,7 +278956,7 @@ const COLLEGE_SCOUTING = {
           "name": "Chris Lacy",
           "team": "Oklahoma State",
           "year": 2016,
-          "dist": 0.522
+          "dist": 0.521
         },
         {
           "id": "2024_5103852",
@@ -279014,7 +279014,7 @@ const COLLEGE_SCOUTING = {
           "name": "John Christopher",
           "team": "Temple",
           "year": 2013,
-          "dist": 0.448
+          "dist": 0.449
         },
         {
           "id": "2022_4243247",
@@ -279186,7 +279186,7 @@ const COLLEGE_SCOUTING = {
           "name": "Thomas Coffman",
           "team": "Colorado State",
           "year": 2013,
-          "dist": 0.492
+          "dist": 0.493
         },
         {
           "id": "2013_550549",
@@ -279381,7 +279381,7 @@ const COLLEGE_SCOUTING = {
           "name": "Smoke Harris",
           "team": "Louisiana Tech",
           "year": 2021,
-          "dist": 0.843
+          "dist": 0.844
         },
         {
           "id": "2014_518274",
@@ -279488,7 +279488,7 @@ const COLLEGE_SCOUTING = {
           "name": "Sawyer Racanelli",
           "team": "Wake Forest",
           "year": 2025,
-          "dist": 0.439
+          "dist": 0.438
         }
       ],
       "2023_4426449": [
@@ -279788,17 +279788,17 @@ const COLLEGE_SCOUTING = {
           "dist": 0.323
         },
         {
-          "id": "2020_4426485",
-          "name": "Jonathan Mingo",
-          "team": "Ole Miss",
-          "year": 2020,
-          "dist": 0.365
-        },
-        {
           "id": "2018_3139585",
           "name": "Ryeshene Bronson",
           "team": "South Florida",
           "year": 2018,
+          "dist": 0.365
+        },
+        {
+          "id": "2020_4426485",
+          "name": "Jonathan Mingo",
+          "team": "Ole Miss",
+          "year": 2020,
           "dist": 0.365
         },
         {
@@ -279929,7 +279929,7 @@ const COLLEGE_SCOUTING = {
           "name": "Taye Barber",
           "team": "TCU",
           "year": 2022,
-          "dist": 0.351
+          "dist": 0.35
         },
         {
           "id": "2024_5083748",
@@ -280050,7 +280050,7 @@ const COLLEGE_SCOUTING = {
           "name": "Canaan Severin",
           "team": "Virginia",
           "year": 2015,
-          "dist": 0.678
+          "dist": 0.679
         },
         {
           "id": "2022_4431280",
@@ -280108,7 +280108,7 @@ const COLLEGE_SCOUTING = {
           "name": "Zachari Jackson",
           "team": "UL Monroe",
           "year": 2021,
-          "dist": 0.725
+          "dist": 0.726
         },
         {
           "id": "2013_533303",
@@ -280136,7 +280136,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ruhann Peele",
           "team": "Rutgers",
           "year": 2013,
-          "dist": 0.815
+          "dist": 0.814
         }
       ],
       "2023_4428025": [
@@ -280208,7 +280208,7 @@ const COLLEGE_SCOUTING = {
           "name": "Darnell Mooney",
           "team": "Tulane",
           "year": 2018,
-          "dist": 1.458
+          "dist": 1.459
         }
       ],
       "2023_4428063": [
@@ -280238,7 +280238,7 @@ const COLLEGE_SCOUTING = {
           "name": "Damon Ward Jr.",
           "team": "North Texas",
           "year": 2023,
-          "dist": 0.451
+          "dist": 0.45
         },
         {
           "id": "2019_4260452",
@@ -280424,7 +280424,7 @@ const COLLEGE_SCOUTING = {
           "name": "Donny Navarro",
           "team": "Illinois",
           "year": 2019,
-          "dist": 0.397
+          "dist": 0.396
         }
       ],
       "2023_4428367": [
@@ -280533,7 +280533,7 @@ const COLLEGE_SCOUTING = {
           "name": "Micah Davis",
           "team": "Utah State",
           "year": 2023,
-          "dist": 0.76
+          "dist": 0.759
         },
         {
           "id": "2022_4251359",
@@ -280612,7 +280612,7 @@ const COLLEGE_SCOUTING = {
           "name": "Mark Chapman",
           "team": "Central Michigan",
           "year": 2016,
-          "dist": 0.768
+          "dist": 0.769
         },
         {
           "id": "2021_4875825",
@@ -280626,7 +280626,7 @@ const COLLEGE_SCOUTING = {
           "name": "Devin Mccuin",
           "team": "UTSA",
           "year": 2024,
-          "dist": 0.807
+          "dist": 0.808
         },
         {
           "id": "2025_4605951",
@@ -280649,7 +280649,7 @@ const COLLEGE_SCOUTING = {
           "name": "Myles Butler",
           "team": "Middle Tennessee",
           "year": 2024,
-          "dist": 0.369
+          "dist": 0.368
         },
         {
           "id": "2013_534794",
@@ -280663,7 +280663,7 @@ const COLLEGE_SCOUTING = {
           "name": "C.J. Johnson",
           "team": "Wyoming",
           "year": 2016,
-          "dist": 0.512
+          "dist": 0.513
         },
         {
           "id": "2021_4037433",
@@ -280677,7 +280677,7 @@ const COLLEGE_SCOUTING = {
           "name": "Landon Sides",
           "team": "North Texas",
           "year": 2023,
-          "dist": 0.551
+          "dist": 0.552
         },
         {
           "id": "2013_545251",
@@ -280705,7 +280705,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kyle Nunn",
           "team": "San José State",
           "year": 2013,
-          "dist": 0.591
+          "dist": 0.592
         },
         {
           "id": "2013_487827",
@@ -280721,7 +280721,7 @@ const COLLEGE_SCOUTING = {
           "name": "Andrew Celis",
           "team": "Nevada",
           "year": 2016,
-          "dist": 0.195
+          "dist": 0.194
         },
         {
           "id": "2013_385663",
@@ -280784,7 +280784,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jordan Thompson",
           "team": "West Virginia",
           "year": 2015,
-          "dist": 0.617
+          "dist": 0.616
         }
       ],
       "2023_4428719": [
@@ -280814,7 +280814,7 @@ const COLLEGE_SCOUTING = {
           "name": "Nicholas Norris",
           "team": "Western Kentucky",
           "year": 2014,
-          "dist": 0.345
+          "dist": 0.344
         },
         {
           "id": "2021_4566153",
@@ -280907,7 +280907,7 @@ const COLLEGE_SCOUTING = {
           "name": "JoJo Natson",
           "team": "Utah State",
           "year": 2014,
-          "dist": 1.372
+          "dist": 1.373
         },
         {
           "id": "2022_4688813",
@@ -280928,7 +280928,7 @@ const COLLEGE_SCOUTING = {
           "name": "Amare Jones",
           "team": "Tulane",
           "year": 2019,
-          "dist": 1.504
+          "dist": 1.503
         }
       ],
       "2023_4428784": [
@@ -280958,7 +280958,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tre Mosley",
           "team": "Michigan State",
           "year": 2023,
-          "dist": 0.451
+          "dist": 0.45
         },
         {
           "id": "2024_5079329",
@@ -280982,17 +280982,17 @@ const COLLEGE_SCOUTING = {
           "dist": 0.478
         },
         {
-          "id": "2024_5152158",
-          "name": "Deuce Alexander",
-          "team": "Wake Forest",
-          "year": 2024,
-          "dist": 0.484
-        },
-        {
           "id": "2015_530880",
           "name": "Dwayne Stanford",
           "team": "Oregon",
           "year": 2015,
+          "dist": 0.484
+        },
+        {
+          "id": "2024_5152158",
+          "name": "Deuce Alexander",
+          "team": "Wake Forest",
+          "year": 2024,
           "dist": 0.484
         },
         {
@@ -281030,7 +281030,7 @@ const COLLEGE_SCOUTING = {
           "name": "Giovanni Sanders",
           "team": "Arizona State",
           "year": 2022,
-          "dist": 0.623
+          "dist": 0.622
         },
         {
           "id": "2024_4870929",
@@ -281044,7 +281044,7 @@ const COLLEGE_SCOUTING = {
           "name": "Collin Lisa",
           "team": "UAB",
           "year": 2018,
-          "dist": 0.646
+          "dist": 0.647
         },
         {
           "id": "2023_4426479",
@@ -281081,7 +281081,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jared Wayne",
           "team": "Pittsburgh",
           "year": 2021,
-          "dist": 0.327
+          "dist": 0.328
         },
         {
           "id": "2024_4608679",
@@ -281130,7 +281130,7 @@ const COLLEGE_SCOUTING = {
           "name": "Artie Henry III",
           "team": "Marshall",
           "year": 2020,
-          "dist": 0.444
+          "dist": 0.443
         },
         {
           "id": "2021_4431338",
@@ -281448,7 +281448,7 @@ const COLLEGE_SCOUTING = {
           "name": "Keelan Marion",
           "team": "BYU",
           "year": 2024,
-          "dist": 0.401
+          "dist": 0.4
         },
         {
           "id": "2022_4428490",
@@ -281541,7 +281541,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jacoby Jones",
           "team": "Ohio",
           "year": 2022,
-          "dist": 0.582
+          "dist": 0.583
         },
         {
           "id": "2024_5079600",
@@ -281562,7 +281562,7 @@ const COLLEGE_SCOUTING = {
           "name": "Cyrus Allen",
           "team": "Louisiana Tech",
           "year": 2023,
-          "dist": 0.614
+          "dist": 0.613
         },
         {
           "id": "2013_503482",
@@ -281648,7 +281648,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kenny Bell",
           "team": "Nebraska",
           "year": 2014,
-          "dist": 0.704
+          "dist": 0.705
         }
       ],
       "2023_4429422": [
@@ -281713,7 +281713,7 @@ const COLLEGE_SCOUTING = {
           "name": "Clay Fuller",
           "team": "Baylor",
           "year": 2013,
-          "dist": 0.83
+          "dist": 0.829
         },
         {
           "id": "2023_4569181",
@@ -281736,7 +281736,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jordan Thompson",
           "team": "West Virginia",
           "year": 2015,
-          "dist": 0.862
+          "dist": 0.863
         },
         {
           "id": "2024_4565297",
@@ -281778,7 +281778,7 @@ const COLLEGE_SCOUTING = {
           "name": "Anthony Gould",
           "team": "Oregon State",
           "year": 2023,
-          "dist": 1.006
+          "dist": 1.007
         },
         {
           "id": "2013_483130",
@@ -281959,7 +281959,7 @@ const COLLEGE_SCOUTING = {
           "name": "Darius Slayton",
           "team": "Auburn",
           "year": 2016,
-          "dist": 0.29
+          "dist": 0.291
         },
         {
           "id": "2018_4039388",
@@ -282031,14 +282031,14 @@ const COLLEGE_SCOUTING = {
           "name": "Zane Pope",
           "team": "Fresno State",
           "year": 2022,
-          "dist": 0.722
+          "dist": 0.723
         },
         {
           "id": "2022_4366625",
           "name": "Reggie Brown",
           "team": "James Madison",
           "year": 2022,
-          "dist": 0.734
+          "dist": 0.735
         },
         {
           "id": "2021_4567525",
@@ -282052,14 +282052,14 @@ const COLLEGE_SCOUTING = {
           "name": "Cooper Barkate",
           "team": "Miami",
           "year": 2026,
-          "dist": 0.867
+          "dist": 0.868
         },
         {
           "id": "2017_4241389",
           "name": "CeeDee Lamb",
           "team": "Oklahoma",
           "year": 2017,
-          "dist": 0.907
+          "dist": 0.908
         },
         {
           "id": "2017_4035793",
@@ -282168,7 +282168,7 @@ const COLLEGE_SCOUTING = {
           "name": "Xavier Restrepo",
           "team": "Miami",
           "year": 2021,
-          "dist": 0.268
+          "dist": 0.267
         },
         {
           "id": "2023_4381248",
@@ -282233,7 +282233,7 @@ const COLLEGE_SCOUTING = {
           "name": "Cole Freytag",
           "team": "UTEP",
           "year": 2016,
-          "dist": 0.552
+          "dist": 0.553
         },
         {
           "id": "2013_505233",
@@ -282505,7 +282505,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tony Gaiter IV",
           "team": "Florida International",
           "year": 2019,
-          "dist": 0.785
+          "dist": 0.786
         },
         {
           "id": "2018_3126115",
@@ -282549,7 +282549,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jermaine Burton",
           "team": "Alabama",
           "year": 2023,
-          "dist": 0.819
+          "dist": 0.818
         },
         {
           "id": "2024_4682648",
@@ -282570,7 +282570,7 @@ const COLLEGE_SCOUTING = {
           "name": "Terry Lockett",
           "team": "Eastern Michigan",
           "year": 2024,
-          "dist": 0.899
+          "dist": 0.898
         },
         {
           "id": "2024_4613050",
@@ -282686,7 +282686,7 @@ const COLLEGE_SCOUTING = {
           "name": "Hunter Sharp",
           "team": "Utah State",
           "year": 2015,
-          "dist": 0.917
+          "dist": 0.916
         },
         {
           "id": "2017_549623",
@@ -282707,7 +282707,7 @@ const COLLEGE_SCOUTING = {
           "name": "Nick Marsh",
           "team": "Michigan State",
           "year": 2025,
-          "dist": 0.98
+          "dist": 0.981
         },
         {
           "id": "2025_4832800",
@@ -282751,7 +282751,7 @@ const COLLEGE_SCOUTING = {
           "name": "Sergio Bailey II",
           "team": "Eastern Michigan",
           "year": 2016,
-          "dist": 0.531
+          "dist": 0.53
         },
         {
           "id": "2016_530860",
@@ -282765,7 +282765,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ka'Raun White",
           "team": "West Virginia",
           "year": 2017,
-          "dist": 0.575
+          "dist": 0.576
         },
         {
           "id": "2025_5091739",
@@ -283053,14 +283053,14 @@ const COLLEGE_SCOUTING = {
           "name": "Quian Williams",
           "team": "Buffalo",
           "year": 2021,
-          "dist": 0.844
+          "dist": 0.843
         },
         {
           "id": "2017_3139946",
           "name": "Mikah Holder",
           "team": "San Diego State",
           "year": 2017,
-          "dist": 0.956
+          "dist": 0.955
         },
         {
           "id": "2013_502956",
@@ -283097,7 +283097,7 @@ const COLLEGE_SCOUTING = {
           "name": "Deshon Stoudemire",
           "team": "Troy",
           "year": 2023,
-          "dist": 0.38
+          "dist": 0.379
         },
         {
           "id": "2013_504268",
@@ -283211,27 +283211,27 @@ const COLLEGE_SCOUTING = {
           "name": "Devin Voisin",
           "team": "South Alabama",
           "year": 2022,
-          "dist": 0.674
+          "dist": 0.673
         },
         {
           "id": "2026_4876642",
           "name": "Maleek Huggins",
           "team": "Miami (OH)",
           "year": 2026,
-          "dist": 0.691
-        },
-        {
-          "id": "2025_4709669",
-          "name": "Christian Moss",
-          "team": "Kennesaw State",
-          "year": 2025,
-          "dist": 0.712
+          "dist": 0.69
         },
         {
           "id": "2013_534458",
           "name": "Amari Cooper",
           "team": "Alabama",
           "year": 2013,
+          "dist": 0.712
+        },
+        {
+          "id": "2025_4709669",
+          "name": "Christian Moss",
+          "team": "Kennesaw State",
+          "year": 2025,
           "dist": 0.712
         }
       ],
@@ -283255,7 +283255,7 @@ const COLLEGE_SCOUTING = {
           "name": "Coleman Owen",
           "team": "Ohio",
           "year": 2024,
-          "dist": 0.919
+          "dist": 0.92
         },
         {
           "id": "2013_545923",
@@ -283276,7 +283276,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ryan Grant",
           "team": "Tulane",
           "year": 2013,
-          "dist": 1.052
+          "dist": 1.051
         },
         {
           "id": "2018_4040655",
@@ -283313,14 +283313,14 @@ const COLLEGE_SCOUTING = {
           "name": "Xzavier Henderson",
           "team": "Cincinnati",
           "year": 2024,
-          "dist": 0.459
+          "dist": 0.46
         },
         {
           "id": "2024_4570132",
           "name": "Ryan Davis",
           "team": "New Mexico",
           "year": 2024,
-          "dist": 0.471
+          "dist": 0.472
         },
         {
           "id": "2023_4362794",
@@ -283376,7 +283376,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dane Key",
           "team": "Kentucky",
           "year": 2023,
-          "dist": 0.86
+          "dist": 0.861
         }
       ],
       "2023_4431053": [
@@ -283485,7 +283485,7 @@ const COLLEGE_SCOUTING = {
           "name": "Harvey Broussard",
           "team": "Louisiana",
           "year": 2024,
-          "dist": 0.547
+          "dist": 0.546
         },
         {
           "id": "2014_545902",
@@ -283520,7 +283520,7 @@ const COLLEGE_SCOUTING = {
           "name": "D'Marius Gillespie",
           "team": "UL Monroe",
           "year": 2017,
-          "dist": 0.651
+          "dist": 0.65
         }
       ],
       "2023_4431197": [
@@ -283629,7 +283629,7 @@ const COLLEGE_SCOUTING = {
           "name": "Malik Nabers",
           "team": "LSU",
           "year": 2021,
-          "dist": 0.436
+          "dist": 0.437
         },
         {
           "id": "2023_4723820",
@@ -283694,7 +283694,7 @@ const COLLEGE_SCOUTING = {
           "name": "Wyatt Wieland",
           "team": "Wyoming",
           "year": 2023,
-          "dist": 0.801
+          "dist": 0.8
         },
         {
           "id": "2021_4427095",
@@ -283736,7 +283736,7 @@ const COLLEGE_SCOUTING = {
           "name": "Phillip Brooks III",
           "team": "Kansas State",
           "year": 2023,
-          "dist": 0.994
+          "dist": 0.993
         }
       ],
       "2023_4431236": [
@@ -283787,7 +283787,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tyshon Goode",
           "team": "Kent State",
           "year": 2013,
-          "dist": 0.904
+          "dist": 0.905
         },
         {
           "id": "2016_534318",
@@ -284112,7 +284112,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jabre Barber",
           "team": "Troy",
           "year": 2022,
-          "dist": 0.936
+          "dist": 0.937
         },
         {
           "id": "2023_4361936",
@@ -284154,7 +284154,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ben Ford",
           "team": "Boise State",
           "year": 2025,
-          "dist": 1.072
+          "dist": 1.071
         },
         {
           "id": "2019_4426502",
@@ -284277,7 +284277,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tanner Gentry",
           "team": "Wyoming",
           "year": 2013,
-          "dist": 0.637
+          "dist": 0.636
         },
         {
           "id": "2018_4259197",
@@ -284335,7 +284335,7 @@ const COLLEGE_SCOUTING = {
           "name": "Roc Taylor",
           "team": "Memphis",
           "year": 2024,
-          "dist": 0.682
+          "dist": 0.683
         },
         {
           "id": "2024_4696147",
@@ -284366,17 +284366,17 @@ const COLLEGE_SCOUTING = {
           "dist": 1.034
         },
         {
-          "id": "2022_4373077",
-          "name": "Malik Knowles",
-          "team": "Kansas State",
-          "year": 2022,
-          "dist": 1.05
-        },
-        {
           "id": "2024_4873237",
           "name": "Kaedin Robinson",
           "team": "App State",
           "year": 2024,
+          "dist": 1.049
+        },
+        {
+          "id": "2022_4373077",
+          "name": "Malik Knowles",
+          "team": "Kansas State",
+          "year": 2022,
           "dist": 1.05
         },
         {
@@ -284493,7 +284493,7 @@ const COLLEGE_SCOUTING = {
           "name": "Richie Hoskins",
           "team": "Vanderbilt",
           "year": 2025,
-          "dist": 0.439
+          "dist": 0.438
         },
         {
           "id": "2022_4429019",
@@ -284593,7 +284593,7 @@ const COLLEGE_SCOUTING = {
           "name": "John Paul Richardson",
           "team": "Oklahoma State",
           "year": 2022,
-          "dist": 0.682
+          "dist": 0.683
         },
         {
           "id": "2022_4259984",
@@ -284702,7 +284702,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jamire Calvin",
           "team": "Washington State",
           "year": 2018,
-          "dist": 0.572
+          "dist": 0.571
         },
         {
           "id": "2025_4833073",
@@ -284730,7 +284730,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dezmon Patmon",
           "team": "Washington State",
           "year": 2017,
-          "dist": 0.623
+          "dist": 0.622
         },
         {
           "id": "2018_4240895",
@@ -284997,14 +284997,14 @@ const COLLEGE_SCOUTING = {
           "name": "Konata Mumpfield",
           "team": "Pittsburgh",
           "year": 2024,
-          "dist": 0.897
+          "dist": 0.898
         },
         {
           "id": "2022_4567596",
           "name": "Christan Horn",
           "team": "App State",
           "year": 2022,
-          "dist": 0.9
+          "dist": 0.901
         },
         {
           "id": "2013_503204",
@@ -285032,7 +285032,7 @@ const COLLEGE_SCOUTING = {
           "name": "Chris Bell",
           "team": "Louisville",
           "year": 2024,
-          "dist": 0.955
+          "dist": 0.956
         }
       ],
       "2023_4433906": [
@@ -285185,7 +285185,7 @@ const COLLEGE_SCOUTING = {
           "name": "Keontez Lewis",
           "team": "Wisconsin",
           "year": 2022,
-          "dist": 0.342
+          "dist": 0.341
         },
         {
           "id": "2015_530880",
@@ -285264,21 +285264,21 @@ const COLLEGE_SCOUTING = {
           "name": "Deon Watson",
           "team": "Idaho",
           "year": 2015,
-          "dist": 1.079
+          "dist": 1.078
         },
         {
           "id": "2016_3676928",
           "name": "Jaelan Austin",
           "team": "TCU",
           "year": 2016,
-          "dist": 1.132
+          "dist": 1.131
         },
         {
           "id": "2023_4890060",
           "name": "Jack Hestera",
           "team": "Charlotte",
           "year": 2023,
-          "dist": 1.182
+          "dist": 1.181
         },
         {
           "id": "2018_4243323",
@@ -285313,7 +285313,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ezekiel Avit",
           "team": "Fresno State",
           "year": 2026,
-          "dist": 1.359
+          "dist": 1.36
         },
         {
           "id": "2013_537313",
@@ -285536,7 +285536,7 @@ const COLLEGE_SCOUTING = {
           "name": "Beau Sparks",
           "team": "Texas State",
           "year": 2024,
-          "dist": 0.458
+          "dist": 0.457
         }
       ],
       "2023_4567470": [
@@ -285559,7 +285559,7 @@ const COLLEGE_SCOUTING = {
           "name": "Da'Mari Scott",
           "team": "Fresno State",
           "year": 2015,
-          "dist": 0.539
+          "dist": 0.538
         },
         {
           "id": "2019_4256218",
@@ -286005,14 +286005,14 @@ const COLLEGE_SCOUTING = {
           "name": "Rico Flores",
           "team": "Notre Dame",
           "year": 2023,
-          "dist": 0.482
+          "dist": 0.483
         },
         {
           "id": "2021_4393324",
           "name": "Isaiah Esdale",
           "team": "West Virginia",
           "year": 2021,
-          "dist": 0.487
+          "dist": 0.486
         },
         {
           "id": "2024_4683237",
@@ -286142,7 +286142,7 @@ const COLLEGE_SCOUTING = {
           "name": "Stephen Gosnell",
           "team": "Virginia Tech",
           "year": 2024,
-          "dist": 0.692
+          "dist": 0.693
         },
         {
           "id": "2026_5263766",
@@ -286242,7 +286242,7 @@ const COLLEGE_SCOUTING = {
           "name": "Demario Douglas",
           "team": "Liberty",
           "year": 2021,
-          "dist": 0.733
+          "dist": 0.734
         },
         {
           "id": "2013_511433",
@@ -286256,7 +286256,7 @@ const COLLEGE_SCOUTING = {
           "name": "Drew Morgan",
           "team": "Arkansas",
           "year": 2015,
-          "dist": 0.785
+          "dist": 0.786
         }
       ],
       "2023_4570035": [
@@ -286344,14 +286344,14 @@ const COLLEGE_SCOUTING = {
           "name": "Ke'Shawn Williams",
           "team": "Wake Forest",
           "year": 2021,
-          "dist": 0.462
+          "dist": 0.461
         },
         {
           "id": "2013_513736",
           "name": "D.D. Goodson",
           "team": "Colorado",
           "year": 2013,
-          "dist": 0.518
+          "dist": 0.517
         },
         {
           "id": "2021_4240075",
@@ -286416,7 +286416,7 @@ const COLLEGE_SCOUTING = {
           "name": "Devin Voisin",
           "team": "South Alabama",
           "year": 2024,
-          "dist": 0.689
+          "dist": 0.688
         },
         {
           "id": "2013_519451",
@@ -286458,7 +286458,7 @@ const COLLEGE_SCOUTING = {
           "name": "James Butler",
           "team": "Louisiana",
           "year": 2013,
-          "dist": 0.859
+          "dist": 0.858
         },
         {
           "id": "2024_5193298",
@@ -286472,7 +286472,7 @@ const COLLEGE_SCOUTING = {
           "name": "Mookie Cooper",
           "team": "Missouri",
           "year": 2023,
-          "dist": 0.904
+          "dist": 0.903
         }
       ],
       "2023_4571563": [
@@ -286544,7 +286544,7 @@ const COLLEGE_SCOUTING = {
           "name": "Josh Johnson",
           "team": "Tulsa",
           "year": 2021,
-          "dist": 1.102
+          "dist": 1.101
         }
       ],
       "2023_4571801": [
@@ -286567,14 +286567,14 @@ const COLLEGE_SCOUTING = {
           "name": "Brenden Rice",
           "team": "Colorado",
           "year": 2021,
-          "dist": 0.664
+          "dist": 0.665
         },
         {
           "id": "2018_4037591",
           "name": "Joe Reed",
           "team": "Virginia",
           "year": 2018,
-          "dist": 0.736
+          "dist": 0.737
         },
         {
           "id": "2021_4035198",
@@ -286688,7 +286688,7 @@ const COLLEGE_SCOUTING = {
           "name": "T.J. Vasher",
           "team": "Texas Tech",
           "year": 2017,
-          "dist": 0.696
+          "dist": 0.695
         }
       ],
       "2023_4571935": [
@@ -286732,14 +286732,14 @@ const COLLEGE_SCOUTING = {
           "name": "Na'eem Abdul-Rahim Gladding",
           "team": "Old Dominion",
           "year": 2025,
-          "dist": 0.843
+          "dist": 0.842
         },
         {
           "id": "2021_4384192",
           "name": "Smoke Harris",
           "team": "Louisiana Tech",
           "year": 2021,
-          "dist": 0.845
+          "dist": 0.846
         },
         {
           "id": "2020_4382578",
@@ -286749,18 +286749,18 @@ const COLLEGE_SCOUTING = {
           "dist": 0.928
         },
         {
-          "id": "2024_4427569",
-          "name": "Giles Jackson",
-          "team": "Washington",
-          "year": 2024,
-          "dist": 0.933
-        },
-        {
           "id": "2025_4870612",
           "name": "Zachariah Branch",
           "team": "Georgia",
           "year": 2025,
-          "dist": 0.933
+          "dist": 0.934
+        },
+        {
+          "id": "2024_4427569",
+          "name": "Giles Jackson",
+          "team": "Washington",
+          "year": 2024,
+          "dist": 0.934
         }
       ],
       "2023_4572040": [
@@ -286832,7 +286832,7 @@ const COLLEGE_SCOUTING = {
           "name": "Nick Jones",
           "team": "South Carolina",
           "year": 2014,
-          "dist": 0.461
+          "dist": 0.46
         }
       ],
       "2023_4572962": [
@@ -286941,7 +286941,7 @@ const COLLEGE_SCOUTING = {
           "name": "Charles Montgomery",
           "team": "Marshall",
           "year": 2024,
-          "dist": 0.641
+          "dist": 0.64
         },
         {
           "id": "2019_4036026",
@@ -286976,7 +286976,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jordan James",
           "team": "Tulsa",
           "year": 2013,
-          "dist": 0.651
+          "dist": 0.65
         }
       ],
       "2023_4574327": [
@@ -287013,7 +287013,7 @@ const COLLEGE_SCOUTING = {
           "name": "Brandon Presley",
           "team": "UNLV",
           "year": 2017,
-          "dist": 0.555
+          "dist": 0.554
         },
         {
           "id": "2018_4374169",
@@ -287099,14 +287099,14 @@ const COLLEGE_SCOUTING = {
           "name": "Ricardo Louis",
           "team": "Auburn",
           "year": 2013,
-          "dist": 0.75
+          "dist": 0.751
         },
         {
           "id": "2023_4921306",
           "name": "Mikey Matthews",
           "team": "Utah",
           "year": 2023,
-          "dist": 0.757
+          "dist": 0.756
         },
         {
           "id": "2024_4426337",
@@ -287208,7 +287208,7 @@ const COLLEGE_SCOUTING = {
           "name": "Skyler Ridley",
           "team": "BYU",
           "year": 2013,
-          "dist": 0.669
+          "dist": 0.67
         },
         {
           "id": "2013_535869",
@@ -287229,14 +287229,14 @@ const COLLEGE_SCOUTING = {
           "name": "Diante Vines",
           "team": "Old Dominion",
           "year": 2024,
-          "dist": 0.871
+          "dist": 0.872
         },
         {
           "id": "2013_501564",
           "name": "Marcus Lucas",
           "team": "Missouri",
           "year": 2013,
-          "dist": 0.923
+          "dist": 0.922
         },
         {
           "id": "2018_3129261",
@@ -287250,7 +287250,7 @@ const COLLEGE_SCOUTING = {
           "name": "Lawrence Arnold",
           "team": "Kansas",
           "year": 2024,
-          "dist": 1.063
+          "dist": 1.064
         },
         {
           "id": "2013_480346",
@@ -287408,7 +287408,7 @@ const COLLEGE_SCOUTING = {
           "name": "Yamir Knight",
           "team": "SMU",
           "year": 2026,
-          "dist": 0.615
+          "dist": 0.614
         }
       ],
       "2023_4587701": [
@@ -287617,7 +287617,7 @@ const COLLEGE_SCOUTING = {
           "name": "Devin C. Butler",
           "team": "Syracuse",
           "year": 2017,
-          "dist": 0.528
+          "dist": 0.527
         },
         {
           "id": "2019_4242556",
@@ -287675,7 +287675,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kaedin Robinson",
           "team": "App State",
           "year": 2024,
-          "dist": 0.873
+          "dist": 0.872
         },
         {
           "id": "2023_4428532",
@@ -287719,7 +287719,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kyle Ford",
           "team": "USC",
           "year": 2024,
-          "dist": 0.279
+          "dist": 0.28
         },
         {
           "id": "2019_4035464",
@@ -287928,7 +287928,7 @@ const COLLEGE_SCOUTING = {
           "name": "Andrew Marsh",
           "team": "Michigan",
           "year": 2025,
-          "dist": 0.492
+          "dist": 0.491
         },
         {
           "id": "2023_4379405",
@@ -288028,7 +288028,7 @@ const COLLEGE_SCOUTING = {
           "name": "Temi Alaka",
           "team": "Rice",
           "year": 2015,
-          "dist": 0.385
+          "dist": 0.386
         },
         {
           "id": "2017_4044081",
@@ -288056,7 +288056,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dashaun Davis",
           "team": "App State",
           "year": 2022,
-          "dist": 0.424
+          "dist": 0.425
         }
       ],
       "2023_4596596": [
@@ -288086,7 +288086,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kole Wilson",
           "team": "Texas State",
           "year": 2024,
-          "dist": 0.437
+          "dist": 0.436
         },
         {
           "id": "2014_503482",
@@ -288193,7 +288193,7 @@ const COLLEGE_SCOUTING = {
           "name": "Terry Godwin",
           "team": "Georgia",
           "year": 2017,
-          "dist": 0.767
+          "dist": 0.768
         },
         {
           "id": "2018_4035818",
@@ -288216,7 +288216,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dezmen Roebuck",
           "team": "Washington",
           "year": 2025,
-          "dist": 0.525
+          "dist": 0.526
         },
         {
           "id": "2018_3917969",
@@ -288288,7 +288288,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dorian Singer",
           "team": "Arizona",
           "year": 2022,
-          "dist": 0.673
+          "dist": 0.674
         },
         {
           "id": "2024_5088338",
@@ -288344,7 +288344,7 @@ const COLLEGE_SCOUTING = {
           "name": "Grant DuBose",
           "team": "Charlotte",
           "year": 2021,
-          "dist": 1.087
+          "dist": 1.086
         }
       ],
       "2023_4602940": [
@@ -288432,7 +288432,7 @@ const COLLEGE_SCOUTING = {
           "name": "Bailey Stockton",
           "team": "Florida",
           "year": 2026,
-          "dist": 0.481
+          "dist": 0.48
         },
         {
           "id": "2013_550340",
@@ -288488,7 +288488,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jared Murphy",
           "team": "Miami (OH)",
           "year": 2016,
-          "dist": 0.671
+          "dist": 0.67
         }
       ],
       "2023_4605489": [
@@ -288504,14 +288504,14 @@ const COLLEGE_SCOUTING = {
           "name": "Travis Reynolds",
           "team": "Utah State",
           "year": 2013,
-          "dist": 0.622
+          "dist": 0.621
         },
         {
           "id": "2024_4896389",
           "name": "Louis Brown",
           "team": "San Diego State",
           "year": 2024,
-          "dist": 0.882
+          "dist": 0.883
         },
         {
           "id": "2024_4429184",
@@ -288525,7 +288525,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dimitri Stanley",
           "team": "Colorado",
           "year": 2020,
-          "dist": 0.99
+          "dist": 0.989
         },
         {
           "id": "2019_4430095",
@@ -288576,7 +288576,7 @@ const COLLEGE_SCOUTING = {
           "name": "TJ Jones",
           "team": "Notre Dame",
           "year": 2013,
-          "dist": 1.28
+          "dist": 1.281
         },
         {
           "id": "2014_551571",
@@ -288806,20 +288806,20 @@ const COLLEGE_SCOUTING = {
           "name": "Aregeros Turner",
           "team": "Northern Illinois",
           "year": 2015,
-          "dist": 0.581
-        },
-        {
-          "id": "2020_4570219",
-          "name": "Jared Smart",
-          "team": "Hawai'i",
-          "year": 2020,
-          "dist": 0.609
+          "dist": 0.582
         },
         {
           "id": "2018_3135321",
           "name": "Hunter Renfrow",
           "team": "Clemson",
           "year": 2018,
+          "dist": 0.609
+        },
+        {
+          "id": "2020_4570219",
+          "name": "Jared Smart",
+          "team": "Hawai'i",
+          "year": 2020,
           "dist": 0.609
         },
         {
@@ -288834,7 +288834,7 @@ const COLLEGE_SCOUTING = {
           "name": "Willie Byrn",
           "team": "Virginia Tech",
           "year": 2014,
-          "dist": 0.619
+          "dist": 0.62
         },
         {
           "id": "2026_4837269",
@@ -288885,7 +288885,7 @@ const COLLEGE_SCOUTING = {
           "name": "D.J. Brown",
           "team": "Northern Illinois",
           "year": 2017,
-          "dist": 0.876
+          "dist": 0.877
         },
         {
           "id": "2016_531796",
@@ -288906,14 +288906,14 @@ const COLLEGE_SCOUTING = {
           "name": "Joshua Manning",
           "team": "Kansas State",
           "year": 2026,
-          "dist": 0.969
+          "dist": 0.97
         },
         {
           "id": "2018_4044121",
           "name": "Isaiah Wright",
           "team": "Temple",
           "year": 2018,
-          "dist": 0.981
+          "dist": 0.98
         },
         {
           "id": "2017_3126145",
@@ -288936,7 +288936,7 @@ const COLLEGE_SCOUTING = {
           "name": "Marcus Henry",
           "team": "Middle Tennessee",
           "year": 2013,
-          "dist": 0.457
+          "dist": 0.458
         },
         {
           "id": "2013_488429",
@@ -289015,7 +289015,7 @@ const COLLEGE_SCOUTING = {
           "name": "Mike Harley",
           "team": "Miami",
           "year": 2020,
-          "dist": 0.454
+          "dist": 0.455
         },
         {
           "id": "2026_5229489",
@@ -289129,7 +289129,7 @@ const COLLEGE_SCOUTING = {
           "name": "Travis Van Leeuwen",
           "team": "Utah State",
           "year": 2013,
-          "dist": 0.675
+          "dist": 0.674
         },
         {
           "id": "2021_4362477",
@@ -289166,7 +289166,7 @@ const COLLEGE_SCOUTING = {
           "name": "CJ Williams",
           "team": "Stanford",
           "year": 2025,
-          "dist": 0.631
+          "dist": 0.632
         },
         {
           "id": "2025_5084967",
@@ -289180,7 +289180,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jordan Shipp",
           "team": "North Carolina",
           "year": 2025,
-          "dist": 0.705
+          "dist": 0.704
         },
         {
           "id": "2020_4361646",
@@ -289252,7 +289252,7 @@ const COLLEGE_SCOUTING = {
           "name": "Mike Davis",
           "team": "Texas",
           "year": 2013,
-          "dist": 1.029
+          "dist": 1.03
         },
         {
           "id": "2013_106739",
@@ -289280,7 +289280,7 @@ const COLLEGE_SCOUTING = {
           "name": "Derrick Engel",
           "team": "Minnesota",
           "year": 2013,
-          "dist": 1.147
+          "dist": 1.146
         }
       ],
       "2023_4683153": [
@@ -289361,7 +289361,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tyrone Howell",
           "team": "UL Monroe",
           "year": 2023,
-          "dist": 0.755
+          "dist": 0.754
         },
         {
           "id": "2013_530710",
@@ -289417,7 +289417,7 @@ const COLLEGE_SCOUTING = {
           "name": "Noah Thomas",
           "team": "Texas A&M",
           "year": 2024,
-          "dist": 1.416
+          "dist": 1.415
         },
         {
           "id": "2013_531575",
@@ -289519,7 +289519,7 @@ const COLLEGE_SCOUTING = {
           "name": "De'Zhaun Stribling",
           "team": "Washington State",
           "year": 2022,
-          "dist": 0.553
+          "dist": 0.554
         },
         {
           "id": "2022_4683886",
@@ -289591,7 +289591,7 @@ const COLLEGE_SCOUTING = {
           "name": "DJ England-Chisolm",
           "team": "Middle Tennessee",
           "year": 2022,
-          "dist": 0.997
+          "dist": 0.998
         },
         {
           "id": "2023_4880845",
@@ -289605,14 +289605,14 @@ const COLLEGE_SCOUTING = {
           "name": "Tory Horton",
           "team": "Nevada",
           "year": 2020,
-          "dist": 1.071
+          "dist": 1.072
         },
         {
           "id": "2014_513120",
           "name": "Dom Williams",
           "team": "Washington State",
           "year": 2014,
-          "dist": 1.076
+          "dist": 1.077
         },
         {
           "id": "2019_4362630",
@@ -289633,7 +289633,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jordan Duncan",
           "team": "California",
           "year": 2018,
-          "dist": 1.199
+          "dist": 1.2
         },
         {
           "id": "2021_4697844",
@@ -289663,7 +289663,7 @@ const COLLEGE_SCOUTING = {
           "name": "Coy Eakin",
           "team": "Texas Tech",
           "year": 2024,
-          "dist": 0.57
+          "dist": 0.569
         },
         {
           "id": "2019_4372597",
@@ -289687,17 +289687,17 @@ const COLLEGE_SCOUTING = {
           "dist": 0.607
         },
         {
-          "id": "2016_3124042",
-          "name": "Kerry Thomas Jr.",
-          "team": "UTSA",
-          "year": 2016,
-          "dist": 0.629
-        },
-        {
           "id": "2018_4374169",
           "name": "Tyleek Collins",
           "team": "UNLV",
           "year": 2018,
+          "dist": 0.629
+        },
+        {
+          "id": "2016_3124042",
+          "name": "Kerry Thomas Jr.",
+          "team": "UTSA",
+          "year": 2016,
           "dist": 0.629
         },
         {
@@ -289807,7 +289807,7 @@ const COLLEGE_SCOUTING = {
           "name": "Censere Lee",
           "team": "Pittsburgh",
           "year": 2024,
-          "dist": 0.332
+          "dist": 0.333
         },
         {
           "id": "2021_4038532",
@@ -289886,7 +289886,7 @@ const COLLEGE_SCOUTING = {
           "name": "Trea Shropshire",
           "team": "UAB",
           "year": 2021,
-          "dist": 0.813
+          "dist": 0.812
         },
         {
           "id": "2023_4429742",
@@ -289900,7 +289900,7 @@ const COLLEGE_SCOUTING = {
           "name": "Shae Wyatt",
           "team": "Tulane",
           "year": 2022,
-          "dist": 0.879
+          "dist": 0.878
         },
         {
           "id": "2014_534393",
@@ -289993,7 +289993,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tony Ellison",
           "team": "Arizona",
           "year": 2017,
-          "dist": 0.738
+          "dist": 0.737
         },
         {
           "id": "2023_4429362",
@@ -290153,7 +290153,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jonathan Nance",
           "team": "Arkansas",
           "year": 2017,
-          "dist": 0.419
+          "dist": 0.42
         },
         {
           "id": "2024_4430288",
@@ -290383,14 +290383,14 @@ const COLLEGE_SCOUTING = {
           "name": "Mike Brown-Stephens",
           "team": "South Florida",
           "year": 2024,
-          "dist": 0.487
+          "dist": 0.486
         },
         {
           "id": "2024_4695910",
           "name": "Xavier Guillory",
           "team": "Arizona State",
           "year": 2024,
-          "dist": 0.503
+          "dist": 0.504
         },
         {
           "id": "2015_3127300",
@@ -290448,7 +290448,7 @@ const COLLEGE_SCOUTING = {
           "name": "Xavier Restrepo",
           "team": "Miami",
           "year": 2024,
-          "dist": 0.713
+          "dist": 0.712
         },
         {
           "id": "2024_5088336",
@@ -290490,7 +290490,7 @@ const COLLEGE_SCOUTING = {
           "name": "Lawrence Arnold",
           "team": "Kansas",
           "year": 2023,
-          "dist": 0.86
+          "dist": 0.861
         },
         {
           "id": "2023_4428678",
@@ -290527,7 +290527,7 @@ const COLLEGE_SCOUTING = {
           "name": "Titus Mokiao-Atimalala",
           "team": "UCLA",
           "year": 2022,
-          "dist": 0.412
+          "dist": 0.413
         },
         {
           "id": "2022_4430270",
@@ -290634,7 +290634,7 @@ const COLLEGE_SCOUTING = {
           "name": "Brycen Tremayne",
           "team": "Stanford",
           "year": 2020,
-          "dist": 1.096
+          "dist": 1.097
         },
         {
           "id": "2023_5160110",
@@ -290720,7 +290720,7 @@ const COLLEGE_SCOUTING = {
           "name": "Emeka Egbuka",
           "team": "Ohio State",
           "year": 2023,
-          "dist": 0.956
+          "dist": 0.955
         }
       ],
       "2023_4685769": [
@@ -291024,7 +291024,7 @@ const COLLEGE_SCOUTING = {
           "name": "Delane Hart-Johnson",
           "team": "New Mexico",
           "year": 2018,
-          "dist": 0.388
+          "dist": 0.389
         },
         {
           "id": "2024_4571114",
@@ -291059,7 +291059,7 @@ const COLLEGE_SCOUTING = {
           "name": "Robert Davis",
           "team": "Georgia State",
           "year": 2013,
-          "dist": 0.561
+          "dist": 0.56
         },
         {
           "id": "2020_4240033",
@@ -291073,7 +291073,7 @@ const COLLEGE_SCOUTING = {
           "name": "Daniel Spencer",
           "team": "Houston",
           "year": 2013,
-          "dist": 0.576
+          "dist": 0.575
         },
         {
           "id": "2018_4044148",
@@ -291275,7 +291275,7 @@ const COLLEGE_SCOUTING = {
           "name": "Isaiah Graham",
           "team": "Louisiana Tech",
           "year": 2021,
-          "dist": 0.37
+          "dist": 0.369
         },
         {
           "id": "2022_4578654",
@@ -291333,7 +291333,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jaylen Dixon",
           "team": "Utah",
           "year": 2022,
-          "dist": 0.452
+          "dist": 0.451
         },
         {
           "id": "2019_4035792",
@@ -291419,14 +291419,14 @@ const COLLEGE_SCOUTING = {
           "name": "Prince Strachan",
           "team": "Boise State",
           "year": 2024,
-          "dist": 0.683
+          "dist": 0.684
         },
         {
           "id": "2024_4570218",
           "name": "Jonah Panoke",
           "team": "Hawai'i",
           "year": 2024,
-          "dist": 0.695
+          "dist": 0.694
         },
         {
           "id": "2016_3918318",
@@ -291463,7 +291463,7 @@ const COLLEGE_SCOUTING = {
           "name": "Titan Lacaden",
           "team": "Hawai'i",
           "year": 2026,
-          "dist": 0.49
+          "dist": 0.489
         },
         {
           "id": "2018_4049787",
@@ -291542,7 +291542,7 @@ const COLLEGE_SCOUTING = {
           "name": "Quentin Skinner",
           "team": "Kansas",
           "year": 2024,
-          "dist": 0.986
+          "dist": 0.985
         },
         {
           "id": "2021_4366535",
@@ -291563,7 +291563,7 @@ const COLLEGE_SCOUTING = {
           "name": "Matt Landers",
           "team": "Toledo",
           "year": 2021,
-          "dist": 1.334
+          "dist": 1.335
         },
         {
           "id": "2024_4427601",
@@ -291765,7 +291765,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jesse Kroll",
           "team": "Central Michigan",
           "year": 2014,
-          "dist": 0.465
+          "dist": 0.464
         },
         {
           "id": "2023_5091739",
@@ -291974,7 +291974,7 @@ const COLLEGE_SCOUTING = {
           "name": "Treon Sibley",
           "team": "Liberty",
           "year": 2023,
-          "dist": 0.76
+          "dist": 0.759
         },
         {
           "id": "2023_5100582",
@@ -291995,7 +291995,7 @@ const COLLEGE_SCOUTING = {
           "name": "Rashod Owens",
           "team": "Oklahoma State",
           "year": 2024,
-          "dist": 0.999
+          "dist": 0.998
         },
         {
           "id": "2023_4569181",
@@ -292067,28 +292067,28 @@ const COLLEGE_SCOUTING = {
           "name": "Squirrel White",
           "team": "Tennessee",
           "year": 2023,
-          "dist": 1.183
+          "dist": 1.182
         },
         {
           "id": "2021_4360405",
           "name": "Jake Bobo",
           "team": "Duke",
           "year": 2021,
-          "dist": 1.195
+          "dist": 1.194
         },
         {
           "id": "2014_511290",
           "name": "Jaxon Shipley",
           "team": "Texas",
           "year": 2014,
-          "dist": 1.304
+          "dist": 1.303
         },
         {
           "id": "2018_3915894",
           "name": "Warren Redix",
           "team": "UTEP",
           "year": 2018,
-          "dist": 1.322
+          "dist": 1.321
         }
       ],
       "2023_4696407": [
@@ -292132,7 +292132,7 @@ const COLLEGE_SCOUTING = {
           "name": "Caleb Coombs",
           "team": "Jacksonville State",
           "year": 2025,
-          "dist": 0.925
+          "dist": 0.924
         },
         {
           "id": "2017_3921918",
@@ -292406,14 +292406,14 @@ const COLLEGE_SCOUTING = {
           "name": "D.J. Chark",
           "team": "LSU",
           "year": 2016,
-          "dist": 0.476
+          "dist": 0.477
         },
         {
           "id": "2016_4039032",
           "name": "Kevin Stepherson",
           "team": "Notre Dame",
           "year": 2016,
-          "dist": 0.498
+          "dist": 0.499
         },
         {
           "id": "2021_4602940",
@@ -292434,7 +292434,7 @@ const COLLEGE_SCOUTING = {
           "name": "Cody White",
           "team": "Michigan State",
           "year": 2017,
-          "dist": 0.521
+          "dist": 0.52
         },
         {
           "id": "2014_3115913",
@@ -292464,14 +292464,14 @@ const COLLEGE_SCOUTING = {
           "name": "Tykee Ogle-Kellogg",
           "team": "UTSA",
           "year": 2023,
-          "dist": 0.685
+          "dist": 0.686
         },
         {
           "id": "2021_4686781",
           "name": "Brenden Rice",
           "team": "Colorado",
           "year": 2021,
-          "dist": 0.738
+          "dist": 0.737
         },
         {
           "id": "2019_4362310",
@@ -292520,7 +292520,7 @@ const COLLEGE_SCOUTING = {
           "name": "Vince Sanders",
           "team": "Ole Miss",
           "year": 2014,
-          "dist": 0.868
+          "dist": 0.867
         }
       ],
       "2023_4700147": [
@@ -292664,7 +292664,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ronnie Moore",
           "team": "Bowling Green",
           "year": 2015,
-          "dist": 0.737
+          "dist": 0.738
         }
       ],
       "2023_4702830": [
@@ -292736,7 +292736,7 @@ const COLLEGE_SCOUTING = {
           "name": "A.J. Taylor",
           "team": "Wisconsin",
           "year": 2019,
-          "dist": 0.416
+          "dist": 0.415
         }
       ],
       "2023_4708127": [
@@ -292873,7 +292873,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kobay White",
           "team": "Boston College",
           "year": 2018,
-          "dist": 0.549
+          "dist": 0.548
         },
         {
           "id": "2020_4426459",
@@ -292975,14 +292975,14 @@ const COLLEGE_SCOUTING = {
           "name": "Daniel George",
           "team": "Akron",
           "year": 2023,
-          "dist": 0.545
+          "dist": 0.546
         },
         {
           "id": "2015_3128251",
           "name": "Simmie Cobbs Jr.",
           "team": "Indiana",
           "year": 2015,
-          "dist": 0.568
+          "dist": 0.567
         },
         {
           "id": "2017_4035198",
@@ -293342,7 +293342,7 @@ const COLLEGE_SCOUTING = {
           "name": "Darius Powe",
           "team": "California",
           "year": 2015,
-          "dist": 0.503
+          "dist": 0.504
         },
         {
           "id": "2017_4038460",
@@ -293579,7 +293579,7 @@ const COLLEGE_SCOUTING = {
           "name": "J.C. Santana",
           "team": "Tulsa",
           "year": 2020,
-          "dist": 0.594
+          "dist": 0.595
         },
         {
           "id": "2026_5079329",
@@ -293600,7 +293600,7 @@ const COLLEGE_SCOUTING = {
           "name": "Keon Hatcher",
           "team": "Arkansas",
           "year": 2016,
-          "dist": 0.63
+          "dist": 0.631
         }
       ],
       "2023_4718457": [
@@ -293637,14 +293637,14 @@ const COLLEGE_SCOUTING = {
           "name": "Brayden Lenius",
           "team": "Washington",
           "year": 2015,
-          "dist": 0.611
+          "dist": 0.612
         },
         {
           "id": "2021_4608793",
           "name": "Jabre Barber",
           "team": "Troy",
           "year": 2021,
-          "dist": 0.612
+          "dist": 0.613
         },
         {
           "id": "2021_4040779",
@@ -293753,7 +293753,7 @@ const COLLEGE_SCOUTING = {
           "name": "De'Zhaun Stribling",
           "team": "Washington State",
           "year": 2022,
-          "dist": 0.208
+          "dist": 0.209
         },
         {
           "id": "2024_4804883",
@@ -293853,7 +293853,7 @@ const COLLEGE_SCOUTING = {
           "name": "Eric Rivers",
           "team": "Florida International",
           "year": 2023,
-          "dist": 0.872
+          "dist": 0.871
         },
         {
           "id": "2018_4242506",
@@ -293953,7 +293953,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kelvontay Dixon",
           "team": "SMU",
           "year": 2024,
-          "dist": 1.005
+          "dist": 1.004
         },
         {
           "id": "2024_5093009",
@@ -294120,7 +294120,7 @@ const COLLEGE_SCOUTING = {
           "name": "John Humphreys",
           "team": "Stanford",
           "year": 2021,
-          "dist": 0.352
+          "dist": 0.351
         },
         {
           "id": "2022_4570218",
@@ -294241,7 +294241,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jairus Mack",
           "team": "Charlotte",
           "year": 2024,
-          "dist": 0.93
+          "dist": 0.931
         },
         {
           "id": "2022_4365484",
@@ -294306,7 +294306,7 @@ const COLLEGE_SCOUTING = {
           "name": "Chase Claypool",
           "team": "Notre Dame",
           "year": 2019,
-          "dist": 0.655
+          "dist": 0.656
         },
         {
           "id": "2019_4243537",
@@ -294631,7 +294631,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dillon Bell",
           "team": "Georgia",
           "year": 2023,
-          "dist": 0.627
+          "dist": 0.626
         },
         {
           "id": "2019_4365503",
@@ -294752,7 +294752,7 @@ const COLLEGE_SCOUTING = {
           "name": "Bryan Edwards",
           "team": "South Carolina",
           "year": 2019,
-          "dist": 1.233
+          "dist": 1.232
         }
       ],
       "2023_4870713": [
@@ -294775,7 +294775,7 @@ const COLLEGE_SCOUTING = {
           "name": "Sam Brown",
           "team": "Miami",
           "year": 2024,
-          "dist": 0.456
+          "dist": 0.457
         },
         {
           "id": "2020_4360924",
@@ -294789,14 +294789,14 @@ const COLLEGE_SCOUTING = {
           "name": "Charles Ross",
           "team": "San José State",
           "year": 2023,
-          "dist": 0.482
+          "dist": 0.483
         },
         {
           "id": "2021_4240075",
           "name": "Justin Marshall",
           "team": "Louisville",
           "year": 2021,
-          "dist": 0.485
+          "dist": 0.486
         },
         {
           "id": "2021_4361504",
@@ -294854,7 +294854,7 @@ const COLLEGE_SCOUTING = {
           "name": "Adam Jones",
           "team": "Arkansas State",
           "year": 2024,
-          "dist": 0.534
+          "dist": 0.535
         },
         {
           "id": "2023_4361736",
@@ -294926,7 +294926,7 @@ const COLLEGE_SCOUTING = {
           "name": "Sterling Griffin",
           "team": "Louisiana Tech",
           "year": 2013,
-          "dist": 0.455
+          "dist": 0.454
         },
         {
           "id": "2025_5079501",
@@ -294947,7 +294947,7 @@ const COLLEGE_SCOUTING = {
           "name": "Melvin Ray",
           "team": "Auburn",
           "year": 2015,
-          "dist": 0.66
+          "dist": 0.661
         },
         {
           "id": "2019_4044534",
@@ -295040,7 +295040,7 @@ const COLLEGE_SCOUTING = {
           "name": "Braylon Sanders",
           "team": "Ole Miss",
           "year": 2020,
-          "dist": 0.768
+          "dist": 0.767
         }
       ],
       "2023_4871023": [
@@ -295077,7 +295077,7 @@ const COLLEGE_SCOUTING = {
           "name": "Gregory Hogan",
           "team": "New Mexico State",
           "year": 2017,
-          "dist": 0.39
+          "dist": 0.391
         },
         {
           "id": "2023_5153074",
@@ -295121,7 +295121,7 @@ const COLLEGE_SCOUTING = {
           "name": "Mookie Cooper",
           "team": "Missouri",
           "year": 2023,
-          "dist": 0.38
+          "dist": 0.379
         },
         {
           "id": "2022_4570738",
@@ -295286,21 +295286,21 @@ const COLLEGE_SCOUTING = {
           "name": "Kerry Thomas Jr.",
           "team": "UTSA",
           "year": 2017,
-          "dist": 0.647
+          "dist": 0.646
         },
         {
           "id": "2023_4426535",
           "name": "Theo Wease",
           "team": "Missouri",
           "year": 2023,
-          "dist": 0.662
+          "dist": 0.663
         },
         {
           "id": "2013_481158",
           "name": "Colin Lockett",
           "team": "San Diego State",
           "year": 2013,
-          "dist": 0.674
+          "dist": 0.675
         },
         {
           "id": "2024_4600597",
@@ -295488,7 +295488,7 @@ const COLLEGE_SCOUTING = {
           "name": "Nykeim Johnson",
           "team": "Kent State",
           "year": 2021,
-          "dist": 0.488
+          "dist": 0.487
         },
         {
           "id": "2013_511258",
@@ -295697,7 +295697,7 @@ const COLLEGE_SCOUTING = {
           "name": "Marshaun Brown",
           "team": "Nevada",
           "year": 2026,
-          "dist": 0.478
+          "dist": 0.479
         },
         {
           "id": "2026_5388762",
@@ -295783,7 +295783,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tre Turner",
           "team": "Virginia Tech",
           "year": 2021,
-          "dist": 0.607
+          "dist": 0.606
         },
         {
           "id": "2018_4035170",
@@ -295841,21 +295841,21 @@ const COLLEGE_SCOUTING = {
           "name": "Lewis Bond",
           "team": "Boston College",
           "year": 2023,
-          "dist": 0.755
+          "dist": 0.754
         },
         {
           "id": "2021_4240735",
           "name": "Chris Autman-Bell",
           "team": "Minnesota",
           "year": 2021,
-          "dist": 1.206
+          "dist": 1.207
         },
         {
           "id": "2013_516363",
           "name": "Ty Montgomery",
           "team": "Stanford",
           "year": 2013,
-          "dist": 1.29
+          "dist": 1.291
         },
         {
           "id": "2021_4367175",
@@ -295927,7 +295927,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jerome Lane",
           "team": "Akron",
           "year": 2015,
-          "dist": 0.797
+          "dist": 0.798
         },
         {
           "id": "2022_4570188",
@@ -296013,14 +296013,14 @@ const COLLEGE_SCOUTING = {
           "name": "Dontario Drummond",
           "team": "Ole Miss",
           "year": 2020,
-          "dist": 0.861
+          "dist": 0.862
         },
         {
           "id": "2021_4040779",
           "name": "John Mitchell",
           "team": "Florida Atlantic",
           "year": 2021,
-          "dist": 0.901
+          "dist": 0.902
         },
         {
           "id": "2022_5092508",
@@ -296048,7 +296048,7 @@ const COLLEGE_SCOUTING = {
           "name": "Auden Tate",
           "team": "Florida State",
           "year": 2016,
-          "dist": 0.95
+          "dist": 0.951
         }
       ],
       "2023_4883774": [
@@ -296099,7 +296099,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jacory Barney Jr.",
           "team": "Nebraska",
           "year": 2024,
-          "dist": 0.692
+          "dist": 0.691
         },
         {
           "id": "2017_3115928",
@@ -296178,14 +296178,14 @@ const COLLEGE_SCOUTING = {
           "name": "Ontaria Wilson",
           "team": "Florida State",
           "year": 2021,
-          "dist": 0.688
+          "dist": 0.689
         },
         {
           "id": "2019_4362669",
           "name": "T.J. Graham",
           "team": "Texas State",
           "year": 2019,
-          "dist": 0.69
+          "dist": 0.689
         },
         {
           "id": "2019_4048099",
@@ -296243,21 +296243,21 @@ const COLLEGE_SCOUTING = {
           "name": "Thomas Roberson",
           "team": "Tulsa",
           "year": 2013,
-          "dist": 1.155
+          "dist": 1.156
         },
         {
           "id": "2023_4565361",
           "name": "Anthony Sambucci",
           "team": "Western Michigan",
           "year": 2023,
-          "dist": 1.182
+          "dist": 1.181
         },
         {
           "id": "2022_4363528",
           "name": "Tanner Knue",
           "team": "Eastern Michigan",
           "year": 2022,
-          "dist": 1.198
+          "dist": 1.199
         },
         {
           "id": "2024_4685297",
@@ -296294,7 +296294,7 @@ const COLLEGE_SCOUTING = {
           "name": "Myles Price",
           "team": "Texas Tech",
           "year": 2023,
-          "dist": 0.6
+          "dist": 0.601
         },
         {
           "id": "2025_4603746",
@@ -296308,14 +296308,14 @@ const COLLEGE_SCOUTING = {
           "name": "Dillon Stoner",
           "team": "Oklahoma State",
           "year": 2017,
-          "dist": 0.666
+          "dist": 0.667
         },
         {
           "id": "2023_4701936",
           "name": "Matthew Golden",
           "team": "Houston",
           "year": 2023,
-          "dist": 0.726
+          "dist": 0.725
         },
         {
           "id": "2021_4373686",
@@ -296336,7 +296336,7 @@ const COLLEGE_SCOUTING = {
           "name": "Antoine Porter",
           "team": "Eastern Michigan",
           "year": 2016,
-          "dist": 0.825
+          "dist": 0.826
         }
       ],
       "2023_4900903": [
@@ -296445,7 +296445,7 @@ const COLLEGE_SCOUTING = {
           "name": "Frank Darby",
           "team": "Arizona State",
           "year": 2018,
-          "dist": 0.649
+          "dist": 0.648
         },
         {
           "id": "2018_4054085",
@@ -296462,17 +296462,17 @@ const COLLEGE_SCOUTING = {
           "dist": 0.701
         },
         {
-          "id": "2016_533292",
-          "name": "Alonzo Moore",
-          "team": "Nebraska",
-          "year": 2016,
-          "dist": 0.765
-        },
-        {
           "id": "2023_5160110",
           "name": "Jahdae Walker",
           "team": "Texas A&M",
           "year": 2023,
+          "dist": 0.765
+        },
+        {
+          "id": "2016_533292",
+          "name": "Alonzo Moore",
+          "team": "Nebraska",
+          "year": 2016,
           "dist": 0.766
         },
         {
@@ -296552,7 +296552,7 @@ const COLLEGE_SCOUTING = {
           "name": "DeMeer Blankumsee",
           "team": "Memphis",
           "year": 2023,
-          "dist": 0.859
+          "dist": 0.858
         }
       ],
       "2023_4912067": [
@@ -296647,7 +296647,7 @@ const COLLEGE_SCOUTING = {
           "name": "RJ Turner",
           "team": "UL Monroe",
           "year": 2018,
-          "dist": 0.475
+          "dist": 0.474
         },
         {
           "id": "2017_4039043",
@@ -296696,7 +296696,7 @@ const COLLEGE_SCOUTING = {
           "name": "K.J. Brent",
           "team": "Wake Forest",
           "year": 2015,
-          "dist": 0.604
+          "dist": 0.605
         }
       ],
       "2023_4912218": [
@@ -296719,7 +296719,7 @@ const COLLEGE_SCOUTING = {
           "name": "DeMeer Blankumsee",
           "team": "Memphis",
           "year": 2023,
-          "dist": 0.614
+          "dist": 0.613
         },
         {
           "id": "2024_4685110",
@@ -296740,7 +296740,7 @@ const COLLEGE_SCOUTING = {
           "name": "James Proche",
           "team": "SMU",
           "year": 2017,
-          "dist": 0.7
+          "dist": 0.701
         },
         {
           "id": "2013_480414",
@@ -296884,7 +296884,7 @@ const COLLEGE_SCOUTING = {
           "name": "Malcolm Simmons",
           "team": "Auburn",
           "year": 2024,
-          "dist": 0.501
+          "dist": 0.5
         },
         {
           "id": "2019_4241225",
@@ -296905,7 +296905,7 @@ const COLLEGE_SCOUTING = {
           "name": "Drake Stoops",
           "team": "Oklahoma",
           "year": 2022,
-          "dist": 0.554
+          "dist": 0.555
         },
         {
           "id": "2013_522923",
@@ -297021,7 +297021,7 @@ const COLLEGE_SCOUTING = {
           "name": "Olabisi Johnson",
           "team": "Colorado State",
           "year": 2017,
-          "dist": 0.459
+          "dist": 0.458
         },
         {
           "id": "2015_3125093",
@@ -297272,7 +297272,7 @@ const COLLEGE_SCOUTING = {
           "name": "Drake Stoops",
           "team": "Oklahoma",
           "year": 2023,
-          "dist": 1.186
+          "dist": 1.187
         }
       ],
       "2023_4921306": [
@@ -297281,7 +297281,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jake Oliver",
           "team": "Texas",
           "year": 2016,
-          "dist": 0.596
+          "dist": 0.595
         },
         {
           "id": "2017_559668",
@@ -297302,7 +297302,7 @@ const COLLEGE_SCOUTING = {
           "name": "Quinton Lane",
           "team": "Jacksonville State",
           "year": 2023,
-          "dist": 0.757
+          "dist": 0.756
         },
         {
           "id": "2015_518169",
@@ -297323,7 +297323,7 @@ const COLLEGE_SCOUTING = {
           "name": "John Jackson III",
           "team": "Nevada",
           "year": 2023,
-          "dist": 0.86
+          "dist": 0.859
         },
         {
           "id": "2018_3917634",
@@ -297381,7 +297381,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tyrie Cleveland",
           "team": "Florida",
           "year": 2016,
-          "dist": 0.555
+          "dist": 0.556
         },
         {
           "id": "2014_531739",
@@ -297467,7 +297467,7 @@ const COLLEGE_SCOUTING = {
           "name": "Michael Rector",
           "team": "Stanford",
           "year": 2013,
-          "dist": 1.295
+          "dist": 1.296
         },
         {
           "id": "2015_530827",
@@ -297546,7 +297546,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jhajuan Seales",
           "team": "Oklahoma State",
           "year": 2013,
-          "dist": 1.293
+          "dist": 1.294
         },
         {
           "id": "2013_484061",
@@ -297618,21 +297618,21 @@ const COLLEGE_SCOUTING = {
           "name": "Drake Stoops",
           "team": "Oklahoma",
           "year": 2022,
-          "dist": 0.779
+          "dist": 0.78
         },
         {
           "id": "2015_531453",
           "name": "Anthony Rice",
           "team": "Central Michigan",
           "year": 2015,
-          "dist": 0.792
+          "dist": 0.791
         },
         {
           "id": "2024_4608793",
           "name": "Jabre Barber",
           "team": "Texas A&M",
           "year": 2024,
-          "dist": 0.808
+          "dist": 0.809
         }
       ],
       "2023_5078165": [
@@ -297881,17 +297881,17 @@ const COLLEGE_SCOUTING = {
           "dist": 0.793
         },
         {
-          "id": "2025_4570132",
-          "name": "Ryan Davis",
-          "team": "Utah",
-          "year": 2025,
-          "dist": 0.868
-        },
-        {
           "id": "2019_4259270",
           "name": "Cameron Dollar",
           "team": "Charlotte",
           "year": 2019,
+          "dist": 0.867
+        },
+        {
+          "id": "2025_4570132",
+          "name": "Ryan Davis",
+          "team": "Utah",
+          "year": 2025,
           "dist": 0.868
         },
         {
@@ -297906,7 +297906,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jabre Barber",
           "team": "Troy",
           "year": 2023,
-          "dist": 0.899
+          "dist": 0.9
         },
         {
           "id": "2022_4569382",
@@ -297920,7 +297920,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tyrell Henry",
           "team": "Wisconsin",
           "year": 2026,
-          "dist": 0.936
+          "dist": 0.935
         }
       ],
       "2023_5081508": [
@@ -298050,7 +298050,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ronnie Moore",
           "team": "Bowling Green",
           "year": 2016,
-          "dist": 0.939
+          "dist": 0.94
         },
         {
           "id": "2016_530669",
@@ -298064,7 +298064,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jehlani Galloway",
           "team": "Western Michigan",
           "year": 2022,
-          "dist": 1.15
+          "dist": 1.151
         }
       ],
       "2023_5082032": [
@@ -298080,7 +298080,7 @@ const COLLEGE_SCOUTING = {
           "name": "Mike Dudek",
           "team": "Illinois",
           "year": 2017,
-          "dist": 0.46
+          "dist": 0.459
         },
         {
           "id": "2022_4427037",
@@ -298208,7 +298208,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dorial Green-Beckham",
           "team": "Missouri",
           "year": 2013,
-          "dist": 1.358
+          "dist": 1.357
         }
       ],
       "2023_5082289": [
@@ -298273,7 +298273,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jakobie Keeney-James",
           "team": "Massachusetts",
           "year": 2024,
-          "dist": 1.545
+          "dist": 1.546
         },
         {
           "id": "2022_4880101",
@@ -298403,7 +298403,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jahmal Banks",
           "team": "Wake Forest",
           "year": 2023,
-          "dist": 1.085
+          "dist": 1.086
         },
         {
           "id": "2015_532661",
@@ -298424,7 +298424,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tommy Shuler",
           "team": "Marshall",
           "year": 2014,
-          "dist": 1.263
+          "dist": 1.264
         }
       ],
       "2023_5083198": [
@@ -298533,14 +298533,14 @@ const COLLEGE_SCOUTING = {
           "name": "Wykeen Akie Gill",
           "team": "Kansas State",
           "year": 2019,
-          "dist": 0.847
+          "dist": 0.846
         },
         {
           "id": "2017_4035493",
           "name": "Nate Craig-Myers",
           "team": "Auburn",
           "year": 2017,
-          "dist": 0.875
+          "dist": 0.874
         },
         {
           "id": "2024_4685230",
@@ -298561,7 +298561,7 @@ const COLLEGE_SCOUTING = {
           "name": "Reggie Brown",
           "team": "James Madison",
           "year": 2022,
-          "dist": 1.007
+          "dist": 1.008
         },
         {
           "id": "2023_4431068",
@@ -298605,7 +298605,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tez Johnson",
           "team": "Oregon",
           "year": 2024,
-          "dist": 0.656
+          "dist": 0.657
         },
         {
           "id": "2025_5088338",
@@ -298619,7 +298619,7 @@ const COLLEGE_SCOUTING = {
           "name": "George Pickens",
           "team": "Georgia",
           "year": 2020,
-          "dist": 0.737
+          "dist": 0.736
         },
         {
           "id": "2016_3116165",
@@ -298677,7 +298677,7 @@ const COLLEGE_SCOUTING = {
           "name": "Braylen Walker",
           "team": "Rice",
           "year": 2024,
-          "dist": 0.389
+          "dist": 0.388
         },
         {
           "id": "2017_4049294",
@@ -298879,7 +298879,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kris Thornton",
           "team": "James Madison",
           "year": 2022,
-          "dist": 1.347
+          "dist": 1.348
         },
         {
           "id": "2021_4575665",
@@ -298900,7 +298900,7 @@ const COLLEGE_SCOUTING = {
           "name": "Josh Kelly",
           "team": "Texas Tech",
           "year": 2024,
-          "dist": 1.462
+          "dist": 1.461
         },
         {
           "id": "2024_5088336",
@@ -298921,7 +298921,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kaedin Robinson",
           "team": "App State",
           "year": 2024,
-          "dist": 1.503
+          "dist": 1.504
         },
         {
           "id": "2024_5100582",
@@ -298979,27 +298979,27 @@ const COLLEGE_SCOUTING = {
           "name": "Jake Bobo",
           "team": "UCLA",
           "year": 2022,
-          "dist": 0.536
+          "dist": 0.537
         },
         {
           "id": "2024_4869645",
           "name": "Caleb Douglas",
           "team": "Texas Tech",
           "year": 2024,
-          "dist": 0.562
-        },
-        {
-          "id": "2017_4241372",
-          "name": "Marquise Brown",
-          "team": "Oklahoma",
-          "year": 2017,
-          "dist": 0.576
+          "dist": 0.563
         },
         {
           "id": "2024_5079600",
           "name": "Nick Marsh",
           "team": "Michigan State",
           "year": 2024,
+          "dist": 0.576
+        },
+        {
+          "id": "2017_4241372",
+          "name": "Marquise Brown",
+          "team": "Oklahoma",
+          "year": 2017,
           "dist": 0.576
         }
       ],
@@ -299037,7 +299037,7 @@ const COLLEGE_SCOUTING = {
           "name": "Fransohn Bickley",
           "team": "Akron",
           "year": 2013,
-          "dist": 0.578
+          "dist": 0.579
         },
         {
           "id": "2019_4361029",
@@ -299246,7 +299246,7 @@ const COLLEGE_SCOUTING = {
           "name": "Craig Dandridge",
           "team": "Georgia",
           "year": 2026,
-          "dist": 0.594
+          "dist": 0.593
         },
         {
           "id": "2015_516956",
@@ -299267,14 +299267,14 @@ const COLLEGE_SCOUTING = {
           "name": "Julian Ortega-Jones",
           "team": "Bowling Green",
           "year": 2019,
-          "dist": 0.673
+          "dist": 0.674
         },
         {
           "id": "2023_5151979",
           "name": "Kelby Williams",
           "team": "Old Dominion",
           "year": 2023,
-          "dist": 0.689
+          "dist": 0.69
         },
         {
           "id": "2023_4433871",
@@ -299448,7 +299448,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dylan Wright",
           "team": "Minnesota",
           "year": 2021,
-          "dist": 0.72
+          "dist": 0.721
         },
         {
           "id": "2023_4427209",
@@ -299513,7 +299513,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jakobie Keeney-James",
           "team": "Massachusetts",
           "year": 2024,
-          "dist": 2.109
+          "dist": 2.11
         },
         {
           "id": "2016_3917100",
@@ -299778,7 +299778,7 @@ const COLLEGE_SCOUTING = {
           "name": "Cadarrius Thompson",
           "team": "Georgia State",
           "year": 2023,
-          "dist": 0.551
+          "dist": 0.552
         },
         {
           "id": "2023_4428063",
@@ -299922,14 +299922,14 @@ const COLLEGE_SCOUTING = {
           "name": "Harold Mack",
           "team": "Eastern Michigan",
           "year": 2025,
-          "dist": 1.072
+          "dist": 1.073
         },
         {
           "id": "2026_5125905",
           "name": "Corri Milliner",
           "team": "North Texas",
           "year": 2026,
-          "dist": 1.078
+          "dist": 1.077
         },
         {
           "id": "2015_545669",
@@ -299952,7 +299952,7 @@ const COLLEGE_SCOUTING = {
           "name": "Marvin Shinn",
           "team": "South Alabama",
           "year": 2015,
-          "dist": 0.453
+          "dist": 0.452
         },
         {
           "id": "2026_5155519",
@@ -300038,7 +300038,7 @@ const COLLEGE_SCOUTING = {
           "name": "Brian Smith",
           "team": "Minnesota",
           "year": 2016,
-          "dist": 0.435
+          "dist": 0.434
         },
         {
           "id": "2019_4046519",
@@ -300247,7 +300247,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dylan Wright",
           "team": "Minnesota",
           "year": 2021,
-          "dist": 0.824
+          "dist": 0.825
         },
         {
           "id": "2024_5093009",
@@ -300275,7 +300275,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dariyan Wiley",
           "team": "UL Monroe",
           "year": 2023,
-          "dist": 0.984
+          "dist": 0.985
         },
         {
           "id": "2024_4683425",
@@ -300326,7 +300326,7 @@ const COLLEGE_SCOUTING = {
           "name": "Daniel Arias",
           "team": "Colorado",
           "year": 2022,
-          "dist": 0.631
+          "dist": 0.632
         },
         {
           "id": "2013_506134",
@@ -300419,7 +300419,7 @@ const COLLEGE_SCOUTING = {
           "name": "Gregory Hogan",
           "team": "New Mexico State",
           "year": 2017,
-          "dist": 0.45
+          "dist": 0.451
         },
         {
           "id": "2025_4602895",
@@ -300449,7 +300449,7 @@ const COLLEGE_SCOUTING = {
           "name": "Drew Morgan",
           "team": "Arkansas",
           "year": 2016,
-          "dist": 0.679
+          "dist": 0.68
         },
         {
           "id": "2023_4370797",
@@ -300463,7 +300463,7 @@ const COLLEGE_SCOUTING = {
           "name": "Casey Martin",
           "team": "Southern Miss",
           "year": 2015,
-          "dist": 0.71
+          "dist": 0.709
         },
         {
           "id": "2015_3122839",
@@ -300484,7 +300484,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jesus Wilson",
           "team": "Florida State",
           "year": 2015,
-          "dist": 0.845
+          "dist": 0.844
         },
         {
           "id": "2015_530417",
@@ -300528,14 +300528,14 @@ const COLLEGE_SCOUTING = {
           "name": "Ty Harding",
           "team": "Massachusetts",
           "year": 2024,
-          "dist": 1.008
+          "dist": 1.007
         },
         {
           "id": "2022_4686271",
           "name": "Robert Lewis",
           "team": "Georgia State",
           "year": 2022,
-          "dist": 1.011
+          "dist": 1.01
         },
         {
           "id": "2013_516301",
@@ -300556,14 +300556,14 @@ const COLLEGE_SCOUTING = {
           "name": "Denzel Boston",
           "team": "Washington",
           "year": 2024,
-          "dist": 1.056
+          "dist": 1.057
         },
         {
           "id": "2024_5079376",
           "name": "Cam Coleman",
           "team": "Auburn",
           "year": 2024,
-          "dist": 1.091
+          "dist": 1.092
         },
         {
           "id": "2024_4428116",
@@ -300656,7 +300656,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jaelen Gill",
           "team": "Boston College",
           "year": 2022,
-          "dist": 0.875
+          "dist": 0.874
         }
       ],
       "2024_4426337": [
@@ -300672,7 +300672,7 @@ const COLLEGE_SCOUTING = {
           "name": "Chase Claypool",
           "team": "Notre Dame",
           "year": 2017,
-          "dist": 0.462
+          "dist": 0.461
         },
         {
           "id": "2024_5150247",
@@ -300751,7 +300751,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dylan Goffney",
           "team": "Colorado State",
           "year": 2023,
-          "dist": 0.279
+          "dist": 0.28
         },
         {
           "id": "2022_4428527",
@@ -300823,7 +300823,7 @@ const COLLEGE_SCOUTING = {
           "name": "Corey Crooms",
           "team": "Western Michigan",
           "year": 2021,
-          "dist": 0.632
+          "dist": 0.631
         },
         {
           "id": "2023_4362794",
@@ -300916,7 +300916,7 @@ const COLLEGE_SCOUTING = {
           "name": "Cadarrius Thompson",
           "team": "Georgia State",
           "year": 2023,
-          "dist": 0.683
+          "dist": 0.684
         },
         {
           "id": "2024_4430747",
@@ -301039,7 +301039,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jordan Hudson",
           "team": "SMU",
           "year": 2023,
-          "dist": 0.487
+          "dist": 0.486
         },
         {
           "id": "2025_4900640",
@@ -301169,14 +301169,14 @@ const COLLEGE_SCOUTING = {
           "name": "Thomas Hennigan",
           "team": "App State",
           "year": 2021,
-          "dist": 1.124
+          "dist": 1.123
         },
         {
           "id": "2023_4590532",
           "name": "Silas Bolden",
           "team": "Oregon State",
           "year": 2023,
-          "dist": 1.132
+          "dist": 1.131
         },
         {
           "id": "2024_5081250",
@@ -301211,7 +301211,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dymere Miller",
           "team": "Rutgers",
           "year": 2024,
-          "dist": 1.42
+          "dist": 1.421
         },
         {
           "id": "2024_5193298",
@@ -301304,7 +301304,7 @@ const COLLEGE_SCOUTING = {
           "name": "Joey Hobert",
           "team": "Texas State",
           "year": 2023,
-          "dist": 0.914
+          "dist": 0.913
         }
       ],
       "2024_4427601": [
@@ -301355,7 +301355,7 @@ const COLLEGE_SCOUTING = {
           "name": "Omar Cooper Jr.",
           "team": "Indiana",
           "year": 2024,
-          "dist": 1.169
+          "dist": 1.168
         },
         {
           "id": "2024_5120454",
@@ -301369,14 +301369,14 @@ const COLLEGE_SCOUTING = {
           "name": "Munir McClain",
           "team": "Utah",
           "year": 2023,
-          "dist": 1.225
+          "dist": 1.224
         },
         {
           "id": "2022_4910239",
           "name": "Justus Ross-Simmons",
           "team": "Colorado State",
           "year": 2022,
-          "dist": 1.235
+          "dist": 1.234
         }
       ],
       "2024_4427819": [
@@ -301392,7 +301392,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jaylen Sargent",
           "team": "Wyoming",
           "year": 2024,
-          "dist": 1.327
+          "dist": 1.326
         },
         {
           "id": "2023_4567217",
@@ -301520,7 +301520,7 @@ const COLLEGE_SCOUTING = {
           "name": "Taylor Morin",
           "team": "Wake Forest",
           "year": 2023,
-          "dist": 1.41
+          "dist": 1.409
         }
       ],
       "2024_4428527": [
@@ -301766,7 +301766,7 @@ const COLLEGE_SCOUTING = {
           "name": "James Butler",
           "team": "Louisiana",
           "year": 2013,
-          "dist": 0.529
+          "dist": 0.528
         },
         {
           "id": "2024_4692972",
@@ -301801,14 +301801,14 @@ const COLLEGE_SCOUTING = {
           "name": "Jermaine Braddock",
           "team": "San José State",
           "year": 2022,
-          "dist": 0.62
+          "dist": 0.621
         },
         {
           "id": "2013_504268",
           "name": "Robert Johnson",
           "team": "Mississippi State",
           "year": 2013,
-          "dist": 0.652
+          "dist": 0.651
         }
       ],
       "2024_4428938": [
@@ -301866,7 +301866,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tim Jones",
           "team": "Southern Miss",
           "year": 2020,
-          "dist": 1.15
+          "dist": 1.149
         },
         {
           "id": "2018_3933064",
@@ -301931,7 +301931,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kamdyn Benjamin",
           "team": "Tulsa",
           "year": 2023,
-          "dist": 1.004
+          "dist": 1.005
         },
         {
           "id": "2022_4689334",
@@ -301952,7 +301952,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jameon Lewis",
           "team": "Mississippi State",
           "year": 2013,
-          "dist": 1.049
+          "dist": 1.05
         }
       ],
       "2024_4429103": [
@@ -301961,7 +301961,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jeremiah Hunter",
           "team": "California",
           "year": 2021,
-          "dist": 0.809
+          "dist": 0.808
         },
         {
           "id": "2020_4431058",
@@ -302047,7 +302047,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dominic Lovett",
           "team": "Missouri",
           "year": 2022,
-          "dist": 0.669
+          "dist": 0.668
         },
         {
           "id": "2015_559694",
@@ -302177,7 +302177,7 @@ const COLLEGE_SCOUTING = {
           "name": "Justin Hobbs",
           "team": "Tulsa",
           "year": 2015,
-          "dist": 0.307
+          "dist": 0.308
         },
         {
           "id": "2017_3124369",
@@ -302212,7 +302212,7 @@ const COLLEGE_SCOUTING = {
           "name": "Isaiah Esdale",
           "team": "West Virginia",
           "year": 2021,
-          "dist": 0.51
+          "dist": 0.511
         },
         {
           "id": "2025_5141362",
@@ -302240,7 +302240,7 @@ const COLLEGE_SCOUTING = {
           "name": "John Humphreys",
           "team": "Stanford",
           "year": 2022,
-          "dist": 0.582
+          "dist": 0.583
         }
       ],
       "2024_4429963": [
@@ -302263,7 +302263,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tanook Hines",
           "team": "USC",
           "year": 2025,
-          "dist": 0.441
+          "dist": 0.442
         },
         {
           "id": "2023_4875613",
@@ -302384,7 +302384,7 @@ const COLLEGE_SCOUTING = {
           "name": "Barrett Banister",
           "team": "Missouri",
           "year": 2022,
-          "dist": 0.919
+          "dist": 0.92
         }
       ],
       "2024_4429994": [
@@ -302414,7 +302414,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tauskie Dove",
           "team": "Missouri",
           "year": 2021,
-          "dist": 1.44
+          "dist": 1.441
         },
         {
           "id": "2016_3122167",
@@ -302449,14 +302449,14 @@ const COLLEGE_SCOUTING = {
           "name": "Roc Taylor",
           "team": "Memphis",
           "year": 2024,
-          "dist": 1.484
+          "dist": 1.485
         },
         {
           "id": "2026_4871062",
           "name": "Asaad Waseem",
           "team": "Purdue",
           "year": 2026,
-          "dist": 1.491
+          "dist": 1.49
         }
       ],
       "2024_4430254": [
@@ -302514,7 +302514,7 @@ const COLLEGE_SCOUTING = {
           "name": "Joshua Cephus",
           "team": "UTSA",
           "year": 2023,
-          "dist": 0.808
+          "dist": 0.807
         },
         {
           "id": "2017_3932905",
@@ -302572,7 +302572,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tetairoa Mcmillan",
           "team": "Arizona",
           "year": 2022,
-          "dist": 1
+          "dist": 0.999
         },
         {
           "id": "2022_4575508",
@@ -302609,7 +302609,7 @@ const COLLEGE_SCOUTING = {
           "name": "Cam Phillips",
           "team": "Virginia Tech",
           "year": 2015,
-          "dist": 0.59
+          "dist": 0.591
         },
         {
           "id": "2016_532662",
@@ -302637,7 +302637,7 @@ const COLLEGE_SCOUTING = {
           "name": "Andre Baccellia",
           "team": "Washington",
           "year": 2018,
-          "dist": 0.642
+          "dist": 0.643
         },
         {
           "id": "2017_3931391",
@@ -302702,7 +302702,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jesse Matthews",
           "team": "San Diego State",
           "year": 2022,
-          "dist": 0.884
+          "dist": 0.883
         },
         {
           "id": "2022_4361556",
@@ -302760,7 +302760,7 @@ const COLLEGE_SCOUTING = {
           "name": "Andre Baccellia",
           "team": "Washington",
           "year": 2018,
-          "dist": 0.715
+          "dist": 0.716
         },
         {
           "id": "2024_4430323",
@@ -302774,14 +302774,14 @@ const COLLEGE_SCOUTING = {
           "name": "Janarion Grant",
           "team": "Rutgers",
           "year": 2015,
-          "dist": 0.734
+          "dist": 0.733
         },
         {
           "id": "2017_552062",
           "name": "Da'Mari Scott",
           "team": "Fresno State",
           "year": 2017,
-          "dist": 0.761
+          "dist": 0.762
         },
         {
           "id": "2016_3916210",
@@ -302904,7 +302904,7 @@ const COLLEGE_SCOUTING = {
           "name": "Elijah Spencer",
           "team": "Charlotte",
           "year": 2021,
-          "dist": 0.631
+          "dist": 0.63
         },
         {
           "id": "2013_534794",
@@ -302976,7 +302976,7 @@ const COLLEGE_SCOUTING = {
           "name": "Lawrence Arnold",
           "team": "Kansas",
           "year": 2023,
-          "dist": 0.459
+          "dist": 0.46
         },
         {
           "id": "2024_5088336",
@@ -303113,7 +303113,7 @@ const COLLEGE_SCOUTING = {
           "name": "Xavier Hutchinson",
           "team": "Iowa State",
           "year": 2021,
-          "dist": 0.707
+          "dist": 0.708
         },
         {
           "id": "2022_4247942",
@@ -303248,7 +303248,7 @@ const COLLEGE_SCOUTING = {
           "name": "Nick Nash",
           "team": "San José State",
           "year": 2023,
-          "dist": 0.734
+          "dist": 0.733
         }
       ],
       "2024_4430914": [
@@ -303306,7 +303306,7 @@ const COLLEGE_SCOUTING = {
           "name": "Andrew McElroy",
           "team": "Northern Illinois",
           "year": 2024,
-          "dist": 0.619
+          "dist": 0.62
         },
         {
           "id": "2013_482034",
@@ -303645,7 +303645,7 @@ const COLLEGE_SCOUTING = {
           "name": "Liam Clifford",
           "team": "Penn State",
           "year": 2024,
-          "dist": 0.624
+          "dist": 0.625
         },
         {
           "id": "2024_5085609",
@@ -303775,7 +303775,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dylan Wright",
           "team": "Minnesota",
           "year": 2022,
-          "dist": 0.535
+          "dist": 0.536
         },
         {
           "id": "2022_4366625",
@@ -303868,7 +303868,7 @@ const COLLEGE_SCOUTING = {
           "name": "Bug Howard",
           "team": "North Carolina",
           "year": 2016,
-          "dist": 0.752
+          "dist": 0.753
         },
         {
           "id": "2022_4426919",
@@ -303947,7 +303947,7 @@ const COLLEGE_SCOUTING = {
           "name": "Blair Conwright",
           "team": "North Texas",
           "year": 2024,
-          "dist": 1.112
+          "dist": 1.113
         },
         {
           "id": "2024_4685230",
@@ -304105,7 +304105,7 @@ const COLLEGE_SCOUTING = {
           "name": "Sean Ryan",
           "team": "West Virginia",
           "year": 2021,
-          "dist": 0.548
+          "dist": 0.547
         },
         {
           "id": "2022_4592835",
@@ -304235,7 +304235,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jacob Harris",
           "team": "UCF",
           "year": 2019,
-          "dist": 0.672
+          "dist": 0.673
         },
         {
           "id": "2015_516956",
@@ -304300,7 +304300,7 @@ const COLLEGE_SCOUTING = {
           "name": "Keith Kirkwood",
           "team": "Temple",
           "year": 2016,
-          "dist": 0.385
+          "dist": 0.386
         },
         {
           "id": "2018_4046692",
@@ -304409,7 +304409,7 @@ const COLLEGE_SCOUTING = {
           "name": "Roc Taylor",
           "team": "Memphis",
           "year": 2023,
-          "dist": 0.682
+          "dist": 0.683
         },
         {
           "id": "2023_4587977",
@@ -304451,7 +304451,7 @@ const COLLEGE_SCOUTING = {
           "name": "Chimere Dike",
           "team": "Florida",
           "year": 2024,
-          "dist": 1.016
+          "dist": 1.015
         },
         {
           "id": "2024_4685261",
@@ -304481,7 +304481,7 @@ const COLLEGE_SCOUTING = {
           "name": "Devonte Boyd",
           "team": "UNLV",
           "year": 2016,
-          "dist": 0.56
+          "dist": 0.559
         },
         {
           "id": "2023_5093923",
@@ -304495,7 +304495,7 @@ const COLLEGE_SCOUTING = {
           "name": "Malik Heath",
           "team": "Ole Miss",
           "year": 2022,
-          "dist": 0.854
+          "dist": 0.855
         },
         {
           "id": "2013_501138",
@@ -304581,7 +304581,7 @@ const COLLEGE_SCOUTING = {
           "name": "Smoke Harris",
           "team": "Louisiana Tech",
           "year": 2021,
-          "dist": 0.863
+          "dist": 0.862
         },
         {
           "id": "2022_4594444",
@@ -304616,7 +304616,7 @@ const COLLEGE_SCOUTING = {
           "name": "Na'eem Abdul-Rahim Gladding",
           "team": "Old Dominion",
           "year": 2025,
-          "dist": 0.928
+          "dist": 0.929
         }
       ],
       "2024_4432387": [
@@ -304653,7 +304653,7 @@ const COLLEGE_SCOUTING = {
           "name": "Mookie Cooper",
           "team": "Missouri",
           "year": 2022,
-          "dist": 0.514
+          "dist": 0.515
         },
         {
           "id": "2020_4259800",
@@ -304674,7 +304674,7 @@ const COLLEGE_SCOUTING = {
           "name": "Maurice Ffrench",
           "team": "Pittsburgh",
           "year": 2017,
-          "dist": 0.535
+          "dist": 0.536
         },
         {
           "id": "2018_4240146",
@@ -304825,7 +304825,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jermaine Burton",
           "team": "Alabama",
           "year": 2023,
-          "dist": 0.72
+          "dist": 0.719
         },
         {
           "id": "2014_504230",
@@ -304862,7 +304862,7 @@ const COLLEGE_SCOUTING = {
           "name": "T.J. Graham",
           "team": "Texas State",
           "year": 2019,
-          "dist": 0.691
+          "dist": 0.69
         },
         {
           "id": "2016_4036163",
@@ -304969,7 +304969,7 @@ const COLLEGE_SCOUTING = {
           "name": "Elijah Spencer",
           "team": "Charlotte",
           "year": 2022,
-          "dist": 0.72
+          "dist": 0.719
         },
         {
           "id": "2025_5148787",
@@ -305085,7 +305085,7 @@ const COLLEGE_SCOUTING = {
           "name": "Carrington Thompson",
           "team": "Western Michigan",
           "year": 2016,
-          "dist": 0.364
+          "dist": 0.363
         },
         {
           "id": "2021_4567044",
@@ -305113,7 +305113,7 @@ const COLLEGE_SCOUTING = {
           "name": "Reggie Roberson Jr.",
           "team": "SMU",
           "year": 2021,
-          "dist": 0.473
+          "dist": 0.474
         },
         {
           "id": "2014_530880",
@@ -305143,14 +305143,14 @@ const COLLEGE_SCOUTING = {
           "name": "Chris Durr Jr.",
           "team": "Wyoming",
           "year": 2024,
-          "dist": 0.675
+          "dist": 0.676
         },
         {
           "id": "2024_5121750",
           "name": "Yamir Knight",
           "team": "James Madison",
           "year": 2024,
-          "dist": 0.706
+          "dist": 0.707
         },
         {
           "id": "2026_4812474",
@@ -305287,7 +305287,7 @@ const COLLEGE_SCOUTING = {
           "name": "Matthew Golden",
           "team": "Houston",
           "year": 2022,
-          "dist": 0.415
+          "dist": 0.414
         },
         {
           "id": "2022_4429981",
@@ -305345,7 +305345,7 @@ const COLLEGE_SCOUTING = {
           "name": "Daniel McKinney",
           "team": "Florida Atlantic",
           "year": 2013,
-          "dist": 0.765
+          "dist": 0.766
         },
         {
           "id": "2020_4241004",
@@ -305401,7 +305401,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ronnie Bell",
           "team": "Michigan",
           "year": 2022,
-          "dist": 0.957
+          "dist": 0.956
         },
         {
           "id": "2016_532662",
@@ -305524,7 +305524,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ahmari Huggins-Bruce",
           "team": "Louisville",
           "year": 2021,
-          "dist": 0.575
+          "dist": 0.574
         },
         {
           "id": "2023_4683227",
@@ -305617,14 +305617,14 @@ const COLLEGE_SCOUTING = {
           "name": "Shane Williams-Rhodes",
           "team": "Boise State",
           "year": 2014,
-          "dist": 1.26
+          "dist": 1.261
         },
         {
           "id": "2023_5084135",
           "name": "Pofele Ashlock",
           "team": "Hawai'i",
           "year": 2023,
-          "dist": 1.316
+          "dist": 1.317
         }
       ],
       "2024_4570132": [
@@ -305640,7 +305640,7 @@ const COLLEGE_SCOUTING = {
           "name": "Lawrence Arnold",
           "team": "Kansas",
           "year": 2023,
-          "dist": 0.471
+          "dist": 0.472
         },
         {
           "id": "2022_4431268",
@@ -305819,7 +305819,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jake Herslow",
           "team": "Houston",
           "year": 2021,
-          "dist": 0.559
+          "dist": 0.56
         },
         {
           "id": "2024_5103852",
@@ -305833,7 +305833,7 @@ const COLLEGE_SCOUTING = {
           "name": "Andrew Erickson",
           "team": "New Mexico",
           "year": 2023,
-          "dist": 0.575
+          "dist": 0.576
         },
         {
           "id": "2013_487827",
@@ -305870,7 +305870,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jaden Greathouse",
           "team": "Notre Dame",
           "year": 2023,
-          "dist": 0.534
+          "dist": 0.535
         },
         {
           "id": "2013_481179",
@@ -305898,7 +305898,7 @@ const COLLEGE_SCOUTING = {
           "name": "Myles Butler",
           "team": "Middle Tennessee",
           "year": 2024,
-          "dist": 0.591
+          "dist": 0.59
         },
         {
           "id": "2023_4428666",
@@ -305977,7 +305977,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jake Bailey",
           "team": "SMU",
           "year": 2023,
-          "dist": 0.689
+          "dist": 0.688
         },
         {
           "id": "2024_4430914",
@@ -306049,14 +306049,14 @@ const COLLEGE_SCOUTING = {
           "name": "Malik Williams",
           "team": "App State",
           "year": 2021,
-          "dist": 0.556
+          "dist": 0.557
         },
         {
           "id": "2013_484061",
           "name": "Jordan James",
           "team": "Tulsa",
           "year": 2013,
-          "dist": 0.603
+          "dist": 0.602
         }
       ],
       "2024_4571194": [
@@ -306179,7 +306179,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kwamie Lassiter II",
           "team": "Kansas",
           "year": 2021,
-          "dist": 1.056
+          "dist": 1.055
         },
         {
           "id": "2024_4837200",
@@ -306193,14 +306193,14 @@ const COLLEGE_SCOUTING = {
           "name": "Scott Miller",
           "team": "Bowling Green",
           "year": 2017,
-          "dist": 1.079
+          "dist": 1.078
         },
         {
           "id": "2015_531076",
           "name": "Daje Johnson",
           "team": "Texas",
           "year": 2015,
-          "dist": 1.101
+          "dist": 1.1
         }
       ],
       "2024_4571935": [
@@ -306223,7 +306223,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jahan Dotson",
           "team": "Penn State",
           "year": 2019,
-          "dist": 0.414
+          "dist": 0.413
         },
         {
           "id": "2022_4373662",
@@ -306302,7 +306302,7 @@ const COLLEGE_SCOUTING = {
           "name": "Eli Pancol",
           "team": "Duke",
           "year": 2024,
-          "dist": 0.525
+          "dist": 0.524
         },
         {
           "id": "2024_4426454",
@@ -306381,7 +306381,7 @@ const COLLEGE_SCOUTING = {
           "name": "Shamar Porter",
           "team": "UConn",
           "year": 2026,
-          "dist": 0.578
+          "dist": 0.579
         },
         {
           "id": "2016_4039050",
@@ -306532,7 +306532,7 @@ const COLLEGE_SCOUTING = {
           "name": "Chris Black",
           "team": "Missouri",
           "year": 2016,
-          "dist": 0.571
+          "dist": 0.57
         },
         {
           "id": "2019_4040623",
@@ -306546,7 +306546,7 @@ const COLLEGE_SCOUTING = {
           "name": "Titus Mokiao-Atimalala",
           "team": "UCLA",
           "year": 2024,
-          "dist": 0.6
+          "dist": 0.599
         },
         {
           "id": "2018_4244649",
@@ -306604,14 +306604,14 @@ const COLLEGE_SCOUTING = {
           "name": "Rico Flores",
           "team": "Notre Dame",
           "year": 2023,
-          "dist": 0.456
+          "dist": 0.457
         },
         {
           "id": "2021_4393324",
           "name": "Isaiah Esdale",
           "team": "West Virginia",
           "year": 2021,
-          "dist": 0.484
+          "dist": 0.483
         },
         {
           "id": "2017_3922131",
@@ -306720,7 +306720,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jaray Jenkins",
           "team": "LSU",
           "year": 2022,
-          "dist": 0.76
+          "dist": 0.759
         },
         {
           "id": "2018_3921729",
@@ -306755,14 +306755,14 @@ const COLLEGE_SCOUTING = {
           "name": "Alex Perry",
           "team": "Hawai'i",
           "year": 2023,
-          "dist": 1.122
+          "dist": 1.123
         },
         {
           "id": "2017_4035493",
           "name": "Nate Craig-Myers",
           "team": "Auburn",
           "year": 2017,
-          "dist": 1.123
+          "dist": 1.124
         },
         {
           "id": "2024_4870922",
@@ -306792,7 +306792,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kevin Ozier",
           "team": "Arizona State",
           "year": 2013,
-          "dist": 0.473
+          "dist": 0.474
         },
         {
           "id": "2024_4570190",
@@ -306827,7 +306827,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kelvontay Dixon",
           "team": "SMU",
           "year": 2024,
-          "dist": 0.624
+          "dist": 0.625
         },
         {
           "id": "2013_517570",
@@ -306841,7 +306841,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dylan Goffney",
           "team": "SMU",
           "year": 2022,
-          "dist": 0.661
+          "dist": 0.66
         },
         {
           "id": "2024_5085609",
@@ -306892,21 +306892,21 @@ const COLLEGE_SCOUTING = {
           "name": "Keke Coutee",
           "team": "Texas Tech",
           "year": 2016,
-          "dist": 0.616
+          "dist": 0.615
         },
         {
           "id": "2023_4431487",
           "name": "Savion Williams",
           "team": "TCU",
           "year": 2023,
-          "dist": 0.629
+          "dist": 0.628
         },
         {
           "id": "2022_4429205",
           "name": "Jordan Addison",
           "team": "USC",
           "year": 2022,
-          "dist": 0.63
+          "dist": 0.631
         },
         {
           "id": "2019_4243319",
@@ -307043,7 +307043,7 @@ const COLLEGE_SCOUTING = {
           "name": "LaDarius Brown",
           "team": "TCU",
           "year": 2013,
-          "dist": 0.443
+          "dist": 0.442
         },
         {
           "id": "2019_4257599",
@@ -307094,7 +307094,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jameson Tucker",
           "team": "Coastal Carolina",
           "year": 2024,
-          "dist": 0.792
+          "dist": 0.793
         },
         {
           "id": "2024_5079376",
@@ -307136,7 +307136,7 @@ const COLLEGE_SCOUTING = {
           "name": "Mario Hull",
           "team": "Rice",
           "year": 2014,
-          "dist": 0.941
+          "dist": 0.942
         }
       ],
       "2024_4600981": [
@@ -307245,7 +307245,7 @@ const COLLEGE_SCOUTING = {
           "name": "Alec Pierce",
           "team": "Cincinnati",
           "year": 2020,
-          "dist": 1.02
+          "dist": 1.021
         },
         {
           "id": "2021_4426383",
@@ -307403,7 +307403,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dredrick Snelson",
           "team": "UCF",
           "year": 2018,
-          "dist": 0.577
+          "dist": 0.576
         },
         {
           "id": "2020_4430323",
@@ -307705,7 +307705,7 @@ const COLLEGE_SCOUTING = {
           "name": "Zae Baines",
           "team": "Temple",
           "year": 2023,
-          "dist": 0.401
+          "dist": 0.4
         },
         {
           "id": "2025_4870929",
@@ -307728,7 +307728,7 @@ const COLLEGE_SCOUTING = {
           "name": "Monaray Baldwin",
           "team": "Baylor",
           "year": 2024,
-          "dist": 0.397
+          "dist": 0.398
         },
         {
           "id": "2024_4431468",
@@ -307835,14 +307835,14 @@ const COLLEGE_SCOUTING = {
           "name": "Fransohn Bickley",
           "team": "Akron",
           "year": 2013,
-          "dist": 0.95
+          "dist": 0.949
         },
         {
           "id": "2018_4252364",
           "name": "Kyle Williams",
           "team": "Arizona State",
           "year": 2018,
-          "dist": 0.958
+          "dist": 0.957
         },
         {
           "id": "2023_4603746",
@@ -307886,7 +307886,7 @@ const COLLEGE_SCOUTING = {
           "name": "Drake Stoops",
           "team": "Oklahoma",
           "year": 2022,
-          "dist": 0.519
+          "dist": 0.518
         },
         {
           "id": "2023_4596439",
@@ -307958,7 +307958,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jalen McCleskey",
           "team": "Oklahoma State",
           "year": 2017,
-          "dist": 0.507
+          "dist": 0.506
         },
         {
           "id": "2024_4608793",
@@ -308030,7 +308030,7 @@ const COLLEGE_SCOUTING = {
           "name": "Hank Beatty",
           "team": "Illinois",
           "year": 2025,
-          "dist": 1.129
+          "dist": 1.128
         },
         {
           "id": "2024_5093923",
@@ -308044,7 +308044,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kendall Hinton",
           "team": "Wake Forest",
           "year": 2019,
-          "dist": 1.336
+          "dist": 1.335
         },
         {
           "id": "2021_4245639",
@@ -308072,7 +308072,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kaedin Robinson",
           "team": "App State",
           "year": 2024,
-          "dist": 1.568
+          "dist": 1.567
         }
       ],
       "2024_4683221": [
@@ -308095,7 +308095,7 @@ const COLLEGE_SCOUTING = {
           "name": "Stacy Coley",
           "team": "Miami",
           "year": 2013,
-          "dist": 0.632
+          "dist": 0.631
         },
         {
           "id": "2013_513039",
@@ -308116,7 +308116,7 @@ const COLLEGE_SCOUTING = {
           "name": "Nigel King",
           "team": "Maryland",
           "year": 2013,
-          "dist": 0.746
+          "dist": 0.747
         },
         {
           "id": "2016_551050",
@@ -308209,7 +308209,7 @@ const COLLEGE_SCOUTING = {
           "name": "C.J. Daniels",
           "team": "LSU",
           "year": 2024,
-          "dist": 0.688
+          "dist": 0.689
         },
         {
           "id": "2022_4426343",
@@ -308346,7 +308346,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tray Taylor",
           "team": "Troy",
           "year": 2025,
-          "dist": 0.514
+          "dist": 0.515
         },
         {
           "id": "2019_4249422",
@@ -308418,7 +308418,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kelly Akharaiyi",
           "team": "UTEP",
           "year": 2023,
-          "dist": 2.009
+          "dist": 2.01
         },
         {
           "id": "2022_4570105",
@@ -308476,7 +308476,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jaron Glover",
           "team": "Michigan State",
           "year": 2023,
-          "dist": 0.93
+          "dist": 0.931
         },
         {
           "id": "2022_4361351",
@@ -308541,7 +308541,7 @@ const COLLEGE_SCOUTING = {
           "name": "Blake Proehl",
           "team": "East Carolina",
           "year": 2020,
-          "dist": 0.692
+          "dist": 0.693
         },
         {
           "id": "2019_4241004",
@@ -308648,7 +308648,7 @@ const COLLEGE_SCOUTING = {
           "name": "Steve Ishmael",
           "team": "Syracuse",
           "year": 2016,
-          "dist": 0.507
+          "dist": 0.506
         }
       ],
       "2024_4685230": [
@@ -308678,7 +308678,7 @@ const COLLEGE_SCOUTING = {
           "name": "De'Zhaun Stribling",
           "team": "Washington State",
           "year": 2021,
-          "dist": 1.086
+          "dist": 1.087
         },
         {
           "id": "2024_4431234",
@@ -308706,21 +308706,21 @@ const COLLEGE_SCOUTING = {
           "name": "Dalton Stroman",
           "team": "App State",
           "year": 2024,
-          "dist": 1.227
+          "dist": 1.226
         },
         {
           "id": "2023_4687507",
           "name": "Kobe Drake",
           "team": "Memphis",
           "year": 2023,
-          "dist": 1.303
+          "dist": 1.304
         },
         {
           "id": "2024_4426459",
           "name": "Chase Lane",
           "team": "Georgia Tech",
           "year": 2024,
-          "dist": 1.311
+          "dist": 1.31
         }
       ],
       "2024_4685297": [
@@ -308729,7 +308729,7 @@ const COLLEGE_SCOUTING = {
           "name": "Silas Bolden",
           "team": "Oregon State",
           "year": 2022,
-          "dist": 0.519
+          "dist": 0.52
         },
         {
           "id": "2018_4048099",
@@ -308801,7 +308801,7 @@ const COLLEGE_SCOUTING = {
           "name": "Anthony Rice",
           "team": "Central Michigan",
           "year": 2015,
-          "dist": 0.684
+          "dist": 0.683
         },
         {
           "id": "2022_4433830",
@@ -308857,14 +308857,14 @@ const COLLEGE_SCOUTING = {
           "name": "Malcome Kennedy",
           "team": "Texas A&M",
           "year": 2013,
-          "dist": 0.898
+          "dist": 0.897
         },
         {
           "id": "2024_4608793",
           "name": "Jabre Barber",
           "team": "Texas A&M",
           "year": 2024,
-          "dist": 0.899
+          "dist": 0.9
         }
       ],
       "2024_4685565": [
@@ -308887,7 +308887,7 @@ const COLLEGE_SCOUTING = {
           "name": "Lawrence Cager",
           "team": "Georgia",
           "year": 2019,
-          "dist": 0.393
+          "dist": 0.392
         },
         {
           "id": "2014_517290",
@@ -308945,7 +308945,7 @@ const COLLEGE_SCOUTING = {
           "name": "Daniel Jackson",
           "team": "Minnesota",
           "year": 2021,
-          "dist": 0.62
+          "dist": 0.621
         },
         {
           "id": "2013_487625",
@@ -309096,7 +309096,7 @@ const COLLEGE_SCOUTING = {
           "name": "DeAndre Thompkins",
           "team": "Penn State",
           "year": 2016,
-          "dist": 0.385
+          "dist": 0.386
         },
         {
           "id": "2022_4373628",
@@ -309282,7 +309282,7 @@ const COLLEGE_SCOUTING = {
           "name": "Austin Ogunmakin",
           "team": "North Texas",
           "year": 2020,
-          "dist": 0.515
+          "dist": 0.516
         },
         {
           "id": "2025_4837269",
@@ -309405,7 +309405,7 @@ const COLLEGE_SCOUTING = {
           "name": "Harrison Wallace III",
           "team": "Ole Miss",
           "year": 2025,
-          "dist": 0.471
+          "dist": 0.47
         },
         {
           "id": "2016_3124028",
@@ -309549,7 +309549,7 @@ const COLLEGE_SCOUTING = {
           "name": "James Butler",
           "team": "Louisiana",
           "year": 2013,
-          "dist": 0.501
+          "dist": 0.5
         },
         {
           "id": "2018_4259749",
@@ -309679,7 +309679,7 @@ const COLLEGE_SCOUTING = {
           "name": "Sean Brown",
           "team": "Charlotte",
           "year": 2025,
-          "dist": 0.637
+          "dist": 0.636
         },
         {
           "id": "2023_4429684",
@@ -309851,7 +309851,7 @@ const COLLEGE_SCOUTING = {
           "name": "Chris Olave",
           "team": "Ohio State",
           "year": 2019,
-          "dist": 0.654
+          "dist": 0.653
         },
         {
           "id": "2017_547253",
@@ -309872,7 +309872,7 @@ const COLLEGE_SCOUTING = {
           "name": "Eric Singleton Jr.",
           "team": "Georgia Tech",
           "year": 2023,
-          "dist": 0.708
+          "dist": 0.709
         }
       ],
       "2024_4701951": [
@@ -309923,7 +309923,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dyami Brown",
           "team": "North Carolina",
           "year": 2020,
-          "dist": 0.777
+          "dist": 0.778
         },
         {
           "id": "2018_4242540",
@@ -309944,7 +309944,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jameson Williams",
           "team": "Alabama",
           "year": 2021,
-          "dist": 0.887
+          "dist": 0.886
         }
       ],
       "2024_4702560": [
@@ -310016,7 +310016,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kendrick Edwards",
           "team": "Arkansas State",
           "year": 2017,
-          "dist": 0.49
+          "dist": 0.489
         }
       ],
       "2024_4702830": [
@@ -310348,7 +310348,7 @@ const COLLEGE_SCOUTING = {
           "name": "Keyshawn Smith",
           "team": "SMU",
           "year": 2024,
-          "dist": 0.397
+          "dist": 0.398
         },
         {
           "id": "2020_4047555",
@@ -310434,7 +310434,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jeremy Gallon",
           "team": "Michigan",
           "year": 2013,
-          "dist": 1.494
+          "dist": 1.495
         },
         {
           "id": "2022_4689988",
@@ -310448,7 +310448,7 @@ const COLLEGE_SCOUTING = {
           "name": "Luke Floriea",
           "team": "Kent State",
           "year": 2024,
-          "dist": 1.519
+          "dist": 1.52
         }
       ],
       "2024_4710344": [
@@ -310543,7 +310543,7 @@ const COLLEGE_SCOUTING = {
           "name": "J.J. Jones",
           "team": "North Carolina",
           "year": 2024,
-          "dist": 0.792
+          "dist": 0.793
         },
         {
           "id": "2021_4429479",
@@ -310673,7 +310673,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jadon Haselwood",
           "team": "Arkansas",
           "year": 2022,
-          "dist": 0.713
+          "dist": 0.714
         },
         {
           "id": "2016_532662",
@@ -310722,7 +310722,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ryan Davis",
           "team": "Utah",
           "year": 2025,
-          "dist": 0.942
+          "dist": 0.941
         },
         {
           "id": "2019_4241012",
@@ -310736,7 +310736,7 @@ const COLLEGE_SCOUTING = {
           "name": "Josh Stewart",
           "team": "Oklahoma State",
           "year": 2013,
-          "dist": 0.972
+          "dist": 0.971
         }
       ],
       "2024_4711055": [
@@ -310794,7 +310794,7 @@ const COLLEGE_SCOUTING = {
           "name": "Calvin Ridley",
           "team": "Alabama",
           "year": 2017,
-          "dist": 1.308
+          "dist": 1.307
         },
         {
           "id": "2021_4244833",
@@ -310808,7 +310808,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jack Sorenson",
           "team": "Miami (OH)",
           "year": 2018,
-          "dist": 1.352
+          "dist": 1.351
         }
       ],
       "2024_4711408": [
@@ -310852,14 +310852,14 @@ const COLLEGE_SCOUTING = {
           "name": "Jamari Staples",
           "team": "UAB",
           "year": 2013,
-          "dist": 0.566
+          "dist": 0.567
         },
         {
           "id": "2022_5084181",
           "name": "Kordell David",
           "team": "New Mexico State",
           "year": 2022,
-          "dist": 0.593
+          "dist": 0.594
         },
         {
           "id": "2022_4428063",
@@ -311017,7 +311017,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tony Lippett",
           "team": "Michigan State",
           "year": 2013,
-          "dist": 0.893
+          "dist": 0.894
         },
         {
           "id": "2022_4689334",
@@ -311061,7 +311061,7 @@ const COLLEGE_SCOUTING = {
           "name": "Elijah Canion",
           "team": "Liberty",
           "year": 2024,
-          "dist": 0.762
+          "dist": 0.761
         },
         {
           "id": "2024_5083748",
@@ -311112,7 +311112,7 @@ const COLLEGE_SCOUTING = {
           "name": "Bralon Addison",
           "team": "Oregon",
           "year": 2013,
-          "dist": 1.011
+          "dist": 1.01
         },
         {
           "id": "2024_5121750",
@@ -311147,7 +311147,7 @@ const COLLEGE_SCOUTING = {
           "name": "Fred Lee",
           "team": "Buffalo",
           "year": 2013,
-          "dist": 1.193
+          "dist": 1.192
         },
         {
           "id": "2023_4590532",
@@ -311219,7 +311219,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kameron Brown",
           "team": "Coastal Carolina",
           "year": 2021,
-          "dist": 0.512
+          "dist": 0.513
         },
         {
           "id": "2023_4683227",
@@ -311356,7 +311356,7 @@ const COLLEGE_SCOUTING = {
           "name": "Bud Sasser",
           "team": "Missouri",
           "year": 2013,
-          "dist": 0.594
+          "dist": 0.595
         },
         {
           "id": "2016_3124610",
@@ -311579,14 +311579,14 @@ const COLLEGE_SCOUTING = {
           "name": "Cam Johnson",
           "team": "Vanderbilt",
           "year": 2020,
-          "dist": 1.005
+          "dist": 1.006
         },
         {
           "id": "2025_4570132",
           "name": "Ryan Davis",
           "team": "Utah",
           "year": 2025,
-          "dist": 1.01
+          "dist": 1.009
         },
         {
           "id": "2024_4571563",
@@ -311716,7 +311716,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tetairoa Mcmillan",
           "team": "Arizona",
           "year": 2022,
-          "dist": 0.696
+          "dist": 0.697
         },
         {
           "id": "2024_4433855",
@@ -311737,7 +311737,7 @@ const COLLEGE_SCOUTING = {
           "name": "Mario Hull",
           "team": "Rice",
           "year": 2014,
-          "dist": 0.774
+          "dist": 0.773
         },
         {
           "id": "2024_4710765",
@@ -311911,7 +311911,7 @@ const COLLEGE_SCOUTING = {
           "name": "Chris Bellamy",
           "team": "New Mexico State",
           "year": 2023,
-          "dist": 0.389
+          "dist": 0.388
         },
         {
           "id": "2021_4246920",
@@ -311939,7 +311939,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tray Taylor",
           "team": "Coastal Carolina",
           "year": 2024,
-          "dist": 0.441
+          "dist": 0.44
         },
         {
           "id": "2024_5151982",
@@ -311969,7 +311969,7 @@ const COLLEGE_SCOUTING = {
           "name": "Elic Ayomanor",
           "team": "Stanford",
           "year": 2023,
-          "dist": 0.907
+          "dist": 0.906
         },
         {
           "id": "2023_5082630",
@@ -311997,7 +311997,7 @@ const COLLEGE_SCOUTING = {
           "name": "Makai Jackson",
           "team": "Liberty",
           "year": 2026,
-          "dist": 1.159
+          "dist": 1.16
         },
         {
           "id": "2013_480908",
@@ -312007,17 +312007,17 @@ const COLLEGE_SCOUTING = {
           "dist": 1.276
         },
         {
-          "id": "2013_504757",
-          "name": "Josh Huff",
-          "team": "Oregon",
-          "year": 2013,
-          "dist": 1.284
-        },
-        {
           "id": "2023_5082289",
           "name": "Kelly Akharaiyi",
           "team": "UTEP",
           "year": 2023,
+          "dist": 1.284
+        },
+        {
+          "id": "2013_504757",
+          "name": "Josh Huff",
+          "team": "Oregon",
+          "year": 2013,
           "dist": 1.284
         },
         {
@@ -312083,7 +312083,7 @@ const COLLEGE_SCOUTING = {
           "name": "Mark Chapman",
           "team": "Central Michigan",
           "year": 2015,
-          "dist": 0.685
+          "dist": 0.684
         },
         {
           "id": "2017_3917067",
@@ -312302,17 +312302,17 @@ const COLLEGE_SCOUTING = {
           "dist": 0.527
         },
         {
-          "id": "2017_3125293",
-          "name": "Justin Holmes",
-          "team": "San José State",
-          "year": 2017,
-          "dist": 0.535
-        },
-        {
           "id": "2014_3126329",
           "name": "Garrett Johnson",
           "team": "Kentucky",
           "year": 2014,
+          "dist": 0.535
+        },
+        {
+          "id": "2017_3125293",
+          "name": "Justin Holmes",
+          "team": "San José State",
+          "year": 2017,
           "dist": 0.535
         },
         {
@@ -312673,14 +312673,14 @@ const COLLEGE_SCOUTING = {
           "name": "Blair Conwright",
           "team": "TCU",
           "year": 2021,
-          "dist": 0.994
+          "dist": 0.993
         },
         {
           "id": "2017_4035493",
           "name": "Nate Craig-Myers",
           "team": "Auburn",
           "year": 2017,
-          "dist": 1.044
+          "dist": 1.045
         }
       ],
       "2024_4870929": [
@@ -312717,7 +312717,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jonah Dawson",
           "team": "Air Force",
           "year": 2025,
-          "dist": 0.498
+          "dist": 0.497
         },
         {
           "id": "2021_4361520",
@@ -312775,7 +312775,7 @@ const COLLEGE_SCOUTING = {
           "name": "Danny Davis III",
           "team": "Wisconsin",
           "year": 2019,
-          "dist": 0.578
+          "dist": 0.577
         },
         {
           "id": "2013_522923",
@@ -312889,7 +312889,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jacolby George",
           "team": "Miami",
           "year": 2024,
-          "dist": 0.878
+          "dist": 0.877
         },
         {
           "id": "2022_4243001",
@@ -312912,14 +312912,14 @@ const COLLEGE_SCOUTING = {
           "name": "Sam Brown",
           "team": "Houston",
           "year": 2023,
-          "dist": 0.873
+          "dist": 0.872
         },
         {
           "id": "2023_4431597",
           "name": "Roc Taylor",
           "team": "Memphis",
           "year": 2023,
-          "dist": 1.05
+          "dist": 1.049
         },
         {
           "id": "2024_4685424",
@@ -312984,7 +312984,7 @@ const COLLEGE_SCOUTING = {
           "name": "Colbie Young",
           "team": "Georgia",
           "year": 2025,
-          "dist": 0.31
+          "dist": 0.309
         },
         {
           "id": "2017_4055165",
@@ -313026,14 +313026,14 @@ const COLLEGE_SCOUTING = {
           "name": "Chandler Worthy",
           "team": "Troy",
           "year": 2013,
-          "dist": 0.442
+          "dist": 0.443
         },
         {
           "id": "2024_5218633",
           "name": "Ryan Wingo",
           "team": "Texas",
           "year": 2024,
-          "dist": 0.475
+          "dist": 0.474
         },
         {
           "id": "2025_4870929",
@@ -313098,7 +313098,7 @@ const COLLEGE_SCOUTING = {
           "name": "BJ Johnson III",
           "team": "Georgia Southern",
           "year": 2016,
-          "dist": 1.171
+          "dist": 1.172
         },
         {
           "id": "2024_4711055",
@@ -313121,7 +313121,7 @@ const COLLEGE_SCOUTING = {
           "name": "KJ Duff",
           "team": "Rutgers",
           "year": 2024,
-          "dist": 1.218
+          "dist": 1.217
         },
         {
           "id": "2013_487561",
@@ -313142,7 +313142,7 @@ const COLLEGE_SCOUTING = {
           "name": "Quron Pratt",
           "team": "Rutgers",
           "year": 2013,
-          "dist": 1.415
+          "dist": 1.414
         },
         {
           "id": "2024_4370170",
@@ -313163,7 +313163,7 @@ const COLLEGE_SCOUTING = {
           "name": "Devin Voisin",
           "team": "South Alabama",
           "year": 2024,
-          "dist": 1.53
+          "dist": 1.529
         },
         {
           "id": "2022_4572454",
@@ -313184,7 +313184,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jaxon Shipley",
           "team": "Texas",
           "year": 2013,
-          "dist": 1.598
+          "dist": 1.597
         }
       ],
       "2024_4877558": [
@@ -313272,7 +313272,7 @@ const COLLEGE_SCOUTING = {
           "name": "Cadarrius Thompson",
           "team": "Georgia State",
           "year": 2023,
-          "dist": 0.369
+          "dist": 0.368
         },
         {
           "id": "2024_4426965",
@@ -313314,14 +313314,14 @@ const COLLEGE_SCOUTING = {
           "name": "Adam Jones",
           "team": "Arkansas State",
           "year": 2024,
-          "dist": 0.591
+          "dist": 0.59
         },
         {
           "id": "2021_4037433",
           "name": "Jake Herslow",
           "team": "Houston",
           "year": 2021,
-          "dist": 0.594
+          "dist": 0.593
         },
         {
           "id": "2022_5084181",
@@ -313386,7 +313386,7 @@ const COLLEGE_SCOUTING = {
           "name": "Trenton Irwin",
           "team": "Stanford",
           "year": 2016,
-          "dist": 0.942
+          "dist": 0.941
         },
         {
           "id": "2014_530455",
@@ -313458,14 +313458,14 @@ const COLLEGE_SCOUTING = {
           "name": "Jamill Williams",
           "team": "Jacksonville State",
           "year": 2026,
-          "dist": 1.412
+          "dist": 1.411
         },
         {
           "id": "2019_4362034",
           "name": "Justin Garrett",
           "team": "UTEP",
           "year": 2019,
-          "dist": 1.421
+          "dist": 1.422
         },
         {
           "id": "2017_3123075",
@@ -313502,7 +313502,7 @@ const COLLEGE_SCOUTING = {
           "name": "Petey Tucker",
           "team": "Georgia State",
           "year": 2024,
-          "dist": 0.547
+          "dist": 0.548
         },
         {
           "id": "2013_385663",
@@ -313523,7 +313523,7 @@ const COLLEGE_SCOUTING = {
           "name": "Bud Sasser",
           "team": "Missouri",
           "year": 2013,
-          "dist": 0.628
+          "dist": 0.627
         },
         {
           "id": "2024_4692972",
@@ -313595,7 +313595,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tyler Johnson",
           "team": "Minnesota",
           "year": 2019,
-          "dist": 1.586
+          "dist": 1.587
         },
         {
           "id": "2020_4361029",
@@ -313697,14 +313697,14 @@ const COLLEGE_SCOUTING = {
           "name": "Michael Thomas",
           "team": "Ohio State",
           "year": 2015,
-          "dist": 0.92
+          "dist": 0.919
         },
         {
           "id": "2015_559754",
           "name": "Malachi Dupre",
           "team": "LSU",
           "year": 2015,
-          "dist": 0.979
+          "dist": 0.978
         },
         {
           "id": "2014_546744",
@@ -313776,7 +313776,7 @@ const COLLEGE_SCOUTING = {
           "name": "Sammie Coates",
           "team": "Auburn",
           "year": 2013,
-          "dist": 1.833
+          "dist": 1.832
         },
         {
           "id": "2022_4428678",
@@ -313797,7 +313797,7 @@ const COLLEGE_SCOUTING = {
           "name": "C.J. Daniels",
           "team": "Liberty",
           "year": 2023,
-          "dist": 2.359
+          "dist": 2.36
         },
         {
           "id": "2017_3126264",
@@ -313811,7 +313811,7 @@ const COLLEGE_SCOUTING = {
           "name": "Bradyn Anderson",
           "team": "Army",
           "year": 2025,
-          "dist": 2.479
+          "dist": 2.478
         },
         {
           "id": "2013_503036",
@@ -313825,14 +313825,14 @@ const COLLEGE_SCOUTING = {
           "name": "Benjamin Waters",
           "team": "Air Force",
           "year": 2019,
-          "dist": 2.579
+          "dist": 2.58
         },
         {
           "id": "2024_5178972",
           "name": "Jakobie Keeney-James",
           "team": "Massachusetts",
           "year": 2024,
-          "dist": 2.637
+          "dist": 2.638
         }
       ],
       "2024_4880079": [
@@ -313855,7 +313855,7 @@ const COLLEGE_SCOUTING = {
           "name": "Wesley Grimes",
           "team": "NC State",
           "year": 2024,
-          "dist": 0.432
+          "dist": 0.433
         },
         {
           "id": "2020_4037624",
@@ -313999,7 +313999,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ricardo Louis",
           "team": "Auburn",
           "year": 2013,
-          "dist": 0.433
+          "dist": 0.432
         },
         {
           "id": "2016_533196",
@@ -314048,7 +314048,7 @@ const COLLEGE_SCOUTING = {
           "name": "Taye Barber",
           "team": "TCU",
           "year": 2018,
-          "dist": 0.647
+          "dist": 0.648
         }
       ],
       "2024_4883912": [
@@ -314099,14 +314099,14 @@ const COLLEGE_SCOUTING = {
           "name": "Petey Tucker",
           "team": "Georgia State",
           "year": 2024,
-          "dist": 0.61
+          "dist": 0.609
         },
         {
           "id": "2024_4430914",
           "name": "Lawrence Arnold",
           "team": "Kansas",
           "year": 2024,
-          "dist": 0.619
+          "dist": 0.62
         },
         {
           "id": "2024_4879562",
@@ -314215,7 +314215,7 @@ const COLLEGE_SCOUTING = {
           "name": "Arian Smith",
           "team": "Georgia",
           "year": 2024,
-          "dist": 0.727
+          "dist": 0.726
         },
         {
           "id": "2017_3916204",
@@ -314250,7 +314250,7 @@ const COLLEGE_SCOUTING = {
           "name": "Anthony Smith",
           "team": "East Carolina",
           "year": 2024,
-          "dist": 0.83
+          "dist": 0.831
         },
         {
           "id": "2013_531670",
@@ -314264,7 +314264,7 @@ const COLLEGE_SCOUTING = {
           "name": "Damien Alford",
           "team": "Syracuse",
           "year": 2023,
-          "dist": 0.882
+          "dist": 0.883
         }
       ],
       "2024_4900879": [
@@ -314308,7 +314308,7 @@ const COLLEGE_SCOUTING = {
           "name": "Corey Coleman",
           "team": "Baylor",
           "year": 2013,
-          "dist": 0.485
+          "dist": 0.484
         },
         {
           "id": "2023_4570132",
@@ -314373,7 +314373,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tony Johnson",
           "team": "Florida Atlantic",
           "year": 2022,
-          "dist": 0.764
+          "dist": 0.765
         },
         {
           "id": "2024_4877664",
@@ -314394,7 +314394,7 @@ const COLLEGE_SCOUTING = {
           "name": "Cameron Posey",
           "team": "Purdue",
           "year": 2013,
-          "dist": 0.787
+          "dist": 0.788
         },
         {
           "id": "2013_499832",
@@ -314489,7 +314489,7 @@ const COLLEGE_SCOUTING = {
           "name": "Trent Hudson",
           "team": "New Mexico State",
           "year": 2023,
-          "dist": 1.008
+          "dist": 1.007
         },
         {
           "id": "2022_4362650",
@@ -314517,21 +314517,21 @@ const COLLEGE_SCOUTING = {
           "name": "Tetairoa Mcmillan",
           "team": "Arizona",
           "year": 2022,
-          "dist": 1.312
+          "dist": 1.313
         },
         {
           "id": "2022_4686271",
           "name": "Robert Lewis",
           "team": "Georgia State",
           "year": 2022,
-          "dist": 1.358
+          "dist": 1.359
         },
         {
           "id": "2024_4430270",
           "name": "Jay Maclin",
           "team": "Kentucky",
           "year": 2024,
-          "dist": 1.368
+          "dist": 1.369
         },
         {
           "id": "2020_4240176",
@@ -314552,7 +314552,7 @@ const COLLEGE_SCOUTING = {
           "name": "Brandon Edward Johnson",
           "team": "UCF",
           "year": 2021,
-          "dist": 1.439
+          "dist": 1.44
         }
       ],
       "2024_4912067": [
@@ -314624,7 +314624,7 @@ const COLLEGE_SCOUTING = {
           "name": "Harrison Wallace III",
           "team": "Penn State",
           "year": 2024,
-          "dist": 0.977
+          "dist": 0.976
         }
       ],
       "2024_4914830": [
@@ -314722,17 +314722,17 @@ const COLLEGE_SCOUTING = {
           "dist": 0.413
         },
         {
-          "id": "2025_5141975",
-          "name": "Tanook Hines",
-          "team": "USC",
-          "year": 2025,
-          "dist": 0.496
-        },
-        {
           "id": "2023_4875613",
           "name": "Dean Patterson",
           "team": "Florida International",
           "year": 2023,
+          "dist": 0.496
+        },
+        {
+          "id": "2025_5141975",
+          "name": "Tanook Hines",
+          "team": "USC",
+          "year": 2025,
           "dist": 0.496
         },
         {
@@ -314819,7 +314819,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tyson Davis",
           "team": "Central Michigan",
           "year": 2023,
-          "dist": 0.57
+          "dist": 0.569
         },
         {
           "id": "2018_3919510",
@@ -314993,7 +314993,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kelvontay Dixon",
           "team": "SMU",
           "year": 2023,
-          "dist": 0.547
+          "dist": 0.546
         },
         {
           "id": "2024_4870912",
@@ -315035,14 +315035,14 @@ const COLLEGE_SCOUTING = {
           "name": "Carl Chester",
           "team": "Marshall",
           "year": 2024,
-          "dist": 0.711
+          "dist": 0.712
         },
         {
           "id": "2013_503832",
           "name": "Brandon Coleman",
           "team": "Rutgers",
           "year": 2013,
-          "dist": 0.742
+          "dist": 0.743
         },
         {
           "id": "2022_4366625",
@@ -315137,7 +315137,7 @@ const COLLEGE_SCOUTING = {
           "name": "Najee Lovett",
           "team": "Idaho",
           "year": 2013,
-          "dist": 0.446
+          "dist": 0.445
         },
         {
           "id": "2015_518169",
@@ -315151,7 +315151,7 @@ const COLLEGE_SCOUTING = {
           "name": "Sam Pinckney",
           "team": "Georgia State",
           "year": 2021,
-          "dist": 0.631
+          "dist": 0.63
         },
         {
           "id": "2015_3124079",
@@ -315179,7 +315179,7 @@ const COLLEGE_SCOUTING = {
           "name": "Daniel Lee",
           "team": "Buffalo",
           "year": 2019,
-          "dist": 0.707
+          "dist": 0.706
         },
         {
           "id": "2024_5155179",
@@ -315432,7 +315432,7 @@ const COLLEGE_SCOUTING = {
           "name": "Danzel McKinley-Lewis",
           "team": "Toledo",
           "year": 2020,
-          "dist": 0.428
+          "dist": 0.427
         },
         {
           "id": "2024_4695580",
@@ -315453,7 +315453,7 @@ const COLLEGE_SCOUTING = {
           "name": "Carlos Harris",
           "team": "North Texas",
           "year": 2013,
-          "dist": 0.453
+          "dist": 0.454
         },
         {
           "id": "2018_4260452",
@@ -315546,7 +315546,7 @@ const COLLEGE_SCOUTING = {
           "name": "Justin Lockhart",
           "team": "San José State",
           "year": 2024,
-          "dist": 2.619
+          "dist": 2.62
         },
         {
           "id": "2023_4693817",
@@ -315669,7 +315669,7 @@ const COLLEGE_SCOUTING = {
           "name": "Makai Jackson",
           "team": "App State",
           "year": 2024,
-          "dist": 0.95
+          "dist": 0.951
         },
         {
           "id": "2024_4572655",
@@ -315704,7 +315704,7 @@ const COLLEGE_SCOUTING = {
           "name": "Elijah Sarratt",
           "team": "Indiana",
           "year": 2024,
-          "dist": 1.09
+          "dist": 1.091
         }
       ],
       "2024_5076106": [
@@ -315799,7 +315799,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dalvin Smith",
           "team": "Western Kentucky",
           "year": 2023,
-          "dist": 0.807
+          "dist": 0.808
         },
         {
           "id": "2013_503727",
@@ -315813,7 +315813,7 @@ const COLLEGE_SCOUTING = {
           "name": "La'Michael Pettway",
           "team": "Iowa State",
           "year": 2019,
-          "dist": 0.877
+          "dist": 0.878
         },
         {
           "id": "2014_513848",
@@ -315929,7 +315929,7 @@ const COLLEGE_SCOUTING = {
           "name": "Malik Nabers",
           "team": "LSU",
           "year": 2021,
-          "dist": 0.417
+          "dist": 0.418
         },
         {
           "id": "2023_4429019",
@@ -316159,7 +316159,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jordan Watkins",
           "team": "Louisville",
           "year": 2021,
-          "dist": 0.434
+          "dist": 0.433
         },
         {
           "id": "2023_4428063",
@@ -316259,7 +316259,7 @@ const COLLEGE_SCOUTING = {
           "name": "Marvin Mims",
           "team": "Oklahoma",
           "year": 2020,
-          "dist": 0.621
+          "dist": 0.62
         },
         {
           "id": "2017_547197",
@@ -316331,7 +316331,7 @@ const COLLEGE_SCOUTING = {
           "name": "Traylon Ray",
           "team": "West Virginia",
           "year": 2024,
-          "dist": 0.926
+          "dist": 0.925
         },
         {
           "id": "2014_545902",
@@ -316554,7 +316554,7 @@ const COLLEGE_SCOUTING = {
           "name": "Luke Grimm",
           "team": "Kansas",
           "year": 2023,
-          "dist": 0.754
+          "dist": 0.755
         },
         {
           "id": "2022_5084181",
@@ -316626,14 +316626,14 @@ const COLLEGE_SCOUTING = {
           "name": "Caleb Douglas",
           "team": "Texas Tech",
           "year": 2024,
-          "dist": 0.631
+          "dist": 0.632
         },
         {
           "id": "2024_4837269",
           "name": "Omari Hayes",
           "team": "Florida Atlantic",
           "year": 2024,
-          "dist": 0.648
+          "dist": 0.649
         },
         {
           "id": "2020_4247942",
@@ -316663,7 +316663,7 @@ const COLLEGE_SCOUTING = {
           "name": "Justin Shorter",
           "team": "Florida",
           "year": 2020,
-          "dist": 0.433
+          "dist": 0.434
         },
         {
           "id": "2021_4362079",
@@ -316698,7 +316698,7 @@ const COLLEGE_SCOUTING = {
           "name": "Matthew Eaton",
           "team": "Iowa State",
           "year": 2018,
-          "dist": 0.538
+          "dist": 0.539
         },
         {
           "id": "2019_3914812",
@@ -316721,7 +316721,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kyle Williams",
           "team": "Arizona State",
           "year": 2018,
-          "dist": 0.281
+          "dist": 0.282
         },
         {
           "id": "2026_5295064",
@@ -316756,7 +316756,7 @@ const COLLEGE_SCOUTING = {
           "name": "Devonte Ross",
           "team": "Troy",
           "year": 2023,
-          "dist": 0.501
+          "dist": 0.5
         },
         {
           "id": "2020_4427095",
@@ -316777,7 +316777,7 @@ const COLLEGE_SCOUTING = {
           "name": "Chris Finke",
           "team": "Notre Dame",
           "year": 2019,
-          "dist": 0.549
+          "dist": 0.548
         },
         {
           "id": "2024_4575348",
@@ -316842,7 +316842,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tre Harris",
           "team": "Ole Miss",
           "year": 2023,
-          "dist": 0.984
+          "dist": 0.983
         },
         {
           "id": "2023_4430270",
@@ -316986,7 +316986,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tyjon Lindsey",
           "team": "Oregon State",
           "year": 2022,
-          "dist": 1.163
+          "dist": 1.162
         },
         {
           "id": "2024_4427225",
@@ -317044,7 +317044,7 @@ const COLLEGE_SCOUTING = {
           "name": "Corey Rucker",
           "team": "Arkansas State",
           "year": 2023,
-          "dist": 1.071
+          "dist": 1.07
         },
         {
           "id": "2023_4567044",
@@ -317072,7 +317072,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kris Thornton",
           "team": "James Madison",
           "year": 2022,
-          "dist": 1.229
+          "dist": 1.228
         }
       ],
       "2024_5081368": [
@@ -317246,7 +317246,7 @@ const COLLEGE_SCOUTING = {
           "name": "Chimere Dike",
           "team": "Wisconsin",
           "year": 2022,
-          "dist": 0.678
+          "dist": 0.679
         },
         {
           "id": "2023_4600597",
@@ -317428,10 +317428,10 @@ const COLLEGE_SCOUTING = {
           "dist": 0.644
         },
         {
-          "id": "2021_4367186",
-          "name": "Chase Cota",
-          "team": "UCLA",
-          "year": 2021,
+          "id": "2022_4362184",
+          "name": "KeSean Carter",
+          "team": "Houston",
+          "year": 2022,
           "dist": 0.648
         }
       ],
@@ -317613,7 +317613,7 @@ const COLLEGE_SCOUTING = {
           "name": "Harrison Wallace III",
           "team": "Ole Miss",
           "year": 2025,
-          "dist": 0.543
+          "dist": 0.542
         },
         {
           "id": "2024_4691138",
@@ -317671,7 +317671,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jayden McGowan",
           "team": "Vanderbilt",
           "year": 2023,
-          "dist": 0.692
+          "dist": 0.691
         },
         {
           "id": "2017_3115928",
@@ -317685,7 +317685,7 @@ const COLLEGE_SCOUTING = {
           "name": "Josh Dallas",
           "team": "Georgia Southern",
           "year": 2026,
-          "dist": 0.813
+          "dist": 0.814
         },
         {
           "id": "2018_3927804",
@@ -317857,7 +317857,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jemyri Davis",
           "team": "Memphis",
           "year": 2026,
-          "dist": 0.523
+          "dist": 0.522
         },
         {
           "id": "2019_4362310",
@@ -317901,21 +317901,21 @@ const COLLEGE_SCOUTING = {
           "name": "Brandon Bowling",
           "team": "Utah State",
           "year": 2021,
-          "dist": 1.061
+          "dist": 1.06
         },
         {
           "id": "2024_4875613",
           "name": "Dean Patterson",
           "team": "Florida International",
           "year": 2024,
-          "dist": 1.086
+          "dist": 1.087
         },
         {
           "id": "2026_4804878",
           "name": "Cooper Barkate",
           "team": "Miami",
           "year": 2026,
-          "dist": 1.091
+          "dist": 1.09
         },
         {
           "id": "2024_4608810",
@@ -317945,7 +317945,7 @@ const COLLEGE_SCOUTING = {
           "name": "Derel Walker",
           "team": "Texas A&M",
           "year": 2013,
-          "dist": 0.754
+          "dist": 0.755
         },
         {
           "id": "2023_4361679",
@@ -318008,7 +318008,7 @@ const COLLEGE_SCOUTING = {
           "name": "Nate Bennett",
           "team": "San Diego State",
           "year": 2024,
-          "dist": 0.863
+          "dist": 0.862
         }
       ],
       "2024_5084967": [
@@ -318045,7 +318045,7 @@ const COLLEGE_SCOUTING = {
           "name": "Konata Mumpfield",
           "team": "Pittsburgh",
           "year": 2023,
-          "dist": 1.175
+          "dist": 1.174
         },
         {
           "id": "2013_530859",
@@ -318110,7 +318110,7 @@ const COLLEGE_SCOUTING = {
           "name": "Brandon Wimberly",
           "team": "Nevada",
           "year": 2013,
-          "dist": 1.62
+          "dist": 1.621
         },
         {
           "id": "2013_515181",
@@ -318124,7 +318124,7 @@ const COLLEGE_SCOUTING = {
           "name": "Garrett Brown",
           "team": "Air Force",
           "year": 2014,
-          "dist": 1.767
+          "dist": 1.766
         },
         {
           "id": "2015_551025",
@@ -318326,7 +318326,7 @@ const COLLEGE_SCOUTING = {
           "name": "Corey Crooms",
           "team": "Western Michigan",
           "year": 2021,
-          "dist": 0.783
+          "dist": 0.782
         },
         {
           "id": "2023_4685424",
@@ -318377,7 +318377,7 @@ const COLLEGE_SCOUTING = {
           "name": "O'Mega Blake",
           "team": "South Carolina",
           "year": 2023,
-          "dist": 0.332
+          "dist": 0.333
         },
         {
           "id": "2024_4691315",
@@ -318405,7 +318405,7 @@ const COLLEGE_SCOUTING = {
           "name": "Daniel Jackson",
           "team": "Iowa State",
           "year": 2023,
-          "dist": 0.443
+          "dist": 0.444
         },
         {
           "id": "2024_4426357",
@@ -318426,7 +318426,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jaden Walley",
           "team": "Mississippi State",
           "year": 2022,
-          "dist": 0.509
+          "dist": 0.51
         },
         {
           "id": "2014_504758",
@@ -318642,7 +318642,7 @@ const COLLEGE_SCOUTING = {
           "name": "Harvey Broussard",
           "team": "Louisiana",
           "year": 2024,
-          "dist": 0.711
+          "dist": 0.712
         },
         {
           "id": "2013_511983",
@@ -318800,7 +318800,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ed Small",
           "team": "TCU",
           "year": 2026,
-          "dist": 0.602
+          "dist": 0.603
         }
       ],
       "2024_5100582": [
@@ -318872,7 +318872,7 @@ const COLLEGE_SCOUTING = {
           "name": "Reymello Murphy",
           "team": "Old Dominion",
           "year": 2023,
-          "dist": 1.553
+          "dist": 1.552
         }
       ],
       "2024_5103852": [
@@ -318902,7 +318902,7 @@ const COLLEGE_SCOUTING = {
           "name": "Gary Bryant Jr.",
           "team": "Oregon",
           "year": 2023,
-          "dist": 0.493
+          "dist": 0.492
         },
         {
           "id": "2023_4374076",
@@ -319146,7 +319146,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dylan Goffney",
           "team": "SMU",
           "year": 2022,
-          "dist": 0.846
+          "dist": 0.847
         },
         {
           "id": "2026_5159009",
@@ -319262,7 +319262,7 @@ const COLLEGE_SCOUTING = {
           "name": "Omari Evans",
           "team": "Penn State",
           "year": 2024,
-          "dist": 0.453
+          "dist": 0.452
         },
         {
           "id": "2024_4890060",
@@ -319448,7 +319448,7 @@ const COLLEGE_SCOUTING = {
           "name": "Winston Wright",
           "team": "West Virginia",
           "year": 2021,
-          "dist": 0.666
+          "dist": 0.667
         }
       ],
       "2024_5121750": [
@@ -319464,7 +319464,7 @@ const COLLEGE_SCOUTING = {
           "name": "Fred Lee",
           "team": "Buffalo",
           "year": 2013,
-          "dist": 0.64
+          "dist": 0.639
         },
         {
           "id": "2013_530859",
@@ -319478,7 +319478,7 @@ const COLLEGE_SCOUTING = {
           "name": "Diante Vines",
           "team": "Old Dominion",
           "year": 2024,
-          "dist": 0.706
+          "dist": 0.707
         },
         {
           "id": "2013_511433",
@@ -319736,7 +319736,7 @@ const COLLEGE_SCOUTING = {
           "name": "Samario Rudolph",
           "team": "UAB",
           "year": 2022,
-          "dist": 0.95
+          "dist": 0.951
         }
       ],
       "2024_5125819": [
@@ -320075,7 +320075,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jeremy Singleton",
           "team": "Houston",
           "year": 2018,
-          "dist": 0.468
+          "dist": 0.467
         },
         {
           "id": "2013_504943",
@@ -320126,7 +320126,7 @@ const COLLEGE_SCOUTING = {
           "name": "Vasquez Haynes",
           "team": "Hawai'i",
           "year": 2013,
-          "dist": 0.516
+          "dist": 0.515
         },
         {
           "id": "2019_4365503",
@@ -320256,7 +320256,7 @@ const COLLEGE_SCOUTING = {
           "name": "Antwan Goodley",
           "team": "Baylor",
           "year": 2013,
-          "dist": 0.633
+          "dist": 0.634
         },
         {
           "id": "2013_512339",
@@ -320305,7 +320305,7 @@ const COLLEGE_SCOUTING = {
           "name": "Javon Wims",
           "team": "Georgia",
           "year": 2017,
-          "dist": 1.052
+          "dist": 1.053
         },
         {
           "id": "2013_515826",
@@ -320384,7 +320384,7 @@ const COLLEGE_SCOUTING = {
           "name": "Justus Ross-Simmons",
           "team": "Colorado State",
           "year": 2022,
-          "dist": 1.196
+          "dist": 1.195
         }
       ],
       "2024_5151318": [
@@ -320558,7 +320558,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dante Pettis",
           "team": "Washington",
           "year": 2014,
-          "dist": 0.375
+          "dist": 0.376
         },
         {
           "id": "2016_3884173",
@@ -320630,14 +320630,14 @@ const COLLEGE_SCOUTING = {
           "name": "Jonathan Brady",
           "team": "New Mexico State",
           "year": 2022,
-          "dist": 0.544
+          "dist": 0.543
         },
         {
           "id": "2025_5086096",
           "name": "Lawayne McCoy",
           "team": "Florida State",
           "year": 2025,
-          "dist": 0.548
+          "dist": 0.547
         },
         {
           "id": "2022_4690117",
@@ -320651,7 +320651,7 @@ const COLLEGE_SCOUTING = {
           "name": "Manasseh Garner",
           "team": "Pittsburgh",
           "year": 2013,
-          "dist": 0.573
+          "dist": 0.572
         },
         {
           "id": "2023_4430470",
@@ -320672,7 +320672,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kenny Johnson",
           "team": "Pittsburgh",
           "year": 2024,
-          "dist": 0.608
+          "dist": 0.609
         }
       ],
       "2024_5152414": [
@@ -320695,7 +320695,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jadon Jackson",
           "team": "Kansas State",
           "year": 2023,
-          "dist": 0.458
+          "dist": 0.457
         },
         {
           "id": "2025_4682761",
@@ -320767,14 +320767,14 @@ const COLLEGE_SCOUTING = {
           "name": "George Pickens",
           "team": "Georgia",
           "year": 2020,
-          "dist": 0.984
+          "dist": 0.985
         },
         {
           "id": "2016_3127306",
           "name": "Dante Pettis",
           "team": "Washington",
           "year": 2016,
-          "dist": 1.049
+          "dist": 1.05
         },
         {
           "id": "2023_4432773",
@@ -320812,10 +320812,10 @@ const COLLEGE_SCOUTING = {
           "dist": 1.211
         },
         {
-          "id": "2020_4240121",
-          "name": "Thayer Thomas",
-          "team": "NC State",
-          "year": 2020,
+          "id": "2024_4608810",
+          "name": "Tez Johnson",
+          "team": "Oregon",
+          "year": 2024,
           "dist": 1.224
         }
       ],
@@ -320867,7 +320867,7 @@ const COLLEGE_SCOUTING = {
           "name": "Marquez North",
           "team": "Tennessee",
           "year": 2014,
-          "dist": 0.615
+          "dist": 0.614
         },
         {
           "id": "2024_4870860",
@@ -320946,7 +320946,7 @@ const COLLEGE_SCOUTING = {
           "name": "Line Latu",
           "team": "Eastern Michigan",
           "year": 2018,
-          "dist": 0.58
+          "dist": 0.579
         },
         {
           "id": "2024_4808839",
@@ -321069,7 +321069,7 @@ const COLLEGE_SCOUTING = {
           "name": "Damion Willis",
           "team": "Troy",
           "year": 2018,
-          "dist": 1.013
+          "dist": 1.012
         },
         {
           "id": "2018_3139522",
@@ -321148,7 +321148,7 @@ const COLLEGE_SCOUTING = {
           "name": "Levi Norwood",
           "team": "Baylor",
           "year": 2013,
-          "dist": 0.833
+          "dist": 0.834
         },
         {
           "id": "2023_4603746",
@@ -321185,7 +321185,7 @@ const COLLEGE_SCOUTING = {
           "name": "Emanuel Hall",
           "team": "Missouri",
           "year": 2018,
-          "dist": 0.535
+          "dist": 0.536
         },
         {
           "id": "2018_4242328",
@@ -321285,7 +321285,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jaelen Gill",
           "team": "Boston College",
           "year": 2021,
-          "dist": 0.613
+          "dist": 0.614
         },
         {
           "id": "2024_4430914",
@@ -321306,7 +321306,7 @@ const COLLEGE_SCOUTING = {
           "name": "Diante Vines",
           "team": "Old Dominion",
           "year": 2024,
-          "dist": 0.675
+          "dist": 0.676
         },
         {
           "id": "2013_378329",
@@ -321378,21 +321378,21 @@ const COLLEGE_SCOUTING = {
           "name": "Renard Bell",
           "team": "Washington State",
           "year": 2017,
-          "dist": 0.465
+          "dist": 0.466
         },
         {
           "id": "2024_4875272",
           "name": "Trond Grizzell",
           "team": "California",
           "year": 2024,
-          "dist": 0.475
+          "dist": 0.474
         },
         {
           "id": "2023_4900903",
           "name": "Senika McKie",
           "team": "UNLV",
           "year": 2023,
-          "dist": 0.476
+          "dist": 0.475
         }
       ],
       "2024_5218787": [
@@ -321408,7 +321408,7 @@ const COLLEGE_SCOUTING = {
           "name": "Bug Howard",
           "team": "North Carolina",
           "year": 2014,
-          "dist": 0.312
+          "dist": 0.313
         },
         {
           "id": "2016_550669",
@@ -321422,7 +321422,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jordan Whittington",
           "team": "Texas",
           "year": 2023,
-          "dist": 0.349
+          "dist": 0.348
         },
         {
           "id": "2024_4870612",
@@ -321559,7 +321559,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jeremiah Noga",
           "team": "Oregon State",
           "year": 2024,
-          "dist": 0.547
+          "dist": 0.548
         },
         {
           "id": "2024_4880079",
@@ -321594,7 +321594,7 @@ const COLLEGE_SCOUTING = {
           "name": "Andrew McElroy",
           "team": "Northern Illinois",
           "year": 2024,
-          "dist": 0.61
+          "dist": 0.609
         },
         {
           "id": "2021_4240075",
@@ -321645,7 +321645,7 @@ const COLLEGE_SCOUTING = {
           "name": "Corey Brown",
           "team": "Ohio State",
           "year": 2013,
-          "dist": 1.051
+          "dist": 1.05
         },
         {
           "id": "2013_533206",
@@ -321745,7 +321745,7 @@ const COLLEGE_SCOUTING = {
           "name": "Braylen Walker",
           "team": "Rice",
           "year": 2024,
-          "dist": 0.441
+          "dist": 0.44
         },
         {
           "id": "2014_515534",
@@ -321813,18 +321813,18 @@ const COLLEGE_SCOUTING = {
           "dist": 0.912
         },
         {
-          "id": "2021_4426965",
-          "name": "Blair Conwright",
-          "team": "TCU",
-          "year": 2021,
-          "dist": 0.954
-        },
-        {
           "id": "2024_4918412",
           "name": "Harvey Broussard",
           "team": "Louisiana",
           "year": 2024,
           "dist": 0.954
+        },
+        {
+          "id": "2021_4426965",
+          "name": "Blair Conwright",
+          "team": "TCU",
+          "year": 2021,
+          "dist": 0.955
         }
       ],
       "2025_4244849": [
@@ -321861,7 +321861,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ronnie Bell",
           "team": "Michigan",
           "year": 2019,
-          "dist": 0.605
+          "dist": 0.606
         },
         {
           "id": "2016_535812",
@@ -321889,7 +321889,7 @@ const COLLEGE_SCOUTING = {
           "name": "Simmie Cobbs Jr.",
           "team": "Indiana",
           "year": 2015,
-          "dist": 0.72
+          "dist": 0.719
         },
         {
           "id": "2017_4035198",
@@ -321961,7 +321961,7 @@ const COLLEGE_SCOUTING = {
           "name": "Stephon Johnson Jr.",
           "team": "Houston",
           "year": 2023,
-          "dist": 0.499
+          "dist": 0.5
         },
         {
           "id": "2018_3931426",
@@ -322005,7 +322005,7 @@ const COLLEGE_SCOUTING = {
           "name": "Devin Gray",
           "team": "Cincinnati",
           "year": 2017,
-          "dist": 0.442
+          "dist": 0.441
         },
         {
           "id": "2026_4702790",
@@ -322019,7 +322019,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jerminic Smith",
           "team": "Iowa",
           "year": 2016,
-          "dist": 0.524
+          "dist": 0.523
         },
         {
           "id": "2017_4039244",
@@ -322423,7 +322423,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dylan Drummond",
           "team": "Eastern Michigan",
           "year": 2022,
-          "dist": 0.451
+          "dist": 0.45
         },
         {
           "id": "2025_5120454",
@@ -322488,7 +322488,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jabari Lewis",
           "team": "Massachusetts",
           "year": 2026,
-          "dist": 0.652
+          "dist": 0.651
         },
         {
           "id": "2016_3917569",
@@ -322544,7 +322544,7 @@ const COLLEGE_SCOUTING = {
           "name": "AJ Wilson",
           "team": "UTSA",
           "year": 2025,
-          "dist": 0.851
+          "dist": 0.852
         }
       ],
       "2025_4431273": [
@@ -322625,7 +322625,7 @@ const COLLEGE_SCOUTING = {
           "name": "La'Don Bryant",
           "team": "Northern Illinois",
           "year": 2026,
-          "dist": 0.454
+          "dist": 0.453
         },
         {
           "id": "2026_5226511",
@@ -322667,7 +322667,7 @@ const COLLEGE_SCOUTING = {
           "name": "Workpeh Kofa",
           "team": "Charlotte",
           "year": 2017,
-          "dist": 0.794
+          "dist": 0.793
         },
         {
           "id": "2025_5279633",
@@ -322688,7 +322688,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kaleb Webb",
           "team": "Maryland",
           "year": 2026,
-          "dist": 0.903
+          "dist": 0.902
         }
       ],
       "2025_4431514": [
@@ -322739,7 +322739,7 @@ const COLLEGE_SCOUTING = {
           "name": "Antwane Wells Jr.",
           "team": "Ole Miss",
           "year": 2024,
-          "dist": 0.533
+          "dist": 0.532
         },
         {
           "id": "2020_4360575",
@@ -322776,7 +322776,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jacari Carter",
           "team": "Georgia State",
           "year": 2023,
-          "dist": 0.925
+          "dist": 0.924
         },
         {
           "id": "2023_4569510",
@@ -322811,7 +322811,7 @@ const COLLEGE_SCOUTING = {
           "name": "Darius Cannon",
           "team": "Jacksonville State",
           "year": 2026,
-          "dist": 1.233
+          "dist": 1.232
         },
         {
           "id": "2025_5075529",
@@ -322825,7 +322825,7 @@ const COLLEGE_SCOUTING = {
           "name": "K.J. Hill",
           "team": "Ohio State",
           "year": 2017,
-          "dist": 1.321
+          "dist": 1.322
         },
         {
           "id": "2016_531563",
@@ -322890,7 +322890,7 @@ const COLLEGE_SCOUTING = {
           "name": "DJ Stubbs",
           "team": "Liberty",
           "year": 2018,
-          "dist": 0.619
+          "dist": 0.618
         },
         {
           "id": "2025_5220596",
@@ -322941,7 +322941,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dominick Blaylock",
           "team": "Georgia Tech",
           "year": 2023,
-          "dist": 0.439
+          "dist": 0.438
         },
         {
           "id": "2017_3116182",
@@ -322992,7 +322992,7 @@ const COLLEGE_SCOUTING = {
           "name": "Terrell Green",
           "team": "East Carolina",
           "year": 2018,
-          "dist": 0.243
+          "dist": 0.242
         },
         {
           "id": "2025_4602895",
@@ -323078,7 +323078,7 @@ const COLLEGE_SCOUTING = {
           "name": "Chaz Anderson",
           "team": "Boise State",
           "year": 2015,
-          "dist": 0.494
+          "dist": 0.495
         },
         {
           "id": "2016_531970",
@@ -323099,14 +323099,14 @@ const COLLEGE_SCOUTING = {
           "name": "Spencer Tears",
           "team": "Northern Illinois",
           "year": 2019,
-          "dist": 0.538
+          "dist": 0.539
         },
         {
           "id": "2021_4243928",
           "name": "Jaetavian Toles",
           "team": "Tulane",
           "year": 2021,
-          "dist": 0.555
+          "dist": 0.554
         },
         {
           "id": "2026_5260691",
@@ -323129,7 +323129,7 @@ const COLLEGE_SCOUTING = {
           "name": "Quinton Pedroza",
           "team": "Hawai'i",
           "year": 2015,
-          "dist": 0.77
+          "dist": 0.769
         },
         {
           "id": "2016_3918014",
@@ -323287,7 +323287,7 @@ const COLLEGE_SCOUTING = {
           "name": "Je'Quan Burton",
           "team": "Florida Atlantic",
           "year": 2021,
-          "dist": 0.392
+          "dist": 0.391
         },
         {
           "id": "2024_5151318",
@@ -323404,10 +323404,10 @@ const COLLEGE_SCOUTING = {
           "dist": 0.63
         },
         {
-          "id": "2021_4368341",
-          "name": "Je'Quan Burton",
-          "team": "Florida Atlantic",
-          "year": 2021,
+          "id": "2019_4362751",
+          "name": "Jalen Knox",
+          "team": "Missouri",
+          "year": 2019,
           "dist": 0.635
         }
       ],
@@ -323438,7 +323438,7 @@ const COLLEGE_SCOUTING = {
           "name": "Thomas Hennigan",
           "team": "App State",
           "year": 2019,
-          "dist": 0.69
+          "dist": 0.689
         },
         {
           "id": "2021_4382578",
@@ -323489,14 +323489,14 @@ const COLLEGE_SCOUTING = {
           "name": "Trent Sherfield",
           "team": "Vanderbilt",
           "year": 2015,
-          "dist": 0.83
+          "dist": 0.829
         },
         {
           "id": "2014_531551",
           "name": "KeVonn Mabon",
           "team": "Ball State",
           "year": 2014,
-          "dist": 0.841
+          "dist": 0.842
         },
         {
           "id": "2020_4035912",
@@ -323726,7 +323726,7 @@ const COLLEGE_SCOUTING = {
           "name": "Waden Charles",
           "team": "UCF",
           "year": 2025,
-          "dist": 0.42
+          "dist": 0.421
         },
         {
           "id": "2025_5164749",
@@ -323754,7 +323754,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jonah Morris",
           "team": "Akron",
           "year": 2018,
-          "dist": 0.603
+          "dist": 0.604
         },
         {
           "id": "2025_4870713",
@@ -323777,14 +323777,14 @@ const COLLEGE_SCOUTING = {
           "name": "Corey Lacanaria",
           "team": "Ball State",
           "year": 2018,
-          "dist": 0.375
+          "dist": 0.374
         },
         {
           "id": "2020_4428331",
           "name": "Rashee Rice",
           "team": "SMU",
           "year": 2020,
-          "dist": 0.378
+          "dist": 0.379
         },
         {
           "id": "2021_4430834",
@@ -323935,7 +323935,7 @@ const COLLEGE_SCOUTING = {
           "name": "Equanimeous St. Brown",
           "team": "Notre Dame",
           "year": 2017,
-          "dist": 0.804
+          "dist": 0.805
         },
         {
           "id": "2015_547195",
@@ -324028,7 +324028,7 @@ const COLLEGE_SCOUTING = {
           "name": "Nathaniel Dell",
           "team": "Houston",
           "year": 2020,
-          "dist": 0.405
+          "dist": 0.404
         },
         {
           "id": "2019_4047648",
@@ -324072,7 +324072,7 @@ const COLLEGE_SCOUTING = {
           "name": "Denzel Mims",
           "team": "Baylor",
           "year": 2017,
-          "dist": 0.48
+          "dist": 0.479
         },
         {
           "id": "2017_3123074",
@@ -324093,7 +324093,7 @@ const COLLEGE_SCOUTING = {
           "name": "Legend Glasker",
           "team": "BYU",
           "year": 2026,
-          "dist": 0.575
+          "dist": 0.576
         },
         {
           "id": "2018_4043161",
@@ -324128,7 +324128,7 @@ const COLLEGE_SCOUTING = {
           "name": "James Washington",
           "team": "Oklahoma State",
           "year": 2017,
-          "dist": 0.721
+          "dist": 0.722
         }
       ],
       "2025_4602785": [
@@ -324151,7 +324151,7 @@ const COLLEGE_SCOUTING = {
           "name": "Quayvon Skanes",
           "team": "UConn",
           "year": 2017,
-          "dist": 0.403
+          "dist": 0.402
         },
         {
           "id": "2021_4586312",
@@ -324258,7 +324258,7 @@ const COLLEGE_SCOUTING = {
           "name": "Traveon Samuel",
           "team": "Louisville",
           "year": 2017,
-          "dist": 0.449
+          "dist": 0.45
         },
         {
           "id": "2018_3126159",
@@ -324337,7 +324337,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jayshon Jackson",
           "team": "Cincinnati",
           "year": 2020,
-          "dist": 0.49
+          "dist": 0.489
         },
         {
           "id": "2015_550214",
@@ -324416,7 +324416,7 @@ const COLLEGE_SCOUTING = {
           "name": "Eric Ward",
           "team": "Texas Tech",
           "year": 2013,
-          "dist": 0.68
+          "dist": 0.681
         }
       ],
       "2025_4604004": [
@@ -324553,7 +324553,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jordan McCray",
           "team": "South Alabama",
           "year": 2017,
-          "dist": 0.412
+          "dist": 0.413
         },
         {
           "id": "2018_3119418",
@@ -324704,7 +324704,7 @@ const COLLEGE_SCOUTING = {
           "name": "Bryce Singleton",
           "team": "Florida International",
           "year": 2018,
-          "dist": 0.495
+          "dist": 0.496
         }
       ],
       "2025_4613132": [
@@ -324981,17 +324981,17 @@ const COLLEGE_SCOUTING = {
           "dist": 0.782
         },
         {
-          "id": "2016_3124069",
-          "name": "Isaiah Ford",
-          "team": "Virginia Tech",
-          "year": 2016,
-          "dist": 0.785
-        },
-        {
           "id": "2014_514279",
           "name": "David Frazier",
           "team": "Miami (OH)",
           "year": 2014,
+          "dist": 0.785
+        },
+        {
+          "id": "2016_3124069",
+          "name": "Isaiah Ford",
+          "team": "Virginia Tech",
+          "year": 2016,
           "dist": 0.785
         }
       ],
@@ -325064,7 +325064,7 @@ const COLLEGE_SCOUTING = {
           "name": "Corey Willis",
           "team": "Central Michigan",
           "year": 2015,
-          "dist": 0.574
+          "dist": 0.573
         }
       ],
       "2025_4683461": [
@@ -325159,7 +325159,7 @@ const COLLEGE_SCOUTING = {
           "name": "J.D. McKissic",
           "team": "Arkansas State",
           "year": 2013,
-          "dist": 1.996
+          "dist": 1.995
         },
         {
           "id": "2014_550871",
@@ -325208,7 +325208,7 @@ const COLLEGE_SCOUTING = {
           "name": "Austin Conway",
           "team": "Wyoming",
           "year": 2017,
-          "dist": 2.73
+          "dist": 2.729
         }
       ],
       "2025_4683543": [
@@ -325368,7 +325368,7 @@ const COLLEGE_SCOUTING = {
           "name": "Yamir Knight",
           "team": "SMU",
           "year": 2026,
-          "dist": 0.448
+          "dist": 0.447
         },
         {
           "id": "2018_3915145",
@@ -325382,7 +325382,7 @@ const COLLEGE_SCOUTING = {
           "name": "Emeka Egbuka",
           "team": "Ohio State",
           "year": 2024,
-          "dist": 0.538
+          "dist": 0.539
         },
         {
           "id": "2021_4608810",
@@ -325547,7 +325547,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ayden Greene",
           "team": "Virginia Tech",
           "year": 2026,
-          "dist": 0.579
+          "dist": 0.58
         },
         {
           "id": "2020_4568992",
@@ -325577,7 +325577,7 @@ const COLLEGE_SCOUTING = {
           "name": "Stefan Cobbs",
           "team": "Boise State",
           "year": 2021,
-          "dist": 0.312
+          "dist": 0.311
         },
         {
           "id": "2015_2157293",
@@ -325663,7 +325663,7 @@ const COLLEGE_SCOUTING = {
           "name": "Reed Harris",
           "team": "Boston College",
           "year": 2025,
-          "dist": 0.834
+          "dist": 0.833
         },
         {
           "id": "2018_4035687",
@@ -325684,7 +325684,7 @@ const COLLEGE_SCOUTING = {
           "name": "DeAngelo Yancey",
           "team": "Purdue",
           "year": 2015,
-          "dist": 0.978
+          "dist": 0.979
         },
         {
           "id": "2016_552951",
@@ -325705,7 +325705,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ihmir Smith-Marsette",
           "team": "Iowa",
           "year": 2019,
-          "dist": 1.014
+          "dist": 1.013
         },
         {
           "id": "2025_5130792",
@@ -325770,7 +325770,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kofi Hughes",
           "team": "Indiana",
           "year": 2013,
-          "dist": 0.551
+          "dist": 0.55
         },
         {
           "id": "2024_4837269",
@@ -325958,14 +325958,14 @@ const COLLEGE_SCOUTING = {
           "name": "Mark Chapman",
           "team": "Central Michigan",
           "year": 2017,
-          "dist": 0.516
+          "dist": 0.517
         },
         {
           "id": "2026_5200482",
           "name": "Ed Small",
           "team": "TCU",
           "year": 2026,
-          "dist": 0.556
+          "dist": 0.557
         },
         {
           "id": "2014_547195",
@@ -326195,7 +326195,7 @@ const COLLEGE_SCOUTING = {
           "name": "Keith Corbin",
           "team": "Houston",
           "year": 2020,
-          "dist": 0.923
+          "dist": 0.922
         },
         {
           "id": "2019_4241671",
@@ -326411,21 +326411,21 @@ const COLLEGE_SCOUTING = {
           "name": "Darrell Gill Jr.",
           "team": "Syracuse",
           "year": 2025,
-          "dist": 0.848
+          "dist": 0.849
         },
         {
           "id": "2016_3918230",
           "name": "Xavier Brown",
           "team": "UL Monroe",
           "year": 2016,
-          "dist": 0.849
+          "dist": 0.85
         },
         {
           "id": "2018_4360797",
           "name": "Chatarius Atwell",
           "team": "Louisville",
           "year": 2018,
-          "dist": 0.87
+          "dist": 0.871
         },
         {
           "id": "2016_4035851",
@@ -326497,7 +326497,7 @@ const COLLEGE_SCOUTING = {
           "name": "Antonio Callaway",
           "team": "Florida",
           "year": 2016,
-          "dist": 0.808
+          "dist": 0.807
         },
         {
           "id": "2023_4428811",
@@ -326562,14 +326562,14 @@ const COLLEGE_SCOUTING = {
           "name": "Chase Roberts",
           "team": "BYU",
           "year": 2022,
-          "dist": 0.793
+          "dist": 0.792
         },
         {
           "id": "2019_4046519",
           "name": "Kekoa Crawford",
           "team": "California",
           "year": 2019,
-          "dist": 0.796
+          "dist": 0.795
         },
         {
           "id": "2019_4361732",
@@ -326692,7 +326692,7 @@ const COLLEGE_SCOUTING = {
           "name": "Emmett Mosley V",
           "team": "Texas",
           "year": 2025,
-          "dist": 0.448
+          "dist": 0.447
         },
         {
           "id": "2019_4240626",
@@ -326706,7 +326706,7 @@ const COLLEGE_SCOUTING = {
           "name": "Renard Bell",
           "team": "Washington State",
           "year": 2022,
-          "dist": 0.463
+          "dist": 0.462
         },
         {
           "id": "2017_552951",
@@ -326846,18 +326846,18 @@ const COLLEGE_SCOUTING = {
           "dist": 0.596
         },
         {
-          "id": "2018_4373937",
-          "name": "JoJo Ward",
-          "team": "Hawai'i",
-          "year": 2018,
-          "dist": 0.604
-        },
-        {
           "id": "2019_4258235",
           "name": "Whop Philyor",
           "team": "Indiana",
           "year": 2019,
-          "dist": 0.604
+          "dist": 0.603
+        },
+        {
+          "id": "2018_4373937",
+          "name": "JoJo Ward",
+          "team": "Hawai'i",
+          "year": 2018,
+          "dist": 0.603
         },
         {
           "id": "2019_4361960",
@@ -326952,7 +326952,7 @@ const COLLEGE_SCOUTING = {
           "name": "Andrew Erickson",
           "team": "New Mexico",
           "year": 2020,
-          "dist": 0.483
+          "dist": 0.484
         },
         {
           "id": "2021_4685831",
@@ -326987,7 +326987,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jonathan Nance",
           "team": "Missouri",
           "year": 2019,
-          "dist": 0.669
+          "dist": 0.67
         },
         {
           "id": "2019_4035386",
@@ -327089,7 +327089,7 @@ const COLLEGE_SCOUTING = {
           "name": "Christian Blake",
           "team": "Northern Illinois",
           "year": 2017,
-          "dist": 0.511
+          "dist": 0.51
         },
         {
           "id": "2016_534791",
@@ -327103,7 +327103,7 @@ const COLLEGE_SCOUTING = {
           "name": "Isaiah McKoy",
           "team": "Kent State",
           "year": 2018,
-          "dist": 0.894
+          "dist": 0.895
         },
         {
           "id": "2025_4894839",
@@ -327196,21 +327196,21 @@ const COLLEGE_SCOUTING = {
           "name": "Kobe Paysour",
           "team": "North Carolina",
           "year": 2023,
-          "dist": 1.072
+          "dist": 1.071
         },
         {
           "id": "2016_540210",
           "name": "Mack Hollins",
           "team": "North Carolina",
           "year": 2016,
-          "dist": 1.117
+          "dist": 1.118
         },
         {
           "id": "2021_4697844",
           "name": "Rara Thomas",
           "team": "Mississippi State",
           "year": 2021,
-          "dist": 1.142
+          "dist": 1.143
         },
         {
           "id": "2019_4046564",
@@ -327224,7 +327224,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dom Williams",
           "team": "Washington State",
           "year": 2014,
-          "dist": 1.189
+          "dist": 1.19
         }
       ],
       "2025_4714388": [
@@ -327305,7 +327305,7 @@ const COLLEGE_SCOUTING = {
           "name": "Carlton Agudosi",
           "team": "Rutgers",
           "year": 2015,
-          "dist": 0.638
+          "dist": 0.639
         },
         {
           "id": "2024_5112674",
@@ -327326,7 +327326,7 @@ const COLLEGE_SCOUTING = {
           "name": "Anthony Nash",
           "team": "Duke",
           "year": 2015,
-          "dist": 0.721
+          "dist": 0.72
         },
         {
           "id": "2026_5079499",
@@ -327361,7 +327361,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tyrian Taylor",
           "team": "New Mexico State",
           "year": 2016,
-          "dist": 0.815
+          "dist": 0.814
         },
         {
           "id": "2015_513138",
@@ -327377,7 +327377,7 @@ const COLLEGE_SCOUTING = {
           "name": "Thaddeous Thompson",
           "team": "North Texas",
           "year": 2016,
-          "dist": 0.338
+          "dist": 0.337
         },
         {
           "id": "2025_5218787",
@@ -327477,7 +327477,7 @@ const COLLEGE_SCOUTING = {
           "name": "Randle Jones",
           "team": "Temple",
           "year": 2020,
-          "dist": 0.763
+          "dist": 0.762
         },
         {
           "id": "2025_4683111",
@@ -327491,7 +327491,7 @@ const COLLEGE_SCOUTING = {
           "name": "Chris Marshall",
           "team": "Arkansas",
           "year": 2026,
-          "dist": 0.775
+          "dist": 0.774
         },
         {
           "id": "2022_4429025",
@@ -327535,7 +327535,7 @@ const COLLEGE_SCOUTING = {
           "name": "Evan Fairs",
           "team": "Kansas",
           "year": 2017,
-          "dist": 0.495
+          "dist": 0.494
         },
         {
           "id": "2019_4361280",
@@ -327577,7 +327577,7 @@ const COLLEGE_SCOUTING = {
           "name": "CJ Yarbrough",
           "team": "Liberty",
           "year": 2020,
-          "dist": 0.605
+          "dist": 0.604
         },
         {
           "id": "2026_5153318",
@@ -327593,7 +327593,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kendall Hinton",
           "team": "Wake Forest",
           "year": 2019,
-          "dist": 0.358
+          "dist": 0.357
         },
         {
           "id": "2021_4570190",
@@ -327635,7 +327635,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jake Bobo",
           "team": "Duke",
           "year": 2021,
-          "dist": 0.959
+          "dist": 0.96
         },
         {
           "id": "2026_5294063",
@@ -327830,7 +327830,7 @@ const COLLEGE_SCOUTING = {
           "name": "Michael Thomas",
           "team": "Southern Miss",
           "year": 2014,
-          "dist": 0.555
+          "dist": 0.556
         },
         {
           "id": "2016_4038818",
@@ -327916,7 +327916,7 @@ const COLLEGE_SCOUTING = {
           "name": "Rashee Rice",
           "team": "SMU",
           "year": 2020,
-          "dist": 0.618
+          "dist": 0.619
         },
         {
           "id": "2016_3927809",
@@ -328016,7 +328016,7 @@ const COLLEGE_SCOUTING = {
           "name": "CJ Yarbrough",
           "team": "Liberty",
           "year": 2020,
-          "dist": 0.62
+          "dist": 0.619
         }
       ],
       "2025_4834817": [
@@ -328046,7 +328046,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jalen Smith",
           "team": "Minnesota",
           "year": 2025,
-          "dist": 0.504
+          "dist": 0.503
         },
         {
           "id": "2023_4431210",
@@ -328211,7 +328211,7 @@ const COLLEGE_SCOUTING = {
           "name": "Donte Moore",
           "team": "Rice",
           "year": 2013,
-          "dist": 0.569
+          "dist": 0.57
         },
         {
           "id": "2016_4046666",
@@ -328290,7 +328290,7 @@ const COLLEGE_SCOUTING = {
           "name": "KeeSean Johnson",
           "team": "Fresno State",
           "year": 2017,
-          "dist": 0.914
+          "dist": 0.913
         },
         {
           "id": "2026_5193298",
@@ -328385,7 +328385,7 @@ const COLLEGE_SCOUTING = {
           "name": "Mike Matthews",
           "team": "Tennessee",
           "year": 2026,
-          "dist": 1.181
+          "dist": 1.18
         },
         {
           "id": "2014_534448",
@@ -328441,7 +328441,7 @@ const COLLEGE_SCOUTING = {
           "name": "Bo Melton",
           "team": "Rutgers",
           "year": 2020,
-          "dist": 1.618
+          "dist": 1.619
         },
         {
           "id": "2026_4711421",
@@ -328529,7 +328529,7 @@ const COLLEGE_SCOUTING = {
           "name": "Brennan Presley",
           "team": "Oklahoma State",
           "year": 2021,
-          "dist": 0.41
+          "dist": 0.409
         },
         {
           "id": "2017_3916919",
@@ -328736,7 +328736,7 @@ const COLLEGE_SCOUTING = {
           "name": "Xavier Weaver",
           "team": "Colorado",
           "year": 2023,
-          "dist": 0.776
+          "dist": 0.775
         }
       ],
       "2025_4869443": [
@@ -328873,7 +328873,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jalen Claiborne",
           "team": "Wyoming",
           "year": 2013,
-          "dist": 0.915
+          "dist": 0.914
         },
         {
           "id": "2017_3124056",
@@ -328903,7 +328903,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jehlani Galloway",
           "team": "Western Michigan",
           "year": 2022,
-          "dist": 0.872
+          "dist": 0.871
         },
         {
           "id": "2026_5085972",
@@ -329010,14 +329010,14 @@ const COLLEGE_SCOUTING = {
           "name": "Corey Willis",
           "team": "Central Michigan",
           "year": 2015,
-          "dist": 0.428
+          "dist": 0.427
         },
         {
           "id": "2018_3124538",
           "name": "Jamire Jordan",
           "team": "Fresno State",
           "year": 2018,
-          "dist": 0.441
+          "dist": 0.442
         },
         {
           "id": "2014_551153",
@@ -329047,7 +329047,7 @@ const COLLEGE_SCOUTING = {
           "name": "Xzavier Henderson",
           "team": "Florida",
           "year": 2022,
-          "dist": 0.466
+          "dist": 0.467
         },
         {
           "id": "2022_4361556",
@@ -329061,7 +329061,7 @@ const COLLEGE_SCOUTING = {
           "name": "K.J. Hill",
           "team": "Ohio State",
           "year": 2017,
-          "dist": 0.646
+          "dist": 0.647
         },
         {
           "id": "2015_533091",
@@ -329161,14 +329161,14 @@ const COLLEGE_SCOUTING = {
           "name": "Tayvion Robinson",
           "team": "Virginia Tech",
           "year": 2020,
-          "dist": 0.81
+          "dist": 0.811
         },
         {
           "id": "2016_539219",
           "name": "Riley McCarron",
           "team": "Iowa",
           "year": 2016,
-          "dist": 0.829
+          "dist": 0.83
         }
       ],
       "2025_4869730": [
@@ -329191,7 +329191,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jackson Williams",
           "team": "North Dakota State",
           "year": 2026,
-          "dist": 1.121
+          "dist": 1.12
         },
         {
           "id": "2026_5164351",
@@ -329205,21 +329205,21 @@ const COLLEGE_SCOUTING = {
           "name": "Stephon Robinson",
           "team": "Northwestern",
           "year": 2021,
-          "dist": 1.247
+          "dist": 1.248
         },
         {
           "id": "2020_4036026",
           "name": "Dez Fitzpatrick",
           "team": "Louisville",
           "year": 2020,
-          "dist": 1.283
+          "dist": 1.284
         },
         {
           "id": "2017_4036335",
           "name": "Cedrick Wilson",
           "team": "Boise State",
           "year": 2017,
-          "dist": 1.354
+          "dist": 1.355
         },
         {
           "id": "2016_551921",
@@ -329377,7 +329377,7 @@ const COLLEGE_SCOUTING = {
           "name": "Zach Grant",
           "team": "Illinois",
           "year": 2016,
-          "dist": 0.429
+          "dist": 0.428
         },
         {
           "id": "2017_3929923",
@@ -329572,7 +329572,7 @@ const COLLEGE_SCOUTING = {
           "name": "DJ Miller",
           "team": "Kentucky",
           "year": 2026,
-          "dist": 0.615
+          "dist": 0.616
         },
         {
           "id": "2025_4594447",
@@ -329788,7 +329788,7 @@ const COLLEGE_SCOUTING = {
           "name": "Drelon Miller",
           "team": "Colorado",
           "year": 2024,
-          "dist": 0.702
+          "dist": 0.701
         },
         {
           "id": "2016_536118",
@@ -329798,17 +329798,17 @@ const COLLEGE_SCOUTING = {
           "dist": 0.713
         },
         {
-          "id": "2014_536507",
-          "name": "Zach Wright",
-          "team": "Rice",
-          "year": 2014,
-          "dist": 0.714
-        },
-        {
           "id": "2015_546427",
           "name": "Steven Mitchell Jr.",
           "team": "USC",
           "year": 2015,
+          "dist": 0.713
+        },
+        {
+          "id": "2014_536507",
+          "name": "Zach Wright",
+          "team": "Rice",
+          "year": 2014,
           "dist": 0.714
         },
         {
@@ -329853,7 +329853,7 @@ const COLLEGE_SCOUTING = {
           "name": "De'Runnya Wilson",
           "team": "Mississippi State",
           "year": 2015,
-          "dist": 0.612
+          "dist": 0.611
         },
         {
           "id": "2019_4362560",
@@ -329925,7 +329925,7 @@ const COLLEGE_SCOUTING = {
           "name": "Shelton Gibson",
           "team": "West Virginia",
           "year": 2015,
-          "dist": 1.086
+          "dist": 1.087
         },
         {
           "id": "2026_5149831",
@@ -330021,17 +330021,17 @@ const COLLEGE_SCOUTING = {
           "dist": 0.417
         },
         {
-          "id": "2017_3122623",
-          "name": "Jay MacIntyre",
-          "team": "Colorado",
-          "year": 2017,
-          "dist": 0.427
-        },
-        {
           "id": "2021_4374150",
           "name": "Isaiah Hamilton",
           "team": "San José State",
           "year": 2021,
+          "dist": 0.427
+        },
+        {
+          "id": "2017_3122623",
+          "name": "Jay MacIntyre",
+          "team": "Colorado",
+          "year": 2017,
           "dist": 0.427
         }
       ],
@@ -330069,7 +330069,7 @@ const COLLEGE_SCOUTING = {
           "name": "Danzel McKinley-Lewis",
           "team": "Toledo",
           "year": 2020,
-          "dist": 0.405
+          "dist": 0.404
         },
         {
           "id": "2021_4374150",
@@ -330134,14 +330134,14 @@ const COLLEGE_SCOUTING = {
           "name": "Devonte Boyd",
           "team": "UNLV",
           "year": 2015,
-          "dist": 0.73
+          "dist": 0.729
         },
         {
           "id": "2016_547195",
           "name": "Marcus Kemp",
           "team": "Hawai'i",
           "year": 2016,
-          "dist": 0.731
+          "dist": 0.732
         },
         {
           "id": "2026_5154734",
@@ -330220,7 +330220,7 @@ const COLLEGE_SCOUTING = {
           "name": "Brandon Smith",
           "team": "Iowa",
           "year": 2018,
-          "dist": 0.405
+          "dist": 0.404
         },
         {
           "id": "2022_4565361",
@@ -330248,7 +330248,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dimitri Stanley",
           "team": "Iowa State",
           "year": 2022,
-          "dist": 0.441
+          "dist": 0.44
         }
       ],
       "2025_4870965": [
@@ -330329,7 +330329,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ajalen Holley",
           "team": "UL Monroe",
           "year": 2014,
-          "dist": 0.525
+          "dist": 0.524
         },
         {
           "id": "2018_3124964",
@@ -330364,7 +330364,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tamorrion Terry",
           "team": "Florida State",
           "year": 2018,
-          "dist": 1.356
+          "dist": 1.357
         },
         {
           "id": "2019_4047836",
@@ -330378,7 +330378,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ihmir Smith-Marsette",
           "team": "Iowa",
           "year": 2020,
-          "dist": 1.473
+          "dist": 1.472
         },
         {
           "id": "2025_4808759",
@@ -330408,7 +330408,7 @@ const COLLEGE_SCOUTING = {
           "name": "Von Pearson",
           "team": "Tennessee",
           "year": 2014,
-          "dist": 0.389
+          "dist": 0.39
         },
         {
           "id": "2014_3121398",
@@ -330501,7 +330501,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jared Murphy",
           "team": "Miami (OH)",
           "year": 2014,
-          "dist": 0.51
+          "dist": 0.509
         },
         {
           "id": "2025_4596010",
@@ -330515,7 +330515,7 @@ const COLLEGE_SCOUTING = {
           "name": "Deangelo Antoine",
           "team": "Florida Atlantic",
           "year": 2019,
-          "dist": 0.558
+          "dist": 0.559
         },
         {
           "id": "2014_535265",
@@ -330617,7 +330617,7 @@ const COLLEGE_SCOUTING = {
           "name": "Harrison Wallace III",
           "team": "Ole Miss",
           "year": 2025,
-          "dist": 0.289
+          "dist": 0.288
         },
         {
           "id": "2026_4879567",
@@ -330896,7 +330896,7 @@ const COLLEGE_SCOUTING = {
           "name": "Donovan Olugbode",
           "team": "Missouri",
           "year": 2026,
-          "dist": 0.587
+          "dist": 0.588
         }
       ],
       "2025_4877021": [
@@ -330926,7 +330926,7 @@ const COLLEGE_SCOUTING = {
           "name": "Terrence Smith Jr.",
           "team": "Colorado State",
           "year": 2026,
-          "dist": 0.805
+          "dist": 0.806
         },
         {
           "id": "2021_4362312",
@@ -330968,7 +330968,7 @@ const COLLEGE_SCOUTING = {
           "name": "Devin Mccuin",
           "team": "Ohio State",
           "year": 2026,
-          "dist": 0.932
+          "dist": 0.931
         }
       ],
       "2025_4877024": [
@@ -331012,7 +331012,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tavaris Harrison",
           "team": "Florida Atlantic",
           "year": 2018,
-          "dist": 0.832
+          "dist": 0.833
         },
         {
           "id": "2021_4371968",
@@ -331070,7 +331070,7 @@ const COLLEGE_SCOUTING = {
           "name": "Deondre Douglas",
           "team": "Troy",
           "year": 2016,
-          "dist": 0.424
+          "dist": 0.425
         },
         {
           "id": "2018_3894912",
@@ -331149,7 +331149,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kaylon Geiger",
           "team": "Texas Tech",
           "year": 2021,
-          "dist": 0.559
+          "dist": 0.56
         },
         {
           "id": "2018_4242484",
@@ -331344,7 +331344,7 @@ const COLLEGE_SCOUTING = {
           "name": "Shemar Thornton",
           "team": "Northern Illinois",
           "year": 2022,
-          "dist": 0.609
+          "dist": 0.608
         },
         {
           "id": "2017_3929645",
@@ -331653,7 +331653,7 @@ const COLLEGE_SCOUTING = {
           "name": "Devin Gentry",
           "team": "Georgia State",
           "year": 2017,
-          "dist": 0.607
+          "dist": 0.606
         },
         {
           "id": "2022_4428025",
@@ -331732,7 +331732,7 @@ const COLLEGE_SCOUTING = {
           "name": "Turner Smiley",
           "team": "North Texas",
           "year": 2016,
-          "dist": 0.736
+          "dist": 0.735
         },
         {
           "id": "2016_3116574",
@@ -331753,7 +331753,7 @@ const COLLEGE_SCOUTING = {
           "name": "Deon-Tay McManus",
           "team": "Marshall",
           "year": 2015,
-          "dist": 0.781
+          "dist": 0.78
         },
         {
           "id": "2015_3929047",
@@ -331811,7 +331811,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dashawn Martin",
           "team": "Virginia",
           "year": 2026,
-          "dist": 0.917
+          "dist": 0.916
         },
         {
           "id": "2025_5150904",
@@ -331848,7 +331848,7 @@ const COLLEGE_SCOUTING = {
           "name": "Brock Rechsteiner",
           "team": "Jacksonville State",
           "year": 2025,
-          "dist": 1.775
+          "dist": 1.776
         },
         {
           "id": "2021_4379569",
@@ -331862,7 +331862,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ricky Smalling",
           "team": "Illinois",
           "year": 2018,
-          "dist": 1.954
+          "dist": 1.953
         },
         {
           "id": "2026_5087930",
@@ -331962,7 +331962,7 @@ const COLLEGE_SCOUTING = {
           "name": "Aleva Hifo",
           "team": "BYU",
           "year": 2017,
-          "dist": 0.53
+          "dist": 0.531
         },
         {
           "id": "2019_4038931",
@@ -332020,7 +332020,7 @@ const COLLEGE_SCOUTING = {
           "name": "Frederick Gammage",
           "team": "Arizona State",
           "year": 2016,
-          "dist": 0.481
+          "dist": 0.48
         },
         {
           "id": "2017_4243537",
@@ -332157,7 +332157,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dezmon Epps",
           "team": "Idaho",
           "year": 2015,
-          "dist": 2.942
+          "dist": 2.943
         },
         {
           "id": "2016_3126486",
@@ -332178,14 +332178,14 @@ const COLLEGE_SCOUTING = {
           "name": "Keytaon Thompson",
           "team": "Virginia",
           "year": 2021,
-          "dist": 3.009
+          "dist": 3.01
         },
         {
           "id": "2016_3122899",
           "name": "Richie James",
           "team": "Middle Tennessee",
           "year": 2016,
-          "dist": 3.125
+          "dist": 3.126
         },
         {
           "id": "2015_537063",
@@ -332236,7 +332236,7 @@ const COLLEGE_SCOUTING = {
           "name": "Cayleb Jones",
           "team": "Arizona",
           "year": 2015,
-          "dist": 0.637
+          "dist": 0.636
         },
         {
           "id": "2025_5084772",
@@ -332294,7 +332294,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jaylond Adams",
           "team": "Southern Miss",
           "year": 2019,
-          "dist": 0.927
+          "dist": 0.926
         },
         {
           "id": "2014_516363",
@@ -332329,7 +332329,7 @@ const COLLEGE_SCOUTING = {
           "name": "D.J. Foster",
           "team": "Arizona State",
           "year": 2015,
-          "dist": 1.142
+          "dist": 1.141
         },
         {
           "id": "2026_5159036",
@@ -332408,7 +332408,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jarrin Pierce",
           "team": "Middle Tennessee",
           "year": 2020,
-          "dist": 0.888
+          "dist": 0.889
         }
       ],
       "2025_4910239": [
@@ -332417,7 +332417,7 @@ const COLLEGE_SCOUTING = {
           "name": "Cornelius Johnson",
           "team": "Michigan",
           "year": 2020,
-          "dist": 0.846
+          "dist": 0.845
         },
         {
           "id": "2014_550355",
@@ -332568,7 +332568,7 @@ const COLLEGE_SCOUTING = {
           "name": "Duece Watts",
           "team": "Tulane",
           "year": 2020,
-          "dist": 0.505
+          "dist": 0.506
         },
         {
           "id": "2013_517352",
@@ -332589,7 +332589,7 @@ const COLLEGE_SCOUTING = {
           "name": "T.J. Chase",
           "team": "Florida Atlantic",
           "year": 2020,
-          "dist": 0.589
+          "dist": 0.59
         },
         {
           "id": "2015_511983",
@@ -332603,7 +332603,7 @@ const COLLEGE_SCOUTING = {
           "name": "Alec Pierce",
           "team": "Cincinnati",
           "year": 2021,
-          "dist": 0.621
+          "dist": 0.62
         },
         {
           "id": "2018_3124013",
@@ -332696,7 +332696,7 @@ const COLLEGE_SCOUTING = {
           "name": "Chase Claypool",
           "team": "Notre Dame",
           "year": 2019,
-          "dist": 0.796
+          "dist": 0.797
         }
       ],
       "2025_4914830": [
@@ -332733,7 +332733,7 @@ const COLLEGE_SCOUTING = {
           "name": "Malachi Corley",
           "team": "Western Kentucky",
           "year": 2022,
-          "dist": 0.795
+          "dist": 0.794
         },
         {
           "id": "2014_530877",
@@ -332977,7 +332977,7 @@ const COLLEGE_SCOUTING = {
           "name": "Demarcus Ayers",
           "team": "Houston",
           "year": 2014,
-          "dist": 0.489
+          "dist": 0.488
         },
         {
           "id": "2022_4427037",
@@ -333007,7 +333007,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kyle Buss",
           "team": "UConn",
           "year": 2018,
-          "dist": 0.487
+          "dist": 0.486
         },
         {
           "id": "2019_3921632",
@@ -333049,7 +333049,7 @@ const COLLEGE_SCOUTING = {
           "name": "Mario Alford",
           "team": "West Virginia",
           "year": 2013,
-          "dist": 0.712
+          "dist": 0.713
         },
         {
           "id": "2024_4432215",
@@ -333151,7 +333151,7 @@ const COLLEGE_SCOUTING = {
           "name": "Antonio Callaway",
           "team": "Florida",
           "year": 2015,
-          "dist": 0.683
+          "dist": 0.684
         },
         {
           "id": "2018_3916124",
@@ -333223,14 +333223,14 @@ const COLLEGE_SCOUTING = {
           "name": "Tyrin Smith",
           "team": "UTEP",
           "year": 2022,
-          "dist": 0.876
+          "dist": 0.877
         },
         {
           "id": "2022_4429479",
           "name": "Corey Crooms",
           "team": "Western Michigan",
           "year": 2022,
-          "dist": 0.935
+          "dist": 0.934
         },
         {
           "id": "2021_4426892",
@@ -333298,17 +333298,17 @@ const COLLEGE_SCOUTING = {
           "dist": 0.4
         },
         {
-          "id": "2020_4044520",
-          "name": "Brennon Dingle",
-          "team": "UTSA",
-          "year": 2020,
-          "dist": 0.483
-        },
-        {
           "id": "2014_520522",
           "name": "Ben Ijah",
           "team": "Texas State",
           "year": 2014,
+          "dist": 0.483
+        },
+        {
+          "id": "2020_4044520",
+          "name": "Brennon Dingle",
+          "team": "UTSA",
+          "year": 2020,
           "dist": 0.483
         },
         {
@@ -333395,7 +333395,7 @@ const COLLEGE_SCOUTING = {
           "name": "Evan Stewart",
           "team": "Oregon",
           "year": 2026,
-          "dist": 0.569
+          "dist": 0.57
         },
         {
           "id": "2023_4869655",
@@ -333453,7 +333453,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kyric McGowan",
           "team": "Georgia Tech",
           "year": 2021,
-          "dist": 0.837
+          "dist": 0.836
         },
         {
           "id": "2014_3122449",
@@ -333467,7 +333467,7 @@ const COLLEGE_SCOUTING = {
           "name": "Chris Pierce",
           "team": "Vanderbilt",
           "year": 2020,
-          "dist": 0.85
+          "dist": 0.849
         },
         {
           "id": "2014_3123986",
@@ -333546,7 +333546,7 @@ const COLLEGE_SCOUTING = {
           "name": "Mecole Hardman",
           "team": "Georgia",
           "year": 2018,
-          "dist": 0.541
+          "dist": 0.54
         },
         {
           "id": "2016_550549",
@@ -333641,7 +333641,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jarvis West",
           "team": "Iowa State",
           "year": 2014,
-          "dist": 0.535
+          "dist": 0.534
         },
         {
           "id": "2018_3123208",
@@ -333655,14 +333655,14 @@ const COLLEGE_SCOUTING = {
           "name": "D.J. Matthews",
           "team": "Florida State",
           "year": 2018,
-          "dist": 0.894
+          "dist": 0.893
         },
         {
           "id": "2026_4869603",
           "name": "Cam Pickett",
           "team": "Kansas",
           "year": 2026,
-          "dist": 0.896
+          "dist": 0.895
         },
         {
           "id": "2025_5296027",
@@ -333697,7 +333697,7 @@ const COLLEGE_SCOUTING = {
           "name": "Luke Timian",
           "team": "Indiana",
           "year": 2017,
-          "dist": 0.977
+          "dist": 0.978
         },
         {
           "id": "2013_531268",
@@ -333792,35 +333792,35 @@ const COLLEGE_SCOUTING = {
           "name": "Aidan Mizell",
           "team": "UCLA",
           "year": 2026,
-          "dist": 1.713
+          "dist": 1.714
         },
         {
           "id": "2023_5081508",
           "name": "Eli Heidenreich",
           "team": "Navy",
           "year": 2023,
-          "dist": 1.73
+          "dist": 1.729
         },
         {
           "id": "2026_5228760",
           "name": "Derrick Eley",
           "team": "Charlotte",
           "year": 2026,
-          "dist": 1.747
+          "dist": 1.746
         },
         {
           "id": "2022_4361973",
           "name": "Kaleb Smith",
           "team": "Virginia Tech",
           "year": 2022,
-          "dist": 1.822
+          "dist": 1.821
         },
         {
           "id": "2015_546034",
           "name": "Shelton Gibson",
           "team": "West Virginia",
           "year": 2015,
-          "dist": 1.831
+          "dist": 1.83
         },
         {
           "id": "2025_4870850",
@@ -333834,21 +333834,21 @@ const COLLEGE_SCOUTING = {
           "name": "Phillip Dorsett",
           "team": "Miami",
           "year": 2014,
-          "dist": 1.855
+          "dist": 1.854
         },
         {
           "id": "2026_5149831",
           "name": "Kayden McGee",
           "team": "UNLV",
           "year": 2026,
-          "dist": 1.903
+          "dist": 1.902
         },
         {
           "id": "2014_531670",
           "name": "Breshad Perriman",
           "team": "UCF",
           "year": 2014,
-          "dist": 1.985
+          "dist": 1.984
         }
       ],
       "2025_5075390": [
@@ -333899,7 +333899,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jakeem Grant",
           "team": "Texas Tech",
           "year": 2014,
-          "dist": 0.538
+          "dist": 0.539
         },
         {
           "id": "2015_545837",
@@ -333985,7 +333985,7 @@ const COLLEGE_SCOUTING = {
           "name": "Levern Jacobs",
           "team": "Maryland",
           "year": 2016,
-          "dist": 0.77
+          "dist": 0.771
         },
         {
           "id": "2026_5225509",
@@ -334115,7 +334115,7 @@ const COLLEGE_SCOUTING = {
           "name": "Waden Charles",
           "team": "UCF",
           "year": 2026,
-          "dist": 0.468
+          "dist": 0.469
         },
         {
           "id": "2019_4378754",
@@ -334201,7 +334201,7 @@ const COLLEGE_SCOUTING = {
           "name": "Josh Cameron",
           "team": "Baylor",
           "year": 2025,
-          "dist": 0.585
+          "dist": 0.586
         },
         {
           "id": "2025_4871062",
@@ -334231,7 +334231,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tony Lippett",
           "team": "Michigan State",
           "year": 2014,
-          "dist": 0.756
+          "dist": 0.755
         },
         {
           "id": "2017_3932905",
@@ -334280,7 +334280,7 @@ const COLLEGE_SCOUTING = {
           "name": "Leonte Carroo",
           "team": "Rutgers",
           "year": 2014,
-          "dist": 0.895
+          "dist": 0.896
         }
       ],
       "2025_5077873": [
@@ -334289,7 +334289,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dante Cephas",
           "team": "Kent State",
           "year": 2022,
-          "dist": 0.484
+          "dist": 0.485
         },
         {
           "id": "2022_4429362",
@@ -334303,7 +334303,7 @@ const COLLEGE_SCOUTING = {
           "name": "Elijah King",
           "team": "Texas State",
           "year": 2017,
-          "dist": 0.546
+          "dist": 0.545
         },
         {
           "id": "2025_4687189",
@@ -334440,7 +334440,7 @@ const COLLEGE_SCOUTING = {
           "name": "Trebor Pena",
           "team": "Penn State",
           "year": 2025,
-          "dist": 0.405
+          "dist": 0.404
         },
         {
           "id": "2014_550567",
@@ -334478,6 +334478,13 @@ const COLLEGE_SCOUTING = {
           "dist": 0.63
         },
         {
+          "id": "2026_5089003",
+          "name": "Colin Chase",
+          "team": "Temple",
+          "year": 2026,
+          "dist": 0.641
+        },
+        {
           "id": "2021_4430089",
           "name": "Michael Mathison",
           "team": "Akron",
@@ -334490,13 +334497,6 @@ const COLLEGE_SCOUTING = {
           "team": "Kansas",
           "year": 2016,
           "dist": 0.656
-        },
-        {
-          "id": "2026_5089003",
-          "name": "Colin Chase",
-          "team": "Temple",
-          "year": 2026,
-          "dist": 0.66
         }
       ],
       "2025_5078227": [
@@ -334526,14 +334526,14 @@ const COLLEGE_SCOUTING = {
           "name": "Aveion Chenault",
           "team": "Western Michigan",
           "year": 2025,
-          "dist": 0.479
+          "dist": 0.478
         },
         {
           "id": "2014_3116165",
           "name": "Chris Godwin",
           "team": "Penn State",
           "year": 2014,
-          "dist": 0.526
+          "dist": 0.525
         },
         {
           "id": "2018_4035680",
@@ -335130,14 +335130,14 @@ const COLLEGE_SCOUTING = {
           "name": "Koby Young",
           "team": "Houston",
           "year": 2026,
-          "dist": 0.679
+          "dist": 0.678
         },
         {
           "id": "2026_5122096",
           "name": "Kedarius Wade",
           "team": "Louisiana",
           "year": 2026,
-          "dist": 0.699
+          "dist": 0.698
         },
         {
           "id": "2018_3935449",
@@ -335209,7 +335209,7 @@ const COLLEGE_SCOUTING = {
           "name": "Danny Davis III",
           "team": "Wisconsin",
           "year": 2021,
-          "dist": 0.503
+          "dist": 0.502
         },
         {
           "id": "2013_518250",
@@ -335246,7 +335246,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ishmael Zamora",
           "team": "Baylor",
           "year": 2016,
-          "dist": 0.777
+          "dist": 0.776
         },
         {
           "id": "2023_4429184",
@@ -335288,7 +335288,7 @@ const COLLEGE_SCOUTING = {
           "name": "Noah Smith",
           "team": "Sam Houston",
           "year": 2023,
-          "dist": 0.98
+          "dist": 0.981
         }
       ],
       "2025_5079613": [
@@ -335346,7 +335346,7 @@ const COLLEGE_SCOUTING = {
           "name": "Bryce Bohanon",
           "team": "Tulane",
           "year": 2025,
-          "dist": 0.448
+          "dist": 0.447
         },
         {
           "id": "2022_4714388",
@@ -335369,14 +335369,14 @@ const COLLEGE_SCOUTING = {
           "name": "Gage Larvadain",
           "team": "Miami (OH)",
           "year": 2023,
-          "dist": 0.488
+          "dist": 0.487
         },
         {
           "id": "2025_5084967",
           "name": "Victor Snow",
           "team": "Buffalo",
           "year": 2025,
-          "dist": 0.519
+          "dist": 0.518
         },
         {
           "id": "2020_4361646",
@@ -335390,7 +335390,7 @@ const COLLEGE_SCOUTING = {
           "name": "Will Pauling",
           "team": "Wisconsin",
           "year": 2023,
-          "dist": 0.705
+          "dist": 0.704
         },
         {
           "id": "2018_4050373",
@@ -335648,7 +335648,7 @@ const COLLEGE_SCOUTING = {
           "name": "Malik Turner",
           "team": "Illinois",
           "year": 2016,
-          "dist": 0.825
+          "dist": 0.826
         }
       ],
       "2025_5080819": [
@@ -335671,7 +335671,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dres Anderson",
           "team": "Utah",
           "year": 2014,
-          "dist": 0.899
+          "dist": 0.898
         },
         {
           "id": "2017_4043158",
@@ -335692,7 +335692,7 @@ const COLLEGE_SCOUTING = {
           "name": "Terrell Bynum",
           "team": "Washington",
           "year": 2021,
-          "dist": 1.112
+          "dist": 1.111
         },
         {
           "id": "2016_552951",
@@ -335778,7 +335778,7 @@ const COLLEGE_SCOUTING = {
           "name": "Gabriel Benyard",
           "team": "Kennesaw State",
           "year": 2025,
-          "dist": 0.648
+          "dist": 0.647
         },
         {
           "id": "2021_4259305",
@@ -335894,7 +335894,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kenneth Womack",
           "team": "Western Michigan",
           "year": 2024,
-          "dist": 0.637
+          "dist": 0.636
         },
         {
           "id": "2020_4362785",
@@ -335959,7 +335959,7 @@ const COLLEGE_SCOUTING = {
           "name": "River Cracraft",
           "team": "Washington State",
           "year": 2016,
-          "dist": 0.699
+          "dist": 0.698
         },
         {
           "id": "2019_3929645",
@@ -336089,7 +336089,7 @@ const COLLEGE_SCOUTING = {
           "name": "Josh Downs",
           "team": "North Carolina",
           "year": 2021,
-          "dist": 1.544
+          "dist": 1.543
         },
         {
           "id": "2018_3917914",
@@ -336117,7 +336117,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tyrice Richie",
           "team": "Northern Illinois",
           "year": 2020,
-          "dist": 2.109
+          "dist": 2.108
         },
         {
           "id": "2025_5085137",
@@ -336138,7 +336138,7 @@ const COLLEGE_SCOUTING = {
           "name": "Greg Dortch",
           "team": "Wake Forest",
           "year": 2018,
-          "dist": 2.226
+          "dist": 2.225
         },
         {
           "id": "2014_532661",
@@ -336168,7 +336168,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jordan Napier",
           "team": "San Diego State",
           "year": 2024,
-          "dist": 0.677
+          "dist": 0.678
         },
         {
           "id": "2020_4362430",
@@ -336247,7 +336247,7 @@ const COLLEGE_SCOUTING = {
           "name": "Mike Carrigan",
           "team": "Kent State",
           "year": 2017,
-          "dist": 0.627
+          "dist": 0.628
         },
         {
           "id": "2025_4697844",
@@ -336282,7 +336282,7 @@ const COLLEGE_SCOUTING = {
           "name": "Isaiah Washington",
           "team": "Rutgers",
           "year": 2019,
-          "dist": 0.786
+          "dist": 0.785
         },
         {
           "id": "2016_3918230",
@@ -336333,7 +336333,7 @@ const COLLEGE_SCOUTING = {
           "name": "Joe Reed",
           "team": "Virginia",
           "year": 2019,
-          "dist": 1.266
+          "dist": 1.267
         },
         {
           "id": "2019_4036055",
@@ -336361,7 +336361,7 @@ const COLLEGE_SCOUTING = {
           "name": "Gehrig Dieter",
           "team": "Bowling Green",
           "year": 2015,
-          "dist": 1.38
+          "dist": 1.379
         },
         {
           "id": "2026_4921110",
@@ -336384,7 +336384,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ezekiel Avit",
           "team": "Fresno State",
           "year": 2026,
-          "dist": 0.628
+          "dist": 0.627
         },
         {
           "id": "2014_517962",
@@ -336419,7 +336419,7 @@ const COLLEGE_SCOUTING = {
           "name": "Michael Thomas",
           "team": "Southern Miss",
           "year": 2014,
-          "dist": 0.755
+          "dist": 0.754
         },
         {
           "id": "2026_5217200",
@@ -336642,7 +336642,7 @@ const COLLEGE_SCOUTING = {
           "name": "Zakhari Franklin",
           "team": "UTSA",
           "year": 2020,
-          "dist": 1.087
+          "dist": 1.088
         },
         {
           "id": "2017_3123935",
@@ -336686,7 +336686,7 @@ const COLLEGE_SCOUTING = {
           "name": "Marcus Green",
           "team": "UL Monroe",
           "year": 2015,
-          "dist": 0.661
+          "dist": 0.662
         },
         {
           "id": "2022_4430834",
@@ -336707,7 +336707,7 @@ const COLLEGE_SCOUTING = {
           "name": "Chris Olave",
           "team": "Ohio State",
           "year": 2021,
-          "dist": 0.747
+          "dist": 0.748
         },
         {
           "id": "2022_4574026",
@@ -336751,7 +336751,7 @@ const COLLEGE_SCOUTING = {
           "name": "Reginald Todd",
           "team": "Troy",
           "year": 2019,
-          "dist": 0.427
+          "dist": 0.426
         },
         {
           "id": "2014_545962",
@@ -336837,7 +336837,7 @@ const COLLEGE_SCOUTING = {
           "name": "Keylon Stokes",
           "team": "Tulsa",
           "year": 2019,
-          "dist": 0.748
+          "dist": 0.749
         },
         {
           "id": "2026_5290573",
@@ -337039,7 +337039,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jordan Shipp",
           "team": "North Carolina",
           "year": 2025,
-          "dist": 0.519
+          "dist": 0.518
         },
         {
           "id": "2018_4260320",
@@ -337111,21 +337111,21 @@ const COLLEGE_SCOUTING = {
           "name": "Billy Kemp",
           "team": "Virginia",
           "year": 2020,
-          "dist": 1.169
+          "dist": 1.17
         },
         {
           "id": "2019_4257587",
           "name": "Jadan Blue",
           "team": "Temple",
           "year": 2019,
-          "dist": 1.205
+          "dist": 1.204
         },
         {
           "id": "2021_4245639",
           "name": "Stanley Berryhill III",
           "team": "Arizona",
           "year": 2021,
-          "dist": 1.301
+          "dist": 1.302
         },
         {
           "id": "2024_4571563",
@@ -337146,7 +337146,7 @@ const COLLEGE_SCOUTING = {
           "name": "Anthony Evans III",
           "team": "Mississippi State",
           "year": 2026,
-          "dist": 1.405
+          "dist": 1.404
         },
         {
           "id": "2021_4035912",
@@ -337197,7 +337197,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kekoa Crawford",
           "team": "California",
           "year": 2021,
-          "dist": 0.743
+          "dist": 0.742
         },
         {
           "id": "2022_4361412",
@@ -337592,7 +337592,7 @@ const COLLEGE_SCOUTING = {
           "name": "Rashad Medaris",
           "team": "Cincinnati",
           "year": 2019,
-          "dist": 0.466
+          "dist": 0.465
         }
       ],
       "2025_5091830": [
@@ -337945,14 +337945,14 @@ const COLLEGE_SCOUTING = {
           "name": "Rashod Bateman",
           "team": "Minnesota",
           "year": 2020,
-          "dist": 0.797
+          "dist": 0.796
         },
         {
           "id": "2018_4047646",
           "name": "A.J. Brown",
           "team": "Ole Miss",
           "year": 2018,
-          "dist": 0.813
+          "dist": 0.814
         }
       ],
       "2025_5093837": [
@@ -338133,14 +338133,14 @@ const COLLEGE_SCOUTING = {
           "name": "Latrell Williams",
           "team": "South Florida",
           "year": 2020,
-          "dist": 0.914
+          "dist": 0.913
         },
         {
           "id": "2017_4035896",
           "name": "Evan Fairs",
           "team": "Kansas",
           "year": 2017,
-          "dist": 0.956
+          "dist": 0.957
         },
         {
           "id": "2017_4046666",
@@ -338154,7 +338154,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jeff Foreman",
           "team": "Arkansas State",
           "year": 2021,
-          "dist": 0.971
+          "dist": 0.972
         },
         {
           "id": "2013_516646",
@@ -338493,7 +338493,7 @@ const COLLEGE_SCOUTING = {
           "name": "Antonio Gibson",
           "team": "Memphis",
           "year": 2019,
-          "dist": 1.019
+          "dist": 1.018
         },
         {
           "id": "2021_4429025",
@@ -338551,7 +338551,7 @@ const COLLEGE_SCOUTING = {
           "name": "Shaleak Knotts",
           "team": "Maryland",
           "year": 2025,
-          "dist": 1.216
+          "dist": 1.215
         },
         {
           "id": "2016_552951",
@@ -338565,14 +338565,14 @@ const COLLEGE_SCOUTING = {
           "name": "Erik Ezukanma",
           "team": "Texas Tech",
           "year": 2020,
-          "dist": 1.384
+          "dist": 1.385
         },
         {
           "id": "2024_5157331",
           "name": "Adrian Norton",
           "team": "Akron",
           "year": 2024,
-          "dist": 1.404
+          "dist": 1.403
         },
         {
           "id": "2025_5193274",
@@ -338586,7 +338586,7 @@ const COLLEGE_SCOUTING = {
           "name": "Travis Fulgham",
           "team": "Old Dominion",
           "year": 2018,
-          "dist": 1.488
+          "dist": 1.487
         },
         {
           "id": "2018_4240028",
@@ -338781,7 +338781,7 @@ const COLLEGE_SCOUTING = {
           "name": "Corey Rucker",
           "team": "Arkansas State",
           "year": 2025,
-          "dist": 1.156
+          "dist": 1.157
         },
         {
           "id": "2018_4043161",
@@ -338802,7 +338802,7 @@ const COLLEGE_SCOUTING = {
           "name": "Bailey Gaither",
           "team": "San José State",
           "year": 2020,
-          "dist": 1.265
+          "dist": 1.264
         },
         {
           "id": "2016_3931763",
@@ -338846,7 +338846,7 @@ const COLLEGE_SCOUTING = {
           "name": "Austin Osborne",
           "team": "Bowling Green",
           "year": 2023,
-          "dist": 0.431
+          "dist": 0.432
         },
         {
           "id": "2020_4430846",
@@ -338928,6 +338928,13 @@ const COLLEGE_SCOUTING = {
           "dist": 0.519
         },
         {
+          "id": "2026_4726152",
+          "name": "Jovanni Bermudez",
+          "team": "Temple",
+          "year": 2026,
+          "dist": 0.552
+        },
+        {
           "id": "2019_4361915",
           "name": "Sam Pinckney",
           "team": "Georgia State",
@@ -338954,13 +338961,6 @@ const COLLEGE_SCOUTING = {
           "team": "Clemson",
           "year": 2021,
           "dist": 0.643
-        },
-        {
-          "id": "2016_4039908",
-          "name": "Tevaris McCormick",
-          "team": "Troy",
-          "year": 2016,
-          "dist": 0.651
         }
       ],
       "2025_5121616": [
@@ -339004,7 +339004,7 @@ const COLLEGE_SCOUTING = {
           "name": "Chris Platt",
           "team": "Baylor",
           "year": 2019,
-          "dist": 0.426
+          "dist": 0.427
         },
         {
           "id": "2020_4043606",
@@ -339134,7 +339134,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ladd McConkey",
           "team": "Georgia",
           "year": 2022,
-          "dist": 0.438
+          "dist": 0.439
         },
         {
           "id": "2022_4688367",
@@ -339199,7 +339199,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jamaal Pritchett",
           "team": "South Alabama",
           "year": 2023,
-          "dist": 0.468
+          "dist": 0.469
         },
         {
           "id": "2014_533196",
@@ -339313,7 +339313,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jaylen Dixon",
           "team": "Utah",
           "year": 2019,
-          "dist": 0.417
+          "dist": 0.416
         },
         {
           "id": "2017_548471",
@@ -339357,14 +339357,14 @@ const COLLEGE_SCOUTING = {
           "name": "Jalen Smith",
           "team": "Minnesota",
           "year": 2026,
-          "dist": 0.997
+          "dist": 0.996
         },
         {
           "id": "2025_4594319",
           "name": "Brady Boyd",
           "team": "Utah State",
           "year": 2025,
-          "dist": 1.03
+          "dist": 1.029
         },
         {
           "id": "2017_3916945",
@@ -339385,7 +339385,7 @@ const COLLEGE_SCOUTING = {
           "name": "Spencer Tears",
           "team": "Northern Illinois",
           "year": 2018,
-          "dist": 1.114
+          "dist": 1.113
         },
         {
           "id": "2021_4687555",
@@ -339450,7 +339450,7 @@ const COLLEGE_SCOUTING = {
           "name": "Brennan Presley",
           "team": "Oklahoma State",
           "year": 2022,
-          "dist": 0.982
+          "dist": 0.983
         },
         {
           "id": "2024_4879298",
@@ -339566,7 +339566,7 @@ const COLLEGE_SCOUTING = {
           "name": "Keevan Lucas",
           "team": "Tulsa",
           "year": 2015,
-          "dist": 1.036
+          "dist": 1.037
         },
         {
           "id": "2023_4696882",
@@ -339587,7 +339587,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ahmmon Richards",
           "team": "Miami",
           "year": 2017,
-          "dist": 1.315
+          "dist": 1.316
         },
         {
           "id": "2016_3918014",
@@ -339608,7 +339608,7 @@ const COLLEGE_SCOUTING = {
           "name": "Evan Stewart",
           "team": "Texas A&M",
           "year": 2023,
-          "dist": 1.33
+          "dist": 1.329
         }
       ],
       "2025_5126534": [
@@ -339673,14 +339673,14 @@ const COLLEGE_SCOUTING = {
           "name": "Sanfrisco Magee",
           "team": "Mississippi State",
           "year": 2026,
-          "dist": 0.946
+          "dist": 0.947
         },
         {
           "id": "2017_3124722",
           "name": "Tyler Batson",
           "team": "UTEP",
           "year": 2017,
-          "dist": 1.002
+          "dist": 1.003
         }
       ],
       "2025_5127885": [
@@ -339689,7 +339689,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jamire Jordan",
           "team": "Fresno State",
           "year": 2015,
-          "dist": 0.582
+          "dist": 0.583
         },
         {
           "id": "2026_5152158",
@@ -339724,7 +339724,7 @@ const COLLEGE_SCOUTING = {
           "name": "Keyarris Garrett",
           "team": "Tulsa",
           "year": 2014,
-          "dist": 0.784
+          "dist": 0.783
         },
         {
           "id": "2017_3128251",
@@ -339854,7 +339854,7 @@ const COLLEGE_SCOUTING = {
           "name": "Charlie Jones",
           "team": "Iowa",
           "year": 2021,
-          "dist": 0.535
+          "dist": 0.534
         },
         {
           "id": "2021_4361492",
@@ -340012,7 +340012,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jeff Badet",
           "team": "Kentucky",
           "year": 2015,
-          "dist": 0.717
+          "dist": 0.716
         },
         {
           "id": "2025_5092787",
@@ -340026,7 +340026,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jalen Walker",
           "team": "Miami (OH)",
           "year": 2019,
-          "dist": 0.743
+          "dist": 0.742
         },
         {
           "id": "2026_5122096",
@@ -340084,7 +340084,7 @@ const COLLEGE_SCOUTING = {
           "name": "Chase Penry",
           "team": "Boise State",
           "year": 2025,
-          "dist": 0.527
+          "dist": 0.526
         },
         {
           "id": "2013_549962",
@@ -340112,7 +340112,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dimitri Stanley",
           "team": "Iowa State",
           "year": 2022,
-          "dist": 0.575
+          "dist": 0.574
         }
       ],
       "2025_5141394": [
@@ -340128,7 +340128,7 @@ const COLLEGE_SCOUTING = {
           "name": "CJ Lewis",
           "team": "Bowling Green",
           "year": 2022,
-          "dist": 0.279
+          "dist": 0.28
         },
         {
           "id": "2026_5193277",
@@ -340177,7 +340177,7 @@ const COLLEGE_SCOUTING = {
           "name": "J.J. Jones",
           "team": "North Carolina",
           "year": 2022,
-          "dist": 0.485
+          "dist": 0.484
         },
         {
           "id": "2018_4035628",
@@ -340242,14 +340242,14 @@ const COLLEGE_SCOUTING = {
           "name": "Jayshon Jackson",
           "team": "Cincinnati",
           "year": 2020,
-          "dist": 0.503
+          "dist": 0.502
         },
         {
           "id": "2018_3116574",
           "name": "Chris Taylor",
           "team": "Duke",
           "year": 2018,
-          "dist": 0.504
+          "dist": 0.503
         },
         {
           "id": "2025_5121664",
@@ -340279,7 +340279,7 @@ const COLLEGE_SCOUTING = {
           "name": "Donaven McCulley",
           "team": "Indiana",
           "year": 2023,
-          "dist": 0.492
+          "dist": 0.491
         },
         {
           "id": "2019_3916124",
@@ -340307,7 +340307,7 @@ const COLLEGE_SCOUTING = {
           "name": "Theo Howard",
           "team": "UCLA",
           "year": 2018,
-          "dist": 0.711
+          "dist": 0.71
         },
         {
           "id": "2018_3932423",
@@ -340465,7 +340465,7 @@ const COLLEGE_SCOUTING = {
           "name": "Austin Proehl",
           "team": "North Carolina",
           "year": 2016,
-          "dist": 0.513
+          "dist": 0.514
         },
         {
           "id": "2018_4371986",
@@ -340639,7 +340639,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jeremiah Hunter",
           "team": "Washington",
           "year": 2024,
-          "dist": 0.441
+          "dist": 0.442
         },
         {
           "id": "2017_3124369",
@@ -340725,7 +340725,7 @@ const COLLEGE_SCOUTING = {
           "name": "Donnie Gray",
           "team": "Massachusetts",
           "year": 2025,
-          "dist": 0.42
+          "dist": 0.421
         },
         {
           "id": "2021_4030947",
@@ -340783,7 +340783,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jayshon Platt",
           "team": "Florida Atlantic",
           "year": 2025,
-          "dist": 0.504
+          "dist": 0.503
         },
         {
           "id": "2026_4870745",
@@ -340804,14 +340804,14 @@ const COLLEGE_SCOUTING = {
           "name": "Devin Carter",
           "team": "NC State",
           "year": 2021,
-          "dist": 0.592
+          "dist": 0.591
         },
         {
           "id": "2018_4039295",
           "name": "Keith Corbin",
           "team": "Houston",
           "year": 2018,
-          "dist": 0.64
+          "dist": 0.639
         },
         {
           "id": "2019_4362560",
@@ -341027,7 +341027,7 @@ const COLLEGE_SCOUTING = {
           "name": "Trea Shropshire",
           "team": "UAB",
           "year": 2020,
-          "dist": 0.576
+          "dist": 0.575
         },
         {
           "id": "2014_518311",
@@ -341113,7 +341113,7 @@ const COLLEGE_SCOUTING = {
           "name": "Keith Reynolds",
           "team": "Miami (OH)",
           "year": 2025,
-          "dist": 1.068
+          "dist": 1.069
         },
         {
           "id": "2020_4570219",
@@ -341352,7 +341352,7 @@ const COLLEGE_SCOUTING = {
           "name": "Izaiah Gathings",
           "team": "Middle Tennessee",
           "year": 2022,
-          "dist": 0.527
+          "dist": 0.526
         },
         {
           "id": "2013_481267",
@@ -341445,7 +341445,7 @@ const COLLEGE_SCOUTING = {
           "name": "Hasise Dubois",
           "team": "Virginia",
           "year": 2018,
-          "dist": 0.479
+          "dist": 0.478
         },
         {
           "id": "2024_4603746",
@@ -341575,7 +341575,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dashawn Martin",
           "team": "Virginia",
           "year": 2026,
-          "dist": 0.802
+          "dist": 0.803
         },
         {
           "id": "2016_3915416",
@@ -341719,7 +341719,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tyler Walton",
           "team": "Ohio",
           "year": 2021,
-          "dist": 1.329
+          "dist": 1.328
         },
         {
           "id": "2018_3126281",
@@ -341729,18 +341729,18 @@ const COLLEGE_SCOUTING = {
           "dist": 1.512
         },
         {
+          "id": "2026_5087747",
+          "name": "Jayce Freeman",
+          "team": "Temple",
+          "year": 2026,
+          "dist": 1.537
+        },
+        {
           "id": "2014_504726",
           "name": "Kaelin Clay",
           "team": "Utah",
           "year": 2014,
           "dist": 1.565
-        },
-        {
-          "id": "2026_5087747",
-          "name": "Jayce Freeman",
-          "team": "Temple",
-          "year": 2026,
-          "dist": 1.566
         },
         {
           "id": "2015_550947",
@@ -342007,7 +342007,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jalen Robinette",
           "team": "Air Force",
           "year": 2013,
-          "dist": 0.753
+          "dist": 0.754
         },
         {
           "id": "2013_517962",
@@ -342028,7 +342028,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ronnie Moore",
           "team": "Bowling Green",
           "year": 2013,
-          "dist": 0.859
+          "dist": 0.86
         },
         {
           "id": "2013_502538",
@@ -342042,7 +342042,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tyre McCants",
           "team": "South Florida",
           "year": 2017,
-          "dist": 0.931
+          "dist": 0.93
         },
         {
           "id": "2020_4374076",
@@ -342056,7 +342056,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dalton Schoen",
           "team": "Kansas State",
           "year": 2019,
-          "dist": 1.041
+          "dist": 1.04
         }
       ],
       "2025_5151976": [
@@ -342107,7 +342107,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jahlil McClain",
           "team": "Fresno State",
           "year": 2026,
-          "dist": 0.401
+          "dist": 0.402
         },
         {
           "id": "2021_4258604",
@@ -342144,7 +342144,7 @@ const COLLEGE_SCOUTING = {
           "name": "Romeo Doubs",
           "team": "Nevada",
           "year": 2018,
-          "dist": 0.373
+          "dist": 0.372
         },
         {
           "id": "2015_3127306",
@@ -342172,14 +342172,14 @@ const COLLEGE_SCOUTING = {
           "name": "Drew Estrada",
           "team": "Baylor",
           "year": 2021,
-          "dist": 0.469
+          "dist": 0.468
         },
         {
           "id": "2017_4039057",
           "name": "Lil'Jordan Humphrey",
           "team": "Texas",
           "year": 2017,
-          "dist": 0.479
+          "dist": 0.478
         },
         {
           "id": "2025_4430903",
@@ -342226,17 +342226,17 @@ const COLLEGE_SCOUTING = {
           "dist": 0.407
         },
         {
-          "id": "2015_3126209",
-          "name": "Roderick Proctor",
-          "team": "Memphis",
-          "year": 2015,
-          "dist": 0.409
-        },
-        {
           "id": "2019_3914182",
           "name": "Deondre Farrier",
           "team": "East Carolina",
           "year": 2019,
+          "dist": 0.409
+        },
+        {
+          "id": "2015_3126209",
+          "name": "Roderick Proctor",
+          "team": "Memphis",
+          "year": 2015,
           "dist": 0.409
         },
         {
@@ -342337,7 +342337,7 @@ const COLLEGE_SCOUTING = {
           "name": "KD Cannon",
           "team": "Baylor",
           "year": 2016,
-          "dist": 0.919
+          "dist": 0.918
         },
         {
           "id": "2016_4036348",
@@ -342425,7 +342425,7 @@ const COLLEGE_SCOUTING = {
           "name": "Thayer Thomas",
           "team": "NC State",
           "year": 2021,
-          "dist": 0.291
+          "dist": 0.29
         },
         {
           "id": "2013_481448",
@@ -342504,7 +342504,7 @@ const COLLEGE_SCOUTING = {
           "name": "Nathaniel Dell",
           "team": "Houston",
           "year": 2020,
-          "dist": 0.432
+          "dist": 0.431
         },
         {
           "id": "2014_545561",
@@ -342611,7 +342611,7 @@ const COLLEGE_SCOUTING = {
           "name": "Damon Hazelton",
           "team": "Virginia Tech",
           "year": 2019,
-          "dist": 0.869
+          "dist": 0.868
         },
         {
           "id": "2021_4361370",
@@ -342734,7 +342734,7 @@ const COLLEGE_SCOUTING = {
           "name": "Montorie Foster",
           "team": "Michigan State",
           "year": 2023,
-          "dist": 0.535
+          "dist": 0.534
         },
         {
           "id": "2024_4565889",
@@ -342755,7 +342755,7 @@ const COLLEGE_SCOUTING = {
           "name": "Devon Smith",
           "team": "Marshall",
           "year": 2013,
-          "dist": 0.606
+          "dist": 0.607
         },
         {
           "id": "2024_5079600",
@@ -343036,7 +343036,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jalen Cooper",
           "team": "SMU",
           "year": 2025,
-          "dist": 0.497
+          "dist": 0.498
         },
         {
           "id": "2020_4428955",
@@ -343108,7 +343108,7 @@ const COLLEGE_SCOUTING = {
           "name": "Derius Davis",
           "team": "TCU",
           "year": 2022,
-          "dist": 0.581
+          "dist": 0.582
         },
         {
           "id": "2020_4241671",
@@ -343148,13 +343148,6 @@ const COLLEGE_SCOUTING = {
           "dist": 0.639
         },
         {
-          "id": "2026_4726152",
-          "name": "Jovanni Bermudez",
-          "team": "Temple",
-          "year": 2026,
-          "dist": 0.648
-        },
-        {
           "id": "2018_3121162",
           "name": "B.J. Farrow",
           "team": "Liberty",
@@ -343180,7 +343173,7 @@ const COLLEGE_SCOUTING = {
           "name": "Chandler Worthy",
           "team": "Troy",
           "year": 2014,
-          "dist": 0.717
+          "dist": 0.716
         },
         {
           "id": "2020_4035387",
@@ -343209,6 +343202,13 @@ const COLLEGE_SCOUTING = {
           "team": "Auburn",
           "year": 2026,
           "dist": 0.788
+        },
+        {
+          "id": "2016_4035277",
+          "name": "Kalija Lipscomb",
+          "team": "Vanderbilt",
+          "year": 2016,
+          "dist": 0.793
         }
       ],
       "2025_5157331": [
@@ -343368,7 +343368,7 @@ const COLLEGE_SCOUTING = {
           "name": "Xavier Worthy",
           "team": "Texas",
           "year": 2022,
-          "dist": 0.885
+          "dist": 0.886
         },
         {
           "id": "2016_534884",
@@ -343382,7 +343382,7 @@ const COLLEGE_SCOUTING = {
           "name": "Amon-Ra St. Brown",
           "team": "USC",
           "year": 2020,
-          "dist": 0.902
+          "dist": 0.903
         },
         {
           "id": "2015_545695",
@@ -343475,7 +343475,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jaden Barnes",
           "team": "Charlotte",
           "year": 2026,
-          "dist": 0.907
+          "dist": 0.908
         },
         {
           "id": "2026_4831976",
@@ -343496,7 +343496,7 @@ const COLLEGE_SCOUTING = {
           "name": "Stefon Diggs",
           "team": "Maryland",
           "year": 2014,
-          "dist": 0.993
+          "dist": 0.992
         }
       ],
       "2025_5159362": [
@@ -343561,7 +343561,7 @@ const COLLEGE_SCOUTING = {
           "name": "D.J. Matthews",
           "team": "Florida State",
           "year": 2018,
-          "dist": 0.867
+          "dist": 0.868
         },
         {
           "id": "2026_5218881",
@@ -343619,7 +343619,7 @@ const COLLEGE_SCOUTING = {
           "name": "Chris Taylor",
           "team": "Duke",
           "year": 2018,
-          "dist": 0.649
+          "dist": 0.648
         },
         {
           "id": "2017_4050373",
@@ -343633,7 +343633,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kaleb Webb",
           "team": "Maryland",
           "year": 2025,
-          "dist": 0.666
+          "dist": 0.667
         },
         {
           "id": "2014_535297",
@@ -343721,7 +343721,7 @@ const COLLEGE_SCOUTING = {
           "name": "Cameron Odom",
           "team": "Ohio",
           "year": 2017,
-          "dist": 0.45
+          "dist": 0.451
         },
         {
           "id": "2014_3116165",
@@ -343735,7 +343735,7 @@ const COLLEGE_SCOUTING = {
           "name": "Braeden Wisloski",
           "team": "James Madison",
           "year": 2025,
-          "dist": 0.479
+          "dist": 0.478
         },
         {
           "id": "2025_4693817",
@@ -343807,7 +343807,7 @@ const COLLEGE_SCOUTING = {
           "name": "Sean Ryan",
           "team": "West Virginia",
           "year": 2020,
-          "dist": 0.409
+          "dist": 0.41
         },
         {
           "id": "2021_4030947",
@@ -343907,7 +343907,7 @@ const COLLEGE_SCOUTING = {
           "name": "Patrick Bryant",
           "team": "Illinois",
           "year": 2023,
-          "dist": 0.525
+          "dist": 0.526
         },
         {
           "id": "2014_536197",
@@ -343944,7 +343944,7 @@ const COLLEGE_SCOUTING = {
           "name": "Adonicas Sanders",
           "team": "Temple",
           "year": 2022,
-          "dist": 0.583
+          "dist": 0.582
         },
         {
           "id": "2017_4037469",
@@ -344030,7 +344030,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dallas Wilson",
           "team": "Florida",
           "year": 2026,
-          "dist": 0.405
+          "dist": 0.404
         },
         {
           "id": "2020_4361911",
@@ -344088,7 +344088,7 @@ const COLLEGE_SCOUTING = {
           "name": "Demetris Robertson",
           "team": "California",
           "year": 2016,
-          "dist": 0.429
+          "dist": 0.428
         },
         {
           "id": "2018_3929785",
@@ -344102,7 +344102,7 @@ const COLLEGE_SCOUTING = {
           "name": "Eddie Daugherty",
           "team": "Eastern Michigan",
           "year": 2015,
-          "dist": 0.486
+          "dist": 0.485
         },
         {
           "id": "2014_514788",
@@ -344123,7 +344123,7 @@ const COLLEGE_SCOUTING = {
           "name": "Corey Scott",
           "team": "James Madison",
           "year": 2026,
-          "dist": 0.505
+          "dist": 0.504
         },
         {
           "id": "2020_4366031",
@@ -344167,7 +344167,7 @@ const COLLEGE_SCOUTING = {
           "name": "TK Keyes",
           "team": "Troy",
           "year": 2026,
-          "dist": 0.777
+          "dist": 0.778
         },
         {
           "id": "2020_4567458",
@@ -344246,20 +344246,20 @@ const COLLEGE_SCOUTING = {
           "name": "Issac Blakeney",
           "team": "Duke",
           "year": 2014,
-          "dist": 0.693
-        },
-        {
-          "id": "2018_3915802",
-          "name": "Lucky Jackson",
-          "team": "Western Kentucky",
-          "year": 2018,
-          "dist": 0.695
+          "dist": 0.692
         },
         {
           "id": "2019_4035277",
           "name": "Kalija Lipscomb",
           "team": "Vanderbilt",
           "year": 2019,
+          "dist": 0.695
+        },
+        {
+          "id": "2018_3915802",
+          "name": "Lucky Jackson",
+          "team": "Western Kentucky",
+          "year": 2018,
           "dist": 0.695
         },
         {
@@ -344404,14 +344404,14 @@ const COLLEGE_SCOUTING = {
           "name": "Cataurus Hicks",
           "team": "Pittsburgh",
           "year": 2026,
-          "dist": 1.444
+          "dist": 1.443
         },
         {
           "id": "2026_4869694",
           "name": "Langston Lewis",
           "team": "Central Michigan",
           "year": 2026,
-          "dist": 1.463
+          "dist": 1.462
         },
         {
           "id": "2026_5228760",
@@ -344432,7 +344432,7 @@ const COLLEGE_SCOUTING = {
           "name": "Nahzae Cox",
           "team": "Kansas",
           "year": 2026,
-          "dist": 1.49
+          "dist": 1.489
         }
       ],
       "2025_5207842": [
@@ -344462,14 +344462,14 @@ const COLLEGE_SCOUTING = {
           "name": "Jerome Buckner",
           "team": "Ohio",
           "year": 2019,
-          "dist": 0.491
+          "dist": 0.49
         },
         {
           "id": "2025_5157187",
           "name": "Cameron Bates",
           "team": "Boise State",
           "year": 2025,
-          "dist": 0.497
+          "dist": 0.498
         },
         {
           "id": "2019_4567470",
@@ -344483,7 +344483,7 @@ const COLLEGE_SCOUTING = {
           "name": "J.J. Jones",
           "team": "North Carolina",
           "year": 2022,
-          "dist": 0.506
+          "dist": 0.507
         },
         {
           "id": "2025_4838556",
@@ -344585,7 +344585,7 @@ const COLLEGE_SCOUTING = {
           "name": "Vernell Brown III",
           "team": "Florida",
           "year": 2026,
-          "dist": 0.664
+          "dist": 0.665
         },
         {
           "id": "2017_3126115",
@@ -344713,7 +344713,7 @@ const COLLEGE_SCOUTING = {
           "name": "Marshaun Brown",
           "team": "Nevada",
           "year": 2026,
-          "dist": 0.507
+          "dist": 0.506
         },
         {
           "id": "2018_4258238",
@@ -344890,17 +344890,17 @@ const COLLEGE_SCOUTING = {
           "dist": 0.707
         },
         {
-          "id": "2016_3914573",
-          "name": "Josh Stewart",
-          "team": "UTSA",
-          "year": 2016,
-          "dist": 0.724
-        },
-        {
           "id": "2026_5199859",
           "name": "Dalen Penson",
           "team": "Georgia Tech",
           "year": 2026,
+          "dist": 0.723
+        },
+        {
+          "id": "2016_3914573",
+          "name": "Josh Stewart",
+          "team": "UTSA",
+          "year": 2016,
           "dist": 0.724
         },
         {
@@ -344936,7 +344936,7 @@ const COLLEGE_SCOUTING = {
           "name": "Nick Mardner",
           "team": "Hawai'i",
           "year": 2021,
-          "dist": 0.773
+          "dist": 0.772
         }
       ],
       "2025_5218787": [
@@ -344973,7 +344973,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jordan Leslie",
           "team": "BYU",
           "year": 2014,
-          "dist": 0.474
+          "dist": 0.475
         },
         {
           "id": "2026_5079714",
@@ -345073,7 +345073,7 @@ const COLLEGE_SCOUTING = {
           "name": "Harvey Broussard",
           "team": "Louisiana",
           "year": 2023,
-          "dist": 0.458
+          "dist": 0.457
         },
         {
           "id": "2019_3915803",
@@ -345182,14 +345182,14 @@ const COLLEGE_SCOUTING = {
           "name": "Shocky Jacques-Louis",
           "team": "Pittsburgh",
           "year": 2020,
-          "dist": 0.552
+          "dist": 0.551
         },
         {
           "id": "2017_3122667",
           "name": "Charles Nelson",
           "team": "Oregon",
           "year": 2017,
-          "dist": 0.554
+          "dist": 0.555
         },
         {
           "id": "2020_4240838",
@@ -345361,7 +345361,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ahmarean Brown",
           "team": "Georgia Tech",
           "year": 2019,
-          "dist": 1.061
+          "dist": 1.06
         },
         {
           "id": "2026_5222394",
@@ -345412,7 +345412,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tyrice Richie",
           "team": "Northern Illinois",
           "year": 2021,
-          "dist": 0.639
+          "dist": 0.638
         },
         {
           "id": "2022_4685565",
@@ -345740,13 +345740,6 @@ const COLLEGE_SCOUTING = {
           "dist": 0.242
         },
         {
-          "id": "2026_5089003",
-          "name": "Colin Chase",
-          "team": "Temple",
-          "year": 2026,
-          "dist": 0.431
-        },
-        {
           "id": "2020_4037560",
           "name": "Xavier Lane",
           "team": "Western Kentucky",
@@ -345780,6 +345773,13 @@ const COLLEGE_SCOUTING = {
           "team": "Florida",
           "year": 2016,
           "dist": 0.658
+        },
+        {
+          "id": "2026_5089003",
+          "name": "Colin Chase",
+          "team": "Temple",
+          "year": 2026,
+          "dist": 0.662
         },
         {
           "id": "2025_4701951",
@@ -345830,7 +345830,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ryan Timmons",
           "team": "Kentucky",
           "year": 2013,
-          "dist": 0.485
+          "dist": 0.486
         },
         {
           "id": "2016_533196",
@@ -345851,7 +345851,7 @@ const COLLEGE_SCOUTING = {
           "name": "Matthew Eaton",
           "team": "Iowa State",
           "year": 2018,
-          "dist": 0.526
+          "dist": 0.525
         },
         {
           "id": "2022_4259984",
@@ -345923,7 +345923,7 @@ const COLLEGE_SCOUTING = {
           "name": "Micah Gilbert",
           "team": "Notre Dame",
           "year": 2026,
-          "dist": 0.779
+          "dist": 0.778
         },
         {
           "id": "2021_4426515",
@@ -346074,7 +346074,7 @@ const COLLEGE_SCOUTING = {
           "name": "Desmond Cain",
           "team": "Illinois",
           "year": 2015,
-          "dist": 0.504
+          "dist": 0.503
         },
         {
           "id": "2018_3135321",
@@ -346132,7 +346132,7 @@ const COLLEGE_SCOUTING = {
           "name": "Noah Rogers",
           "team": "NC State",
           "year": 2024,
-          "dist": 0.498
+          "dist": 0.497
         },
         {
           "id": "2014_550724",
@@ -346190,7 +346190,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tyler Patrick",
           "team": "Kansas",
           "year": 2015,
-          "dist": 0.713
+          "dist": 0.712
         },
         {
           "id": "2018_536118",
@@ -346262,7 +346262,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kaleb Webb",
           "team": "Maryland",
           "year": 2026,
-          "dist": 0.772
+          "dist": 0.773
         },
         {
           "id": "2025_4431505",
@@ -346276,7 +346276,7 @@ const COLLEGE_SCOUTING = {
           "name": "Brayden Munroe",
           "team": "Kennesaw State",
           "year": 2026,
-          "dist": 0.875
+          "dist": 0.874
         },
         {
           "id": "2026_4685510",
@@ -346420,7 +346420,7 @@ const COLLEGE_SCOUTING = {
           "name": "Devon Blackmon",
           "team": "BYU",
           "year": 2015,
-          "dist": 0.865
+          "dist": 0.866
         },
         {
           "id": "2016_531956",
@@ -346471,7 +346471,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dimitri Stanley",
           "team": "Colorado",
           "year": 2020,
-          "dist": 0.38
+          "dist": 0.381
         },
         {
           "id": "2021_4569603",
@@ -346499,7 +346499,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jesse Matthews",
           "team": "San Diego State",
           "year": 2019,
-          "dist": 0.697
+          "dist": 0.696
         },
         {
           "id": "2022_4596439",
@@ -346520,7 +346520,7 @@ const COLLEGE_SCOUTING = {
           "name": "A.J. Taylor",
           "team": "Wisconsin",
           "year": 2018,
-          "dist": 0.754
+          "dist": 0.753
         }
       ],
       "2025_5295920": [
@@ -346615,7 +346615,7 @@ const COLLEGE_SCOUTING = {
           "name": "Melquan Stovall",
           "team": "Nevada",
           "year": 2020,
-          "dist": 0.501
+          "dist": 0.502
         },
         {
           "id": "2014_502093",
@@ -346629,7 +346629,7 @@ const COLLEGE_SCOUTING = {
           "name": "Shaun Nixon",
           "team": "TCU",
           "year": 2015,
-          "dist": 0.674
+          "dist": 0.675
         },
         {
           "id": "2014_549866",
@@ -346852,7 +346852,7 @@ const COLLEGE_SCOUTING = {
           "name": "Zavion Thomas",
           "team": "LSU",
           "year": 2025,
-          "dist": 0.726
+          "dist": 0.727
         },
         {
           "id": "2022_4602940",
@@ -346873,14 +346873,14 @@ const COLLEGE_SCOUTING = {
           "name": "Isiah Myers",
           "team": "Washington State",
           "year": 2014,
-          "dist": 0.77
+          "dist": 0.771
         },
         {
           "id": "2017_545514",
           "name": "Cameron Echols-Luper",
           "team": "Western Kentucky",
           "year": 2017,
-          "dist": 0.776
+          "dist": 0.775
         }
       ],
       "2025_5296438": [
@@ -347054,7 +347054,7 @@ const COLLEGE_SCOUTING = {
           "name": "Marcus Kemp",
           "team": "Hawai'i",
           "year": 2015,
-          "dist": 0.894
+          "dist": 0.895
         },
         {
           "id": "2020_4379569",
@@ -347096,7 +347096,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tre Hartley",
           "team": "San José State",
           "year": 2017,
-          "dist": 1.035
+          "dist": 1.036
         }
       ],
       "2026_4379471": [
@@ -347126,7 +347126,7 @@ const COLLEGE_SCOUTING = {
           "name": "Scott Harding",
           "team": "Hawai'i",
           "year": 2013,
-          "dist": 0.705
+          "dist": 0.706
         },
         {
           "id": "2025_4683543",
@@ -347191,7 +347191,7 @@ const COLLEGE_SCOUTING = {
           "name": "Isaiah Wright",
           "team": "Temple",
           "year": 2019,
-          "dist": 1.064
+          "dist": 1.065
         },
         {
           "id": "2025_5153730",
@@ -347205,7 +347205,7 @@ const COLLEGE_SCOUTING = {
           "name": "Calvin Russell III",
           "team": "Syracuse",
           "year": 2026,
-          "dist": 1.086
+          "dist": 1.087
         },
         {
           "id": "2020_4384192",
@@ -347456,7 +347456,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jeff Foreman",
           "team": "Arkansas State",
           "year": 2021,
-          "dist": 1.092
+          "dist": 1.093
         }
       ],
       "2026_4685510": [
@@ -347507,7 +347507,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tastean Reddicks",
           "team": "Oregon State",
           "year": 2025,
-          "dist": 0.828
+          "dist": 0.829
         },
         {
           "id": "2014_517426",
@@ -347528,7 +347528,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jeremiah Knight",
           "team": "Akron",
           "year": 2019,
-          "dist": 0.833
+          "dist": 0.832
         }
       ],
       "2026_4685517": [
@@ -347630,7 +347630,7 @@ const COLLEGE_SCOUTING = {
           "name": "Aleva Hifo",
           "team": "BYU",
           "year": 2017,
-          "dist": 0.414
+          "dist": 0.413
         },
         {
           "id": "2019_4243168",
@@ -347672,7 +347672,7 @@ const COLLEGE_SCOUTING = {
           "name": "Mikey Matthews",
           "team": "UCLA",
           "year": 2025,
-          "dist": 0.569
+          "dist": 0.57
         }
       ],
       "2026_4691315": [
@@ -347763,17 +347763,17 @@ const COLLEGE_SCOUTING = {
           "dist": 0.373
         },
         {
-          "id": "2025_4912067",
-          "name": "Chase Sowell",
-          "team": "Iowa State",
-          "year": 2025,
-          "dist": 0.402
-        },
-        {
           "id": "2021_4426479",
           "name": "Cornelius Johnson",
           "team": "Michigan",
           "year": 2021,
+          "dist": 0.401
+        },
+        {
+          "id": "2025_4912067",
+          "name": "Chase Sowell",
+          "team": "Iowa State",
+          "year": 2025,
           "dist": 0.402
         },
         {
@@ -347925,7 +347925,7 @@ const COLLEGE_SCOUTING = {
           "name": "Max McCaffrey",
           "team": "Duke",
           "year": 2015,
-          "dist": 0.466
+          "dist": 0.467
         },
         {
           "id": "2018_4037625",
@@ -347939,14 +347939,14 @@ const COLLEGE_SCOUTING = {
           "name": "Khalil McClain",
           "team": "Troy",
           "year": 2019,
-          "dist": 0.543
+          "dist": 0.544
         },
         {
           "id": "2021_4430914",
           "name": "Lawrence Arnold",
           "team": "Kansas",
           "year": 2021,
-          "dist": 0.545
+          "dist": 0.544
         },
         {
           "id": "2019_4428345",
@@ -348011,7 +348011,7 @@ const COLLEGE_SCOUTING = {
           "name": "Josh Palmer",
           "team": "Tennessee",
           "year": 2018,
-          "dist": 1.095
+          "dist": 1.096
         },
         {
           "id": "2019_3921632",
@@ -348048,7 +348048,7 @@ const COLLEGE_SCOUTING = {
           "name": "Squirrel White",
           "team": "Tennessee",
           "year": 2023,
-          "dist": 0.936
+          "dist": 0.935
         },
         {
           "id": "2014_514601",
@@ -348113,7 +348113,7 @@ const COLLEGE_SCOUTING = {
           "name": "Mike Dudek",
           "team": "Illinois",
           "year": 2014,
-          "dist": 0.56
+          "dist": 0.559
         },
         {
           "id": "2017_4036163",
@@ -348134,14 +348134,14 @@ const COLLEGE_SCOUTING = {
           "name": "Thomas Sperbeck",
           "team": "Boise State",
           "year": 2015,
-          "dist": 0.757
+          "dist": 0.756
         },
         {
           "id": "2025_4804878",
           "name": "Cooper Barkate",
           "team": "Duke",
           "year": 2025,
-          "dist": 0.775
+          "dist": 0.774
         },
         {
           "id": "2019_4029893",
@@ -348181,74 +348181,74 @@ const COLLEGE_SCOUTING = {
       ],
       "2026_4726152": [
         {
-          "id": "2016_3917914",
-          "name": "Olamide Zaccheaus",
-          "team": "Virginia",
-          "year": 2016,
-          "dist": 0.403
+          "id": "2014_514627",
+          "name": "L.T. Smith",
+          "team": "Akron",
+          "year": 2014,
+          "dist": 0.516
         },
         {
-          "id": "2015_3124114",
-          "name": "Cortez Lewis",
-          "team": "Wake Forest",
-          "year": 2015,
-          "dist": 0.487
+          "id": "2025_5121601",
+          "name": "Hunter Summers",
+          "team": "Arkansas State",
+          "year": 2025,
+          "dist": 0.552
         },
         {
           "id": "2025_4685424",
           "name": "Dane Key",
           "team": "Nebraska",
           "year": 2025,
-          "dist": 0.585
-        },
-        {
-          "id": "2014_517985",
-          "name": "Chandler Worthy",
-          "team": "Troy",
-          "year": 2014,
-          "dist": 0.644
-        },
-        {
-          "id": "2014_547066",
-          "name": "Ronnie Moore",
-          "team": "Bowling Green",
-          "year": 2014,
-          "dist": 0.646
-        },
-        {
-          "id": "2025_5157287",
-          "name": "David Wells Jr.",
-          "team": "Oregon State",
-          "year": 2025,
-          "dist": 0.648
+          "dist": 0.56
         },
         {
           "id": "2018_3121162",
           "name": "B.J. Farrow",
           "team": "Liberty",
           "year": 2018,
-          "dist": 0.657
+          "dist": 0.564
         },
         {
-          "id": "2021_4035851",
-          "name": "Demetris Robertson",
-          "team": "Auburn",
+          "id": "2014_519570",
+          "name": "Scott Harding",
+          "team": "Hawai'i",
+          "year": 2014,
+          "dist": 0.598
+        },
+        {
+          "id": "2015_3124114",
+          "name": "Cortez Lewis",
+          "team": "Wake Forest",
+          "year": 2015,
+          "dist": 0.611
+        },
+        {
+          "id": "2026_5146576",
+          "name": "Joshua Porter",
+          "team": "South Florida",
+          "year": 2026,
+          "dist": 0.631
+        },
+        {
+          "id": "2021_4431210",
+          "name": "Beaux Collins",
+          "team": "Clemson",
           "year": 2021,
-          "dist": 0.658
+          "dist": 0.639
         },
         {
-          "id": "2018_3915802",
-          "name": "Lucky Jackson",
-          "team": "Western Kentucky",
-          "year": 2018,
-          "dist": 0.659
+          "id": "2026_4905609",
+          "name": "Fredrick Moore",
+          "team": "Michigan State",
+          "year": 2026,
+          "dist": 0.653
         },
         {
-          "id": "2020_4035387",
-          "name": "Reginald Todd",
-          "team": "Troy",
-          "year": 2020,
-          "dist": 0.659
+          "id": "2016_550356",
+          "name": "Austin Wolf",
+          "team": "Akron",
+          "year": 2016,
+          "dist": 0.672
         }
       ],
       "2026_4804878": [
@@ -348278,7 +348278,7 @@ const COLLEGE_SCOUTING = {
           "name": "Zane Pope",
           "team": "Fresno State",
           "year": 2022,
-          "dist": 0.636
+          "dist": 0.635
         },
         {
           "id": "2024_4804883",
@@ -348480,7 +348480,7 @@ const COLLEGE_SCOUTING = {
           "name": "Emanuel Thompson",
           "team": "Troy",
           "year": 2016,
-          "dist": 0.677
+          "dist": 0.676
         },
         {
           "id": "2016_536355",
@@ -348501,7 +348501,7 @@ const COLLEGE_SCOUTING = {
           "name": "Justin Hall",
           "team": "Ball State",
           "year": 2019,
-          "dist": 0.721
+          "dist": 0.722
         },
         {
           "id": "2014_516282",
@@ -348545,7 +348545,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dezmon Epps",
           "team": "Idaho",
           "year": 2015,
-          "dist": 1.155
+          "dist": 1.156
         },
         {
           "id": "2014_550634",
@@ -348580,21 +348580,21 @@ const COLLEGE_SCOUTING = {
           "name": "Tre Walker",
           "team": "San José State",
           "year": 2019,
-          "dist": 1.576
+          "dist": 1.575
         },
         {
           "id": "2021_4242243",
           "name": "Keytaon Thompson",
           "team": "Virginia",
           "year": 2021,
-          "dist": 1.593
+          "dist": 1.592
         },
         {
           "id": "2017_4034860",
           "name": "JD Spielman",
           "team": "Nebraska",
           "year": 2017,
-          "dist": 1.694
+          "dist": 1.695
         },
         {
           "id": "2026_5217700",
@@ -348631,7 +348631,7 @@ const COLLEGE_SCOUTING = {
           "name": "Isiah Cox",
           "team": "Ohio",
           "year": 2021,
-          "dist": 0.582
+          "dist": 0.581
         },
         {
           "id": "2017_4048681",
@@ -348666,7 +348666,7 @@ const COLLEGE_SCOUTING = {
           "name": "Cam Johnson",
           "team": "Vanderbilt",
           "year": 2021,
-          "dist": 0.917
+          "dist": 0.916
         },
         {
           "id": "2016_3120074",
@@ -348738,14 +348738,14 @@ const COLLEGE_SCOUTING = {
           "name": "Maurice Ffrench",
           "team": "Pittsburgh",
           "year": 2019,
-          "dist": 1.146
+          "dist": 1.147
         },
         {
           "id": "2026_4870850",
           "name": "Omarion Miller",
           "team": "Arizona State",
           "year": 2026,
-          "dist": 1.185
+          "dist": 1.184
         },
         {
           "id": "2015_536143",
@@ -348840,7 +348840,7 @@ const COLLEGE_SCOUTING = {
           "name": "OJ Clark",
           "team": "New Mexico State",
           "year": 2019,
-          "dist": 0.536
+          "dist": 0.537
         },
         {
           "id": "2015_546314",
@@ -348950,16 +348950,16 @@ const COLLEGE_SCOUTING = {
           "dist": 0.735
         },
         {
-          "id": "2026_5294137",
-          "name": "DJ Miller",
-          "team": "Kentucky",
+          "id": "2026_5146743",
+          "name": "Kezion Dia-Johnson",
+          "team": "Massachusetts",
           "year": 2026,
           "dist": 0.759
         },
         {
-          "id": "2026_5146743",
-          "name": "Kezion Dia-Johnson",
-          "team": "Massachusetts",
+          "id": "2026_5294137",
+          "name": "DJ Miller",
+          "team": "Kentucky",
           "year": 2026,
           "dist": 0.759
         },
@@ -348968,7 +348968,7 @@ const COLLEGE_SCOUTING = {
           "name": "Terrill Davis",
           "team": "Oklahoma State",
           "year": 2025,
-          "dist": 0.772
+          "dist": 0.773
         }
       ],
       "2026_4869422": [
@@ -349026,7 +349026,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kahlil Lewis",
           "team": "Cincinnati",
           "year": 2017,
-          "dist": 0.681
+          "dist": 0.682
         },
         {
           "id": "2026_5141586",
@@ -349070,7 +349070,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dontayvion Wicks",
           "team": "Virginia",
           "year": 2022,
-          "dist": 1.299
+          "dist": 1.3
         },
         {
           "id": "2025_5122072",
@@ -349105,7 +349105,7 @@ const COLLEGE_SCOUTING = {
           "name": "Brady Boyd",
           "team": "Utah State",
           "year": 2025,
-          "dist": 1.459
+          "dist": 1.458
         },
         {
           "id": "2015_550896",
@@ -349279,7 +349279,7 @@ const COLLEGE_SCOUTING = {
           "name": "Keith Mixon",
           "team": "Western Michigan",
           "year": 2019,
-          "dist": 0.731
+          "dist": 0.73
         },
         {
           "id": "2013_531268",
@@ -349307,7 +349307,7 @@ const COLLEGE_SCOUTING = {
           "name": "Keith Reynolds",
           "team": "Miami (OH)",
           "year": 2025,
-          "dist": 0.896
+          "dist": 0.895
         },
         {
           "id": "2017_552062",
@@ -349328,7 +349328,7 @@ const COLLEGE_SCOUTING = {
           "name": "Austin Osborne",
           "team": "Bowling Green",
           "year": 2021,
-          "dist": 0.913
+          "dist": 0.914
         }
       ],
       "2026_4869694": [
@@ -349393,14 +349393,14 @@ const COLLEGE_SCOUTING = {
           "name": "Bryce Mitchell",
           "team": "Toledo",
           "year": 2019,
-          "dist": 0.953
+          "dist": 0.952
         },
         {
           "id": "2015_550190",
           "name": "DeAngelo Yancey",
           "team": "Purdue",
           "year": 2015,
-          "dist": 1.05
+          "dist": 1.051
         }
       ],
       "2026_4869730": [
@@ -349409,7 +349409,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jaquan White",
           "team": "UTEP",
           "year": 2015,
-          "dist": 0.57
+          "dist": 0.569
         },
         {
           "id": "2018_4362249",
@@ -349465,7 +349465,7 @@ const COLLEGE_SCOUTING = {
           "name": "Isaiah McKenzie",
           "team": "Georgia",
           "year": 2016,
-          "dist": 0.95
+          "dist": 0.949
         },
         {
           "id": "2017_547071",
@@ -349512,17 +349512,17 @@ const COLLEGE_SCOUTING = {
           "dist": 0.621
         },
         {
-          "id": "2018_4047728",
-          "name": "Damon Hazelton",
-          "team": "Virginia Tech",
-          "year": 2018,
-          "dist": 0.656
-        },
-        {
           "id": "2019_4361518",
           "name": "Kobe Smith",
           "team": "San Diego State",
           "year": 2019,
+          "dist": 0.656
+        },
+        {
+          "id": "2018_4047728",
+          "name": "Damon Hazelton",
+          "team": "Virginia Tech",
+          "year": 2018,
           "dist": 0.656
         },
         {
@@ -349760,7 +349760,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tre' Parmalee",
           "team": "Kansas",
           "year": 2015,
-          "dist": 0.624
+          "dist": 0.623
         }
       ],
       "2026_4870768": [
@@ -349855,7 +349855,7 @@ const COLLEGE_SCOUTING = {
           "name": "James Proche",
           "team": "SMU",
           "year": 2016,
-          "dist": 0.771
+          "dist": 0.772
         },
         {
           "id": "2016_4040655",
@@ -349920,7 +349920,7 @@ const COLLEGE_SCOUTING = {
           "name": "A.J. Taylor",
           "team": "Wisconsin",
           "year": 2019,
-          "dist": 0.312
+          "dist": 0.311
         },
         {
           "id": "2022_4431651",
@@ -350071,7 +350071,7 @@ const COLLEGE_SCOUTING = {
           "name": "David Frazier",
           "team": "Miami (OH)",
           "year": 2014,
-          "dist": 0.711
+          "dist": 0.712
         },
         {
           "id": "2017_4244727",
@@ -350099,7 +350099,7 @@ const COLLEGE_SCOUTING = {
           "name": "Anthony Evans III",
           "team": "Mississippi State",
           "year": 2026,
-          "dist": 0.777
+          "dist": 0.776
         },
         {
           "id": "2025_4918108",
@@ -350174,6 +350174,13 @@ const COLLEGE_SCOUTING = {
           "dist": 0.544
         },
         {
+          "id": "2026_5089003",
+          "name": "Colin Chase",
+          "team": "Temple",
+          "year": 2026,
+          "dist": 0.569
+        },
+        {
           "id": "2016_3124028",
           "name": "Doni Dowling",
           "team": "Virginia",
@@ -350186,13 +350193,6 @@ const COLLEGE_SCOUTING = {
           "team": "Oklahoma State",
           "year": 2018,
           "dist": 0.58
-        },
-        {
-          "id": "2018_4038818",
-          "name": "Bryan Edwards",
-          "team": "South Carolina",
-          "year": 2018,
-          "dist": 0.584
         }
       ],
       "2026_4870876": [
@@ -350250,7 +350250,7 @@ const COLLEGE_SCOUTING = {
           "name": "E.J. Scott",
           "team": "Wake Forest",
           "year": 2014,
-          "dist": 0.729
+          "dist": 0.728
         },
         {
           "id": "2026_4869422",
@@ -350308,7 +350308,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jalen Walthall",
           "team": "Hawai'i",
           "year": 2022,
-          "dist": 0.375
+          "dist": 0.376
         },
         {
           "id": "2017_548471",
@@ -350441,17 +350441,17 @@ const COLLEGE_SCOUTING = {
           "dist": 0.341
         },
         {
-          "id": "2014_534203",
-          "name": "Maika Mataele",
-          "team": "UNLV",
-          "year": 2014,
-          "dist": 0.347
-        },
-        {
           "id": "2026_5121666",
           "name": "Kameran Shanks",
           "team": "Wake Forest",
           "year": 2026,
+          "dist": 0.347
+        },
+        {
+          "id": "2014_534203",
+          "name": "Maika Mataele",
+          "team": "UNLV",
+          "year": 2014,
           "dist": 0.347
         },
         {
@@ -350510,7 +350510,7 @@ const COLLEGE_SCOUTING = {
           "name": "Deante Burton",
           "team": "Kansas State",
           "year": 2015,
-          "dist": 0.583
+          "dist": 0.582
         },
         {
           "id": "2022_4682761",
@@ -350524,7 +350524,7 @@ const COLLEGE_SCOUTING = {
           "name": "Joshua Cephus",
           "team": "UTSA",
           "year": 2020,
-          "dist": 0.713
+          "dist": 0.714
         },
         {
           "id": "2015_530859",
@@ -350545,14 +350545,14 @@ const COLLEGE_SCOUTING = {
           "name": "Isaiah Williams",
           "team": "Illinois",
           "year": 2021,
-          "dist": 0.795
+          "dist": 0.796
         },
         {
           "id": "2016_3916204",
           "name": "James Proche",
           "team": "SMU",
           "year": 2016,
-          "dist": 0.832
+          "dist": 0.831
         }
       ],
       "2026_4870959": [
@@ -350675,7 +350675,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jeremy Singleton",
           "team": "Houston",
           "year": 2019,
-          "dist": 0.713
+          "dist": 0.712
         },
         {
           "id": "2015_551091",
@@ -350805,7 +350805,7 @@ const COLLEGE_SCOUTING = {
           "name": "Justin McInnis",
           "team": "Arkansas State",
           "year": 2017,
-          "dist": 0.633
+          "dist": 0.634
         },
         {
           "id": "2022_4692835",
@@ -350884,7 +350884,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ronnie Bell",
           "team": "Michigan",
           "year": 2020,
-          "dist": 1.224
+          "dist": 1.225
         },
         {
           "id": "2019_3932906",
@@ -350942,7 +350942,7 @@ const COLLEGE_SCOUTING = {
           "name": "Randall St. Felix",
           "team": "South Florida",
           "year": 2019,
-          "dist": 0.449
+          "dist": 0.448
         },
         {
           "id": "2014_552748",
@@ -351121,7 +351121,7 @@ const COLLEGE_SCOUTING = {
           "name": "Keandre Lambert",
           "team": "Penn State",
           "year": 2023,
-          "dist": 0.691
+          "dist": 0.69
         },
         {
           "id": "2022_4241476",
@@ -351216,7 +351216,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ronald Butler",
           "team": "Utah State",
           "year": 2014,
-          "dist": 0.421
+          "dist": 0.422
         },
         {
           "id": "2015_516956",
@@ -351425,7 +351425,7 @@ const COLLEGE_SCOUTING = {
           "name": "Booker Mays",
           "team": "Arkansas State",
           "year": 2014,
-          "dist": 0.662
+          "dist": 0.661
         },
         {
           "id": "2026_5200374",
@@ -351453,14 +351453,14 @@ const COLLEGE_SCOUTING = {
           "name": "Marquez Valdes-Scantling",
           "team": "South Florida",
           "year": 2016,
-          "dist": 0.755
+          "dist": 0.756
         },
         {
           "id": "2022_4775197",
           "name": "Charles Brown",
           "team": "Texas State",
           "year": 2022,
-          "dist": 0.766
+          "dist": 0.765
         },
         {
           "id": "2017_4044520",
@@ -351474,7 +351474,7 @@ const COLLEGE_SCOUTING = {
           "name": "Johnathan Boone",
           "team": "New Mexico State",
           "year": 2016,
-          "dist": 0.813
+          "dist": 0.812
         },
         {
           "id": "2018_4241053",
@@ -351521,17 +351521,17 @@ const COLLEGE_SCOUTING = {
           "dist": 1.187
         },
         {
-          "id": "2025_4714341",
-          "name": "Ben Ford",
-          "team": "Boise State",
-          "year": 2025,
-          "dist": 1.201
-        },
-        {
           "id": "2022_4587977",
           "name": "Sam Brown",
           "team": "Houston",
           "year": 2022,
+          "dist": 1.201
+        },
+        {
+          "id": "2025_4714341",
+          "name": "Ben Ford",
+          "team": "Boise State",
+          "year": 2025,
           "dist": 1.201
         },
         {
@@ -351546,7 +351546,7 @@ const COLLEGE_SCOUTING = {
           "name": "Vernell Brown III",
           "team": "Florida",
           "year": 2026,
-          "dist": 1.218
+          "dist": 1.219
         },
         {
           "id": "2022_4360761",
@@ -351576,7 +351576,7 @@ const COLLEGE_SCOUTING = {
           "name": "Brady Boyd",
           "team": "Utah State",
           "year": 2025,
-          "dist": 0.671
+          "dist": 0.67
         },
         {
           "id": "2025_5130792",
@@ -351618,7 +351618,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kwazi Gilmer",
           "team": "Nebraska",
           "year": 2026,
-          "dist": 1.019
+          "dist": 1.018
         },
         {
           "id": "2026_4870922",
@@ -351720,14 +351720,14 @@ const COLLEGE_SCOUTING = {
           "name": "Spencer Tears",
           "team": "Northern Illinois",
           "year": 2019,
-          "dist": 0.285
+          "dist": 0.286
         },
         {
           "id": "2015_552937",
           "name": "Davon Grayson",
           "team": "East Carolina",
           "year": 2015,
-          "dist": 0.321
+          "dist": 0.322
         },
         {
           "id": "2026_5291778",
@@ -351827,7 +351827,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tayvion Robinson",
           "team": "Virginia Tech",
           "year": 2021,
-          "dist": 0.713
+          "dist": 0.712
         },
         {
           "id": "2022_4363046",
@@ -351902,6 +351902,13 @@ const COLLEGE_SCOUTING = {
           "dist": 0.638
         },
         {
+          "id": "2026_4726152",
+          "name": "Jovanni Bermudez",
+          "team": "Temple",
+          "year": 2026,
+          "dist": 0.653
+        },
+        {
           "id": "2015_3917960",
           "name": "Steven Sims Jr.",
           "team": "Kansas",
@@ -351914,13 +351921,6 @@ const COLLEGE_SCOUTING = {
           "team": "Florida Atlantic",
           "year": 2023,
           "dist": 0.736
-        },
-        {
-          "id": "2025_5121601",
-          "name": "Hunter Summers",
-          "team": "Arkansas State",
-          "year": 2025,
-          "dist": 0.748
         }
       ],
       "2026_4907671": [
@@ -351929,7 +351929,7 @@ const COLLEGE_SCOUTING = {
           "name": "Cayden Lee",
           "team": "Missouri",
           "year": 2026,
-          "dist": 0.777
+          "dist": 0.776
         },
         {
           "id": "2015_534809",
@@ -352159,7 +352159,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dyami Brown",
           "team": "North Carolina",
           "year": 2020,
-          "dist": 0.508
+          "dist": 0.509
         },
         {
           "id": "2019_4567458",
@@ -352224,7 +352224,7 @@ const COLLEGE_SCOUTING = {
           "name": "Makai Lemon",
           "team": "USC",
           "year": 2025,
-          "dist": 0.588
+          "dist": 0.589
         },
         {
           "id": "2017_549623",
@@ -352238,7 +352238,7 @@ const COLLEGE_SCOUTING = {
           "name": "Luke McCaffrey",
           "team": "Rice",
           "year": 2023,
-          "dist": 0.678
+          "dist": 0.677
         },
         {
           "id": "2022_4257188",
@@ -352266,7 +352266,7 @@ const COLLEGE_SCOUTING = {
           "name": "Sage Surratt",
           "team": "Wake Forest",
           "year": 2019,
-          "dist": 0.95
+          "dist": 0.949
         },
         {
           "id": "2016_552967",
@@ -352410,7 +352410,7 @@ const COLLEGE_SCOUTING = {
           "name": "Aleva Hifo",
           "team": "BYU",
           "year": 2017,
-          "dist": 0.518
+          "dist": 0.517
         },
         {
           "id": "2026_5296438",
@@ -352626,7 +352626,7 @@ const COLLEGE_SCOUTING = {
           "name": "Raelon Singleton",
           "team": "Utah",
           "year": 2017,
-          "dist": 0.519
+          "dist": 0.518
         },
         {
           "id": "2017_3932355",
@@ -352663,7 +352663,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kwadarrius Smith",
           "team": "Akron",
           "year": 2017,
-          "dist": 1.203
+          "dist": 1.202
         },
         {
           "id": "2016_550190",
@@ -352698,7 +352698,7 @@ const COLLEGE_SCOUTING = {
           "name": "Phillip Dorsett",
           "team": "Miami",
           "year": 2014,
-          "dist": 1.391
+          "dist": 1.39
         },
         {
           "id": "2022_4880281",
@@ -352793,7 +352793,7 @@ const COLLEGE_SCOUTING = {
           "name": "Isaiah Ford",
           "team": "Virginia Tech",
           "year": 2016,
-          "dist": 0.425
+          "dist": 0.424
         },
         {
           "id": "2020_4242328",
@@ -352807,7 +352807,7 @@ const COLLEGE_SCOUTING = {
           "name": "David Frazier",
           "team": "Miami (OH)",
           "year": 2014,
-          "dist": 0.532
+          "dist": 0.533
         },
         {
           "id": "2014_546465",
@@ -352986,7 +352986,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jayden Reed",
           "team": "Michigan State",
           "year": 2020,
-          "dist": 0.835
+          "dist": 0.836
         },
         {
           "id": "2019_4363639",
@@ -353058,7 +353058,7 @@ const COLLEGE_SCOUTING = {
           "name": "Chandler Worthy",
           "team": "Troy",
           "year": 2014,
-          "dist": 0.671
+          "dist": 0.672
         },
         {
           "id": "2017_4039277",
@@ -353153,7 +353153,7 @@ const COLLEGE_SCOUTING = {
           "name": "Anthony Johnson",
           "team": "Buffalo",
           "year": 2017,
-          "dist": 0.848
+          "dist": 0.847
         },
         {
           "id": "2021_4361409",
@@ -353174,7 +353174,7 @@ const COLLEGE_SCOUTING = {
           "name": "Zay Flowers",
           "team": "Boston College",
           "year": 2022,
-          "dist": 1.19
+          "dist": 1.189
         },
         {
           "id": "2018_4029893",
@@ -353216,7 +353216,7 @@ const COLLEGE_SCOUTING = {
           "name": "Penny Hart",
           "team": "Georgia State",
           "year": 2017,
-          "dist": 1.346
+          "dist": 1.345
         }
       ],
       "2026_4923295": [
@@ -353253,7 +353253,7 @@ const COLLEGE_SCOUTING = {
           "name": "K.J. Osborn",
           "team": "Buffalo",
           "year": 2018,
-          "dist": 0.639
+          "dist": 0.64
         },
         {
           "id": "2015_3126329",
@@ -353300,6 +353300,13 @@ const COLLEGE_SCOUTING = {
           "dist": 0.708
         },
         {
+          "id": "2021_4428796",
+          "name": "Casey Washington",
+          "team": "Illinois",
+          "year": 2021,
+          "dist": 0.96
+        },
+        {
           "id": "2026_4685396",
           "name": "Anthony Ivey",
           "team": "San José State",
@@ -353307,25 +353314,18 @@ const COLLEGE_SCOUTING = {
           "dist": 0.96
         },
         {
-          "id": "2021_4428796",
-          "name": "Casey Washington",
-          "team": "Illinois",
-          "year": 2021,
-          "dist": 0.961
-        },
-        {
           "id": "2026_5079492",
           "name": "Micah Hudson",
           "team": "Texas Tech",
           "year": 2026,
-          "dist": 1.007
+          "dist": 1.008
         },
         {
           "id": "2026_5295436",
           "name": "Dwayne Early Jr.",
           "team": "Buffalo",
           "year": 2026,
-          "dist": 1.044
+          "dist": 1.043
         },
         {
           "id": "2026_4685510",
@@ -353397,7 +353397,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tamorrion Terry",
           "team": "Florida State",
           "year": 2019,
-          "dist": 1.122
+          "dist": 1.121
         },
         {
           "id": "2016_3122449",
@@ -353425,7 +353425,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kenny Golladay",
           "team": "Northern Illinois",
           "year": 2015,
-          "dist": 1.318
+          "dist": 1.317
         },
         {
           "id": "2020_4371974",
@@ -353555,14 +353555,14 @@ const COLLEGE_SCOUTING = {
           "name": "Kobe Paysour",
           "team": "North Carolina",
           "year": 2025,
-          "dist": 0.976
+          "dist": 0.977
         },
         {
           "id": "2014_512100",
           "name": "Deshon Foxx",
           "team": "UConn",
           "year": 2014,
-          "dist": 0.99
+          "dist": 0.989
         },
         {
           "id": "2019_4055162",
@@ -353585,7 +353585,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ahmarean Brown",
           "team": "Georgia Tech",
           "year": 2019,
-          "dist": 1.019
+          "dist": 1.018
         },
         {
           "id": "2025_4895711",
@@ -353606,7 +353606,7 @@ const COLLEGE_SCOUTING = {
           "name": "Maurice Ffrench",
           "team": "Pittsburgh",
           "year": 2018,
-          "dist": 1.437
+          "dist": 1.436
         },
         {
           "id": "2026_5295923",
@@ -353620,7 +353620,7 @@ const COLLEGE_SCOUTING = {
           "name": "Cam Vaughn",
           "team": "West Virginia",
           "year": 2025,
-          "dist": 1.554
+          "dist": 1.553
         },
         {
           "id": "2020_4242661",
@@ -353648,7 +353648,7 @@ const COLLEGE_SCOUTING = {
           "name": "Israel Polk",
           "team": "Akron",
           "year": 2025,
-          "dist": 1.704
+          "dist": 1.703
         }
       ],
       "2026_5075962": [
@@ -353685,7 +353685,7 @@ const COLLEGE_SCOUTING = {
           "name": "Markis McCray",
           "team": "UL Monroe",
           "year": 2019,
-          "dist": 0.786
+          "dist": 0.787
         },
         {
           "id": "2013_505188",
@@ -353822,7 +353822,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jauan Wesley",
           "team": "Iowa State",
           "year": 2015,
-          "dist": 0.442
+          "dist": 0.443
         },
         {
           "id": "2019_4569239",
@@ -353873,7 +353873,7 @@ const COLLEGE_SCOUTING = {
           "name": "Darren Carrington II",
           "team": "Utah",
           "year": 2017,
-          "dist": 0.435
+          "dist": 0.436
         },
         {
           "id": "2022_4428811",
@@ -353887,7 +353887,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jordan Taylor",
           "team": "Rice",
           "year": 2014,
-          "dist": 0.619
+          "dist": 0.618
         },
         {
           "id": "2019_4243537",
@@ -353929,7 +353929,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dontario Drummond",
           "team": "Ole Miss",
           "year": 2021,
-          "dist": 0.73
+          "dist": 0.731
         },
         {
           "id": "2015_546816",
@@ -353980,14 +353980,14 @@ const COLLEGE_SCOUTING = {
           "name": "Jimmy Williams",
           "team": "East Carolina",
           "year": 2017,
-          "dist": 0.518
+          "dist": 0.517
         },
         {
           "id": "2015_517212",
           "name": "Paul Turner",
           "team": "Louisiana Tech",
           "year": 2015,
-          "dist": 0.528
+          "dist": 0.527
         },
         {
           "id": "2018_3128317",
@@ -354110,7 +354110,7 @@ const COLLEGE_SCOUTING = {
           "name": "Devin Funchess",
           "team": "Michigan",
           "year": 2014,
-          "dist": 0.811
+          "dist": 0.81
         },
         {
           "id": "2018_4261077",
@@ -354168,7 +354168,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dorian Baker",
           "team": "Kentucky",
           "year": 2015,
-          "dist": 0.318
+          "dist": 0.319
         },
         {
           "id": "2017_4243811",
@@ -354210,7 +354210,7 @@ const COLLEGE_SCOUTING = {
           "name": "Emanuel Thompson",
           "team": "Troy",
           "year": 2016,
-          "dist": 0.686
+          "dist": 0.687
         },
         {
           "id": "2025_5095360",
@@ -354377,14 +354377,14 @@ const COLLEGE_SCOUTING = {
           "name": "Mitchell Tinsley",
           "team": "Western Kentucky",
           "year": 2020,
-          "dist": 0.693
+          "dist": 0.692
         },
         {
           "id": "2018_3922168",
           "name": "Deondre Douglas",
           "team": "Troy",
           "year": 2018,
-          "dist": 0.763
+          "dist": 0.764
         },
         {
           "id": "2018_3921951",
@@ -354700,7 +354700,7 @@ const COLLEGE_SCOUTING = {
           "name": "Chris Olave",
           "team": "Ohio State",
           "year": 2019,
-          "dist": 0.555
+          "dist": 0.554
         },
         {
           "id": "2022_4428209",
@@ -354800,7 +354800,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jeff Thomas",
           "team": "Miami",
           "year": 2017,
-          "dist": 0.63
+          "dist": 0.631
         }
       ],
       "2026_5079499": [
@@ -354830,7 +354830,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tyrian Taylor",
           "team": "New Mexico State",
           "year": 2016,
-          "dist": 0.857
+          "dist": 0.856
         },
         {
           "id": "2025_4592835",
@@ -354937,7 +354937,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jared Wayne",
           "team": "Pittsburgh",
           "year": 2019,
-          "dist": 1.168
+          "dist": 1.167
         },
         {
           "id": "2013_500492",
@@ -354953,14 +354953,14 @@ const COLLEGE_SCOUTING = {
           "name": "Jonathan Duhart",
           "team": "Old Dominion",
           "year": 2015,
-          "dist": 0.511
+          "dist": 0.51
         },
         {
           "id": "2021_136429",
           "name": "Cedric Patterson III",
           "team": "Rice",
           "year": 2021,
-          "dist": 0.557
+          "dist": 0.556
         },
         {
           "id": "2026_5225013",
@@ -355016,7 +355016,7 @@ const COLLEGE_SCOUTING = {
           "name": "Marcell Barbee",
           "team": "Texas State",
           "year": 2020,
-          "dist": 0.78
+          "dist": 0.781
         }
       ],
       "2026_5079580": [
@@ -355032,7 +355032,7 @@ const COLLEGE_SCOUTING = {
           "name": "JD Spielman",
           "team": "Nebraska",
           "year": 2019,
-          "dist": 0.986
+          "dist": 0.987
         },
         {
           "id": "2016_3128451",
@@ -355060,7 +355060,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kamryn Perry",
           "team": "Miami (OH)",
           "year": 2025,
-          "dist": 1.181
+          "dist": 1.18
         },
         {
           "id": "2017_4036416",
@@ -355074,7 +355074,7 @@ const COLLEGE_SCOUTING = {
           "name": "Byron Pringle",
           "team": "Kansas State",
           "year": 2016,
-          "dist": 1.234
+          "dist": 1.235
         },
         {
           "id": "2022_4361973",
@@ -355225,7 +355225,7 @@ const COLLEGE_SCOUTING = {
           "name": "Stephon Robinson",
           "team": "Northwestern",
           "year": 2021,
-          "dist": 1.054
+          "dist": 1.055
         },
         {
           "id": "2018_3916124",
@@ -355369,7 +355369,7 @@ const COLLEGE_SCOUTING = {
           "name": "Moussa Barry",
           "team": "Western Kentucky",
           "year": 2025,
-          "dist": 1.264
+          "dist": 1.265
         },
         {
           "id": "2026_5226511",
@@ -355385,7 +355385,7 @@ const COLLEGE_SCOUTING = {
           "name": "Keylon Stokes",
           "team": "Tulsa",
           "year": 2020,
-          "dist": 0.427
+          "dist": 0.426
         },
         {
           "id": "2018_4047646",
@@ -355413,7 +355413,7 @@ const COLLEGE_SCOUTING = {
           "name": "Victor Tucker",
           "team": "Charlotte",
           "year": 2020,
-          "dist": 0.662
+          "dist": 0.661
         },
         {
           "id": "2021_4382578",
@@ -355460,13 +355460,6 @@ const COLLEGE_SCOUTING = {
           "dist": 0.272
         },
         {
-          "id": "2026_5089003",
-          "name": "Colin Chase",
-          "team": "Temple",
-          "year": 2026,
-          "dist": 0.443
-        },
-        {
           "id": "2025_5218787",
           "name": "Que'Sean Brown",
           "team": "Duke",
@@ -355507,6 +355500,13 @@ const COLLEGE_SCOUTING = {
           "team": "North Carolina",
           "year": 2014,
           "dist": 0.546
+        },
+        {
+          "id": "2026_5089003",
+          "name": "Colin Chase",
+          "team": "Temple",
+          "year": 2026,
+          "dist": 0.547
         },
         {
           "id": "2021_4613202",
@@ -355680,7 +355680,7 @@ const COLLEGE_SCOUTING = {
           "name": "Javess Blue",
           "team": "Kentucky",
           "year": 2014,
-          "dist": 0.673
+          "dist": 0.674
         },
         {
           "id": "2018_3917849",
@@ -355729,7 +355729,7 @@ const COLLEGE_SCOUTING = {
           "name": "EJ Jenkins",
           "team": "Georgia Tech",
           "year": 2022,
-          "dist": 0.834
+          "dist": 0.833
         },
         {
           "id": "2021_4257188",
@@ -355866,7 +355866,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kyric McGowan",
           "team": "Georgia Tech",
           "year": 2021,
-          "dist": 1.201
+          "dist": 1.2
         },
         {
           "id": "2014_3123986",
@@ -355945,7 +355945,7 @@ const COLLEGE_SCOUTING = {
           "name": "Bryan Holmes",
           "team": "Troy",
           "year": 2014,
-          "dist": 1.287
+          "dist": 1.288
         },
         {
           "id": "2025_5083205",
@@ -355996,7 +355996,7 @@ const COLLEGE_SCOUTING = {
           "name": "Allen Lazard",
           "team": "Iowa State",
           "year": 2017,
-          "dist": 0.757
+          "dist": 0.756
         },
         {
           "id": "2019_4038818",
@@ -356040,7 +356040,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jeff Foreman",
           "team": "Arkansas State",
           "year": 2021,
-          "dist": 0.516
+          "dist": 0.515
         },
         {
           "id": "2021_4043606",
@@ -356119,7 +356119,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ronnie Moore",
           "team": "Bowling Green",
           "year": 2014,
-          "dist": 0.718
+          "dist": 0.717
         },
         {
           "id": "2014_550507",
@@ -356140,14 +356140,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kyler Kasper",
           "team": "BYU",
           "year": 2026,
-          "dist": 0.793
-        },
-        {
-          "id": "2026_4726152",
-          "name": "Jovanni Bermudez",
-          "team": "Temple",
-          "year": 2026,
-          "dist": 0.797
+          "dist": 0.792
         },
         {
           "id": "2016_4038818",
@@ -356169,6 +356162,13 @@ const COLLEGE_SCOUTING = {
           "team": "Eastern Michigan",
           "year": 2026,
           "dist": 0.844
+        },
+        {
+          "id": "2016_3128852",
+          "name": "Thomas Owens",
+          "team": "Florida International",
+          "year": 2016,
+          "dist": 0.846
         }
       ],
       "2026_5082315": [
@@ -356298,7 +356298,7 @@ const COLLEGE_SCOUTING = {
           "name": "Javess Blue",
           "team": "Kentucky",
           "year": 2013,
-          "dist": 0.974
+          "dist": 0.973
         },
         {
           "id": "2018_4262921",
@@ -356328,7 +356328,7 @@ const COLLEGE_SCOUTING = {
           "name": "Elijah Cooks",
           "team": "Nevada",
           "year": 2019,
-          "dist": 1.378
+          "dist": 1.377
         },
         {
           "id": "2026_5081089",
@@ -356363,7 +356363,7 @@ const COLLEGE_SCOUTING = {
           "name": "Aaron Moore",
           "team": "Old Dominion",
           "year": 2019,
-          "dist": 1.93
+          "dist": 1.929
         },
         {
           "id": "2015_487641",
@@ -356377,14 +356377,14 @@ const COLLEGE_SCOUTING = {
           "name": "Andre Davis",
           "team": "South Florida",
           "year": 2014,
-          "dist": 1.957
+          "dist": 1.958
         },
         {
           "id": "2020_4068152",
           "name": "Kawaan Baker",
           "team": "South Alabama",
           "year": 2020,
-          "dist": 1.968
+          "dist": 1.967
         }
       ],
       "2026_5083103": [
@@ -356489,6 +356489,13 @@ const COLLEGE_SCOUTING = {
           "dist": 0.386
         },
         {
+          "id": "2026_5089003",
+          "name": "Colin Chase",
+          "team": "Temple",
+          "year": 2026,
+          "dist": 0.488
+        },
+        {
           "id": "2026_5079714",
           "name": "Rico Scott",
           "team": "Alabama",
@@ -356501,13 +356508,6 @@ const COLLEGE_SCOUTING = {
           "team": "UNLV",
           "year": 2021,
           "dist": 0.516
-        },
-        {
-          "id": "2026_5089003",
-          "name": "Colin Chase",
-          "team": "Temple",
-          "year": 2026,
-          "dist": 0.521
         },
         {
           "id": "2025_4713277",
@@ -356767,7 +356767,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jalon Calhoun",
           "team": "Duke",
           "year": 2020,
-          "dist": 0.636
+          "dist": 0.635
         },
         {
           "id": "2019_4429362",
@@ -356881,7 +356881,7 @@ const COLLEGE_SCOUTING = {
           "name": "Connor Wedington",
           "team": "Stanford",
           "year": 2019,
-          "dist": 0.706
+          "dist": 0.707
         },
         {
           "id": "2016_536355",
@@ -356932,7 +356932,7 @@ const COLLEGE_SCOUTING = {
           "name": "Corey Jones",
           "team": "Toledo",
           "year": 2016,
-          "dist": 0.664
+          "dist": 0.665
         },
         {
           "id": "2015_534842",
@@ -356976,7 +356976,7 @@ const COLLEGE_SCOUTING = {
           "name": "Eddie Sinegal",
           "team": "UTEP",
           "year": 2016,
-          "dist": 0.55
+          "dist": 0.551
         },
         {
           "id": "2025_4698597",
@@ -357011,7 +357011,7 @@ const COLLEGE_SCOUTING = {
           "name": "DJ Stubbs",
           "team": "Liberty",
           "year": 2018,
-          "dist": 0.852
+          "dist": 0.851
         },
         {
           "id": "2025_4431651",
@@ -357109,74 +357109,74 @@ const COLLEGE_SCOUTING = {
       ],
       "2026_5087747": [
         {
-          "id": "2014_504726",
-          "name": "Kaelin Clay",
-          "team": "Utah",
-          "year": 2014,
-          "dist": 0.133
-        },
-        {
-          "id": "2019_4570106",
-          "name": "Myron Mitchell",
-          "team": "UAB",
-          "year": 2019,
-          "dist": 0.322
-        },
-        {
-          "id": "2021_4040824",
-          "name": "Dominic Johnson",
-          "team": "Buffalo",
-          "year": 2021,
-          "dist": 0.58
-        },
-        {
-          "id": "2015_534318",
-          "name": "Levern Jacobs",
-          "team": "Maryland",
-          "year": 2015,
-          "dist": 0.614
-        },
-        {
-          "id": "2020_4038460",
-          "name": "Dillon Stoner",
-          "team": "Oklahoma State",
-          "year": 2020,
-          "dist": 0.618
-        },
-        {
           "id": "2015_3926231",
           "name": "Britain Covey",
           "team": "Utah",
           "year": 2015,
-          "dist": 0.632
-        },
-        {
-          "id": "2019_4240253",
-          "name": "Jeremy Singleton",
-          "team": "Houston",
-          "year": 2019,
-          "dist": 0.642
-        },
-        {
-          "id": "2019_3919609",
-          "name": "Jalen McCleskey",
-          "team": "Tulane",
-          "year": 2019,
-          "dist": 0.727
-        },
-        {
-          "id": "2017_3921953",
-          "name": "Spencer Tears",
-          "team": "Northern Illinois",
-          "year": 2017,
-          "dist": 0.744
+          "dist": 0.392
         },
         {
           "id": "2018_4039662",
           "name": "Keenen Johnson",
           "team": "Tulsa",
           "year": 2018,
+          "dist": 0.465
+        },
+        {
+          "id": "2014_504726",
+          "name": "Kaelin Clay",
+          "team": "Utah",
+          "year": 2014,
+          "dist": 0.526
+        },
+        {
+          "id": "2019_4570106",
+          "name": "Myron Mitchell",
+          "team": "UAB",
+          "year": 2019,
+          "dist": 0.64
+        },
+        {
+          "id": "2021_4035776",
+          "name": "Kendric Pryor",
+          "team": "Wisconsin",
+          "year": 2021,
+          "dist": 0.642
+        },
+        {
+          "id": "2020_4038460",
+          "name": "Dillon Stoner",
+          "team": "Oklahoma State",
+          "year": 2020,
+          "dist": 0.705
+        },
+        {
+          "id": "2021_4040824",
+          "name": "Dominic Johnson",
+          "team": "Buffalo",
+          "year": 2021,
           "dist": 0.778
+        },
+        {
+          "id": "2019_4240253",
+          "name": "Jeremy Singleton",
+          "team": "Houston",
+          "year": 2019,
+          "dist": 0.783
+        },
+        {
+          "id": "2015_536507",
+          "name": "Zach Wright",
+          "team": "Rice",
+          "year": 2015,
+          "dist": 0.784
+        },
+        {
+          "id": "2019_3919609",
+          "name": "Jalen McCleskey",
+          "team": "Tulane",
+          "year": 2019,
+          "dist": 0.796
         }
       ],
       "2026_5087930": [
@@ -357206,7 +357206,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tony Johnson",
           "team": "Cincinnati",
           "year": 2024,
-          "dist": 1.412
+          "dist": 1.411
         },
         {
           "id": "2022_4685278",
@@ -357227,7 +357227,7 @@ const COLLEGE_SCOUTING = {
           "name": "Justin Garrett",
           "team": "UTEP",
           "year": 2019,
-          "dist": 1.471
+          "dist": 1.472
         },
         {
           "id": "2024_4429053",
@@ -357248,7 +357248,7 @@ const COLLEGE_SCOUTING = {
           "name": "Brock Rechsteiner",
           "team": "Jacksonville State",
           "year": 2025,
-          "dist": 1.564
+          "dist": 1.565
         }
       ],
       "2026_5088153": [
@@ -357313,7 +357313,7 @@ const COLLEGE_SCOUTING = {
           "name": "James Quick",
           "team": "Louisville",
           "year": 2016,
-          "dist": 0.558
+          "dist": 0.559
         },
         {
           "id": "2014_500254",
@@ -357364,14 +357364,14 @@ const COLLEGE_SCOUTING = {
           "name": "Chrishon Mccray",
           "team": "Kent State",
           "year": 2024,
-          "dist": 1.159
+          "dist": 1.16
         },
         {
           "id": "2013_503072",
           "name": "Robert Herron",
           "team": "Wyoming",
           "year": 2013,
-          "dist": 1.21
+          "dist": 1.209
         },
         {
           "id": "2013_505345",
@@ -357397,74 +357397,74 @@ const COLLEGE_SCOUTING = {
       ],
       "2026_5089003": [
         {
-          "id": "2015_535108",
-          "name": "Rokeem Williams",
-          "team": "Miami (OH)",
-          "year": 2015,
-          "dist": 0.408
-        },
-        {
-          "id": "2025_5224764",
-          "name": "Sean Wilson",
-          "team": "Delaware",
-          "year": 2025,
-          "dist": 0.431
-        },
-        {
           "id": "2016_3915097",
           "name": "Antonio Callaway",
           "team": "Florida",
           "year": 2016,
-          "dist": 0.436
-        },
-        {
-          "id": "2026_5079714",
-          "name": "Rico Scott",
-          "team": "Alabama",
-          "year": 2026,
-          "dist": 0.443
-        },
-        {
-          "id": "2014_550567",
-          "name": "Jerico Richardson",
-          "team": "Nevada",
-          "year": 2014,
-          "dist": 0.481
+          "dist": 0.36
         },
         {
           "id": "2021_4613202",
           "name": "Kyle Williams",
           "team": "UNLV",
           "year": 2021,
-          "dist": 0.505
+          "dist": 0.414
         },
         {
-          "id": "2026_5083370",
-          "name": "Jacory Barney Jr.",
-          "team": "Nebraska",
-          "year": 2026,
-          "dist": 0.521
-        },
-        {
-          "id": "2015_3918087",
-          "name": "Callen Hightower",
-          "team": "Idaho",
-          "year": 2015,
-          "dist": 0.581
+          "id": "2014_550567",
+          "name": "Jerico Richardson",
+          "team": "Nevada",
+          "year": 2014,
+          "dist": 0.418
         },
         {
           "id": "2017_546601",
           "name": "Mark Chapman",
           "team": "Central Michigan",
           "year": 2017,
-          "dist": 0.593
+          "dist": 0.463
+        },
+        {
+          "id": "2021_4240120",
+          "name": "Emeka Emezie",
+          "team": "NC State",
+          "year": 2021,
+          "dist": 0.468
+        },
+        {
+          "id": "2026_5083370",
+          "name": "Jacory Barney Jr.",
+          "team": "Nebraska",
+          "year": 2026,
+          "dist": 0.488
         },
         {
           "id": "2020_4044143",
           "name": "Randle Jones",
           "team": "Temple",
           "year": 2020,
-          "dist": 0.622
+          "dist": 0.512
+        },
+        {
+          "id": "2014_512348",
+          "name": "Rashon Ceaser",
+          "team": "UL Monroe",
+          "year": 2014,
+          "dist": 0.519
+        },
+        {
+          "id": "2026_5079714",
+          "name": "Rico Scott",
+          "team": "Alabama",
+          "year": 2026,
+          "dist": 0.547
+        },
+        {
+          "id": "2026_4870860",
+          "name": "DeAndre Moore Jr.",
+          "team": "Colorado",
+          "year": 2026,
+          "dist": 0.569
         }
       ],
       "2026_5089539": [
@@ -357529,7 +357529,7 @@ const COLLEGE_SCOUTING = {
           "name": "Devin Gentry",
           "team": "Georgia State",
           "year": 2018,
-          "dist": 0.765
+          "dist": 0.764
         },
         {
           "id": "2017_3125293",
@@ -357559,7 +357559,7 @@ const COLLEGE_SCOUTING = {
           "name": "Mason Hays",
           "team": "Texas State",
           "year": 2019,
-          "dist": 0.434
+          "dist": 0.433
         },
         {
           "id": "2017_4054085",
@@ -357608,7 +357608,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dontre Wilson",
           "team": "Ohio State",
           "year": 2014,
-          "dist": 0.63
+          "dist": 0.631
         }
       ],
       "2026_5091830": [
@@ -357624,7 +357624,7 @@ const COLLEGE_SCOUTING = {
           "name": "Richie James",
           "team": "Middle Tennessee",
           "year": 2015,
-          "dist": 0.526
+          "dist": 0.527
         },
         {
           "id": "2016_545256",
@@ -357645,14 +357645,14 @@ const COLLEGE_SCOUTING = {
           "name": "Isaiah Ford",
           "team": "Virginia Tech",
           "year": 2016,
-          "dist": 0.788
+          "dist": 0.787
         },
         {
           "id": "2014_537063",
           "name": "Tajae Sharpe",
           "team": "Massachusetts",
           "year": 2014,
-          "dist": 0.799
+          "dist": 0.798
         },
         {
           "id": "2017_4036348",
@@ -357882,7 +357882,7 @@ const COLLEGE_SCOUTING = {
           "name": "David Bell",
           "team": "Purdue",
           "year": 2019,
-          "dist": 0.855
+          "dist": 0.854
         },
         {
           "id": "2022_4613104",
@@ -357977,7 +357977,7 @@ const COLLEGE_SCOUTING = {
           "name": "Robert Wheelwright",
           "team": "Wisconsin",
           "year": 2015,
-          "dist": 0.627
+          "dist": 0.626
         },
         {
           "id": "2019_4240577",
@@ -358019,7 +358019,7 @@ const COLLEGE_SCOUTING = {
           "name": "Damon Hazelton",
           "team": "Virginia Tech",
           "year": 2019,
-          "dist": 0.756
+          "dist": 0.755
         },
         {
           "id": "2020_4037377",
@@ -358029,17 +358029,17 @@ const COLLEGE_SCOUTING = {
           "dist": 0.771
         },
         {
-          "id": "2023_5083198",
-          "name": "Darius Lassiter",
-          "team": "BYU",
-          "year": 2023,
-          "dist": 0.788
-        },
-        {
           "id": "2017_3916433",
           "name": "Jakobi Meyers",
           "team": "NC State",
           "year": 2017,
+          "dist": 0.788
+        },
+        {
+          "id": "2023_5083198",
+          "name": "Darius Lassiter",
+          "team": "BYU",
+          "year": 2023,
           "dist": 0.788
         }
       ],
@@ -358121,7 +358121,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ronnie Bell",
           "team": "Michigan",
           "year": 2020,
-          "dist": 0.729
+          "dist": 0.73
         },
         {
           "id": "2026_4871062",
@@ -358228,14 +358228,14 @@ const COLLEGE_SCOUTING = {
           "name": "Bryce Mitchell",
           "team": "Toledo",
           "year": 2019,
-          "dist": 0.795
+          "dist": 0.794
         },
         {
           "id": "2015_550190",
           "name": "DeAngelo Yancey",
           "team": "Purdue",
           "year": 2015,
-          "dist": 0.836
+          "dist": 0.837
         },
         {
           "id": "2014_505647",
@@ -358279,7 +358279,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ben Skowronek",
           "team": "Northwestern",
           "year": 2018,
-          "dist": 0.399
+          "dist": 0.398
         },
         {
           "id": "2019_3917789",
@@ -358314,21 +358314,21 @@ const COLLEGE_SCOUTING = {
           "name": "Howard Kinchen",
           "team": "Troy",
           "year": 2026,
-          "dist": 0.47
+          "dist": 0.471
         },
         {
           "id": "2019_4244306",
           "name": "Jalen Walker",
           "team": "Miami (OH)",
           "year": 2019,
-          "dist": 0.476
+          "dist": 0.477
         },
         {
           "id": "2023_4879499",
           "name": "Tony Johnson",
           "team": "Florida Atlantic",
           "year": 2023,
-          "dist": 0.478
+          "dist": 0.479
         }
       ],
       "2026_5104888": [
@@ -358465,14 +358465,14 @@ const COLLEGE_SCOUTING = {
           "name": "Kaleb Webb",
           "team": "Maryland",
           "year": 2026,
-          "dist": 1.047
+          "dist": 1.048
         },
         {
           "id": "2016_547066",
           "name": "Ronnie Moore",
           "team": "Bowling Green",
           "year": 2016,
-          "dist": 1.049
+          "dist": 1.05
         }
       ],
       "2026_5112674": [
@@ -358488,7 +358488,7 @@ const COLLEGE_SCOUTING = {
           "name": "Asaad Waseem",
           "team": "Purdue",
           "year": 2026,
-          "dist": 1.345
+          "dist": 1.346
         },
         {
           "id": "2017_3123208",
@@ -358502,7 +358502,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jarrod West",
           "team": "Syracuse",
           "year": 2014,
-          "dist": 1.43
+          "dist": 1.429
         },
         {
           "id": "2016_550896",
@@ -358530,7 +358530,7 @@ const COLLEGE_SCOUTING = {
           "name": "Hudson Clement",
           "team": "Illinois",
           "year": 2026,
-          "dist": 1.659
+          "dist": 1.66
         },
         {
           "id": "2026_5110019",
@@ -358602,7 +358602,7 @@ const COLLEGE_SCOUTING = {
           "name": "Josh Reynolds",
           "team": "Texas A&M",
           "year": 2014,
-          "dist": 0.854
+          "dist": 0.853
         },
         {
           "id": "2017_3931397",
@@ -358625,7 +358625,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tevin Jones",
           "team": "Memphis",
           "year": 2014,
-          "dist": 0.547
+          "dist": 0.546
         },
         {
           "id": "2025_4869497",
@@ -358753,7 +358753,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jordan Leslie",
           "team": "BYU",
           "year": 2014,
-          "dist": 0.613
+          "dist": 0.614
         },
         {
           "id": "2014_545256",
@@ -358848,7 +358848,7 @@ const COLLEGE_SCOUTING = {
           "name": "Nick Devereaux",
           "team": "Eastern Michigan",
           "year": 2025,
-          "dist": 0.628
+          "dist": 0.627
         },
         {
           "id": "2026_5079524",
@@ -358962,7 +358962,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jakobi Meyers",
           "team": "NC State",
           "year": 2017,
-          "dist": 0.741
+          "dist": 0.74
         },
         {
           "id": "2015_517589",
@@ -359041,7 +359041,7 @@ const COLLEGE_SCOUTING = {
           "name": "C.J. Sanders",
           "team": "Notre Dame",
           "year": 2016,
-          "dist": 0.627
+          "dist": 0.628
         },
         {
           "id": "2016_536467",
@@ -359106,7 +359106,7 @@ const COLLEGE_SCOUTING = {
           "name": "Michael Lawrence",
           "team": "North Texas",
           "year": 2018,
-          "dist": 0.361
+          "dist": 0.36
         },
         {
           "id": "2014_549932",
@@ -359129,7 +359129,7 @@ const COLLEGE_SCOUTING = {
           "name": "O'Mega Blake",
           "team": "Arkansas",
           "year": 2025,
-          "dist": 0.448
+          "dist": 0.447
         },
         {
           "id": "2024_5121666",
@@ -359185,7 +359185,7 @@ const COLLEGE_SCOUTING = {
           "name": "Odieu Hilaire",
           "team": "Bowling Green",
           "year": 2023,
-          "dist": 0.615
+          "dist": 0.614
         },
         {
           "id": "2022_4431509",
@@ -359208,14 +359208,14 @@ const COLLEGE_SCOUTING = {
           "name": "Bo Melton",
           "team": "Rutgers",
           "year": 2021,
-          "dist": 0.526
+          "dist": 0.527
         },
         {
           "id": "2015_513399",
           "name": "Robby Anderson",
           "team": "Temple",
           "year": 2015,
-          "dist": 0.582
+          "dist": 0.581
         },
         {
           "id": "2018_4047728",
@@ -359250,7 +359250,7 @@ const COLLEGE_SCOUTING = {
           "name": "Gabriel Benyard",
           "team": "Kennesaw State",
           "year": 2025,
-          "dist": 0.718
+          "dist": 0.719
         },
         {
           "id": "2021_4427596",
@@ -359438,7 +359438,7 @@ const COLLEGE_SCOUTING = {
           "name": "Sam Pickett III",
           "team": "App State",
           "year": 2026,
-          "dist": 0.599
+          "dist": 0.598
         },
         {
           "id": "2018_3127588",
@@ -359480,7 +359480,7 @@ const COLLEGE_SCOUTING = {
           "name": "Mike Williams",
           "team": "Clemson",
           "year": 2016,
-          "dist": 0.712
+          "dist": 0.713
         }
       ],
       "2026_5122096": [
@@ -359538,7 +359538,7 @@ const COLLEGE_SCOUTING = {
           "name": "Parker Livingstone",
           "team": "Texas",
           "year": 2025,
-          "dist": 0.699
+          "dist": 0.698
         },
         {
           "id": "2025_5139057",
@@ -359582,20 +359582,20 @@ const COLLEGE_SCOUTING = {
           "name": "Malik Rutherford",
           "team": "Georgia Tech",
           "year": 2023,
-          "dist": 0.481
-        },
-        {
-          "id": "2014_503054",
-          "name": "Kenneth Scott",
-          "team": "Utah",
-          "year": 2014,
-          "dist": 0.542
+          "dist": 0.48
         },
         {
           "id": "2024_4879677",
           "name": "Ashtyn Hawkins",
           "team": "Baylor",
           "year": 2024,
+          "dist": 0.542
+        },
+        {
+          "id": "2014_503054",
+          "name": "Kenneth Scott",
+          "team": "Utah",
+          "year": 2014,
           "dist": 0.542
         },
         {
@@ -359877,14 +359877,14 @@ const COLLEGE_SCOUTING = {
           "name": "Corey Jones",
           "team": "Toledo",
           "year": 2015,
-          "dist": 1.128
+          "dist": 1.129
         },
         {
           "id": "2019_4429362",
           "name": "Jalon Calhoun",
           "team": "Duke",
           "year": 2019,
-          "dist": 1.272
+          "dist": 1.271
         },
         {
           "id": "2015_3125731",
@@ -359912,7 +359912,7 @@ const COLLEGE_SCOUTING = {
           "name": "Lynel Billups-Williams",
           "team": "Miami (OH)",
           "year": 2026,
-          "dist": 1.363
+          "dist": 1.362
         }
       ],
       "2026_5132652": [
@@ -359963,7 +359963,7 @@ const COLLEGE_SCOUTING = {
           "name": "A.J. Little",
           "team": "Southern Miss",
           "year": 2026,
-          "dist": 0.458
+          "dist": 0.457
         },
         {
           "id": "2019_3918469",
@@ -360021,7 +360021,7 @@ const COLLEGE_SCOUTING = {
           "name": "Markeith Ambles",
           "team": "Houston",
           "year": 2014,
-          "dist": 0.635
+          "dist": 0.634
         },
         {
           "id": "2025_5093009",
@@ -360086,7 +360086,7 @@ const COLLEGE_SCOUTING = {
           "name": "Marquis Johnson",
           "team": "Missouri",
           "year": 2023,
-          "dist": 2.85
+          "dist": 2.849
         },
         {
           "id": "2023_5100582",
@@ -360251,7 +360251,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dede Westbrook",
           "team": "Oklahoma",
           "year": 2015,
-          "dist": 0.537
+          "dist": 0.538
         },
         {
           "id": "2015_531078",
@@ -360439,7 +360439,7 @@ const COLLEGE_SCOUTING = {
           "name": "Quentin Johnston",
           "team": "TCU",
           "year": 2022,
-          "dist": 0.819
+          "dist": 0.818
         },
         {
           "id": "2018_4043161",
@@ -360504,21 +360504,21 @@ const COLLEGE_SCOUTING = {
           "name": "Austin Conway",
           "team": "Wyoming",
           "year": 2017,
-          "dist": 1.293
+          "dist": 1.294
         },
         {
           "id": "2026_4837193",
           "name": "Jmariyae Robinson",
           "team": "Missouri State",
           "year": 2026,
-          "dist": 1.348
+          "dist": 1.349
         },
         {
           "id": "2025_4592573",
           "name": "Michael Jackson III",
           "team": "Purdue",
           "year": 2025,
-          "dist": 1.405
+          "dist": 1.404
         },
         {
           "id": "2020_4367175",
@@ -360546,7 +360546,7 @@ const COLLEGE_SCOUTING = {
           "name": "Billy Kemp",
           "team": "Nebraska",
           "year": 2023,
-          "dist": 1.512
+          "dist": 1.513
         },
         {
           "id": "2016_552748",
@@ -360625,7 +360625,7 @@ const COLLEGE_SCOUTING = {
           "name": "Gabriel Benyard",
           "team": "Kennesaw State",
           "year": 2025,
-          "dist": 0.587
+          "dist": 0.588
         },
         {
           "id": "2023_4877203",
@@ -360704,7 +360704,7 @@ const COLLEGE_SCOUTING = {
           "name": "Rodney Bullard Jr.",
           "team": "Michigan State",
           "year": 2026,
-          "dist": 0.549
+          "dist": 0.548
         }
       ],
       "2026_5141586": [
@@ -360741,14 +360741,14 @@ const COLLEGE_SCOUTING = {
           "name": "Dylan Drummond",
           "team": "Eastern Michigan",
           "year": 2021,
-          "dist": 0.825
+          "dist": 0.826
         },
         {
           "id": "2026_4921110",
           "name": "Chase Hendricks",
           "team": "California",
           "year": 2026,
-          "dist": 0.885
+          "dist": 0.884
         },
         {
           "id": "2018_4260320",
@@ -360776,7 +360776,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tanner Knue",
           "team": "Eastern Michigan",
           "year": 2023,
-          "dist": 0.947
+          "dist": 0.946
         }
       ],
       "2026_5141671": [
@@ -360785,7 +360785,7 @@ const COLLEGE_SCOUTING = {
           "name": "A.J. Richardson",
           "team": "Boise State",
           "year": 2018,
-          "dist": 0.35
+          "dist": 0.349
         },
         {
           "id": "2019_4363556",
@@ -360988,9 +360988,9 @@ const COLLEGE_SCOUTING = {
           "dist": 0.603
         },
         {
-          "id": "2018_3932430",
-          "name": "Jalen Guyton",
-          "team": "North Texas",
+          "id": "2018_4240432",
+          "name": "Sage Surratt",
+          "team": "Wake Forest",
           "year": 2018,
           "dist": 0.62
         }
@@ -361029,7 +361029,7 @@ const COLLEGE_SCOUTING = {
           "name": "Joseph Williams",
           "team": "Colorado",
           "year": 2025,
-          "dist": 0.405
+          "dist": 0.404
         },
         {
           "id": "2026_5229489",
@@ -361050,7 +361050,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ty Lee",
           "team": "Middle Tennessee",
           "year": 2018,
-          "dist": 0.492
+          "dist": 0.493
         },
         {
           "id": "2016_4039320",
@@ -361194,7 +361194,7 @@ const COLLEGE_SCOUTING = {
           "name": "Marquez North",
           "team": "Tennessee",
           "year": 2014,
-          "dist": 0.744
+          "dist": 0.745
         },
         {
           "id": "2018_4035255",
@@ -361259,7 +361259,7 @@ const COLLEGE_SCOUTING = {
           "name": "Marquis Johnson",
           "team": "Missouri",
           "year": 2025,
-          "dist": 0.468
+          "dist": 0.469
         },
         {
           "id": "2026_5260691",
@@ -361310,7 +361310,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tyrone Scott",
           "team": "Central Michigan",
           "year": 2019,
-          "dist": 0.588
+          "dist": 0.589
         },
         {
           "id": "2018_4039295",
@@ -361352,7 +361352,7 @@ const COLLEGE_SCOUTING = {
           "name": "Malik Turner",
           "team": "Illinois",
           "year": 2015,
-          "dist": 0.748
+          "dist": 0.747
         }
       ],
       "2026_5146576": [
@@ -361389,7 +361389,7 @@ const COLLEGE_SCOUTING = {
           "name": "B.J. Farrow",
           "team": "Liberty",
           "year": 2018,
-          "dist": 0.443
+          "dist": 0.444
         },
         {
           "id": "2025_5121601",
@@ -361461,7 +361461,7 @@ const COLLEGE_SCOUTING = {
           "name": "Howard Kinchen",
           "team": "Troy",
           "year": 2026,
-          "dist": 0.391
+          "dist": 0.39
         },
         {
           "id": "2025_4869599",
@@ -361568,7 +361568,7 @@ const COLLEGE_SCOUTING = {
           "name": "Nathaniel Dell",
           "team": "Houston",
           "year": 2021,
-          "dist": 1.017
+          "dist": 1.018
         }
       ],
       "2026_5146736": [
@@ -361598,7 +361598,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jeremy Scott",
           "team": "South Alabama",
           "year": 2025,
-          "dist": 0.946
+          "dist": 0.947
         },
         {
           "id": "2014_501663",
@@ -361612,7 +361612,7 @@ const COLLEGE_SCOUTING = {
           "name": "Joseph Manjack",
           "team": "Houston",
           "year": 2024,
-          "dist": 0.956
+          "dist": 0.957
         },
         {
           "id": "2020_4570250",
@@ -361907,7 +361907,7 @@ const COLLEGE_SCOUTING = {
           "name": "Beaux Collins",
           "team": "Notre Dame",
           "year": 2024,
-          "dist": 0.381
+          "dist": 0.38
         },
         {
           "id": "2018_4039050",
@@ -361958,7 +361958,7 @@ const COLLEGE_SCOUTING = {
           "name": "Mario Sanders II",
           "team": "Southern Miss",
           "year": 2026,
-          "dist": 1.24
+          "dist": 1.239
         },
         {
           "id": "2016_534252",
@@ -362153,7 +362153,7 @@ const COLLEGE_SCOUTING = {
           "name": "Cole Harrity",
           "team": "Buffalo",
           "year": 2023,
-          "dist": 0.49
+          "dist": 0.489
         },
         {
           "id": "2015_3125068",
@@ -362216,7 +362216,7 @@ const COLLEGE_SCOUTING = {
           "name": "Brian Casteel",
           "team": "Arizona",
           "year": 2019,
-          "dist": 0.794
+          "dist": 0.795
         }
       ],
       "2026_5148784": [
@@ -362239,7 +362239,7 @@ const COLLEGE_SCOUTING = {
           "name": "Cade Wolford",
           "team": "Kent State",
           "year": 2025,
-          "dist": 0.777
+          "dist": 0.778
         },
         {
           "id": "2017_548047",
@@ -362332,7 +362332,7 @@ const COLLEGE_SCOUTING = {
           "name": "Bryan Edwards",
           "team": "South Carolina",
           "year": 2018,
-          "dist": 0.53
+          "dist": 0.531
         },
         {
           "id": "2014_516301",
@@ -362349,18 +362349,18 @@ const COLLEGE_SCOUTING = {
           "dist": 0.543
         },
         {
-          "id": "2018_4037366",
-          "name": "Ty Lee",
-          "team": "Middle Tennessee",
-          "year": 2018,
-          "dist": 0.548
-        },
-        {
           "id": "2018_3894912",
           "name": "Tyron Johnson",
           "team": "Oklahoma State",
           "year": 2018,
           "dist": 0.548
+        },
+        {
+          "id": "2018_4037366",
+          "name": "Ty Lee",
+          "team": "Middle Tennessee",
+          "year": 2018,
+          "dist": 0.549
         }
       ],
       "2026_5149007": [
@@ -362383,7 +362383,7 @@ const COLLEGE_SCOUTING = {
           "name": "Taylor Oldham",
           "team": "UCF",
           "year": 2016,
-          "dist": 0.361
+          "dist": 0.36
         },
         {
           "id": "2014_536320",
@@ -362418,7 +362418,7 @@ const COLLEGE_SCOUTING = {
           "name": "Trayvon Rudolph",
           "team": "Toledo",
           "year": 2025,
-          "dist": 0.434
+          "dist": 0.433
         },
         {
           "id": "2025_5089545",
@@ -362606,7 +362606,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jordan Cunningham",
           "team": "North Carolina",
           "year": 2017,
-          "dist": 0.504
+          "dist": 0.503
         },
         {
           "id": "2019_4361460",
@@ -362620,7 +362620,7 @@ const COLLEGE_SCOUTING = {
           "name": "Porter Rooks",
           "team": "NC State",
           "year": 2020,
-          "dist": 0.511
+          "dist": 0.512
         },
         {
           "id": "2017_4035069",
@@ -362685,7 +362685,7 @@ const COLLEGE_SCOUTING = {
           "name": "Sam Crawford Jr.",
           "team": "Tulsa",
           "year": 2019,
-          "dist": 0.469
+          "dist": 0.468
         },
         {
           "id": "2021_4360306",
@@ -362808,7 +362808,7 @@ const COLLEGE_SCOUTING = {
           "name": "Yo'Heinz Tyler",
           "team": "Ball State",
           "year": 2022,
-          "dist": 0.425
+          "dist": 0.424
         },
         {
           "id": "2019_4048695",
@@ -362901,7 +362901,7 @@ const COLLEGE_SCOUTING = {
           "name": "John Hightower",
           "team": "Boise State",
           "year": 2018,
-          "dist": 0.582
+          "dist": 0.583
         },
         {
           "id": "2014_513120",
@@ -362966,14 +362966,14 @@ const COLLEGE_SCOUTING = {
           "name": "Christian Moss",
           "team": "Kennesaw State",
           "year": 2025,
-          "dist": 0.71
+          "dist": 0.711
         },
         {
           "id": "2023_4428692",
           "name": "Dino Tomlin",
           "team": "Boston College",
           "year": 2023,
-          "dist": 0.751
+          "dist": 0.752
         },
         {
           "id": "2015_534518",
@@ -362987,7 +362987,7 @@ const COLLEGE_SCOUTING = {
           "name": "Andrew Celis",
           "team": "Nevada",
           "year": 2016,
-          "dist": 0.774
+          "dist": 0.775
         },
         {
           "id": "2026_4879192",
@@ -363001,7 +363001,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jenson Stoshak",
           "team": "Florida Atlantic",
           "year": 2013,
-          "dist": 0.811
+          "dist": 0.812
         },
         {
           "id": "2025_4683886",
@@ -363031,7 +363031,7 @@ const COLLEGE_SCOUTING = {
           "name": "Breshad Perriman",
           "team": "UCF",
           "year": 2013,
-          "dist": 0.969
+          "dist": 0.968
         },
         {
           "id": "2023_4429742",
@@ -363275,7 +363275,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ronnie Moore",
           "team": "Bowling Green",
           "year": 2016,
-          "dist": 1.017
+          "dist": 1.016
         },
         {
           "id": "2014_545837",
@@ -363296,7 +363296,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ty Fryfogle",
           "team": "Indiana",
           "year": 2021,
-          "dist": 1.066
+          "dist": 1.065
         }
       ],
       "2026_5153065": [
@@ -363319,56 +363319,56 @@ const COLLEGE_SCOUTING = {
           "name": "Aaron Moore",
           "team": "Old Dominion",
           "year": 2019,
-          "dist": 1.893
+          "dist": 1.894
         },
         {
           "id": "2022_4245653",
           "name": "Brian Casteel",
           "team": "Nevada",
           "year": 2022,
-          "dist": 2.1
+          "dist": 2.099
         },
         {
           "id": "2025_4871010",
           "name": "Shelton Sampson Jr.",
           "team": "Louisiana",
           "year": 2025,
-          "dist": 2.181
+          "dist": 2.18
         },
         {
           "id": "2026_5082587",
           "name": "Matthew Coleman",
           "team": "Sacramento State",
           "year": 2026,
-          "dist": 2.209
+          "dist": 2.208
         },
         {
           "id": "2026_5214557",
           "name": "JJ Buchanan",
           "team": "Michigan",
           "year": 2026,
-          "dist": 2.235
+          "dist": 2.234
         },
         {
           "id": "2019_4426800",
           "name": "Ahmarean Brown",
           "team": "Georgia Tech",
           "year": 2019,
-          "dist": 2.307
+          "dist": 2.306
         },
         {
           "id": "2018_4036055",
           "name": "Maurice Ffrench",
           "team": "Pittsburgh",
           "year": 2018,
-          "dist": 2.399
+          "dist": 2.398
         },
         {
           "id": "2026_5081089",
           "name": "Dylan Gary",
           "team": "Kennesaw State",
           "year": 2026,
-          "dist": 2.447
+          "dist": 2.446
         }
       ],
       "2026_5153074": [
@@ -363384,7 +363384,7 @@ const COLLEGE_SCOUTING = {
           "name": "Nathaniel Dell",
           "team": "Houston",
           "year": 2022,
-          "dist": 0.906
+          "dist": 0.907
         },
         {
           "id": "2014_531010",
@@ -363433,14 +363433,14 @@ const COLLEGE_SCOUTING = {
           "name": "Michael Pittman Jr.",
           "team": "USC",
           "year": 2019,
-          "dist": 1.229
+          "dist": 1.228
         },
         {
           "id": "2013_505407",
           "name": "Justin Hardy",
           "team": "East Carolina",
           "year": 2013,
-          "dist": 1.244
+          "dist": 1.245
         }
       ],
       "2026_5153318": [
@@ -363491,7 +363491,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ricky Johnson",
           "team": "Utah",
           "year": 2026,
-          "dist": 0.458
+          "dist": 0.457
         },
         {
           "id": "2017_4035896",
@@ -363649,7 +363649,7 @@ const COLLEGE_SCOUTING = {
           "name": "Donovan Harden",
           "team": "Georgia State",
           "year": 2014,
-          "dist": 0.609
+          "dist": 0.608
         },
         {
           "id": "2019_4371974",
@@ -363751,7 +363751,7 @@ const COLLEGE_SCOUTING = {
           "name": "Malachi Toney",
           "team": "Miami",
           "year": 2025,
-          "dist": 0.907
+          "dist": 0.908
         },
         {
           "id": "2018_4244856",
@@ -363872,7 +363872,7 @@ const COLLEGE_SCOUTING = {
           "name": "Paul Turner",
           "team": "Louisiana Tech",
           "year": 2014,
-          "dist": 0.571
+          "dist": 0.57
         }
       ],
       "2026_5153889": [
@@ -363944,7 +363944,7 @@ const COLLEGE_SCOUTING = {
           "name": "Chris Dawn Jr.",
           "team": "Texas State",
           "year": 2025,
-          "dist": 0.808
+          "dist": 0.807
         }
       ],
       "2026_5154734": [
@@ -364046,7 +364046,7 @@ const COLLEGE_SCOUTING = {
           "name": "Josh Kelly",
           "team": "Fresno State",
           "year": 2021,
-          "dist": 0.474
+          "dist": 0.473
         },
         {
           "id": "2017_3914828",
@@ -364060,7 +364060,7 @@ const COLLEGE_SCOUTING = {
           "name": "Chico McClatcher",
           "team": "Washington",
           "year": 2016,
-          "dist": 0.534
+          "dist": 0.533
         },
         {
           "id": "2023_4916941",
@@ -364276,7 +364276,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dylan Collie",
           "team": "Hawai'i",
           "year": 2015,
-          "dist": 0.443
+          "dist": 0.444
         },
         {
           "id": "2026_5141795",
@@ -364334,7 +364334,7 @@ const COLLEGE_SCOUTING = {
           "name": "Sam Mays",
           "team": "Illinois",
           "year": 2018,
-          "dist": 0.566
+          "dist": 0.565
         },
         {
           "id": "2026_5226453",
@@ -364358,17 +364358,17 @@ const COLLEGE_SCOUTING = {
           "dist": 0.673
         },
         {
-          "id": "2017_4039055",
-          "name": "Reggie Hemphill-Mapps",
-          "team": "Texas",
-          "year": 2017,
-          "dist": 0.708
-        },
-        {
           "id": "2020_4035169",
           "name": "Latrell Williams",
           "team": "South Florida",
           "year": 2020,
+          "dist": 0.708
+        },
+        {
+          "id": "2017_4039055",
+          "name": "Reggie Hemphill-Mapps",
+          "team": "Texas",
+          "year": 2017,
           "dist": 0.708
         },
         {
@@ -364406,7 +364406,7 @@ const COLLEGE_SCOUTING = {
           "name": "Justin Hardee",
           "team": "Illinois",
           "year": 2016,
-          "dist": 0.646
+          "dist": 0.647
         },
         {
           "id": "2020_4035169",
@@ -364471,7 +364471,7 @@ const COLLEGE_SCOUTING = {
           "name": "Chaz Anderson",
           "team": "Boise State",
           "year": 2015,
-          "dist": 0.624
+          "dist": 0.623
         },
         {
           "id": "2016_534791",
@@ -364571,7 +364571,7 @@ const COLLEGE_SCOUTING = {
           "name": "Malcolm Gillie",
           "team": "Ball State",
           "year": 2024,
-          "dist": 0.584
+          "dist": 0.583
         },
         {
           "id": "2024_4869581",
@@ -364608,7 +364608,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jay Maclin",
           "team": "North Texas",
           "year": 2022,
-          "dist": 0.624
+          "dist": 0.625
         },
         {
           "id": "2023_4430103",
@@ -364657,7 +364657,7 @@ const COLLEGE_SCOUTING = {
           "name": "Treyshun Hurry",
           "team": "San José State",
           "year": 2024,
-          "dist": 0.865
+          "dist": 0.864
         },
         {
           "id": "2024_5119868",
@@ -364736,7 +364736,7 @@ const COLLEGE_SCOUTING = {
           "name": "Aleva Hifo",
           "team": "BYU",
           "year": 2019,
-          "dist": 0.817
+          "dist": 0.816
         }
       ],
       "2026_5159175": [
@@ -364766,7 +364766,7 @@ const COLLEGE_SCOUTING = {
           "name": "John Ursua",
           "team": "Hawai'i",
           "year": 2018,
-          "dist": 1.288
+          "dist": 1.289
         },
         {
           "id": "2021_4569618",
@@ -364794,21 +364794,21 @@ const COLLEGE_SCOUTING = {
           "name": "Brandin Cooks",
           "team": "Oregon State",
           "year": 2013,
-          "dist": 1.378
+          "dist": 1.379
         },
         {
           "id": "2017_549623",
           "name": "Anthony Miller",
           "team": "Memphis",
           "year": 2017,
-          "dist": 1.424
+          "dist": 1.425
         },
         {
           "id": "2025_4870795",
           "name": "Makai Lemon",
           "team": "USC",
           "year": 2025,
-          "dist": 1.464
+          "dist": 1.465
         }
       ],
       "2026_5160197": [
@@ -364917,7 +364917,7 @@ const COLLEGE_SCOUTING = {
           "name": "Darrell Stewart Jr.",
           "team": "Michigan State",
           "year": 2019,
-          "dist": 0.81
+          "dist": 0.811
         },
         {
           "id": "2017_3927809",
@@ -364931,7 +364931,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dom Williams",
           "team": "Washington State",
           "year": 2015,
-          "dist": 0.837
+          "dist": 0.838
         },
         {
           "id": "2025_4685261",
@@ -365140,7 +365140,7 @@ const COLLEGE_SCOUTING = {
           "name": "Rico Bussey Jr.",
           "team": "North Texas",
           "year": 2017,
-          "dist": 0.497
+          "dist": 0.498
         },
         {
           "id": "2019_4361915",
@@ -365342,7 +365342,7 @@ const COLLEGE_SCOUTING = {
           "name": "Marvin Mims",
           "team": "Oklahoma",
           "year": 2022,
-          "dist": 1.038
+          "dist": 1.037
         },
         {
           "id": "2013_502956",
@@ -365370,7 +365370,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ahmmon Richards",
           "team": "Miami",
           "year": 2016,
-          "dist": 1.156
+          "dist": 1.157
         },
         {
           "id": "2016_3123674",
@@ -365558,7 +365558,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tyron Johnson",
           "team": "Oklahoma State",
           "year": 2018,
-          "dist": 0.435
+          "dist": 0.434
         },
         {
           "id": "2019_4427225",
@@ -365651,7 +365651,7 @@ const COLLEGE_SCOUTING = {
           "name": "D.J. Foster",
           "team": "Arizona State",
           "year": 2013,
-          "dist": 1.244
+          "dist": 1.243
         },
         {
           "id": "2017_3123996",
@@ -365672,7 +365672,7 @@ const COLLEGE_SCOUTING = {
           "name": "Amare Jones",
           "team": "Tulane",
           "year": 2019,
-          "dist": 1.402
+          "dist": 1.401
         }
       ],
       "2026_5168788": [
@@ -365688,7 +365688,7 @@ const COLLEGE_SCOUTING = {
           "name": "Terrill Davis",
           "team": "Oklahoma State",
           "year": 2025,
-          "dist": 0.875
+          "dist": 0.874
         },
         {
           "id": "2025_5295811",
@@ -365781,7 +365781,7 @@ const COLLEGE_SCOUTING = {
           "name": "Charlie Jones",
           "team": "Purdue",
           "year": 2022,
-          "dist": 0.834
+          "dist": 0.835
         },
         {
           "id": "2017_4048932",
@@ -365798,17 +365798,17 @@ const COLLEGE_SCOUTING = {
           "dist": 0.952
         },
         {
-          "id": "2018_4029893",
-          "name": "Antonio Gandy-Golden",
-          "team": "Liberty",
-          "year": 2018,
-          "dist": 0.952
-        },
-        {
           "id": "2015_535497",
           "name": "Corey Coleman",
           "team": "Baylor",
           "year": 2015,
+          "dist": 0.952
+        },
+        {
+          "id": "2018_4029893",
+          "name": "Antonio Gandy-Golden",
+          "team": "Liberty",
+          "year": 2018,
           "dist": 0.953
         },
         {
@@ -365839,7 +365839,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ricky Jones",
           "team": "Indiana",
           "year": 2016,
-          "dist": 0.423
+          "dist": 0.424
         },
         {
           "id": "2024_5095360",
@@ -365897,7 +365897,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tyren Hornes",
           "team": "UCF",
           "year": 2026,
-          "dist": 0.352
+          "dist": 0.353
         },
         {
           "id": "2025_5141582",
@@ -366055,7 +366055,7 @@ const COLLEGE_SCOUTING = {
           "name": "L.T. Smith",
           "team": "Akron",
           "year": 2014,
-          "dist": 0.606
+          "dist": 0.605
         },
         {
           "id": "2026_5222761",
@@ -366257,7 +366257,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kobe Paysour",
           "team": "North Carolina",
           "year": 2025,
-          "dist": 0.454
+          "dist": 0.453
         },
         {
           "id": "2017_3120074",
@@ -366278,7 +366278,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dalevon Campbell",
           "team": "Nevada",
           "year": 2022,
-          "dist": 0.647
+          "dist": 0.648
         },
         {
           "id": "2017_3125291",
@@ -366357,7 +366357,7 @@ const COLLEGE_SCOUTING = {
           "name": "James Proche",
           "team": "SMU",
           "year": 2018,
-          "dist": 0.822
+          "dist": 0.823
         },
         {
           "id": "2016_534739",
@@ -366378,7 +366378,7 @@ const COLLEGE_SCOUTING = {
           "name": "Nelson Spruce",
           "team": "Colorado",
           "year": 2014,
-          "dist": 0.864
+          "dist": 0.863
         },
         {
           "id": "2025_5159175",
@@ -366401,7 +366401,7 @@ const COLLEGE_SCOUTING = {
           "name": "Sam Martin",
           "team": "Miami (OH)",
           "year": 2014,
-          "dist": 0.59
+          "dist": 0.589
         },
         {
           "id": "2020_4362184",
@@ -366457,7 +366457,7 @@ const COLLEGE_SCOUTING = {
           "name": "C.J. Daniels",
           "team": "Miami",
           "year": 2025,
-          "dist": 0.85
+          "dist": 0.851
         },
         {
           "id": "2022_5092508",
@@ -366508,7 +366508,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jayden Reed",
           "team": "Western Michigan",
           "year": 2018,
-          "dist": 0.641
+          "dist": 0.642
         },
         {
           "id": "2014_501044",
@@ -366545,21 +366545,21 @@ const COLLEGE_SCOUTING = {
           "name": "Reece Vander Zee",
           "team": "Iowa",
           "year": 2026,
-          "dist": 9.869
+          "dist": 9.871
         },
         {
           "id": "2024_5031157",
           "name": "Reed Harris",
           "team": "Boston College",
           "year": 2024,
-          "dist": 10.12
+          "dist": 10.122
         },
         {
           "id": "2024_4569372",
           "name": "Dalevon Campbell",
           "team": "South Carolina",
           "year": 2024,
-          "dist": 10.613
+          "dist": 10.615
         },
         {
           "id": "2023_5076106",
@@ -366573,28 +366573,28 @@ const COLLEGE_SCOUTING = {
           "name": "Jayden Gibson",
           "team": "Oklahoma",
           "year": 2023,
-          "dist": 11.105
+          "dist": 11.106
         },
         {
           "id": "2018_4362301",
           "name": "Isiah Cox",
           "team": "Ohio",
           "year": 2018,
-          "dist": 11.225
+          "dist": 11.227
         },
         {
           "id": "2021_4426965",
           "name": "Blair Conwright",
           "team": "TCU",
           "year": 2021,
-          "dist": 11.256
+          "dist": 11.257
         },
         {
           "id": "2024_5122072",
           "name": "Nic Trujillo",
           "team": "New Mexico",
           "year": 2024,
-          "dist": 11.289
+          "dist": 11.29
         },
         {
           "id": "2024_4431525",
@@ -366608,7 +366608,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jay Wilkerson",
           "team": "Louisiana Tech",
           "year": 2024,
-          "dist": 11.521
+          "dist": 11.522
         }
       ],
       "2026_5198318": [
@@ -366680,7 +366680,7 @@ const COLLEGE_SCOUTING = {
           "name": "Michael Thomas",
           "team": "Southern Miss",
           "year": 2015,
-          "dist": 1.289
+          "dist": 1.29
         }
       ],
       "2026_5199859": [
@@ -366710,7 +366710,7 @@ const COLLEGE_SCOUTING = {
           "name": "Justyn Shackleford",
           "team": "Tulane",
           "year": 2014,
-          "dist": 0.562
+          "dist": 0.563
         },
         {
           "id": "2016_3914502",
@@ -366752,7 +366752,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dennis Parks",
           "team": "Rice",
           "year": 2015,
-          "dist": 0.612
+          "dist": 0.613
         }
       ],
       "2026_5200108": [
@@ -366782,7 +366782,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jaetavian Toles",
           "team": "Tulane",
           "year": 2021,
-          "dist": 0.491
+          "dist": 0.49
         },
         {
           "id": "2026_5291778",
@@ -366803,7 +366803,7 @@ const COLLEGE_SCOUTING = {
           "name": "Levi Wentz",
           "team": "Kansas",
           "year": 2025,
-          "dist": 0.524
+          "dist": 0.523
         },
         {
           "id": "2025_5207842",
@@ -366947,7 +366947,7 @@ const COLLEGE_SCOUTING = {
           "name": "Josh Meredith",
           "team": "Washington State",
           "year": 2025,
-          "dist": 0.556
+          "dist": 0.557
         },
         {
           "id": "2015_3918087",
@@ -366968,7 +366968,7 @@ const COLLEGE_SCOUTING = {
           "name": "Eric Singleton Jr.",
           "team": "Georgia Tech",
           "year": 2024,
-          "dist": 0.602
+          "dist": 0.603
         }
       ],
       "2026_5201871": [
@@ -366998,7 +366998,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ty Fryfogle",
           "team": "Indiana",
           "year": 2018,
-          "dist": 0.403
+          "dist": 0.404
         },
         {
           "id": "2021_4361492",
@@ -367012,7 +367012,7 @@ const COLLEGE_SCOUTING = {
           "name": "Charles Brown",
           "team": "Texas State",
           "year": 2022,
-          "dist": 0.41
+          "dist": 0.409
         },
         {
           "id": "2015_3135321",
@@ -367574,7 +367574,7 @@ const COLLEGE_SCOUTING = {
           "name": "Devontez Walker",
           "team": "Kent State",
           "year": 2022,
-          "dist": 1.672
+          "dist": 1.671
         },
         {
           "id": "2022_4259597",
@@ -367584,17 +367584,17 @@ const COLLEGE_SCOUTING = {
           "dist": 1.826
         },
         {
-          "id": "2018_4036055",
-          "name": "Maurice Ffrench",
-          "team": "Pittsburgh",
-          "year": 2018,
-          "dist": 1.895
-        },
-        {
           "id": "2026_4869601",
           "name": "Chance Morrow",
           "team": "Buffalo",
           "year": 2026,
+          "dist": 1.895
+        },
+        {
+          "id": "2018_4036055",
+          "name": "Maurice Ffrench",
+          "team": "Pittsburgh",
+          "year": 2018,
           "dist": 1.895
         },
         {
@@ -367609,7 +367609,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jason Brownlee",
           "team": "Southern Miss",
           "year": 2021,
-          "dist": 1.933
+          "dist": 1.932
         },
         {
           "id": "2024_5083068",
@@ -367825,14 +367825,14 @@ const COLLEGE_SCOUTING = {
           "name": "Kyle Williams",
           "team": "UNLV",
           "year": 2021,
-          "dist": 0.837
+          "dist": 0.838
         },
         {
           "id": "2015_518265",
           "name": "Davonte Allen",
           "team": "Marshall",
           "year": 2015,
-          "dist": 0.874
+          "dist": 0.875
         }
       ],
       "2026_5216639": [
@@ -367992,7 +367992,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tim Crawley",
           "team": "San José State",
           "year": 2014,
-          "dist": 0.977
+          "dist": 0.976
         },
         {
           "id": "2022_5081322",
@@ -368006,7 +368006,7 @@ const COLLEGE_SCOUTING = {
           "name": "Collin Johnson",
           "team": "Texas",
           "year": 2019,
-          "dist": 0.992
+          "dist": 0.993
         },
         {
           "id": "2014_500546",
@@ -368092,7 +368092,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tim White",
           "team": "Arizona State",
           "year": 2016,
-          "dist": 0.684
+          "dist": 0.683
         },
         {
           "id": "2020_4427267",
@@ -368150,7 +368150,7 @@ const COLLEGE_SCOUTING = {
           "name": "Xavier Hutchinson",
           "team": "Iowa State",
           "year": 2020,
-          "dist": 0.532
+          "dist": 0.531
         },
         {
           "id": "2025_5078225",
@@ -368204,6 +368204,13 @@ const COLLEGE_SCOUTING = {
           "dist": 0.612
         },
         {
+          "id": "2026_4726152",
+          "name": "Jovanni Bermudez",
+          "team": "Temple",
+          "year": 2026,
+          "dist": 0.74
+        },
+        {
           "id": "2016_3120078",
           "name": "T.L. Ford II",
           "team": "Charlotte",
@@ -368236,7 +368243,7 @@ const COLLEGE_SCOUTING = {
           "name": "Landon Sides",
           "team": "East Carolina",
           "year": 2026,
-          "dist": 0.836
+          "dist": 0.835
         },
         {
           "id": "2016_3916204",
@@ -368250,7 +368257,7 @@ const COLLEGE_SCOUTING = {
           "name": "Chandler Worthy",
           "team": "Troy",
           "year": 2014,
-          "dist": 0.854
+          "dist": 0.855
         },
         {
           "id": "2014_503760",
@@ -368258,13 +368265,6 @@ const COLLEGE_SCOUTING = {
           "team": "Buffalo",
           "year": 2014,
           "dist": 0.862
-        },
-        {
-          "id": "2018_4243168",
-          "name": "K.D. Nixon",
-          "team": "Colorado",
-          "year": 2018,
-          "dist": 0.889
         }
       ],
       "2026_5218787": [
@@ -368322,7 +368322,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jarrin Pierce",
           "team": "Middle Tennessee",
           "year": 2020,
-          "dist": 0.716
+          "dist": 0.715
         },
         {
           "id": "2014_512348",
@@ -368366,7 +368366,7 @@ const COLLEGE_SCOUTING = {
           "name": "DeAndrew White",
           "team": "Alabama",
           "year": 2014,
-          "dist": 0.651
+          "dist": 0.65
         },
         {
           "id": "2026_5159036",
@@ -368380,7 +368380,7 @@ const COLLEGE_SCOUTING = {
           "name": "Aleva Hifo",
           "team": "BYU",
           "year": 2019,
-          "dist": 0.71
+          "dist": 0.709
         },
         {
           "id": "2019_4370797",
@@ -368394,7 +368394,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dillon Bell",
           "team": "Georgia",
           "year": 2024,
-          "dist": 0.763
+          "dist": 0.762
         },
         {
           "id": "2016_534444",
@@ -368445,7 +368445,7 @@ const COLLEGE_SCOUTING = {
           "name": "Marquez Stevenson",
           "team": "Houston",
           "year": 2019,
-          "dist": 0.825
+          "dist": 0.826
         },
         {
           "id": "2019_4371974",
@@ -368561,7 +368561,7 @@ const COLLEGE_SCOUTING = {
           "name": "Hakeem Butler",
           "team": "Iowa State",
           "year": 2018,
-          "dist": 1.707
+          "dist": 1.708
         },
         {
           "id": "2020_4258238",
@@ -368575,7 +368575,7 @@ const COLLEGE_SCOUTING = {
           "name": "Omarion Miller",
           "team": "Colorado",
           "year": 2025,
-          "dist": 2.186
+          "dist": 2.185
         },
         {
           "id": "2025_5069231",
@@ -368589,21 +368589,21 @@ const COLLEGE_SCOUTING = {
           "name": "Bo Melton",
           "team": "Rutgers",
           "year": 2020,
-          "dist": 2.2
+          "dist": 2.199
         },
         {
           "id": "2022_4689650",
           "name": "Trea Shropshire",
           "team": "UAB",
           "year": 2022,
-          "dist": 2.219
+          "dist": 2.218
         },
         {
           "id": "2014_501934",
           "name": "John Harris",
           "team": "Texas",
           "year": 2014,
-          "dist": 2.22
+          "dist": 2.219
         },
         {
           "id": "2015_537313",
@@ -368617,14 +368617,14 @@ const COLLEGE_SCOUTING = {
           "name": "Breshad Perriman",
           "team": "UCF",
           "year": 2014,
-          "dist": 2.362
+          "dist": 2.361
         },
         {
           "id": "2019_4240028",
           "name": "Tamorrion Terry",
           "team": "Florida State",
           "year": 2019,
-          "dist": 2.384
+          "dist": 2.383
         }
       ],
       "2026_5222394": [
@@ -368640,7 +368640,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ernest Calhoun",
           "team": "Kent State",
           "year": 2016,
-          "dist": 0.592
+          "dist": 0.591
         },
         {
           "id": "2018_4038931",
@@ -368654,7 +368654,7 @@ const COLLEGE_SCOUTING = {
           "name": "Cam Vaughn",
           "team": "West Virginia",
           "year": 2025,
-          "dist": 0.802
+          "dist": 0.803
         },
         {
           "id": "2014_517962",
@@ -368689,14 +368689,14 @@ const COLLEGE_SCOUTING = {
           "name": "Brett Eskildsen",
           "team": "Iowa State",
           "year": 2025,
-          "dist": 0.904
+          "dist": 0.905
         },
         {
           "id": "2025_4895711",
           "name": "Chris Reed",
           "team": "Sam Houston",
           "year": 2025,
-          "dist": 0.917
+          "dist": 0.916
         }
       ],
       "2026_5222654": [
@@ -368777,7 +368777,7 @@ const COLLEGE_SCOUTING = {
           "name": "Artavis Scott",
           "team": "Clemson",
           "year": 2016,
-          "dist": 0.519
+          "dist": 0.518
         },
         {
           "id": "2017_3139456",
@@ -368887,6 +368887,13 @@ const COLLEGE_SCOUTING = {
           "dist": 0.664
         },
         {
+          "id": "2026_4726152",
+          "name": "Jovanni Bermudez",
+          "team": "Temple",
+          "year": 2026,
+          "dist": 0.718
+        },
+        {
           "id": "2025_5121601",
           "name": "Hunter Summers",
           "team": "Arkansas State",
@@ -368906,13 +368913,6 @@ const COLLEGE_SCOUTING = {
           "team": "UCF",
           "year": 2025,
           "dist": 0.802
-        },
-        {
-          "id": "2025_4693817",
-          "name": "Micah Davis",
-          "team": "Southern Miss",
-          "year": 2025,
-          "dist": 0.805
         }
       ],
       "2026_5223093": [
@@ -368935,7 +368935,7 @@ const COLLEGE_SCOUTING = {
           "name": "Daewood Davis",
           "team": "Western Kentucky",
           "year": 2021,
-          "dist": 0.436
+          "dist": 0.437
         },
         {
           "id": "2014_552775",
@@ -369028,7 +369028,7 @@ const COLLEGE_SCOUTING = {
           "name": "Marcell Ateman",
           "team": "Oklahoma State",
           "year": 2015,
-          "dist": 0.419
+          "dist": 0.42
         },
         {
           "id": "2019_4241475",
@@ -369056,7 +369056,7 @@ const COLLEGE_SCOUTING = {
           "name": "Yusuf Ali",
           "team": "Middle Tennessee",
           "year": 2020,
-          "dist": 0.585
+          "dist": 0.586
         }
       ],
       "2026_5224355": [
@@ -369128,7 +369128,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jehlani Galloway",
           "team": "Western Michigan",
           "year": 2022,
-          "dist": 0.888
+          "dist": 0.887
         }
       ],
       "2026_5224764": [
@@ -369144,7 +369144,7 @@ const COLLEGE_SCOUTING = {
           "name": "Geremy Davis",
           "team": "UConn",
           "year": 2014,
-          "dist": 0.582
+          "dist": 0.583
         },
         {
           "id": "2020_4242328",
@@ -369186,7 +369186,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ian Strong",
           "team": "Rutgers",
           "year": 2025,
-          "dist": 0.777
+          "dist": 0.778
         },
         {
           "id": "2019_4039468",
@@ -369302,7 +369302,7 @@ const COLLEGE_SCOUTING = {
           "name": "Johnny Johnson III",
           "team": "Oregon",
           "year": 2020,
-          "dist": 0.362
+          "dist": 0.363
         },
         {
           "id": "2019_4569618",
@@ -369432,7 +369432,7 @@ const COLLEGE_SCOUTING = {
           "name": "Mark Pope",
           "team": "Massachusetts",
           "year": 2023,
-          "dist": 0.495
+          "dist": 0.496
         },
         {
           "id": "2026_5157331",
@@ -369484,10 +369484,10 @@ const COLLEGE_SCOUTING = {
           "dist": 0.7
         },
         {
-          "id": "2020_4360073",
-          "name": "Jayshon Jackson",
-          "team": "Cincinnati",
-          "year": 2020,
+          "id": "2026_5295525",
+          "name": "Ben Prosper",
+          "team": "Eastern Michigan",
+          "year": 2026,
           "dist": 0.715
         }
       ],
@@ -369583,14 +369583,14 @@ const COLLEGE_SCOUTING = {
           "name": "Kalib Woods",
           "team": "Florida Atlantic",
           "year": 2016,
-          "dist": 1.01
+          "dist": 1.009
         },
         {
           "id": "2025_4869730",
           "name": "Nik McMillan",
           "team": "Buffalo",
           "year": 2025,
-          "dist": 1.121
+          "dist": 1.12
         },
         {
           "id": "2014_503821",
@@ -369611,7 +369611,7 @@ const COLLEGE_SCOUTING = {
           "name": "Trent Walker",
           "team": "Oregon State",
           "year": 2025,
-          "dist": 1.559
+          "dist": 1.56
         },
         {
           "id": "2016_531956",
@@ -369641,7 +369641,7 @@ const COLLEGE_SCOUTING = {
           "name": "Shelton Gibson",
           "team": "West Virginia",
           "year": 2015,
-          "dist": 0.533
+          "dist": 0.534
         },
         {
           "id": "2025_4870850",
@@ -369683,7 +369683,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jester Weah",
           "team": "Pittsburgh",
           "year": 2017,
-          "dist": 1.101
+          "dist": 1.1
         },
         {
           "id": "2016_550190",
@@ -369697,7 +369697,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tamorrion Terry",
           "team": "Florida State",
           "year": 2018,
-          "dist": 1.142
+          "dist": 1.143
         },
         {
           "id": "2022_4570188",
@@ -369713,7 +369713,7 @@ const COLLEGE_SCOUTING = {
           "name": "Will Sheppard",
           "team": "Vanderbilt",
           "year": 2022,
-          "dist": 0.443
+          "dist": 0.442
         },
         {
           "id": "2022_4875687",
@@ -369734,7 +369734,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jovon Durante",
           "team": "Florida Atlantic",
           "year": 2018,
-          "dist": 0.729
+          "dist": 0.728
         },
         {
           "id": "2018_3126080",
@@ -369813,7 +369813,7 @@ const COLLEGE_SCOUTING = {
           "name": "Brisly Estime",
           "team": "Syracuse",
           "year": 2013,
-          "dist": 0.415
+          "dist": 0.416
         },
         {
           "id": "2019_4569138",
@@ -369841,7 +369841,7 @@ const COLLEGE_SCOUTING = {
           "name": "Taylor Oldham",
           "team": "UCF",
           "year": 2016,
-          "dist": 0.459
+          "dist": 0.458
         },
         {
           "id": "2014_536854",
@@ -369929,7 +369929,7 @@ const COLLEGE_SCOUTING = {
           "name": "Brandon Reilly",
           "team": "Nebraska",
           "year": 2015,
-          "dist": 0.496
+          "dist": 0.495
         },
         {
           "id": "2020_4567033",
@@ -370259,7 +370259,7 @@ const COLLEGE_SCOUTING = {
           "name": "Chris Taylor",
           "team": "Duke",
           "year": 2018,
-          "dist": 0.482
+          "dist": 0.483
         },
         {
           "id": "2026_4896389",
@@ -370324,7 +370324,7 @@ const COLLEGE_SCOUTING = {
           "name": "Carl Chester",
           "team": "Tulsa",
           "year": 2023,
-          "dist": 0.594
+          "dist": 0.593
         },
         {
           "id": "2026_4871040",
@@ -370410,7 +370410,7 @@ const COLLEGE_SCOUTING = {
           "name": "Cade McDonald",
           "team": "Miami (OH)",
           "year": 2023,
-          "dist": 0.572
+          "dist": 0.571
         },
         {
           "id": "2026_5125593",
@@ -370436,67 +370436,67 @@ const COLLEGE_SCOUTING = {
           "dist": 1.553
         },
         {
-          "id": "2020_4048725",
-          "name": "Ayden Eberhardt",
-          "team": "Wyoming",
-          "year": 2020,
-          "dist": 1.583
-        },
-        {
-          "id": "2020_4259976",
-          "name": "Josh Ali",
-          "team": "Kentucky",
-          "year": 2020,
-          "dist": 1.717
+          "id": "2016_551567",
+          "name": "Ricky Jeune",
+          "team": "Georgia Tech",
+          "year": 2016,
+          "dist": 1.961
         },
         {
           "id": "2021_4568419",
           "name": "Khaleb Hood",
           "team": "Georgia Southern",
           "year": 2021,
-          "dist": 2.029
+          "dist": 2.057
         },
         {
-          "id": "2014_512954",
-          "name": "Zach Walker",
-          "team": "Georgia Southern",
-          "year": 2014,
-          "dist": 2.062
-        },
-        {
-          "id": "2025_5122076",
-          "name": "Cole Weaver",
-          "team": "Miami (OH)",
-          "year": 2025,
-          "dist": 2.531
-        },
-        {
-          "id": "2016_536320",
-          "name": "Al Riles",
-          "team": "Louisiana",
-          "year": 2016,
-          "dist": 2.544
-        },
-        {
-          "id": "2025_4685307",
-          "name": "Kevin Coleman Jr.",
-          "team": "Missouri",
-          "year": 2025,
-          "dist": 2.564
+          "id": "2020_4259976",
+          "name": "Josh Ali",
+          "team": "Kentucky",
+          "year": 2020,
+          "dist": 2.093
         },
         {
           "id": "2023_4696147",
           "name": "Kenneth Womack",
           "team": "Western Michigan",
           "year": 2023,
-          "dist": 2.569
+          "dist": 2.221
+        },
+        {
+          "id": "2014_512954",
+          "name": "Zach Walker",
+          "team": "Georgia Southern",
+          "year": 2014,
+          "dist": 2.226
+        },
+        {
+          "id": "2013_530645",
+          "name": "Ashton Broyld",
+          "team": "Syracuse",
+          "year": 2013,
+          "dist": 2.33
+        },
+        {
+          "id": "2020_4048725",
+          "name": "Ayden Eberhardt",
+          "team": "Wyoming",
+          "year": 2020,
+          "dist": 2.464
+        },
+        {
+          "id": "2024_4571563",
+          "name": "Sean Atkins",
+          "team": "South Florida",
+          "year": 2024,
+          "dist": 2.5
         },
         {
           "id": "2018_3915894",
           "name": "Warren Redix",
           "team": "UTEP",
           "year": 2018,
-          "dist": 2.591
+          "dist": 2.61
         }
       ],
       "2026_5265446": [
@@ -370505,7 +370505,7 @@ const COLLEGE_SCOUTING = {
           "name": "Malik Knowles",
           "team": "Kansas State",
           "year": 2019,
-          "dist": 0.222
+          "dist": 0.221
         },
         {
           "id": "2016_3139522",
@@ -370577,7 +370577,7 @@ const COLLEGE_SCOUTING = {
           "name": "James Washington",
           "team": "Oklahoma State",
           "year": 2016,
-          "dist": 0.537
+          "dist": 0.538
         },
         {
           "id": "2015_3128451",
@@ -370591,7 +370591,7 @@ const COLLEGE_SCOUTING = {
           "name": "Eric McAlister",
           "team": "TCU",
           "year": 2025,
-          "dist": 0.575
+          "dist": 0.576
         },
         {
           "id": "2018_4052236",
@@ -370649,7 +370649,7 @@ const COLLEGE_SCOUTING = {
           "name": "Simi Fehoko",
           "team": "Stanford",
           "year": 2020,
-          "dist": 1.007
+          "dist": 1.006
         },
         {
           "id": "2018_3139522",
@@ -370670,7 +370670,7 @@ const COLLEGE_SCOUTING = {
           "name": "James Gardner",
           "team": "Miami (OH)",
           "year": 2017,
-          "dist": 1.266
+          "dist": 1.267
         },
         {
           "id": "2018_4241723",
@@ -370800,7 +370800,7 @@ const COLLEGE_SCOUTING = {
           "name": "Evan Stewart",
           "team": "Texas A&M",
           "year": 2022,
-          "dist": 0.707
+          "dist": 0.706
         },
         {
           "id": "2016_3917787",
@@ -371095,7 +371095,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jonah Morris",
           "team": "Akron",
           "year": 2018,
-          "dist": 0.452
+          "dist": 0.451
         },
         {
           "id": "2020_4390104",
@@ -371137,7 +371137,7 @@ const COLLEGE_SCOUTING = {
           "name": "Rico Flores",
           "team": "UCLA",
           "year": 2025,
-          "dist": 0.615
+          "dist": 0.616
         },
         {
           "id": "2025_5120454",
@@ -371202,7 +371202,7 @@ const COLLEGE_SCOUTING = {
           "name": "Cam Thompson",
           "team": "Northern Illinois",
           "year": 2024,
-          "dist": 0.523
+          "dist": 0.522
         },
         {
           "id": "2019_4362310",
@@ -371253,7 +371253,7 @@ const COLLEGE_SCOUTING = {
           "name": "Aregeros Turner",
           "team": "Northern Illinois",
           "year": 2014,
-          "dist": 0.386
+          "dist": 0.385
         },
         {
           "id": "2024_5079691",
@@ -371346,14 +371346,14 @@ const COLLEGE_SCOUTING = {
           "name": "Ardell Banks",
           "team": "Kent State",
           "year": 2026,
-          "dist": 1.044
+          "dist": 1.043
         },
         {
           "id": "2026_4685510",
           "name": "Kaden Saunders",
           "team": "Southern Miss",
           "year": 2026,
-          "dist": 1.061
+          "dist": 1.062
         },
         {
           "id": "2019_4257370",
@@ -371441,7 +371441,7 @@ const COLLEGE_SCOUTING = {
           "name": "Stephon Robinson",
           "team": "Kansas",
           "year": 2018,
-          "dist": 0.634
+          "dist": 0.633
         },
         {
           "id": "2026_5294137",
@@ -371469,7 +371469,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ronnie Moore",
           "team": "Bowling Green",
           "year": 2016,
-          "dist": 0.689
+          "dist": 0.688
         },
         {
           "id": "2026_4680024",
@@ -371513,7 +371513,7 @@ const COLLEGE_SCOUTING = {
           "name": "Herb Waters",
           "team": "Miami",
           "year": 2015,
-          "dist": 0.4
+          "dist": 0.399
         },
         {
           "id": "2021_4361332",
@@ -371569,7 +371569,7 @@ const COLLEGE_SCOUTING = {
           "name": "Deshon Foxx",
           "team": "UConn",
           "year": 2013,
-          "dist": 0.565
+          "dist": 0.566
         },
         {
           "id": "2018_3918251",
@@ -371585,7 +371585,7 @@ const COLLEGE_SCOUTING = {
           "name": "Harold Mack",
           "team": "Eastern Michigan",
           "year": 2025,
-          "dist": 0.664
+          "dist": 0.665
         },
         {
           "id": "2021_4258586",
@@ -371671,7 +371671,7 @@ const COLLEGE_SCOUTING = {
           "name": "Cole Weaver",
           "team": "Miami (OH)",
           "year": 2025,
-          "dist": 1.086
+          "dist": 1.087
         },
         {
           "id": "2014_3116742",
@@ -371713,7 +371713,7 @@ const COLLEGE_SCOUTING = {
           "name": "Chauncy Cobb",
           "team": "Arkansas State",
           "year": 2025,
-          "dist": 1.341
+          "dist": 1.342
         },
         {
           "id": "2019_4372063",
@@ -371729,7 +371729,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ahmarean Brown",
           "team": "Georgia Tech",
           "year": 2019,
-          "dist": 1.387
+          "dist": 1.386
         },
         {
           "id": "2026_5075529",
@@ -371750,7 +371750,7 @@ const COLLEGE_SCOUTING = {
           "name": "Cam Vaughn",
           "team": "West Virginia",
           "year": 2025,
-          "dist": 1.617
+          "dist": 1.616
         },
         {
           "id": "2014_559754",
@@ -371771,7 +371771,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dylan Gary",
           "team": "Kennesaw State",
           "year": 2026,
-          "dist": 1.863
+          "dist": 1.864
         },
         {
           "id": "2016_536075",
@@ -371792,7 +371792,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dashawn Martin",
           "team": "Virginia",
           "year": 2026,
-          "dist": 1.922
+          "dist": 1.921
         }
       ],
       "2026_5296150": [
@@ -371843,7 +371843,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kevin Concepcion",
           "team": "NC State",
           "year": 2023,
-          "dist": 1.675
+          "dist": 1.674
         },
         {
           "id": "2014_550737",
@@ -371901,7 +371901,7 @@ const COLLEGE_SCOUTING = {
           "name": "Josh Palmer",
           "team": "Tennessee",
           "year": 2018,
-          "dist": 0.857
+          "dist": 0.856
         },
         {
           "id": "2015_3915097",
@@ -371922,7 +371922,7 @@ const COLLEGE_SCOUTING = {
           "name": "Chase Cochran",
           "team": "Ohio",
           "year": 2014,
-          "dist": 0.889
+          "dist": 0.888
         },
         {
           "id": "2020_4689650",
@@ -372096,14 +372096,14 @@ const COLLEGE_SCOUTING = {
           "name": "Sean Modster",
           "team": "Boise State",
           "year": 2018,
-          "dist": 0.579
+          "dist": 0.578
         },
         {
           "id": "2026_5122082",
           "name": "Justin Stevenson",
           "team": "North Texas",
           "year": 2026,
-          "dist": 0.599
+          "dist": 0.598
         },
         {
           "id": "2015_552775",
@@ -372433,7 +372433,7 @@ const COLLEGE_SCOUTING = {
           "name": "John Ursua",
           "team": "Hawai'i",
           "year": 2016,
-          "dist": 0.593
+          "dist": 0.594
         },
         {
           "id": "2019_4243001",
@@ -372449,7 +372449,7 @@ const COLLEGE_SCOUTING = {
           "name": "Darius Slayton",
           "team": "Auburn",
           "year": 2017,
-          "dist": 0.786
+          "dist": 0.787
         },
         {
           "id": "2026_5079499",
@@ -372484,7 +372484,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jaylon Hawkins",
           "team": "San Diego State",
           "year": 2026,
-          "dist": 1.076
+          "dist": 1.075
         },
         {
           "id": "2026_5102556",
@@ -372521,7 +372521,7 @@ const COLLEGE_SCOUTING = {
           "name": "Miles Burris",
           "team": "Akron",
           "year": 2026,
-          "dist": 0.352
+          "dist": 0.353
         },
         {
           "id": "2025_4602966",
@@ -372649,7 +372649,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jaylan Sanchez",
           "team": "James Madison",
           "year": 2025,
-          "dist": 0.647
+          "dist": 0.646
         },
         {
           "id": "2018_3917634",
@@ -372672,7 +372672,7 @@ const COLLEGE_SCOUTING = {
           "name": "Qian Magwood",
           "team": "Ball State",
           "year": 2025,
-          "dist": 0.652
+          "dist": 0.651
         },
         {
           "id": "2018_3918324",
@@ -372700,14 +372700,14 @@ const COLLEGE_SCOUTING = {
           "name": "Danzel McKinley-Lewis",
           "team": "Toledo",
           "year": 2019,
-          "dist": 0.798
+          "dist": 0.797
         },
         {
           "id": "2017_4039043",
           "name": "Collin Johnson",
           "team": "Texas",
           "year": 2017,
-          "dist": 0.822
+          "dist": 0.823
         },
         {
           "id": "2014_517317",
@@ -372744,14 +372744,14 @@ const COLLEGE_SCOUTING = {
           "name": "Corey Willis",
           "team": "Central Michigan",
           "year": 2015,
-          "dist": 0.368
+          "dist": 0.367
         },
         {
           "id": "2026_5146728",
           "name": "Koby Young",
           "team": "Houston",
           "year": 2026,
-          "dist": 0.391
+          "dist": 0.39
         },
         {
           "id": "2015_552937",
@@ -372786,7 +372786,7 @@ const COLLEGE_SCOUTING = {
           "name": "Marshaun Brown",
           "team": "Nevada",
           "year": 2026,
-          "dist": 0.47
+          "dist": 0.471
         },
         {
           "id": "2026_5201871",
@@ -373148,7 +373148,7 @@ const COLLEGE_SCOUTING = {
           "name": "Damarcus Thomas",
           "team": "South Alabama",
           "year": 2022,
-          "dist": 0.472
+          "dist": 0.473
         },
         {
           "id": "2021_4430539",
@@ -373213,7 +373213,7 @@ const COLLEGE_SCOUTING = {
           "name": "Keanu Hill",
           "team": "BYU",
           "year": 2021,
-          "dist": 1.051
+          "dist": 1.052
         },
         {
           "id": "2023_4432731",
@@ -373594,7 +373594,7 @@ const COLLEGE_SCOUTING = {
           "name": "Billy Freeman",
           "team": "San José State",
           "year": 2013,
-          "dist": 0.606
+          "dist": 0.605
         }
       ],
       "2023_4369864": [
@@ -373980,13 +373980,6 @@ const COLLEGE_SCOUTING = {
           "dist": 0.688
         },
         {
-          "id": "2026_5080547",
-          "name": "Peter Clarke",
-          "team": "Temple",
-          "year": 2026,
-          "dist": 0.698
-        },
-        {
           "id": "2018_4040980",
           "name": "Irv Smith Jr.",
           "team": "Alabama",
@@ -374013,6 +374006,13 @@ const COLLEGE_SCOUTING = {
           "team": "Northern Illinois",
           "year": 2019,
           "dist": 0.791
+        },
+        {
+          "id": "2026_5080547",
+          "name": "Peter Clarke",
+          "team": "Temple",
+          "year": 2026,
+          "dist": 0.813
         },
         {
           "id": "2019_4361796",
@@ -374042,7 +374042,7 @@ const COLLEGE_SCOUTING = {
           "name": "Eli Finley",
           "team": "Louisiana Tech",
           "year": 2024,
-          "dist": 0.451
+          "dist": 0.45
         },
         {
           "id": "2024_4922996",
@@ -374149,7 +374149,7 @@ const COLLEGE_SCOUTING = {
           "name": "Will Kacmarek",
           "team": "Ohio",
           "year": 2022,
-          "dist": 0.625
+          "dist": 0.626
         },
         {
           "id": "2024_5219835",
@@ -374242,7 +374242,7 @@ const COLLEGE_SCOUTING = {
           "name": "Johnny Langan",
           "team": "Rutgers",
           "year": 2022,
-          "dist": 1.02
+          "dist": 1.019
         }
       ],
       "2023_4429914": [
@@ -374330,7 +374330,7 @@ const COLLEGE_SCOUTING = {
           "name": "Mason Fairchild",
           "team": "Kansas",
           "year": 2022,
-          "dist": 0.614
+          "dist": 0.615
         },
         {
           "id": "2022_4360290",
@@ -374890,7 +374890,7 @@ const COLLEGE_SCOUTING = {
           "name": "Christian Sims",
           "team": "Bowling Green",
           "year": 2022,
-          "dist": 1.478
+          "dist": 1.479
         }
       ],
       "2023_4432327": [
@@ -374899,7 +374899,7 @@ const COLLEGE_SCOUTING = {
           "name": "Andrew Rappleyea",
           "team": "Penn State",
           "year": 2025,
-          "dist": 0.487
+          "dist": 0.486
         },
         {
           "id": "2017_3116573",
@@ -375726,7 +375726,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kiel Pollard",
           "team": "South Carolina",
           "year": 2018,
-          "dist": 0.475
+          "dist": 0.476
         },
         {
           "id": "2022_4429466",
@@ -375935,7 +375935,7 @@ const COLLEGE_SCOUTING = {
           "name": "Darnell Washington",
           "team": "Georgia",
           "year": 2020,
-          "dist": 1.28
+          "dist": 1.279
         },
         {
           "id": "2022_4239691",
@@ -376137,7 +376137,7 @@ const COLLEGE_SCOUTING = {
           "name": "Cole Turner",
           "team": "Nevada",
           "year": 2021,
-          "dist": 2.066
+          "dist": 2.067
         },
         {
           "id": "2019_4035593",
@@ -376186,7 +376186,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jamari Johnson",
           "team": "Oregon",
           "year": 2026,
-          "dist": 2.443
+          "dist": 2.444
         }
       ],
       "2023_4611516": [
@@ -377396,7 +377396,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jordan Leggett",
           "team": "Clemson",
           "year": 2015,
-          "dist": 0.78
+          "dist": 0.779
         },
         {
           "id": "2021_4360086",
@@ -377828,7 +377828,7 @@ const COLLEGE_SCOUTING = {
           "name": "Brevin Jordan",
           "team": "Miami",
           "year": 2018,
-          "dist": 1.353
+          "dist": 1.352
         },
         {
           "id": "2024_4431045",
@@ -378188,7 +378188,7 @@ const COLLEGE_SCOUTING = {
           "name": "Clark Mussman",
           "team": "Western Michigan",
           "year": 2013,
-          "dist": 0.662
+          "dist": 0.661
         },
         {
           "id": "2022_4426902",
@@ -378562,7 +378562,7 @@ const COLLEGE_SCOUTING = {
           "name": "Josiah Miamen",
           "team": "Florida International",
           "year": 2023,
-          "dist": 0.917
+          "dist": 0.916
         }
       ],
       "2023_4872997": [
@@ -379117,7 +379117,7 @@ const COLLEGE_SCOUTING = {
           "name": "Will Wallace",
           "team": "Tulane",
           "year": 2021,
-          "dist": 0.619
+          "dist": 0.62
         },
         {
           "id": "2013_505999",
@@ -379600,7 +379600,7 @@ const COLLEGE_SCOUTING = {
           "name": "D'Andre Rogers",
           "team": "TCU",
           "year": 2025,
-          "dist": 0.733
+          "dist": 0.734
         },
         {
           "id": "2022_4583089",
@@ -379733,6 +379733,13 @@ const COLLEGE_SCOUTING = {
           "dist": 0.678
         },
         {
+          "id": "2026_5080547",
+          "name": "Peter Clarke",
+          "team": "Temple",
+          "year": 2026,
+          "dist": 0.683
+        },
+        {
           "id": "2014_546471",
           "name": "Austin Hooper",
           "team": "Stanford",
@@ -379745,13 +379752,6 @@ const COLLEGE_SCOUTING = {
           "team": "Oregon State",
           "year": 2021,
           "dist": 0.728
-        },
-        {
-          "id": "2026_5080547",
-          "name": "Peter Clarke",
-          "team": "Temple",
-          "year": 2026,
-          "dist": 0.74
         },
         {
           "id": "2026_4804882",
@@ -379923,7 +379923,7 @@ const COLLEGE_SCOUTING = {
           "name": "Scott Orndoff",
           "team": "Pittsburgh",
           "year": 2015,
-          "dist": 1.464
+          "dist": 1.465
         },
         {
           "id": "2019_4361014",
@@ -380427,7 +380427,7 @@ const COLLEGE_SCOUTING = {
           "name": "Marshon Ford",
           "team": "Louisville",
           "year": 2019,
-          "dist": 0.871
+          "dist": 0.872
         },
         {
           "id": "2020_4373177",
@@ -380954,7 +380954,7 @@ const COLLEGE_SCOUTING = {
           "name": "Christian Ross",
           "team": "Memphis",
           "year": 2025,
-          "dist": 0.389
+          "dist": 0.39
         },
         {
           "id": "2016_3122920",
@@ -381479,7 +381479,7 @@ const COLLEGE_SCOUTING = {
           "name": "Barrett Burns",
           "team": "App State",
           "year": 2015,
-          "dist": 1.035
+          "dist": 1.034
         },
         {
           "id": "2019_4373177",
@@ -381976,7 +381976,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dan Buschman",
           "team": "Eastern Michigan",
           "year": 2016,
-          "dist": 0.47
+          "dist": 0.471
         },
         {
           "id": "2025_5197034",
@@ -382473,7 +382473,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jason Croom",
           "team": "Tennessee",
           "year": 2016,
-          "dist": 0.568
+          "dist": 0.569
         },
         {
           "id": "2016_3122920",
@@ -382782,7 +382782,7 @@ const COLLEGE_SCOUTING = {
           "name": "Louis Hansen",
           "team": "UConn",
           "year": 2024,
-          "dist": 0.67
+          "dist": 0.671
         },
         {
           "id": "2014_514185",
@@ -383005,7 +383005,7 @@ const COLLEGE_SCOUTING = {
           "name": "Bryson Nesbit",
           "team": "North Carolina",
           "year": 2021,
-          "dist": 2.03
+          "dist": 2.029
         },
         {
           "id": "2021_4426857",
@@ -383214,7 +383214,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jahleel Billingsley",
           "team": "Alabama",
           "year": 2020,
-          "dist": 0.847
+          "dist": 0.848
         },
         {
           "id": "2024_4430022",
@@ -383539,7 +383539,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jarred Gipson",
           "team": "Nevada",
           "year": 2014,
-          "dist": 0.37
+          "dist": 0.371
         },
         {
           "id": "2019_4039115",
@@ -383674,7 +383674,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tanner McLachlan",
           "team": "Arizona",
           "year": 2022,
-          "dist": 1.098
+          "dist": 1.097
         }
       ],
       "2024_4804882": [
@@ -383739,7 +383739,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jamal Turner",
           "team": "Toledo",
           "year": 2022,
-          "dist": 0.914
+          "dist": 0.915
         },
         {
           "id": "2015_3125991",
@@ -383790,7 +383790,7 @@ const COLLEGE_SCOUTING = {
           "name": "Xavier Grimble",
           "team": "USC",
           "year": 2013,
-          "dist": 0.645
+          "dist": 0.644
         },
         {
           "id": "2013_481081",
@@ -384410,7 +384410,7 @@ const COLLEGE_SCOUTING = {
           "name": "Marshon Ford",
           "team": "Louisville",
           "year": 2020,
-          "dist": 0.541
+          "dist": 0.542
         },
         {
           "id": "2015_3125991",
@@ -384733,7 +384733,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tyler Neville",
           "team": "Virginia",
           "year": 2024,
-          "dist": 1.07
+          "dist": 1.071
         },
         {
           "id": "2024_4433921",
@@ -385137,7 +385137,7 @@ const COLLEGE_SCOUTING = {
           "name": "Billy Freeman",
           "team": "San José State",
           "year": 2013,
-          "dist": 0.397
+          "dist": 0.398
         },
         {
           "id": "2015_502870",
@@ -385562,7 +385562,7 @@ const COLLEGE_SCOUTING = {
           "name": "George Kittle",
           "team": "Iowa",
           "year": 2015,
-          "dist": 1.486
+          "dist": 1.485
         },
         {
           "id": "2022_4430684",
@@ -385778,7 +385778,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dominick Mazotti",
           "team": "San José State",
           "year": 2023,
-          "dist": 0.451
+          "dist": 0.45
         },
         {
           "id": "2021_4035573",
@@ -386663,7 +386663,7 @@ const COLLEGE_SCOUTING = {
           "name": "Leonard Taylor",
           "team": "Cincinnati",
           "year": 2020,
-          "dist": 0.474
+          "dist": 0.473
         },
         {
           "id": "2013_500255",
@@ -386814,7 +386814,7 @@ const COLLEGE_SCOUTING = {
           "name": "Chris Corbo",
           "team": "Georgia Tech",
           "year": 2026,
-          "dist": 0.9
+          "dist": 0.901
         },
         {
           "id": "2019_4241954",
@@ -387253,7 +387253,7 @@ const COLLEGE_SCOUTING = {
           "name": "Alex Bauman",
           "team": "Miami",
           "year": 2025,
-          "dist": 0.654
+          "dist": 0.655
         },
         {
           "id": "2021_4037532",
@@ -387678,7 +387678,7 @@ const COLLEGE_SCOUTING = {
           "name": "Clint Walker",
           "team": "Buffalo",
           "year": 2026,
-          "dist": 1.297
+          "dist": 1.298
         },
         {
           "id": "2025_4877733",
@@ -387692,7 +387692,7 @@ const COLLEGE_SCOUTING = {
           "name": "Daniel Bellinger",
           "team": "San Diego State",
           "year": 2021,
-          "dist": 1.432
+          "dist": 1.433
         },
         {
           "id": "2022_4426952",
@@ -387829,7 +387829,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jayvontay Conner",
           "team": "Vanderbilt",
           "year": 2026,
-          "dist": 0.483
+          "dist": 0.482
         },
         {
           "id": "2022_4430166",
@@ -388066,7 +388066,7 @@ const COLLEGE_SCOUTING = {
           "name": "Andrew Price",
           "team": "UNLV",
           "year": 2015,
-          "dist": 0.672
+          "dist": 0.671
         }
       ],
       "2025_4749402": [
@@ -388089,7 +388089,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tyreese Russell",
           "team": "Eastern Michigan",
           "year": 2013,
-          "dist": 1.216
+          "dist": 1.215
         },
         {
           "id": "2015_546731",
@@ -388600,7 +388600,7 @@ const COLLEGE_SCOUTING = {
           "name": "Broc Lane",
           "team": "Utah State",
           "year": 2025,
-          "dist": 0.654
+          "dist": 0.655
         },
         {
           "id": "2023_4361714",
@@ -388967,7 +388967,7 @@ const COLLEGE_SCOUTING = {
           "name": "Josh Harshman",
           "team": "Wyoming",
           "year": 2019,
-          "dist": 0.923
+          "dist": 0.922
         },
         {
           "id": "2023_4430684",
@@ -389074,7 +389074,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dae'Quan Wright",
           "team": "Ole Miss",
           "year": 2024,
-          "dist": 0.72
+          "dist": 0.721
         }
       ],
       "2025_4869745": [
@@ -389320,7 +389320,7 @@ const COLLEGE_SCOUTING = {
           "name": "Brant Kuithe",
           "team": "Utah",
           "year": 2022,
-          "dist": 5.117
+          "dist": 5.116
         },
         {
           "id": "2020_4360248",
@@ -389413,7 +389413,7 @@ const COLLEGE_SCOUTING = {
           "name": "Rivaldo Fairweather",
           "team": "Florida International",
           "year": 2021,
-          "dist": 1.886
+          "dist": 1.887
         },
         {
           "id": "2022_4385055",
@@ -389608,7 +389608,7 @@ const COLLEGE_SCOUTING = {
           "name": "Josh Whyle",
           "team": "Cincinnati",
           "year": 2022,
-          "dist": 1.076
+          "dist": 1.077
         },
         {
           "id": "2023_4361100",
@@ -389650,7 +389650,7 @@ const COLLEGE_SCOUTING = {
           "name": "Mason Taylor",
           "team": "LSU",
           "year": 2023,
-          "dist": 1.39
+          "dist": 1.391
         }
       ],
       "2025_4871003": [
@@ -389666,7 +389666,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jake Overman",
           "team": "Pittsburgh",
           "year": 2024,
-          "dist": 0.389
+          "dist": 0.39
         },
         {
           "id": "2015_545553",
@@ -389989,7 +389989,7 @@ const COLLEGE_SCOUTING = {
           "name": "Marcus Baugh",
           "team": "Ohio State",
           "year": 2016,
-          "dist": 0.625
+          "dist": 0.626
         },
         {
           "id": "2026_5209334",
@@ -390451,7 +390451,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kendall Karr",
           "team": "Coastal Carolina",
           "year": 2023,
-          "dist": 0.487
+          "dist": 0.486
         },
         {
           "id": "2019_3916588",
@@ -390658,7 +390658,7 @@ const COLLEGE_SCOUTING = {
           "name": "Christopher Herndon IV",
           "team": "Miami",
           "year": 2017,
-          "dist": 1.483
+          "dist": 1.484
         }
       ],
       "2025_4910711": [
@@ -391299,7 +391299,7 @@ const COLLEGE_SCOUTING = {
           "name": "Hunter Tipton",
           "team": "Middle Tennessee",
           "year": 2025,
-          "dist": 0.674
+          "dist": 0.673
         },
         {
           "id": "2018_4361087",
@@ -391594,7 +391594,7 @@ const COLLEGE_SCOUTING = {
           "name": "Blake Bosma",
           "team": "Western Michigan",
           "year": 2023,
-          "dist": 1.481
+          "dist": 1.482
         }
       ],
       "2025_5080888": [
@@ -391954,7 +391954,7 @@ const COLLEGE_SCOUTING = {
           "name": "Elijah Mojarro",
           "team": "Rice",
           "year": 2024,
-          "dist": 0.707
+          "dist": 0.708
         }
       ],
       "2025_5083041": [
@@ -392035,7 +392035,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jermaine Terry II",
           "team": "Oregon State",
           "year": 2024,
-          "dist": 1.59
+          "dist": 1.589
         },
         {
           "id": "2022_4605858",
@@ -392725,7 +392725,7 @@ const COLLEGE_SCOUTING = {
           "name": "Marcus Williams",
           "team": "New Mexico",
           "year": 2019,
-          "dist": 1.543
+          "dist": 1.544
         },
         {
           "id": "2023_4838696",
@@ -392906,7 +392906,7 @@ const COLLEGE_SCOUTING = {
           "name": "Pat Freiermuth",
           "team": "Penn State",
           "year": 2018,
-          "dist": 1.023
+          "dist": 1.022
         },
         {
           "id": "2016_547868",
@@ -393034,7 +393034,7 @@ const COLLEGE_SCOUTING = {
           "name": "David Njoku",
           "team": "Miami",
           "year": 2015,
-          "dist": 0.906
+          "dist": 0.907
         }
       ],
       "2025_5138451": [
@@ -393345,7 +393345,7 @@ const COLLEGE_SCOUTING = {
           "name": "Casey Pierce",
           "team": "Kent State",
           "year": 2013,
-          "dist": 2.009
+          "dist": 2.008
         },
         {
           "id": "2013_530747",
@@ -393373,7 +393373,7 @@ const COLLEGE_SCOUTING = {
           "name": "Mike McFarland",
           "team": "South Florida",
           "year": 2013,
-          "dist": 2.297
+          "dist": 2.296
         },
         {
           "id": "2013_513064",
@@ -393387,7 +393387,7 @@ const COLLEGE_SCOUTING = {
           "name": "Matt Lauter",
           "team": "Boise State",
           "year": 2024,
-          "dist": 2.505
+          "dist": 2.504
         },
         {
           "id": "2019_3914151",
@@ -393452,7 +393452,7 @@ const COLLEGE_SCOUTING = {
           "name": "Hunter Bryant",
           "team": "Washington",
           "year": 2019,
-          "dist": 1.719
+          "dist": 1.72
         },
         {
           "id": "2017_3924365",
@@ -393531,7 +393531,7 @@ const COLLEGE_SCOUTING = {
           "name": "Steven Scheu",
           "team": "Vanderbilt",
           "year": 2015,
-          "dist": 1.205
+          "dist": 1.204
         },
         {
           "id": "2022_4568450",
@@ -394151,7 +394151,7 @@ const COLLEGE_SCOUTING = {
           "name": "Decker DeGraaf",
           "team": "Washington",
           "year": 2025,
-          "dist": 0.674
+          "dist": 0.673
         },
         {
           "id": "2016_549806",
@@ -394994,7 +394994,7 @@ const COLLEGE_SCOUTING = {
           "name": "Amir Jackson",
           "team": "Florida",
           "year": 2026,
-          "dist": 0.788
+          "dist": 0.787
         },
         {
           "id": "2025_4890373",
@@ -395512,7 +395512,7 @@ const COLLEGE_SCOUTING = {
           "name": "Pat Freiermuth",
           "team": "Penn State",
           "year": 2018,
-          "dist": 2.142
+          "dist": 2.141
         },
         {
           "id": "2026_5092954",
@@ -396202,7 +396202,7 @@ const COLLEGE_SCOUTING = {
           "name": "Mitchell Brinkman",
           "team": "South Florida",
           "year": 2020,
-          "dist": 0.589
+          "dist": 0.588
         }
       ],
       "2026_4870874": [
@@ -396376,7 +396376,7 @@ const COLLEGE_SCOUTING = {
           "name": "Cole Turner",
           "team": "Nevada",
           "year": 2020,
-          "dist": 1.776
+          "dist": 1.775
         },
         {
           "id": "2013_483900",
@@ -396599,7 +396599,7 @@ const COLLEGE_SCOUTING = {
           "name": "Alec Bloom",
           "team": "UConn",
           "year": 2015,
-          "dist": 0.572
+          "dist": 0.573
         },
         {
           "id": "2022_4430802",
@@ -396894,7 +396894,7 @@ const COLLEGE_SCOUTING = {
           "name": "R.J. Maryland",
           "team": "SMU",
           "year": 2025,
-          "dist": 0.483
+          "dist": 0.482
         },
         {
           "id": "2025_5121720",
@@ -396959,7 +396959,7 @@ const COLLEGE_SCOUTING = {
           "name": "Lawrence White",
           "team": "Texas State",
           "year": 2015,
-          "dist": 0.776
+          "dist": 0.775
         },
         {
           "id": "2023_4372741",
@@ -397124,7 +397124,7 @@ const COLLEGE_SCOUTING = {
           "name": "Sean McQuillan",
           "team": "UConn",
           "year": 2014,
-          "dist": 0.516
+          "dist": 0.517
         },
         {
           "id": "2022_4426367",
@@ -397391,7 +397391,7 @@ const COLLEGE_SCOUTING = {
           "name": "Patrick Overmyer",
           "team": "UTSA",
           "year": 2025,
-          "dist": 1.304
+          "dist": 1.305
         },
         {
           "id": "2021_4239135",
@@ -397507,70 +397507,70 @@ const COLLEGE_SCOUTING = {
           "name": "Will Mallory",
           "team": "Miami",
           "year": 2022,
-          "dist": 0.519
-        },
-        {
-          "id": "2023_4427164",
-          "name": "Mason Fairchild",
-          "team": "Kansas",
-          "year": 2023,
-          "dist": 0.698
-        },
-        {
-          "id": "2023_5085189",
-          "name": "Jack Endries",
-          "team": "California",
-          "year": 2023,
-          "dist": 0.74
-        },
-        {
-          "id": "2015_3125404",
-          "name": "Jacob Hollister",
-          "team": "Wyoming",
-          "year": 2015,
-          "dist": 0.772
+          "dist": 0.604
         },
         {
           "id": "2018_4035426",
           "name": "Stephen Sullivan",
           "team": "LSU",
           "year": 2018,
-          "dist": 0.804
+          "dist": 0.651
         },
         {
-          "id": "2025_4565859",
-          "name": "Joe Royer",
-          "team": "Cincinnati",
-          "year": 2025,
-          "dist": 0.826
-        },
-        {
-          "id": "2022_4429608",
-          "name": "Corey Dyches",
-          "team": "Maryland",
-          "year": 2022,
-          "dist": 0.846
-        },
-        {
-          "id": "2018_4040980",
-          "name": "Irv Smith Jr.",
-          "team": "Alabama",
-          "year": 2018,
-          "dist": 0.861
-        },
-        {
-          "id": "2026_4827049",
-          "name": "Max Reese",
-          "team": "North Texas",
-          "year": 2026,
-          "dist": 0.862
+          "id": "2023_5085189",
+          "name": "Jack Endries",
+          "team": "California",
+          "year": 2023,
+          "dist": 0.683
         },
         {
           "id": "2024_4570037",
           "name": "Terrance Ferguson",
           "team": "Oregon",
           "year": 2024,
-          "dist": 0.87
+          "dist": 0.688
+        },
+        {
+          "id": "2026_4827049",
+          "name": "Max Reese",
+          "team": "North Texas",
+          "year": 2026,
+          "dist": 0.767
+        },
+        {
+          "id": "2022_4602969",
+          "name": "Bryson Nesbit",
+          "team": "North Carolina",
+          "year": 2022,
+          "dist": 0.77
+        },
+        {
+          "id": "2023_4427164",
+          "name": "Mason Fairchild",
+          "team": "Kansas",
+          "year": 2023,
+          "dist": 0.813
+        },
+        {
+          "id": "2014_505304",
+          "name": "Davis Dudchock",
+          "team": "Vanderbilt",
+          "year": 2014,
+          "dist": 0.818
+        },
+        {
+          "id": "2017_3122920",
+          "name": "Ryan Izzo",
+          "team": "Florida State",
+          "year": 2017,
+          "dist": 0.881
+        },
+        {
+          "id": "2017_3921932",
+          "name": "Aaron McLean",
+          "team": "UConn",
+          "year": 2017,
+          "dist": 0.889
         }
       ],
       "2026_5080888": [
@@ -397772,7 +397772,7 @@ const COLLEGE_SCOUTING = {
           "name": "Michael Cooper",
           "team": "Indiana",
           "year": 2015,
-          "dist": 0.548
+          "dist": 0.547
         },
         {
           "id": "2023_4372545",
@@ -397816,7 +397816,7 @@ const COLLEGE_SCOUTING = {
           "name": "Noah Togiai",
           "team": "Oregon State",
           "year": 2019,
-          "dist": 0.776
+          "dist": 0.775
         },
         {
           "id": "2023_4429608",
@@ -397930,7 +397930,7 @@ const COLLEGE_SCOUTING = {
           "name": "Romond Deloatch",
           "team": "Temple",
           "year": 2014,
-          "dist": 1.316
+          "dist": 1.315
         }
       ],
       "2026_5085509": [
@@ -397939,7 +397939,7 @@ const COLLEGE_SCOUTING = {
           "name": "Nick Muse",
           "team": "South Carolina",
           "year": 2021,
-          "dist": 0.571
+          "dist": 0.57
         },
         {
           "id": "2026_4870870",
@@ -397995,7 +397995,7 @@ const COLLEGE_SCOUTING = {
           "name": "Micky Crum",
           "team": "Louisville",
           "year": 2018,
-          "dist": 0.713
+          "dist": 0.712
         },
         {
           "id": "2025_4702913",
@@ -398371,7 +398371,7 @@ const COLLEGE_SCOUTING = {
           "name": "Luke Reynolds",
           "team": "Virginia Tech",
           "year": 2026,
-          "dist": 0.62
+          "dist": 0.621
         },
         {
           "id": "2020_4428952",
@@ -398399,14 +398399,14 @@ const COLLEGE_SCOUTING = {
           "name": "Michael Mayer",
           "team": "Notre Dame",
           "year": 2021,
-          "dist": 1.123
+          "dist": 1.122
         },
         {
           "id": "2026_5218931",
           "name": "DJ Vonnahme",
           "team": "Iowa",
           "year": 2026,
-          "dist": 1.298
+          "dist": 1.299
         },
         {
           "id": "2016_545635",
@@ -398471,7 +398471,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dallin Holker",
           "team": "Colorado State",
           "year": 2023,
-          "dist": 1.015
+          "dist": 1.016
         },
         {
           "id": "2014_517377",
@@ -398492,7 +398492,7 @@ const COLLEGE_SCOUTING = {
           "name": "Mason Schreck",
           "team": "Buffalo",
           "year": 2016,
-          "dist": 1.124
+          "dist": 1.123
         },
         {
           "id": "2016_3918639",
@@ -398622,7 +398622,7 @@ const COLLEGE_SCOUTING = {
           "name": "Joshua Simon",
           "team": "Western Kentucky",
           "year": 2019,
-          "dist": 1.379
+          "dist": 1.38
         },
         {
           "id": "2020_4430482",
@@ -398731,7 +398731,7 @@ const COLLEGE_SCOUTING = {
           "name": "Michael Mayer",
           "team": "Notre Dame",
           "year": 2021,
-          "dist": 0.91
+          "dist": 0.909
         },
         {
           "id": "2025_4908552",
@@ -398803,7 +398803,7 @@ const COLLEGE_SCOUTING = {
           "name": "Patrick Overmyer",
           "team": "Houston",
           "year": 2026,
-          "dist": 0.62
+          "dist": 0.621
         },
         {
           "id": "2020_4428952",
@@ -398882,7 +398882,7 @@ const COLLEGE_SCOUTING = {
           "name": "Preston Howard",
           "team": "Maryland",
           "year": 2026,
-          "dist": 0.788
+          "dist": 0.787
         },
         {
           "id": "2016_3923392",
@@ -398975,7 +398975,7 @@ const COLLEGE_SCOUTING = {
           "name": "Josiah Miamen",
           "team": "Florida International",
           "year": 2022,
-          "dist": 0.515
+          "dist": 0.516
         },
         {
           "id": "2025_4702913",
@@ -399284,14 +399284,14 @@ const COLLEGE_SCOUTING = {
           "name": "Marlin Klein",
           "team": "Michigan",
           "year": 2025,
-          "dist": 0.676
+          "dist": 0.675
         },
         {
           "id": "2021_4037532",
           "name": "Garrett Walston",
           "team": "North Carolina",
           "year": 2021,
-          "dist": 0.741
+          "dist": 0.742
         },
         {
           "id": "2026_5091828",
@@ -399421,7 +399421,7 @@ const COLLEGE_SCOUTING = {
           "name": "Marcus Smith",
           "team": "North Texas",
           "year": 2015,
-          "dist": 1.036
+          "dist": 1.035
         },
         {
           "id": "2025_4833029",
@@ -399925,7 +399925,7 @@ const COLLEGE_SCOUTING = {
           "name": "Bryson Cannon",
           "team": "Eastern Michigan",
           "year": 2021,
-          "dist": 0.681
+          "dist": 0.682
         },
         {
           "id": "2024_5079738",
@@ -400531,7 +400531,7 @@ const COLLEGE_SCOUTING = {
           "name": "Greg Dulcich",
           "team": "UCLA",
           "year": 2020,
-          "dist": 3.407
+          "dist": 3.406
         },
         {
           "id": "2026_5215395",
@@ -400594,7 +400594,7 @@ const COLLEGE_SCOUTING = {
           "name": "Peter Clarke",
           "team": "Temple",
           "year": 2025,
-          "dist": 4.996
+          "dist": 4.997
         }
       ],
       "2026_5214448": [
@@ -400731,7 +400731,7 @@ const COLLEGE_SCOUTING = {
           "name": "Decker DeGraaf",
           "team": "Washington",
           "year": 2025,
-          "dist": 0.807
+          "dist": 0.806
         },
         {
           "id": "2024_4869519",
@@ -400768,7 +400768,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jeff Heuerman",
           "team": "Ohio State",
           "year": 2013,
-          "dist": 2.345
+          "dist": 2.346
         },
         {
           "id": "2023_4611516",
@@ -401790,7 +401790,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jett Carpenter",
           "team": "Nevada",
           "year": 2025,
-          "dist": 4.86
+          "dist": 4.861
         },
         {
           "id": "2017_3129455",
@@ -402201,7 +402201,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jack Bradley",
           "team": "Rice",
           "year": 2022,
-          "dist": 0.795
+          "dist": 0.796
         },
         {
           "id": "2022_4426496",
@@ -402373,7 +402373,7 @@ const COLLEGE_SCOUTING = {
           "name": "Griffin Hebert",
           "team": "Louisiana Tech",
           "year": 2020,
-          "dist": 0.827
+          "dist": 0.826
         },
         {
           "id": "2013_481655",
@@ -402438,7 +402438,7 @@ const COLLEGE_SCOUTING = {
           "name": "Luke Musgrave",
           "team": "Oregon State",
           "year": 2021,
-          "dist": 0.961
+          "dist": 0.96
         },
         {
           "id": "2026_5024359",
@@ -402466,7 +402466,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ryan Carden",
           "team": "Texas State",
           "year": 2015,
-          "dist": 1.017
+          "dist": 1.016
         }
       ],
       "2026_5328488": [
@@ -402603,7 +402603,7 @@ const COLLEGE_SCOUTING = {
           "name": "Alex Honig",
           "team": "Northwestern",
           "year": 2026,
-          "dist": 1.176
+          "dist": 1.177
         },
         {
           "id": "2023_4875469",
@@ -402640,7 +402640,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jett Carpenter",
           "team": "Nevada",
           "year": 2025,
-          "dist": 1.297
+          "dist": 1.298
         },
         {
           "id": "2018_3914151",
@@ -402754,7 +402754,7 @@ const COLLEGE_SCOUTING = {
           "name": "DJ Vonnahme",
           "team": "Iowa",
           "year": 2026,
-          "dist": 1.588
+          "dist": 1.589
         }
       ]
     },
@@ -402786,7 +402786,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dre Brown",
           "team": "Illinois",
           "year": 2019,
-          "dist": 0.438
+          "dist": 0.439
         },
         {
           "id": "2024_4921517",
@@ -402828,7 +402828,7 @@ const COLLEGE_SCOUTING = {
           "name": "Terrence Upshaw",
           "team": "App State",
           "year": 2014,
-          "dist": 0.602
+          "dist": 0.601
         }
       ],
       "2023_4259910": [
@@ -402988,7 +402988,7 @@ const COLLEGE_SCOUTING = {
           "name": "Cam'Ron Harris",
           "team": "Miami",
           "year": 2020,
-          "dist": 0.331
+          "dist": 0.332
         },
         {
           "id": "2015_552685",
@@ -403197,7 +403197,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jonathan Ward",
           "team": "Central Michigan",
           "year": 2017,
-          "dist": 0.727
+          "dist": 0.728
         },
         {
           "id": "2017_3929630",
@@ -403246,7 +403246,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dontae McMillan",
           "team": "Eastern Michigan",
           "year": 2025,
-          "dist": 0.919
+          "dist": 0.918
         },
         {
           "id": "2013_515457",
@@ -403332,7 +403332,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jaivian Thomas",
           "team": "UCLA",
           "year": 2025,
-          "dist": 0.54
+          "dist": 0.539
         }
       ],
       "2023_4362569": [
@@ -403355,7 +403355,7 @@ const COLLEGE_SCOUTING = {
           "name": "CJ Baxter Jr.",
           "team": "Texas",
           "year": 2023,
-          "dist": 0.439
+          "dist": 0.438
         },
         {
           "id": "2018_4362087",
@@ -403397,7 +403397,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ta'Zhawn Henry",
           "team": "Texas Tech",
           "year": 2019,
-          "dist": 0.552
+          "dist": 0.551
         },
         {
           "id": "2019_4259633",
@@ -403420,7 +403420,7 @@ const COLLEGE_SCOUTING = {
           "name": "Bilal Ally",
           "team": "Massachusetts",
           "year": 2017,
-          "dist": 0.258
+          "dist": 0.259
         },
         {
           "id": "2019_4261168",
@@ -403455,7 +403455,7 @@ const COLLEGE_SCOUTING = {
           "name": "Elijah Porter",
           "team": "Northern Illinois",
           "year": 2026,
-          "dist": 0.518
+          "dist": 0.519
         },
         {
           "id": "2016_4037552",
@@ -403492,7 +403492,7 @@ const COLLEGE_SCOUTING = {
           "name": "TreVeyon Henderson",
           "team": "Ohio State",
           "year": 2022,
-          "dist": 0.688
+          "dist": 0.687
         },
         {
           "id": "2022_4360083",
@@ -403548,7 +403548,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ke'Mon Freeman",
           "team": "SMU",
           "year": 2018,
-          "dist": 0.924
+          "dist": 0.925
         }
       ],
       "2023_4365311": [
@@ -403571,7 +403571,7 @@ const COLLEGE_SCOUTING = {
           "name": "Gerard Wicks",
           "team": "Washington State",
           "year": 2016,
-          "dist": 0.413
+          "dist": 0.412
         },
         {
           "id": "2019_4363153",
@@ -403664,7 +403664,7 @@ const COLLEGE_SCOUTING = {
           "name": "Chris Carson",
           "team": "Oklahoma State",
           "year": 2016,
-          "dist": 0.974
+          "dist": 0.973
         },
         {
           "id": "2021_4432637",
@@ -403678,7 +403678,7 @@ const COLLEGE_SCOUTING = {
           "name": "Noah Cain",
           "team": "LSU",
           "year": 2022,
-          "dist": 1.182
+          "dist": 1.183
         },
         {
           "id": "2019_4245645",
@@ -403692,7 +403692,7 @@ const COLLEGE_SCOUTING = {
           "name": "Travis Etienne",
           "team": "Clemson",
           "year": 2017,
-          "dist": 1.28
+          "dist": 1.281
         }
       ],
       "2023_4367069": [
@@ -403750,7 +403750,7 @@ const COLLEGE_SCOUTING = {
           "name": "Quinton Jackson",
           "team": "Rice",
           "year": 2025,
-          "dist": 0.471
+          "dist": 0.47
         },
         {
           "id": "2013_501038",
@@ -403887,7 +403887,7 @@ const COLLEGE_SCOUTING = {
           "name": "Quinton Jackson",
           "team": "Rice",
           "year": 2025,
-          "dist": 0.465
+          "dist": 0.466
         },
         {
           "id": "2026_5078223",
@@ -403908,7 +403908,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jordan Parker",
           "team": "Middle Tennessee",
           "year": 2014,
-          "dist": 0.512
+          "dist": 0.513
         }
       ],
       "2023_4372765": [
@@ -403985,6 +403985,13 @@ const COLLEGE_SCOUTING = {
       ],
       "2023_4374306": [
         {
+          "id": "2026_5207930",
+          "name": "DAndre Hardeman Jr.",
+          "team": "Rice",
+          "year": 2026,
+          "dist": 0.316
+        },
+        {
           "id": "2016_550468",
           "name": "Gerald Holmes",
           "team": "Michigan State",
@@ -404046,13 +404053,6 @@ const COLLEGE_SCOUTING = {
           "team": "Ohio",
           "year": 2026,
           "dist": 0.426
-        },
-        {
-          "id": "2016_530449",
-          "name": "Rushel Shell",
-          "team": "West Virginia",
-          "year": 2016,
-          "dist": 0.43
         }
       ],
       "2023_4426409": [
@@ -404068,7 +404068,7 @@ const COLLEGE_SCOUTING = {
           "name": "Adam Hine",
           "team": "BYU",
           "year": 2015,
-          "dist": 0.991
+          "dist": 0.992
         },
         {
           "id": "2024_4576294",
@@ -404082,7 +404082,7 @@ const COLLEGE_SCOUTING = {
           "name": "Terrence Upshaw",
           "team": "App State",
           "year": 2017,
-          "dist": 1.101
+          "dist": 1.102
         },
         {
           "id": "2019_4035886",
@@ -404096,7 +404096,7 @@ const COLLEGE_SCOUTING = {
           "name": "Vic Enwere",
           "team": "California",
           "year": 2016,
-          "dist": 1.199
+          "dist": 1.2
         },
         {
           "id": "2017_534280",
@@ -404124,7 +404124,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tyler King",
           "team": "Marshall",
           "year": 2018,
-          "dist": 1.342
+          "dist": 1.341
         }
       ],
       "2023_4426428": [
@@ -404140,7 +404140,7 @@ const COLLEGE_SCOUTING = {
           "name": "Lamical Perine",
           "team": "Florida",
           "year": 2017,
-          "dist": 0.411
+          "dist": 0.41
         },
         {
           "id": "2025_5141677",
@@ -404268,7 +404268,7 @@ const COLLEGE_SCOUTING = {
           "name": "D.J. Williams",
           "team": "Auburn",
           "year": 2019,
-          "dist": 0.87
+          "dist": 0.871
         }
       ],
       "2023_4426530": [
@@ -404298,7 +404298,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dillon Johnson",
           "team": "Washington",
           "year": 2023,
-          "dist": 0.821
+          "dist": 0.82
         },
         {
           "id": "2018_4035072",
@@ -404326,7 +404326,7 @@ const COLLEGE_SCOUTING = {
           "name": "Benny Snell Jr.",
           "team": "Kentucky",
           "year": 2017,
-          "dist": 0.917
+          "dist": 0.918
         },
         {
           "id": "2023_4565761",
@@ -404349,7 +404349,7 @@ const COLLEGE_SCOUTING = {
           "name": "Brandon Holloway",
           "team": "Mississippi State",
           "year": 2015,
-          "dist": 0.305
+          "dist": 0.306
         },
         {
           "id": "2014_3126246",
@@ -404449,14 +404449,14 @@ const COLLEGE_SCOUTING = {
           "name": "LJ Johnson Jr.",
           "team": "SMU",
           "year": 2024,
-          "dist": 0.658
+          "dist": 0.657
         },
         {
           "id": "2022_4613059",
           "name": "Devontae Houston",
           "team": "UConn",
           "year": 2022,
-          "dist": 0.658
+          "dist": 0.657
         },
         {
           "id": "2017_4241457",
@@ -404484,7 +404484,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kani Benoit",
           "team": "Oregon",
           "year": 2016,
-          "dist": 0.687
+          "dist": 0.686
         }
       ],
       "2023_4427630": [
@@ -404549,7 +404549,7 @@ const COLLEGE_SCOUTING = {
           "name": "Terry Swanson",
           "team": "Toledo",
           "year": 2015,
-          "dist": 0.553
+          "dist": 0.554
         },
         {
           "id": "2017_4241985",
@@ -404686,7 +404686,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kendrick Raphael",
           "team": "NC State",
           "year": 2023,
-          "dist": 0.691
+          "dist": 0.69
         },
         {
           "id": "2019_4360238",
@@ -404744,7 +404744,7 @@ const COLLEGE_SCOUTING = {
           "name": "DJ McKinney",
           "team": "Sam Houston",
           "year": 2024,
-          "dist": 0.471
+          "dist": 0.47
         },
         {
           "id": "2022_4887225",
@@ -404823,7 +404823,7 @@ const COLLEGE_SCOUTING = {
           "name": "Israel Abanikanda",
           "team": "Pittsburgh",
           "year": 2021,
-          "dist": 0.654
+          "dist": 0.655
         },
         {
           "id": "2024_4921517",
@@ -404974,7 +404974,7 @@ const COLLEGE_SCOUTING = {
           "name": "Damarea Crockett",
           "team": "Missouri",
           "year": 2018,
-          "dist": 0.511
+          "dist": 0.512
         },
         {
           "id": "2015_550468",
@@ -405032,7 +405032,7 @@ const COLLEGE_SCOUTING = {
           "name": "Rico Dowdle",
           "team": "South Carolina",
           "year": 2019,
-          "dist": 0.985
+          "dist": 0.986
         },
         {
           "id": "2019_3915098",
@@ -405053,7 +405053,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kimani Vidal",
           "team": "Troy",
           "year": 2020,
-          "dist": 1.031
+          "dist": 1.032
         },
         {
           "id": "2023_5086034",
@@ -405090,7 +405090,7 @@ const COLLEGE_SCOUTING = {
           "name": "Mark Weisman",
           "team": "Iowa",
           "year": 2014,
-          "dist": 0.553
+          "dist": 0.552
         },
         {
           "id": "2026_5079322",
@@ -405104,21 +405104,21 @@ const COLLEGE_SCOUTING = {
           "name": "TJ Harden",
           "team": "SMU",
           "year": 2025,
-          "dist": 0.665
+          "dist": 0.666
         },
         {
           "id": "2018_3843406",
           "name": "Nick Brossette",
           "team": "LSU",
           "year": 2018,
-          "dist": 0.685
+          "dist": 0.684
         },
         {
           "id": "2019_3116074",
           "name": "Rodney Smith",
           "team": "Minnesota",
           "year": 2019,
-          "dist": 0.688
+          "dist": 0.689
         },
         {
           "id": "2016_546633",
@@ -405183,14 +405183,14 @@ const COLLEGE_SCOUTING = {
           "name": "Mohamed Ibrahim",
           "team": "Minnesota",
           "year": 2019,
-          "dist": 0.65
+          "dist": 0.649
         },
         {
           "id": "2016_3923397",
           "name": "Ryquell Armstead",
           "team": "Temple",
           "year": 2016,
-          "dist": 0.653
+          "dist": 0.652
         },
         {
           "id": "2026_5218820",
@@ -405220,7 +405220,7 @@ const COLLEGE_SCOUTING = {
           "name": "RJ Harvey",
           "team": "UCF",
           "year": 2023,
-          "dist": 0.589
+          "dist": 0.588
         },
         {
           "id": "2017_3921708",
@@ -405320,7 +405320,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jaren Mangham",
           "team": "South Florida",
           "year": 2021,
-          "dist": 0.773
+          "dist": 0.774
         },
         {
           "id": "2016_532274",
@@ -405371,7 +405371,7 @@ const COLLEGE_SCOUTING = {
           "name": "Caleb Ramseur",
           "team": "Nevada",
           "year": 2025,
-          "dist": 0.694
+          "dist": 0.695
         },
         {
           "id": "2021_4429805",
@@ -405388,17 +405388,17 @@ const COLLEGE_SCOUTING = {
           "dist": 0.739
         },
         {
-          "id": "2026_5227257",
-          "name": "Markell Holman",
-          "team": "Wyoming",
-          "year": 2026,
-          "dist": 0.767
-        },
-        {
           "id": "2021_4360881",
           "name": "Johnny Ford",
           "team": "Florida Atlantic",
           "year": 2021,
+          "dist": 0.767
+        },
+        {
+          "id": "2026_5227257",
+          "name": "Markell Holman",
+          "team": "Wyoming",
+          "year": 2026,
           "dist": 0.767
         },
         {
@@ -405464,7 +405464,7 @@ const COLLEGE_SCOUTING = {
           "name": "Leonard Fournette",
           "team": "LSU",
           "year": 2015,
-          "dist": 0.856
+          "dist": 0.857
         },
         {
           "id": "2022_4685489",
@@ -405522,7 +405522,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jamal Rule",
           "team": "Nebraska",
           "year": 2026,
-          "dist": 0.543
+          "dist": 0.542
         },
         {
           "id": "2026_5079419",
@@ -405601,7 +405601,7 @@ const COLLEGE_SCOUTING = {
           "name": "Elelyon Noa",
           "team": "Utah State",
           "year": 2021,
-          "dist": 0.471
+          "dist": 0.472
         },
         {
           "id": "2022_4685016",
@@ -405645,7 +405645,7 @@ const COLLEGE_SCOUTING = {
           "name": "Markell Jones",
           "team": "Purdue",
           "year": 2016,
-          "dist": 0.759
+          "dist": 0.758
         },
         {
           "id": "2013_513098",
@@ -405708,7 +405708,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jarveon Williams",
           "team": "UTSA",
           "year": 2016,
-          "dist": 0.968
+          "dist": 0.967
         }
       ],
       "2023_4430468": [
@@ -405738,7 +405738,7 @@ const COLLEGE_SCOUTING = {
           "name": "Alex Barnes",
           "team": "Kansas State",
           "year": 2018,
-          "dist": 0.667
+          "dist": 0.668
         },
         {
           "id": "2026_5209945",
@@ -405831,7 +405831,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ellis Merriweather",
           "team": "Massachusetts",
           "year": 2022,
-          "dist": 0.612
+          "dist": 0.613
         },
         {
           "id": "2016_3128800",
@@ -405861,7 +405861,7 @@ const COLLEGE_SCOUTING = {
           "name": "Alexander Horvath",
           "team": "Purdue",
           "year": 2019,
-          "dist": 0.46
+          "dist": 0.461
         },
         {
           "id": "2022_4426780",
@@ -405906,17 +405906,17 @@ const COLLEGE_SCOUTING = {
           "dist": 0.551
         },
         {
-          "id": "2022_4433965",
-          "name": "Brandon Campbell",
-          "team": "Houston",
-          "year": 2022,
-          "dist": 0.561
-        },
-        {
           "id": "2016_3728275",
           "name": "Shannon Brooks",
           "team": "Minnesota",
           "year": 2016,
+          "dist": 0.561
+        },
+        {
+          "id": "2022_4433965",
+          "name": "Brandon Campbell",
+          "team": "Houston",
+          "year": 2022,
           "dist": 0.561
         },
         {
@@ -405940,7 +405940,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jordan Mims",
           "team": "Fresno State",
           "year": 2021,
-          "dist": 0.509
+          "dist": 0.508
         },
         {
           "id": "2021_4361802",
@@ -405996,7 +405996,7 @@ const COLLEGE_SCOUTING = {
           "name": "Lopini Katoa",
           "team": "BYU",
           "year": 2020,
-          "dist": 0.73
+          "dist": 0.729
         }
       ],
       "2023_4430893": [
@@ -406068,7 +406068,7 @@ const COLLEGE_SCOUTING = {
           "name": "Terrence Upshaw",
           "team": "App State",
           "year": 2014,
-          "dist": 0.579
+          "dist": 0.58
         }
       ],
       "2023_4430992": [
@@ -406184,7 +406184,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ryan Jackson",
           "team": "Houston",
           "year": 2014,
-          "dist": 0.577
+          "dist": 0.578
         },
         {
           "id": "2026_5141742",
@@ -406300,7 +406300,7 @@ const COLLEGE_SCOUTING = {
           "name": "Steward Butler",
           "team": "Marshall",
           "year": 2014,
-          "dist": 0.542
+          "dist": 0.541
         },
         {
           "id": "2021_4042110",
@@ -406379,7 +406379,7 @@ const COLLEGE_SCOUTING = {
           "name": "Freddie Holly III",
           "team": "Hawai'i",
           "year": 2018,
-          "dist": 0.827
+          "dist": 0.826
         },
         {
           "id": "2021_4244599",
@@ -406400,7 +406400,7 @@ const COLLEGE_SCOUTING = {
           "name": "Rodney Nelson",
           "team": "Miami (OH)",
           "year": 2026,
-          "dist": 0.872
+          "dist": 0.871
         },
         {
           "id": "2021_4245242",
@@ -406414,14 +406414,14 @@ const COLLEGE_SCOUTING = {
           "name": "James Conner",
           "team": "Pittsburgh",
           "year": 2013,
-          "dist": 0.973
+          "dist": 0.972
         },
         {
           "id": "2013_518388",
           "name": "Mark Weisman",
           "team": "Iowa",
           "year": 2013,
-          "dist": 0.977
+          "dist": 0.978
         },
         {
           "id": "2013_503343",
@@ -406468,17 +406468,17 @@ const COLLEGE_SCOUTING = {
           "dist": 0.479
         },
         {
-          "id": "2019_4429527",
-          "name": "King Doerue",
-          "team": "Purdue",
-          "year": 2019,
-          "dist": 0.484
-        },
-        {
           "id": "2016_545615",
           "name": "Terrell Newby",
           "team": "Nebraska",
           "year": 2016,
+          "dist": 0.484
+        },
+        {
+          "id": "2019_4429527",
+          "name": "King Doerue",
+          "team": "Purdue",
+          "year": 2019,
           "dist": 0.484
         },
         {
@@ -406595,7 +406595,7 @@ const COLLEGE_SCOUTING = {
           "name": "Derrius Guice",
           "team": "LSU",
           "year": 2015,
-          "dist": 0.888
+          "dist": 0.889
         },
         {
           "id": "2025_4912302",
@@ -406616,7 +406616,7 @@ const COLLEGE_SCOUTING = {
           "name": "Zach Evans",
           "team": "TCU",
           "year": 2020,
-          "dist": 1.093
+          "dist": 1.092
         },
         {
           "id": "2024_5079591",
@@ -406732,7 +406732,7 @@ const COLLEGE_SCOUTING = {
           "name": "Xazavian Valladay",
           "team": "Wyoming",
           "year": 2018,
-          "dist": 0.617
+          "dist": 0.616
         },
         {
           "id": "2021_4372526",
@@ -406825,7 +406825,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jeremy Cox",
           "team": "Old Dominion",
           "year": 2017,
-          "dist": 1.069
+          "dist": 1.07
         },
         {
           "id": "2025_5083111",
@@ -406860,7 +406860,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kalif Phillips",
           "team": "Charlotte",
           "year": 2016,
-          "dist": 1.177
+          "dist": 1.178
         }
       ],
       "2023_4433827": [
@@ -407027,7 +407027,7 @@ const COLLEGE_SCOUTING = {
           "name": "Terion Stewart",
           "team": "Bowling Green",
           "year": 2024,
-          "dist": 2.251
+          "dist": 2.252
         },
         {
           "id": "2017_4242158",
@@ -407041,28 +407041,28 @@ const COLLEGE_SCOUTING = {
           "name": "Glasco Martin",
           "team": "Baylor",
           "year": 2013,
-          "dist": 2.45
+          "dist": 2.451
         },
         {
           "id": "2021_4259506",
           "name": "Jamyest Williams",
           "team": "Georgia State",
           "year": 2021,
-          "dist": 2.493
+          "dist": 2.494
         },
         {
           "id": "2024_5209945",
           "name": "Antwan Raymond",
           "team": "Rutgers",
           "year": 2024,
-          "dist": 2.508
+          "dist": 2.509
         },
         {
           "id": "2025_5076122",
           "name": "Evan Dickens",
           "team": "Liberty",
           "year": 2025,
-          "dist": 2.516
+          "dist": 2.517
         },
         {
           "id": "2019_4363923",
@@ -407220,7 +407220,7 @@ const COLLEGE_SCOUTING = {
           "name": "Steward Butler",
           "team": "Marshall",
           "year": 2014,
-          "dist": 0.725
+          "dist": 0.724
         }
       ],
       "2023_4568660": [
@@ -407264,7 +407264,7 @@ const COLLEGE_SCOUTING = {
           "name": "Josh Adams",
           "team": "Notre Dame",
           "year": 2015,
-          "dist": 0.616
+          "dist": 0.615
         },
         {
           "id": "2020_4040728",
@@ -407336,7 +407336,7 @@ const COLLEGE_SCOUTING = {
           "name": "Michael Allen",
           "team": "Marshall",
           "year": 2025,
-          "dist": 0.738
+          "dist": 0.739
         },
         {
           "id": "2013_534462",
@@ -407401,21 +407401,21 @@ const COLLEGE_SCOUTING = {
           "name": "Billy Lucas",
           "team": "Liberty",
           "year": 2023,
-          "dist": 1.865
+          "dist": 1.864
         },
         {
           "id": "2015_3126211",
           "name": "Jarvis Cooper",
           "team": "Memphis",
           "year": 2015,
-          "dist": 1.954
+          "dist": 1.953
         },
         {
           "id": "2022_4429012",
           "name": "Kendall Milton",
           "team": "Georgia",
           "year": 2022,
-          "dist": 2.023
+          "dist": 2.022
         },
         {
           "id": "2013_480740",
@@ -407429,7 +407429,7 @@ const COLLEGE_SCOUTING = {
           "name": "Zuberi Mobley",
           "team": "Florida Atlantic",
           "year": 2022,
-          "dist": 2.206
+          "dist": 2.205
         },
         {
           "id": "2024_4683889",
@@ -407508,7 +407508,7 @@ const COLLEGE_SCOUTING = {
           "name": "D'Andre Ferby",
           "team": "Western Kentucky",
           "year": 2017,
-          "dist": 0.83
+          "dist": 0.831
         }
       ],
       "2023_4569330": [
@@ -407566,14 +407566,14 @@ const COLLEGE_SCOUTING = {
           "name": "Carson Hansen",
           "team": "Iowa State",
           "year": 2024,
-          "dist": 0.495
+          "dist": 0.494
         },
         {
           "id": "2017_4241401",
           "name": "Trey Sermon",
           "team": "Oklahoma",
           "year": 2017,
-          "dist": 0.499
+          "dist": 0.5
         },
         {
           "id": "2021_4363104",
@@ -407652,7 +407652,7 @@ const COLLEGE_SCOUTING = {
           "name": "Fred Coppet",
           "team": "Bowling Green",
           "year": 2016,
-          "dist": 0.455
+          "dist": 0.454
         }
       ],
       "2023_4570130": [
@@ -407717,7 +407717,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jamal Morrow",
           "team": "Washington State",
           "year": 2017,
-          "dist": 0.888
+          "dist": 0.887
         },
         {
           "id": "2025_4608607",
@@ -407768,7 +407768,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kenneth Farrow",
           "team": "Houston",
           "year": 2014,
-          "dist": 0.727
+          "dist": 0.728
         },
         {
           "id": "2023_4596448",
@@ -407796,7 +407796,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ke'Shawn Vaughn",
           "team": "Vanderbilt",
           "year": 2018,
-          "dist": 0.786
+          "dist": 0.787
         }
       ],
       "2023_4571305": [
@@ -407861,7 +407861,7 @@ const COLLEGE_SCOUTING = {
           "name": "Christian Beal-Smith",
           "team": "Wake Forest",
           "year": 2021,
-          "dist": 0.545
+          "dist": 0.546
         },
         {
           "id": "2024_5084047",
@@ -407891,7 +407891,7 @@ const COLLEGE_SCOUTING = {
           "name": "Trequan Jones",
           "team": "Old Dominion",
           "year": 2025,
-          "dist": 0.386
+          "dist": 0.387
         },
         {
           "id": "2020_4241474",
@@ -408008,10 +408008,10 @@ const COLLEGE_SCOUTING = {
           "dist": 1.243
         },
         {
-          "id": "2015_550009",
-          "name": "Shock Linwood",
-          "team": "Baylor",
-          "year": 2015,
+          "id": "2026_5296247",
+          "name": "Cyncir Bowers",
+          "team": "UConn",
+          "year": 2026,
           "dist": 1.387
         }
       ],
@@ -408042,14 +408042,14 @@ const COLLEGE_SCOUTING = {
           "name": "Maquel Haywood",
           "team": "Navy",
           "year": 2022,
-          "dist": 1.829
+          "dist": 1.83
         },
         {
           "id": "2018_3916148",
           "name": "Tony Pollard",
           "team": "Memphis",
           "year": 2018,
-          "dist": 1.899
+          "dist": 1.9
         },
         {
           "id": "2020_4697815",
@@ -408084,7 +408084,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tyrell Robinson",
           "team": "Army",
           "year": 2022,
-          "dist": 2.327
+          "dist": 2.328
         }
       ],
       "2023_4576294": [
@@ -408114,7 +408114,7 @@ const COLLEGE_SCOUTING = {
           "name": "Shadrach Abrokwah",
           "team": "Massachusetts",
           "year": 2014,
-          "dist": 0.701
+          "dist": 0.7
         },
         {
           "id": "2026_5295550",
@@ -408207,21 +408207,21 @@ const COLLEGE_SCOUTING = {
           "name": "Demond Claiborne",
           "team": "Wake Forest",
           "year": 2024,
-          "dist": 1.065
+          "dist": 1.064
         },
         {
           "id": "2019_3931401",
           "name": "Cameron Scarlett",
           "team": "Stanford",
           "year": 2019,
-          "dist": 1.07
+          "dist": 1.071
         },
         {
           "id": "2017_3916925",
           "name": "Kerryon Johnson",
           "team": "Auburn",
           "year": 2017,
-          "dist": 1.098
+          "dist": 1.097
         },
         {
           "id": "2015_3914919",
@@ -408272,7 +408272,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ashaad Clayton",
           "team": "Tulane",
           "year": 2022,
-          "dist": 0.494
+          "dist": 0.495
         },
         {
           "id": "2017_552061",
@@ -408344,7 +408344,7 @@ const COLLEGE_SCOUTING = {
           "name": "Malik Jackson",
           "team": "UL Monroe",
           "year": 2022,
-          "dist": 0.552
+          "dist": 0.553
         },
         {
           "id": "2025_5141386",
@@ -408560,7 +408560,7 @@ const COLLEGE_SCOUTING = {
           "name": "La'Darius Jefferson",
           "team": "Western Michigan",
           "year": 2021,
-          "dist": 0.837
+          "dist": 0.838
         },
         {
           "id": "2018_4360881",
@@ -408574,7 +408574,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tavion Thomas",
           "team": "Utah",
           "year": 2022,
-          "dist": 0.882
+          "dist": 0.881
         },
         {
           "id": "2016_3116389",
@@ -408588,7 +408588,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ryquell Armstead",
           "team": "Temple",
           "year": 2016,
-          "dist": 0.901
+          "dist": 0.902
         }
       ],
       "2023_4605841": [
@@ -408632,7 +408632,7 @@ const COLLEGE_SCOUTING = {
           "name": "Adam Muema",
           "team": "San Diego State",
           "year": 2013,
-          "dist": 0.638
+          "dist": 0.637
         },
         {
           "id": "2019_4382470",
@@ -408725,7 +408725,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jadyn Ott",
           "team": "California",
           "year": 2023,
-          "dist": 0.849
+          "dist": 0.848
         },
         {
           "id": "2022_4431499",
@@ -408934,7 +408934,7 @@ const COLLEGE_SCOUTING = {
           "name": "Cam'Ron Harris",
           "team": "Miami",
           "year": 2020,
-          "dist": 0.512
+          "dist": 0.513
         },
         {
           "id": "2016_3932420",
@@ -408971,7 +408971,7 @@ const COLLEGE_SCOUTING = {
           "name": "Calvin Tyler Jr.",
           "team": "Utah State",
           "year": 2021,
-          "dist": 0.662
+          "dist": 0.663
         },
         {
           "id": "2020_4361897",
@@ -409020,7 +409020,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kevin Harris",
           "team": "South Carolina",
           "year": 2021,
-          "dist": 0.748
+          "dist": 0.749
         }
       ],
       "2023_4676889": [
@@ -409050,14 +409050,14 @@ const COLLEGE_SCOUTING = {
           "name": "Ethan Payne",
           "team": "Marshall",
           "year": 2024,
-          "dist": 0.551
+          "dist": 0.552
         },
         {
           "id": "2018_3916821",
           "name": "Andy Davidson",
           "team": "Army",
           "year": 2018,
-          "dist": 0.586
+          "dist": 0.587
         },
         {
           "id": "2019_4052008",
@@ -409092,7 +409092,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jon Lee",
           "team": "Air Force",
           "year": 2013,
-          "dist": 0.728
+          "dist": 0.727
         }
       ],
       "2023_4682904": [
@@ -409194,7 +409194,7 @@ const COLLEGE_SCOUTING = {
           "name": "Abu Sama III",
           "team": "Iowa State",
           "year": 2023,
-          "dist": 0.353
+          "dist": 0.354
         },
         {
           "id": "2022_4685269",
@@ -409204,17 +409204,17 @@ const COLLEGE_SCOUTING = {
           "dist": 0.365
         },
         {
-          "id": "2024_4954506",
-          "name": "Jamarion Wilcox",
-          "team": "Kentucky",
-          "year": 2024,
-          "dist": 0.436
-        },
-        {
           "id": "2015_518349",
           "name": "Paul James",
           "team": "Rutgers",
           "year": 2015,
+          "dist": 0.436
+        },
+        {
+          "id": "2024_4954506",
+          "name": "Jamarion Wilcox",
+          "team": "Kentucky",
+          "year": 2024,
           "dist": 0.436
         },
         {
@@ -409475,7 +409475,7 @@ const COLLEGE_SCOUTING = {
           "name": "Lorenzo Woodley",
           "team": "Massachusetts",
           "year": 2014,
-          "dist": 0.728
+          "dist": 0.729
         },
         {
           "id": "2022_4370794",
@@ -409633,7 +409633,7 @@ const COLLEGE_SCOUTING = {
           "name": "Vic Enwere",
           "team": "California",
           "year": 2015,
-          "dist": 0.434
+          "dist": 0.435
         },
         {
           "id": "2013_501069",
@@ -409756,7 +409756,7 @@ const COLLEGE_SCOUTING = {
           "name": "Johnston White",
           "team": "Arkansas State",
           "year": 2016,
-          "dist": 0.36
+          "dist": 0.361
         },
         {
           "id": "2022_4429287",
@@ -409849,7 +409849,7 @@ const COLLEGE_SCOUTING = {
           "name": "Treyous Jarrells",
           "team": "Colorado State",
           "year": 2014,
-          "dist": 0.784
+          "dist": 0.785
         },
         {
           "id": "2023_4363153",
@@ -409870,7 +409870,7 @@ const COLLEGE_SCOUTING = {
           "name": "Darius Anderson",
           "team": "TCU",
           "year": 2017,
-          "dist": 0.82
+          "dist": 0.821
         },
         {
           "id": "2014_513703",
@@ -409956,7 +409956,7 @@ const COLLEGE_SCOUTING = {
           "name": "Cameron Scarlett",
           "team": "Stanford",
           "year": 2019,
-          "dist": 0.841
+          "dist": 0.842
         }
       ],
       "2023_4685545": [
@@ -409993,7 +409993,7 @@ const COLLEGE_SCOUTING = {
           "name": "SaRodorick Thompson",
           "team": "Texas Tech",
           "year": 2021,
-          "dist": 0.566
+          "dist": 0.567
         },
         {
           "id": "2017_4038533",
@@ -410028,7 +410028,7 @@ const COLLEGE_SCOUTING = {
           "name": "LJ Johnson Jr.",
           "team": "SMU",
           "year": 2023,
-          "dist": 0.632
+          "dist": 0.633
         }
       ],
       "2023_4685555": [
@@ -410195,7 +410195,7 @@ const COLLEGE_SCOUTING = {
           "name": "Deuce Lawrence",
           "team": "Wake Forest",
           "year": 2026,
-          "dist": 0.368
+          "dist": 0.369
         },
         {
           "id": "2025_4430843",
@@ -410367,14 +410367,14 @@ const COLLEGE_SCOUTING = {
           "name": "Devin Mockobee",
           "team": "Purdue",
           "year": 2024,
-          "dist": 0.744
+          "dist": 0.743
         },
         {
           "id": "2018_4361444",
           "name": "Toa Taua",
           "team": "Nevada",
           "year": 2018,
-          "dist": 0.785
+          "dist": 0.786
         },
         {
           "id": "2022_4426840",
@@ -410439,7 +410439,7 @@ const COLLEGE_SCOUTING = {
           "name": "Isaiah Ene",
           "team": "Sacramento State",
           "year": 2026,
-          "dist": 0.572
+          "dist": 0.573
         },
         {
           "id": "2013_531791",
@@ -410548,7 +410548,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jirehl Brock",
           "team": "Iowa State",
           "year": 2022,
-          "dist": 0.442
+          "dist": 0.443
         },
         {
           "id": "2019_4260406",
@@ -410597,7 +410597,7 @@ const COLLEGE_SCOUTING = {
           "name": "Emari Demercado",
           "team": "TCU",
           "year": 2021,
-          "dist": 0.588
+          "dist": 0.589
         },
         {
           "id": "2023_4430717",
@@ -410613,7 +410613,7 @@ const COLLEGE_SCOUTING = {
           "name": "Martell Pettaway",
           "team": "Middle Tennessee",
           "year": 2021,
-          "dist": 0.315
+          "dist": 0.316
         },
         {
           "id": "2017_3116127",
@@ -410648,7 +410648,7 @@ const COLLEGE_SCOUTING = {
           "name": "Gerald Holmes",
           "team": "Michigan State",
           "year": 2016,
-          "dist": 0.525
+          "dist": 0.524
         },
         {
           "id": "2020_4240543",
@@ -410748,7 +410748,7 @@ const COLLEGE_SCOUTING = {
           "name": "Caleb Komolafe",
           "team": "Northwestern",
           "year": 2025,
-          "dist": 0.697
+          "dist": 0.698
         }
       ],
       "2023_4687475": [
@@ -410799,7 +410799,7 @@ const COLLEGE_SCOUTING = {
           "name": "Alonzo Smith",
           "team": "Miami (OH)",
           "year": 2016,
-          "dist": 0.641
+          "dist": 0.64
         },
         {
           "id": "2021_4360932",
@@ -410850,7 +410850,7 @@ const COLLEGE_SCOUTING = {
           "name": "Perris Jones",
           "team": "Virginia",
           "year": 2022,
-          "dist": 0.652
+          "dist": 0.653
         },
         {
           "id": "2015_545373",
@@ -410932,16 +410932,16 @@ const COLLEGE_SCOUTING = {
           "dist": 0.562
         },
         {
-          "id": "2014_559716",
-          "name": "Jalen Hurd",
-          "team": "Tennessee",
+          "id": "2014_512671",
+          "name": "Tyler Ervin",
+          "team": "San José State",
           "year": 2014,
           "dist": 0.591
         },
         {
-          "id": "2014_512671",
-          "name": "Tyler Ervin",
-          "team": "San José State",
+          "id": "2014_559716",
+          "name": "Jalen Hurd",
+          "team": "Tennessee",
           "year": 2014,
           "dist": 0.591
         },
@@ -411080,7 +411080,7 @@ const COLLEGE_SCOUTING = {
           "name": "Taj Griffin",
           "team": "Oregon",
           "year": 2015,
-          "dist": 0.922
+          "dist": 0.923
         },
         {
           "id": "2021_4361111",
@@ -411131,7 +411131,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jeff Scott",
           "team": "Ole Miss",
           "year": 2013,
-          "dist": 0.672
+          "dist": 0.671
         },
         {
           "id": "2024_4683665",
@@ -411166,21 +411166,21 @@ const COLLEGE_SCOUTING = {
           "name": "Devontae Houston",
           "team": "UConn",
           "year": 2022,
-          "dist": 0.764
+          "dist": 0.765
         },
         {
           "id": "2024_4717724",
           "name": "Rashod Dubinion",
           "team": "Arkansas",
           "year": 2024,
-          "dist": 0.793
+          "dist": 0.792
         },
         {
           "id": "2014_532450",
           "name": "Damion Jones-Moore",
           "team": "Toledo",
           "year": 2014,
-          "dist": 0.799
+          "dist": 0.798
         }
       ],
       "2023_4694583": [
@@ -411224,14 +411224,14 @@ const COLLEGE_SCOUTING = {
           "name": "Tayon Fleet-Davis",
           "team": "Maryland",
           "year": 2021,
-          "dist": 0.655
+          "dist": 0.656
         },
         {
           "id": "2025_4608607",
           "name": "Lincoln Pare",
           "team": "Texas State",
           "year": 2025,
-          "dist": 0.692
+          "dist": 0.693
         },
         {
           "id": "2022_4601080",
@@ -411275,7 +411275,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kedrick Reescano",
           "team": "Arizona",
           "year": 2026,
-          "dist": 0.41
+          "dist": 0.411
         },
         {
           "id": "2024_5078251",
@@ -411347,7 +411347,7 @@ const COLLEGE_SCOUTING = {
           "name": "Lamarq Caldwell",
           "team": "Florida International",
           "year": 2013,
-          "dist": 0.943
+          "dist": 0.942
         },
         {
           "id": "2020_4570243",
@@ -411405,7 +411405,7 @@ const COLLEGE_SCOUTING = {
           "name": "TJ Harden",
           "team": "UCLA",
           "year": 2022,
-          "dist": 1.33
+          "dist": 1.331
         },
         {
           "id": "2017_3916721",
@@ -411433,14 +411433,14 @@ const COLLEGE_SCOUTING = {
           "name": "Chris Carson",
           "team": "Oklahoma State",
           "year": 2016,
-          "dist": 1.604
+          "dist": 1.603
         },
         {
           "id": "2026_5151892",
           "name": "Ja'Kobi Jackson",
           "team": "Ohio State",
           "year": 2026,
-          "dist": 1.696
+          "dist": 1.697
         },
         {
           "id": "2017_4044162",
@@ -411642,7 +411642,7 @@ const COLLEGE_SCOUTING = {
           "name": "DJ Giddens",
           "team": "Kansas State",
           "year": 2023,
-          "dist": 0.835
+          "dist": 0.836
         },
         {
           "id": "2025_4608607",
@@ -411677,7 +411677,7 @@ const COLLEGE_SCOUTING = {
           "name": "CJ Marable",
           "team": "Coastal Carolina",
           "year": 2019,
-          "dist": 0.953
+          "dist": 0.952
         },
         {
           "id": "2020_4430110",
@@ -411858,7 +411858,7 @@ const COLLEGE_SCOUTING = {
           "name": "Michael Carter",
           "team": "North Carolina",
           "year": 2020,
-          "dist": 0.648
+          "dist": 0.649
         },
         {
           "id": "2024_4608922",
@@ -411909,7 +411909,7 @@ const COLLEGE_SCOUTING = {
           "name": "Stanley Boom Williams",
           "team": "Kentucky",
           "year": 2016,
-          "dist": 1.77
+          "dist": 1.769
         },
         {
           "id": "2021_4244651",
@@ -411923,56 +411923,56 @@ const COLLEGE_SCOUTING = {
           "name": "Harrison Waylee",
           "team": "Wyoming",
           "year": 2024,
-          "dist": 2.457
+          "dist": 2.456
         },
         {
           "id": "2017_534280",
           "name": "Warren Ball",
           "team": "Akron",
           "year": 2017,
-          "dist": 2.536
+          "dist": 2.535
         },
         {
           "id": "2018_4261912",
           "name": "Brenden Knox",
           "team": "Marshall",
           "year": 2018,
-          "dist": 2.924
+          "dist": 2.922
         },
         {
           "id": "2022_4605841",
           "name": "Nathan Carter",
           "team": "UConn",
           "year": 2022,
-          "dist": 3.068
+          "dist": 3.067
         },
         {
           "id": "2017_3917846",
           "name": "Mark Walton",
           "team": "Miami",
           "year": 2017,
-          "dist": 3.099
+          "dist": 3.098
         },
         {
           "id": "2024_5193302",
           "name": "Telly Johnson Jr.",
           "team": "Northern Illinois",
           "year": 2024,
-          "dist": 3.116
+          "dist": 3.115
         },
         {
           "id": "2021_4576294",
           "name": "Harrison Waylee",
           "team": "Northern Illinois",
           "year": 2021,
-          "dist": 3.218
+          "dist": 3.216
         },
         {
           "id": "2023_5078251",
           "name": "Justin Marshall",
           "team": "Colorado State",
           "year": 2023,
-          "dist": 3.311
+          "dist": 3.309
         }
       ],
       "2023_4708487": [
@@ -412074,7 +412074,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kelton Moore",
           "team": "Nevada",
           "year": 2018,
-          "dist": 0.817
+          "dist": 0.818
         },
         {
           "id": "2026_5142226",
@@ -412116,7 +412116,7 @@ const COLLEGE_SCOUTING = {
           "name": "Robert Martin",
           "team": "Rutgers",
           "year": 2017,
-          "dist": 0.881
+          "dist": 0.88
         }
       ],
       "2023_4805256": [
@@ -412232,7 +412232,7 @@ const COLLEGE_SCOUTING = {
           "name": "Keaton Mitchell",
           "team": "East Carolina",
           "year": 2020,
-          "dist": 0.521
+          "dist": 0.52
         },
         {
           "id": "2024_5220340",
@@ -412355,7 +412355,7 @@ const COLLEGE_SCOUTING = {
           "name": "LeShun Daniels Jr.",
           "team": "Iowa",
           "year": 2015,
-          "dist": 0.608
+          "dist": 0.609
         },
         {
           "id": "2020_4590347",
@@ -412376,7 +412376,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kelvin York",
           "team": "Utah",
           "year": 2013,
-          "dist": 0.743
+          "dist": 0.744
         },
         {
           "id": "2023_5082251",
@@ -412469,7 +412469,7 @@ const COLLEGE_SCOUTING = {
           "name": "Khalil Herbert",
           "team": "Kansas",
           "year": 2017,
-          "dist": 0.77
+          "dist": 0.771
         },
         {
           "id": "2014_546186",
@@ -412534,7 +412534,7 @@ const COLLEGE_SCOUTING = {
           "name": "Zuberi Mobley",
           "team": "Florida Atlantic",
           "year": 2024,
-          "dist": 0.563
+          "dist": 0.564
         },
         {
           "id": "2017_3122757",
@@ -412729,7 +412729,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tre Watson",
           "team": "California",
           "year": 2015,
-          "dist": 0.753
+          "dist": 0.754
         },
         {
           "id": "2021_4372526",
@@ -412750,7 +412750,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kobe Pace",
           "team": "Clemson",
           "year": 2021,
-          "dist": 0.805
+          "dist": 0.804
         },
         {
           "id": "2014_513703",
@@ -412801,7 +412801,7 @@ const COLLEGE_SCOUTING = {
           "name": "Deon McIntosh",
           "team": "Notre Dame",
           "year": 2017,
-          "dist": 0.539
+          "dist": 0.54
         },
         {
           "id": "2025_4565318",
@@ -412815,7 +412815,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kenneth Walker III",
           "team": "Wake Forest",
           "year": 2019,
-          "dist": 0.574
+          "dist": 0.573
         },
         {
           "id": "2023_4432545",
@@ -412836,7 +412836,7 @@ const COLLEGE_SCOUTING = {
           "name": "Sean McGrew",
           "team": "Washington",
           "year": 2019,
-          "dist": 0.583
+          "dist": 0.584
         }
       ],
       "2023_4870609": [
@@ -412887,7 +412887,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kobe Lewis",
           "team": "Florida Atlantic",
           "year": 2023,
-          "dist": 0.439
+          "dist": 0.438
         },
         {
           "id": "2016_551182",
@@ -412908,7 +412908,7 @@ const COLLEGE_SCOUTING = {
           "name": "Gerard Wicks",
           "team": "Washington State",
           "year": 2016,
-          "dist": 0.467
+          "dist": 0.466
         }
       ],
       "2023_4870736": [
@@ -412945,21 +412945,21 @@ const COLLEGE_SCOUTING = {
           "name": "Oscar Adaway III",
           "team": "North Texas",
           "year": 2022,
-          "dist": 0.705
+          "dist": 0.706
         },
         {
           "id": "2025_5079641",
           "name": "Lamar Radcliffe",
           "team": "San José State",
           "year": 2025,
-          "dist": 0.783
+          "dist": 0.782
         },
         {
           "id": "2022_4568406",
           "name": "Calvin Hill",
           "team": "Texas State",
           "year": 2022,
-          "dist": 0.815
+          "dist": 0.814
         },
         {
           "id": "2017_3123212",
@@ -413061,14 +413061,14 @@ const COLLEGE_SCOUTING = {
           "name": "Keaton Mitchell",
           "team": "East Carolina",
           "year": 2020,
-          "dist": 0.45
+          "dist": 0.451
         },
         {
           "id": "2025_5294293",
           "name": "Javin Gordon",
           "team": "Tulane",
           "year": 2025,
-          "dist": 0.488
+          "dist": 0.489
         },
         {
           "id": "2022_4430286",
@@ -413140,14 +413140,14 @@ const COLLEGE_SCOUTING = {
           "name": "Vincent Davis",
           "team": "Pittsburgh",
           "year": 2021,
-          "dist": 0.254
+          "dist": 0.255
         },
         {
           "id": "2018_3791143",
           "name": "Markell Jones",
           "team": "Purdue",
           "year": 2018,
-          "dist": 0.262
+          "dist": 0.263
         },
         {
           "id": "2017_4259376",
@@ -413219,14 +413219,14 @@ const COLLEGE_SCOUTING = {
           "name": "Kevorian Barnes",
           "team": "TCU",
           "year": 2025,
-          "dist": 1.147
+          "dist": 1.148
         },
         {
           "id": "2026_5086034",
           "name": "Camryn Edwards",
           "team": "Michigan State",
           "year": 2026,
-          "dist": 1.157
+          "dist": 1.158
         },
         {
           "id": "2023_4696690",
@@ -413268,7 +413268,7 @@ const COLLEGE_SCOUTING = {
           "name": "Warren Ball",
           "team": "Akron",
           "year": 2017,
-          "dist": 1.302
+          "dist": 1.301
         }
       ],
       "2023_4875562": [
@@ -413291,14 +413291,14 @@ const COLLEGE_SCOUTING = {
           "name": "Nick Gibson",
           "team": "Mississippi State",
           "year": 2019,
-          "dist": 0.967
+          "dist": 0.968
         },
         {
           "id": "2014_500226",
           "name": "Charles Perkins",
           "team": "Georgia Tech",
           "year": 2014,
-          "dist": 1.03
+          "dist": 1.031
         },
         {
           "id": "2020_4685035",
@@ -413363,7 +413363,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tyler Badie",
           "team": "Missouri",
           "year": 2019,
-          "dist": 0.845
+          "dist": 0.846
         },
         {
           "id": "2014_515457",
@@ -413405,7 +413405,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jahmyr Gibbs",
           "team": "Alabama",
           "year": 2022,
-          "dist": 0.96
+          "dist": 0.961
         },
         {
           "id": "2016_3125907",
@@ -413542,7 +413542,7 @@ const COLLEGE_SCOUTING = {
           "name": "Elijah Mitchell",
           "team": "Louisiana",
           "year": 2019,
-          "dist": 0.882
+          "dist": 0.881
         },
         {
           "id": "2018_4046981",
@@ -413586,14 +413586,14 @@ const COLLEGE_SCOUTING = {
           "name": "Seth Paige",
           "team": "Georgia State",
           "year": 2019,
-          "dist": 0.587
+          "dist": 0.588
         },
         {
           "id": "2024_5086050",
           "name": "NaQuari Rogers",
           "team": "New Mexico",
           "year": 2024,
-          "dist": 0.754
+          "dist": 0.753
         },
         {
           "id": "2026_5151892",
@@ -413651,7 +413651,7 @@ const COLLEGE_SCOUTING = {
           "name": "Mar'Keise Irving",
           "team": "Minnesota",
           "year": 2021,
-          "dist": 0.47
+          "dist": 0.471
         },
         {
           "id": "2022_4382470",
@@ -413679,7 +413679,7 @@ const COLLEGE_SCOUTING = {
           "name": "Deshawn McClease",
           "team": "Virginia Tech",
           "year": 2017,
-          "dist": 0.537
+          "dist": 0.538
         },
         {
           "id": "2024_5150786",
@@ -413693,7 +413693,7 @@ const COLLEGE_SCOUTING = {
           "name": "Paul James",
           "team": "Rutgers",
           "year": 2015,
-          "dist": 0.545
+          "dist": 0.546
         },
         {
           "id": "2026_5295070",
@@ -413709,7 +413709,7 @@ const COLLEGE_SCOUTING = {
           "name": "Larry McCammon III",
           "team": "Florida Atlantic",
           "year": 2019,
-          "dist": 0.458
+          "dist": 0.459
         },
         {
           "id": "2023_4685829",
@@ -413737,14 +413737,14 @@ const COLLEGE_SCOUTING = {
           "name": "Kevin Grooms",
           "team": "Marshall",
           "year": 2013,
-          "dist": 0.601
+          "dist": 0.602
         },
         {
           "id": "2023_5151965",
           "name": "Kadarius Calloway",
           "team": "Old Dominion",
           "year": 2023,
-          "dist": 0.63
+          "dist": 0.631
         },
         {
           "id": "2013_550944",
@@ -413781,7 +413781,7 @@ const COLLEGE_SCOUTING = {
           "name": "Brandon Thomas",
           "team": "Memphis",
           "year": 2024,
-          "dist": 0.319
+          "dist": 0.318
         },
         {
           "id": "2026_5141598",
@@ -413823,7 +413823,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dontae Smith",
           "team": "Georgia Tech",
           "year": 2021,
-          "dist": 0.609
+          "dist": 0.608
         },
         {
           "id": "2021_4360075",
@@ -413844,7 +413844,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kani Benoit",
           "team": "Oregon",
           "year": 2017,
-          "dist": 0.633
+          "dist": 0.634
         }
       ],
       "2023_4899368": [
@@ -413902,7 +413902,7 @@ const COLLEGE_SCOUTING = {
           "name": "Nathaniel Peat",
           "team": "Missouri",
           "year": 2023,
-          "dist": 0.691
+          "dist": 0.69
         },
         {
           "id": "2024_5088888",
@@ -413916,7 +413916,7 @@ const COLLEGE_SCOUTING = {
           "name": "Trevion Cooley",
           "team": "Louisville",
           "year": 2021,
-          "dist": 0.739
+          "dist": 0.738
         }
       ],
       "2023_4900025": [
@@ -413981,7 +413981,7 @@ const COLLEGE_SCOUTING = {
           "name": "Terrence Upshaw",
           "team": "App State",
           "year": 2014,
-          "dist": 0.557
+          "dist": 0.556
         },
         {
           "id": "2020_4608607",
@@ -414069,7 +414069,7 @@ const COLLEGE_SCOUTING = {
           "name": "Devon Achane",
           "team": "Texas A&M",
           "year": 2020,
-          "dist": 0.825
+          "dist": 0.824
         },
         {
           "id": "2024_4685829",
@@ -414090,7 +414090,7 @@ const COLLEGE_SCOUTING = {
           "name": "Godspower Nwawuihe",
           "team": "Army",
           "year": 2026,
-          "dist": 1.415
+          "dist": 1.416
         },
         {
           "id": "2015_3124351",
@@ -414104,14 +414104,14 @@ const COLLEGE_SCOUTING = {
           "name": "Khobie Martin",
           "team": "Indiana",
           "year": 2025,
-          "dist": 1.567
+          "dist": 1.568
         },
         {
           "id": "2022_4683665",
           "name": "Zuberi Mobley",
           "team": "Florida Atlantic",
           "year": 2022,
-          "dist": 1.601
+          "dist": 1.602
         },
         {
           "id": "2016_3921652",
@@ -414125,7 +414125,7 @@ const COLLEGE_SCOUTING = {
           "name": "Billy Lucas",
           "team": "Liberty",
           "year": 2023,
-          "dist": 1.773
+          "dist": 1.774
         },
         {
           "id": "2017_4037631",
@@ -414176,7 +414176,7 @@ const COLLEGE_SCOUTING = {
           "name": "Abu Sama III",
           "team": "Iowa State",
           "year": 2025,
-          "dist": 0.588
+          "dist": 0.587
         },
         {
           "id": "2020_4361354",
@@ -414220,7 +414220,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jaydon Blue",
           "team": "Texas",
           "year": 2024,
-          "dist": 0.455
+          "dist": 0.454
         },
         {
           "id": "2022_4361333",
@@ -414248,7 +414248,7 @@ const COLLEGE_SCOUTING = {
           "name": "Emmett Johnson",
           "team": "Nebraska",
           "year": 2024,
-          "dist": 0.614
+          "dist": 0.615
         },
         {
           "id": "2017_545512",
@@ -414285,7 +414285,7 @@ const COLLEGE_SCOUTING = {
           "name": "Arnold Barnes",
           "team": "Tulane",
           "year": 2024,
-          "dist": 0.247
+          "dist": 0.246
         },
         {
           "id": "2013_546383",
@@ -414385,7 +414385,7 @@ const COLLEGE_SCOUTING = {
           "name": "Javian Hawkins",
           "team": "Louisville",
           "year": 2020,
-          "dist": 1.672
+          "dist": 1.673
         },
         {
           "id": "2021_4576294",
@@ -414399,7 +414399,7 @@ const COLLEGE_SCOUTING = {
           "name": "Da'Leon Ward",
           "team": "Texas Tech",
           "year": 2016,
-          "dist": 1.832
+          "dist": 1.833
         },
         {
           "id": "2018_4261912",
@@ -414413,14 +414413,14 @@ const COLLEGE_SCOUTING = {
           "name": "Mark Walton",
           "team": "Miami",
           "year": 2017,
-          "dist": 1.863
+          "dist": 1.862
         },
         {
           "id": "2018_3911494",
           "name": "Loren Easly",
           "team": "North Texas",
           "year": 2018,
-          "dist": 1.866
+          "dist": 1.867
         }
       ],
       "2023_4921517": [
@@ -414478,7 +414478,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jon Hilliman",
           "team": "Rutgers",
           "year": 2018,
-          "dist": 0.738
+          "dist": 0.739
         },
         {
           "id": "2014_3116563",
@@ -414687,7 +414687,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jaziun Patterson",
           "team": "Iowa",
           "year": 2024,
-          "dist": 0.531
+          "dist": 0.53
         },
         {
           "id": "2025_5207930",
@@ -414738,7 +414738,7 @@ const COLLEGE_SCOUTING = {
           "name": "Patrick Smith",
           "team": "Vanderbilt",
           "year": 2023,
-          "dist": 0.353
+          "dist": 0.354
         },
         {
           "id": "2015_3127207",
@@ -414796,35 +414796,35 @@ const COLLEGE_SCOUTING = {
           "name": "Treyson Potts",
           "team": "Minnesota",
           "year": 2021,
-          "dist": 1.132
+          "dist": 1.131
         },
         {
           "id": "2021_4576294",
           "name": "Harrison Waylee",
           "team": "Northern Illinois",
           "year": 2021,
-          "dist": 1.161
+          "dist": 1.162
         },
         {
           "id": "2018_4261912",
           "name": "Brenden Knox",
           "team": "Marshall",
           "year": 2018,
-          "dist": 1.38
+          "dist": 1.381
         },
         {
           "id": "2014_504955",
           "name": "Joey Iosefa",
           "team": "Hawai'i",
           "year": 2014,
-          "dist": 1.418
+          "dist": 1.419
         },
         {
           "id": "2022_4605841",
           "name": "Nathan Carter",
           "team": "UConn",
           "year": 2022,
-          "dist": 1.438
+          "dist": 1.439
         },
         {
           "id": "2023_4920901",
@@ -414852,7 +414852,7 @@ const COLLEGE_SCOUTING = {
           "name": "Damarea Crockett",
           "team": "Missouri",
           "year": 2017,
-          "dist": 2.187
+          "dist": 2.188
         }
       ],
       "2023_5081526": [
@@ -415026,7 +415026,7 @@ const COLLEGE_SCOUTING = {
           "name": "Sean Tyler",
           "team": "Western Michigan",
           "year": 2021,
-          "dist": 0.634
+          "dist": 0.635
         },
         {
           "id": "2018_4240781",
@@ -415191,7 +415191,7 @@ const COLLEGE_SCOUTING = {
           "name": "Nicholas Singleton",
           "team": "Penn State",
           "year": 2024,
-          "dist": 1.02
+          "dist": 1.021
         },
         {
           "id": "2020_4428119",
@@ -415270,7 +415270,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kelsey Young",
           "team": "Stanford",
           "year": 2014,
-          "dist": 0.531
+          "dist": 0.532
         },
         {
           "id": "2023_4596437",
@@ -415609,7 +415609,7 @@ const COLLEGE_SCOUTING = {
           "name": "CJ Baxter Jr.",
           "team": "Kentucky",
           "year": 2026,
-          "dist": 0.434
+          "dist": 0.433
         },
         {
           "id": "2019_4034306",
@@ -415637,7 +415637,7 @@ const COLLEGE_SCOUTING = {
           "name": "Moe Neal",
           "team": "Syracuse",
           "year": 2018,
-          "dist": 0.495
+          "dist": 0.494
         },
         {
           "id": "2024_4367069",
@@ -415674,7 +415674,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dominic Richardson",
           "team": "Oklahoma State",
           "year": 2022,
-          "dist": 0.812
+          "dist": 0.811
         },
         {
           "id": "2021_4429835",
@@ -415983,14 +415983,14 @@ const COLLEGE_SCOUTING = {
           "name": "Jojo Kemp",
           "team": "Kentucky",
           "year": 2014,
-          "dist": 0.501
+          "dist": 0.502
         },
         {
           "id": "2020_4243542",
           "name": "Bentavious Thompson",
           "team": "UCF",
           "year": 2020,
-          "dist": 0.542
+          "dist": 0.543
         },
         {
           "id": "2021_4686513",
@@ -416069,7 +416069,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jordan Houston",
           "team": "NC State",
           "year": 2019,
-          "dist": 0.437
+          "dist": 0.436
         },
         {
           "id": "2024_4911971",
@@ -416099,14 +416099,14 @@ const COLLEGE_SCOUTING = {
           "name": "Rodney Hammond Jr.",
           "team": "Pittsburgh",
           "year": 2022,
-          "dist": 0.621
+          "dist": 0.622
         },
         {
           "id": "2023_4880964",
           "name": "Terron Kellman",
           "team": "Charlotte",
           "year": 2023,
-          "dist": 0.63
+          "dist": 0.631
         },
         {
           "id": "2025_5079641",
@@ -416278,7 +416278,7 @@ const COLLEGE_SCOUTING = {
           "name": "Aidan Laughery",
           "team": "Illinois",
           "year": 2024,
-          "dist": 0.533
+          "dist": 0.534
         },
         {
           "id": "2018_4259180",
@@ -416336,7 +416336,7 @@ const COLLEGE_SCOUTING = {
           "name": "Rashod Dubinion",
           "team": "App State",
           "year": 2025,
-          "dist": 0.695
+          "dist": 0.696
         },
         {
           "id": "2013_536365",
@@ -416357,7 +416357,7 @@ const COLLEGE_SCOUTING = {
           "name": "Daylan Smothers",
           "team": "NC State",
           "year": 2025,
-          "dist": 0.702
+          "dist": 0.701
         },
         {
           "id": "2016_3125830",
@@ -416508,7 +416508,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dedrick Mills",
           "team": "Georgia Tech",
           "year": 2016,
-          "dist": 0.724
+          "dist": 0.723
         }
       ],
       "2024_4367069": [
@@ -416648,10 +416648,10 @@ const COLLEGE_SCOUTING = {
           "dist": 0.547
         },
         {
-          "id": "2024_4569481",
-          "name": "Anthony Watkins",
-          "team": "Tulsa",
-          "year": 2024,
+          "id": "2025_5219089",
+          "name": "Antonio Harris",
+          "team": "Purdue",
+          "year": 2025,
           "dist": 0.558
         }
       ],
@@ -416861,7 +416861,7 @@ const COLLEGE_SCOUTING = {
           "name": "Clay Thevenin",
           "team": "Louisiana Tech",
           "year": 2025,
-          "dist": 0.935
+          "dist": 0.936
         },
         {
           "id": "2025_4816099",
@@ -416912,14 +416912,14 @@ const COLLEGE_SCOUTING = {
           "name": "Jaison Patterson",
           "team": "Bowling Green",
           "year": 2024,
-          "dist": 0.774
+          "dist": 0.775
         },
         {
           "id": "2024_4873442",
           "name": "Xavier Brown",
           "team": "Virginia",
           "year": 2024,
-          "dist": 0.822
+          "dist": 0.821
         },
         {
           "id": "2017_3929927",
@@ -417012,7 +417012,7 @@ const COLLEGE_SCOUTING = {
           "name": "Shawndarrius Phillips",
           "team": "Florida International",
           "year": 2017,
-          "dist": 0.553
+          "dist": 0.554
         }
       ],
       "2024_4427649": [
@@ -417077,7 +417077,7 @@ const COLLEGE_SCOUTING = {
           "name": "Damien Harris",
           "team": "Alabama",
           "year": 2016,
-          "dist": 0.663
+          "dist": 0.664
         },
         {
           "id": "2014_500215",
@@ -417135,7 +417135,7 @@ const COLLEGE_SCOUTING = {
           "name": "Vincent Davis",
           "team": "UNLV",
           "year": 2023,
-          "dist": 0.792
+          "dist": 0.793
         },
         {
           "id": "2015_550009",
@@ -417186,7 +417186,7 @@ const COLLEGE_SCOUTING = {
           "name": "A.J. Ouellette",
           "team": "Ohio",
           "year": 2017,
-          "dist": 0.434
+          "dist": 0.433
         },
         {
           "id": "2024_4685246",
@@ -417265,14 +417265,14 @@ const COLLEGE_SCOUTING = {
           "name": "Brock Townsend",
           "team": "Central Michigan",
           "year": 2025,
-          "dist": 2.217
+          "dist": 2.218
         },
         {
           "id": "2021_4601283",
           "name": "Trevion Cooley",
           "team": "Louisville",
           "year": 2021,
-          "dist": 2.227
+          "dist": 2.228
         },
         {
           "id": "2013_515371",
@@ -417300,7 +417300,7 @@ const COLLEGE_SCOUTING = {
           "name": "Michael Wiley",
           "team": "Arizona",
           "year": 2023,
-          "dist": 2.327
+          "dist": 2.326
         }
       ],
       "2024_4429059": [
@@ -417365,14 +417365,14 @@ const COLLEGE_SCOUTING = {
           "name": "Mario Anderson",
           "team": "Memphis",
           "year": 2024,
-          "dist": 0.806
+          "dist": 0.807
         },
         {
           "id": "2016_545833",
           "name": "Aaron Jones",
           "team": "UTEP",
           "year": 2016,
-          "dist": 0.833
+          "dist": 0.834
         }
       ],
       "2024_4429439": [
@@ -417409,7 +417409,7 @@ const COLLEGE_SCOUTING = {
           "name": "Cade Carney",
           "team": "Wake Forest",
           "year": 2018,
-          "dist": 1.037
+          "dist": 1.038
         },
         {
           "id": "2021_4382468",
@@ -417444,7 +417444,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jamauri Bogan",
           "team": "Western Michigan",
           "year": 2018,
-          "dist": 1.166
+          "dist": 1.167
         }
       ],
       "2024_4429618": [
@@ -417539,7 +417539,7 @@ const COLLEGE_SCOUTING = {
           "name": "Patrick Taylor Jr.",
           "team": "Memphis",
           "year": 2019,
-          "dist": 0.674
+          "dist": 0.673
         },
         {
           "id": "2021_4362509",
@@ -417646,7 +417646,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tahj Brooks",
           "team": "Texas Tech",
           "year": 2024,
-          "dist": 1.522
+          "dist": 1.521
         },
         {
           "id": "2021_4430104",
@@ -417686,17 +417686,17 @@ const COLLEGE_SCOUTING = {
           "dist": 0.608
         },
         {
-          "id": "2022_4576294",
-          "name": "Harrison Waylee",
-          "team": "Northern Illinois",
-          "year": 2022,
-          "dist": 0.646
-        },
-        {
           "id": "2020_4241555",
           "name": "Elijah Mitchell",
           "team": "Louisiana",
           "year": 2020,
+          "dist": 0.646
+        },
+        {
+          "id": "2022_4576294",
+          "name": "Harrison Waylee",
+          "team": "Northern Illinois",
+          "year": 2022,
           "dist": 0.646
         },
         {
@@ -417862,7 +417862,7 @@ const COLLEGE_SCOUTING = {
           "name": "James Charles",
           "team": "Florida Atlantic",
           "year": 2020,
-          "dist": 0.501
+          "dist": 0.5
         },
         {
           "id": "2019_4568312",
@@ -417985,7 +417985,7 @@ const COLLEGE_SCOUTING = {
           "name": "Elijah Green",
           "team": "North Carolina",
           "year": 2022,
-          "dist": 0.637
+          "dist": 0.638
         },
         {
           "id": "2019_4035695",
@@ -418029,7 +418029,7 @@ const COLLEGE_SCOUTING = {
           "name": "King Doerue",
           "team": "Purdue",
           "year": 2021,
-          "dist": 0.541
+          "dist": 0.54
         },
         {
           "id": "2020_4567507",
@@ -418057,7 +418057,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tae Meadows",
           "team": "Troy",
           "year": 2025,
-          "dist": 0.719
+          "dist": 0.718
         },
         {
           "id": "2022_4427916",
@@ -418173,7 +418173,7 @@ const COLLEGE_SCOUTING = {
           "name": "D.J. Knox",
           "team": "Purdue",
           "year": 2017,
-          "dist": 0.274
+          "dist": 0.275
         },
         {
           "id": "2018_4039503",
@@ -418215,7 +418215,7 @@ const COLLEGE_SCOUTING = {
           "name": "Terrence Franks",
           "team": "Texas State",
           "year": 2014,
-          "dist": 0.506
+          "dist": 0.507
         },
         {
           "id": "2025_5147861",
@@ -418236,7 +418236,7 @@ const COLLEGE_SCOUTING = {
           "name": "D'Vonte Price",
           "team": "Florida International",
           "year": 2018,
-          "dist": 0.553
+          "dist": 0.554
         }
       ],
       "2024_4432431": [
@@ -418345,7 +418345,7 @@ const COLLEGE_SCOUTING = {
           "name": "Messiah Burch",
           "team": "Buffalo",
           "year": 2026,
-          "dist": 0.62
+          "dist": 0.621
         },
         {
           "id": "2016_3915115",
@@ -418503,7 +418503,7 @@ const COLLEGE_SCOUTING = {
           "name": "Malik Williams",
           "team": "Louisville",
           "year": 2017,
-          "dist": 0.47
+          "dist": 0.471
         },
         {
           "id": "2024_5079410",
@@ -418568,7 +418568,7 @@ const COLLEGE_SCOUTING = {
           "name": "Micah Bernard",
           "team": "Utah",
           "year": 2021,
-          "dist": 0.661
+          "dist": 0.662
         },
         {
           "id": "2016_534616",
@@ -418677,21 +418677,21 @@ const COLLEGE_SCOUTING = {
           "name": "Evan Dickens",
           "team": "Liberty",
           "year": 2025,
-          "dist": 1.712
+          "dist": 1.713
         },
         {
           "id": "2024_4683889",
           "name": "Damien Taylor",
           "team": "Troy",
           "year": 2024,
-          "dist": 1.721
+          "dist": 1.722
         },
         {
           "id": "2015_514162",
           "name": "Zack Langer",
           "team": "Tulsa",
           "year": 2015,
-          "dist": 1.826
+          "dist": 1.825
         },
         {
           "id": "2015_3127369",
@@ -418712,7 +418712,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tucker Gregg",
           "team": "Georgia State",
           "year": 2022,
-          "dist": 2.033
+          "dist": 2.034
         },
         {
           "id": "2013_488054",
@@ -418791,7 +418791,7 @@ const COLLEGE_SCOUTING = {
           "name": "Andrew Henry",
           "team": "UL Monroe",
           "year": 2022,
-          "dist": 0.405
+          "dist": 0.404
         },
         {
           "id": "2014_552526",
@@ -418986,7 +418986,7 @@ const COLLEGE_SCOUTING = {
           "name": "A.J. Turner",
           "team": "Marshall",
           "year": 2024,
-          "dist": 0.871
+          "dist": 0.872
         },
         {
           "id": "2022_4362538",
@@ -419007,7 +419007,7 @@ const COLLEGE_SCOUTING = {
           "name": "Devonte Lee",
           "team": "Nevada",
           "year": 2019,
-          "dist": 1.002
+          "dist": 1.001
         },
         {
           "id": "2021_4244071",
@@ -419028,7 +419028,7 @@ const COLLEGE_SCOUTING = {
           "name": "Perris Jones",
           "team": "Virginia",
           "year": 2023,
-          "dist": 1.052
+          "dist": 1.053
         }
       ],
       "2024_4569481": [
@@ -419058,7 +419058,7 @@ const COLLEGE_SCOUTING = {
           "name": "Alex Fontenot",
           "team": "Colorado",
           "year": 2021,
-          "dist": 0.426
+          "dist": 0.425
         },
         {
           "id": "2017_4042808",
@@ -419240,10 +419240,10 @@ const COLLEGE_SCOUTING = {
           "dist": 0.773
         },
         {
-          "id": "2018_3124664",
-          "name": "Tyrone Owens",
-          "team": "New Mexico",
-          "year": 2018,
+          "id": "2020_4568613",
+          "name": "Tayvon Ruley",
+          "team": "Temple",
+          "year": 2020,
           "dist": 0.806
         }
       ],
@@ -419267,7 +419267,7 @@ const COLLEGE_SCOUTING = {
           "name": "Joseph Himon II",
           "team": "Northwestern",
           "year": 2026,
-          "dist": 0.521
+          "dist": 0.522
         },
         {
           "id": "2016_546204",
@@ -419418,7 +419418,7 @@ const COLLEGE_SCOUTING = {
           "name": "Armand Shyne",
           "team": "Utah",
           "year": 2016,
-          "dist": 1.38
+          "dist": 1.379
         },
         {
           "id": "2018_4261912",
@@ -419432,7 +419432,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kamari Moulton",
           "team": "Iowa",
           "year": 2026,
-          "dist": 1.588
+          "dist": 1.587
         },
         {
           "id": "2023_4875385",
@@ -419662,7 +419662,7 @@ const COLLEGE_SCOUTING = {
           "name": "Landon Sims",
           "team": "Hawai'i",
           "year": 2025,
-          "dist": 0.562
+          "dist": 0.563
         },
         {
           "id": "2015_3892787",
@@ -419734,7 +419734,7 @@ const COLLEGE_SCOUTING = {
           "name": "Donerio Davenport",
           "team": "Texas State",
           "year": 2023,
-          "dist": 0.74
+          "dist": 0.741
         },
         {
           "id": "2026_4837391",
@@ -419829,7 +419829,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jordan Mason",
           "team": "Georgia Tech",
           "year": 2019,
-          "dist": 0.323
+          "dist": 0.322
         },
         {
           "id": "2025_4954455",
@@ -419943,7 +419943,7 @@ const COLLEGE_SCOUTING = {
           "name": "Cameron Dickey",
           "team": "Texas Tech",
           "year": 2025,
-          "dist": 0.531
+          "dist": 0.532
         },
         {
           "id": "2017_3126072",
@@ -419964,7 +419964,7 @@ const COLLEGE_SCOUTING = {
           "name": "Shadrach Thornton",
           "team": "NC State",
           "year": 2014,
-          "dist": 0.557
+          "dist": 0.558
         }
       ],
       "2024_4612211": [
@@ -420052,7 +420052,7 @@ const COLLEGE_SCOUTING = {
           "name": "Daniel Hishaw Jr.",
           "team": "Kansas",
           "year": 2025,
-          "dist": 0.344
+          "dist": 0.345
         },
         {
           "id": "2020_4361354",
@@ -420066,7 +420066,7 @@ const COLLEGE_SCOUTING = {
           "name": "Khalil Herbert",
           "team": "Kansas",
           "year": 2017,
-          "dist": 0.435
+          "dist": 0.436
         },
         {
           "id": "2023_4918126",
@@ -420108,7 +420108,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tre Siggers",
           "team": "SMU",
           "year": 2021,
-          "dist": 0.639
+          "dist": 0.638
         }
       ],
       "2024_4682640": [
@@ -420159,7 +420159,7 @@ const COLLEGE_SCOUTING = {
           "name": "Trey Ragas",
           "team": "Louisiana",
           "year": 2020,
-          "dist": 0.77
+          "dist": 0.771
         },
         {
           "id": "2020_4036032",
@@ -420189,7 +420189,7 @@ const COLLEGE_SCOUTING = {
           "name": "Khari Blasingame",
           "team": "Vanderbilt",
           "year": 2018,
-          "dist": 0.403
+          "dist": 0.404
         },
         {
           "id": "2014_3126246",
@@ -420389,7 +420389,7 @@ const COLLEGE_SCOUTING = {
           "name": "A'Jon Vivens",
           "team": "Colorado State",
           "year": 2021,
-          "dist": 0.735
+          "dist": 0.734
         },
         {
           "id": "2013_550882",
@@ -420419,7 +420419,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jaylan Knighton",
           "team": "Miami",
           "year": 2022,
-          "dist": 0.503
+          "dist": 0.504
         },
         {
           "id": "2022_4916885",
@@ -420433,7 +420433,7 @@ const COLLEGE_SCOUTING = {
           "name": "Emmett Johnson",
           "team": "Nebraska",
           "year": 2023,
-          "dist": 0.563
+          "dist": 0.564
         },
         {
           "id": "2024_4687463",
@@ -420468,7 +420468,7 @@ const COLLEGE_SCOUTING = {
           "name": "Nahshon Ellerbe",
           "team": "Rice",
           "year": 2017,
-          "dist": 0.618
+          "dist": 0.619
         }
       ],
       "2024_4683889": [
@@ -420533,14 +420533,14 @@ const COLLEGE_SCOUTING = {
           "name": "Kapri Bibbs",
           "team": "Colorado State",
           "year": 2013,
-          "dist": 1.708
+          "dist": 1.709
         },
         {
           "id": "2024_4565318",
           "name": "Terion Stewart",
           "team": "Bowling Green",
           "year": 2024,
-          "dist": 1.721
+          "dist": 1.722
         }
       ],
       "2024_4684525": [
@@ -420649,7 +420649,7 @@ const COLLEGE_SCOUTING = {
           "name": "DeeJay Dallas",
           "team": "Miami",
           "year": 2019,
-          "dist": 0.837
+          "dist": 0.838
         },
         {
           "id": "2026_5081332",
@@ -420670,7 +420670,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kesean Strong",
           "team": "Old Dominion",
           "year": 2018,
-          "dist": 0.906
+          "dist": 0.907
         },
         {
           "id": "2024_4685350",
@@ -420707,7 +420707,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ralph Webb",
           "team": "Vanderbilt",
           "year": 2016,
-          "dist": 0.496
+          "dist": 0.497
         },
         {
           "id": "2025_5078916",
@@ -420800,7 +420800,7 @@ const COLLEGE_SCOUTING = {
           "name": "Michael Gordon",
           "team": "Arkansas State",
           "year": 2014,
-          "dist": 0.898
+          "dist": 0.899
         },
         {
           "id": "2025_4691889",
@@ -420879,7 +420879,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tyler Goodson",
           "team": "Iowa",
           "year": 2019,
-          "dist": 0.401
+          "dist": 0.4
         },
         {
           "id": "2026_5085729",
@@ -420930,7 +420930,7 @@ const COLLEGE_SCOUTING = {
           "name": "Lincoln Pare",
           "team": "Arkansas State",
           "year": 2021,
-          "dist": 0.866
+          "dist": 0.865
         },
         {
           "id": "2016_3125112",
@@ -421023,7 +421023,7 @@ const COLLEGE_SCOUTING = {
           "name": "Alan Woods III",
           "team": "Kennesaw State",
           "year": 2026,
-          "dist": 0.583
+          "dist": 0.584
         },
         {
           "id": "2016_3932420",
@@ -421067,21 +421067,21 @@ const COLLEGE_SCOUTING = {
           "name": "Trevorris Johnson",
           "team": "TCU",
           "year": 2014,
-          "dist": 0.9
+          "dist": 0.901
         },
         {
           "id": "2018_3886841",
           "name": "Tony Brooks-James",
           "team": "Oregon",
           "year": 2018,
-          "dist": 0.932
+          "dist": 0.931
         },
         {
           "id": "2022_4683665",
           "name": "Zuberi Mobley",
           "team": "Florida Atlantic",
           "year": 2022,
-          "dist": 1.039
+          "dist": 1.04
         },
         {
           "id": "2022_4429012",
@@ -421146,7 +421146,7 @@ const COLLEGE_SCOUTING = {
           "name": "Don Jackson",
           "team": "Nevada",
           "year": 2014,
-          "dist": 0.614
+          "dist": 0.613
         },
         {
           "id": "2013_514253",
@@ -421181,7 +421181,7 @@ const COLLEGE_SCOUTING = {
           "name": "Gus Edwards",
           "team": "Rutgers",
           "year": 2017,
-          "dist": 0.694
+          "dist": 0.695
         },
         {
           "id": "2022_4688835",
@@ -421276,7 +421276,7 @@ const COLLEGE_SCOUTING = {
           "name": "Isaiah Saunders",
           "team": "Idaho",
           "year": 2016,
-          "dist": 0.441
+          "dist": 0.442
         },
         {
           "id": "2017_4045702",
@@ -421341,14 +421341,14 @@ const COLLEGE_SCOUTING = {
           "name": "De'Anthony Thomas",
           "team": "Oregon",
           "year": 2013,
-          "dist": 1.306
+          "dist": 1.307
         },
         {
           "id": "2023_4569156",
           "name": "Michael Wiley",
           "team": "Arizona",
           "year": 2023,
-          "dist": 1.583
+          "dist": 1.584
         },
         {
           "id": "2014_504673",
@@ -421362,7 +421362,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ty'Son Williams",
           "team": "South Carolina",
           "year": 2018,
-          "dist": 1.673
+          "dist": 1.674
         },
         {
           "id": "2020_4686468",
@@ -421404,7 +421404,7 @@ const COLLEGE_SCOUTING = {
           "name": "Josh Henderson",
           "team": "Indiana",
           "year": 2023,
-          "dist": 1.874
+          "dist": 1.875
         }
       ],
       "2024_4687463": [
@@ -421557,7 +421557,7 @@ const COLLEGE_SCOUTING = {
           "name": "Andrew Henry",
           "team": "New Mexico",
           "year": 2023,
-          "dist": 0.319
+          "dist": 0.318
         },
         {
           "id": "2021_4360589",
@@ -421578,7 +421578,7 @@ const COLLEGE_SCOUTING = {
           "name": "DeSean Bishop",
           "team": "Tennessee",
           "year": 2024,
-          "dist": 0.457
+          "dist": 0.456
         },
         {
           "id": "2026_5141598",
@@ -421715,7 +421715,7 @@ const COLLEGE_SCOUTING = {
           "name": "Matthew Dayes",
           "team": "NC State",
           "year": 2016,
-          "dist": 0.617
+          "dist": 0.618
         },
         {
           "id": "2016_3128840",
@@ -421815,7 +421815,7 @@ const COLLEGE_SCOUTING = {
           "name": "Bo Jackson",
           "team": "Ohio State",
           "year": 2026,
-          "dist": 0.496
+          "dist": 0.497
         },
         {
           "id": "2015_546633",
@@ -421836,7 +421836,7 @@ const COLLEGE_SCOUTING = {
           "name": "Justice Haynes",
           "team": "Georgia Tech",
           "year": 2026,
-          "dist": 0.541
+          "dist": 0.542
         }
       ],
       "2024_4696240": [
@@ -421846,13 +421846,6 @@ const COLLEGE_SCOUTING = {
           "team": "Texas State",
           "year": 2017,
           "dist": 0.47
-        },
-        {
-          "id": "2026_5207930",
-          "name": "DAndre Hardeman Jr.",
-          "team": "Rice",
-          "year": 2026,
-          "dist": 0.48
         },
         {
           "id": "2024_4899361",
@@ -421909,6 +421902,13 @@ const COLLEGE_SCOUTING = {
           "team": "Cincinnati",
           "year": 2013,
           "dist": 0.651
+        },
+        {
+          "id": "2025_5120317",
+          "name": "Jordan Lovett",
+          "team": "Troy",
+          "year": 2025,
+          "dist": 0.666
         }
       ],
       "2024_4696690": [
@@ -421955,6 +421955,13 @@ const COLLEGE_SCOUTING = {
           "dist": 0.439
         },
         {
+          "id": "2026_5207930",
+          "name": "DAndre Hardeman Jr.",
+          "team": "Rice",
+          "year": 2026,
+          "dist": 0.459
+        },
+        {
           "id": "2025_5079378",
           "name": "Darrion Dupree",
           "team": "Wisconsin",
@@ -421974,13 +421981,6 @@ const COLLEGE_SCOUTING = {
           "team": "Georgia State",
           "year": 2015,
           "dist": 0.549
-        },
-        {
-          "id": "2017_4259180",
-          "name": "John Lovett",
-          "team": "Baylor",
-          "year": 2017,
-          "dist": 0.568
         }
       ],
       "2024_4696981": [
@@ -422017,7 +422017,7 @@ const COLLEGE_SCOUTING = {
           "name": "I'Tavius Mathers",
           "team": "Middle Tennessee",
           "year": 2016,
-          "dist": 1.495
+          "dist": 1.496
         },
         {
           "id": "2015_3117251",
@@ -422045,7 +422045,7 @@ const COLLEGE_SCOUTING = {
           "name": "Lorenzo Lingard",
           "team": "Akron",
           "year": 2023,
-          "dist": 1.708
+          "dist": 1.709
         },
         {
           "id": "2016_3124608",
@@ -422154,7 +422154,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jordan Houston",
           "team": "NC State",
           "year": 2022,
-          "dist": 0.46
+          "dist": 0.459
         },
         {
           "id": "2014_559716",
@@ -422168,7 +422168,7 @@ const COLLEGE_SCOUTING = {
           "name": "Hassan Hall",
           "team": "Georgia Tech",
           "year": 2022,
-          "dist": 0.516
+          "dist": 0.515
         },
         {
           "id": "2018_4240455",
@@ -422182,7 +422182,7 @@ const COLLEGE_SCOUTING = {
           "name": "Rodney Smith",
           "team": "Minnesota",
           "year": 2015,
-          "dist": 0.547
+          "dist": 0.546
         },
         {
           "id": "2025_5161800",
@@ -422329,18 +422329,18 @@ const COLLEGE_SCOUTING = {
           "dist": 0.477
         },
         {
-          "id": "2024_4685279",
-          "name": "Jaydon Blue",
-          "team": "Texas",
-          "year": 2024,
-          "dist": 0.488
-        },
-        {
           "id": "2025_4869582",
           "name": "Cam Barfield",
           "team": "Hawai'i",
           "year": 2025,
-          "dist": 0.488
+          "dist": 0.489
+        },
+        {
+          "id": "2024_4685279",
+          "name": "Jaydon Blue",
+          "team": "Texas",
+          "year": 2024,
+          "dist": 0.489
         }
       ],
       "2024_4705927": [
@@ -422493,7 +422493,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ra'Von Bonner",
           "team": "Illinois",
           "year": 2018,
-          "dist": 0.45
+          "dist": 0.451
         },
         {
           "id": "2021_4362841",
@@ -422514,14 +422514,14 @@ const COLLEGE_SCOUTING = {
           "name": "Jordan Mason",
           "team": "Georgia Tech",
           "year": 2018,
-          "dist": 0.535
+          "dist": 0.536
         },
         {
           "id": "2023_4676889",
           "name": "Myles Montgomery",
           "team": "Cincinnati",
           "year": 2023,
-          "dist": 0.551
+          "dist": 0.552
         },
         {
           "id": "2013_504030",
@@ -422600,7 +422600,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ron Wiggins",
           "team": "Jacksonville State",
           "year": 2023,
-          "dist": 0.793
+          "dist": 0.792
         },
         {
           "id": "2016_4035724",
@@ -422614,7 +422614,7 @@ const COLLEGE_SCOUTING = {
           "name": "Stephen Carr",
           "team": "USC",
           "year": 2017,
-          "dist": 0.83
+          "dist": 0.829
         },
         {
           "id": "2025_4688817",
@@ -422772,7 +422772,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jovantae Barnes",
           "team": "Oklahoma",
           "year": 2022,
-          "dist": 0.467
+          "dist": 0.468
         }
       ],
       "2024_4837385": [
@@ -422781,14 +422781,14 @@ const COLLEGE_SCOUTING = {
           "name": "Chris Warren III",
           "team": "Texas",
           "year": 2015,
-          "dist": 0.545
+          "dist": 0.546
         },
         {
           "id": "2025_5295724",
           "name": "Michael Turner",
           "team": "Baylor",
           "year": 2025,
-          "dist": 0.582
+          "dist": 0.581
         },
         {
           "id": "2019_4374172",
@@ -423097,7 +423097,7 @@ const COLLEGE_SCOUTING = {
           "name": "Wayne Taulapapa",
           "team": "Virginia",
           "year": 2020,
-          "dist": 0.52
+          "dist": 0.521
         },
         {
           "id": "2019_4040728",
@@ -423111,7 +423111,7 @@ const COLLEGE_SCOUTING = {
           "name": "Javon Leake",
           "team": "Maryland",
           "year": 2019,
-          "dist": 0.533
+          "dist": 0.532
         },
         {
           "id": "2021_4567246",
@@ -423334,7 +423334,7 @@ const COLLEGE_SCOUTING = {
           "name": "Marquis Young",
           "team": "Massachusetts",
           "year": 2017,
-          "dist": 0.632
+          "dist": 0.631
         },
         {
           "id": "2026_4816099",
@@ -423371,21 +423371,21 @@ const COLLEGE_SCOUTING = {
           "name": "Gerald Green",
           "team": "Troy",
           "year": 2024,
-          "dist": 0.822
+          "dist": 0.821
         },
         {
           "id": "2025_5141560",
           "name": "Ousmane Kromah",
           "team": "Florida State",
           "year": 2025,
-          "dist": 0.838
+          "dist": 0.839
         },
         {
           "id": "2021_4686095",
           "name": "Kobe Pace",
           "team": "Clemson",
           "year": 2021,
-          "dist": 0.842
+          "dist": 0.841
         },
         {
           "id": "2023_5085265",
@@ -423413,7 +423413,7 @@ const COLLEGE_SCOUTING = {
           "name": "Charles McClelland",
           "team": "Cincinnati",
           "year": 2018,
-          "dist": 0.875
+          "dist": 0.876
         },
         {
           "id": "2013_504702",
@@ -423457,7 +423457,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ashton Jeanty",
           "team": "Boise State",
           "year": 2023,
-          "dist": 1.202
+          "dist": 1.203
         },
         {
           "id": "2016_3128774",
@@ -423485,7 +423485,7 @@ const COLLEGE_SCOUTING = {
           "name": "Seth McGowan",
           "team": "New Mexico State",
           "year": 2024,
-          "dist": 1.357
+          "dist": 1.356
         },
         {
           "id": "2025_4876378",
@@ -423580,7 +423580,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kenneth Harper",
           "team": "Temple",
           "year": 2013,
-          "dist": 0.736
+          "dist": 0.737
         },
         {
           "id": "2017_3125962",
@@ -423601,7 +423601,7 @@ const COLLEGE_SCOUTING = {
           "name": "Frank Peasant",
           "team": "Middle Tennessee",
           "year": 2022,
-          "dist": 0.811
+          "dist": 0.81
         },
         {
           "id": "2022_4569156",
@@ -423666,7 +423666,7 @@ const COLLEGE_SCOUTING = {
           "name": "Abdul Adams",
           "team": "Syracuse",
           "year": 2019,
-          "dist": 0.604
+          "dist": 0.605
         },
         {
           "id": "2025_5153650",
@@ -423910,7 +423910,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dawson Pendergrass",
           "team": "Baylor",
           "year": 2024,
-          "dist": 0.437
+          "dist": 0.438
         },
         {
           "id": "2013_513021",
@@ -423954,7 +423954,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dontrell Hilliard",
           "team": "Tulane",
           "year": 2014,
-          "dist": 0.669
+          "dist": 0.67
         },
         {
           "id": "2023_4918414",
@@ -423996,7 +423996,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kenan Christon",
           "team": "San Diego State",
           "year": 2023,
-          "dist": 0.886
+          "dist": 0.887
         }
       ],
       "2024_4894661": [
@@ -424047,7 +424047,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jordon Davison",
           "team": "Oregon",
           "year": 2025,
-          "dist": 0.808
+          "dist": 0.807
         },
         {
           "id": "2026_5084047",
@@ -424126,7 +424126,7 @@ const COLLEGE_SCOUTING = {
           "name": "Abu Sama III",
           "team": "Iowa State",
           "year": 2024,
-          "dist": 0.485
+          "dist": 0.484
         },
         {
           "id": "2013_536149",
@@ -424277,7 +424277,7 @@ const COLLEGE_SCOUTING = {
           "name": "Shannon Brooks",
           "team": "Minnesota",
           "year": 2016,
-          "dist": 1.072
+          "dist": 1.073
         },
         {
           "id": "2013_535470",
@@ -424451,7 +424451,7 @@ const COLLEGE_SCOUTING = {
           "name": "Van Edwards Jr.",
           "team": "Akron",
           "year": 2016,
-          "dist": 0.483
+          "dist": 0.484
         },
         {
           "id": "2018_3914927",
@@ -424465,7 +424465,7 @@ const COLLEGE_SCOUTING = {
           "name": "Freddie Holly III",
           "team": "Hawai'i",
           "year": 2018,
-          "dist": 0.567
+          "dist": 0.566
         },
         {
           "id": "2018_4035284",
@@ -424572,7 +424572,7 @@ const COLLEGE_SCOUTING = {
           "name": "Xavier Hall",
           "team": "New Mexico State",
           "year": 2016,
-          "dist": 0.574
+          "dist": 0.575
         }
       ],
       "2024_4917288": [
@@ -424616,7 +424616,7 @@ const COLLEGE_SCOUTING = {
           "name": "Brandon Ross",
           "team": "Maryland",
           "year": 2014,
-          "dist": 0.621
+          "dist": 0.62
         },
         {
           "id": "2026_4685445",
@@ -424644,7 +424644,7 @@ const COLLEGE_SCOUTING = {
           "name": "Donovan Edwards",
           "team": "Michigan",
           "year": 2023,
-          "dist": 0.749
+          "dist": 0.75
         }
       ],
       "2024_4917310": [
@@ -424681,20 +424681,20 @@ const COLLEGE_SCOUTING = {
           "name": "Shock Linwood",
           "team": "Baylor",
           "year": 2013,
-          "dist": 0.417
-        },
-        {
-          "id": "2023_4429043",
-          "name": "Jaylan Knighton",
-          "team": "SMU",
-          "year": 2023,
-          "dist": 0.42
+          "dist": 0.416
         },
         {
           "id": "2024_5218820",
           "name": "Johnnie Daniels",
           "team": "Mississippi State",
           "year": 2024,
+          "dist": 0.42
+        },
+        {
+          "id": "2023_4429043",
+          "name": "Jaylan Knighton",
+          "team": "SMU",
+          "year": 2023,
           "dist": 0.42
         },
         {
@@ -424749,17 +424749,17 @@ const COLLEGE_SCOUTING = {
           "dist": 0.391
         },
         {
-          "id": "2021_4430063",
-          "name": "Dominique Johnson",
-          "team": "Arkansas",
-          "year": 2021,
-          "dist": 0.416
-        },
-        {
           "id": "2020_4568583",
           "name": "Tyler Lavine",
           "team": "SMU",
           "year": 2020,
+          "dist": 0.416
+        },
+        {
+          "id": "2021_4430063",
+          "name": "Dominique Johnson",
+          "team": "Arkansas",
+          "year": 2021,
           "dist": 0.416
         },
         {
@@ -424811,7 +424811,7 @@ const COLLEGE_SCOUTING = {
           "name": "Reggie Corbin",
           "team": "Illinois",
           "year": 2019,
-          "dist": 0.436
+          "dist": 0.437
         },
         {
           "id": "2021_4361529",
@@ -424832,7 +424832,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tra Carson",
           "team": "Texas A&M",
           "year": 2014,
-          "dist": 0.492
+          "dist": 0.493
         },
         {
           "id": "2018_3915459",
@@ -424897,14 +424897,14 @@ const COLLEGE_SCOUTING = {
           "name": "Algernon Brown",
           "team": "BYU",
           "year": 2015,
-          "dist": 0.708
+          "dist": 0.707
         },
         {
           "id": "2022_4569594",
           "name": "Cameron Davis",
           "team": "Washington",
           "year": 2022,
-          "dist": 0.723
+          "dist": 0.722
         },
         {
           "id": "2023_4880638",
@@ -424962,7 +424962,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dwight Phillips Jr.",
           "team": "Georgia",
           "year": 2026,
-          "dist": 0.606
+          "dist": 0.605
         },
         {
           "id": "2023_4921517",
@@ -424997,7 +424997,7 @@ const COLLEGE_SCOUTING = {
           "name": "Shaun Wilson",
           "team": "Duke",
           "year": 2014,
-          "dist": 0.687
+          "dist": 0.688
         },
         {
           "id": "2025_4683165",
@@ -425027,7 +425027,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tyler Ervin",
           "team": "San José State",
           "year": 2015,
-          "dist": 0.715
+          "dist": 0.716
         },
         {
           "id": "2020_4243003",
@@ -425062,7 +425062,7 @@ const COLLEGE_SCOUTING = {
           "name": "Devontae Booker",
           "team": "Utah",
           "year": 2014,
-          "dist": 0.864
+          "dist": 0.865
         },
         {
           "id": "2018_3886636",
@@ -425076,7 +425076,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jadyn Ott",
           "team": "California",
           "year": 2022,
-          "dist": 0.921
+          "dist": 0.92
         }
       ],
       "2024_4921108": [
@@ -425092,7 +425092,7 @@ const COLLEGE_SCOUTING = {
           "name": "Brandon Thomas",
           "team": "Memphis",
           "year": 2024,
-          "dist": 0.457
+          "dist": 0.456
         },
         {
           "id": "2025_5194306",
@@ -425329,7 +425329,7 @@ const COLLEGE_SCOUTING = {
           "name": "Amari Daniels",
           "team": "Texas A&M",
           "year": 2024,
-          "dist": 0.437
+          "dist": 0.438
         },
         {
           "id": "2021_4363104",
@@ -425380,7 +425380,7 @@ const COLLEGE_SCOUTING = {
           "name": "Camerun Peoples",
           "team": "App State",
           "year": 2021,
-          "dist": 0.471
+          "dist": 0.472
         },
         {
           "id": "2021_4685247",
@@ -425436,7 +425436,7 @@ const COLLEGE_SCOUTING = {
           "name": "Hassan Haskins",
           "team": "Michigan",
           "year": 2020,
-          "dist": 0.811
+          "dist": 0.812
         }
       ],
       "2024_4923282": [
@@ -425480,14 +425480,14 @@ const COLLEGE_SCOUTING = {
           "name": "Clyde Edwards-Helaire",
           "team": "LSU",
           "year": 2018,
-          "dist": 0.406
+          "dist": 0.405
         },
         {
           "id": "2026_5084286",
           "name": "Makhi Frazier",
           "team": "Ole Miss",
           "year": 2026,
-          "dist": 0.41
+          "dist": 0.409
         },
         {
           "id": "2016_536483",
@@ -425552,7 +425552,7 @@ const COLLEGE_SCOUTING = {
           "name": "Treyvon Hughes",
           "team": "UTEP",
           "year": 2018,
-          "dist": 0.507
+          "dist": 0.508
         },
         {
           "id": "2013_517604",
@@ -425703,7 +425703,7 @@ const COLLEGE_SCOUTING = {
           "name": "Cardae Mack",
           "team": "Arizona State",
           "year": 2026,
-          "dist": 0.83
+          "dist": 0.831
         },
         {
           "id": "2025_4430893",
@@ -425724,7 +425724,7 @@ const COLLEGE_SCOUTING = {
           "name": "Chase Brown",
           "team": "Illinois",
           "year": 2021,
-          "dist": 0.897
+          "dist": 0.898
         }
       ],
       "2024_4954506": [
@@ -425754,7 +425754,7 @@ const COLLEGE_SCOUTING = {
           "name": "Paul James",
           "team": "Rutgers",
           "year": 2015,
-          "dist": 0.369
+          "dist": 0.37
         },
         {
           "id": "2023_4433827",
@@ -425782,7 +425782,7 @@ const COLLEGE_SCOUTING = {
           "name": "Reggie Whatley",
           "team": "Middle Tennessee",
           "year": 2013,
-          "dist": 0.421
+          "dist": 0.42
         },
         {
           "id": "2016_3917964",
@@ -425956,14 +425956,14 @@ const COLLEGE_SCOUTING = {
           "name": "Chris Smith",
           "team": "Louisiana",
           "year": 2021,
-          "dist": 0.396
+          "dist": 0.397
         },
         {
           "id": "2023_4569330",
           "name": "Austin Jones",
           "team": "USC",
           "year": 2023,
-          "dist": 0.495
+          "dist": 0.494
         },
         {
           "id": "2014_534616",
@@ -425984,7 +425984,7 @@ const COLLEGE_SCOUTING = {
           "name": "Doroland Dorceus",
           "team": "Memphis",
           "year": 2016,
-          "dist": 0.504
+          "dist": 0.503
         },
         {
           "id": "2014_511941",
@@ -426012,7 +426012,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jaren Mangham",
           "team": "South Florida",
           "year": 2021,
-          "dist": 0.569
+          "dist": 0.568
         }
       ],
       "2024_5078005": [
@@ -426035,7 +426035,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kedrick Reescano",
           "team": "Arizona",
           "year": 2024,
-          "dist": 0.485
+          "dist": 0.484
         },
         {
           "id": "2020_4568613",
@@ -426128,7 +426128,7 @@ const COLLEGE_SCOUTING = {
           "name": "Bill Davis",
           "team": "Louisiana",
           "year": 2025,
-          "dist": 0.709
+          "dist": 0.71
         },
         {
           "id": "2013_536149",
@@ -426221,7 +426221,7 @@ const COLLEGE_SCOUTING = {
           "name": "Brandon Holloway",
           "team": "Mississippi State",
           "year": 2015,
-          "dist": 0.567
+          "dist": 0.568
         },
         {
           "id": "2014_3126246",
@@ -426402,7 +426402,7 @@ const COLLEGE_SCOUTING = {
           "name": "Stanley Williams",
           "team": "Kentucky",
           "year": 2016,
-          "dist": 0.423
+          "dist": 0.424
         },
         {
           "id": "2021_4430551",
@@ -426474,7 +426474,7 @@ const COLLEGE_SCOUTING = {
           "name": "Zonovan Knight",
           "team": "NC State",
           "year": 2020,
-          "dist": 0.508
+          "dist": 0.509
         },
         {
           "id": "2015_546046",
@@ -426725,7 +426725,7 @@ const COLLEGE_SCOUTING = {
           "name": "Matt Johnson",
           "team": "Charlotte",
           "year": 2015,
-          "dist": 0.517
+          "dist": 0.518
         },
         {
           "id": "2014_517214",
@@ -426848,7 +426848,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jojo Kemp",
           "team": "Kentucky",
           "year": 2016,
-          "dist": 0.582
+          "dist": 0.581
         },
         {
           "id": "2018_3932338",
@@ -426899,7 +426899,7 @@ const COLLEGE_SCOUTING = {
           "name": "Taiwan Deal",
           "team": "Wisconsin",
           "year": 2018,
-          "dist": 0.504
+          "dist": 0.505
         },
         {
           "id": "2015_3134305",
@@ -426913,7 +426913,7 @@ const COLLEGE_SCOUTING = {
           "name": "Johnny Jefferson",
           "team": "Baylor",
           "year": 2015,
-          "dist": 0.713
+          "dist": 0.714
         },
         {
           "id": "2017_3915536",
@@ -426985,7 +426985,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jambres Dubar",
           "team": "Boise State",
           "year": 2023,
-          "dist": 0.531
+          "dist": 0.53
         },
         {
           "id": "2018_4360238",
@@ -427036,7 +427036,7 @@ const COLLEGE_SCOUTING = {
           "name": "Damon Bankston",
           "team": "New Mexico",
           "year": 2025,
-          "dist": 0.513
+          "dist": 0.512
         },
         {
           "id": "2024_4427111",
@@ -427085,14 +427085,14 @@ const COLLEGE_SCOUTING = {
           "name": "Clay Thevenin",
           "team": "Louisiana Tech",
           "year": 2025,
-          "dist": 1.084
+          "dist": 1.085
         },
         {
           "id": "2016_3128774",
           "name": "Kalen Ballage",
           "team": "Arizona State",
           "year": 2016,
-          "dist": 1.117
+          "dist": 1.116
         }
       ],
       "2024_5081926": [
@@ -427164,7 +427164,7 @@ const COLLEGE_SCOUTING = {
           "name": "Justin Crawford",
           "team": "West Virginia",
           "year": 2017,
-          "dist": 0.954
+          "dist": 0.953
         }
       ],
       "2024_5082548": [
@@ -427173,7 +427173,7 @@ const COLLEGE_SCOUTING = {
           "name": "Fluff Bothwell",
           "team": "South Alabama",
           "year": 2024,
-          "dist": 0.694
+          "dist": 0.695
         },
         {
           "id": "2017_4239996",
@@ -427215,7 +427215,7 @@ const COLLEGE_SCOUTING = {
           "name": "Samson Evans",
           "team": "Eastern Michigan",
           "year": 2021,
-          "dist": 0.82
+          "dist": 0.821
         },
         {
           "id": "2021_4370813",
@@ -427229,14 +427229,14 @@ const COLLEGE_SCOUTING = {
           "name": "Daniel Hishaw Jr.",
           "team": "Kansas",
           "year": 2024,
-          "dist": 0.871
+          "dist": 0.872
         },
         {
           "id": "2024_5078422",
           "name": "Brandon High",
           "team": "UTSA",
           "year": 2024,
-          "dist": 0.891
+          "dist": 0.892
         }
       ],
       "2024_5083111": [
@@ -427259,14 +427259,14 @@ const COLLEGE_SCOUTING = {
           "name": "Paul Perkins",
           "team": "UCLA",
           "year": 2013,
-          "dist": 1.621
+          "dist": 1.62
         },
         {
           "id": "2015_3125907",
           "name": "Arkeel Newsome",
           "team": "UConn",
           "year": 2015,
-          "dist": 1.7
+          "dist": 1.701
         },
         {
           "id": "2019_4035826",
@@ -427331,7 +427331,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jabari Small",
           "team": "Tennessee",
           "year": 2022,
-          "dist": 0.344
+          "dist": 0.343
         },
         {
           "id": "2020_4361430",
@@ -427373,7 +427373,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kasey Carrier",
           "team": "New Mexico",
           "year": 2013,
-          "dist": 0.432
+          "dist": 0.433
         },
         {
           "id": "2025_5081926",
@@ -427452,7 +427452,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jeremy Langford",
           "team": "Michigan State",
           "year": 2013,
-          "dist": 1.428
+          "dist": 1.429
         }
       ],
       "2024_5084798": [
@@ -427547,7 +427547,7 @@ const COLLEGE_SCOUTING = {
           "name": "Marcus Cox",
           "team": "App State",
           "year": 2016,
-          "dist": 0.833
+          "dist": 0.832
         },
         {
           "id": "2013_503303",
@@ -427568,7 +427568,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tyjae Spears",
           "team": "Tulane",
           "year": 2021,
-          "dist": 0.945
+          "dist": 0.946
         },
         {
           "id": "2021_4429299",
@@ -427626,7 +427626,7 @@ const COLLEGE_SCOUTING = {
           "name": "Lamical Perine",
           "team": "Florida",
           "year": 2018,
-          "dist": 0.56
+          "dist": 0.559
         },
         {
           "id": "2018_3918034",
@@ -427691,7 +427691,7 @@ const COLLEGE_SCOUTING = {
           "name": "Steward Butler",
           "team": "Marshall",
           "year": 2014,
-          "dist": 0.523
+          "dist": 0.522
         },
         {
           "id": "2017_4034782",
@@ -427805,7 +427805,7 @@ const COLLEGE_SCOUTING = {
           "name": "Trevion Cooley",
           "team": "Louisville",
           "year": 2021,
-          "dist": 0.943
+          "dist": 0.944
         },
         {
           "id": "2016_550944",
@@ -427835,7 +427835,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ashton Jeanty",
           "team": "Boise State",
           "year": 2023,
-          "dist": 1.546
+          "dist": 1.545
         },
         {
           "id": "2016_549766",
@@ -427856,7 +427856,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jekail Middlebrook",
           "team": "Middle Tennessee",
           "year": 2025,
-          "dist": 1.624
+          "dist": 1.625
         },
         {
           "id": "2016_3117251",
@@ -427884,7 +427884,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kenneth Dixon",
           "team": "Louisiana Tech",
           "year": 2015,
-          "dist": 1.856
+          "dist": 1.855
         }
       ],
       "2024_5089859": [
@@ -427914,21 +427914,21 @@ const COLLEGE_SCOUTING = {
           "name": "Marquez Cooper",
           "team": "Kent State",
           "year": 2022,
-          "dist": 1.226
+          "dist": 1.227
         },
         {
           "id": "2018_3910404",
           "name": "Frankie Hickson",
           "team": "Liberty",
           "year": 2018,
-          "dist": 1.338
+          "dist": 1.337
         },
         {
           "id": "2014_552904",
           "name": "Jordan Howard",
           "team": "UAB",
           "year": 2014,
-          "dist": 1.373
+          "dist": 1.372
         },
         {
           "id": "2018_3701017",
@@ -427942,21 +427942,21 @@ const COLLEGE_SCOUTING = {
           "name": "Javian Hawkins",
           "team": "Louisville",
           "year": 2019,
-          "dist": 1.433
+          "dist": 1.432
         },
         {
           "id": "2024_4590347",
           "name": "Rahjai Harris",
           "team": "East Carolina",
           "year": 2024,
-          "dist": 1.474
+          "dist": 1.473
         },
         {
           "id": "2021_4244599",
           "name": "Shamari Brooks",
           "team": "Tulsa",
           "year": 2021,
-          "dist": 1.481
+          "dist": 1.48
         }
       ],
       "2024_5091725": [
@@ -427986,7 +427986,7 @@ const COLLEGE_SCOUTING = {
           "name": "Royce Freeman",
           "team": "Oregon",
           "year": 2017,
-          "dist": 0.579
+          "dist": 0.578
         },
         {
           "id": "2019_4384198",
@@ -428028,7 +428028,7 @@ const COLLEGE_SCOUTING = {
           "name": "Michael Washington",
           "team": "Arkansas",
           "year": 2025,
-          "dist": 0.661
+          "dist": 0.662
         }
       ],
       "2024_5093062": [
@@ -428058,7 +428058,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jarvion Franklin",
           "team": "Western Michigan",
           "year": 2016,
-          "dist": 0.861
+          "dist": 0.862
         },
         {
           "id": "2017_3126246",
@@ -428165,7 +428165,7 @@ const COLLEGE_SCOUTING = {
           "name": "Nathaniel Peat",
           "team": "Missouri",
           "year": 2023,
-          "dist": 0.712
+          "dist": 0.711
         },
         {
           "id": "2019_4360238",
@@ -428188,7 +428188,7 @@ const COLLEGE_SCOUTING = {
           "name": "Seth Davis",
           "team": "Mississippi State",
           "year": 2023,
-          "dist": 0.247
+          "dist": 0.246
         },
         {
           "id": "2013_546383",
@@ -428209,7 +428209,7 @@ const COLLEGE_SCOUTING = {
           "name": "Paul Harris",
           "team": "Hawai'i",
           "year": 2016,
-          "dist": 0.376
+          "dist": 0.377
         },
         {
           "id": "2021_4430666",
@@ -428230,7 +428230,7 @@ const COLLEGE_SCOUTING = {
           "name": "Marlon Gunn",
           "team": "East Carolina",
           "year": 2025,
-          "dist": 0.449
+          "dist": 0.448
         },
         {
           "id": "2026_5078422",
@@ -428267,7 +428267,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kenny McIntosh",
           "team": "Georgia",
           "year": 2021,
-          "dist": 0.651
+          "dist": 0.652
         },
         {
           "id": "2021_4430049",
@@ -428302,7 +428302,7 @@ const COLLEGE_SCOUTING = {
           "name": "Wayne Knight",
           "team": "James Madison",
           "year": 2024,
-          "dist": 0.803
+          "dist": 0.804
         },
         {
           "id": "2026_5295815",
@@ -428411,7 +428411,7 @@ const COLLEGE_SCOUTING = {
           "name": "Reggie Love III",
           "team": "Illinois",
           "year": 2022,
-          "dist": 0.365
+          "dist": 0.366
         },
         {
           "id": "2019_4374141",
@@ -428428,17 +428428,17 @@ const COLLEGE_SCOUTING = {
           "dist": 0.468
         },
         {
-          "id": "2019_4361777",
-          "name": "Zamir White",
-          "team": "Georgia",
-          "year": 2019,
-          "dist": 0.523
-        },
-        {
           "id": "2020_4243459",
           "name": "Jakairi Moses",
           "team": "Western Kentucky",
           "year": 2020,
+          "dist": 0.523
+        },
+        {
+          "id": "2019_4361777",
+          "name": "Zamir White",
+          "team": "Georgia",
+          "year": 2019,
           "dist": 0.523
         },
         {
@@ -428490,7 +428490,7 @@ const COLLEGE_SCOUTING = {
           "name": "Malik Jackson",
           "team": "UL Monroe",
           "year": 2021,
-          "dist": 0.514
+          "dist": 0.515
         },
         {
           "id": "2020_4036436",
@@ -428648,7 +428648,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jacquez Stuart",
           "team": "Toledo",
           "year": 2023,
-          "dist": 0.471
+          "dist": 0.47
         },
         {
           "id": "2022_4887225",
@@ -428720,7 +428720,7 @@ const COLLEGE_SCOUTING = {
           "name": "Makhilyn Young",
           "team": "Vanderbilt",
           "year": 2025,
-          "dist": 1.321
+          "dist": 1.32
         },
         {
           "id": "2024_4682640",
@@ -428734,7 +428734,7 @@ const COLLEGE_SCOUTING = {
           "name": "A.J. Turner",
           "team": "Marshall",
           "year": 2024,
-          "dist": 1.345
+          "dist": 1.344
         },
         {
           "id": "2018_559654",
@@ -428785,21 +428785,21 @@ const COLLEGE_SCOUTING = {
           "name": "DeAndre Torrey",
           "team": "North Texas",
           "year": 2019,
-          "dist": 0.582
+          "dist": 0.583
         },
         {
           "id": "2021_4362478",
           "name": "Emari Demercado",
           "team": "TCU",
           "year": 2021,
-          "dist": 0.669
+          "dist": 0.668
         },
         {
           "id": "2025_5114332",
           "name": "Jaivian Thomas",
           "team": "UCLA",
           "year": 2025,
-          "dist": 0.69
+          "dist": 0.689
         },
         {
           "id": "2016_3924376",
@@ -428929,7 +428929,7 @@ const COLLEGE_SCOUTING = {
           "name": "TJ Horton",
           "team": "Ball State",
           "year": 2026,
-          "dist": 0.702
+          "dist": 0.703
         },
         {
           "id": "2023_4567216",
@@ -428980,7 +428980,7 @@ const COLLEGE_SCOUTING = {
           "name": "Cameron Scarlett",
           "team": "Stanford",
           "year": 2018,
-          "dist": 0.404
+          "dist": 0.405
         },
         {
           "id": "2019_4363153",
@@ -429022,7 +429022,7 @@ const COLLEGE_SCOUTING = {
           "name": "Snoop Conner",
           "team": "Ole Miss",
           "year": 2020,
-          "dist": 0.467
+          "dist": 0.468
         },
         {
           "id": "2026_5083175",
@@ -429166,7 +429166,7 @@ const COLLEGE_SCOUTING = {
           "name": "Shontrelle Johnson",
           "team": "Iowa State",
           "year": 2013,
-          "dist": 0.833
+          "dist": 0.834
         },
         {
           "id": "2023_4870934",
@@ -429180,7 +429180,7 @@ const COLLEGE_SCOUTING = {
           "name": "Abu Sama III",
           "team": "Iowa State",
           "year": 2024,
-          "dist": 0.929
+          "dist": 0.93
         }
       ],
       "2024_5154339": [
@@ -429389,7 +429389,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jadan Baugh",
           "team": "Florida",
           "year": 2026,
-          "dist": 0.604
+          "dist": 0.603
         },
         {
           "id": "2019_4261912",
@@ -429426,7 +429426,7 @@ const COLLEGE_SCOUTING = {
           "name": "Brian Battie",
           "team": "South Florida",
           "year": 2020,
-          "dist": 0.763
+          "dist": 0.764
         },
         {
           "id": "2021_4360492",
@@ -429440,7 +429440,7 @@ const COLLEGE_SCOUTING = {
           "name": "Gary Brightwell",
           "team": "Arizona",
           "year": 2019,
-          "dist": 0.804
+          "dist": 0.805
         },
         {
           "id": "2019_4361430",
@@ -429631,17 +429631,17 @@ const COLLEGE_SCOUTING = {
           "dist": 0.508
         },
         {
-          "id": "2025_4805256",
-          "name": "Sutton Smith",
-          "team": "Memphis",
-          "year": 2025,
-          "dist": 0.509
-        },
-        {
           "id": "2026_5226551",
           "name": "Jalen Likely",
           "team": "Jacksonville State",
           "year": 2026,
+          "dist": 0.509
+        },
+        {
+          "id": "2025_4805256",
+          "name": "Sutton Smith",
+          "team": "Memphis",
+          "year": 2025,
           "dist": 0.509
         },
         {
@@ -429707,7 +429707,7 @@ const COLLEGE_SCOUTING = {
           "name": "Adam Hine",
           "team": "BYU",
           "year": 2015,
-          "dist": 1.446
+          "dist": 1.445
         },
         {
           "id": "2023_4875385",
@@ -429728,14 +429728,14 @@ const COLLEGE_SCOUTING = {
           "name": "Josh Hicks",
           "team": "Rutgers",
           "year": 2014,
-          "dist": 1.554
+          "dist": 1.555
         },
         {
           "id": "2026_5093886",
           "name": "Kamari Moulton",
           "team": "Iowa",
           "year": 2026,
-          "dist": 1.624
+          "dist": 1.623
         },
         {
           "id": "2017_4242380",
@@ -429756,7 +429756,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kevorian Barnes",
           "team": "TCU",
           "year": 2025,
-          "dist": 1.674
+          "dist": 1.673
         }
       ],
       "2024_5197065": [
@@ -429900,7 +429900,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jalen White",
           "team": "Georgia Southern",
           "year": 2021,
-          "dist": 2.163
+          "dist": 2.164
         }
       ],
       "2024_5218820": [
@@ -429912,17 +429912,17 @@ const COLLEGE_SCOUTING = {
           "dist": 0.295
         },
         {
-          "id": "2023_4708487",
-          "name": "Jaquez Moore",
-          "team": "Duke",
-          "year": 2023,
-          "dist": 0.307
-        },
-        {
           "id": "2020_4360238",
           "name": "Dameon Pierce",
           "team": "Florida",
           "year": 2020,
+          "dist": 0.307
+        },
+        {
+          "id": "2023_4708487",
+          "name": "Jaquez Moore",
+          "team": "Duke",
+          "year": 2023,
           "dist": 0.307
         },
         {
@@ -430037,13 +430037,13 @@ const COLLEGE_SCOUTING = {
           "name": "Ulysses Bentley IV",
           "team": "SMU",
           "year": 2021,
-          "dist": 0.597
+          "dist": 0.596
         },
         {
-          "id": "2019_4362161",
-          "name": "Ta'Zhawn Henry",
-          "team": "Texas Tech",
-          "year": 2019,
+          "id": "2021_4686513",
+          "name": "Frank Peasant",
+          "team": "Middle Tennessee",
+          "year": 2021,
           "dist": 0.618
         }
       ],
@@ -430067,7 +430067,7 @@ const COLLEGE_SCOUTING = {
           "name": "A.J. Turner",
           "team": "Marshall",
           "year": 2024,
-          "dist": 0.694
+          "dist": 0.695
         },
         {
           "id": "2023_4429012",
@@ -430095,7 +430095,7 @@ const COLLEGE_SCOUTING = {
           "name": "Maleek Irons",
           "team": "Ohio",
           "year": 2018,
-          "dist": 0.855
+          "dist": 0.854
         },
         {
           "id": "2026_4923046",
@@ -430174,14 +430174,14 @@ const COLLEGE_SCOUTING = {
           "name": "Abdul Adams",
           "team": "Syracuse",
           "year": 2019,
-          "dist": 1.06
+          "dist": 1.059
         },
         {
           "id": "2018_4046676",
           "name": "Tony Jones Jr.",
           "team": "Notre Dame",
           "year": 2018,
-          "dist": 1.102
+          "dist": 1.101
         },
         {
           "id": "2013_550296",
@@ -430325,7 +430325,7 @@ const COLLEGE_SCOUTING = {
           "name": "Deshawn McClease",
           "team": "Virginia Tech",
           "year": 2017,
-          "dist": 0.456
+          "dist": 0.457
         },
         {
           "id": "2023_4373273",
@@ -430509,17 +430509,17 @@ const COLLEGE_SCOUTING = {
           "dist": 0.415
         },
         {
-          "id": "2015_3917190",
-          "name": "Warren Wand",
-          "team": "Arkansas State",
-          "year": 2015,
-          "dist": 0.422
-        },
-        {
           "id": "2022_4887225",
           "name": "Andrew Henry",
           "team": "UL Monroe",
           "year": 2022,
+          "dist": 0.422
+        },
+        {
+          "id": "2015_3917190",
+          "name": "Warren Wand",
+          "team": "Arkansas State",
+          "year": 2015,
           "dist": 0.422
         },
         {
@@ -430548,7 +430548,7 @@ const COLLEGE_SCOUTING = {
           "name": "Brittain Brown",
           "team": "Duke",
           "year": 2017,
-          "dist": 0.501
+          "dist": 0.502
         }
       ],
       "2025_4430565": [
@@ -430715,14 +430715,14 @@ const COLLEGE_SCOUTING = {
           "name": "Warren Wand",
           "team": "Arkansas State",
           "year": 2018,
-          "dist": 0.454
+          "dist": 0.455
         },
         {
           "id": "2019_4362087",
           "name": "Keaontay Ingram",
           "team": "Texas",
           "year": 2019,
-          "dist": 0.461
+          "dist": 0.46
         },
         {
           "id": "2020_4568406",
@@ -430973,7 +430973,7 @@ const COLLEGE_SCOUTING = {
           "name": "SaRodorick Thompson",
           "team": "Texas Tech",
           "year": 2019,
-          "dist": 0.601
+          "dist": 0.602
         },
         {
           "id": "2022_4360057",
@@ -431038,7 +431038,7 @@ const COLLEGE_SCOUTING = {
           "name": "Deon McIntosh",
           "team": "Washington State",
           "year": 2020,
-          "dist": 0.596
+          "dist": 0.597
         },
         {
           "id": "2019_4243315",
@@ -431089,7 +431089,7 @@ const COLLEGE_SCOUTING = {
           "name": "Adam Cofield",
           "team": "Western Kentucky",
           "year": 2021,
-          "dist": 0.542
+          "dist": 0.543
         },
         {
           "id": "2013_550654",
@@ -431226,7 +431226,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jerome Ford",
           "team": "Cincinnati",
           "year": 2020,
-          "dist": 0.361
+          "dist": 0.362
         },
         {
           "id": "2023_4374306",
@@ -431340,7 +431340,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kejon Owens",
           "team": "Florida International",
           "year": 2023,
-          "dist": 0.858
+          "dist": 0.857
         }
       ],
       "2025_4565318": [
@@ -431356,7 +431356,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jovantae Barnes",
           "team": "Oklahoma",
           "year": 2022,
-          "dist": 0.293
+          "dist": 0.292
         },
         {
           "id": "2017_4036436",
@@ -431477,7 +431477,7 @@ const COLLEGE_SCOUTING = {
           "name": "Khalil Herbert",
           "team": "Kansas",
           "year": 2017,
-          "dist": 0.675
+          "dist": 0.676
         },
         {
           "id": "2019_4427728",
@@ -431493,7 +431493,7 @@ const COLLEGE_SCOUTING = {
           "name": "Nate Noel",
           "team": "Missouri",
           "year": 2024,
-          "dist": 0.344
+          "dist": 0.345
         },
         {
           "id": "2020_4361354",
@@ -431700,7 +431700,7 @@ const COLLEGE_SCOUTING = {
           "name": "Matt Colburn",
           "team": "Wake Forest",
           "year": 2018,
-          "dist": 0.557
+          "dist": 0.558
         }
       ],
       "2025_4602783": [
@@ -431888,7 +431888,7 @@ const COLLEGE_SCOUTING = {
           "name": "Quali Conley",
           "team": "San José State",
           "year": 2023,
-          "dist": 0.692
+          "dist": 0.693
         },
         {
           "id": "2014_514508",
@@ -431974,7 +431974,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kaylon Watson",
           "team": "UL Monroe",
           "year": 2015,
-          "dist": 0.777
+          "dist": 0.778
         },
         {
           "id": "2013_518390",
@@ -432021,13 +432021,6 @@ const COLLEGE_SCOUTING = {
           "dist": 0.49
         },
         {
-          "id": "2026_5207930",
-          "name": "DAndre Hardeman Jr.",
-          "team": "Rice",
-          "year": 2026,
-          "dist": 0.578
-        },
-        {
           "id": "2024_4696240",
           "name": "Jaylon Jackson",
           "team": "Iowa State",
@@ -432061,6 +432054,13 @@ const COLLEGE_SCOUTING = {
           "team": "Colorado State",
           "year": 2019,
           "dist": 0.687
+        },
+        {
+          "id": "2022_4428211",
+          "name": "Nathaniel Peat",
+          "team": "Missouri",
+          "year": 2022,
+          "dist": 0.695
         }
       ],
       "2025_4613105": [
@@ -432169,14 +432169,14 @@ const COLLEGE_SCOUTING = {
           "name": "Brandon Betancourt",
           "team": "New Mexico State",
           "year": 2013,
-          "dist": 0.905
+          "dist": 0.906
         },
         {
           "id": "2018_4240581",
           "name": "Ivory Kelly-Martin",
           "team": "Iowa",
           "year": 2018,
-          "dist": 0.92
+          "dist": 0.921
         },
         {
           "id": "2013_505202",
@@ -432255,7 +432255,7 @@ const COLLEGE_SCOUTING = {
           "name": "Damien Harris",
           "team": "Alabama",
           "year": 2017,
-          "dist": 0.572
+          "dist": 0.573
         },
         {
           "id": "2026_5079561",
@@ -432265,17 +432265,17 @@ const COLLEGE_SCOUTING = {
           "dist": 0.581
         },
         {
-          "id": "2024_5151892",
-          "name": "Ja'Kobi Jackson",
-          "team": "Florida",
-          "year": 2024,
-          "dist": 0.626
-        },
-        {
           "id": "2018_4035470",
           "name": "Tavien Feaster",
           "team": "Clemson",
           "year": 2018,
+          "dist": 0.626
+        },
+        {
+          "id": "2024_5151892",
+          "name": "Ja'Kobi Jackson",
+          "team": "Florida",
+          "year": 2024,
           "dist": 0.626
         }
       ],
@@ -432378,7 +432378,7 @@ const COLLEGE_SCOUTING = {
           "name": "Josh Henderson",
           "team": "Indiana",
           "year": 2023,
-          "dist": 0.738
+          "dist": 0.739
         },
         {
           "id": "2014_550492",
@@ -432478,7 +432478,7 @@ const COLLEGE_SCOUTING = {
           "name": "Montrell Johnson",
           "team": "Florida",
           "year": 2023,
-          "dist": 0.687
+          "dist": 0.686
         },
         {
           "id": "2016_545809",
@@ -432536,7 +432536,7 @@ const COLLEGE_SCOUTING = {
           "name": "Gaej Walker",
           "team": "Western Kentucky",
           "year": 2019,
-          "dist": 0.908
+          "dist": 0.907
         },
         {
           "id": "2017_547172",
@@ -432680,7 +432680,7 @@ const COLLEGE_SCOUTING = {
           "name": "Markell Jones",
           "team": "Purdue",
           "year": 2017,
-          "dist": 0.945
+          "dist": 0.944
         },
         {
           "id": "2019_4373630",
@@ -432708,7 +432708,7 @@ const COLLEGE_SCOUTING = {
           "name": "Terrence Upshaw",
           "team": "App State",
           "year": 2017,
-          "dist": 1.202
+          "dist": 1.203
         }
       ],
       "2025_4685477": [
@@ -432717,7 +432717,7 @@ const COLLEGE_SCOUTING = {
           "name": "Cartevious Norton",
           "team": "Iowa State",
           "year": 2022,
-          "dist": 0.622
+          "dist": 0.621
         },
         {
           "id": "2017_3699935",
@@ -432734,13 +432734,6 @@ const COLLEGE_SCOUTING = {
           "dist": 0.661
         },
         {
-          "id": "2013_536240",
-          "name": "Steven Lakalaka",
-          "team": "Hawai'i",
-          "year": 2013,
-          "dist": 0.693
-        },
-        {
           "id": "2017_3124795",
           "name": "D'Andre Ferby",
           "team": "Western Kentucky",
@@ -432748,17 +432741,24 @@ const COLLEGE_SCOUTING = {
           "dist": 0.693
         },
         {
-          "id": "2025_4880395",
-          "name": "Tae Meadows",
-          "team": "Troy",
-          "year": 2025,
-          "dist": 0.694
+          "id": "2013_536240",
+          "name": "Steven Lakalaka",
+          "team": "Hawai'i",
+          "year": 2013,
+          "dist": 0.693
         },
         {
           "id": "2014_3116775",
           "name": "Marshawn Williams",
           "team": "Virginia Tech",
           "year": 2014,
+          "dist": 0.694
+        },
+        {
+          "id": "2025_4880395",
+          "name": "Tae Meadows",
+          "team": "Troy",
+          "year": 2025,
           "dist": 0.694
         },
         {
@@ -432910,7 +432910,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dominic Richardson",
           "team": "Oklahoma State",
           "year": 2022,
-          "dist": 1.351
+          "dist": 1.352
         },
         {
           "id": "2021_4430807",
@@ -433054,7 +433054,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jordan Nubin",
           "team": "Minnesota",
           "year": 2023,
-          "dist": 1.147
+          "dist": 1.148
         },
         {
           "id": "2026_5086034",
@@ -433068,7 +433068,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tyler King",
           "team": "Marshall",
           "year": 2018,
-          "dist": 1.161
+          "dist": 1.162
         }
       ],
       "2025_4688817": [
@@ -433098,7 +433098,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jarveon Williams",
           "team": "UTSA",
           "year": 2014,
-          "dist": 0.822
+          "dist": 0.823
         },
         {
           "id": "2024_4717724",
@@ -433112,7 +433112,7 @@ const COLLEGE_SCOUTING = {
           "name": "Matt Hadley",
           "team": "BYU",
           "year": 2018,
-          "dist": 0.848
+          "dist": 0.847
         },
         {
           "id": "2020_4686468",
@@ -433126,7 +433126,7 @@ const COLLEGE_SCOUTING = {
           "name": "Soso Jamabo",
           "team": "UCLA",
           "year": 2017,
-          "dist": 0.967
+          "dist": 0.966
         },
         {
           "id": "2022_4362161",
@@ -433249,21 +433249,21 @@ const COLLEGE_SCOUTING = {
           "name": "Wesley Kennedy III",
           "team": "Georgia Southern",
           "year": 2019,
-          "dist": 0.998
+          "dist": 0.999
         },
         {
           "id": "2026_5306988",
           "name": "Terrence Brown Jr.",
           "team": "Middle Tennessee",
           "year": 2026,
-          "dist": 1.056
+          "dist": 1.057
         },
         {
           "id": "2015_550637",
           "name": "Jamal Morrow",
           "team": "Washington State",
           "year": 2015,
-          "dist": 1.096
+          "dist": 1.095
         },
         {
           "id": "2014_538149",
@@ -433356,7 +433356,7 @@ const COLLEGE_SCOUTING = {
           "name": "CJ Marable",
           "team": "Coastal Carolina",
           "year": 2020,
-          "dist": 0.676
+          "dist": 0.677
         }
       ],
       "2025_4695787": [
@@ -433421,7 +433421,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kelvin Taylor",
           "team": "Florida",
           "year": 2015,
-          "dist": 0.835
+          "dist": 0.836
         },
         {
           "id": "2018_4371953",
@@ -433458,7 +433458,7 @@ const COLLEGE_SCOUTING = {
           "name": "Marlon Gunn",
           "team": "East Carolina",
           "year": 2022,
-          "dist": 0.597
+          "dist": 0.596
         },
         {
           "id": "2018_4361655",
@@ -433486,7 +433486,7 @@ const COLLEGE_SCOUTING = {
           "name": "L.J. Phillips Jr.",
           "team": "Iowa",
           "year": 2026,
-          "dist": 0.713
+          "dist": 0.712
         },
         {
           "id": "2022_4427251",
@@ -433674,7 +433674,7 @@ const COLLEGE_SCOUTING = {
           "name": "Seth McGowan",
           "team": "Kentucky",
           "year": 2025,
-          "dist": 0.535
+          "dist": 0.534
         },
         {
           "id": "2018_3125401",
@@ -433746,7 +433746,7 @@ const COLLEGE_SCOUTING = {
           "name": "Arnold Barnes",
           "team": "Tulane",
           "year": 2024,
-          "dist": 0.449
+          "dist": 0.448
         },
         {
           "id": "2019_4360719",
@@ -433818,7 +433818,7 @@ const COLLEGE_SCOUTING = {
           "name": "Andrew Henry",
           "team": "UL Monroe",
           "year": 2022,
-          "dist": 0.461
+          "dist": 0.462
         },
         {
           "id": "2018_4360805",
@@ -433911,7 +433911,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kaden Shields-Dutton",
           "team": "Florida Atlantic",
           "year": 2025,
-          "dist": 0.536
+          "dist": 0.535
         },
         {
           "id": "2021_4565770",
@@ -434013,7 +434013,7 @@ const COLLEGE_SCOUTING = {
           "name": "Sherman Badie",
           "team": "Tulane",
           "year": 2015,
-          "dist": 0.702
+          "dist": 0.701
         },
         {
           "id": "2019_4046744",
@@ -434192,7 +434192,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jaylen Wright",
           "team": "Tennessee",
           "year": 2021,
-          "dist": 0.654
+          "dist": 0.653
         },
         {
           "id": "2014_551182",
@@ -434206,7 +434206,7 @@ const COLLEGE_SCOUTING = {
           "name": "D.J. Williams",
           "team": "Auburn",
           "year": 2019,
-          "dist": 0.674
+          "dist": 0.675
         },
         {
           "id": "2016_3139429",
@@ -434494,14 +434494,14 @@ const COLLEGE_SCOUTING = {
           "name": "Xavier Hall",
           "team": "New Mexico State",
           "year": 2016,
-          "dist": 0.667
+          "dist": 0.668
         },
         {
           "id": "2014_3126113",
           "name": "Terry Swanson",
           "team": "Toledo",
           "year": 2014,
-          "dist": 0.698
+          "dist": 0.699
         },
         {
           "id": "2026_5295815",
@@ -434617,7 +434617,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ja'Quez Cross",
           "team": "Arkansas State",
           "year": 2024,
-          "dist": 0.488
+          "dist": 0.489
         },
         {
           "id": "2025_5219089",
@@ -434740,7 +434740,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jarveon Williams",
           "team": "UTSA",
           "year": 2015,
-          "dist": 0.432
+          "dist": 0.431
         },
         {
           "id": "2022_4837335",
@@ -434796,7 +434796,7 @@ const COLLEGE_SCOUTING = {
           "name": "Diocemy Saint Juste",
           "team": "Hawai'i",
           "year": 2016,
-          "dist": 0.699
+          "dist": 0.7
         }
       ],
       "2025_4870760": [
@@ -434826,7 +434826,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kewan Lacy",
           "team": "Ole Miss",
           "year": 2026,
-          "dist": 1.307
+          "dist": 1.308
         },
         {
           "id": "2015_3122708",
@@ -434868,7 +434868,7 @@ const COLLEGE_SCOUTING = {
           "name": "Rhamondre Stevenson",
           "team": "Oklahoma",
           "year": 2020,
-          "dist": 1.59
+          "dist": 1.591
         }
       ],
       "2025_4870934": [
@@ -434952,17 +434952,17 @@ const COLLEGE_SCOUTING = {
           "dist": 0.639
         },
         {
-          "id": "2019_4241401",
-          "name": "Trey Sermon",
-          "team": "Oklahoma",
-          "year": 2019,
-          "dist": 0.664
-        },
-        {
           "id": "2024_4837385",
           "name": "Jordan Mcdonald",
           "team": "Boston College",
           "year": 2024,
+          "dist": 0.664
+        },
+        {
+          "id": "2019_4241401",
+          "name": "Trey Sermon",
+          "team": "Oklahoma",
+          "year": 2019,
           "dist": 0.664
         },
         {
@@ -434977,7 +434977,7 @@ const COLLEGE_SCOUTING = {
           "name": "Thomas Koufie",
           "team": "UL Monroe",
           "year": 2016,
-          "dist": 0.69
+          "dist": 0.691
         },
         {
           "id": "2021_4588200",
@@ -435084,7 +435084,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tyrell Clay",
           "team": "UTSA",
           "year": 2017,
-          "dist": 0.54
+          "dist": 0.539
         }
       ],
       "2025_4871053": [
@@ -435114,7 +435114,7 @@ const COLLEGE_SCOUTING = {
           "name": "Mario Anderson",
           "team": "South Carolina",
           "year": 2023,
-          "dist": 0.702
+          "dist": 0.701
         },
         {
           "id": "2018_3920865",
@@ -435135,7 +435135,7 @@ const COLLEGE_SCOUTING = {
           "name": "Devon Spalding",
           "team": "Central Michigan",
           "year": 2016,
-          "dist": 0.777
+          "dist": 0.778
         },
         {
           "id": "2021_4259633",
@@ -435221,7 +435221,7 @@ const COLLEGE_SCOUTING = {
           "name": "Larry Rose III",
           "team": "New Mexico State",
           "year": 2016,
-          "dist": 1.271
+          "dist": 1.272
         },
         {
           "id": "2016_3931766",
@@ -435258,7 +435258,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kyson Brown",
           "team": "Arizona State",
           "year": 2026,
-          "dist": 0.546
+          "dist": 0.547
         },
         {
           "id": "2017_551061",
@@ -435395,14 +435395,14 @@ const COLLEGE_SCOUTING = {
           "name": "Brandon Miller",
           "team": "Wyoming",
           "year": 2013,
-          "dist": 0.421
+          "dist": 0.422
         },
         {
           "id": "2023_4431536",
           "name": "Donovan Edwards",
           "team": "Michigan",
           "year": 2023,
-          "dist": 0.442
+          "dist": 0.443
         },
         {
           "id": "2018_3122154",
@@ -435509,7 +435509,7 @@ const COLLEGE_SCOUTING = {
           "name": "Demie Sumo",
           "team": "Kentucky",
           "year": 2024,
-          "dist": 0.562
+          "dist": 0.563
         },
         {
           "id": "2015_550169",
@@ -435574,7 +435574,7 @@ const COLLEGE_SCOUTING = {
           "name": "Johnathan Hawkins",
           "team": "Buffalo",
           "year": 2016,
-          "dist": 0.538
+          "dist": 0.539
         },
         {
           "id": "2017_4243003",
@@ -435732,7 +435732,7 @@ const COLLEGE_SCOUTING = {
           "name": "Noah Whittington",
           "team": "Oregon",
           "year": 2024,
-          "dist": 0.477
+          "dist": 0.478
         }
       ],
       "2025_4879060": [
@@ -435790,7 +435790,7 @@ const COLLEGE_SCOUTING = {
           "name": "Joe Ervin",
           "team": "Kansas State",
           "year": 2021,
-          "dist": 0.598
+          "dist": 0.599
         },
         {
           "id": "2024_4837385",
@@ -435855,7 +435855,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ky Thomas",
           "team": "Kent State",
           "year": 2024,
-          "dist": 0.719
+          "dist": 0.718
         },
         {
           "id": "2016_4037221",
@@ -435964,7 +435964,7 @@ const COLLEGE_SCOUTING = {
           "name": "Isaih Pacheco",
           "team": "Rutgers",
           "year": 2020,
-          "dist": 0.414
+          "dist": 0.415
         },
         {
           "id": "2017_3124046",
@@ -435992,7 +435992,7 @@ const COLLEGE_SCOUTING = {
           "name": "Bill Belton",
           "team": "Penn State",
           "year": 2014,
-          "dist": 0.597
+          "dist": 0.598
         },
         {
           "id": "2025_5086379",
@@ -436108,7 +436108,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jamal Jones",
           "team": "Arkansas State",
           "year": 2019,
-          "dist": 0.411
+          "dist": 0.41
         },
         {
           "id": "2025_5148838",
@@ -436157,14 +436157,14 @@ const COLLEGE_SCOUTING = {
           "name": "Nick Mosley",
           "team": "Bowling Green",
           "year": 2021,
-          "dist": 0.515
+          "dist": 0.516
         },
         {
           "id": "2023_4683667",
           "name": "Trenten Howland",
           "team": "Indiana",
           "year": 2023,
-          "dist": 0.534
+          "dist": 0.535
         }
       ],
       "2025_4899368": [
@@ -436287,7 +436287,7 @@ const COLLEGE_SCOUTING = {
           "name": "Phil Mafah",
           "team": "Clemson",
           "year": 2022,
-          "dist": 0.505
+          "dist": 0.504
         },
         {
           "id": "2017_3921652",
@@ -436417,7 +436417,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jermaine Brown Jr.",
           "team": "UAB",
           "year": 2023,
-          "dist": 0.902
+          "dist": 0.903
         },
         {
           "id": "2022_4427391",
@@ -436431,7 +436431,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dontrell Hilliard",
           "team": "Tulane",
           "year": 2015,
-          "dist": 1.004
+          "dist": 1.005
         },
         {
           "id": "2021_4259308",
@@ -436510,7 +436510,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kejon Owens",
           "team": "Florida International",
           "year": 2025,
-          "dist": 1.052
+          "dist": 1.053
         },
         {
           "id": "2019_4244732",
@@ -436719,7 +436719,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jordan Gant",
           "team": "Akron",
           "year": 2026,
-          "dist": 0.55
+          "dist": 0.549
         },
         {
           "id": "2025_4713118",
@@ -436805,7 +436805,7 @@ const COLLEGE_SCOUTING = {
           "name": "Shannon Brooks",
           "team": "Minnesota",
           "year": 2015,
-          "dist": 1.296
+          "dist": 1.295
         },
         {
           "id": "2023_4430100",
@@ -436893,14 +436893,14 @@ const COLLEGE_SCOUTING = {
           "name": "Jashaun Corbin",
           "team": "Florida State",
           "year": 2020,
-          "dist": 0.616
+          "dist": 0.617
         },
         {
           "id": "2018_4361142",
           "name": "Max Borghi",
           "team": "Washington State",
           "year": 2018,
-          "dist": 0.701
+          "dist": 0.7
         },
         {
           "id": "2018_3919104",
@@ -436949,7 +436949,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dwight Phillips Jr.",
           "team": "Georgia",
           "year": 2026,
-          "dist": 0.82
+          "dist": 0.819
         },
         {
           "id": "2023_4921517",
@@ -437158,7 +437158,7 @@ const COLLEGE_SCOUTING = {
           "name": "Khalil Herbert",
           "team": "Kansas",
           "year": 2018,
-          "dist": 0.501
+          "dist": 0.502
         },
         {
           "id": "2026_5148741",
@@ -437195,7 +437195,7 @@ const COLLEGE_SCOUTING = {
           "name": "Sire Gaines",
           "team": "Boise State",
           "year": 2025,
-          "dist": 0.406
+          "dist": 0.407
         },
         {
           "id": "2022_4362162",
@@ -437288,7 +437288,7 @@ const COLLEGE_SCOUTING = {
           "name": "Wayne Gallman",
           "team": "Clemson",
           "year": 2016,
-          "dist": 0.38
+          "dist": 0.379
         },
         {
           "id": "2025_5233016",
@@ -437309,7 +437309,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jamal Jones",
           "team": "Arkansas State",
           "year": 2020,
-          "dist": 0.424
+          "dist": 0.423
         },
         {
           "id": "2015_3123944",
@@ -437432,7 +437432,7 @@ const COLLEGE_SCOUTING = {
           "name": "Moe Neal",
           "team": "Syracuse",
           "year": 2016,
-          "dist": 1.011
+          "dist": 1.012
         },
         {
           "id": "2015_550775",
@@ -437446,14 +437446,14 @@ const COLLEGE_SCOUTING = {
           "name": "Nakia Watson",
           "team": "Wisconsin",
           "year": 2019,
-          "dist": 1.204
+          "dist": 1.205
         },
         {
           "id": "2016_3127262",
           "name": "Squally Canada",
           "team": "BYU",
           "year": 2016,
-          "dist": 1.225
+          "dist": 1.226
         },
         {
           "id": "2026_5227814",
@@ -437490,21 +437490,21 @@ const COLLEGE_SCOUTING = {
           "name": "Terion Stewart",
           "team": "Bowling Green",
           "year": 2024,
-          "dist": 1.712
+          "dist": 1.713
         },
         {
           "id": "2022_4430468",
           "name": "Marquez Cooper",
           "team": "Kent State",
           "year": 2022,
-          "dist": 1.727
+          "dist": 1.728
         },
         {
           "id": "2016_3125116",
           "name": "D'Onta Foreman",
           "team": "Texas",
           "year": 2016,
-          "dist": 1.733
+          "dist": 1.734
         },
         {
           "id": "2023_4575131",
@@ -437518,7 +437518,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kenneth Walker III",
           "team": "Wake Forest",
           "year": 2020,
-          "dist": 1.84
+          "dist": 1.839
         },
         {
           "id": "2019_4363923",
@@ -437597,7 +437597,7 @@ const COLLEGE_SCOUTING = {
           "name": "Wayne Gallman",
           "team": "Clemson",
           "year": 2015,
-          "dist": 0.614
+          "dist": 0.613
         },
         {
           "id": "2026_4870760",
@@ -437655,7 +437655,7 @@ const COLLEGE_SCOUTING = {
           "name": "Isaih Pacheco",
           "team": "Rutgers",
           "year": 2021,
-          "dist": 0.528
+          "dist": 0.527
         },
         {
           "id": "2022_4873234",
@@ -437748,7 +437748,7 @@ const COLLEGE_SCOUTING = {
           "name": "Marquis Young",
           "team": "Massachusetts",
           "year": 2015,
-          "dist": 0.631
+          "dist": 0.632
         }
       ],
       "2025_5078916": [
@@ -437836,7 +437836,7 @@ const COLLEGE_SCOUTING = {
           "name": "Connor Heyward",
           "team": "Michigan State",
           "year": 2018,
-          "dist": 0.531
+          "dist": 0.53
         },
         {
           "id": "2022_4426696",
@@ -438045,7 +438045,7 @@ const COLLEGE_SCOUTING = {
           "name": "CJ Donaldson",
           "team": "West Virginia",
           "year": 2022,
-          "dist": 0.693
+          "dist": 0.692
         },
         {
           "id": "2022_4880638",
@@ -438059,7 +438059,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ja'Kobi Jackson",
           "team": "Ohio State",
           "year": 2026,
-          "dist": 1.055
+          "dist": 1.056
         },
         {
           "id": "2022_4360765",
@@ -438152,7 +438152,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jeremiyah Love",
           "team": "Notre Dame",
           "year": 2023,
-          "dist": 0.612
+          "dist": 0.611
         },
         {
           "id": "2013_514866",
@@ -438166,7 +438166,7 @@ const COLLEGE_SCOUTING = {
           "name": "DeaMonte Trayanum",
           "team": "Ohio State",
           "year": 2023,
-          "dist": 0.647
+          "dist": 0.646
         },
         {
           "id": "2018_4240631",
@@ -438206,6 +438206,13 @@ const COLLEGE_SCOUTING = {
           "dist": 0.411
         },
         {
+          "id": "2026_5207930",
+          "name": "DAndre Hardeman Jr.",
+          "team": "Rice",
+          "year": 2026,
+          "dist": 0.418
+        },
+        {
           "id": "2015_545840",
           "name": "Kyler Neal",
           "team": "Georgia State",
@@ -438217,14 +438224,14 @@ const COLLEGE_SCOUTING = {
           "name": "Makhi Frazier",
           "team": "Ole Miss",
           "year": 2026,
-          "dist": 0.452
+          "dist": 0.453
         },
         {
           "id": "2016_550468",
           "name": "Gerald Holmes",
           "team": "Michigan State",
           "year": 2016,
-          "dist": 0.456
+          "dist": 0.457
         },
         {
           "id": "2026_4873234",
@@ -438246,13 +438253,6 @@ const COLLEGE_SCOUTING = {
           "team": "West Virginia",
           "year": 2021,
           "dist": 0.514
-        },
-        {
-          "id": "2022_4363153",
-          "name": "Tyre Shelton",
-          "team": "Miami (OH)",
-          "year": 2022,
-          "dist": 0.516
         }
       ],
       "2025_5079379": [
@@ -438261,7 +438261,7 @@ const COLLEGE_SCOUTING = {
           "name": "Rushel Shell",
           "team": "West Virginia",
           "year": 2014,
-          "dist": 0.291
+          "dist": 0.292
         },
         {
           "id": "2016_546764",
@@ -438505,7 +438505,7 @@ const COLLEGE_SCOUTING = {
           "name": "Robert Henry",
           "team": "UTSA",
           "year": 2025,
-          "dist": 0.639
+          "dist": 0.64
         },
         {
           "id": "2018_3914369",
@@ -438577,7 +438577,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ramone Green Jr.",
           "team": "Missouri State",
           "year": 2026,
-          "dist": 0.491
+          "dist": 0.49
         },
         {
           "id": "2020_4240543",
@@ -438677,7 +438677,7 @@ const COLLEGE_SCOUTING = {
           "name": "Mark Fletcher Jr.",
           "team": "Miami",
           "year": 2023,
-          "dist": 0.783
+          "dist": 0.782
         },
         {
           "id": "2022_4568233",
@@ -438761,17 +438761,17 @@ const COLLEGE_SCOUTING = {
       ],
       "2025_5079749": [
         {
-          "id": "2014_552811",
-          "name": "Shadrach Abrokwah",
-          "team": "Massachusetts",
-          "year": 2014,
-          "dist": 0.623
-        },
-        {
           "id": "2016_4038815",
           "name": "Rico Dowdle",
           "team": "South Carolina",
           "year": 2016,
+          "dist": 0.623
+        },
+        {
+          "id": "2014_552811",
+          "name": "Shadrach Abrokwah",
+          "team": "Massachusetts",
+          "year": 2014,
           "dist": 0.623
         },
         {
@@ -438800,21 +438800,14 @@ const COLLEGE_SCOUTING = {
           "name": "Markell Jones",
           "team": "Purdue",
           "year": 2017,
-          "dist": 0.91
+          "dist": 0.911
         },
         {
           "id": "2020_4047337",
           "name": "Rakeem Boyd",
           "team": "Arkansas",
           "year": 2020,
-          "dist": 0.96
-        },
-        {
-          "id": "2024_4431310",
-          "name": "Henry Parrish Jr.",
-          "team": "Ole Miss",
-          "year": 2024,
-          "dist": 1.041
+          "dist": 0.961
         },
         {
           "id": "2023_4576294",
@@ -438824,11 +438817,18 @@ const COLLEGE_SCOUTING = {
           "dist": 1.041
         },
         {
+          "id": "2024_4431310",
+          "name": "Henry Parrish Jr.",
+          "team": "Ole Miss",
+          "year": 2024,
+          "dist": 1.041
+        },
+        {
           "id": "2022_4688817",
           "name": "Elijah Green",
           "team": "North Carolina",
           "year": 2022,
-          "dist": 1.055
+          "dist": 1.056
         }
       ],
       "2025_5081526": [
@@ -438916,7 +438916,7 @@ const COLLEGE_SCOUTING = {
           "name": "Otis Anderson",
           "team": "UCF",
           "year": 2020,
-          "dist": 0.341
+          "dist": 0.342
         },
         {
           "id": "2023_4685246",
@@ -438981,7 +438981,7 @@ const COLLEGE_SCOUTING = {
           "name": "Squally Canada",
           "team": "BYU",
           "year": 2016,
-          "dist": 0.63
+          "dist": 0.629
         },
         {
           "id": "2016_552022",
@@ -439023,14 +439023,14 @@ const COLLEGE_SCOUTING = {
           "name": "Dareyon Chance",
           "team": "Western Michigan",
           "year": 2014,
-          "dist": 0.784
+          "dist": 0.783
         },
         {
           "id": "2019_4245238",
           "name": "Joshua Fields",
           "team": "UTEP",
           "year": 2019,
-          "dist": 0.789
+          "dist": 0.788
         },
         {
           "id": "2019_4372568",
@@ -439102,14 +439102,14 @@ const COLLEGE_SCOUTING = {
           "name": "Nakia Watson",
           "team": "Washington State",
           "year": 2023,
-          "dist": 0.465
+          "dist": 0.466
         },
         {
           "id": "2023_4367069",
           "name": "Ty Son Lawton",
           "team": "James Madison",
           "year": 2023,
-          "dist": 0.471
+          "dist": 0.47
         },
         {
           "id": "2022_4890973",
@@ -439153,7 +439153,7 @@ const COLLEGE_SCOUTING = {
           "name": "A.J. Davis",
           "team": "Pittsburgh",
           "year": 2019,
-          "dist": 0.855
+          "dist": 0.854
         },
         {
           "id": "2022_4363104",
@@ -439167,7 +439167,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jo'Nathan Silver",
           "team": "Delaware",
           "year": 2025,
-          "dist": 0.916
+          "dist": 0.915
         },
         {
           "id": "2022_4912275",
@@ -439181,14 +439181,14 @@ const COLLEGE_SCOUTING = {
           "name": "Jeremy Cox",
           "team": "Old Dominion",
           "year": 2017,
-          "dist": 1.024
+          "dist": 1.025
         },
         {
           "id": "2015_3728275",
           "name": "Shannon Brooks",
           "team": "Minnesota",
           "year": 2015,
-          "dist": 1.026
+          "dist": 1.027
         }
       ],
       "2025_5084047": [
@@ -439197,14 +439197,14 @@ const COLLEGE_SCOUTING = {
           "name": "Marteze Waller",
           "team": "Fresno State",
           "year": 2013,
-          "dist": 0.348
+          "dist": 0.349
         },
         {
           "id": "2020_4360238",
           "name": "Dameon Pierce",
           "team": "Florida",
           "year": 2020,
-          "dist": 0.399
+          "dist": 0.398
         },
         {
           "id": "2022_4429939",
@@ -439297,7 +439297,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jai'Den Thomas",
           "team": "UNLV",
           "year": 2023,
-          "dist": 0.727
+          "dist": 0.728
         },
         {
           "id": "2023_5152221",
@@ -439311,7 +439311,7 @@ const COLLEGE_SCOUTING = {
           "name": "Vincent Davis",
           "team": "UNLV",
           "year": 2023,
-          "dist": 0.802
+          "dist": 0.803
         },
         {
           "id": "2015_536483",
@@ -439362,7 +439362,7 @@ const COLLEGE_SCOUTING = {
           "name": "D'Andre Ferby",
           "team": "Western Kentucky",
           "year": 2017,
-          "dist": 0.792
+          "dist": 0.791
         },
         {
           "id": "2018_3916369",
@@ -439499,7 +439499,7 @@ const COLLEGE_SCOUTING = {
           "name": "Trey Benson",
           "team": "Florida State",
           "year": 2022,
-          "dist": 0.366
+          "dist": 0.365
         },
         {
           "id": "2022_4430666",
@@ -439585,7 +439585,7 @@ const COLLEGE_SCOUTING = {
           "name": "Damien Martinez",
           "team": "Oregon State",
           "year": 2022,
-          "dist": 0.721
+          "dist": 0.722
         },
         {
           "id": "2026_5077876",
@@ -439606,7 +439606,7 @@ const COLLEGE_SCOUTING = {
           "name": "Amareon Blue",
           "team": "Eastern Michigan",
           "year": 2026,
-          "dist": 0.816
+          "dist": 0.815
         },
         {
           "id": "2026_5154732",
@@ -439722,14 +439722,14 @@ const COLLEGE_SCOUTING = {
           "name": "Omarion Hampton",
           "team": "North Carolina",
           "year": 2023,
-          "dist": 0.711
+          "dist": 0.71
         },
         {
           "id": "2014_515908",
           "name": "Dee Hart",
           "team": "Colorado State",
           "year": 2014,
-          "dist": 0.744
+          "dist": 0.743
         },
         {
           "id": "2024_4710341",
@@ -439743,7 +439743,7 @@ const COLLEGE_SCOUTING = {
           "name": "Blake Corum",
           "team": "Michigan",
           "year": 2023,
-          "dist": 0.76
+          "dist": 0.759
         },
         {
           "id": "2018_4039912",
@@ -439894,7 +439894,7 @@ const COLLEGE_SCOUTING = {
           "name": "Daniel Young",
           "team": "Texas",
           "year": 2017,
-          "dist": 0.964
+          "dist": 0.965
         },
         {
           "id": "2022_4362161",
@@ -440031,14 +440031,14 @@ const COLLEGE_SCOUTING = {
           "name": "Brenden Knox",
           "team": "Marshall",
           "year": 2019,
-          "dist": 0.579
+          "dist": 0.578
         },
         {
           "id": "2017_4035072",
           "name": "Benny Snell Jr.",
           "team": "Kentucky",
           "year": 2017,
-          "dist": 0.626
+          "dist": 0.625
         },
         {
           "id": "2024_5156933",
@@ -440110,7 +440110,7 @@ const COLLEGE_SCOUTING = {
           "name": "Josh Robinson",
           "team": "Mississippi State",
           "year": 2014,
-          "dist": 0.644
+          "dist": 0.645
         },
         {
           "id": "2021_4259308",
@@ -440161,7 +440161,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jerron Seymour",
           "team": "Vanderbilt",
           "year": 2013,
-          "dist": 0.589
+          "dist": 0.59
         },
         {
           "id": "2016_3128800",
@@ -440196,7 +440196,7 @@ const COLLEGE_SCOUTING = {
           "name": "Trayveon Williams",
           "team": "Texas A&M",
           "year": 2017,
-          "dist": 0.662
+          "dist": 0.663
         }
       ],
       "2025_5093886": [
@@ -440219,14 +440219,14 @@ const COLLEGE_SCOUTING = {
           "name": "Robert Lowe",
           "team": "Texas State",
           "year": 2015,
-          "dist": 0.423
+          "dist": 0.424
         },
         {
           "id": "2014_3126072",
           "name": "A.J. Ouellette",
           "team": "Ohio",
           "year": 2014,
-          "dist": 0.529
+          "dist": 0.528
         },
         {
           "id": "2019_4361529",
@@ -440240,7 +440240,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jarquez Hunter",
           "team": "Auburn",
           "year": 2023,
-          "dist": 0.57
+          "dist": 0.571
         },
         {
           "id": "2025_5141677",
@@ -440254,7 +440254,7 @@ const COLLEGE_SCOUTING = {
           "name": "Henry Parrish Jr.",
           "team": "Miami",
           "year": 2022,
-          "dist": 0.587
+          "dist": 0.588
         },
         {
           "id": "2025_4686468",
@@ -440384,14 +440384,14 @@ const COLLEGE_SCOUTING = {
           "name": "Brian Herrien",
           "team": "Georgia",
           "year": 2016,
-          "dist": 0.504
+          "dist": 0.505
         },
         {
           "id": "2025_5296374",
           "name": "Andrew Burnette",
           "team": "Louisiana Tech",
           "year": 2025,
-          "dist": 0.525
+          "dist": 0.524
         },
         {
           "id": "2021_4430810",
@@ -440456,7 +440456,7 @@ const COLLEGE_SCOUTING = {
           "name": "Duke Catalon",
           "team": "Houston",
           "year": 2017,
-          "dist": 0.441
+          "dist": 0.442
         },
         {
           "id": "2026_4870934",
@@ -440521,7 +440521,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jordan Parker",
           "team": "Middle Tennessee",
           "year": 2013,
-          "dist": 0.535
+          "dist": 0.536
         },
         {
           "id": "2024_4918103",
@@ -440538,16 +440538,16 @@ const COLLEGE_SCOUTING = {
           "dist": 0.609
         },
         {
-          "id": "2014_532122",
-          "name": "Tra Carson",
-          "team": "Texas A&M",
+          "id": "2014_535604",
+          "name": "Akeel Lynch",
+          "team": "Penn State",
           "year": 2014,
           "dist": 0.611
         },
         {
-          "id": "2014_535604",
-          "name": "Akeel Lynch",
-          "team": "Penn State",
+          "id": "2014_532122",
+          "name": "Tra Carson",
+          "team": "Texas A&M",
           "year": 2014,
           "dist": 0.611
         },
@@ -440686,7 +440686,7 @@ const COLLEGE_SCOUTING = {
           "name": "Juma Otoviano",
           "team": "Rice",
           "year": 2023,
-          "dist": 0.54
+          "dist": 0.539
         },
         {
           "id": "2022_4360652",
@@ -440747,13 +440747,6 @@ const COLLEGE_SCOUTING = {
           "dist": 0.616
         },
         {
-          "id": "2026_5207930",
-          "name": "DAndre Hardeman Jr.",
-          "team": "Rice",
-          "year": 2026,
-          "dist": 0.625
-        },
-        {
           "id": "2013_481901",
           "name": "Chris Nwoke",
           "team": "Colorado State",
@@ -440773,6 +440766,13 @@ const COLLEGE_SCOUTING = {
           "team": "Missouri",
           "year": 2022,
           "dist": 0.695
+        },
+        {
+          "id": "2026_5079378",
+          "name": "Darrion Dupree",
+          "team": "Wisconsin",
+          "year": 2026,
+          "dist": 0.702
         }
       ],
       "2025_5121721": [
@@ -440816,7 +440816,7 @@ const COLLEGE_SCOUTING = {
           "name": "Larry Rose III",
           "team": "New Mexico State",
           "year": 2017,
-          "dist": 1.217
+          "dist": 1.216
         },
         {
           "id": "2015_3128840",
@@ -440925,7 +440925,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jaylen Jenkins",
           "team": "Washington State",
           "year": 2022,
-          "dist": 0.255
+          "dist": 0.254
         },
         {
           "id": "2022_4429043",
@@ -441060,7 +441060,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kylan Watkins",
           "team": "Memphis",
           "year": 2019,
-          "dist": 0.617
+          "dist": 0.616
         }
       ],
       "2025_5125335": [
@@ -441083,7 +441083,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jekail Middlebrook",
           "team": "Middle Tennessee",
           "year": 2025,
-          "dist": 1.378
+          "dist": 1.377
         },
         {
           "id": "2017_3915381",
@@ -441104,20 +441104,20 @@ const COLLEGE_SCOUTING = {
           "name": "Josh Ferguson",
           "team": "Illinois",
           "year": 2015,
-          "dist": 1.595
-        },
-        {
-          "id": "2017_4243955",
-          "name": "Brad Anderson",
-          "team": "Middle Tennessee",
-          "year": 2017,
-          "dist": 1.661
+          "dist": 1.594
         },
         {
           "id": "2013_534757",
           "name": "Marion Grice",
           "team": "Arizona State",
           "year": 2013,
+          "dist": 1.661
+        },
+        {
+          "id": "2017_4243955",
+          "name": "Brad Anderson",
+          "team": "Middle Tennessee",
+          "year": 2017,
           "dist": 1.661
         },
         {
@@ -441132,7 +441132,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jahad Thomas",
           "team": "Temple",
           "year": 2016,
-          "dist": 1.687
+          "dist": 1.686
         }
       ],
       "2025_5125754": [
@@ -441169,14 +441169,14 @@ const COLLEGE_SCOUTING = {
           "name": "Warren Wand",
           "team": "Arkansas State",
           "year": 2018,
-          "dist": 0.557
+          "dist": 0.558
         },
         {
           "id": "2018_4047337",
           "name": "Rakeem Boyd",
           "team": "Arkansas",
           "year": 2018,
-          "dist": 0.592
+          "dist": 0.593
         },
         {
           "id": "2014_552929",
@@ -441190,7 +441190,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kerryon Johnson",
           "team": "Auburn",
           "year": 2016,
-          "dist": 0.608
+          "dist": 0.609
         },
         {
           "id": "2020_4568406",
@@ -441464,7 +441464,7 @@ const COLLEGE_SCOUTING = {
           "name": "Durell Robinson",
           "team": "UConn",
           "year": 2024,
-          "dist": 0.808
+          "dist": 0.807
         },
         {
           "id": "2015_3139033",
@@ -441478,7 +441478,7 @@ const COLLEGE_SCOUTING = {
           "name": "Raymond Calais",
           "team": "Louisiana",
           "year": 2018,
-          "dist": 0.866
+          "dist": 0.867
         },
         {
           "id": "2018_3139562",
@@ -441492,7 +441492,7 @@ const COLLEGE_SCOUTING = {
           "name": "Gary Brightwell",
           "team": "Arizona",
           "year": 2019,
-          "dist": 0.937
+          "dist": 0.938
         }
       ],
       "2025_5141499": [
@@ -441543,7 +441543,7 @@ const COLLEGE_SCOUTING = {
           "name": "Daniel Bray",
           "team": "Utah",
           "year": 2026,
-          "dist": 1.168
+          "dist": 1.169
         },
         {
           "id": "2014_533220",
@@ -441594,7 +441594,7 @@ const COLLEGE_SCOUTING = {
           "name": "George Holani",
           "team": "Boise State",
           "year": 2022,
-          "dist": 0.519
+          "dist": 0.52
         },
         {
           "id": "2016_3124907",
@@ -441803,7 +441803,7 @@ const COLLEGE_SCOUTING = {
           "name": "Marcus Williams Jr.",
           "team": "App State",
           "year": 2017,
-          "dist": 0.505
+          "dist": 0.506
         },
         {
           "id": "2021_4427916",
@@ -441889,7 +441889,7 @@ const COLLEGE_SCOUTING = {
           "name": "Johnny Jefferson",
           "team": "Baylor",
           "year": 2014,
-          "dist": 0.974
+          "dist": 0.975
         },
         {
           "id": "2022_4683665",
@@ -441947,7 +441947,7 @@ const COLLEGE_SCOUTING = {
           "name": "DeJuan Williams",
           "team": "Maryland",
           "year": 2026,
-          "dist": 0.688
+          "dist": 0.689
         },
         {
           "id": "2015_3929630",
@@ -442084,7 +442084,7 @@ const COLLEGE_SCOUTING = {
           "name": "Makhi Hughes",
           "team": "Houston",
           "year": 2026,
-          "dist": 0.282
+          "dist": 0.283
         },
         {
           "id": "2018_4036431",
@@ -442191,7 +442191,7 @@ const COLLEGE_SCOUTING = {
           "name": "Javen Jacobs",
           "team": "Utah State",
           "year": 2026,
-          "dist": 0.692
+          "dist": 0.693
         },
         {
           "id": "2025_5093886",
@@ -442228,7 +442228,7 @@ const COLLEGE_SCOUTING = {
           "name": "Gi'Bran Payne",
           "team": "Cincinnati",
           "year": 2026,
-          "dist": 0.278
+          "dist": 0.279
         },
         {
           "id": "2025_5260847",
@@ -442293,7 +442293,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kamryn Pettway",
           "team": "Auburn",
           "year": 2017,
-          "dist": 1.503
+          "dist": 1.504
         },
         {
           "id": "2013_504955",
@@ -442314,14 +442314,14 @@ const COLLEGE_SCOUTING = {
           "name": "Loren Easly",
           "team": "North Texas",
           "year": 2018,
-          "dist": 2.106
+          "dist": 2.105
         },
         {
           "id": "2021_4428263",
           "name": "Treyson Potts",
           "team": "Minnesota",
           "year": 2021,
-          "dist": 2.24
+          "dist": 2.239
         },
         {
           "id": "2021_4429043",
@@ -442349,14 +442349,14 @@ const COLLEGE_SCOUTING = {
           "name": "Paul James",
           "team": "Rutgers",
           "year": 2013,
-          "dist": 2.588
+          "dist": 2.589
         },
         {
           "id": "2022_4684940",
           "name": "La'Damian Webb",
           "team": "South Alabama",
           "year": 2022,
-          "dist": 2.757
+          "dist": 2.758
         }
       ],
       "2025_5147379": [
@@ -442386,7 +442386,7 @@ const COLLEGE_SCOUTING = {
           "name": "London Montgomery",
           "team": "East Carolina",
           "year": 2025,
-          "dist": 0.406
+          "dist": 0.407
         },
         {
           "id": "2026_5077502",
@@ -442428,7 +442428,7 @@ const COLLEGE_SCOUTING = {
           "name": "Hosey Williams",
           "team": "Cincinnati",
           "year": 2015,
-          "dist": 0.482
+          "dist": 0.483
         }
       ],
       "2025_5147861": [
@@ -442437,7 +442437,7 @@ const COLLEGE_SCOUTING = {
           "name": "Gerard Wicks",
           "team": "Washington State",
           "year": 2016,
-          "dist": 0.366
+          "dist": 0.365
         },
         {
           "id": "2019_4360205",
@@ -442465,7 +442465,7 @@ const COLLEGE_SCOUTING = {
           "name": "D.J. Knox",
           "team": "Purdue",
           "year": 2017,
-          "dist": 0.442
+          "dist": 0.443
         },
         {
           "id": "2025_4429077",
@@ -442746,7 +442746,7 @@ const COLLEGE_SCOUTING = {
           "name": "D.J. Knox",
           "team": "Purdue",
           "year": 2017,
-          "dist": 0.47
+          "dist": 0.469
         },
         {
           "id": "2021_4601080",
@@ -442774,7 +442774,7 @@ const COLLEGE_SCOUTING = {
           "name": "Terry Swanson",
           "team": "Toledo",
           "year": 2014,
-          "dist": 0.516
+          "dist": 0.517
         },
         {
           "id": "2021_4430063",
@@ -442818,7 +442818,7 @@ const COLLEGE_SCOUTING = {
           "name": "Vic Enwere",
           "team": "California",
           "year": 2016,
-          "dist": 0.76
+          "dist": 0.761
         },
         {
           "id": "2025_4685470",
@@ -442828,17 +442828,17 @@ const COLLEGE_SCOUTING = {
           "dist": 0.768
         },
         {
-          "id": "2019_4039358",
-          "name": "Patrick Taylor Jr.",
-          "team": "Memphis",
-          "year": 2019,
-          "dist": 0.802
-        },
-        {
           "id": "2020_4430843",
           "name": "Jalen Berger",
           "team": "Wisconsin",
           "year": 2020,
+          "dist": 0.803
+        },
+        {
+          "id": "2019_4039358",
+          "name": "Patrick Taylor Jr.",
+          "team": "Memphis",
+          "year": 2019,
           "dist": 0.803
         },
         {
@@ -442853,7 +442853,7 @@ const COLLEGE_SCOUTING = {
           "name": "Montrell Johnson",
           "team": "Florida",
           "year": 2024,
-          "dist": 0.947
+          "dist": 0.946
         },
         {
           "id": "2020_4241414",
@@ -443027,7 +443027,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jerron Seymour",
           "team": "Vanderbilt",
           "year": 2013,
-          "dist": 0.469
+          "dist": 0.468
         },
         {
           "id": "2021_4360654",
@@ -443243,7 +443243,7 @@ const COLLEGE_SCOUTING = {
           "name": "Sione Finau",
           "team": "BYU",
           "year": 2019,
-          "dist": 0.68
+          "dist": 0.681
         },
         {
           "id": "2025_4685470",
@@ -443285,7 +443285,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tre Siggers",
           "team": "North Texas",
           "year": 2020,
-          "dist": 0.915
+          "dist": 0.916
         },
         {
           "id": "2016_3139429",
@@ -443350,14 +443350,14 @@ const COLLEGE_SCOUTING = {
           "name": "Tyler Ervin",
           "team": "San José State",
           "year": 2014,
-          "dist": 0.683
+          "dist": 0.684
         },
         {
           "id": "2023_4429454",
           "name": "Ron Cook Jr.",
           "team": "Buffalo",
           "year": 2023,
-          "dist": 0.694
+          "dist": 0.695
         },
         {
           "id": "2021_4360881",
@@ -443473,7 +443473,7 @@ const COLLEGE_SCOUTING = {
           "name": "Raheem Mostert",
           "team": "Purdue",
           "year": 2014,
-          "dist": 0.341
+          "dist": 0.342
         },
         {
           "id": "2018_4362087",
@@ -443617,14 +443617,14 @@ const COLLEGE_SCOUTING = {
           "name": "Khamani Alexander",
           "team": "Charlotte",
           "year": 2026,
-          "dist": 0.461
+          "dist": 0.46
         },
         {
           "id": "2017_3127374",
           "name": "Robert Martin",
           "team": "Rutgers",
           "year": 2017,
-          "dist": 0.493
+          "dist": 0.494
         },
         {
           "id": "2014_503640",
@@ -443661,7 +443661,7 @@ const COLLEGE_SCOUTING = {
           "name": "Shaq Vann",
           "team": "Eastern Michigan",
           "year": 2015,
-          "dist": 0.521
+          "dist": 0.522
         },
         {
           "id": "2025_5079298",
@@ -443720,11 +443720,11 @@ const COLLEGE_SCOUTING = {
           "dist": 0.939
         },
         {
-          "id": "2016_551298",
-          "name": "Alvin Kamara",
-          "team": "Tennessee",
-          "year": 2016,
-          "dist": 0.953
+          "id": "2025_4685445",
+          "name": "Rayshon Luke",
+          "team": "Fresno State",
+          "year": 2025,
+          "dist": 0.952
         }
       ],
       "2025_5161800": [
@@ -443805,7 +443805,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dylan Sampson",
           "team": "Tennessee",
           "year": 2022,
-          "dist": 0.515
+          "dist": 0.516
         },
         {
           "id": "2022_4362538",
@@ -443840,7 +443840,7 @@ const COLLEGE_SCOUTING = {
           "name": "Isaiah Johnson",
           "team": "North Texas",
           "year": 2021,
-          "dist": 0.958
+          "dist": 0.959
         },
         {
           "id": "2015_545423",
@@ -443940,7 +443940,7 @@ const COLLEGE_SCOUTING = {
           "name": "Titus Swen",
           "team": "Wyoming",
           "year": 2022,
-          "dist": 0.566
+          "dist": 0.567
         }
       ],
       "2025_5166161": [
@@ -443977,7 +443977,7 @@ const COLLEGE_SCOUTING = {
           "name": "Noah Cain",
           "team": "Penn State",
           "year": 2019,
-          "dist": 0.549
+          "dist": 0.55
         },
         {
           "id": "2014_514832",
@@ -444042,7 +444042,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jevyon Ducker",
           "team": "Memphis",
           "year": 2022,
-          "dist": 0.413
+          "dist": 0.412
         },
         {
           "id": "2018_4259910",
@@ -444084,7 +444084,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kejon Owens",
           "team": "Florida International",
           "year": 2024,
-          "dist": 0.502
+          "dist": 0.503
         }
       ],
       "2025_5173431": [
@@ -444207,7 +444207,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jacques Patrick",
           "team": "Florida State",
           "year": 2018,
-          "dist": 0.543
+          "dist": 0.544
         },
         {
           "id": "2013_501523",
@@ -444272,7 +444272,7 @@ const COLLEGE_SCOUTING = {
           "name": "Leddie Brown",
           "team": "West Virginia",
           "year": 2018,
-          "dist": 0.687
+          "dist": 0.688
         },
         {
           "id": "2024_4612211",
@@ -444300,7 +444300,7 @@ const COLLEGE_SCOUTING = {
           "name": "Nick Hill",
           "team": "Michigan State",
           "year": 2013,
-          "dist": 0.774
+          "dist": 0.773
         }
       ],
       "2025_5186586": [
@@ -444309,21 +444309,21 @@ const COLLEGE_SCOUTING = {
           "name": "Ja'Terian Douglas",
           "team": "Tulsa",
           "year": 2013,
-          "dist": 1.004
+          "dist": 1.005
         },
         {
           "id": "2013_514773",
           "name": "Rob Kelley",
           "team": "Tulane",
           "year": 2013,
-          "dist": 1.171
+          "dist": 1.172
         },
         {
           "id": "2013_484855",
           "name": "Evans Okotcha",
           "team": "UTSA",
           "year": 2013,
-          "dist": 1.238
+          "dist": 1.239
         },
         {
           "id": "2025_5193089",
@@ -444351,14 +444351,14 @@ const COLLEGE_SCOUTING = {
           "name": "Travon McMillian",
           "team": "Virginia Tech",
           "year": 2017,
-          "dist": 1.459
+          "dist": 1.458
         },
         {
           "id": "2017_4040553",
           "name": "Anthony D. Taylor",
           "team": "Texas State",
           "year": 2017,
-          "dist": 1.476
+          "dist": 1.477
         },
         {
           "id": "2013_550296",
@@ -444433,17 +444433,17 @@ const COLLEGE_SCOUTING = {
           "dist": 0.48
         },
         {
-          "id": "2020_4360238",
-          "name": "Dameon Pierce",
-          "team": "Florida",
-          "year": 2020,
-          "dist": 0.505
-        },
-        {
           "id": "2025_4688835",
           "name": "Roman Hemby",
           "team": "Indiana",
           "year": 2025,
+          "dist": 0.505
+        },
+        {
+          "id": "2020_4360238",
+          "name": "Dameon Pierce",
+          "team": "Florida",
+          "year": 2020,
           "dist": 0.505
         }
       ],
@@ -444467,7 +444467,7 @@ const COLLEGE_SCOUTING = {
           "name": "Khalfani Muhammad",
           "team": "California",
           "year": 2013,
-          "dist": 0.73
+          "dist": 0.731
         },
         {
           "id": "2018_3915878",
@@ -444509,7 +444509,7 @@ const COLLEGE_SCOUTING = {
           "name": "Lamical Perine",
           "team": "Florida",
           "year": 2016,
-          "dist": 0.873
+          "dist": 0.874
         },
         {
           "id": "2013_501548",
@@ -444632,7 +444632,7 @@ const COLLEGE_SCOUTING = {
           "name": "TJ Thomas Jr.",
           "team": "Minnesota",
           "year": 2026,
-          "dist": 0.967
+          "dist": 0.966
         },
         {
           "id": "2015_517269",
@@ -444690,7 +444690,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jamal Haynes",
           "team": "Georgia Tech",
           "year": 2024,
-          "dist": 0.531
+          "dist": 0.532
         },
         {
           "id": "2013_502454",
@@ -444725,14 +444725,14 @@ const COLLEGE_SCOUTING = {
           "name": "Torrance Burgess Jr.",
           "team": "Texas State",
           "year": 2026,
-          "dist": 0.554
+          "dist": 0.555
         },
         {
           "id": "2019_4429835",
           "name": "George Holani",
           "team": "Boise State",
           "year": 2019,
-          "dist": 0.594
+          "dist": 0.593
         }
       ],
       "2025_5194306": [
@@ -444762,7 +444762,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ryan Montgomery",
           "team": "Cincinnati",
           "year": 2021,
-          "dist": 0.599
+          "dist": 0.6
         },
         {
           "id": "2015_3134305",
@@ -444841,14 +444841,14 @@ const COLLEGE_SCOUTING = {
           "name": "Tre Wisner",
           "team": "Florida State",
           "year": 2026,
-          "dist": 0.822
+          "dist": 0.823
         },
         {
           "id": "2022_4427634",
           "name": "Keegan Jones",
           "team": "UCLA",
           "year": 2022,
-          "dist": 0.898
+          "dist": 0.899
         },
         {
           "id": "2014_550492",
@@ -444906,7 +444906,7 @@ const COLLEGE_SCOUTING = {
           "name": "De'Montre Tuggle",
           "team": "Ohio",
           "year": 2020,
-          "dist": 0.732
+          "dist": 0.731
         },
         {
           "id": "2014_503202",
@@ -445006,14 +445006,14 @@ const COLLEGE_SCOUTING = {
           "name": "Bo Scarbrough",
           "team": "Alabama",
           "year": 2017,
-          "dist": 0.705
+          "dist": 0.706
         },
         {
           "id": "2021_4431432",
           "name": "Kenny Tracy",
           "team": "Miami (OH)",
           "year": 2021,
-          "dist": 0.73
+          "dist": 0.731
         },
         {
           "id": "2022_4426386",
@@ -445029,7 +445029,7 @@ const COLLEGE_SCOUTING = {
           "name": "Darius Tice",
           "team": "South Florida",
           "year": 2015,
-          "dist": 0.327
+          "dist": 0.328
         },
         {
           "id": "2014_513325",
@@ -445085,7 +445085,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ra'Von Bonner",
           "team": "Illinois",
           "year": 2018,
-          "dist": 0.536
+          "dist": 0.537
         },
         {
           "id": "2018_3123746",
@@ -445222,7 +445222,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jordan Parker",
           "team": "Middle Tennessee",
           "year": 2013,
-          "dist": 0.592
+          "dist": 0.591
         },
         {
           "id": "2021_4426409",
@@ -445352,7 +445352,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jaylin Lucas",
           "team": "Tulane",
           "year": 2026,
-          "dist": 1.021
+          "dist": 1.022
         },
         {
           "id": "2014_530624",
@@ -445503,7 +445503,7 @@ const COLLEGE_SCOUTING = {
           "name": "Johnston White",
           "team": "Arkansas State",
           "year": 2017,
-          "dist": 0.413
+          "dist": 0.414
         },
         {
           "id": "2015_532425",
@@ -445605,7 +445605,7 @@ const COLLEGE_SCOUTING = {
           "name": "Imani Cross",
           "team": "Nebraska",
           "year": 2014,
-          "dist": 0.799
+          "dist": 0.8
         },
         {
           "id": "2015_3124349",
@@ -445619,7 +445619,7 @@ const COLLEGE_SCOUTING = {
           "name": "Khari Blasingame",
           "team": "Vanderbilt",
           "year": 2016,
-          "dist": 0.95
+          "dist": 0.949
         },
         {
           "id": "2019_4241139",
@@ -445633,21 +445633,21 @@ const COLLEGE_SCOUTING = {
           "name": "Shock Linwood",
           "team": "Baylor",
           "year": 2016,
-          "dist": 1.155
+          "dist": 1.156
         },
         {
           "id": "2019_4052008",
           "name": "Jacqez Hairston",
           "team": "Coastal Carolina",
           "year": 2019,
-          "dist": 1.189
+          "dist": 1.188
         },
         {
           "id": "2017_3129454",
           "name": "Jamauri Bogan",
           "team": "Western Michigan",
           "year": 2017,
-          "dist": 1.219
+          "dist": 1.218
         },
         {
           "id": "2017_3128846",
@@ -445661,7 +445661,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jon Lee",
           "team": "Air Force",
           "year": 2013,
-          "dist": 1.392
+          "dist": 1.393
         },
         {
           "id": "2014_546318",
@@ -445798,7 +445798,7 @@ const COLLEGE_SCOUTING = {
           "name": "Terrell Washington Jr.",
           "team": "New Mexico State",
           "year": 2026,
-          "dist": 0.588
+          "dist": 0.589
         },
         {
           "id": "2016_3122978",
@@ -445828,7 +445828,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jordan Mason",
           "team": "Georgia Tech",
           "year": 2019,
-          "dist": 0.313
+          "dist": 0.314
         },
         {
           "id": "2025_4954455",
@@ -445935,7 +445935,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tyjae Spears",
           "team": "Tulane",
           "year": 2022,
-          "dist": 0.92
+          "dist": 0.921
         },
         {
           "id": "2021_4372019",
@@ -445949,14 +445949,14 @@ const COLLEGE_SCOUTING = {
           "name": "Royce Freeman",
           "team": "Oregon",
           "year": 2015,
-          "dist": 0.938
+          "dist": 0.937
         },
         {
           "id": "2015_549811",
           "name": "Ezekiel Elliott",
           "team": "Ohio State",
           "year": 2015,
-          "dist": 0.946
+          "dist": 0.947
         }
       ],
       "2025_5258024": [
@@ -446082,17 +446082,17 @@ const COLLEGE_SCOUTING = {
           "dist": 0.518
         },
         {
-          "id": "2018_4243004",
-          "name": "Jordan Mims",
-          "team": "Fresno State",
-          "year": 2018,
-          "dist": 0.523
-        },
-        {
           "id": "2025_4694074",
           "name": "Coleman Bennett",
           "team": "Kennesaw State",
           "year": 2025,
+          "dist": 0.523
+        },
+        {
+          "id": "2018_4243004",
+          "name": "Jordan Mims",
+          "team": "Fresno State",
+          "year": 2018,
           "dist": 0.523
         },
         {
@@ -446209,7 +446209,7 @@ const COLLEGE_SCOUTING = {
           "name": "Joshua Fields",
           "team": "UTEP",
           "year": 2019,
-          "dist": 0.612
+          "dist": 0.611
         },
         {
           "id": "2022_4713489",
@@ -446267,7 +446267,7 @@ const COLLEGE_SCOUTING = {
           "name": "Rueben Owens",
           "team": "Texas A&M",
           "year": 2023,
-          "dist": 0.488
+          "dist": 0.489
         },
         {
           "id": "2024_4427648",
@@ -446277,17 +446277,17 @@ const COLLEGE_SCOUTING = {
           "dist": 0.497
         },
         {
-          "id": "2024_5078005",
-          "name": "Abu Sama III",
-          "team": "Iowa State",
-          "year": 2024,
-          "dist": 0.518
-        },
-        {
           "id": "2014_503640",
           "name": "D.J. Vinson",
           "team": "UAB",
           "year": 2014,
+          "dist": 0.518
+        },
+        {
+          "id": "2024_5078005",
+          "name": "Abu Sama III",
+          "team": "Iowa State",
+          "year": 2024,
           "dist": 0.518
         },
         {
@@ -446309,7 +446309,7 @@ const COLLEGE_SCOUTING = {
           "name": "Donovonn Young",
           "team": "Illinois",
           "year": 2013,
-          "dist": 0.575
+          "dist": 0.574
         },
         {
           "id": "2025_5157261",
@@ -446346,7 +446346,7 @@ const COLLEGE_SCOUTING = {
           "name": "Nic Smith",
           "team": "North Texas",
           "year": 2017,
-          "dist": 0.387
+          "dist": 0.388
         },
         {
           "id": "2016_552882",
@@ -446425,7 +446425,7 @@ const COLLEGE_SCOUTING = {
           "name": "Corey Kiner",
           "team": "Cincinnati",
           "year": 2022,
-          "dist": 0.65
+          "dist": 0.651
         },
         {
           "id": "2013_511394",
@@ -446476,7 +446476,7 @@ const COLLEGE_SCOUTING = {
           "name": "Armand Shyne",
           "team": "Utah",
           "year": 2016,
-          "dist": 0.769
+          "dist": 0.768
         },
         {
           "id": "2026_5086388",
@@ -446597,7 +446597,7 @@ const COLLEGE_SCOUTING = {
           "name": "Toa Taua",
           "team": "Nevada",
           "year": 2022,
-          "dist": 1.247
+          "dist": 1.246
         },
         {
           "id": "2026_5141499",
@@ -446685,7 +446685,7 @@ const COLLEGE_SCOUTING = {
           "name": "Demarcus Felton",
           "team": "Texas Tech",
           "year": 2016,
-          "dist": 0.322
+          "dist": 0.323
         },
         {
           "id": "2025_4879060",
@@ -446720,7 +446720,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jordan Mcdonald",
           "team": "Boston College",
           "year": 2024,
-          "dist": 0.582
+          "dist": 0.581
         },
         {
           "id": "2017_546764",
@@ -446764,7 +446764,7 @@ const COLLEGE_SCOUTING = {
           "name": "Donavyn Lester",
           "team": "UNLV",
           "year": 2023,
-          "dist": 0.386
+          "dist": 0.387
         },
         {
           "id": "2020_4044536",
@@ -446871,7 +446871,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jordan Scarlett",
           "team": "Florida",
           "year": 2016,
-          "dist": 0.657
+          "dist": 0.658
         },
         {
           "id": "2018_4040640",
@@ -446957,7 +446957,7 @@ const COLLEGE_SCOUTING = {
           "name": "Joshua Fields",
           "team": "UTEP",
           "year": 2019,
-          "dist": 0.748
+          "dist": 0.747
         },
         {
           "id": "2024_5162845",
@@ -446994,14 +446994,14 @@ const COLLEGE_SCOUTING = {
           "name": "Bentavious Thompson",
           "team": "UCF",
           "year": 2019,
-          "dist": 0.505
+          "dist": 0.504
         },
         {
           "id": "2025_5099736",
           "name": "Ja'shon Benjamin",
           "team": "Rutgers",
           "year": 2025,
-          "dist": 0.525
+          "dist": 0.524
         },
         {
           "id": "2023_4432718",
@@ -447094,7 +447094,7 @@ const COLLEGE_SCOUTING = {
           "name": "Michel Dukes",
           "team": "Georgia State",
           "year": 2024,
-          "dist": 0.935
+          "dist": 0.936
         },
         {
           "id": "2019_3932911",
@@ -447108,7 +447108,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kenyon Clay",
           "team": "Southern Miss",
           "year": 2024,
-          "dist": 0.95
+          "dist": 0.951
         }
       ],
       "2025_5296612": [
@@ -447124,7 +447124,7 @@ const COLLEGE_SCOUTING = {
           "name": "Corey Taylor II",
           "team": "Tulsa",
           "year": 2020,
-          "dist": 0.468
+          "dist": 0.467
         },
         {
           "id": "2024_553074",
@@ -447210,7 +447210,7 @@ const COLLEGE_SCOUTING = {
           "name": "Shawndarrius Phillips",
           "team": "Florida International",
           "year": 2017,
-          "dist": 0.42
+          "dist": 0.419
         },
         {
           "id": "2022_4244855",
@@ -447241,18 +447241,18 @@ const COLLEGE_SCOUTING = {
           "dist": 0.464
         },
         {
+          "id": "2026_5207930",
+          "name": "DAndre Hardeman Jr.",
+          "team": "Rice",
+          "year": 2026,
+          "dist": 0.469
+        },
+        {
           "id": "2015_531594",
           "name": "Jordan Parker",
           "team": "Middle Tennessee",
           "year": 2015,
           "dist": 0.472
-        },
-        {
-          "id": "2026_4873234",
-          "name": "Victor Rosa",
-          "team": "Ohio",
-          "year": 2026,
-          "dist": 0.474
         }
       ],
       "2026_4685254": [
@@ -447296,28 +447296,28 @@ const COLLEGE_SCOUTING = {
           "name": "Gary Brightwell",
           "team": "Arizona",
           "year": 2020,
-          "dist": 1.046
+          "dist": 1.047
         },
         {
           "id": "2025_4599158",
           "name": "Al-Jay Henderson",
           "team": "Buffalo",
           "year": 2025,
-          "dist": 1.151
+          "dist": 1.152
         },
         {
           "id": "2020_4576294",
           "name": "Harrison Waylee",
           "team": "Northern Illinois",
           "year": 2020,
-          "dist": 1.173
+          "dist": 1.174
         },
         {
           "id": "2016_3914324",
           "name": "Marquis Young",
           "team": "Massachusetts",
           "year": 2016,
-          "dist": 1.183
+          "dist": 1.184
         },
         {
           "id": "2018_3920865",
@@ -447405,70 +447405,70 @@ const COLLEGE_SCOUTING = {
           "name": "Fred Coppet",
           "team": "Bowling Green",
           "year": 2015,
-          "dist": 3.374
+          "dist": 3.373
         },
         {
           "id": "2013_531903",
           "name": "Conor Hundley",
           "team": "Akron",
           "year": 2013,
-          "dist": 4.08
+          "dist": 4.081
         },
         {
           "id": "2014_3123042",
           "name": "Joseph Yearby",
           "team": "Miami",
           "year": 2014,
-          "dist": 4.362
+          "dist": 4.364
         },
         {
           "id": "2013_505548",
           "name": "Orleans Darkwa",
           "team": "Tulane",
           "year": 2013,
-          "dist": 4.681
+          "dist": 4.684
         },
         {
           "id": "2021_4362619",
           "name": "Chris Rodriguez Jr.",
           "team": "Kentucky",
           "year": 2021,
-          "dist": 5.551
+          "dist": 5.554
         },
         {
           "id": "2014_531903",
           "name": "Conor Hundley",
           "team": "Akron",
           "year": 2014,
-          "dist": 6.007
+          "dist": 6.008
         },
         {
           "id": "2014_547077",
           "name": "Fred Coppet",
           "team": "Bowling Green",
           "year": 2014,
-          "dist": 6.095
+          "dist": 6.096
         },
         {
           "id": "2022_4429501",
           "name": "Re'Mahn Davis",
           "team": "Vanderbilt",
           "year": 2022,
-          "dist": 6.418
+          "dist": 6.42
         },
         {
           "id": "2014_550049",
           "name": "Gus Edwards",
           "team": "Miami",
           "year": 2014,
-          "dist": 6.733
+          "dist": 6.737
         },
         {
           "id": "2013_532251",
           "name": "Robert Lowe",
           "team": "Texas State",
           "year": 2013,
-          "dist": 6.886
+          "dist": 6.888
         }
       ],
       "2026_4685445": [
@@ -447584,7 +447584,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jordon Davison",
           "team": "Oregon",
           "year": 2026,
-          "dist": 0.931
+          "dist": 0.932
         },
         {
           "id": "2021_4685247",
@@ -447605,7 +447605,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dedrick Mills",
           "team": "Georgia Tech",
           "year": 2016,
-          "dist": 0.986
+          "dist": 0.987
         },
         {
           "id": "2023_4685247",
@@ -447628,7 +447628,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kaden Shields-Dutton",
           "team": "Florida Atlantic",
           "year": 2025,
-          "dist": 0.278
+          "dist": 0.279
         },
         {
           "id": "2025_5260847",
@@ -447828,7 +447828,7 @@ const COLLEGE_SCOUTING = {
           "name": "Nay'Quan Wright",
           "team": "South Florida",
           "year": 2024,
-          "dist": 0.561
+          "dist": 0.562
         }
       ],
       "2026_4805256": [
@@ -447837,7 +447837,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jalen Richard",
           "team": "Southern Miss",
           "year": 2013,
-          "dist": 0.423
+          "dist": 0.422
         },
         {
           "id": "2023_4608922",
@@ -447886,7 +447886,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jeremiah Laufasa",
           "team": "UTEP",
           "year": 2015,
-          "dist": 0.654
+          "dist": 0.653
         },
         {
           "id": "2026_5079378",
@@ -447900,7 +447900,7 @@ const COLLEGE_SCOUTING = {
           "name": "Bryson Roland",
           "team": "UL Monroe",
           "year": 2026,
-          "dist": 0.694
+          "dist": 0.693
         }
       ],
       "2026_4816098": [
@@ -447909,7 +447909,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dylan Riley",
           "team": "Boise State",
           "year": 2025,
-          "dist": 0.282
+          "dist": 0.283
         },
         {
           "id": "2026_5223167",
@@ -447972,7 +447972,7 @@ const COLLEGE_SCOUTING = {
           "name": "Khalfani Muhammad",
           "team": "California",
           "year": 2016,
-          "dist": 0.518
+          "dist": 0.519
         }
       ],
       "2026_4816099": [
@@ -448074,7 +448074,7 @@ const COLLEGE_SCOUTING = {
           "name": "Taron Keith",
           "team": "South Florida",
           "year": 2024,
-          "dist": 0.521
+          "dist": 0.522
         },
         {
           "id": "2022_4696240",
@@ -448132,7 +448132,7 @@ const COLLEGE_SCOUTING = {
           "name": "CJ Miller",
           "team": "Toledo",
           "year": 2026,
-          "dist": 0.434
+          "dist": 0.435
         },
         {
           "id": "2016_546068",
@@ -448218,7 +448218,7 @@ const COLLEGE_SCOUTING = {
           "name": "Cameron Scarlett",
           "team": "Stanford",
           "year": 2017,
-          "dist": 0.696
+          "dist": 0.695
         },
         {
           "id": "2024_4608607",
@@ -448260,7 +448260,7 @@ const COLLEGE_SCOUTING = {
           "name": "Isaiah Johnson",
           "team": "North Texas",
           "year": 2021,
-          "dist": 0.842
+          "dist": 0.841
         }
       ],
       "2026_4870609": [
@@ -448290,7 +448290,7 @@ const COLLEGE_SCOUTING = {
           "name": "TJ Harden",
           "team": "UCLA",
           "year": 2023,
-          "dist": 0.434
+          "dist": 0.433
         },
         {
           "id": "2015_546764",
@@ -448455,14 +448455,14 @@ const COLLEGE_SCOUTING = {
           "name": "Jamal Jones",
           "team": "Arkansas State",
           "year": 2020,
-          "dist": 0.499
+          "dist": 0.5
         },
         {
           "id": "2020_4360448",
           "name": "Brock Sturges",
           "team": "Texas State",
           "year": 2020,
-          "dist": 0.503
+          "dist": 0.502
         },
         {
           "id": "2022_4371977",
@@ -448472,10 +448472,10 @@ const COLLEGE_SCOUTING = {
           "dist": 0.503
         },
         {
-          "id": "2025_5233016",
-          "name": "King Miller",
-          "team": "USC",
-          "year": 2025,
+          "id": "2017_3919544",
+          "name": "Matt Colburn",
+          "team": "Wake Forest",
+          "year": 2017,
           "dist": 0.51
         }
       ],
@@ -448506,7 +448506,7 @@ const COLLEGE_SCOUTING = {
           "name": "Derrius Guice",
           "team": "LSU",
           "year": 2017,
-          "dist": 0.517
+          "dist": 0.518
         },
         {
           "id": "2022_4685247",
@@ -448520,7 +448520,7 @@ const COLLEGE_SCOUTING = {
           "name": "Freddie Brock",
           "team": "Georgia State",
           "year": 2024,
-          "dist": 0.541
+          "dist": 0.542
         },
         {
           "id": "2013_534409",
@@ -448636,7 +448636,7 @@ const COLLEGE_SCOUTING = {
           "name": "Cameron Pettaway",
           "team": "Bowling Green",
           "year": 2025,
-          "dist": 0.822
+          "dist": 0.823
         },
         {
           "id": "2025_5086378",
@@ -448664,7 +448664,7 @@ const COLLEGE_SCOUTING = {
           "name": "Shaun Wilson",
           "team": "Duke",
           "year": 2015,
-          "dist": 1.024
+          "dist": 1.025
         },
         {
           "id": "2021_4569156",
@@ -448678,21 +448678,21 @@ const COLLEGE_SCOUTING = {
           "name": "Judah Price",
           "team": "Marshall",
           "year": 2026,
-          "dist": 1.054
+          "dist": 1.055
         },
         {
           "id": "2015_3125361",
           "name": "LaJuan Hunt",
           "team": "Utah State",
           "year": 2015,
-          "dist": 1.063
+          "dist": 1.064
         },
         {
           "id": "2014_516321",
           "name": "Brandon Ross",
           "team": "Maryland",
           "year": 2014,
-          "dist": 1.071
+          "dist": 1.072
         }
       ],
       "2026_4871081": [
@@ -448757,7 +448757,7 @@ const COLLEGE_SCOUTING = {
           "name": "T.K. Wilkerson",
           "team": "Tulsa",
           "year": 2020,
-          "dist": 1.046
+          "dist": 1.047
         },
         {
           "id": "2015_515941",
@@ -448841,6 +448841,13 @@ const COLLEGE_SCOUTING = {
       ],
       "2026_4873234": [
         {
+          "id": "2026_5207930",
+          "name": "DAndre Hardeman Jr.",
+          "team": "Rice",
+          "year": 2026,
+          "dist": 0.316
+        },
+        {
           "id": "2024_4696690",
           "name": "Reggie Love III",
           "team": "Purdue",
@@ -448902,13 +448909,6 @@ const COLLEGE_SCOUTING = {
           "team": "Duke",
           "year": 2013,
           "dist": 0.465
-        },
-        {
-          "id": "2026_4683234",
-          "name": "La'Vell Wright",
-          "team": "Pittsburgh",
-          "year": 2026,
-          "dist": 0.474
         }
       ],
       "2026_4878394": [
@@ -448959,7 +448959,7 @@ const COLLEGE_SCOUTING = {
           "name": "Isaih Pacheco",
           "team": "Rutgers",
           "year": 2020,
-          "dist": 0.636
+          "dist": 0.637
         },
         {
           "id": "2020_4568660",
@@ -449082,7 +449082,7 @@ const COLLEGE_SCOUTING = {
           "name": "Terry Swanson",
           "team": "Toledo",
           "year": 2017,
-          "dist": 0.568
+          "dist": 0.567
         },
         {
           "id": "2025_4870736",
@@ -449124,22 +449124,22 @@ const COLLEGE_SCOUTING = {
           "name": "Ray Lawry",
           "team": "Old Dominion",
           "year": 2016,
-          "dist": 0.639
+          "dist": 0.64
         }
       ],
       "2026_4897730": [
-        {
-          "id": "2023_4686658",
-          "name": "Michael Washington",
-          "team": "Buffalo",
-          "year": 2023,
-          "dist": 0.574
-        },
         {
           "id": "2019_3922124",
           "name": "Christian Gibson",
           "team": "New Mexico State",
           "year": 2019,
+          "dist": 0.574
+        },
+        {
+          "id": "2023_4686658",
+          "name": "Michael Washington",
+          "team": "Buffalo",
+          "year": 2023,
           "dist": 0.574
         },
         {
@@ -449161,7 +449161,7 @@ const COLLEGE_SCOUTING = {
           "name": "Mikale Wilbon",
           "team": "Nebraska",
           "year": 2017,
-          "dist": 0.641
+          "dist": 0.642
         },
         {
           "id": "2026_5148741",
@@ -449226,7 +449226,7 @@ const COLLEGE_SCOUTING = {
           "name": "Shomari Lawrence",
           "team": "Florida International",
           "year": 2023,
-          "dist": 0.41
+          "dist": 0.411
         },
         {
           "id": "2017_3125112",
@@ -449370,7 +449370,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ezekiel Elliott",
           "team": "Ohio State",
           "year": 2015,
-          "dist": 0.788
+          "dist": 0.787
         },
         {
           "id": "2020_4426891",
@@ -449521,7 +449521,7 @@ const COLLEGE_SCOUTING = {
           "name": "Shadrach Abrokwah",
           "team": "Massachusetts",
           "year": 2014,
-          "dist": 1.165
+          "dist": 1.166
         },
         {
           "id": "2014_511251",
@@ -449542,7 +449542,7 @@ const COLLEGE_SCOUTING = {
           "name": "Gideon Davidson",
           "team": "Clemson",
           "year": 2026,
-          "dist": 1.305
+          "dist": 1.306
         },
         {
           "id": "2016_550681",
@@ -449637,7 +449637,7 @@ const COLLEGE_SCOUTING = {
           "name": "Chris Hairston",
           "team": "East Carolina",
           "year": 2015,
-          "dist": 0.437
+          "dist": 0.438
         },
         {
           "id": "2019_4255939",
@@ -449716,7 +449716,7 @@ const COLLEGE_SCOUTING = {
           "name": "Lamical Perine",
           "team": "Florida",
           "year": 2019,
-          "dist": 0.427
+          "dist": 0.428
         },
         {
           "id": "2016_3892787",
@@ -449765,7 +449765,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ke'Mon Freeman",
           "team": "SMU",
           "year": 2016,
-          "dist": 0.544
+          "dist": 0.545
         },
         {
           "id": "2018_3871874",
@@ -449816,14 +449816,14 @@ const COLLEGE_SCOUTING = {
           "name": "Jeremy Smith",
           "team": "Louisville",
           "year": 2016,
-          "dist": 1.489
+          "dist": 1.488
         },
         {
           "id": "2023_4685397",
           "name": "Jordan James",
           "team": "Oregon",
           "year": 2023,
-          "dist": 1.505
+          "dist": 1.506
         },
         {
           "id": "2017_4239996",
@@ -449860,7 +449860,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ja'Kobi Jackson",
           "team": "Ohio State",
           "year": 2026,
-          "dist": 0.825
+          "dist": 0.824
         },
         {
           "id": "2020_4361837",
@@ -449888,7 +449888,7 @@ const COLLEGE_SCOUTING = {
           "name": "NaQuari Rogers",
           "team": "New Mexico",
           "year": 2024,
-          "dist": 1.015
+          "dist": 1.016
         },
         {
           "id": "2022_4880638",
@@ -449902,7 +449902,7 @@ const COLLEGE_SCOUTING = {
           "name": "Noah Cain",
           "team": "LSU",
           "year": 2022,
-          "dist": 1.029
+          "dist": 1.028
         },
         {
           "id": "2019_4362619",
@@ -449916,7 +449916,7 @@ const COLLEGE_SCOUTING = {
           "name": "Nate Frazier",
           "team": "Georgia",
           "year": 2026,
-          "dist": 1.052
+          "dist": 1.053
         }
       ],
       "2026_4918414": [
@@ -449939,7 +449939,7 @@ const COLLEGE_SCOUTING = {
           "name": "Corey Avery",
           "team": "Kansas",
           "year": 2014,
-          "dist": 0.503
+          "dist": 0.504
         },
         {
           "id": "2018_4037457",
@@ -449967,7 +449967,7 @@ const COLLEGE_SCOUTING = {
           "name": "Xavier Jones",
           "team": "SMU",
           "year": 2015,
-          "dist": 0.566
+          "dist": 0.565
         },
         {
           "id": "2020_4361529",
@@ -449981,7 +449981,7 @@ const COLLEGE_SCOUTING = {
           "name": "Elijah Gilliam",
           "team": "Fresno State",
           "year": 2024,
-          "dist": 0.585
+          "dist": 0.584
         },
         {
           "id": "2019_4429676",
@@ -450060,7 +450060,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jordan Mims",
           "team": "Fresno State",
           "year": 2022,
-          "dist": 0.647
+          "dist": 0.646
         }
       ],
       "2026_4921116": [
@@ -450097,7 +450097,7 @@ const COLLEGE_SCOUTING = {
           "name": "Larry Rountree III",
           "team": "Missouri",
           "year": 2020,
-          "dist": 1.071
+          "dist": 1.07
         },
         {
           "id": "2014_3129453",
@@ -450162,7 +450162,7 @@ const COLLEGE_SCOUTING = {
           "name": "J.D. King",
           "team": "Georgia Southern",
           "year": 2019,
-          "dist": 0.482
+          "dist": 0.483
         },
         {
           "id": "2015_3918636",
@@ -450276,7 +450276,7 @@ const COLLEGE_SCOUTING = {
           "name": "Malik Sherrod",
           "team": "Fresno State",
           "year": 2022,
-          "dist": 0.507
+          "dist": 0.508
         }
       ],
       "2026_4922993": [
@@ -450292,7 +450292,7 @@ const COLLEGE_SCOUTING = {
           "name": "Pat Garwo III",
           "team": "Boston College",
           "year": 2022,
-          "dist": 1.012
+          "dist": 1.013
         },
         {
           "id": "2017_4261225",
@@ -450341,7 +450341,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jamal Morrow",
           "team": "Washington State",
           "year": 2014,
-          "dist": 1.276
+          "dist": 1.275
         },
         {
           "id": "2016_3916451",
@@ -450357,7 +450357,7 @@ const COLLEGE_SCOUTING = {
           "name": "Martell Pettaway",
           "team": "West Virginia",
           "year": 2018,
-          "dist": 0.268
+          "dist": 0.269
         },
         {
           "id": "2024_5078422",
@@ -450371,7 +450371,7 @@ const COLLEGE_SCOUTING = {
           "name": "Trey Ragas",
           "team": "Louisiana",
           "year": 2019,
-          "dist": 0.422
+          "dist": 0.423
         },
         {
           "id": "2024_5151892",
@@ -450385,14 +450385,14 @@ const COLLEGE_SCOUTING = {
           "name": "Tawee Walker",
           "team": "Oklahoma",
           "year": 2023,
-          "dist": 0.502
+          "dist": 0.503
         },
         {
           "id": "2021_4370813",
           "name": "Wayne Taulapapa",
           "team": "Virginia",
           "year": 2021,
-          "dist": 0.509
+          "dist": 0.51
         },
         {
           "id": "2018_3139562",
@@ -450402,17 +450402,17 @@ const COLLEGE_SCOUTING = {
           "dist": 0.547
         },
         {
-          "id": "2024_4870736",
-          "name": "Mark Fletcher Jr.",
-          "team": "Miami",
-          "year": 2024,
-          "dist": 0.565
-        },
-        {
           "id": "2014_532121",
           "name": "Trey Williams",
           "team": "Texas A&M",
           "year": 2014,
+          "dist": 0.565
+        },
+        {
+          "id": "2024_4870736",
+          "name": "Mark Fletcher Jr.",
+          "team": "Miami",
+          "year": 2024,
           "dist": 0.565
         },
         {
@@ -450471,7 +450471,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dami Ayoola",
           "team": "South Alabama",
           "year": 2016,
-          "dist": 0.37
+          "dist": 0.371
         },
         {
           "id": "2023_4374306",
@@ -450515,7 +450515,7 @@ const COLLEGE_SCOUTING = {
           "name": "Treyvon Green",
           "team": "Northwestern",
           "year": 2013,
-          "dist": 0.487
+          "dist": 0.488
         },
         {
           "id": "2018_4242214",
@@ -450594,7 +450594,7 @@ const COLLEGE_SCOUTING = {
           "name": "Shaquille Powell",
           "team": "Duke",
           "year": 2015,
-          "dist": 0.516
+          "dist": 0.517
         },
         {
           "id": "2025_5258024",
@@ -450724,7 +450724,7 @@ const COLLEGE_SCOUTING = {
           "name": "Nicholas Singleton",
           "team": "Penn State",
           "year": 2022,
-          "dist": 0.251
+          "dist": 0.25
         },
         {
           "id": "2021_4361777",
@@ -450810,7 +450810,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kanye Udoh",
           "team": "Army",
           "year": 2024,
-          "dist": 0.702
+          "dist": 0.703
         },
         {
           "id": "2015_533220",
@@ -450882,7 +450882,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kevin Marks",
           "team": "Buffalo",
           "year": 2021,
-          "dist": 0.568
+          "dist": 0.569
         },
         {
           "id": "2023_4431304",
@@ -450924,7 +450924,7 @@ const COLLEGE_SCOUTING = {
           "name": "Isaiah Augustave",
           "team": "Colorado",
           "year": 2024,
-          "dist": 0.65
+          "dist": 0.651
         }
       ],
       "2026_5078063": [
@@ -450933,7 +450933,7 @@ const COLLEGE_SCOUTING = {
           "name": "La'Damian Webb",
           "team": "Florida State",
           "year": 2020,
-          "dist": 0.464
+          "dist": 0.463
         },
         {
           "id": "2022_4568024",
@@ -450989,7 +450989,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jaqwis Dancy",
           "team": "Louisiana Tech",
           "year": 2018,
-          "dist": 0.686
+          "dist": 0.685
         },
         {
           "id": "2017_3932222",
@@ -451033,14 +451033,14 @@ const COLLEGE_SCOUTING = {
           "name": "Darrin Hall",
           "team": "Pittsburgh",
           "year": 2017,
-          "dist": 0.482
+          "dist": 0.483
         },
         {
           "id": "2015_3129453",
           "name": "Jarvion Franklin",
           "team": "Western Michigan",
           "year": 2015,
-          "dist": 0.509
+          "dist": 0.51
         },
         {
           "id": "2025_5082271",
@@ -451098,7 +451098,7 @@ const COLLEGE_SCOUTING = {
           "name": "CJ Marable",
           "team": "Coastal Carolina",
           "year": 2020,
-          "dist": 0.479
+          "dist": 0.478
         },
         {
           "id": "2019_4034952",
@@ -451126,7 +451126,7 @@ const COLLEGE_SCOUTING = {
           "name": "Josh Williams",
           "team": "LSU",
           "year": 2024,
-          "dist": 0.553
+          "dist": 0.554
         },
         {
           "id": "2018_4047337",
@@ -451277,7 +451277,7 @@ const COLLEGE_SCOUTING = {
           "name": "Sedrick Alexander",
           "team": "Vanderbilt",
           "year": 2023,
-          "dist": 0.563
+          "dist": 0.564
         },
         {
           "id": "2024_5220340",
@@ -451393,7 +451393,7 @@ const COLLEGE_SCOUTING = {
           "name": "Blake Corum",
           "team": "Michigan",
           "year": 2023,
-          "dist": 0.567
+          "dist": 0.568
         },
         {
           "id": "2026_5233016",
@@ -451414,14 +451414,14 @@ const COLLEGE_SCOUTING = {
           "name": "Rahsul Faison",
           "team": "Utah State",
           "year": 2024,
-          "dist": 0.604
+          "dist": 0.603
         },
         {
           "id": "2019_3116074",
           "name": "Rodney Smith",
           "team": "Minnesota",
           "year": 2019,
-          "dist": 0.615
+          "dist": 0.616
         },
         {
           "id": "2021_4255988",
@@ -451486,7 +451486,7 @@ const COLLEGE_SCOUTING = {
           "name": "TJ Harden",
           "team": "UCLA",
           "year": 2023,
-          "dist": 0.596
+          "dist": 0.597
         },
         {
           "id": "2019_4037295",
@@ -451544,14 +451544,14 @@ const COLLEGE_SCOUTING = {
           "name": "Jordon Davison",
           "team": "Oregon",
           "year": 2025,
-          "dist": 1.029
+          "dist": 1.03
         },
         {
           "id": "2023_4875861",
           "name": "Ayo Adeyi",
           "team": "North Texas",
           "year": 2023,
-          "dist": 1.037
+          "dist": 1.038
         },
         {
           "id": "2018_3895788",
@@ -451630,7 +451630,7 @@ const COLLEGE_SCOUTING = {
           "name": "A.J. Turner",
           "team": "South Carolina",
           "year": 2016,
-          "dist": 0.707
+          "dist": 0.708
         },
         {
           "id": "2014_502454",
@@ -451681,7 +451681,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jaden Nixon",
           "team": "UCF",
           "year": 2025,
-          "dist": 0.694
+          "dist": 0.693
         },
         {
           "id": "2024_4894661",
@@ -451853,7 +451853,7 @@ const COLLEGE_SCOUTING = {
           "name": "Deon Jackson",
           "team": "Duke",
           "year": 2019,
-          "dist": 0.887
+          "dist": 0.888
         },
         {
           "id": "2020_4239941",
@@ -452076,7 +452076,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dylan Edwards",
           "team": "Kansas State",
           "year": 2024,
-          "dist": 0.606
+          "dist": 0.605
         }
       ],
       "2026_5079574": [
@@ -452141,7 +452141,7 @@ const COLLEGE_SCOUTING = {
           "name": "Markell Jones",
           "team": "Purdue",
           "year": 2018,
-          "dist": 0.404
+          "dist": 0.403
         },
         {
           "id": "2016_3123042",
@@ -452171,7 +452171,7 @@ const COLLEGE_SCOUTING = {
           "name": "Phil Mafah",
           "team": "Clemson",
           "year": 2023,
-          "dist": 0.552
+          "dist": 0.553
         },
         {
           "id": "2020_4039467",
@@ -452216,11 +452216,11 @@ const COLLEGE_SCOUTING = {
           "dist": 0.694
         },
         {
-          "id": "2026_5296364",
-          "name": "Keveun Mason",
-          "team": "Temple",
-          "year": 2026,
-          "dist": 0.707
+          "id": "2016_3915536",
+          "name": "Mike Weber",
+          "team": "Ohio State",
+          "year": 2016,
+          "dist": 0.71
         }
       ],
       "2026_5079663": [
@@ -452278,7 +452278,7 @@ const COLLEGE_SCOUTING = {
           "name": "Devine Ozigbo",
           "team": "Nebraska",
           "year": 2017,
-          "dist": 0.896
+          "dist": 0.895
         },
         {
           "id": "2026_5295550",
@@ -452343,7 +452343,7 @@ const COLLEGE_SCOUTING = {
           "name": "Terry Swanson",
           "team": "Toledo",
           "year": 2014,
-          "dist": 0.558
+          "dist": 0.559
         },
         {
           "id": "2018_4039503",
@@ -452487,7 +452487,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jarquez Hunter",
           "team": "Auburn",
           "year": 2021,
-          "dist": 0.498
+          "dist": 0.499
         },
         {
           "id": "2026_5295070",
@@ -452501,7 +452501,7 @@ const COLLEGE_SCOUTING = {
           "name": "Emari Demercado",
           "team": "TCU",
           "year": 2022,
-          "dist": 0.526
+          "dist": 0.525
         },
         {
           "id": "2020_4567246",
@@ -452552,7 +452552,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dorian Brown",
           "team": "Ohio",
           "year": 2017,
-          "dist": 0.724
+          "dist": 0.725
         },
         {
           "id": "2015_3139033",
@@ -452668,14 +452668,14 @@ const COLLEGE_SCOUTING = {
           "name": "C.J. Hester",
           "team": "Massachusetts",
           "year": 2024,
-          "dist": 0.41
+          "dist": 0.409
         },
         {
           "id": "2025_5079378",
           "name": "Darrion Dupree",
           "team": "Wisconsin",
           "year": 2025,
-          "dist": 0.452
+          "dist": 0.453
         },
         {
           "id": "2016_551182",
@@ -452699,6 +452699,13 @@ const COLLEGE_SCOUTING = {
           "dist": 0.471
         },
         {
+          "id": "2026_5207930",
+          "name": "DAndre Hardeman Jr.",
+          "team": "Rice",
+          "year": 2026,
+          "dist": 0.49
+        },
+        {
           "id": "2013_512471",
           "name": "Kenneth Farrow",
           "team": "Houston",
@@ -452718,13 +452725,6 @@ const COLLEGE_SCOUTING = {
           "team": "Georgia State",
           "year": 2015,
           "dist": 0.528
-        },
-        {
-          "id": "2018_4035497",
-          "name": "Kam Martin",
-          "team": "Auburn",
-          "year": 2018,
-          "dist": 0.548
         }
       ],
       "2026_5084582": [
@@ -452733,21 +452733,21 @@ const COLLEGE_SCOUTING = {
           "name": "Kylin Hill",
           "team": "Mississippi State",
           "year": 2019,
-          "dist": 0.449
+          "dist": 0.448
         },
         {
           "id": "2025_4918126",
           "name": "LJ Martin",
           "team": "BYU",
           "year": 2025,
-          "dist": 0.55
+          "dist": 0.549
         },
         {
           "id": "2023_4690013",
           "name": "Rasheen Ali",
           "team": "Marshall",
           "year": 2023,
-          "dist": 0.569
+          "dist": 0.57
         },
         {
           "id": "2025_4713118",
@@ -452891,7 +452891,7 @@ const COLLEGE_SCOUTING = {
           "name": "Demario Richard",
           "team": "Arizona State",
           "year": 2015,
-          "dist": 0.699
+          "dist": 0.7
         },
         {
           "id": "2013_512990",
@@ -453035,7 +453035,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jordan Nubin",
           "team": "Minnesota",
           "year": 2023,
-          "dist": 1.157
+          "dist": 1.158
         },
         {
           "id": "2014_517433",
@@ -453056,7 +453056,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jalen Hurd",
           "team": "Tennessee",
           "year": 2016,
-          "dist": 1.293
+          "dist": 1.294
         },
         {
           "id": "2013_482048",
@@ -453084,7 +453084,7 @@ const COLLEGE_SCOUTING = {
           "name": "Reggie Love III",
           "team": "Illinois",
           "year": 2023,
-          "dist": 1.509
+          "dist": 1.508
         }
       ],
       "2026_5086097": [
@@ -453107,7 +453107,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dameon Pierce",
           "team": "Florida",
           "year": 2018,
-          "dist": 0.571
+          "dist": 0.572
         },
         {
           "id": "2021_4362841",
@@ -453179,7 +453179,7 @@ const COLLEGE_SCOUTING = {
           "name": "CJ Donaldson",
           "team": "West Virginia",
           "year": 2022,
-          "dist": 0.82
+          "dist": 0.821
         },
         {
           "id": "2017_3791143",
@@ -453228,7 +453228,7 @@ const COLLEGE_SCOUTING = {
           "name": "Adam Hine",
           "team": "BYU",
           "year": 2015,
-          "dist": 1.279
+          "dist": 1.28
         }
       ],
       "2026_5086393": [
@@ -453251,7 +453251,7 @@ const COLLEGE_SCOUTING = {
           "name": "Marlon Mack",
           "team": "South Florida",
           "year": 2016,
-          "dist": 0.559
+          "dist": 0.558
         },
         {
           "id": "2020_4428119",
@@ -453395,7 +453395,7 @@ const COLLEGE_SCOUTING = {
           "name": "Cameron Dickey",
           "team": "Texas Tech",
           "year": 2025,
-          "dist": 0.554
+          "dist": 0.555
         },
         {
           "id": "2017_3122672",
@@ -453409,7 +453409,7 @@ const COLLEGE_SCOUTING = {
           "name": "Patrick Taylor Jr.",
           "team": "Memphis",
           "year": 2018,
-          "dist": 0.559
+          "dist": 0.558
         },
         {
           "id": "2021_4427728",
@@ -453488,7 +453488,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jordan Scarlett",
           "team": "Florida",
           "year": 2016,
-          "dist": 0.64
+          "dist": 0.641
         },
         {
           "id": "2019_4244732",
@@ -453502,7 +453502,7 @@ const COLLEGE_SCOUTING = {
           "name": "Spencer Brown",
           "team": "UAB",
           "year": 2018,
-          "dist": 0.649
+          "dist": 0.65
         },
         {
           "id": "2014_547203",
@@ -453532,7 +453532,7 @@ const COLLEGE_SCOUTING = {
           "name": "Aidan Laughery",
           "team": "Illinois",
           "year": 2026,
-          "dist": 0.434
+          "dist": 0.435
         },
         {
           "id": "2015_3914324",
@@ -453581,7 +453581,7 @@ const COLLEGE_SCOUTING = {
           "name": "Marquez Cooper",
           "team": "Kent State",
           "year": 2021,
-          "dist": 0.606
+          "dist": 0.607
         },
         {
           "id": "2015_3123944",
@@ -453769,7 +453769,7 @@ const COLLEGE_SCOUTING = {
           "name": "Warren Wand",
           "team": "Arkansas State",
           "year": 2018,
-          "dist": 0.625
+          "dist": 0.624
         },
         {
           "id": "2018_4047337",
@@ -453913,7 +453913,7 @@ const COLLEGE_SCOUTING = {
           "name": "Aaron McAllister",
           "team": "Charlotte",
           "year": 2018,
-          "dist": 0.485
+          "dist": 0.486
         },
         {
           "id": "2026_5154284",
@@ -453927,7 +453927,7 @@ const COLLEGE_SCOUTING = {
           "name": "Matt Jones",
           "team": "Southern Miss",
           "year": 2025,
-          "dist": 0.546
+          "dist": 0.547
         },
         {
           "id": "2026_5084210",
@@ -453964,7 +453964,7 @@ const COLLEGE_SCOUTING = {
           "name": "Mataeo Durant",
           "team": "Duke",
           "year": 2019,
-          "dist": 0.356
+          "dist": 0.357
         },
         {
           "id": "2025_4430565",
@@ -454013,7 +454013,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kylan Watkins",
           "team": "Memphis",
           "year": 2020,
-          "dist": 0.601
+          "dist": 0.6
         },
         {
           "id": "2019_3928925",
@@ -454078,7 +454078,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jamal Jones",
           "team": "Arkansas State",
           "year": 2019,
-          "dist": 0.459
+          "dist": 0.46
         },
         {
           "id": "2018_4036032",
@@ -454164,7 +454164,7 @@ const COLLEGE_SCOUTING = {
           "name": "Trey Benson",
           "team": "Florida State",
           "year": 2022,
-          "dist": 0.641
+          "dist": 0.64
         }
       ],
       "2026_5123048": [
@@ -454229,7 +454229,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jordan Scarlett",
           "team": "Florida",
           "year": 2018,
-          "dist": 0.413
+          "dist": 0.414
         },
         {
           "id": "2020_4370813",
@@ -454248,13 +454248,6 @@ const COLLEGE_SCOUTING = {
           "dist": 0.322
         },
         {
-          "id": "2026_5296364",
-          "name": "Keveun Mason",
-          "team": "Temple",
-          "year": 2026,
-          "dist": 0.373
-        },
-        {
           "id": "2026_5158978",
           "name": "Damon Ferguson Jr.",
           "team": "Pittsburgh",
@@ -454267,6 +454260,13 @@ const COLLEGE_SCOUTING = {
           "team": "Oklahoma",
           "year": 2018,
           "dist": 0.405
+        },
+        {
+          "id": "2026_5296364",
+          "name": "Keveun Mason",
+          "team": "Temple",
+          "year": 2026,
+          "dist": 0.425
         },
         {
           "id": "2017_4046740",
@@ -454359,7 +454359,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kobe Lewis",
           "team": "Central Michigan",
           "year": 2019,
-          "dist": 0.508
+          "dist": 0.509
         },
         {
           "id": "2022_4686658",
@@ -454431,14 +454431,14 @@ const COLLEGE_SCOUTING = {
           "name": "Aaron Wimberly",
           "team": "Iowa State",
           "year": 2014,
-          "dist": 0.768
+          "dist": 0.767
         },
         {
           "id": "2025_4676889",
           "name": "Myles Montgomery",
           "team": "UCF",
           "year": 2025,
-          "dist": 0.774
+          "dist": 0.775
         },
         {
           "id": "2019_4255939",
@@ -454452,7 +454452,7 @@ const COLLEGE_SCOUTING = {
           "name": "Cam Cook",
           "team": "West Virginia",
           "year": 2026,
-          "dist": 0.838
+          "dist": 0.837
         }
       ],
       "2026_5126513": [
@@ -454596,7 +454596,7 @@ const COLLEGE_SCOUTING = {
           "name": "Viliami Teu",
           "team": "San José State",
           "year": 2026,
-          "dist": 0.703
+          "dist": 0.704
         }
       ],
       "2026_5141422": [
@@ -454633,7 +454633,7 @@ const COLLEGE_SCOUTING = {
           "name": "Lazedrick Thompson",
           "team": "Tulane",
           "year": 2014,
-          "dist": 0.829
+          "dist": 0.828
         },
         {
           "id": "2019_4370813",
@@ -454647,7 +454647,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tre Siggers",
           "team": "North Texas",
           "year": 2020,
-          "dist": 0.882
+          "dist": 0.881
         },
         {
           "id": "2019_4239768",
@@ -454805,7 +454805,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dare Ogunbowale",
           "team": "Wisconsin",
           "year": 2015,
-          "dist": 1.003
+          "dist": 1.004
         },
         {
           "id": "2024_4429072",
@@ -454856,7 +454856,7 @@ const COLLEGE_SCOUTING = {
           "name": "Freddie Brock",
           "team": "Georgia State",
           "year": 2024,
-          "dist": 0.496
+          "dist": 0.497
         },
         {
           "id": "2019_4384198",
@@ -455079,7 +455079,7 @@ const COLLEGE_SCOUTING = {
           "name": "Terrence Franks",
           "team": "Texas State",
           "year": 2014,
-          "dist": 0.416
+          "dist": 0.417
         },
         {
           "id": "2024_4870760",
@@ -455267,7 +455267,7 @@ const COLLEGE_SCOUTING = {
           "name": "Justin Stockton",
           "team": "Texas Tech",
           "year": 2017,
-          "dist": 0.439
+          "dist": 0.44
         },
         {
           "id": "2021_4039912",
@@ -455284,17 +455284,17 @@ const COLLEGE_SCOUTING = {
           "dist": 0.499
         },
         {
-          "id": "2018_4362087",
-          "name": "Keaontay Ingram",
-          "team": "Texas",
-          "year": 2018,
-          "dist": 0.538
-        },
-        {
           "id": "2024_4686095",
           "name": "Kobe Pace",
           "team": "Virginia",
           "year": 2024,
+          "dist": 0.538
+        },
+        {
+          "id": "2018_4362087",
+          "name": "Keaontay Ingram",
+          "team": "Texas",
+          "year": 2018,
           "dist": 0.538
         },
         {
@@ -455346,7 +455346,7 @@ const COLLEGE_SCOUTING = {
           "name": "Otis Anderson",
           "team": "UCF",
           "year": 2017,
-          "dist": 0.916
+          "dist": 0.917
         },
         {
           "id": "2014_3117251",
@@ -455453,7 +455453,7 @@ const COLLEGE_SCOUTING = {
           "name": "Najee Harris",
           "team": "Alabama",
           "year": 2020,
-          "dist": 0.76
+          "dist": 0.759
         },
         {
           "id": "2024_5154339",
@@ -455541,7 +455541,7 @@ const COLLEGE_SCOUTING = {
           "name": "Demario Richard",
           "team": "Arizona State",
           "year": 2017,
-          "dist": 0.329
+          "dist": 0.328
         },
         {
           "id": "2018_3915536",
@@ -455583,7 +455583,7 @@ const COLLEGE_SCOUTING = {
           "name": "Braelon Allen",
           "team": "Wisconsin",
           "year": 2021,
-          "dist": 0.553
+          "dist": 0.554
         },
         {
           "id": "2019_4241371",
@@ -455741,7 +455741,7 @@ const COLLEGE_SCOUTING = {
           "name": "Shaq Vann",
           "team": "Eastern Michigan",
           "year": 2017,
-          "dist": 1.104
+          "dist": 1.105
         },
         {
           "id": "2014_3116775",
@@ -455757,7 +455757,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ke'Mon Freeman",
           "team": "SMU",
           "year": 2018,
-          "dist": 0.667
+          "dist": 0.668
         },
         {
           "id": "2023_4685470",
@@ -455864,14 +455864,14 @@ const COLLEGE_SCOUTING = {
           "name": "Larry Rose III",
           "team": "New Mexico State",
           "year": 2016,
-          "dist": 1.338
+          "dist": 1.339
         },
         {
           "id": "2018_3921652",
           "name": "Juwan Washington",
           "team": "San Diego State",
           "year": 2018,
-          "dist": 1.364
+          "dist": 1.365
         },
         {
           "id": "2025_4686065",
@@ -455885,7 +455885,7 @@ const COLLEGE_SCOUTING = {
           "name": "Leonard Fournette",
           "team": "LSU",
           "year": 2016,
-          "dist": 1.492
+          "dist": 1.491
         },
         {
           "id": "2016_4043160",
@@ -455943,7 +455943,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ja'Vin Simpkins",
           "team": "Coastal Carolina",
           "year": 2025,
-          "dist": 0.461
+          "dist": 0.46
         },
         {
           "id": "2017_3701017",
@@ -455964,7 +455964,7 @@ const COLLEGE_SCOUTING = {
           "name": "Wayne Gallman",
           "team": "Clemson",
           "year": 2014,
-          "dist": 0.511
+          "dist": 0.51
         }
       ],
       "2026_5151112": [
@@ -456138,14 +456138,14 @@ const COLLEGE_SCOUTING = {
           "name": "Keyon Mozee",
           "team": "Miami (OH)",
           "year": 2024,
-          "dist": 0.62
+          "dist": 0.621
         },
         {
           "id": "2018_4040761",
           "name": "Devin Singletary",
           "team": "Florida Atlantic",
           "year": 2018,
-          "dist": 0.678
+          "dist": 0.679
         },
         {
           "id": "2016_3915115",
@@ -456217,7 +456217,7 @@ const COLLEGE_SCOUTING = {
           "name": "LJ Martin",
           "team": "BYU",
           "year": 2026,
-          "dist": 0.825
+          "dist": 0.824
         },
         {
           "id": "2024_5086050",
@@ -456252,7 +456252,7 @@ const COLLEGE_SCOUTING = {
           "name": "CJ Donaldson",
           "team": "West Virginia",
           "year": 2022,
-          "dist": 1.022
+          "dist": 1.021
         }
       ],
       "2026_5153885": [
@@ -456340,7 +456340,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jalen Mitchell",
           "team": "Louisville",
           "year": 2021,
-          "dist": 0.358
+          "dist": 0.357
         },
         {
           "id": "2024_5173431",
@@ -456447,7 +456447,7 @@ const COLLEGE_SCOUTING = {
           "name": "Micah Welch",
           "team": "Colorado",
           "year": 2025,
-          "dist": 0.491
+          "dist": 0.49
         },
         {
           "id": "2019_3922124",
@@ -456468,7 +456468,7 @@ const COLLEGE_SCOUTING = {
           "name": "Khalil Herbert",
           "team": "Kansas",
           "year": 2018,
-          "dist": 0.505
+          "dist": 0.506
         }
       ],
       "2026_5154420": [
@@ -456700,14 +456700,14 @@ const COLLEGE_SCOUTING = {
           "name": "Cartevious Norton",
           "team": "Iowa State",
           "year": 2022,
-          "dist": 0.472
+          "dist": 0.473
         },
         {
           "id": "2013_536240",
           "name": "Steven Lakalaka",
           "team": "Hawai'i",
           "year": 2013,
-          "dist": 0.506
+          "dist": 0.505
         },
         {
           "id": "2018_4040434",
@@ -456721,7 +456721,7 @@ const COLLEGE_SCOUTING = {
           "name": "Nathaniel Jones",
           "team": "New Mexico",
           "year": 2022,
-          "dist": 0.529
+          "dist": 0.53
         },
         {
           "id": "2020_4361624",
@@ -456893,7 +456893,7 @@ const COLLEGE_SCOUTING = {
           "name": "Henry Parrish Jr.",
           "team": "Miami",
           "year": 2023,
-          "dist": 0.903
+          "dist": 0.904
         },
         {
           "id": "2023_4574129",
@@ -456930,7 +456930,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jabari Small",
           "team": "Tennessee",
           "year": 2023,
-          "dist": 0.607
+          "dist": 0.608
         },
         {
           "id": "2020_4243542",
@@ -456958,7 +456958,7 @@ const COLLEGE_SCOUTING = {
           "name": "Emari Demercado",
           "team": "TCU",
           "year": 2022,
-          "dist": 0.655
+          "dist": 0.654
         },
         {
           "id": "2021_4362620",
@@ -457053,7 +457053,7 @@ const COLLEGE_SCOUTING = {
           "name": "Keveun Mason",
           "team": "Temple",
           "year": 2026,
-          "dist": 0.337
+          "dist": 0.338
         },
         {
           "id": "2026_5124334",
@@ -457088,7 +457088,7 @@ const COLLEGE_SCOUTING = {
           "name": "Trey Sermon",
           "team": "Oklahoma",
           "year": 2018,
-          "dist": 0.637
+          "dist": 0.638
         },
         {
           "id": "2016_546705",
@@ -457188,7 +457188,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jonathan Williams",
           "team": "Arkansas",
           "year": 2013,
-          "dist": 0.477
+          "dist": 0.478
         }
       ],
       "2026_5159087": [
@@ -457369,7 +457369,7 @@ const COLLEGE_SCOUTING = {
           "name": "De'Montre Tuggle",
           "team": "Ohio",
           "year": 2019,
-          "dist": 0.522
+          "dist": 0.523
         },
         {
           "id": "2024_5151892",
@@ -457451,17 +457451,17 @@ const COLLEGE_SCOUTING = {
           "dist": 0.519
         },
         {
-          "id": "2021_4362313",
-          "name": "O'Shann Allison",
-          "team": "Ohio",
-          "year": 2021,
-          "dist": 0.532
-        },
-        {
           "id": "2013_518390",
           "name": "Damon Bullock",
           "team": "Iowa",
           "year": 2013,
+          "dist": 0.532
+        },
+        {
+          "id": "2021_4362313",
+          "name": "O'Shann Allison",
+          "team": "Ohio",
+          "year": 2021,
           "dist": 0.532
         },
         {
@@ -457499,7 +457499,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jalen Rhodes",
           "team": "UTSA",
           "year": 2017,
-          "dist": 0.446
+          "dist": 0.445
         },
         {
           "id": "2020_4361529",
@@ -457548,7 +457548,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ashton Gray",
           "team": "East Carolina",
           "year": 2026,
-          "dist": 0.562
+          "dist": 0.563
         }
       ],
       "2026_5164332": [
@@ -457578,7 +457578,7 @@ const COLLEGE_SCOUTING = {
           "name": "Antonio Andrews",
           "team": "Western Kentucky",
           "year": 2013,
-          "dist": 1.549
+          "dist": 1.55
         },
         {
           "id": "2014_517330",
@@ -457845,7 +457845,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jahmyl Jeter",
           "team": "Texas State",
           "year": 2021,
-          "dist": 0.387
+          "dist": 0.388
         },
         {
           "id": "2026_5295930",
@@ -457938,14 +457938,14 @@ const COLLEGE_SCOUTING = {
           "name": "Josh Robinson",
           "team": "Mississippi State",
           "year": 2014,
-          "dist": 0.796
+          "dist": 0.795
         },
         {
           "id": "2024_4685555",
           "name": "Nicholas Singleton",
           "team": "Penn State",
           "year": 2024,
-          "dist": 0.811
+          "dist": 0.81
         },
         {
           "id": "2023_4570130",
@@ -457966,7 +457966,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dontrell Hilliard",
           "team": "Tulane",
           "year": 2016,
-          "dist": 0.874
+          "dist": 0.875
         },
         {
           "id": "2020_4428119",
@@ -458045,7 +458045,7 @@ const COLLEGE_SCOUTING = {
           "name": "Shomari Lawrence",
           "team": "Florida International",
           "year": 2023,
-          "dist": 0.55
+          "dist": 0.551
         },
         {
           "id": "2016_3116563",
@@ -458147,7 +458147,7 @@ const COLLEGE_SCOUTING = {
           "name": "Darrell Henderson",
           "team": "Memphis",
           "year": 2017,
-          "dist": 0.655
+          "dist": 0.656
         },
         {
           "id": "2024_4684525",
@@ -458219,7 +458219,7 @@ const COLLEGE_SCOUTING = {
           "name": "Victor Rosa",
           "team": "UConn",
           "year": 2022,
-          "dist": 0.502
+          "dist": 0.503
         },
         {
           "id": "2014_508159",
@@ -458377,7 +458377,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jamarion Miller",
           "team": "Alabama",
           "year": 2024,
-          "dist": 0.504
+          "dist": 0.503
         },
         {
           "id": "2026_5079506",
@@ -458500,7 +458500,7 @@ const COLLEGE_SCOUTING = {
           "name": "B.J. Daniels",
           "team": "UTSA",
           "year": 2018,
-          "dist": 0.419
+          "dist": 0.42
         },
         {
           "id": "2018_4036819",
@@ -458651,7 +458651,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tre King",
           "team": "Texas Tech",
           "year": 2017,
-          "dist": 0.313
+          "dist": 0.314
         },
         {
           "id": "2026_4899361",
@@ -458709,142 +458709,142 @@ const COLLEGE_SCOUTING = {
           "name": "Terion Stewart",
           "team": "Bowling Green",
           "year": 2021,
-          "dist": 3.302
+          "dist": 3.316
         },
         {
           "id": "2017_3129454",
           "name": "Jamauri Bogan",
           "team": "Western Michigan",
           "year": 2017,
-          "dist": 5.903
+          "dist": 5.868
         },
         {
           "id": "2025_5223119",
           "name": "Owen Allen",
           "team": "Air Force",
           "year": 2025,
-          "dist": 6.569
+          "dist": 6.598
         },
         {
           "id": "2014_533277",
           "name": "Imani Cross",
           "team": "Nebraska",
           "year": 2014,
-          "dist": 6.822
-        },
-        {
-          "id": "2014_546318",
-          "name": "Kelvin Taylor",
-          "team": "Florida",
-          "year": 2014,
-          "dist": 6.919
+          "dist": 6.832
         },
         {
           "id": "2019_4241139",
           "name": "Matt LaRoche",
           "team": "Georgia Southern",
           "year": 2019,
-          "dist": 6.94
+          "dist": 6.955
+        },
+        {
+          "id": "2014_546318",
+          "name": "Kelvin Taylor",
+          "team": "Florida",
+          "year": 2014,
+          "dist": 6.976
         },
         {
           "id": "2020_4257189",
           "name": "Kevin Marks",
           "team": "Buffalo",
           "year": 2020,
-          "dist": 6.952
+          "dist": 7.042
         },
         {
           "id": "2021_4241891",
           "name": "Alec Sinkfield",
           "team": "Boston College",
           "year": 2021,
-          "dist": 7.089
-        },
-        {
-          "id": "2015_3124349",
-          "name": "Jacobi Owens",
-          "team": "Air Force",
-          "year": 2015,
-          "dist": 7.198
+          "dist": 7.127
         },
         {
           "id": "2018_4362538",
           "name": "Juma Otoviano",
           "team": "Rice",
           "year": 2018,
-          "dist": 7.295
+          "dist": 7.168
+        },
+        {
+          "id": "2015_3124349",
+          "name": "Jacobi Owens",
+          "team": "Air Force",
+          "year": 2015,
+          "dist": 7.261
         }
       ],
       "2026_5207930": [
         {
-          "id": "2022_4363153",
-          "name": "Tyre Shelton",
-          "team": "Miami (OH)",
-          "year": 2022,
-          "dist": 0.407
+          "id": "2026_4873234",
+          "name": "Victor Rosa",
+          "team": "Ohio",
+          "year": 2026,
+          "dist": 0.316
         },
         {
-          "id": "2015_531594",
-          "name": "Jordan Parker",
-          "team": "Middle Tennessee",
-          "year": 2015,
-          "dist": 0.467
+          "id": "2023_4374306",
+          "name": "Markese Stepp",
+          "team": "Western Kentucky",
+          "year": 2023,
+          "dist": 0.316
         },
         {
-          "id": "2024_4696240",
-          "name": "Jaylon Jackson",
-          "team": "Iowa State",
+          "id": "2017_4241414",
+          "name": "J.D. King",
+          "team": "Oklahoma State",
+          "year": 2017,
+          "dist": 0.392
+        },
+        {
+          "id": "2025_5079378",
+          "name": "Darrion Dupree",
+          "team": "Wisconsin",
+          "year": 2025,
+          "dist": 0.418
+        },
+        {
+          "id": "2016_4039358",
+          "name": "Patrick Taylor Jr.",
+          "team": "Memphis",
+          "year": 2016,
+          "dist": 0.447
+        },
+        {
+          "id": "2024_4696690",
+          "name": "Reggie Love III",
+          "team": "Purdue",
           "year": 2024,
-          "dist": 0.48
-        },
-        {
-          "id": "2015_545840",
-          "name": "Kyler Neal",
-          "team": "Georgia State",
-          "year": 2015,
-          "dist": 0.492
-        },
-        {
-          "id": "2021_4362161",
-          "name": "Ta'Zhawn Henry",
-          "team": "Houston",
-          "year": 2021,
-          "dist": 0.493
-        },
-        {
-          "id": "2013_515455",
-          "name": "Donovonn Young",
-          "team": "Illinois",
-          "year": 2013,
-          "dist": 0.533
-        },
-        {
-          "id": "2024_4899361",
-          "name": "Kedrick Reescano",
-          "team": "Arizona",
-          "year": 2024,
-          "dist": 0.533
-        },
-        {
-          "id": "2019_4040640",
-          "name": "Darius Bradwell",
-          "team": "Tulane",
-          "year": 2019,
-          "dist": 0.556
+          "dist": 0.459
         },
         {
           "id": "2026_4683234",
           "name": "La'Vell Wright",
           "team": "Pittsburgh",
           "year": 2026,
-          "dist": 0.556
+          "dist": 0.469
         },
         {
-          "id": "2019_4256045",
-          "name": "Marcus McElroy",
-          "team": "Colorado State",
-          "year": 2019,
-          "dist": 0.566
+          "id": "2015_531594",
+          "name": "Jordan Parker",
+          "team": "Middle Tennessee",
+          "year": 2015,
+          "dist": 0.484
+        },
+        {
+          "id": "2016_550468",
+          "name": "Gerald Holmes",
+          "team": "Michigan State",
+          "year": 2016,
+          "dist": 0.485
+        },
+        {
+          "id": "2026_5084286",
+          "name": "Makhi Frazier",
+          "team": "Ole Miss",
+          "year": 2026,
+          "dist": 0.49
         }
       ],
       "2026_5208592": [
@@ -458953,7 +458953,7 @@ const COLLEGE_SCOUTING = {
           "name": "Bryson Washington",
           "team": "Baylor",
           "year": 2024,
-          "dist": 0.83
+          "dist": 0.831
         },
         {
           "id": "2023_4684940",
@@ -459011,7 +459011,7 @@ const COLLEGE_SCOUTING = {
           "name": "Mataeo Durant",
           "team": "Duke",
           "year": 2021,
-          "dist": 0.469
+          "dist": 0.468
         },
         {
           "id": "2022_4686065",
@@ -459132,7 +459132,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jon Hilliman",
           "team": "Boston College",
           "year": 2014,
-          "dist": 0.539
+          "dist": 0.54
         }
       ],
       "2026_5216509": [
@@ -459148,7 +459148,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tre Watson",
           "team": "California",
           "year": 2015,
-          "dist": 0.509
+          "dist": 0.508
         },
         {
           "id": "2022_4426333",
@@ -459183,7 +459183,7 @@ const COLLEGE_SCOUTING = {
           "name": "Israel Abanikanda",
           "team": "Pittsburgh",
           "year": 2021,
-          "dist": 0.609
+          "dist": 0.61
         },
         {
           "id": "2014_532450",
@@ -459197,7 +459197,7 @@ const COLLEGE_SCOUTING = {
           "name": "Terrence Upshaw",
           "team": "App State",
           "year": 2014,
-          "dist": 0.658
+          "dist": 0.659
         },
         {
           "id": "2021_4686095",
@@ -459248,7 +459248,7 @@ const COLLEGE_SCOUTING = {
           "name": "Davon Booth",
           "team": "Utah State",
           "year": 2023,
-          "dist": 0.588
+          "dist": 0.589
         },
         {
           "id": "2021_4685247",
@@ -459341,7 +459341,7 @@ const COLLEGE_SCOUTING = {
           "name": "Joseph Yearby",
           "team": "Miami",
           "year": 2015,
-          "dist": 0.778
+          "dist": 0.777
         },
         {
           "id": "2016_549984",
@@ -459364,21 +459364,21 @@ const COLLEGE_SCOUTING = {
           "name": "Justin Goodwin",
           "team": "Rutgers",
           "year": 2016,
-          "dist": 0.976
+          "dist": 0.975
         },
         {
           "id": "2013_530982",
           "name": "Paul Perkins",
           "team": "UCLA",
           "year": 2013,
-          "dist": 1.273
+          "dist": 1.272
         },
         {
           "id": "2019_4362748",
           "name": "Tyler Badie",
           "team": "Missouri",
           "year": 2019,
-          "dist": 1.373
+          "dist": 1.374
         },
         {
           "id": "2015_545762",
@@ -459392,7 +459392,7 @@ const COLLEGE_SCOUTING = {
           "name": "Clay Thevenin",
           "team": "Louisiana Tech",
           "year": 2025,
-          "dist": 1.464
+          "dist": 1.465
         },
         {
           "id": "2021_4569156",
@@ -459543,7 +459543,7 @@ const COLLEGE_SCOUTING = {
           "name": "Anthony Grant",
           "team": "Nebraska",
           "year": 2023,
-          "dist": 0.518
+          "dist": 0.519
         },
         {
           "id": "2014_551182",
@@ -459615,7 +459615,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jordan Chunn",
           "team": "Troy",
           "year": 2017,
-          "dist": 0.8
+          "dist": 0.799
         },
         {
           "id": "2015_532251",
@@ -459636,7 +459636,7 @@ const COLLEGE_SCOUTING = {
           "name": "Caden Durham",
           "team": "LSU",
           "year": 2024,
-          "dist": 0.851
+          "dist": 0.852
         }
       ],
       "2026_5220253": [
@@ -459708,7 +459708,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jarek Broussard",
           "team": "Colorado",
           "year": 2020,
-          "dist": 0.654
+          "dist": 0.653
         }
       ],
       "2026_5220641": [
@@ -459731,7 +459731,7 @@ const COLLEGE_SCOUTING = {
           "name": "Josh Adams",
           "team": "Notre Dame",
           "year": 2016,
-          "dist": 0.347
+          "dist": 0.348
         },
         {
           "id": "2023_4682652",
@@ -459766,7 +459766,7 @@ const COLLEGE_SCOUTING = {
           "name": "George Pettaway",
           "team": "James Madison",
           "year": 2024,
-          "dist": 0.583
+          "dist": 0.584
         },
         {
           "id": "2021_4372519",
@@ -459789,7 +459789,7 @@ const COLLEGE_SCOUTING = {
           "name": "Lew Nichols",
           "team": "Central Michigan",
           "year": 2020,
-          "dist": 1.638
+          "dist": 1.637
         },
         {
           "id": "2024_4432710",
@@ -459810,14 +459810,14 @@ const COLLEGE_SCOUTING = {
           "name": "Dwight Phillips Jr.",
           "team": "Georgia",
           "year": 2026,
-          "dist": 1.729
+          "dist": 1.73
         },
         {
           "id": "2016_3126246",
           "name": "Dontrell Hilliard",
           "team": "Tulane",
           "year": 2016,
-          "dist": 1.741
+          "dist": 1.742
         },
         {
           "id": "2014_3116563",
@@ -459831,7 +459831,7 @@ const COLLEGE_SCOUTING = {
           "name": "Alex Tecza",
           "team": "Navy",
           "year": 2025,
-          "dist": 1.762
+          "dist": 1.763
         },
         {
           "id": "2026_5203476",
@@ -459868,7 +459868,7 @@ const COLLEGE_SCOUTING = {
           "name": "Tra Barnett",
           "team": "Georgia State",
           "year": 2018,
-          "dist": 0.685
+          "dist": 0.684
         },
         {
           "id": "2018_4240657",
@@ -459896,14 +459896,14 @@ const COLLEGE_SCOUTING = {
           "name": "Tavierre Dunlap",
           "team": "Eastern Michigan",
           "year": 2025,
-          "dist": 0.723
+          "dist": 0.722
         },
         {
           "id": "2022_4260206",
           "name": "Jalen Holston",
           "team": "Virginia Tech",
           "year": 2022,
-          "dist": 0.725
+          "dist": 0.724
         },
         {
           "id": "2020_4426333",
@@ -459917,7 +459917,7 @@ const COLLEGE_SCOUTING = {
           "name": "Donovan Edwards",
           "team": "Michigan",
           "year": 2024,
-          "dist": 0.765
+          "dist": 0.764
         },
         {
           "id": "2017_4243003",
@@ -459954,7 +459954,7 @@ const COLLEGE_SCOUTING = {
           "name": "SaRodorick Thompson",
           "team": "Texas Tech",
           "year": 2019,
-          "dist": 0.485
+          "dist": 0.484
         },
         {
           "id": "2020_4427728",
@@ -459982,7 +459982,7 @@ const COLLEGE_SCOUTING = {
           "name": "Zak Wallace",
           "team": "Arkansas State",
           "year": 2024,
-          "dist": 0.594
+          "dist": 0.595
         },
         {
           "id": "2016_3915536",
@@ -460033,7 +460033,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jarquez Hunter",
           "team": "Auburn",
           "year": 2024,
-          "dist": 0.578
+          "dist": 0.579
         },
         {
           "id": "2014_535893",
@@ -460054,7 +460054,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dylan Sampson",
           "team": "Tennessee",
           "year": 2024,
-          "dist": 0.593
+          "dist": 0.592
         },
         {
           "id": "2026_4899368",
@@ -460098,7 +460098,7 @@ const COLLEGE_SCOUTING = {
           "name": "Myles Montgomery",
           "team": "Cincinnati",
           "year": 2023,
-          "dist": 1.496
+          "dist": 1.495
         },
         {
           "id": "2026_5158975",
@@ -460235,14 +460235,14 @@ const COLLEGE_SCOUTING = {
           "name": "Johnathan Gray",
           "team": "Texas",
           "year": 2014,
-          "dist": 0.629
+          "dist": 0.628
         },
         {
           "id": "2014_3116757",
           "name": "Prince-Tyson Gulley",
           "team": "Syracuse",
           "year": 2014,
-          "dist": 0.633
+          "dist": 0.632
         },
         {
           "id": "2019_4360406",
@@ -460458,7 +460458,7 @@ const COLLEGE_SCOUTING = {
           "name": "Lopini Katoa",
           "team": "BYU",
           "year": 2020,
-          "dist": 0.465
+          "dist": 0.464
         },
         {
           "id": "2024_4568312",
@@ -460630,7 +460630,7 @@ const COLLEGE_SCOUTING = {
           "name": "Nakia Watson",
           "team": "Wisconsin",
           "year": 2019,
-          "dist": 0.767
+          "dist": 0.766
         },
         {
           "id": "2019_4245238",
@@ -460990,7 +460990,7 @@ const COLLEGE_SCOUTING = {
           "name": "A.J. Ouellette",
           "team": "Ohio",
           "year": 2014,
-          "dist": 0.594
+          "dist": 0.595
         },
         {
           "id": "2023_4431499",
@@ -461027,7 +461027,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dalvin Cook",
           "team": "Florida State",
           "year": 2016,
-          "dist": 0.745
+          "dist": 0.746
         },
         {
           "id": "2016_3123969",
@@ -461055,7 +461055,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ke'Shawn Vaughn",
           "team": "Vanderbilt",
           "year": 2019,
-          "dist": 0.956
+          "dist": 0.957
         },
         {
           "id": "2022_4361444",
@@ -461069,14 +461069,14 @@ const COLLEGE_SCOUTING = {
           "name": "I'Tavius Mathers",
           "team": "Middle Tennessee",
           "year": 2016,
-          "dist": 0.968
+          "dist": 0.969
         },
         {
           "id": "2015_512671",
           "name": "Tyler Ervin",
           "team": "San José State",
           "year": 2015,
-          "dist": 0.982
+          "dist": 0.983
         }
       ],
       "2026_5258056": [
@@ -461120,7 +461120,7 @@ const COLLEGE_SCOUTING = {
           "name": "Darrel Williams",
           "team": "LSU",
           "year": 2017,
-          "dist": 0.71
+          "dist": 0.709
         },
         {
           "id": "2016_551298",
@@ -461220,7 +461220,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kevin Perkins",
           "team": "Southern Miss",
           "year": 2020,
-          "dist": 0.787
+          "dist": 0.788
         }
       ],
       "2026_5261613": [
@@ -461292,7 +461292,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jacobi Owens",
           "team": "Air Force",
           "year": 2014,
-          "dist": 0.817
+          "dist": 0.818
         }
       ],
       "2026_5264764": [
@@ -461329,7 +461329,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jacques Patrick",
           "team": "Florida State",
           "year": 2018,
-          "dist": 0.495
+          "dist": 0.496
         },
         {
           "id": "2015_518249",
@@ -461380,7 +461380,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jalen Hurd",
           "team": "Tennessee",
           "year": 2014,
-          "dist": 0.518
+          "dist": 0.519
         },
         {
           "id": "2026_4918414",
@@ -461401,7 +461401,7 @@ const COLLEGE_SCOUTING = {
           "name": "Landon Sims",
           "team": "Hawai'i",
           "year": 2025,
-          "dist": 0.602
+          "dist": 0.603
         },
         {
           "id": "2018_4240455",
@@ -461422,7 +461422,7 @@ const COLLEGE_SCOUTING = {
           "name": "Elijah Gilliam",
           "team": "Fresno State",
           "year": 2024,
-          "dist": 0.632
+          "dist": 0.633
         },
         {
           "id": "2017_3125361",
@@ -461436,7 +461436,7 @@ const COLLEGE_SCOUTING = {
           "name": "Travis Homer",
           "team": "Miami",
           "year": 2018,
-          "dist": 0.644
+          "dist": 0.645
         }
       ],
       "2026_5265528": [
@@ -461573,7 +461573,7 @@ const COLLEGE_SCOUTING = {
           "name": "Daijun Edwards",
           "team": "Georgia",
           "year": 2023,
-          "dist": 0.543
+          "dist": 0.542
         },
         {
           "id": "2025_4838269",
@@ -461617,14 +461617,14 @@ const COLLEGE_SCOUTING = {
           "name": "Tony Brooks-James",
           "team": "Oregon",
           "year": 2018,
-          "dist": 1.176
+          "dist": 1.175
         },
         {
           "id": "2022_4430714",
           "name": "Reese White",
           "team": "Coastal Carolina",
           "year": 2022,
-          "dist": 1.229
+          "dist": 1.228
         },
         {
           "id": "2015_3126211",
@@ -461733,7 +461733,7 @@ const COLLEGE_SCOUTING = {
           "name": "Kalen Ballage",
           "team": "Arizona State",
           "year": 2017,
-          "dist": 0.24
+          "dist": 0.241
         },
         {
           "id": "2022_4873234",
@@ -461833,21 +461833,21 @@ const COLLEGE_SCOUTING = {
           "name": "Micah Ford",
           "team": "Stanford",
           "year": 2025,
-          "dist": 0.688
+          "dist": 0.689
         },
         {
           "id": "2017_3123212",
           "name": "Ray Lawry",
           "team": "Old Dominion",
           "year": 2017,
-          "dist": 0.718
+          "dist": 0.719
         },
         {
           "id": "2016_4037221",
           "name": "Cade Carney",
           "team": "Wake Forest",
           "year": 2016,
-          "dist": 0.724
+          "dist": 0.725
         },
         {
           "id": "2023_4576294",
@@ -462012,7 +462012,7 @@ const COLLEGE_SCOUTING = {
           "name": "Josh Robinson",
           "team": "Mississippi State",
           "year": 2013,
-          "dist": 0.717
+          "dist": 0.718
         }
       ],
       "2026_5295930": [
@@ -462077,7 +462077,7 @@ const COLLEGE_SCOUTING = {
           "name": "Josh Cleveland",
           "team": "Bowling Green",
           "year": 2016,
-          "dist": 0.526
+          "dist": 0.527
         },
         {
           "id": "2022_4430591",
@@ -462114,7 +462114,7 @@ const COLLEGE_SCOUTING = {
           "name": "Montrell Johnson",
           "team": "Louisiana",
           "year": 2021,
-          "dist": 0.64
+          "dist": 0.639
         },
         {
           "id": "2018_4037221",
@@ -462128,14 +462128,14 @@ const COLLEGE_SCOUTING = {
           "name": "Elijah Mitchell",
           "team": "Louisiana",
           "year": 2019,
-          "dist": 0.671
+          "dist": 0.672
         },
         {
           "id": "2014_3122672",
           "name": "Royce Freeman",
           "team": "Oregon",
           "year": 2014,
-          "dist": 0.675
+          "dist": 0.674
         },
         {
           "id": "2018_4039669",
@@ -462221,7 +462221,7 @@ const COLLEGE_SCOUTING = {
           "name": "Dierre Hill Jr.",
           "team": "Oregon",
           "year": 2025,
-          "dist": 1.592
+          "dist": 1.591
         },
         {
           "id": "2018_4241940",
@@ -462237,70 +462237,70 @@ const COLLEGE_SCOUTING = {
           "name": "Damon Ferguson Jr.",
           "team": "Pittsburgh",
           "year": 2026,
-          "dist": 0.337
-        },
-        {
-          "id": "2026_5124334",
-          "name": "PJ Martin",
-          "team": "South Alabama",
-          "year": 2026,
-          "dist": 0.373
+          "dist": 0.338
         },
         {
           "id": "2020_4362238",
           "name": "Chase Brown",
           "team": "Illinois",
           "year": 2020,
-          "dist": 0.386
+          "dist": 0.36
         },
         {
           "id": "2022_4371977",
           "name": "Shaun Shivers",
           "team": "Indiana",
           "year": 2022,
-          "dist": 0.412
+          "dist": 0.404
+        },
+        {
+          "id": "2026_5124334",
+          "name": "PJ Martin",
+          "team": "South Alabama",
+          "year": 2026,
+          "dist": 0.425
+        },
+        {
+          "id": "2015_3125723",
+          "name": "Darian Green",
+          "team": "Ball State",
+          "year": 2015,
+          "dist": 0.516
         },
         {
           "id": "2018_4379504",
           "name": "Mekhi Sargent",
           "team": "Iowa",
           "year": 2018,
-          "dist": 0.53
+          "dist": 0.529
         },
         {
           "id": "2026_5223167",
           "name": "Will Henderson III",
           "team": "UTSA",
           "year": 2026,
-          "dist": 0.551
+          "dist": 0.543
         },
         {
-          "id": "2022_4570130",
-          "name": "Jermaine Brown Jr.",
-          "team": "UAB",
-          "year": 2022,
-          "dist": 0.558
+          "id": "2014_545762",
+          "name": "Sherman Badie",
+          "team": "Tulane",
+          "year": 2014,
+          "dist": 0.592
         },
         {
           "id": "2017_4046740",
           "name": "Josh Cleveland",
           "team": "Bowling Green",
           "year": 2017,
-          "dist": 0.558
+          "dist": 0.593
         },
         {
-          "id": "2026_5203477",
-          "name": "Dominic Knicely",
-          "team": "Coastal Carolina",
-          "year": 2026,
-          "dist": 0.584
-        },
-        {
-          "id": "2018_4241401",
-          "name": "Trey Sermon",
-          "team": "Oklahoma",
-          "year": 2018,
-          "dist": 0.587
+          "id": "2020_4360448",
+          "name": "Brock Sturges",
+          "team": "Texas State",
+          "year": 2020,
+          "dist": 0.624
         }
       ],
       "2026_5296374": [
@@ -462330,7 +462330,7 @@ const COLLEGE_SCOUTING = {
           "name": "Khalil Herbert",
           "team": "Kansas",
           "year": 2018,
-          "dist": 0.626
+          "dist": 0.625
         },
         {
           "id": "2017_4044511",
@@ -462381,7 +462381,7 @@ const COLLEGE_SCOUTING = {
           "name": "Terry Swanson",
           "team": "Toledo",
           "year": 2015,
-          "dist": 0.25
+          "dist": 0.251
         },
         {
           "id": "2021_4361777",
@@ -462460,7 +462460,7 @@ const COLLEGE_SCOUTING = {
           "name": "Ty'Son Williams",
           "team": "South Carolina",
           "year": 2017,
-          "dist": 0.427
+          "dist": 0.428
         },
         {
           "id": "2024_4696690",
@@ -462553,7 +462553,7 @@ const COLLEGE_SCOUTING = {
           "name": "Jakairi Moses",
           "team": "Western Kentucky",
           "year": 2020,
-          "dist": 0.535
+          "dist": 0.534
         },
         {
           "id": "2024_5121709",
@@ -462567,7 +462567,7 @@ const COLLEGE_SCOUTING = {
           "name": "Roy Finch",
           "team": "Oklahoma",
           "year": 2013,
-          "dist": 0.564
+          "dist": 0.565
         },
         {
           "id": "2023_4805256",
@@ -462721,17 +462721,17 @@ const COLLEGE_SCOUTING = {
           "dist": 0.612
         },
         {
-          "id": "2022_4426386",
-          "name": "Roschon Johnson",
-          "team": "Texas",
-          "year": 2022,
-          "dist": 0.621
-        },
-        {
           "id": "2016_3123857",
           "name": "Austin Walter",
           "team": "Rice",
           "year": 2016,
+          "dist": 0.621
+        },
+        {
+          "id": "2022_4426386",
+          "name": "Roschon Johnson",
+          "team": "Texas",
+          "year": 2022,
           "dist": 0.621
         }
       ],
@@ -462748,7 +462748,7 @@ const COLLEGE_SCOUTING = {
           "name": "Trelain Maddox",
           "team": "Georgia Tech",
           "year": 2026,
-          "dist": 0.787
+          "dist": 0.786
         },
         {
           "id": "2018_4259805",
@@ -462776,14 +462776,14 @@ const COLLEGE_SCOUTING = {
           "name": "Nicholas Singleton",
           "team": "Penn State",
           "year": 2025,
-          "dist": 0.871
+          "dist": 0.87
         },
         {
           "id": "2016_3884368",
           "name": "James Williams",
           "team": "Washington State",
           "year": 2016,
-          "dist": 0.95
+          "dist": 0.949
         },
         {
           "id": "2025_4430712",
@@ -462941,7 +462941,7 @@ const COLLEGE_SCOUTING = {
           "name": "Miles Reed",
           "team": "Hawai'i",
           "year": 2020,
-          "dist": 1.15
+          "dist": 1.151
         },
         {
           "id": "2026_4922993",
@@ -463043,7 +463043,7 @@ const COLLEGE_SCOUTING = {
           "name": "Roydell Williams",
           "team": "Alabama",
           "year": 2023,
-          "dist": 0.368
+          "dist": 0.369
         },
         {
           "id": "2024_4899368",
@@ -463064,7 +463064,7 @@ const COLLEGE_SCOUTING = {
           "name": "John Lovett",
           "team": "Baylor",
           "year": 2019,
-          "dist": 0.42
+          "dist": 0.419
         },
         {
           "id": "2015_3128756",
@@ -463129,7 +463129,7 @@ const COLLEGE_SCOUTING = {
           "name": "Xavier Jones",
           "team": "SMU",
           "year": 2018,
-          "dist": 0.599
+          "dist": 0.598
         },
         {
           "id": "2019_4261605",
@@ -463150,7 +463150,7 @@ const COLLEGE_SCOUTING = {
           "name": "Marlin Lane",
           "team": "Tennessee",
           "year": 2014,
-          "dist": 0.642
+          "dist": 0.643
         },
         {
           "id": "2022_4363153",
@@ -463160,11 +463160,11 @@ const COLLEGE_SCOUTING = {
           "dist": 0.645
         },
         {
-          "id": "2026_5207930",
-          "name": "DAndre Hardeman Jr.",
-          "team": "Rice",
-          "year": 2026,
-          "dist": 0.662
+          "id": "2018_3126139",
+          "name": "Anthony Scott",
+          "team": "East Carolina",
+          "year": 2018,
+          "dist": 0.669
         }
       ],
       "2026_5388331": [
@@ -463373,7 +463373,7 @@ const COLLEGE_SCOUTING = {
           "name": "Daijun Edwards",
           "team": "Georgia",
           "year": 2022,
-          "dist": 0.417
+          "dist": 0.418
         },
         {
           "id": "2023_5151317",
@@ -463438,7 +463438,7 @@ const COLLEGE_SCOUTING = {
           "name": "Micah Bernard",
           "team": "Utah",
           "year": 2024,
-          "dist": 0.756
+          "dist": 0.755
         },
         {
           "id": "2019_4243163",
@@ -489122,7 +489122,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 16.8
       },
       "2013_378329": {
-        "recShare": 55.3,
+        "recShare": 55.4,
         "ydShare": 42.9,
         "tdShare": 29.6,
         "avgPPA": 88.9,
@@ -489243,13 +489243,13 @@ const COLLEGE_SCOUTING = {
       "2013_481341": {
         "recShare": 48,
         "ydShare": 44.8,
-        "tdShare": 56.2,
+        "tdShare": 56.1,
         "avgPPA": 73.6,
         "usageOverall": 57.7
       },
       "2013_481448": {
         "recShare": 69.5,
-        "ydShare": 54.5,
+        "ydShare": 54.6,
         "tdShare": 65.1,
         "avgPPA": 41.4,
         "usageOverall": 68.3
@@ -489325,8 +489325,8 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 68.3
       },
       "2013_482196": {
-        "recShare": 57.7,
-        "ydShare": 54.5,
+        "recShare": 57.8,
+        "ydShare": 54.6,
         "tdShare": 23.3,
         "avgPPA": 91.9,
         "usageOverall": 23.7
@@ -489376,7 +489376,7 @@ const COLLEGE_SCOUTING = {
       "2013_482670": {
         "recShare": 50.6,
         "ydShare": 51.5,
-        "tdShare": 69.6,
+        "tdShare": 69.5,
         "avgPPA": 97.2,
         "usageOverall": 10.4
       },
@@ -489404,7 +489404,7 @@ const COLLEGE_SCOUTING = {
       "2013_482901": {
         "recShare": 65.3,
         "ydShare": 57.8,
-        "tdShare": 46.1,
+        "tdShare": 46,
         "avgPPA": 90.9,
         "usageOverall": 46.3
       },
@@ -489665,7 +489665,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 94.8,
         "tdShare": 71.2,
         "avgPPA": 94.7,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2013_501173": {
         "recShare": 35.4,
@@ -489767,7 +489767,7 @@ const COLLEGE_SCOUTING = {
       },
       "2013_501848": {
         "recShare": 82.3,
-        "ydShare": 88.4,
+        "ydShare": 88.5,
         "tdShare": 97.8,
         "avgPPA": 90.2,
         "usageOverall": 21.1
@@ -489780,7 +489780,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 44.8
       },
       "2013_502274": {
-        "recShare": 57.7,
+        "recShare": 57.8,
         "ydShare": 42,
         "tdShare": 68.4,
         "avgPPA": 86.3,
@@ -490083,7 +490083,7 @@ const COLLEGE_SCOUTING = {
       "2013_504930": {
         "recShare": 58.6,
         "ydShare": 60.3,
-        "tdShare": 74.9,
+        "tdShare": 75,
         "avgPPA": 77.8,
         "usageOverall": 66.4
       },
@@ -490125,7 +490125,7 @@ const COLLEGE_SCOUTING = {
       "2013_505233": {
         "recShare": 72.1,
         "ydShare": 82.4,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 72.7,
         "usageOverall": 53.1
       },
@@ -490327,7 +490327,7 @@ const COLLEGE_SCOUTING = {
       },
       "2013_512474": {
         "recShare": 59.4,
-        "ydShare": 66.4,
+        "ydShare": 66.3,
         "tdShare": 61.9,
         "avgPPA": 75.4,
         "usageOverall": 36.6
@@ -490384,12 +490384,12 @@ const COLLEGE_SCOUTING = {
       "2013_513025": {
         "recShare": 88.1,
         "ydShare": 88.9,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 91.7,
         "usageOverall": 56.5
       },
       "2013_513039": {
-        "recShare": 55.3,
+        "recShare": 55.4,
         "ydShare": 49.5,
         "tdShare": 83.2,
         "avgPPA": 58.2,
@@ -490461,7 +490461,7 @@ const COLLEGE_SCOUTING = {
       "2013_513727": {
         "recShare": 73.6,
         "ydShare": 77.9,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 98.3,
         "usageOverall": 0.6
       },
@@ -490496,14 +490496,14 @@ const COLLEGE_SCOUTING = {
       "2013_514279": {
         "recShare": 76.2,
         "ydShare": 63.3,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 75,
         "usageOverall": 49
       },
       "2013_514290": {
         "recShare": 76.2,
         "ydShare": 87,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 10.2,
         "usageOverall": 78.5
       },
@@ -490601,7 +490601,7 @@ const COLLEGE_SCOUTING = {
       "2013_515796": {
         "recShare": 22.3,
         "ydShare": 24.6,
-        "tdShare": 52,
+        "tdShare": 51.9,
         "avgPPA": 85.6,
         "usageOverall": 13.9
       },
@@ -490764,7 +490764,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 83.3,
         "tdShare": 81,
         "avgPPA": 47.9,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2013_517452": {
         "recShare": 98.9,
@@ -490825,7 +490825,7 @@ const COLLEGE_SCOUTING = {
       "2013_517962": {
         "recShare": 31.8,
         "ydShare": 50.9,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 84.1,
         "usageOverall": 6.2
       },
@@ -490844,7 +490844,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 88.9
       },
       "2013_518250": {
-        "recShare": 75.6,
+        "recShare": 75.5,
         "ydShare": 76.7,
         "tdShare": 58.3,
         "avgPPA": 60.1,
@@ -490890,7 +490890,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 50.4,
         "tdShare": 6.3,
         "avgPPA": 59.9,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2013_519703": {
         "recShare": 38.9,
@@ -490935,7 +490935,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 10.4
       },
       "2013_530417": {
-        "recShare": 57.7,
+        "recShare": 57.8,
         "ydShare": 62.8,
         "tdShare": 90.2,
         "avgPPA": 84,
@@ -491077,7 +491077,7 @@ const COLLEGE_SCOUTING = {
       "2013_532059": {
         "recShare": 81.2,
         "ydShare": 59.9,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 25.5,
         "usageOverall": 68.3
       },
@@ -491245,14 +491245,14 @@ const COLLEGE_SCOUTING = {
       "2013_535265": {
         "recShare": 68.5,
         "ydShare": 69.8,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 81.8,
         "usageOverall": 46.3
       },
       "2013_535270": {
         "recShare": 18.5,
         "ydShare": 7.1,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 56.1,
         "usageOverall": 5.3
       },
@@ -491308,7 +491308,7 @@ const COLLEGE_SCOUTING = {
       "2013_535884": {
         "recShare": 0.7,
         "ydShare": 24,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 99.8,
         "usageOverall": 0.1
       },
@@ -491322,7 +491322,7 @@ const COLLEGE_SCOUTING = {
       "2013_536182": {
         "recShare": 52.1,
         "ydShare": 42.5,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 47.6,
         "usageOverall": 7.1
       },
@@ -491334,7 +491334,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 60
       },
       "2013_536497": {
-        "recShare": 54.7,
+        "recShare": 54.8,
         "ydShare": 63.7,
         "tdShare": 45.9,
         "avgPPA": 85.6,
@@ -491406,7 +491406,7 @@ const COLLEGE_SCOUTING = {
       "2013_537386": {
         "recShare": 90.2,
         "ydShare": 82.4,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 42.2,
         "usageOverall": 66.4
       },
@@ -491511,7 +491511,7 @@ const COLLEGE_SCOUTING = {
       "2013_546244": {
         "recShare": 80.6,
         "ydShare": 71.1,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 65,
         "usageOverall": 44.8
       },
@@ -491525,7 +491525,7 @@ const COLLEGE_SCOUTING = {
       "2013_546465": {
         "recShare": 84.8,
         "ydShare": 89.5,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 85.9,
         "usageOverall": 44.8
       },
@@ -491629,7 +491629,7 @@ const COLLEGE_SCOUTING = {
       },
       "2013_550190": {
         "recShare": 38.9,
-        "ydShare": 66.4,
+        "ydShare": 66.3,
         "tdShare": 40.2,
         "avgPPA": 94.5,
         "usageOverall": 47.9
@@ -491812,7 +491812,7 @@ const COLLEGE_SCOUTING = {
       "2014_500254": {
         "recShare": 81.5,
         "ydShare": 77.2,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 55.7,
         "usageOverall": 61.2
       },
@@ -491821,7 +491821,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 37,
         "tdShare": 37.4,
         "avgPPA": 9.9,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2014_500546": {
         "recShare": 61.4,
@@ -491849,7 +491849,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 40.6,
         "tdShare": 47.2,
         "avgPPA": 12.6,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2014_501044": {
         "recShare": 59.7,
@@ -491889,7 +491889,7 @@ const COLLEGE_SCOUTING = {
       "2014_501534": {
         "recShare": 58.6,
         "ydShare": 53.4,
-        "tdShare": 52.7,
+        "tdShare": 52.6,
         "avgPPA": 82.5,
         "usageOverall": 28.4
       },
@@ -491924,7 +491924,7 @@ const COLLEGE_SCOUTING = {
       "2014_501842": {
         "recShare": 85.8,
         "ydShare": 87.1,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 49.5,
         "usageOverall": 66.4
       },
@@ -491959,7 +491959,7 @@ const COLLEGE_SCOUTING = {
       "2014_502295": {
         "recShare": 83.5,
         "ydShare": 80.4,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 30.7,
         "usageOverall": 93.4
       },
@@ -492044,7 +492044,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 38.5,
         "ydShare": 79.5,
         "tdShare": 51.7,
-        "avgPPA": 4.6,
+        "avgPPA": 4.5,
         "usageOverall": 85.2
       },
       "2014_503482": {
@@ -492099,7 +492099,7 @@ const COLLEGE_SCOUTING = {
       "2014_504230": {
         "recShare": 48.7,
         "ydShare": 63.3,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 91.9,
         "usageOverall": 46.3
       },
@@ -492135,7 +492135,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 49.2,
         "ydShare": 43.8,
         "tdShare": 41.4,
-        "avgPPA": 20.4,
+        "avgPPA": 20.3,
         "usageOverall": 44.8
       },
       "2014_504726": {
@@ -492237,7 +492237,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 32.6
       },
       "2014_508177": {
-        "recShare": 55.3,
+        "recShare": 55.4,
         "ydShare": 29.4,
         "tdShare": 34.5,
         "avgPPA": 12.9,
@@ -492266,7 +492266,7 @@ const COLLEGE_SCOUTING = {
       },
       "2014_511362": {
         "recShare": 23,
-        "ydShare": 55.2,
+        "ydShare": 55.3,
         "tdShare": 32.7,
         "avgPPA": 62.7,
         "usageOverall": 46.3
@@ -492392,7 +492392,7 @@ const COLLEGE_SCOUTING = {
       },
       "2014_512954": {
         "recShare": 82,
-        "ydShare": 66.4,
+        "ydShare": 66.3,
         "tdShare": 5.3,
         "avgPPA": 11.3,
         "usageOverall": 50.7
@@ -492406,13 +492406,13 @@ const COLLEGE_SCOUTING = {
       },
       "2014_512963": {
         "recShare": 46.1,
-        "ydShare": 55.2,
+        "ydShare": 55.3,
         "tdShare": 44.8,
         "avgPPA": 81.7,
         "usageOverall": 50.7
       },
       "2014_513039": {
-        "recShare": 97.7,
+        "recShare": 97.6,
         "ydShare": 99,
         "tdShare": 95.6,
         "avgPPA": 43.3,
@@ -492514,7 +492514,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 69.8,
         "tdShare": 65.9,
         "avgPPA": 14.6,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2014_514181": {
         "recShare": 34.2,
@@ -492556,7 +492556,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 47.6,
         "tdShare": 65.1,
         "avgPPA": 3.6,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2014_514707": {
         "recShare": 3,
@@ -492638,7 +492638,7 @@ const COLLEGE_SCOUTING = {
       "2014_515796": {
         "recShare": 69,
         "ydShare": 59.6,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 55.9,
         "usageOverall": 83.6
       },
@@ -492722,7 +492722,7 @@ const COLLEGE_SCOUTING = {
       "2014_517172": {
         "recShare": 34.2,
         "ydShare": 52.4,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 16.9,
         "usageOverall": 89.3
       },
@@ -492792,7 +492792,7 @@ const COLLEGE_SCOUTING = {
       "2014_517985": {
         "recShare": 64.9,
         "ydShare": 53.4,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 8.1,
         "usageOverall": 74.7
       },
@@ -493112,7 +493112,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 81.6
       },
       "2014_532661": {
-        "recShare": 97.9,
+        "recShare": 97.8,
         "ydShare": 87.3,
         "tdShare": 69.3,
         "avgPPA": 52.8,
@@ -493141,7 +493141,7 @@ const COLLEGE_SCOUTING = {
       },
       "2014_533091": {
         "recShare": 72.9,
-        "ydShare": 55.2,
+        "ydShare": 55.3,
         "tdShare": 70.9,
         "avgPPA": 63.7,
         "usageOverall": 51.8
@@ -493254,15 +493254,15 @@ const COLLEGE_SCOUTING = {
       "2014_534666": {
         "recShare": 54.2,
         "ydShare": 84.6,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 49.5,
         "usageOverall": 80.2
       },
       "2014_534739": {
         "recShare": 72.1,
         "ydShare": 66.8,
-        "tdShare": 69.6,
-        "avgPPA": 20.4,
+        "tdShare": 69.5,
+        "avgPPA": 20.3,
         "usageOverall": 87.6
       },
       "2014_534754": {
@@ -493294,7 +493294,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 85.2
       },
       "2014_535145": {
-        "recShare": 97.3,
+        "recShare": 97.2,
         "ydShare": 96.3,
         "tdShare": 93.8,
         "avgPPA": 12.7,
@@ -493317,21 +493317,21 @@ const COLLEGE_SCOUTING = {
       "2014_535181": {
         "recShare": 58.1,
         "ydShare": 38.2,
-        "tdShare": 52,
+        "tdShare": 51.9,
         "avgPPA": 27.5,
         "usageOverall": 61.2
       },
       "2014_535265": {
         "recShare": 58.1,
         "ydShare": 44.8,
-        "tdShare": 52,
+        "tdShare": 51.9,
         "avgPPA": 33.1,
         "usageOverall": 64
       },
       "2014_535270": {
         "recShare": 61.4,
         "ydShare": 53.4,
-        "tdShare": 74.5,
+        "tdShare": 74.6,
         "avgPPA": 54.8,
         "usageOverall": 70.4
       },
@@ -493414,10 +493414,10 @@ const COLLEGE_SCOUTING = {
       },
       "2014_535884": {
         "recShare": 47.5,
-        "ydShare": 55.2,
+        "ydShare": 55.3,
         "tdShare": 68.4,
         "avgPPA": 53.5,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2014_535947": {
         "recShare": 68.5,
@@ -493457,7 +493457,7 @@ const COLLEGE_SCOUTING = {
       "2014_536197": {
         "recShare": 52.7,
         "ydShare": 44.8,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 70.4,
         "usageOverall": 38.1
       },
@@ -493513,7 +493513,7 @@ const COLLEGE_SCOUTING = {
       "2014_536845": {
         "recShare": 85.5,
         "ydShare": 83.6,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 41.5,
         "usageOverall": 66.4
       },
@@ -493534,7 +493534,7 @@ const COLLEGE_SCOUTING = {
       "2014_537071": {
         "recShare": 24.7,
         "ydShare": 28.7,
-        "tdShare": 56.2,
+        "tdShare": 56.1,
         "avgPPA": 31.6,
         "usageOverall": 40
       },
@@ -493562,7 +493562,7 @@ const COLLEGE_SCOUTING = {
       "2014_540210": {
         "recShare": 24.1,
         "ydShare": 48.6,
-        "tdShare": 78.1,
+        "tdShare": 78.2,
         "avgPPA": 48.1,
         "usageOverall": 32.6
       },
@@ -493718,7 +493718,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 14.2,
         "tdShare": 5.3,
         "avgPPA": 4.4,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2014_546045": {
         "recShare": 4.6,
@@ -493749,7 +493749,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 89.8
       },
       "2014_546224": {
-        "recShare": 55.3,
+        "recShare": 55.4,
         "ydShare": 70.7,
         "tdShare": 32.7,
         "avgPPA": 85,
@@ -493821,7 +493821,7 @@ const COLLEGE_SCOUTING = {
       "2014_546536": {
         "recShare": 21.6,
         "ydShare": 16.5,
-        "tdShare": 52.7,
+        "tdShare": 52.6,
         "avgPPA": 49.2,
         "usageOverall": 56.5
       },
@@ -493858,7 +493858,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 38.7,
         "tdShare": 88.5,
         "avgPPA": 52.8,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2014_546744": {
         "recShare": 86.1,
@@ -493912,7 +493912,7 @@ const COLLEGE_SCOUTING = {
       "2014_547596": {
         "recShare": 31,
         "ydShare": 57.8,
-        "tdShare": 52.7,
+        "tdShare": 52.6,
         "avgPPA": 86.4,
         "usageOverall": 12.6
       },
@@ -493995,7 +493995,7 @@ const COLLEGE_SCOUTING = {
       },
       "2014_550014": {
         "recShare": 65.7,
-        "ydShare": 55.2,
+        "ydShare": 55.3,
         "tdShare": 63.1,
         "avgPPA": 31.6,
         "usageOverall": 87.1
@@ -494284,7 +494284,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 68.8,
         "ydShare": 50.9,
         "tdShare": 20.4,
-        "avgPPA": 10.3,
+        "avgPPA": 10.4,
         "usageOverall": 80.2
       },
       "2014_553248": {
@@ -494345,7 +494345,7 @@ const COLLEGE_SCOUTING = {
       },
       "2014_3115913": {
         "recShare": 43.3,
-        "ydShare": 55.2,
+        "ydShare": 55.3,
         "tdShare": 61.9,
         "avgPPA": 50.1,
         "usageOverall": 58.8
@@ -494443,7 +494443,7 @@ const COLLEGE_SCOUTING = {
       },
       "2014_3123986": {
         "recShare": 46.1,
-        "ydShare": 54.5,
+        "ydShare": 54.6,
         "tdShare": 90.2,
         "avgPPA": 25.5,
         "usageOverall": 65.2
@@ -494493,7 +494493,7 @@ const COLLEGE_SCOUTING = {
       "2014_3125315": {
         "recShare": 84.8,
         "ydShare": 88.2,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 48.1,
         "usageOverall": 77.1
       },
@@ -494557,7 +494557,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 56.2,
         "ydShare": 42.5,
         "tdShare": 20.4,
-        "avgPPA": 21.2,
+        "avgPPA": 21.1,
         "usageOverall": 57.7
       },
       "2014_3126286": {
@@ -494586,10 +494586,10 @@ const COLLEGE_SCOUTING = {
         "ydShare": 68.7,
         "tdShare": 63.9,
         "avgPPA": 44.6,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2014_3128390": {
-        "recShare": 57.7,
+        "recShare": 57.8,
         "ydShare": 66.8,
         "tdShare": 45.9,
         "avgPPA": 16.1,
@@ -494633,7 +494633,7 @@ const COLLEGE_SCOUTING = {
       "2015_100009": {
         "recShare": 63.9,
         "ydShare": 49.5,
-        "tdShare": 56.2,
+        "tdShare": 56.1,
         "avgPPA": 53.5,
         "usageOverall": 41.9
       },
@@ -494810,7 +494810,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 84.1,
         "tdShare": 91.6,
         "avgPPA": 47.1,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2015_514113": {
         "recShare": 51.6,
@@ -494884,7 +494884,7 @@ const COLLEGE_SCOUTING = {
       },
       "2015_516301": {
         "recShare": 84.4,
-        "ydShare": 88.4,
+        "ydShare": 88.5,
         "tdShare": 90.2,
         "avgPPA": 84.9,
         "usageOverall": 92.3
@@ -494956,7 +494956,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 6.3,
         "ydShare": 12.5,
         "tdShare": 44.3,
-        "avgPPA": 18.2,
+        "avgPPA": 18.1,
         "usageOverall": 35.2
       },
       "2015_518169": {
@@ -495026,7 +495026,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 48.7,
         "ydShare": 49.9,
         "tdShare": 13,
-        "avgPPA": 18.2,
+        "avgPPA": 18.1,
         "usageOverall": 51.8
       },
       "2015_530417": {
@@ -495067,7 +495067,7 @@ const COLLEGE_SCOUTING = {
       "2015_530880": {
         "recShare": 34.2,
         "ydShare": 32.7,
-        "tdShare": 46.1,
+        "tdShare": 46,
         "avgPPA": 88.1,
         "usageOverall": 13.9
       },
@@ -495081,7 +495081,7 @@ const COLLEGE_SCOUTING = {
       "2015_530981": {
         "recShare": 92.5,
         "ydShare": 92,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 55.7,
         "usageOverall": 90.2
       },
@@ -495102,7 +495102,7 @@ const COLLEGE_SCOUTING = {
       "2015_531078": {
         "recShare": 71.1,
         "ydShare": 80.1,
-        "tdShare": 56.2,
+        "tdShare": 56.1,
         "avgPPA": 64.1,
         "usageOverall": 70.4
       },
@@ -495207,13 +495207,13 @@ const COLLEGE_SCOUTING = {
       "2015_531956": {
         "recShare": 60.7,
         "ydShare": 59.2,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 53.3,
         "usageOverall": 68.3
       },
       "2015_532179": {
         "recShare": 34.2,
-        "ydShare": 54.5,
+        "ydShare": 54.6,
         "tdShare": 51.7,
         "avgPPA": 62.7,
         "usageOverall": 69.2
@@ -495256,7 +495256,7 @@ const COLLEGE_SCOUTING = {
       "2015_532679": {
         "recShare": 29.9,
         "ydShare": 33.9,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 24.1,
         "usageOverall": 38.1
       },
@@ -495269,7 +495269,7 @@ const COLLEGE_SCOUTING = {
       },
       "2015_533091": {
         "recShare": 75.2,
-        "ydShare": 54.5,
+        "ydShare": 54.6,
         "tdShare": 55.6,
         "avgPPA": 50.3,
         "usageOverall": 61.2
@@ -495334,7 +495334,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 8,
         "ydShare": 9,
         "tdShare": 11.1,
-        "avgPPA": 17.7,
+        "avgPPA": 17.6,
         "usageOverall": 29.7
       },
       "2015_534393": {
@@ -495346,7 +495346,7 @@ const COLLEGE_SCOUTING = {
       },
       "2015_534444": {
         "recShare": 66.2,
-        "ydShare": 77.7,
+        "ydShare": 77.6,
         "tdShare": 69.3,
         "avgPPA": 48.1,
         "usageOverall": 78.5
@@ -495501,7 +495501,7 @@ const COLLEGE_SCOUTING = {
       "2015_535297": {
         "recShare": 52.7,
         "ydShare": 56.9,
-        "tdShare": 69.6,
+        "tdShare": 69.5,
         "avgPPA": 49.9,
         "usageOverall": 40
       },
@@ -495549,7 +495549,7 @@ const COLLEGE_SCOUTING = {
       },
       "2015_535753": {
         "recShare": 32.8,
-        "ydShare": 66.4,
+        "ydShare": 66.3,
         "tdShare": 61.9,
         "avgPPA": 50.5,
         "usageOverall": 21.1
@@ -495557,12 +495557,12 @@ const COLLEGE_SCOUTING = {
       "2015_535812": {
         "recShare": 71.1,
         "ydShare": 75.2,
-        "tdShare": 56.2,
+        "tdShare": 56.1,
         "avgPPA": 48.7,
         "usageOverall": 65.2
       },
       "2015_535819": {
-        "recShare": 75.6,
+        "recShare": 75.5,
         "ydShare": 52.8,
         "tdShare": 67.5,
         "avgPPA": 36,
@@ -495583,7 +495583,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 98.1
       },
       "2015_535869": {
-        "recShare": 54.7,
+        "recShare": 54.8,
         "ydShare": 42.5,
         "tdShare": 58.3,
         "avgPPA": 6.6,
@@ -495633,7 +495633,7 @@ const COLLEGE_SCOUTING = {
       },
       "2015_536143": {
         "recShare": 87.3,
-        "ydShare": 66.4,
+        "ydShare": 66.3,
         "tdShare": 67.5,
         "avgPPA": 16.1,
         "usageOverall": 91.5
@@ -495674,7 +495674,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 7.1
       },
       "2015_536497": {
-        "recShare": 57.7,
+        "recShare": 57.8,
         "ydShare": 67.8,
         "tdShare": 53.8,
         "avgPPA": 50.7,
@@ -495689,7 +495689,7 @@ const COLLEGE_SCOUTING = {
       },
       "2015_536548": {
         "recShare": 67.8,
-        "ydShare": 66.4,
+        "ydShare": 66.3,
         "tdShare": 92.6,
         "avgPPA": 26.6,
         "usageOverall": 58.8
@@ -495733,7 +495733,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 91.3,
         "ydShare": 92.4,
         "tdShare": 51.7,
-        "avgPPA": 19.8,
+        "avgPPA": 19.7,
         "usageOverall": 81.6
       },
       "2015_538152": {
@@ -495815,13 +495815,13 @@ const COLLEGE_SCOUTING = {
       },
       "2015_545669": {
         "recShare": 30.5,
-        "ydShare": 55.2,
+        "ydShare": 55.3,
         "tdShare": 54.2,
         "avgPPA": 62.9,
         "usageOverall": 77.1
       },
       "2015_545677": {
-        "recShare": 97.7,
+        "recShare": 97.6,
         "ydShare": 90.3,
         "tdShare": 85.7,
         "avgPPA": 56.8,
@@ -495842,7 +495842,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 83
       },
       "2015_545923": {
-        "recShare": 97.3,
+        "recShare": 97.2,
         "ydShare": 97.7,
         "tdShare": 93.8,
         "avgPPA": 46.9,
@@ -495970,7 +495970,7 @@ const COLLEGE_SCOUTING = {
       "2015_546622": {
         "recShare": 89.6,
         "ydShare": 77.2,
-        "tdShare": 46.1,
+        "tdShare": 46,
         "avgPPA": 36.6,
         "usageOverall": 94.3
       },
@@ -496090,7 +496090,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 54.2,
         "ydShare": 21.4,
         "tdShare": 9.5,
-        "avgPPA": 7.2,
+        "avgPPA": 7.1,
         "usageOverall": 53.1
       },
       "2015_548076": {
@@ -496122,7 +496122,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 53.1
       },
       "2015_549866": {
-        "recShare": 55.3,
+        "recShare": 55.4,
         "ydShare": 48.1,
         "tdShare": 48.9,
         "avgPPA": 32.6,
@@ -496172,13 +496172,13 @@ const COLLEGE_SCOUTING = {
       },
       "2015_550190": {
         "recShare": 55.7,
-        "ydShare": 77.7,
+        "ydShare": 77.6,
         "tdShare": 78.7,
         "avgPPA": 22.7,
         "usageOverall": 77.8
       },
       "2015_550214": {
-        "recShare": 54.7,
+        "recShare": 54.8,
         "ydShare": 50.9,
         "tdShare": 32.7,
         "avgPPA": 16.8,
@@ -496188,11 +496188,11 @@ const COLLEGE_SCOUTING = {
         "recShare": 10.9,
         "ydShare": 13.5,
         "tdShare": 47.2,
-        "avgPPA": 6.5,
+        "avgPPA": 6.4,
         "usageOverall": 15.5
       },
       "2015_550351": {
-        "recShare": 75.6,
+        "recShare": 75.5,
         "ydShare": 91.4,
         "tdShare": 96.3,
         "avgPPA": 84.6,
@@ -496250,7 +496250,7 @@ const COLLEGE_SCOUTING = {
       "2015_550896": {
         "recShare": 35.8,
         "ydShare": 27.5,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 1.3,
         "usageOverall": 74.7
       },
@@ -496272,7 +496272,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 94.3,
         "ydShare": 76.1,
         "tdShare": 88.5,
-        "avgPPA": 19.8,
+        "avgPPA": 19.7,
         "usageOverall": 43.5
       },
       "2015_551091": {
@@ -496381,9 +496381,9 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 16.8
       },
       "2015_552698": {
-        "recShare": 54.7,
+        "recShare": 54.8,
         "ydShare": 69.4,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 18.8,
         "usageOverall": 41.9
       },
@@ -496424,7 +496424,7 @@ const COLLEGE_SCOUTING = {
       },
       "2015_553226": {
         "recShare": 53.6,
-        "ydShare": 55.2,
+        "ydShare": 55.3,
         "tdShare": 70.3,
         "avgPPA": 0.1,
         "usageOverall": 5.3
@@ -496459,7 +496459,7 @@ const COLLEGE_SCOUTING = {
       },
       "2015_554889": {
         "recShare": 93,
-        "ydShare": 77.7,
+        "ydShare": 77.6,
         "tdShare": 70.3,
         "avgPPA": 33.9,
         "usageOverall": 81.6
@@ -496537,7 +496537,7 @@ const COLLEGE_SCOUTING = {
       "2015_3116165": {
         "recShare": 96.6,
         "ydShare": 98.3,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 62.5,
         "usageOverall": 94.6
       },
@@ -496621,7 +496621,7 @@ const COLLEGE_SCOUTING = {
       "2015_3122839": {
         "recShare": 88.7,
         "ydShare": 64.4,
-        "tdShare": 52,
+        "tdShare": 51.9,
         "avgPPA": 13.9,
         "usageOverall": 81.6
       },
@@ -496712,7 +496712,7 @@ const COLLEGE_SCOUTING = {
       "2015_3124538": {
         "recShare": 80.6,
         "ydShare": 79.2,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 1.7,
         "usageOverall": 90.2
       },
@@ -496745,11 +496745,11 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 88.5
       },
       "2015_3124919": {
-        "recShare": 54.7,
+        "recShare": 54.8,
         "ydShare": 35.2,
         "tdShare": 20.4,
         "avgPPA": 2.1,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2015_3124964": {
         "recShare": 85.5,
@@ -496822,7 +496822,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 88.5
       },
       "2015_3125992": {
-        "recShare": 54.7,
+        "recShare": 54.8,
         "ydShare": 68.7,
         "tdShare": 32.7,
         "avgPPA": 40.6,
@@ -496864,7 +496864,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 6.2
       },
       "2015_3126227": {
-        "recShare": 54.7,
+        "recShare": 54.8,
         "ydShare": 47.6,
         "tdShare": 6.4,
         "avgPPA": 38.8,
@@ -497039,7 +497039,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 10.4
       },
       "2015_3139946": {
-        "recShare": 57.7,
+        "recShare": 57.8,
         "ydShare": 70.1,
         "tdShare": 89.7,
         "avgPPA": 64.6,
@@ -497244,7 +497244,7 @@ const COLLEGE_SCOUTING = {
       "2015_3918042": {
         "recShare": 23,
         "ydShare": 20.9,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 35.8,
         "usageOverall": 22.4
       },
@@ -497364,13 +497364,13 @@ const COLLEGE_SCOUTING = {
         "recShare": 45.1,
         "ydShare": 52.8,
         "tdShare": 47.2,
-        "avgPPA": 19.8,
+        "avgPPA": 19.7,
         "usageOverall": 22.4
       },
       "2016_530860": {
         "recShare": 52.1,
         "ydShare": 66.8,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 47.8,
         "usageOverall": 69.2
       },
@@ -497389,7 +497389,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 58.8
       },
       "2016_531088": {
-        "recShare": 55.3,
+        "recShare": 55.4,
         "ydShare": 51.5,
         "tdShare": 88.5,
         "avgPPA": 61.5,
@@ -497452,7 +497452,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 43.5
       },
       "2016_531796": {
-        "recShare": 55.3,
+        "recShare": 55.4,
         "ydShare": 29.4,
         "tdShare": 69.3,
         "avgPPA": 11.1,
@@ -497462,7 +497462,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 31.8,
         "ydShare": 22.3,
         "tdShare": 16.8,
-        "avgPPA": 7.2,
+        "avgPPA": 7.1,
         "usageOverall": 41.9
       },
       "2016_531956": {
@@ -497491,7 +497491,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 65.5,
         "tdShare": 78.1,
         "avgPPA": 43,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2016_532432": {
         "recShare": 79.1,
@@ -497516,14 +497516,14 @@ const COLLEGE_SCOUTING = {
       },
       "2016_532946": {
         "recShare": 58.1,
-        "ydShare": 55.2,
+        "ydShare": 55.3,
         "tdShare": 20.4,
         "avgPPA": 21.3,
         "usageOverall": 28.4
       },
       "2016_532969": {
         "recShare": 77.8,
-        "ydShare": 77.7,
+        "ydShare": 77.6,
         "tdShare": 69.3,
         "avgPPA": 28.4,
         "usageOverall": 72.2
@@ -497606,7 +497606,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 15.5
       },
       "2016_534604": {
-        "recShare": 54.7,
+        "recShare": 54.8,
         "ydShare": 60.8,
         "tdShare": 28.1,
         "avgPPA": 48.7,
@@ -497740,7 +497740,7 @@ const COLLEGE_SCOUTING = {
       },
       "2016_536075": {
         "recShare": 38.9,
-        "ydShare": 54.5,
+        "ydShare": 54.6,
         "tdShare": 90.7,
         "avgPPA": 29.2,
         "usageOverall": 26.7
@@ -497854,7 +497854,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 25.4,
         "ydShare": 27.5,
         "tdShare": 10.2,
-        "avgPPA": 17.7,
+        "avgPPA": 17.6,
         "usageOverall": 35.2
       },
       "2016_545561": {
@@ -497951,7 +497951,7 @@ const COLLEGE_SCOUTING = {
       "2016_546601": {
         "recShare": 51.1,
         "ydShare": 45.9,
-        "tdShare": 52.7,
+        "tdShare": 52.6,
         "avgPPA": 54.5,
         "usageOverall": 72.2
       },
@@ -498120,7 +498120,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 64.3,
         "ydShare": 46.5,
         "tdShare": 38.4,
-        "avgPPA": 6.5,
+        "avgPPA": 6.4,
         "usageOverall": 80.2
       },
       "2016_548431": {
@@ -498175,7 +498175,7 @@ const COLLEGE_SCOUTING = {
       "2016_549962": {
         "recShare": 15.5,
         "ydShare": 32.2,
-        "tdShare": 56.2,
+        "tdShare": 56.1,
         "avgPPA": 15.4,
         "usageOverall": 26.7
       },
@@ -498189,7 +498189,7 @@ const COLLEGE_SCOUTING = {
       "2016_550020": {
         "recShare": 59.7,
         "ydShare": 71.1,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 62.5,
         "usageOverall": 40
       },
@@ -498223,8 +498223,8 @@ const COLLEGE_SCOUTING = {
       },
       "2016_550214": {
         "recShare": 72.1,
-        "ydShare": 55.2,
-        "tdShare": 56.2,
+        "ydShare": 55.3,
+        "tdShare": 56.1,
         "avgPPA": 47.5,
         "usageOverall": 55.2
       },
@@ -498282,7 +498282,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 56.9,
         "tdShare": 67.5,
         "avgPPA": 32.2,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2016_550567": {
         "recShare": 32.4,
@@ -498334,7 +498334,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 15.5
       },
       "2016_550947": {
-        "recShare": 57.7,
+        "recShare": 57.8,
         "ydShare": 49,
         "tdShare": 32.7,
         "avgPPA": 41.2,
@@ -498342,7 +498342,7 @@ const COLLEGE_SCOUTING = {
       },
       "2016_551025": {
         "recShare": 84,
-        "ydShare": 54.5,
+        "ydShare": 54.6,
         "tdShare": 78.1,
         "avgPPA": 32.2,
         "usageOverall": 21.1
@@ -498448,7 +498448,7 @@ const COLLEGE_SCOUTING = {
       "2016_552748": {
         "recShare": 94,
         "ydShare": 84.1,
-        "tdShare": 56.2,
+        "tdShare": 56.1,
         "avgPPA": 17.2,
         "usageOverall": 89.8
       },
@@ -498553,7 +498553,7 @@ const COLLEGE_SCOUTING = {
       "2016_559613": {
         "recShare": 46.8,
         "ydShare": 63.7,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 65.4,
         "usageOverall": 53.1
       },
@@ -498595,7 +498595,7 @@ const COLLEGE_SCOUTING = {
       "2016_559754": {
         "recShare": 82.8,
         "ydShare": 81.3,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 69,
         "usageOverall": 67.3
       },
@@ -498853,15 +498853,15 @@ const COLLEGE_SCOUTING = {
       },
       "2016_3123996": {
         "recShare": 90.2,
-        "ydShare": 66.4,
-        "tdShare": 74.4,
+        "ydShare": 66.3,
+        "tdShare": 74.5,
         "avgPPA": 26.4,
         "usageOverall": 93.7
       },
       "2016_3124028": {
         "recShare": 66.2,
         "ydShare": 69,
-        "tdShare": 52.7,
+        "tdShare": 52.6,
         "avgPPA": 45.3,
         "usageOverall": 77.8
       },
@@ -499001,7 +499001,7 @@ const COLLEGE_SCOUTING = {
       "2016_3125315": {
         "recShare": 97,
         "ydShare": 97.5,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 80,
         "usageOverall": 77.8
       },
@@ -499056,7 +499056,7 @@ const COLLEGE_SCOUTING = {
       },
       "2016_3126095": {
         "recShare": 39.8,
-        "ydShare": 55.2,
+        "ydShare": 55.3,
         "tdShare": 65.9,
         "avgPPA": 92.4,
         "usageOverall": 44.8
@@ -499199,7 +499199,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 76.1,
         "tdShare": 91,
         "avgPPA": 20,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2016_3129448": {
         "recShare": 52.7,
@@ -499223,7 +499223,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 66.4
       },
       "2016_3134353": {
-        "recShare": 75.6,
+        "recShare": 75.5,
         "ydShare": 79.2,
         "tdShare": 88.5,
         "avgPPA": 67.2,
@@ -499309,7 +499309,7 @@ const COLLEGE_SCOUTING = {
       "2016_3139946": {
         "recShare": 59.4,
         "ydShare": 87.3,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 64.9,
         "usageOverall": 41.9
       },
@@ -499328,7 +499328,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 16.8
       },
       "2016_3699902": {
-        "recShare": 54.7,
+        "recShare": 54.8,
         "ydShare": 45.9,
         "tdShare": 32.7,
         "avgPPA": 55.7,
@@ -499379,7 +499379,7 @@ const COLLEGE_SCOUTING = {
       "2016_3886598": {
         "recShare": 56.8,
         "ydShare": 56.1,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 30.9,
         "usageOverall": 57.7
       },
@@ -499419,7 +499419,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 88.5
       },
       "2016_3895856": {
-        "recShare": 97.1,
+        "recShare": 97,
         "ydShare": 85.8,
         "tdShare": 90.3,
         "avgPPA": 7.7,
@@ -499468,7 +499468,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 26.7
       },
       "2016_3914502": {
-        "recShare": 55.3,
+        "recShare": 55.4,
         "ydShare": 62.4,
         "tdShare": 40.2,
         "avgPPA": 24.8,
@@ -499477,7 +499477,7 @@ const COLLEGE_SCOUTING = {
       "2016_3914573": {
         "recShare": 53,
         "ydShare": 76.1,
-        "tdShare": 56.2,
+        "tdShare": 56.1,
         "avgPPA": 62.1,
         "usageOverall": 71.3
       },
@@ -499486,7 +499486,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 80.6,
         "tdShare": 51.7,
         "avgPPA": 29,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2016_3915174": {
         "recShare": 61.9,
@@ -499503,7 +499503,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 41.9
       },
       "2016_3915321": {
-        "recShare": 75.6,
+        "recShare": 75.5,
         "ydShare": 78.6,
         "tdShare": 67.5,
         "avgPPA": 61.2,
@@ -499520,7 +499520,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 77.5,
         "ydShare": 72.6,
         "tdShare": 37.4,
-        "avgPPA": 21.5,
+        "avgPPA": 21.4,
         "usageOverall": 88
       },
       "2016_3915416": {
@@ -499695,7 +499695,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 14,
         "ydShare": 9.4,
         "tdShare": 7.9,
-        "avgPPA": 21.5,
+        "avgPPA": 21.4,
         "usageOverall": 92
       },
       "2016_3918087": {
@@ -499714,7 +499714,7 @@ const COLLEGE_SCOUTING = {
       },
       "2016_3918251": {
         "recShare": 25.4,
-        "ydShare": 55.2,
+        "ydShare": 55.3,
         "tdShare": 61.9,
         "avgPPA": 0.3,
         "usageOverall": 15.5
@@ -499801,7 +499801,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 77.2,
         "tdShare": 77.2,
         "avgPPA": 12.6,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2016_3927809": {
         "recShare": 38.9,
@@ -499825,7 +499825,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 80.8
       },
       "2016_3930066": {
-        "recShare": 57.7,
+        "recShare": 57.8,
         "ydShare": 35.7,
         "tdShare": 32.7,
         "avgPPA": 49.9,
@@ -499840,7 +499840,7 @@ const COLLEGE_SCOUTING = {
       },
       "2016_3931397": {
         "recShare": 37.8,
-        "ydShare": 55.2,
+        "ydShare": 55.3,
         "tdShare": 88.5,
         "avgPPA": 87.4,
         "usageOverall": 32.6
@@ -499913,7 +499913,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 46.5,
         "tdShare": 35.1,
         "avgPPA": 33.9,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2016_4035277": {
         "recShare": 35.4,
@@ -499953,7 +499953,7 @@ const COLLEGE_SCOUTING = {
       "2016_4036163": {
         "recShare": 19.2,
         "ydShare": 32.2,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 82.1,
         "usageOverall": 18.3
       },
@@ -500003,7 +500003,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 79.5,
         "ydShare": 85.8,
         "tdShare": 75.9,
-        "avgPPA": 18.2,
+        "avgPPA": 18.1,
         "usageOverall": 93.1
       },
       "2016_4038530": {
@@ -500023,7 +500023,7 @@ const COLLEGE_SCOUTING = {
       "2016_4039032": {
         "recShare": 24.7,
         "ydShare": 39,
-        "tdShare": 56.2,
+        "tdShare": 56.1,
         "avgPPA": 61.8,
         "usageOverall": 32.6
       },
@@ -500162,7 +500162,7 @@ const COLLEGE_SCOUTING = {
       },
       "2016_4047728": {
         "recShare": 68.5,
-        "ydShare": 55.2,
+        "ydShare": 55.3,
         "tdShare": 80.8,
         "avgPPA": 12.9,
         "usageOverall": 78.5
@@ -500240,7 +500240,7 @@ const COLLEGE_SCOUTING = {
       "2017_546063": {
         "recShare": 39.8,
         "ydShare": 36.1,
-        "tdShare": 56.2,
+        "tdShare": 56.1,
         "avgPPA": 55.5,
         "usageOverall": 36.6
       },
@@ -500275,7 +500275,7 @@ const COLLEGE_SCOUTING = {
       "2017_546601": {
         "recShare": 79.5,
         "ydShare": 82,
-        "tdShare": 56.2,
+        "tdShare": 56.1,
         "avgPPA": 37.2,
         "usageOverall": 83.6
       },
@@ -500325,7 +500325,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 47.5,
         "ydShare": 34.3,
         "tdShare": 12,
-        "avgPPA": 7.6,
+        "avgPPA": 7.5,
         "usageOverall": 69.2
       },
       "2017_547197": {
@@ -500386,7 +500386,7 @@ const COLLEGE_SCOUTING = {
       },
       "2017_549962": {
         "recShare": 90.6,
-        "ydShare": 88.4,
+        "ydShare": 88.5,
         "tdShare": 71.2,
         "avgPPA": 28.3,
         "usageOverall": 77.1
@@ -500401,7 +500401,7 @@ const COLLEGE_SCOUTING = {
       "2017_549973": {
         "recShare": 79.5,
         "ydShare": 52,
-        "tdShare": 56.2,
+        "tdShare": 56.1,
         "avgPPA": 36.5,
         "usageOverall": 77.8
       },
@@ -500518,7 +500518,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 67.3
       },
       "2017_552698": {
-        "recShare": 54.7,
+        "recShare": 54.8,
         "ydShare": 68.7,
         "tdShare": 82.9,
         "avgPPA": 0.2,
@@ -500578,10 +500578,10 @@ const COLLEGE_SCOUTING = {
         "ydShare": 87,
         "tdShare": 88.5,
         "avgPPA": 15.6,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2017_557720": {
-        "recShare": 57.7,
+        "recShare": 57.8,
         "ydShare": 77.2,
         "tdShare": 70.3,
         "avgPPA": 45.5,
@@ -500700,7 +500700,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 50.7
       },
       "2017_3120056": {
-        "recShare": 75.6,
+        "recShare": 75.5,
         "ydShare": 65.5,
         "tdShare": 28.1,
         "avgPPA": 10.5,
@@ -500714,7 +500714,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 64
       },
       "2017_3121398": {
-        "recShare": 57.7,
+        "recShare": 57.8,
         "ydShare": 56.1,
         "tdShare": 65.9,
         "avgPPA": 62.3,
@@ -500744,7 +500744,7 @@ const COLLEGE_SCOUTING = {
       "2017_3122168": {
         "recShare": 76.8,
         "ydShare": 78.4,
-        "tdShare": 56.2,
+        "tdShare": 56.1,
         "avgPPA": 80.6,
         "usageOverall": 80.8
       },
@@ -500858,7 +500858,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 72,
         "tdShare": 88.5,
         "avgPPA": 26.9,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2017_3123968": {
         "recShare": 95.4,
@@ -500898,7 +500898,7 @@ const COLLEGE_SCOUTING = {
       "2017_3124042": {
         "recShare": 63.5,
         "ydShare": 61.9,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 80.1,
         "usageOverall": 47.9
       },
@@ -500963,10 +500963,10 @@ const COLLEGE_SCOUTING = {
         "ydShare": 44.2,
         "tdShare": 44.8,
         "avgPPA": 34.1,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2017_3124911": {
-        "recShare": 57.7,
+        "recShare": 57.8,
         "ydShare": 43.4,
         "tdShare": 80.8,
         "avgPPA": 53.9,
@@ -500977,7 +500977,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 77.4,
         "tdShare": 68.3,
         "avgPPA": 42.4,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2017_3124965": {
         "recShare": 0.9,
@@ -500994,7 +500994,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 29.7
       },
       "2017_3125185": {
-        "recShare": 97.7,
+        "recShare": 97.6,
         "ydShare": 97.4,
         "tdShare": 93.8,
         "avgPPA": 90.3,
@@ -501008,7 +501008,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 68.3
       },
       "2017_3125291": {
-        "recShare": 54.7,
+        "recShare": 54.8,
         "ydShare": 64.1,
         "tdShare": 40.2,
         "avgPPA": 8.7,
@@ -501275,7 +501275,7 @@ const COLLEGE_SCOUTING = {
       },
       "2017_3135321": {
         "recShare": 68.5,
-        "ydShare": 54.5,
+        "ydShare": 54.6,
         "tdShare": 53.8,
         "avgPPA": 50.3,
         "usageOverall": 53.1
@@ -501318,7 +501318,7 @@ const COLLEGE_SCOUTING = {
       "2017_3139669": {
         "recShare": 73.2,
         "ydShare": 81.9,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 69.8,
         "usageOverall": 80.8
       },
@@ -501334,7 +501334,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 91.7,
         "tdShare": 47.2,
         "avgPPA": 76,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2017_3140633": {
         "recShare": 0.9,
@@ -501425,7 +501425,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 73.9,
         "tdShare": 82.9,
         "avgPPA": 60.2,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2017_3895856": {
         "recShare": 92.3,
@@ -501493,7 +501493,7 @@ const COLLEGE_SCOUTING = {
       "2017_3915174": {
         "recShare": 72.6,
         "ydShare": 76.4,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 79.3,
         "usageOverall": 33.9
       },
@@ -501577,14 +501577,14 @@ const COLLEGE_SCOUTING = {
       "2017_3916129": {
         "recShare": 97.2,
         "ydShare": 71.8,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 22,
         "usageOverall": 77.8
       },
       "2017_3916204": {
         "recShare": 42.1,
         "ydShare": 67,
-        "tdShare": 52,
+        "tdShare": 51.9,
         "avgPPA": 90.3,
         "usageOverall": 41.9
       },
@@ -501638,7 +501638,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 65.2
       },
       "2017_3916946": {
-        "recShare": 97.4,
+        "recShare": 97.3,
         "ydShare": 78.4,
         "tdShare": 70.9,
         "avgPPA": 33.2,
@@ -501649,7 +501649,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 42,
         "tdShare": 17.3,
         "avgPPA": 43.5,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2017_3917117": {
         "recShare": 32.8,
@@ -501688,7 +501688,7 @@ const COLLEGE_SCOUTING = {
       },
       "2017_3917569": {
         "recShare": 63.5,
-        "ydShare": 55.2,
+        "ydShare": 55.3,
         "tdShare": 37.4,
         "avgPPA": 0.4,
         "usageOverall": 77.1
@@ -501705,14 +501705,14 @@ const COLLEGE_SCOUTING = {
         "ydShare": 87.3,
         "tdShare": 37.4,
         "avgPPA": 2.1,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2017_3917897": {
         "recShare": 67.8,
         "ydShare": 63.3,
         "tdShare": 51.7,
         "avgPPA": 46.9,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2017_3917914": {
         "recShare": 92.7,
@@ -501767,7 +501767,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 28.5,
         "ydShare": 17.9,
         "tdShare": 28.7,
-        "avgPPA": 21.5,
+        "avgPPA": 21.4,
         "usageOverall": 56.5
       },
       "2017_3918469": {
@@ -501842,7 +501842,7 @@ const COLLEGE_SCOUTING = {
       },
       "2017_3921706": {
         "recShare": 74.7,
-        "ydShare": 77.7,
+        "ydShare": 77.6,
         "tdShare": 82.9,
         "avgPPA": 67.7,
         "usageOverall": 38.1
@@ -501851,7 +501851,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 28,
         "ydShare": 4.4,
         "tdShare": 5.3,
-        "avgPPA": 20.4,
+        "avgPPA": 20.3,
         "usageOverall": 12.6
       },
       "2017_3921931": {
@@ -501883,7 +501883,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 15.5
       },
       "2017_3922168": {
-        "recShare": 54.7,
+        "recShare": 54.8,
         "ydShare": 52.8,
         "tdShare": 63.9,
         "avgPPA": 23.8,
@@ -501976,7 +501976,7 @@ const COLLEGE_SCOUTING = {
       "2017_3930064": {
         "recShare": 45.1,
         "ydShare": 52,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 42.2,
         "usageOverall": 66.4
       },
@@ -501992,7 +501992,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 52,
         "tdShare": 23.3,
         "avgPPA": 20.9,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2017_3931397": {
         "recShare": 81.5,
@@ -502045,7 +502045,7 @@ const COLLEGE_SCOUTING = {
       },
       "2017_3932509": {
         "recShare": 41.5,
-        "ydShare": 77.7,
+        "ydShare": 77.6,
         "tdShare": 81.2,
         "avgPPA": 81,
         "usageOverall": 53.1
@@ -502082,7 +502082,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 64.9,
         "ydShare": 44.8,
         "tdShare": 5.3,
-        "avgPPA": 6.5,
+        "avgPPA": 6.4,
         "usageOverall": 40
       },
       "2017_3935204": {
@@ -502242,7 +502242,7 @@ const COLLEGE_SCOUTING = {
       "2017_4035721": {
         "recShare": 53,
         "ydShare": 27.5,
-        "tdShare": 56.2,
+        "tdShare": 56.1,
         "avgPPA": 23.8,
         "usageOverall": 65.2
       },
@@ -502256,7 +502256,7 @@ const COLLEGE_SCOUTING = {
       "2017_4035793": {
         "recShare": 46.1,
         "ydShare": 56.5,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 96,
         "usageOverall": 40
       },
@@ -502369,7 +502369,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 95.9,
         "ydShare": 75.5,
         "tdShare": 51.7,
-        "avgPPA": 6.5,
+        "avgPPA": 6.4,
         "usageOverall": 93.1
       },
       "2017_4036855": {
@@ -502473,7 +502473,7 @@ const COLLEGE_SCOUTING = {
       "2017_4038931": {
         "recShare": 31.8,
         "ydShare": 57.8,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 24.6,
         "usageOverall": 44.8
       },
@@ -502494,7 +502494,7 @@ const COLLEGE_SCOUTING = {
       "2017_4039032": {
         "recShare": 20.6,
         "ydShare": 40.6,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 65.9,
         "usageOverall": 68.3
       },
@@ -502650,7 +502650,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 91.4,
         "tdShare": 88.5,
         "avgPPA": 70.5,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2017_4040788": {
         "recShare": 7.2,
@@ -502690,7 +502690,7 @@ const COLLEGE_SCOUTING = {
       "2017_4043158": {
         "recShare": 8.8,
         "ydShare": 25.8,
-        "tdShare": 52,
+        "tdShare": 51.9,
         "avgPPA": 60.1,
         "usageOverall": 50.7
       },
@@ -502802,7 +502802,7 @@ const COLLEGE_SCOUTING = {
       "2017_4047650": {
         "recShare": 41,
         "ydShare": 45.5,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 26.5,
         "usageOverall": 67.3
       },
@@ -502849,7 +502849,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 2.3
       },
       "2017_4049301": {
-        "recShare": 97.1,
+        "recShare": 97,
         "ydShare": 98,
         "tdShare": 99.5,
         "avgPPA": 52.5,
@@ -502935,7 +502935,7 @@ const COLLEGE_SCOUTING = {
       "2017_4240529": {
         "recShare": 64.9,
         "ydShare": 76.9,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 15.5,
         "usageOverall": 69.2
       },
@@ -502970,7 +502970,7 @@ const COLLEGE_SCOUTING = {
       "2017_4241004": {
         "recShare": 73.9,
         "ydShare": 65,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 45.7,
         "usageOverall": 60
       },
@@ -503084,7 +503084,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 69.8,
         "tdShare": 80.8,
         "avgPPA": 18.1,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2017_4243830": {
         "recShare": 16.4,
@@ -503185,7 +503185,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 47.9
       },
       "2017_4261077": {
-        "recShare": 75.6,
+        "recShare": 75.5,
         "ydShare": 83,
         "tdShare": 61.9,
         "avgPPA": 15.1,
@@ -503343,7 +503343,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 81.3,
         "tdShare": 78.1,
         "avgPPA": 39,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2018_3124040": {
         "recShare": 92.8,
@@ -503383,7 +503383,7 @@ const COLLEGE_SCOUTING = {
       "2018_3125068": {
         "recShare": 25.4,
         "ydShare": 22.9,
-        "tdShare": 56.2,
+        "tdShare": 56.1,
         "avgPPA": 77,
         "usageOverall": 13.9
       },
@@ -503447,7 +503447,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 88.3,
         "ydShare": 92.8,
         "tdShare": 98.7,
-        "avgPPA": 4.6,
+        "avgPPA": 4.5,
         "usageOverall": 99.2
       },
       "2018_3126244": {
@@ -503467,8 +503467,8 @@ const COLLEGE_SCOUTING = {
       "2018_3126281": {
         "recShare": 81.6,
         "ydShare": 72,
-        "tdShare": 74.4,
-        "avgPPA": 6.5,
+        "tdShare": 74.5,
+        "avgPPA": 6.4,
         "usageOverall": 68.3
       },
       "2018_3126486": {
@@ -503514,7 +503514,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 65.2
       },
       "2018_3129261": {
-        "recShare": 54.7,
+        "recShare": 54.8,
         "ydShare": 42.5,
         "tdShare": 16.8,
         "avgPPA": 79.3,
@@ -503580,7 +503580,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 82.6,
         "ydShare": 59.6,
         "tdShare": 53.8,
-        "avgPPA": 10.3,
+        "avgPPA": 10.4,
         "usageOverall": 79.3
       },
       "2018_3139669": {
@@ -503647,7 +503647,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 28.4
       },
       "2018_3886598": {
-        "recShare": 57.7,
+        "recShare": 57.8,
         "ydShare": 55.9,
         "tdShare": 61.9,
         "avgPPA": 75.3,
@@ -503662,7 +503662,7 @@ const COLLEGE_SCOUTING = {
       },
       "2018_3894912": {
         "recShare": 63.1,
-        "ydShare": 66.4,
+        "ydShare": 66.3,
         "tdShare": 64.1,
         "avgPPA": 36.2,
         "usageOverall": 73.1
@@ -503727,15 +503727,15 @@ const COLLEGE_SCOUTING = {
         "recShare": 57.3,
         "ydShare": 41,
         "tdShare": 62.5,
-        "avgPPA": 20.4,
-        "usageOverall": 62.6
+        "avgPPA": 20.3,
+        "usageOverall": 62.5
       },
       "2018_3915145": {
         "recShare": 90.6,
         "ydShare": 84.1,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 63.1,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2018_3915174": {
         "recShare": 12.8,
@@ -503868,7 +503868,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 68.2,
         "tdShare": 28.1,
         "avgPPA": 30,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2018_3916433": {
         "recShare": 92.3,
@@ -503880,7 +503880,7 @@ const COLLEGE_SCOUTING = {
       "2018_3916566": {
         "recShare": 80.8,
         "ydShare": 86.5,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 29.8,
         "usageOverall": 84.2
       },
@@ -503949,7 +503949,7 @@ const COLLEGE_SCOUTING = {
       },
       "2018_3917569": {
         "recShare": 63.5,
-        "ydShare": 66.4,
+        "ydShare": 66.3,
         "tdShare": 91.1,
         "avgPPA": 78.9,
         "usageOverall": 44.8
@@ -503969,7 +503969,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 44.8
       },
       "2018_3917634": {
-        "recShare": 55.3,
+        "recShare": 55.4,
         "ydShare": 31.7,
         "tdShare": 5.3,
         "avgPPA": 12.3,
@@ -504118,7 +504118,7 @@ const COLLEGE_SCOUTING = {
       "2018_3921931": {
         "recShare": 69.5,
         "ydShare": 46.5,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 28.8,
         "usageOverall": 67.3
       },
@@ -504217,8 +504217,8 @@ const COLLEGE_SCOUTING = {
         "recShare": 52.7,
         "ydShare": 52.8,
         "tdShare": 65.1,
-        "avgPPA": 17.3,
-        "usageOverall": 62.6
+        "avgPPA": 17.2,
+        "usageOverall": 62.5
       },
       "2018_3931391": {
         "recShare": 78.5,
@@ -504293,7 +504293,7 @@ const COLLEGE_SCOUTING = {
       "2018_3932905": {
         "recShare": 78.5,
         "ydShare": 80.4,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 39.5,
         "usageOverall": 74.1
       },
@@ -504327,7 +504327,7 @@ const COLLEGE_SCOUTING = {
       },
       "2018_4030390": {
         "recShare": 52.1,
-        "ydShare": 55.2,
+        "ydShare": 55.3,
         "tdShare": 29.6,
         "avgPPA": 77,
         "usageOverall": 19.8
@@ -504379,7 +504379,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 52.8,
         "tdShare": 79,
         "avgPPA": 35.6,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2018_4035255": {
         "recShare": 21.6,
@@ -504389,7 +504389,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 36.6
       },
       "2018_4035277": {
-        "recShare": 97.7,
+        "recShare": 97.6,
         "ydShare": 86.5,
         "tdShare": 91.6,
         "avgPPA": 21.9,
@@ -504404,7 +504404,7 @@ const COLLEGE_SCOUTING = {
       },
       "2018_4035386": {
         "recShare": 50.6,
-        "ydShare": 55.2,
+        "ydShare": 55.3,
         "tdShare": 55.6,
         "avgPPA": 62.3,
         "usageOverall": 38.1
@@ -504427,7 +504427,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 63.1,
         "ydShare": 20.9,
         "tdShare": 61.9,
-        "avgPPA": 20.4,
+        "avgPPA": 20.3,
         "usageOverall": 49
       },
       "2018_4035628": {
@@ -504452,11 +504452,11 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 15.5
       },
       "2018_4035687": {
-        "recShare": 55.3,
+        "recShare": 55.4,
         "ydShare": 79.5,
         "tdShare": 88.5,
         "avgPPA": 60,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2018_4035692": {
         "recShare": 85.1,
@@ -504494,7 +504494,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 50.7
       },
       "2018_4035818": {
-        "recShare": 75.6,
+        "recShare": 75.5,
         "ydShare": 74.9,
         "tdShare": 84,
         "avgPPA": 62.5,
@@ -504627,7 +504627,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 43.5
       },
       "2018_4038460": {
-        "recShare": 54.7,
+        "recShare": 54.8,
         "ydShare": 39,
         "tdShare": 14.1,
         "avgPPA": 48.1,
@@ -504678,7 +504678,7 @@ const COLLEGE_SCOUTING = {
       "2018_4039043": {
         "recShare": 78.1,
         "ydShare": 84.4,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 66.7,
         "usageOverall": 78.5
       },
@@ -504778,12 +504778,12 @@ const COLLEGE_SCOUTING = {
         "ydShare": 78.4,
         "tdShare": 91.7,
         "avgPPA": 85.3,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2018_4039662": {
         "recShare": 61.9,
         "ydShare": 60.8,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 14.9,
         "usageOverall": 40
       },
@@ -504805,7 +504805,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 58.6,
         "ydShare": 27.5,
         "tdShare": 37.4,
-        "avgPPA": 19.8,
+        "avgPPA": 19.7,
         "usageOverall": 33.9
       },
       "2018_4040623": {
@@ -504874,7 +504874,7 @@ const COLLEGE_SCOUTING = {
       "2018_4043158": {
         "recShare": 46.8,
         "ydShare": 44.2,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 67.5,
         "usageOverall": 69.2
       },
@@ -504902,7 +504902,7 @@ const COLLEGE_SCOUTING = {
       "2018_4044123": {
         "recShare": 58.6,
         "ydShare": 52.8,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 48.7,
         "usageOverall": 57.7
       },
@@ -504958,7 +504958,7 @@ const COLLEGE_SCOUTING = {
       "2018_4046692": {
         "recShare": 65.3,
         "ydShare": 57.8,
-        "tdShare": 52.7,
+        "tdShare": 52.6,
         "avgPPA": 51.4,
         "usageOverall": 51.8
       },
@@ -504986,7 +504986,7 @@ const COLLEGE_SCOUTING = {
       "2018_4047728": {
         "recShare": 71.7,
         "ydShare": 76.4,
-        "tdShare": 78.1,
+        "tdShare": 78.2,
         "avgPPA": 26.4,
         "usageOverall": 80.8
       },
@@ -505020,8 +505020,8 @@ const COLLEGE_SCOUTING = {
       },
       "2018_4048681": {
         "recShare": 76.8,
-        "ydShare": 55.2,
-        "tdShare": 74.4,
+        "ydShare": 55.3,
+        "tdShare": 74.5,
         "avgPPA": 37,
         "usageOverall": 78.5
       },
@@ -505077,7 +505077,7 @@ const COLLEGE_SCOUTING = {
       "2018_4064980": {
         "recShare": 92.5,
         "ydShare": 95.1,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 71.1,
         "usageOverall": 84.6
       },
@@ -505103,7 +505103,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 40
       },
       "2018_4239837": {
-        "recShare": 54.7,
+        "recShare": 54.8,
         "ydShare": 55.5,
         "tdShare": 88.5,
         "avgPPA": 72.1,
@@ -505224,7 +505224,7 @@ const COLLEGE_SCOUTING = {
       "2018_4240591": {
         "recShare": 76.8,
         "ydShare": 49.5,
-        "tdShare": 56.2,
+        "tdShare": 56.1,
         "avgPPA": 29,
         "usageOverall": 73.1
       },
@@ -505244,7 +505244,7 @@ const COLLEGE_SCOUTING = {
       },
       "2018_4240661": {
         "recShare": 62.5,
-        "ydShare": 55.2,
+        "ydShare": 55.3,
         "tdShare": 44.3,
         "avgPPA": 33.5,
         "usageOverall": 69.2
@@ -505301,7 +505301,7 @@ const COLLEGE_SCOUTING = {
       "2018_4241372": {
         "recShare": 91.3,
         "ydShare": 88,
-        "tdShare": 69.6,
+        "tdShare": 69.5,
         "avgPPA": 83.5,
         "usageOverall": 91.1
       },
@@ -505357,7 +505357,7 @@ const COLLEGE_SCOUTING = {
       "2018_4241671": {
         "recShare": 9.2,
         "ydShare": 37.6,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 43,
         "usageOverall": 13.9
       },
@@ -505366,7 +505366,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 91.7,
         "tdShare": 94.6,
         "avgPPA": 73.9,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2018_4241802": {
         "recShare": 95,
@@ -505383,7 +505383,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 96.4
       },
       "2018_4241983": {
-        "recShare": 55.3,
+        "recShare": 55.4,
         "ydShare": 59.9,
         "tdShare": 51.7,
         "avgPPA": 28.9,
@@ -505506,7 +505506,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 84.1,
         "tdShare": 51.7,
         "avgPPA": 39.7,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2018_4244649": {
         "recShare": 27.3,
@@ -505554,7 +505554,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 50.2,
         "ydShare": 53.4,
         "tdShare": 12,
-        "avgPPA": 19.8,
+        "avgPPA": 19.7,
         "usageOverall": 56.5
       },
       "2018_4245144": {
@@ -505623,7 +505623,7 @@ const COLLEGE_SCOUTING = {
       "2018_4258173": {
         "recShare": 59.4,
         "ydShare": 72.6,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 86.8,
         "usageOverall": 26.7
       },
@@ -505663,7 +505663,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 88
       },
       "2018_4259499": {
-        "recShare": 54.7,
+        "recShare": 54.8,
         "ydShare": 56.9,
         "tdShare": 37.4,
         "avgPPA": 78.9,
@@ -505748,7 +505748,7 @@ const COLLEGE_SCOUTING = {
       },
       "2018_4262921": {
         "recShare": 84.4,
-        "ydShare": 88.4,
+        "ydShare": 88.5,
         "tdShare": 89.7,
         "avgPPA": 46.9,
         "usageOverall": 74.1
@@ -505806,7 +505806,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 26,
         "ydShare": 43.4,
         "tdShare": 61.9,
-        "avgPPA": 17.3,
+        "avgPPA": 17.2,
         "usageOverall": 46.3
       },
       "2018_4360939": {
@@ -505828,12 +505828,12 @@ const COLLEGE_SCOUTING = {
         "ydShare": 41,
         "tdShare": 21,
         "avgPPA": 12.8,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2018_4361684": {
         "recShare": 61.4,
         "ydShare": 48.1,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 36.3,
         "usageOverall": 46.3
       },
@@ -505873,7 +505873,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 0.4
       },
       "2018_4362352": {
-        "recShare": 57.7,
+        "recShare": 57.8,
         "ydShare": 46.5,
         "tdShare": 65.1,
         "avgPPA": 2.7,
@@ -506021,8 +506021,8 @@ const COLLEGE_SCOUTING = {
       },
       "2018_4374169": {
         "recShare": 59.7,
-        "ydShare": 66.4,
-        "tdShare": 74.4,
+        "ydShare": 66.3,
+        "tdShare": 74.5,
         "avgPPA": 65.8,
         "usageOverall": 40
       },
@@ -506031,7 +506031,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 80.4,
         "tdShare": 51.7,
         "avgPPA": 38.3,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2019_246044": {
         "recShare": 99.5,
@@ -506107,7 +506107,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 23.5,
         "ydShare": 11,
         "tdShare": 51.7,
-        "avgPPA": 20.4,
+        "avgPPA": 20.3,
         "usageOverall": 43.5
       },
       "2019_3909123": {
@@ -506218,7 +506218,7 @@ const COLLEGE_SCOUTING = {
       "2019_3916566": {
         "recShare": 69,
         "ydShare": 48.1,
-        "tdShare": 56.2,
+        "tdShare": 56.1,
         "avgPPA": 24.1,
         "usageOverall": 76.3
       },
@@ -506323,7 +506323,7 @@ const COLLEGE_SCOUTING = {
       "2019_3920764": {
         "recShare": 62.5,
         "ydShare": 65.5,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 39.5,
         "usageOverall": 58.8
       },
@@ -506335,11 +506335,11 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 35.2
       },
       "2019_3921681": {
-        "recShare": 57.7,
+        "recShare": 57.8,
         "ydShare": 61.9,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 28.6,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2019_3921729": {
         "recShare": 4.1,
@@ -506423,7 +506423,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 47.6,
         "tdShare": 55.6,
         "avgPPA": 72.5,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2019_3931426": {
         "recShare": 13.3,
@@ -506561,13 +506561,13 @@ const COLLEGE_SCOUTING = {
       "2019_4035319": {
         "recShare": 62.5,
         "ydShare": 62.4,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 44.9,
         "usageOverall": 43.5
       },
       "2019_4035386": {
         "recShare": 50.6,
-        "ydShare": 55.2,
+        "ydShare": 55.3,
         "tdShare": 85.1,
         "avgPPA": 58.1,
         "usageOverall": 43.5
@@ -506625,7 +506625,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 39.8,
         "ydShare": 16.5,
         "tdShare": 28.1,
-        "avgPPA": 21.2,
+        "avgPPA": 21.1,
         "usageOverall": 31
       },
       "2019_4035687": {
@@ -506645,7 +506645,7 @@ const COLLEGE_SCOUTING = {
       "2019_4035692": {
         "recShare": 72.1,
         "ydShare": 65.5,
-        "tdShare": 52,
+        "tdShare": 51.9,
         "avgPPA": 52.8,
         "usageOverall": 88.5
       },
@@ -506729,7 +506729,7 @@ const COLLEGE_SCOUTING = {
       "2019_4036418": {
         "recShare": 60.7,
         "ydShare": 67,
-        "tdShare": 69.6,
+        "tdShare": 69.5,
         "avgPPA": 96.1,
         "usageOverall": 58.8
       },
@@ -506737,7 +506737,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 19.8,
         "ydShare": 31.7,
         "tdShare": 40.2,
-        "avgPPA": 17.7,
+        "avgPPA": 17.6,
         "usageOverall": 23.7
       },
       "2019_4036475": {
@@ -506801,13 +506801,13 @@ const COLLEGE_SCOUTING = {
         "ydShare": 86.5,
         "tdShare": 75.3,
         "avgPPA": 67.6,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2019_4037591": {
         "recShare": 80.6,
         "ydShare": 53.8,
         "tdShare": 83.2,
-        "avgPPA": 6.5,
+        "avgPPA": 6.4,
         "usageOverall": 94.8
       },
       "2019_4038460": {
@@ -506855,7 +506855,7 @@ const COLLEGE_SCOUTING = {
       "2019_4039000": {
         "recShare": 79.5,
         "ydShare": 70.4,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 38.9,
         "usageOverall": 85.2
       },
@@ -506874,7 +506874,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 97.2
       },
       "2019_4039077": {
-        "recShare": 57.7,
+        "recShare": 57.8,
         "ydShare": 59.2,
         "tdShare": 24.8,
         "avgPPA": 62.9,
@@ -506988,19 +506988,19 @@ const COLLEGE_SCOUTING = {
       "2019_4043158": {
         "recShare": 31.8,
         "ydShare": 29.4,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 5.1,
         "usageOverall": 72.2
       },
       "2019_4043606": {
         "recShare": 3,
         "ydShare": 30.7,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 65.9,
         "usageOverall": 11.3
       },
       "2019_4044121": {
-        "recShare": 54.7,
+        "recShare": 54.8,
         "ydShare": 30.7,
         "tdShare": 58.3,
         "avgPPA": 5.5,
@@ -507119,7 +507119,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 69.2
       },
       "2019_4049294": {
-        "recShare": 97.4,
+        "recShare": 97.3,
         "ydShare": 97.7,
         "tdShare": 95.6,
         "avgPPA": 16.8,
@@ -507261,7 +507261,7 @@ const COLLEGE_SCOUTING = {
       "2019_4240146": {
         "recShare": 62.5,
         "ydShare": 71.3,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 24.1,
         "usageOverall": 85.2
       },
@@ -507318,7 +507318,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 46.8,
         "ydShare": 38.7,
         "tdShare": 32.7,
-        "avgPPA": 21.2,
+        "avgPPA": 21.1,
         "usageOverall": 56.5
       },
       "2019_4240626": {
@@ -507406,7 +507406,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 89.3
       },
       "2019_4241397": {
-        "recShare": 54.7,
+        "recShare": 54.8,
         "ydShare": 52.4,
         "tdShare": 41.4,
         "avgPPA": 59.3,
@@ -507415,7 +507415,7 @@ const COLLEGE_SCOUTING = {
       "2019_4241407": {
         "recShare": 12.8,
         "ydShare": 45.5,
-        "tdShare": 52.7,
+        "tdShare": 52.6,
         "avgPPA": 90,
         "usageOverall": 6.2
       },
@@ -507472,7 +507472,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 22.3,
         "ydShare": 19.6,
         "tdShare": 16.8,
-        "avgPPA": 20.4,
+        "avgPPA": 20.3,
         "usageOverall": 28.4
       },
       "2019_4241802": {
@@ -507485,7 +507485,7 @@ const COLLEGE_SCOUTING = {
       "2019_4241888": {
         "recShare": 39.8,
         "ydShare": 61.9,
-        "tdShare": 52,
+        "tdShare": 51.9,
         "avgPPA": 56.6,
         "usageOverall": 76.3
       },
@@ -507494,7 +507494,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 87.9,
         "tdShare": 89.7,
         "avgPPA": 40.5,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2019_4241988": {
         "recShare": 19.8,
@@ -507532,7 +507532,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 31
       },
       "2019_4242433": {
-        "recShare": 57.7,
+        "recShare": 57.8,
         "ydShare": 42.9,
         "tdShare": 12,
         "avgPPA": 34.4,
@@ -507646,7 +507646,7 @@ const COLLEGE_SCOUTING = {
       "2019_4243910": {
         "recShare": 42.6,
         "ydShare": 38.7,
-        "tdShare": 69.6,
+        "tdShare": 69.5,
         "avgPPA": 41.5,
         "usageOverall": 53.1
       },
@@ -507674,7 +507674,7 @@ const COLLEGE_SCOUTING = {
       "2019_4244600": {
         "recShare": 81.6,
         "ydShare": 72.9,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 30.8,
         "usageOverall": 80.2
       },
@@ -507688,7 +507688,7 @@ const COLLEGE_SCOUTING = {
       "2019_4244727": {
         "recShare": 87.5,
         "ydShare": 74.2,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 29,
         "usageOverall": 89.8
       },
@@ -507707,14 +507707,14 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 55.2
       },
       "2019_4244856": {
-        "recShare": 97.7,
+        "recShare": 97.6,
         "ydShare": 96.6,
         "tdShare": 84,
         "avgPPA": 21,
         "usageOverall": 97.8
       },
       "2019_4245105": {
-        "recShare": 55.3,
+        "recShare": 55.4,
         "ydShare": 27,
         "tdShare": 28.1,
         "avgPPA": 30.3,
@@ -507834,7 +507834,7 @@ const COLLEGE_SCOUTING = {
       },
       "2019_4257370": {
         "recShare": 48,
-        "ydShare": 54.5,
+        "ydShare": 54.6,
         "tdShare": 5.3,
         "avgPPA": 8.8,
         "usageOverall": 53.1
@@ -507953,7 +507953,7 @@ const COLLEGE_SCOUTING = {
       },
       "2019_4259499": {
         "recShare": 52.7,
-        "ydShare": 54.5,
+        "ydShare": 54.6,
         "tdShare": 51.7,
         "avgPPA": 3.8,
         "usageOverall": 86.5
@@ -507966,7 +507966,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 46.3
       },
       "2019_4259634": {
-        "recShare": 75.6,
+        "recShare": 75.5,
         "ydShare": 86,
         "tdShare": 89.5,
         "avgPPA": 32,
@@ -507976,7 +507976,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 82.3,
         "ydShare": 74.6,
         "tdShare": 32.7,
-        "avgPPA": 7.2,
+        "avgPPA": 7.1,
         "usageOverall": 100
       },
       "2019_4260452": {
@@ -508009,7 +508009,7 @@ const COLLEGE_SCOUTING = {
       },
       "2019_4360174": {
         "recShare": 54.2,
-        "ydShare": 54.5,
+        "ydShare": 54.6,
         "tdShare": 80.8,
         "avgPPA": 42.1,
         "usageOverall": 47.9
@@ -508106,7 +508106,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 72.2
       },
       "2019_4361029": {
-        "recShare": 75.6,
+        "recShare": 75.5,
         "ydShare": 65.5,
         "tdShare": 44.3,
         "avgPPA": 23.5,
@@ -508129,7 +508129,7 @@ const COLLEGE_SCOUTING = {
       "2019_4361370": {
         "recShare": 63.1,
         "ydShare": 72.9,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 83.6,
         "usageOverall": 53.1
       },
@@ -508184,7 +508184,7 @@ const COLLEGE_SCOUTING = {
       },
       "2019_4361598": {
         "recShare": 33.5,
-        "ydShare": 55.2,
+        "ydShare": 55.3,
         "tdShare": 99.7,
         "avgPPA": 9,
         "usageOverall": 81.6
@@ -508233,7 +508233,7 @@ const COLLEGE_SCOUTING = {
       },
       "2019_4361911": {
         "recShare": 94.1,
-        "ydShare": 88.4,
+        "ydShare": 88.5,
         "tdShare": 68.3,
         "avgPPA": 32.9,
         "usageOverall": 83.6
@@ -508352,7 +508352,7 @@ const COLLEGE_SCOUTING = {
       },
       "2019_4362560": {
         "recShare": 34.7,
-        "ydShare": 55.2,
+        "ydShare": 55.3,
         "tdShare": 75.9,
         "avgPPA": 46.6,
         "usageOverall": 60
@@ -508376,7 +508376,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 26.5,
         "tdShare": 70.3,
         "avgPPA": 49.2,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2019_4362669": {
         "recShare": 18,
@@ -508626,7 +508626,7 @@ const COLLEGE_SCOUTING = {
       "2019_4373077": {
         "recShare": 44.1,
         "ydShare": 47.6,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 48.5,
         "usageOverall": 38.1
       },
@@ -508666,9 +508666,9 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 87.6
       },
       "2019_4373937": {
-        "recShare": 54.7,
+        "recShare": 54.8,
         "ydShare": 71.1,
-        "tdShare": 75.3,
+        "tdShare": 75.4,
         "avgPPA": 48.4,
         "usageOverall": 84.6
       },
@@ -508696,7 +508696,7 @@ const COLLEGE_SCOUTING = {
       "2019_4374302": {
         "recShare": 75.2,
         "ydShare": 75.7,
-        "tdShare": 52,
+        "tdShare": 51.9,
         "avgPPA": 47.6,
         "usageOverall": 90.7
       },
@@ -508729,7 +508729,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 78.5
       },
       "2019_4384192": {
-        "recShare": 55.3,
+        "recShare": 55.4,
         "ydShare": 11.5,
         "tdShare": 25.9,
         "avgPPA": 2.8,
@@ -508772,7 +508772,7 @@ const COLLEGE_SCOUTING = {
       },
       "2019_4426800": {
         "recShare": 57.3,
-        "ydShare": 77.7,
+        "ydShare": 77.6,
         "tdShare": 98.7,
         "avgPPA": 19.3,
         "usageOverall": 49
@@ -508822,12 +508822,12 @@ const COLLEGE_SCOUTING = {
       "2019_4428345": {
         "recShare": 45.7,
         "ydShare": 39.5,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 19,
         "usageOverall": 50.7
       },
       "2019_4428367": {
-        "recShare": 54.7,
+        "recShare": 54.8,
         "ydShare": 37,
         "tdShare": 8.4,
         "avgPPA": 49.2,
@@ -509074,7 +509074,7 @@ const COLLEGE_SCOUTING = {
       "2020_3932144": {
         "recShare": 31.8,
         "ydShare": 40,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 86.7,
         "usageOverall": 28.4
       },
@@ -509115,7 +509115,7 @@ const COLLEGE_SCOUTING = {
       },
       "2020_4035465": {
         "recShare": 54.2,
-        "ydShare": 66.4,
+        "ydShare": 66.3,
         "tdShare": 67.7,
         "avgPPA": 73.6,
         "usageOverall": 69.2
@@ -509123,14 +509123,14 @@ const COLLEGE_SCOUTING = {
       "2020_4035466": {
         "recShare": 62.5,
         "ydShare": 79.2,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 63.8,
         "usageOverall": 54.1
       },
       "2020_4035500": {
         "recShare": 72.6,
         "ydShare": 37.6,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 20.7,
         "usageOverall": 78.5
       },
@@ -509254,7 +509254,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 98.9
       },
       "2020_4039072": {
-        "recShare": 54.7,
+        "recShare": 54.8,
         "ydShare": 32.2,
         "tdShare": 18.4,
         "avgPPA": 4.7,
@@ -509284,7 +509284,7 @@ const COLLEGE_SCOUTING = {
       "2020_4040723": {
         "recShare": 11.3,
         "ydShare": 33.9,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 55.9,
         "usageOverall": 46.3
       },
@@ -509310,7 +509310,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 87.1
       },
       "2020_4044143": {
-        "recShare": 75.6,
+        "recShare": 75.5,
         "ydShare": 79.7,
         "tdShare": 55.6,
         "avgPPA": 28.3,
@@ -509384,7 +509384,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 25.3,
         "tdShare": 5.3,
         "avgPPA": 0.5,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2020_4055165": {
         "recShare": 98.4,
@@ -509397,7 +509397,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 80.8,
         "ydShare": 76.4,
         "tdShare": 96.3,
-        "avgPPA": 21.2,
+        "avgPPA": 21.1,
         "usageOverall": 88.5
       },
       "2020_4239406": {
@@ -509426,7 +509426,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 44.8,
         "tdShare": 28.1,
         "avgPPA": 7.6,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2020_4240033": {
         "recShare": 68.8,
@@ -509445,7 +509445,7 @@ const COLLEGE_SCOUTING = {
       "2020_4240121": {
         "recShare": 56.8,
         "ydShare": 48.6,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 75.6,
         "usageOverall": 61.2
       },
@@ -509509,7 +509509,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 57.3,
         "ydShare": 49.5,
         "tdShare": 11.1,
-        "avgPPA": 17.7,
+        "avgPPA": 17.6,
         "usageOverall": 64
       },
       "2020_4240866": {
@@ -509815,7 +509815,7 @@ const COLLEGE_SCOUTING = {
       },
       "2020_4258235": {
         "recShare": 96.9,
-        "ydShare": 77.7,
+        "ydShare": 77.6,
         "tdShare": 57,
         "avgPPA": 1.8,
         "usageOverall": 98.4
@@ -509867,7 +509867,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 96.2,
         "tdShare": 95.6,
         "avgPPA": 62.3,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2020_4259499": {
         "recShare": 96.5,
@@ -509933,9 +509933,9 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 19.8
       },
       "2020_4360174": {
-        "recShare": 57.7,
+        "recShare": 57.8,
         "ydShare": 79.2,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 71.6,
         "usageOverall": 53.1
       },
@@ -510024,7 +510024,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 41.9
       },
       "2020_4361029": {
-        "recShare": 97.9,
+        "recShare": 97.8,
         "ydShare": 96.3,
         "tdShare": 88.7,
         "avgPPA": 83.3,
@@ -510362,8 +510362,8 @@ const COLLEGE_SCOUTING = {
       "2020_4371986": {
         "recShare": 86.6,
         "ydShare": 83.3,
-        "tdShare": 74.4,
-        "avgPPA": 17.3,
+        "tdShare": 74.5,
+        "avgPPA": 17.2,
         "usageOverall": 92.7
       },
       "2020_4372016": {
@@ -510627,7 +510627,7 @@ const COLLEGE_SCOUTING = {
       },
       "2020_4428498": {
         "recShare": 38.5,
-        "ydShare": 54.5,
+        "ydShare": 54.6,
         "tdShare": 44.3,
         "avgPPA": 69.5,
         "usageOverall": 43.5
@@ -510781,10 +510781,10 @@ const COLLEGE_SCOUTING = {
       },
       "2020_4433830": {
         "recShare": 31.8,
-        "ydShare": 55.2,
+        "ydShare": 55.3,
         "tdShare": 80.8,
         "avgPPA": 14.1,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2020_4433901": {
         "recShare": 1,
@@ -510812,10 +510812,10 @@ const COLLEGE_SCOUTING = {
         "ydShare": 43.4,
         "tdShare": 65.1,
         "avgPPA": 28,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2020_4567096": {
-        "recShare": 57.7,
+        "recShare": 57.8,
         "ydShare": 60.3,
         "tdShare": 44.3,
         "avgPPA": 74.6,
@@ -510831,7 +510831,7 @@ const COLLEGE_SCOUTING = {
       "2020_4567240": {
         "recShare": 20.6,
         "ydShare": 22.9,
-        "tdShare": 69.6,
+        "tdShare": 69.5,
         "avgPPA": 82.7,
         "usageOverall": 23.7
       },
@@ -510843,7 +510843,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 50.7
       },
       "2020_4567506": {
-        "recShare": 57.7,
+        "recShare": 57.8,
         "ydShare": 69.8,
         "tdShare": 58.6,
         "avgPPA": 59.7,
@@ -510853,7 +510853,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 12.8,
         "ydShare": 14.2,
         "tdShare": 26.2,
-        "avgPPA": 21.2,
+        "avgPPA": 21.1,
         "usageOverall": 40
       },
       "2020_4568992": {
@@ -510955,7 +510955,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 71.3
       },
       "2020_4575665": {
-        "recShare": 97.3,
+        "recShare": 97.2,
         "ydShare": 98.9,
         "tdShare": 95.6,
         "avgPPA": 54.6,
@@ -511015,7 +511015,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 82.5,
         "tdShare": 61.9,
         "avgPPA": 36.3,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2020_4686472": {
         "recShare": 46.8,
@@ -511034,7 +511034,7 @@ const COLLEGE_SCOUTING = {
       "2020_4689546": {
         "recShare": 37.8,
         "ydShare": 34.3,
-        "tdShare": 52.7,
+        "tdShare": 52.6,
         "avgPPA": 45.4,
         "usageOverall": 66.4
       },
@@ -511104,7 +511104,7 @@ const COLLEGE_SCOUTING = {
       "2021_4029728": {
         "recShare": 52.1,
         "ydShare": 50.9,
-        "tdShare": 46.1,
+        "tdShare": 46,
         "avgPPA": 82.3,
         "usageOverall": 47.9
       },
@@ -511138,7 +511138,7 @@ const COLLEGE_SCOUTING = {
       },
       "2021_4035198": {
         "recShare": 48,
-        "ydShare": 66.4,
+        "ydShare": 66.3,
         "tdShare": 91.7,
         "avgPPA": 96.6,
         "usageOverall": 25.2
@@ -511155,7 +511155,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 76.4,
         "tdShare": 64.1,
         "avgPPA": 71.5,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2021_4035711": {
         "recShare": 47.5,
@@ -511201,7 +511201,7 @@ const COLLEGE_SCOUTING = {
       },
       "2021_4035912": {
         "recShare": 94.8,
-        "ydShare": 88.4,
+        "ydShare": 88.5,
         "tdShare": 61.9,
         "avgPPA": 32.8,
         "usageOverall": 87.1
@@ -511250,7 +511250,7 @@ const COLLEGE_SCOUTING = {
       },
       "2021_4039089": {
         "recShare": 44.6,
-        "ydShare": 55.2,
+        "ydShare": 55.3,
         "tdShare": 24.8,
         "avgPPA": 44.8,
         "usageOverall": 40
@@ -511312,7 +511312,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 23.7
       },
       "2021_4046519": {
-        "recShare": 57.7,
+        "recShare": 57.8,
         "ydShare": 58.6,
         "tdShare": 5.3,
         "avgPPA": 37.2,
@@ -511335,7 +511335,7 @@ const COLLEGE_SCOUTING = {
       "2021_4240033": {
         "recShare": 23.5,
         "ydShare": 42.5,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 87.7,
         "usageOverall": 16.8
       },
@@ -511349,7 +511349,7 @@ const COLLEGE_SCOUTING = {
       "2021_4240120": {
         "recShare": 73.9,
         "ydShare": 73.3,
-        "tdShare": 52,
+        "tdShare": 51.9,
         "avgPPA": 26.5,
         "usageOverall": 87.1
       },
@@ -511376,7 +511376,7 @@ const COLLEGE_SCOUTING = {
       },
       "2021_4240408": {
         "recShare": 75.2,
-        "ydShare": 54.5,
+        "ydShare": 54.6,
         "tdShare": 44.3,
         "avgPPA": 58.6,
         "usageOverall": 64
@@ -511386,7 +511386,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 78.9,
         "tdShare": 62.1,
         "avgPPA": 62,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2021_4240506": {
         "recShare": 42.1,
@@ -511440,7 +511440,7 @@ const COLLEGE_SCOUTING = {
       "2021_4241397": {
         "recShare": 90.2,
         "ydShare": 90.2,
-        "tdShare": 69.6,
+        "tdShare": 69.5,
         "avgPPA": 53.7,
         "usageOverall": 91.5
       },
@@ -511468,7 +511468,7 @@ const COLLEGE_SCOUTING = {
       "2021_4241931": {
         "recShare": 4.6,
         "ydShare": 3.7,
-        "tdShare": 56.2,
+        "tdShare": 56.1,
         "avgPPA": 56.6,
         "usageOverall": 25.2
       },
@@ -511658,7 +511658,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 56.8,
         "ydShare": 46.9,
         "tdShare": 9.5,
-        "avgPPA": 20.4,
+        "avgPPA": 20.3,
         "usageOverall": 61.2
       },
       "2021_4249417": {
@@ -511692,7 +511692,7 @@ const COLLEGE_SCOUTING = {
       "2021_4257188": {
         "recShare": 15,
         "ydShare": 27,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 41.9,
         "usageOverall": 11.3
       },
@@ -511806,7 +511806,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 39.5,
         "tdShare": 44.3,
         "avgPPA": 8.4,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2021_4262900": {
         "recShare": 4.1,
@@ -511860,13 +511860,13 @@ const COLLEGE_SCOUTING = {
       "2021_4360306": {
         "recShare": 71.7,
         "ydShare": 64.6,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 34.7,
         "usageOverall": 80.2
       },
       "2021_4360329": {
         "recShare": 78.5,
-        "ydShare": 88.4,
+        "ydShare": 88.5,
         "tdShare": 47.2,
         "avgPPA": 48.9,
         "usageOverall": 77.8
@@ -511876,7 +511876,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 85.4,
         "tdShare": 32.7,
         "avgPPA": 28.8,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2021_4360486": {
         "recShare": 28,
@@ -511985,7 +511985,7 @@ const COLLEGE_SCOUTING = {
       },
       "2021_4361432": {
         "recShare": 72.1,
-        "ydShare": 77.7,
+        "ydShare": 77.6,
         "tdShare": 80.9,
         "avgPPA": 80.2,
         "usageOverall": 94.8
@@ -512035,7 +512035,7 @@ const COLLEGE_SCOUTING = {
       "2021_4361679": {
         "recShare": 21.6,
         "ydShare": 43.4,
-        "tdShare": 52,
+        "tdShare": 51.9,
         "avgPPA": 46.9,
         "usageOverall": 54.1
       },
@@ -512069,7 +512069,7 @@ const COLLEGE_SCOUTING = {
       },
       "2021_4361960": {
         "recShare": 81.5,
-        "ydShare": 88.4,
+        "ydShare": 88.5,
         "tdShare": 53.8,
         "avgPPA": 71.2,
         "usageOverall": 70.4
@@ -512111,10 +512111,10 @@ const COLLEGE_SCOUTING = {
       },
       "2021_4362186": {
         "recShare": 69,
-        "ydShare": 66.4,
+        "ydShare": 66.3,
         "tdShare": 67.5,
         "avgPPA": 70.7,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2021_4362208": {
         "recShare": 44.6,
@@ -512153,7 +512153,7 @@ const COLLEGE_SCOUTING = {
       },
       "2021_4362477": {
         "recShare": 62.5,
-        "ydShare": 54.5,
+        "ydShare": 54.6,
         "tdShare": 12,
         "avgPPA": 61.7,
         "usageOverall": 47.9
@@ -512294,7 +512294,7 @@ const COLLEGE_SCOUTING = {
       "2021_4367180": {
         "recShare": 8.8,
         "ydShare": 8.5,
-        "tdShare": 52.7,
+        "tdShare": 52.6,
         "avgPPA": 83.5,
         "usageOverall": 15.5
       },
@@ -512378,7 +512378,7 @@ const COLLEGE_SCOUTING = {
       "2021_4372758": {
         "recShare": 55.7,
         "ydShare": 76.7,
-        "tdShare": 69.6,
+        "tdShare": 69.5,
         "avgPPA": 89.4,
         "usageOverall": 65.2
       },
@@ -512405,7 +512405,7 @@ const COLLEGE_SCOUTING = {
       },
       "2021_4373266": {
         "recShare": 36.3,
-        "ydShare": 55.2,
+        "ydShare": 55.3,
         "tdShare": 58.3,
         "avgPPA": 67.2,
         "usageOverall": 28.4
@@ -512434,7 +512434,7 @@ const COLLEGE_SCOUTING = {
       "2021_4373686": {
         "recShare": 37.8,
         "ydShare": 31.1,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 83.8,
         "usageOverall": 43.5
       },
@@ -512503,7 +512503,7 @@ const COLLEGE_SCOUTING = {
       },
       "2021_4382466": {
         "recShare": 48.7,
-        "ydShare": 66.4,
+        "ydShare": 66.3,
         "tdShare": 67.5,
         "avgPPA": 59.9,
         "usageOverall": 86.5
@@ -512518,7 +512518,7 @@ const COLLEGE_SCOUTING = {
       "2021_4383723": {
         "recShare": 95.9,
         "ydShare": 91.6,
-        "tdShare": 77.2,
+        "tdShare": 77.3,
         "avgPPA": 60.2,
         "usageOverall": 99.8
       },
@@ -512628,7 +512628,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 71.3
       },
       "2021_4426515": {
-        "recShare": 57.7,
+        "recShare": 57.8,
         "ydShare": 74.2,
         "tdShare": 69.3,
         "avgPPA": 81.5,
@@ -512644,7 +512644,7 @@ const COLLEGE_SCOUTING = {
       "2021_4426844": {
         "recShare": 63.9,
         "ydShare": 59.2,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 12.4,
         "usageOverall": 86.5
       },
@@ -512664,7 +512664,7 @@ const COLLEGE_SCOUTING = {
       },
       "2021_4426919": {
         "recShare": 62.5,
-        "ydShare": 66.4,
+        "ydShare": 66.3,
         "tdShare": 67.7,
         "avgPPA": 72,
         "usageOverall": 58.8
@@ -512692,7 +512692,7 @@ const COLLEGE_SCOUTING = {
       },
       "2021_4427095": {
         "recShare": 81.2,
-        "ydShare": 66.4,
+        "ydShare": 66.3,
         "tdShare": 55.6,
         "avgPPA": 70.7,
         "usageOverall": 60
@@ -512790,7 +512790,7 @@ const COLLEGE_SCOUTING = {
       },
       "2021_4428331": {
         "recShare": 72.6,
-        "ydShare": 54.5,
+        "ydShare": 54.6,
         "tdShare": 69.3,
         "avgPPA": 70.9,
         "usageOverall": 69.2
@@ -512877,7 +512877,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 80.1,
         "tdShare": 81,
         "avgPPA": 81.3,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2021_4428938": {
         "recShare": 64.9,
@@ -512889,7 +512889,7 @@ const COLLEGE_SCOUTING = {
       "2021_4429006": {
         "recShare": 63.9,
         "ydShare": 65.5,
-        "tdShare": 56.2,
+        "tdShare": 56.1,
         "avgPPA": 58.6,
         "usageOverall": 74.1
       },
@@ -512901,7 +512901,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 88.9
       },
       "2021_4429025": {
-        "recShare": 55.3,
+        "recShare": 55.4,
         "ydShare": 68.2,
         "tdShare": 85.1,
         "avgPPA": 85.3,
@@ -512915,7 +512915,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 5.3
       },
       "2021_4429056": {
-        "recShare": 55.3,
+        "recShare": 55.4,
         "ydShare": 55.9,
         "tdShare": 70.3,
         "avgPPA": 61.8,
@@ -513097,7 +513097,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 23.7
       },
       "2021_4430875": {
-        "recShare": 54.7,
+        "recShare": 54.8,
         "ydShare": 26.5,
         "tdShare": 22.6,
         "avgPPA": 58.6,
@@ -513134,7 +513134,7 @@ const COLLEGE_SCOUTING = {
       "2021_4431210": {
         "recShare": 38.9,
         "ydShare": 45.5,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 7,
         "usageOverall": 56.5
       },
@@ -513227,7 +513227,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 68.7,
         "tdShare": 88.5,
         "avgPPA": 49.9,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2021_4433906": {
         "recShare": 86.1,
@@ -513253,7 +513253,7 @@ const COLLEGE_SCOUTING = {
       "2021_4565908": {
         "recShare": 28,
         "ydShare": 40.6,
-        "tdShare": 46.1,
+        "tdShare": 46,
         "avgPPA": 71.3,
         "usageOverall": 21.1
       },
@@ -513314,11 +513314,11 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 9.2
       },
       "2021_4567506": {
-        "recShare": 57.7,
+        "recShare": 57.8,
         "ydShare": 47.6,
         "tdShare": 10.2,
         "avgPPA": 38.3,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2021_4567525": {
         "recShare": 22.3,
@@ -513356,7 +513356,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 74.1
       },
       "2021_4568992": {
-        "recShare": 97.7,
+        "recShare": 97.6,
         "ydShare": 90,
         "tdShare": 71.5,
         "avgPPA": 54.2,
@@ -513386,7 +513386,7 @@ const COLLEGE_SCOUTING = {
       "2021_4569239": {
         "recShare": 41.5,
         "ydShare": 77.9,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 83.3,
         "usageOverall": 55.2
       },
@@ -513395,14 +513395,14 @@ const COLLEGE_SCOUTING = {
         "ydShare": 85.8,
         "tdShare": 84,
         "avgPPA": 5.6,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2021_4569382": {
         "recShare": 29.9,
         "ydShare": 33.3,
         "tdShare": 28.7,
         "avgPPA": 89.4,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2021_4569452": {
         "recShare": 77.1,
@@ -513426,7 +513426,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 99.4
       },
       "2021_4569603": {
-        "recShare": 75.6,
+        "recShare": 75.5,
         "ydShare": 84.1,
         "tdShare": 47.2,
         "avgPPA": 71.8,
@@ -513477,7 +513477,7 @@ const COLLEGE_SCOUTING = {
       "2021_4570409": {
         "recShare": 80.8,
         "ydShare": 85.4,
-        "tdShare": 52,
+        "tdShare": 51.9,
         "avgPPA": 74.7,
         "usageOverall": 98.1
       },
@@ -513532,7 +513532,7 @@ const COLLEGE_SCOUTING = {
       },
       "2021_4575558": {
         "recShare": 48.7,
-        "ydShare": 54.5,
+        "ydShare": 54.6,
         "tdShare": 22.8,
         "avgPPA": 52.6,
         "usageOverall": 58.8
@@ -513601,7 +513601,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 49
       },
       "2021_4603186": {
-        "recShare": 54.7,
+        "recShare": 54.8,
         "ydShare": 37.6,
         "tdShare": 25.1,
         "avgPPA": 83.9,
@@ -513615,7 +513615,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 26.7
       },
       "2021_4605951": {
-        "recShare": 54.7,
+        "recShare": 54.8,
         "ydShare": 57.5,
         "tdShare": 64.1,
         "avgPPA": 79.4,
@@ -513717,7 +513717,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 87.6,
         "tdShare": 68.3,
         "avgPPA": 86.2,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2021_4686472": {
         "recShare": 26.7,
@@ -513818,7 +513818,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 86.5
       },
       "2021_4693844": {
-        "recShare": 55.3,
+        "recShare": 55.4,
         "ydShare": 63.3,
         "tdShare": 74.7,
         "avgPPA": 89.3,
@@ -513867,7 +513867,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 5.3
       },
       "2021_4875687": {
-        "recShare": 55.3,
+        "recShare": 55.4,
         "ydShare": 50.4,
         "tdShare": 63.9,
         "avgPPA": 96.1,
@@ -513937,9 +513937,9 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 80.2
       },
       "2022_4240121": {
-        "recShare": 75.6,
+        "recShare": 75.5,
         "ydShare": 69,
-        "tdShare": 52.7,
+        "tdShare": 52.6,
         "avgPPA": 30.1,
         "usageOverall": 75.5
       },
@@ -514109,7 +514109,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 95.4,
         "tdShare": 74.9,
         "avgPPA": 97,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2022_4249426": {
         "recShare": 71.1,
@@ -514198,7 +514198,7 @@ const COLLEGE_SCOUTING = {
       "2022_4259984": {
         "recShare": 49.7,
         "ydShare": 28.7,
-        "tdShare": 56.2,
+        "tdShare": 56.1,
         "avgPPA": 24.8,
         "usageOverall": 43.5
       },
@@ -514242,11 +514242,11 @@ const COLLEGE_SCOUTING = {
         "ydShare": 75.2,
         "tdShare": 71.5,
         "avgPPA": 86.4,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2022_4360462": {
         "recShare": 52.1,
-        "ydShare": 77.7,
+        "ydShare": 77.6,
         "tdShare": 99.9,
         "avgPPA": 43.9,
         "usageOverall": 57.7
@@ -514381,7 +514381,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 56.2,
         "ydShare": 42,
         "tdShare": 13,
-        "avgPPA": 7.2,
+        "avgPPA": 7.1,
         "usageOverall": 69.2
       },
       "2022_4361679": {
@@ -514401,7 +514401,7 @@ const COLLEGE_SCOUTING = {
       "2022_4361736": {
         "recShare": 2.3,
         "ydShare": 18.4,
-        "tdShare": 52.7,
+        "tdShare": 52.6,
         "avgPPA": 58.6,
         "usageOverall": 10.4
       },
@@ -514471,14 +514471,14 @@ const COLLEGE_SCOUTING = {
       "2022_4362430": {
         "recShare": 34.2,
         "ydShare": 41.5,
-        "tdShare": 46.1,
+        "tdShare": 46,
         "avgPPA": 82.6,
         "usageOverall": 26.7
       },
       "2022_4362477": {
         "recShare": 44.1,
         "ydShare": 31.1,
-        "tdShare": 46.1,
+        "tdShare": 46,
         "avgPPA": 9.2,
         "usageOverall": 47.9
       },
@@ -514520,7 +514520,7 @@ const COLLEGE_SCOUTING = {
       "2022_4363046": {
         "recShare": 88.3,
         "ydShare": 73.9,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 60.9,
         "usageOverall": 56.5
       },
@@ -514534,7 +514534,7 @@ const COLLEGE_SCOUTING = {
       "2022_4363537": {
         "recShare": 72.6,
         "ydShare": 44.8,
-        "tdShare": 52.7,
+        "tdShare": 52.6,
         "avgPPA": 24.8,
         "usageOverall": 55.2
       },
@@ -514640,13 +514640,13 @@ const COLLEGE_SCOUTING = {
         "recShare": 24.7,
         "ydShare": 9,
         "tdShare": 38.4,
-        "avgPPA": 19.8,
+        "avgPPA": 19.7,
         "usageOverall": 28.4
       },
       "2022_4372063": {
         "recShare": 88.7,
         "ydShare": 87.7,
-        "tdShare": 52.7,
+        "tdShare": 52.6,
         "avgPPA": 52.8,
         "usageOverall": 76.3
       },
@@ -514680,14 +514680,14 @@ const COLLEGE_SCOUTING = {
       },
       "2022_4373077": {
         "recShare": 69.9,
-        "ydShare": 77.7,
+        "ydShare": 77.6,
         "tdShare": 25.9,
         "avgPPA": 72.5,
         "usageOverall": 58.8
       },
       "2022_4373266": {
         "recShare": 32.8,
-        "ydShare": 55.2,
+        "ydShare": 55.3,
         "tdShare": 55.6,
         "avgPPA": 80.5,
         "usageOverall": 70.4
@@ -514736,7 +514736,7 @@ const COLLEGE_SCOUTING = {
       },
       "2022_4374391": {
         "recShare": 55.7,
-        "ydShare": 55.2,
+        "ydShare": 55.3,
         "tdShare": 6,
         "avgPPA": 72.9,
         "usageOverall": 32.6
@@ -514788,7 +514788,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 42,
         "tdShare": 29.6,
         "avgPPA": 35,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2022_4426343": {
         "recShare": 20.6,
@@ -514947,7 +514947,7 @@ const COLLEGE_SCOUTING = {
       "2022_4427209": {
         "recShare": 30.5,
         "ydShare": 53.4,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 87.1,
         "usageOverall": 15.5
       },
@@ -515010,14 +515010,14 @@ const COLLEGE_SCOUTING = {
       "2022_4428025": {
         "recShare": 10,
         "ydShare": 30,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 62.5,
         "usageOverall": 32.6
       },
       "2022_4428063": {
         "recShare": 38.9,
         "ydShare": 25.3,
-        "tdShare": 52.7,
+        "tdShare": 52.6,
         "avgPPA": 74.9,
         "usageOverall": 23.7
       },
@@ -515051,7 +515051,7 @@ const COLLEGE_SCOUTING = {
       },
       "2022_4428367": {
         "recShare": 61.9,
-        "ydShare": 54.5,
+        "ydShare": 54.6,
         "tdShare": 44.3,
         "avgPPA": 78.7,
         "usageOverall": 67.3
@@ -515297,7 +515297,7 @@ const COLLEGE_SCOUTING = {
       "2022_4429981": {
         "recShare": 25.4,
         "ydShare": 36.1,
-        "tdShare": 52,
+        "tdShare": 51.9,
         "avgPPA": 90.6,
         "usageOverall": 32.6
       },
@@ -515400,7 +515400,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 26.7
       },
       "2022_4430834": {
-        "recShare": 75.6,
+        "recShare": 75.5,
         "ydShare": 72.3,
         "tdShare": 79.2,
         "avgPPA": 55.2,
@@ -515493,7 +515493,7 @@ const COLLEGE_SCOUTING = {
       "2022_4431273": {
         "recShare": 45.7,
         "ydShare": 34.3,
-        "tdShare": 56.2,
+        "tdShare": 56.1,
         "avgPPA": 48.1,
         "usageOverall": 41.9
       },
@@ -515570,7 +515570,7 @@ const COLLEGE_SCOUTING = {
       "2022_4431492": {
         "recShare": 20.6,
         "ydShare": 23.6,
-        "tdShare": 52.7,
+        "tdShare": 52.6,
         "avgPPA": 65.2,
         "usageOverall": 11.3
       },
@@ -515590,17 +515590,17 @@ const COLLEGE_SCOUTING = {
       },
       "2022_4431506": {
         "recShare": 41,
-        "ydShare": 55.2,
+        "ydShare": 55.3,
         "tdShare": 65.2,
         "avgPPA": 81.4,
         "usageOverall": 53.1
       },
       "2022_4431509": {
         "recShare": 72.6,
-        "ydShare": 55.2,
+        "ydShare": 55.3,
         "tdShare": 45.9,
         "avgPPA": 66.6,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2022_4431600": {
         "recShare": 28.5,
@@ -515645,11 +515645,11 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 80.2
       },
       "2022_4432620": {
-        "recShare": 57.7,
+        "recShare": 57.8,
         "ydShare": 55.9,
         "tdShare": 17.3,
         "avgPPA": 57.3,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2022_4432705": {
         "recShare": 31.8,
@@ -515729,7 +515729,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 44.8
       },
       "2022_4567217": {
-        "recShare": 54.7,
+        "recShare": 54.8,
         "ydShare": 75.5,
         "tdShare": 88.5,
         "avgPPA": 95.3,
@@ -515802,7 +515802,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 94.3,
         "ydShare": 81.3,
         "tdShare": 88.5,
-        "avgPPA": 21.2,
+        "avgPPA": 21.1,
         "usageOverall": 87.1
       },
       "2022_4569372": {
@@ -515878,7 +515878,7 @@ const COLLEGE_SCOUTING = {
       "2022_4570507": {
         "recShare": 78.7,
         "ydShare": 80.1,
-        "tdShare": 56.2,
+        "tdShare": 56.1,
         "avgPPA": 58.6,
         "usageOverall": 67.3
       },
@@ -515920,8 +515920,8 @@ const COLLEGE_SCOUTING = {
       "2022_4572040": {
         "recShare": 74.3,
         "ydShare": 87.6,
-        "tdShare": 74.4,
-        "avgPPA": 18.2,
+        "tdShare": 74.5,
+        "avgPPA": 18.1,
         "usageOverall": 46.3
       },
       "2022_4572267": {
@@ -515941,7 +515941,7 @@ const COLLEGE_SCOUTING = {
       "2022_4574026": {
         "recShare": 66.2,
         "ydShare": 64.6,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 58.4,
         "usageOverall": 88.9
       },
@@ -515997,7 +515997,7 @@ const COLLEGE_SCOUTING = {
       "2022_4590532": {
         "recShare": 26,
         "ydShare": 21.4,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 63.4,
         "usageOverall": 19.8
       },
@@ -516011,7 +516011,7 @@ const COLLEGE_SCOUTING = {
       "2022_4594444": {
         "recShare": 82.6,
         "ydShare": 69,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 66.4,
         "usageOverall": 71.3
       },
@@ -516067,7 +516067,7 @@ const COLLEGE_SCOUTING = {
       "2022_4602940": {
         "recShare": 50.2,
         "ydShare": 46.9,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 44.4,
         "usageOverall": 84.2
       },
@@ -516081,7 +516081,7 @@ const COLLEGE_SCOUTING = {
       "2022_4608606": {
         "recShare": 57.3,
         "ydShare": 40,
-        "tdShare": 56.2,
+        "tdShare": 56.1,
         "avgPPA": 65,
         "usageOverall": 28.4
       },
@@ -516109,7 +516109,7 @@ const COLLEGE_SCOUTING = {
       "2022_4612246": {
         "recShare": 31,
         "ydShare": 30,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 53,
         "usageOverall": 38.1
       },
@@ -516264,11 +516264,11 @@ const COLLEGE_SCOUTING = {
         "recShare": 59.4,
         "ydShare": 31.7,
         "tdShare": 92.3,
-        "avgPPA": 19.8,
+        "avgPPA": 19.7,
         "usageOverall": 74.1
       },
       "2022_4685424": {
-        "recShare": 55.3,
+        "recShare": 55.4,
         "ydShare": 58.1,
         "tdShare": 80.8,
         "avgPPA": 93.6,
@@ -516276,14 +516276,14 @@ const COLLEGE_SCOUTING = {
       },
       "2022_4685472": {
         "recShare": 40.3,
-        "ydShare": 55.2,
+        "ydShare": 55.3,
         "tdShare": 84,
         "avgPPA": 97.6,
         "usageOverall": 29.7
       },
       "2022_4685565": {
         "recShare": 84.2,
-        "ydShare": 77.7,
+        "ydShare": 77.6,
         "tdShare": 32.7,
         "avgPPA": 11.5,
         "usageOverall": 92
@@ -516426,7 +516426,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 51.5,
         "tdShare": 52.2,
         "avgPPA": 33.5,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2022_4690117": {
         "recShare": 56.8,
@@ -516537,7 +516537,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 69.5,
         "ydShare": 75.5,
         "tdShare": 51.7,
-        "avgPPA": 21.5,
+        "avgPPA": 21.4,
         "usageOverall": 73.1
       },
       "2022_4710344": {
@@ -516549,7 +516549,7 @@ const COLLEGE_SCOUTING = {
       },
       "2022_4710714": {
         "recShare": 51.6,
-        "ydShare": 54.5,
+        "ydShare": 54.6,
         "tdShare": 63.1,
         "avgPPA": 89.9,
         "usageOverall": 40
@@ -516641,7 +516641,7 @@ const COLLEGE_SCOUTING = {
       "2022_4875825": {
         "recShare": 44.6,
         "ydShare": 65.5,
-        "tdShare": 69.6,
+        "tdShare": 69.5,
         "avgPPA": 89.5,
         "usageOverall": 15.5
       },
@@ -516704,7 +516704,7 @@ const COLLEGE_SCOUTING = {
       "2022_4880734": {
         "recShare": 53.6,
         "ydShare": 45.9,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 89,
         "usageOverall": 35.2
       },
@@ -516712,7 +516712,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 52.7,
         "ydShare": 43.8,
         "tdShare": 15.2,
-        "avgPPA": 21.5,
+        "avgPPA": 21.4,
         "usageOverall": 16.8
       },
       "2022_4883774": {
@@ -516720,7 +516720,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 62.8,
         "tdShare": 41,
         "avgPPA": 8.6,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2022_4890702": {
         "recShare": 46.8,
@@ -516746,7 +516746,7 @@ const COLLEGE_SCOUTING = {
       "2022_4910239": {
         "recShare": 34.7,
         "ydShare": 53.4,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 98.1,
         "usageOverall": 36.6
       },
@@ -516773,7 +516773,7 @@ const COLLEGE_SCOUTING = {
       },
       "2022_5081432": {
         "recShare": 64.9,
-        "ydShare": 55.2,
+        "ydShare": 55.3,
         "tdShare": 51.7,
         "avgPPA": 20.9,
         "usageOverall": 46.3
@@ -516809,9 +516809,9 @@ const COLLEGE_SCOUTING = {
       "2022_5083198": {
         "recShare": 56.2,
         "ydShare": 45.5,
-        "tdShare": 52.7,
+        "tdShare": 52.6,
         "avgPPA": 43.1,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2022_5083297": {
         "recShare": 46.8,
@@ -516906,10 +516906,10 @@ const COLLEGE_SCOUTING = {
       },
       "2023_4361319": {
         "recShare": 60.2,
-        "ydShare": 66.4,
+        "ydShare": 66.3,
         "tdShare": 52.2,
         "avgPPA": 81.5,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2023_4361351": {
         "recShare": 46.8,
@@ -517019,7 +517019,7 @@ const COLLEGE_SCOUTING = {
       "2023_4366625": {
         "recShare": 63.9,
         "ydShare": 86.7,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 98.8,
         "usageOverall": 41.9
       },
@@ -517123,7 +517123,7 @@ const COLLEGE_SCOUTING = {
       },
       "2023_4382936": {
         "recShare": 69.5,
-        "ydShare": 55.2,
+        "ydShare": 55.3,
         "tdShare": 81.6,
         "avgPPA": 73.3,
         "usageOverall": 49
@@ -517138,7 +517138,7 @@ const COLLEGE_SCOUTING = {
       "2023_4384192": {
         "recShare": 95.4,
         "ydShare": 79.7,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 26.5,
         "usageOverall": 92.3
       },
@@ -517235,7 +517235,7 @@ const COLLEGE_SCOUTING = {
       },
       "2023_4427209": {
         "recShare": 38.5,
-        "ydShare": 55.2,
+        "ydShare": 55.3,
         "tdShare": 70.3,
         "avgPPA": 98.9,
         "usageOverall": 19.8
@@ -517243,7 +517243,7 @@ const COLLEGE_SCOUTING = {
       "2023_4427331": {
         "recShare": 14.6,
         "ydShare": 24.6,
-        "tdShare": 56.2,
+        "tdShare": 56.1,
         "avgPPA": 82.9,
         "usageOverall": 10.4
       },
@@ -517257,7 +517257,7 @@ const COLLEGE_SCOUTING = {
       "2023_4427773": {
         "recShare": 33.5,
         "ydShare": 46.5,
-        "tdShare": 52.7,
+        "tdShare": 52.6,
         "avgPPA": 85.3,
         "usageOverall": 23.7
       },
@@ -517369,7 +517369,7 @@ const COLLEGE_SCOUTING = {
       "2023_4428753": {
         "recShare": 88.7,
         "ydShare": 67.3,
-        "tdShare": 56.2,
+        "tdShare": 56.1,
         "avgPPA": 26.8,
         "usageOverall": 98.8
       },
@@ -517383,19 +517383,19 @@ const COLLEGE_SCOUTING = {
       "2023_4428784": {
         "recShare": 39.8,
         "ydShare": 30,
-        "tdShare": 46.1,
+        "tdShare": 46,
         "avgPPA": 84.3,
         "usageOverall": 19.8
       },
       "2023_4428796": {
         "recShare": 66.2,
         "ydShare": 65.9,
-        "tdShare": 52.7,
+        "tdShare": 52.6,
         "avgPPA": 83.4,
         "usageOverall": 55.2
       },
       "2023_4428808": {
-        "recShare": 54.7,
+        "recShare": 54.8,
         "ydShare": 48.1,
         "tdShare": 9,
         "avgPPA": 74.3,
@@ -517411,7 +517411,7 @@ const COLLEGE_SCOUTING = {
       "2023_4428938": {
         "recShare": 40.3,
         "ydShare": 40,
-        "tdShare": 52.7,
+        "tdShare": 52.6,
         "avgPPA": 78.4,
         "usageOverall": 40
       },
@@ -517479,7 +517479,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 47.9
       },
       "2023_4429284": {
-        "recShare": 55.3,
+        "recShare": 55.4,
         "ydShare": 71.8,
         "tdShare": 64.1,
         "avgPPA": 94.8,
@@ -517558,7 +517558,7 @@ const COLLEGE_SCOUTING = {
       "2023_4429994": {
         "recShare": 72.1,
         "ydShare": 82.8,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 85.6,
         "usageOverall": 51.8
       },
@@ -517579,7 +517579,7 @@ const COLLEGE_SCOUTING = {
       "2023_4430185": {
         "recShare": 95.9,
         "ydShare": 97.4,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 73.1,
         "usageOverall": 95.2
       },
@@ -517588,7 +517588,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 71.8,
         "tdShare": 89,
         "avgPPA": 68.2,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2023_4430270": {
         "recShare": 71.1,
@@ -517608,7 +517608,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 92.2,
         "ydShare": 88.3,
         "tdShare": 93.8,
-        "avgPPA": 20.4,
+        "avgPPA": 20.3,
         "usageOverall": 98.6
       },
       "2023_4430577": {
@@ -517691,7 +517691,7 @@ const COLLEGE_SCOUTING = {
       "2023_4430914": {
         "recShare": 78.1,
         "ydShare": 78.9,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 94.5,
         "usageOverall": 50.7
       },
@@ -517770,7 +517770,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 87,
         "tdShare": 80.8,
         "avgPPA": 95.4,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2023_4431299": {
         "recShare": 85.3,
@@ -517780,7 +517780,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 93.1
       },
       "2023_4431309": {
-        "recShare": 54.7,
+        "recShare": 54.8,
         "ydShare": 31.7,
         "tdShare": 40.2,
         "avgPPA": 26.4,
@@ -517837,7 +517837,7 @@ const COLLEGE_SCOUTING = {
       },
       "2023_4431492": {
         "recShare": 64.9,
-        "ydShare": 77.7,
+        "ydShare": 77.6,
         "tdShare": 98.7,
         "avgPPA": 97.7,
         "usageOverall": 40
@@ -517851,8 +517851,8 @@ const COLLEGE_SCOUTING = {
       },
       "2023_4431509": {
         "recShare": 39.8,
-        "ydShare": 55.2,
-        "tdShare": 56.2,
+        "ydShare": 55.3,
+        "tdShare": 56.1,
         "avgPPA": 93.8,
         "usageOverall": 31
       },
@@ -517948,15 +517948,15 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 77.1
       },
       "2023_4433830": {
-        "recShare": 55.3,
+        "recShare": 55.4,
         "ydShare": 52.4,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 88.3,
         "usageOverall": 40
       },
       "2023_4433871": {
         "recShare": 48.7,
-        "ydShare": 66.4,
+        "ydShare": 66.3,
         "tdShare": 34.5,
         "avgPPA": 81.7,
         "usageOverall": 36.6
@@ -518137,7 +518137,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 22.4
       },
       "2023_4569507": {
-        "recShare": 57.7,
+        "recShare": 57.8,
         "ydShare": 40,
         "tdShare": 57,
         "avgPPA": 46.3,
@@ -518147,7 +518147,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 63.9,
         "ydShare": 26.5,
         "tdShare": 5.3,
-        "avgPPA": 20.4,
+        "avgPPA": 20.3,
         "usageOverall": 22.4
       },
       "2023_4569559": {
@@ -518167,7 +518167,7 @@ const COLLEGE_SCOUTING = {
       "2023_4569912": {
         "recShare": 82,
         "ydShare": 69.4,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 78.2,
         "usageOverall": 56.5
       },
@@ -518211,7 +518211,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 89.7,
         "tdShare": 74.9,
         "avgPPA": 73.4,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2023_4571801": {
         "recShare": 24.1,
@@ -518235,7 +518235,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 83.6
       },
       "2023_4572040": {
-        "recShare": 55.3,
+        "recShare": 55.4,
         "ydShare": 45.5,
         "tdShare": 65.1,
         "avgPPA": 51.2,
@@ -518263,7 +518263,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 40
       },
       "2023_4574596": {
-        "recShare": 57.7,
+        "recShare": 57.8,
         "ydShare": 41.5,
         "tdShare": 22.6,
         "avgPPA": 44.9,
@@ -518403,7 +518403,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 65.2
       },
       "2023_4596439": {
-        "recShare": 55.3,
+        "recShare": 55.4,
         "ydShare": 35.2,
         "tdShare": 41.4,
         "avgPPA": 67.1,
@@ -518418,7 +518418,7 @@ const COLLEGE_SCOUTING = {
       },
       "2023_4596596": {
         "recShare": 51.6,
-        "ydShare": 54.5,
+        "ydShare": 54.6,
         "tdShare": 33.5,
         "avgPPA": 54.5,
         "usageOverall": 46.3
@@ -518435,7 +518435,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 65.5,
         "tdShare": 96,
         "avgPPA": 69.7,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2023_4597703": {
         "recShare": 95.4,
@@ -518452,7 +518452,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 36.6
       },
       "2023_4600981": {
-        "recShare": 55.3,
+        "recShare": 55.4,
         "ydShare": 50.9,
         "tdShare": 83.2,
         "avgPPA": 68.2,
@@ -518461,7 +518461,7 @@ const COLLEGE_SCOUTING = {
       "2023_4602185": {
         "recShare": 77.5,
         "ydShare": 86.2,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 97.3,
         "usageOverall": 67.3
       },
@@ -518532,7 +518532,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 47.5,
         "ydShare": 17.2,
         "tdShare": 5.3,
-        "avgPPA": 7.6,
+        "avgPPA": 7.5,
         "usageOverall": 41.9
       },
       "2023_4612826": {
@@ -518593,7 +518593,7 @@ const COLLEGE_SCOUTING = {
       },
       "2023_4682654": {
         "recShare": 67.3,
-        "ydShare": 66.4,
+        "ydShare": 66.3,
         "tdShare": 20.4,
         "avgPPA": 78.9,
         "usageOverall": 41.9
@@ -518623,7 +518623,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 38.5,
         "ydShare": 13.5,
         "tdShare": 18.4,
-        "avgPPA": 4.9,
+        "avgPPA": 4.8,
         "usageOverall": 38.1
       },
       "2023_4683159": {
@@ -518643,14 +518643,14 @@ const COLLEGE_SCOUTING = {
       "2023_4683227": {
         "recShare": 61.4,
         "ydShare": 61.3,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 87.6,
         "usageOverall": 57.7
       },
       "2023_4683412": {
         "recShare": 9.6,
         "ydShare": 19.6,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 93.3,
         "usageOverall": 43.5
       },
@@ -518687,7 +518687,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 88.7,
         "tdShare": 82.9,
         "avgPPA": 82.2,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2023_4685144": {
         "recShare": 16.8,
@@ -518778,7 +518778,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 36.7,
         "tdShare": 51.7,
         "avgPPA": 53,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2023_4685769": {
         "recShare": 19.8,
@@ -518792,7 +518792,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 15.6,
         "tdShare": 5.3,
         "avgPPA": 14.9,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2023_4686104": {
         "recShare": 51.6,
@@ -518859,7 +518859,7 @@ const COLLEGE_SCOUTING = {
       },
       "2023_4686781": {
         "recShare": 43.3,
-        "ydShare": 54.5,
+        "ydShare": 54.6,
         "tdShare": 85.9,
         "avgPPA": 98.4,
         "usageOverall": 53.1
@@ -518872,7 +518872,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 8.2
       },
       "2023_4687561": {
-        "recShare": 55.3,
+        "recShare": 55.4,
         "ydShare": 29.4,
         "tdShare": 65.1,
         "avgPPA": 37.4,
@@ -518895,7 +518895,7 @@ const COLLEGE_SCOUTING = {
       "2023_4690461": {
         "recShare": 35.8,
         "ydShare": 32.2,
-        "tdShare": 52.7,
+        "tdShare": 52.6,
         "avgPPA": 59.2,
         "usageOverall": 35.2
       },
@@ -518911,7 +518911,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 67.8,
         "tdShare": 53.8,
         "avgPPA": 83.1,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2023_4692022": {
         "recShare": 80.3,
@@ -518937,7 +518937,7 @@ const COLLEGE_SCOUTING = {
       "2023_4693817": {
         "recShare": 37.8,
         "ydShare": 57.5,
-        "tdShare": 52,
+        "tdShare": 51.9,
         "avgPPA": 99.6,
         "usageOverall": 16.8
       },
@@ -518946,7 +518946,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 84.4,
         "tdShare": 20.4,
         "avgPPA": 11.4,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2023_4696407": {
         "recShare": 49.2,
@@ -518972,7 +518972,7 @@ const COLLEGE_SCOUTING = {
       "2023_4698227": {
         "recShare": 38.9,
         "ydShare": 54.1,
-        "tdShare": 56.2,
+        "tdShare": 56.1,
         "avgPPA": 76.5,
         "usageOverall": 21.1
       },
@@ -519005,7 +519005,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 23.7
       },
       "2023_4700453": {
-        "recShare": 75.6,
+        "recShare": 75.5,
         "ydShare": 69,
         "tdShare": 51.7,
         "avgPPA": 71.7,
@@ -519014,7 +519014,7 @@ const COLLEGE_SCOUTING = {
       "2023_4701936": {
         "recShare": 45.7,
         "ydShare": 33.9,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 70.7,
         "usageOverall": 55.2
       },
@@ -519082,7 +519082,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 94
       },
       "2023_4712578": {
-        "recShare": 54.7,
+        "recShare": 54.8,
         "ydShare": 40.6,
         "tdShare": 32.7,
         "avgPPA": 65.8,
@@ -519138,7 +519138,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 19.8
       },
       "2023_4804883": {
-        "recShare": 54.7,
+        "recShare": 54.8,
         "ydShare": 58.6,
         "tdShare": 62.5,
         "avgPPA": 89.7,
@@ -519154,9 +519154,9 @@ const COLLEGE_SCOUTING = {
       "2023_4808839": {
         "recShare": 81.5,
         "ydShare": 68.2,
-        "tdShare": 52.7,
+        "tdShare": 52.6,
         "avgPPA": 38.5,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2023_4831976": {
         "recShare": 34.2,
@@ -519205,7 +519205,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 39,
         "tdShare": 24.8,
         "avgPPA": 2.2,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2023_4869748": {
         "recShare": 70.3,
@@ -519296,7 +519296,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 74.9,
         "tdShare": 81.6,
         "avgPPA": 80.9,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2023_4875272": {
         "recShare": 48,
@@ -519392,7 +519392,7 @@ const COLLEGE_SCOUTING = {
       "2023_4880845": {
         "recShare": 6.1,
         "ydShare": 7.5,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 88.8,
         "usageOverall": 19.8
       },
@@ -519408,7 +519408,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 35.2,
         "tdShare": 5.3,
         "avgPPA": 25.7,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2023_4888723": {
         "recShare": 19.8,
@@ -519476,7 +519476,7 @@ const COLLEGE_SCOUTING = {
       "2023_4912218": {
         "recShare": 58.1,
         "ydShare": 78.2,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 93.5,
         "usageOverall": 50.7
       },
@@ -519574,7 +519574,7 @@ const COLLEGE_SCOUTING = {
       "2023_5078453": {
         "recShare": 18,
         "ydShare": 45.5,
-        "tdShare": 52.7,
+        "tdShare": 52.6,
         "avgPPA": 92.3,
         "usageOverall": 29.7
       },
@@ -519789,7 +519789,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 9.2
       },
       "2023_5123663": {
-        "recShare": 54.7,
+        "recShare": 54.8,
         "ydShare": 41.5,
         "tdShare": 24.8,
         "avgPPA": 20.2,
@@ -519894,7 +519894,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 15.5
       },
       "2024_4426337": {
-        "recShare": 55.3,
+        "recShare": 55.4,
         "ydShare": 45.5,
         "tdShare": 25.9,
         "avgPPA": 40,
@@ -519938,7 +519938,7 @@ const COLLEGE_SCOUTING = {
       "2024_4426815": {
         "recShare": 21.6,
         "ydShare": 21.4,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 83.5,
         "usageOverall": 13.9
       },
@@ -520056,7 +520056,7 @@ const COLLEGE_SCOUTING = {
       },
       "2024_4429172": {
         "recShare": 37.8,
-        "ydShare": 54.5,
+        "ydShare": 54.6,
         "tdShare": 51.7,
         "avgPPA": 94.6,
         "usageOverall": 26.7
@@ -520122,7 +520122,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 78.9,
         "tdShare": 85.7,
         "avgPPA": 88.4,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2024_4430323": {
         "recShare": 76.2,
@@ -520162,7 +520162,7 @@ const COLLEGE_SCOUTING = {
       "2024_4430747": {
         "recShare": 26.7,
         "ydShare": 32.7,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 95.2,
         "usageOverall": 18.3
       },
@@ -520293,7 +520293,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 12.6
       },
       "2024_4431342": {
-        "recShare": 97.7,
+        "recShare": 97.6,
         "ydShare": 76.4,
         "tdShare": 85.3,
         "avgPPA": 31.7,
@@ -520311,7 +520311,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 61.3,
         "tdShare": 81,
         "avgPPA": 83.9,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2024_4431468": {
         "recShare": 23.5,
@@ -520435,7 +520435,7 @@ const COLLEGE_SCOUTING = {
       "2024_4433871": {
         "recShare": 8,
         "ydShare": 22.9,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 92.4,
         "usageOverall": 1.9
       },
@@ -520528,7 +520528,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 81.9,
         "tdShare": 34.5,
         "avgPPA": 52.5,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2024_4567596": {
         "recShare": 10.9,
@@ -520540,7 +520540,7 @@ const COLLEGE_SCOUTING = {
       "2024_4567750": {
         "recShare": 86.3,
         "ydShare": 76.1,
-        "tdShare": 77.2,
+        "tdShare": 77.3,
         "avgPPA": 71.6,
         "usageOverall": 80.8
       },
@@ -520582,7 +520582,7 @@ const COLLEGE_SCOUTING = {
       "2024_4570132": {
         "recShare": 83.8,
         "ydShare": 83.6,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 92.7,
         "usageOverall": 54.1
       },
@@ -520601,7 +520601,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 18.3
       },
       "2024_4570242": {
-        "recShare": 97.4,
+        "recShare": 97.3,
         "ydShare": 93.5,
         "tdShare": 98.7,
         "avgPPA": 96,
@@ -520624,7 +520624,7 @@ const COLLEGE_SCOUTING = {
       "2024_4570738": {
         "recShare": 52.1,
         "ydShare": 29.4,
-        "tdShare": 46.1,
+        "tdShare": 46,
         "avgPPA": 76.9,
         "usageOverall": 28.4
       },
@@ -520987,7 +520987,7 @@ const COLLEGE_SCOUTING = {
       },
       "2024_4682648": {
         "recShare": 79.5,
-        "ydShare": 88.4,
+        "ydShare": 88.5,
         "tdShare": 84.6,
         "avgPPA": 94.9,
         "usageOverall": 51.8
@@ -521022,7 +521022,7 @@ const COLLEGE_SCOUTING = {
       },
       "2024_4683221": {
         "recShare": 59.4,
-        "ydShare": 55.2,
+        "ydShare": 55.3,
         "tdShare": 78.1,
         "avgPPA": 71.2,
         "usageOverall": 19.8
@@ -521119,7 +521119,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 22.4
       },
       "2024_4685307": {
-        "recShare": 97.4,
+        "recShare": 97.3,
         "ydShare": 90,
         "tdShare": 78.7,
         "avgPPA": 67,
@@ -521151,7 +521151,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 92.7,
         "tdShare": 40.2,
         "avgPPA": 95.8,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2024_4685472": {
         "recShare": 96.6,
@@ -521212,7 +521212,7 @@ const COLLEGE_SCOUTING = {
       "2024_4690143": {
         "recShare": 74.7,
         "ydShare": 71.3,
-        "tdShare": 77.2,
+        "tdShare": 77.3,
         "avgPPA": 89.8,
         "usageOverall": 77.1
       },
@@ -521247,13 +521247,13 @@ const COLLEGE_SCOUTING = {
       "2024_4693881": {
         "recShare": 84.8,
         "ydShare": 78.6,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 58.1,
         "usageOverall": 80.8
       },
       "2024_4695580": {
         "recShare": 61.4,
-        "ydShare": 54.5,
+        "ydShare": 54.6,
         "tdShare": 45.9,
         "avgPPA": 72.8,
         "usageOverall": 47.9
@@ -521317,7 +521317,7 @@ const COLLEGE_SCOUTING = {
       "2024_4701951": {
         "recShare": 68.5,
         "ydShare": 85.2,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 91.6,
         "usageOverall": 71.3
       },
@@ -521497,7 +521497,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 50.7
       },
       "2024_4804883": {
-        "recShare": 54.7,
+        "recShare": 54.8,
         "ydShare": 55.5,
         "tdShare": 61.9,
         "avgPPA": 88.2,
@@ -521749,7 +521749,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 57.7
       },
       "2024_4875786": {
-        "recShare": 97.4,
+        "recShare": 97.3,
         "ydShare": 94.5,
         "tdShare": 88.5,
         "avgPPA": 83.6,
@@ -521868,7 +521868,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 83.6
       },
       "2024_4880845": {
-        "recShare": 55.3,
+        "recShare": 55.4,
         "ydShare": 46.9,
         "tdShare": 32.7,
         "avgPPA": 64.9,
@@ -521970,7 +521970,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 67.3,
         "tdShare": 44.3,
         "avgPPA": 75.5,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2024_4916306": {
         "recShare": 36.7,
@@ -522080,7 +522080,7 @@ const COLLEGE_SCOUTING = {
       "2024_5076952": {
         "recShare": 42.6,
         "ydShare": 19.6,
-        "tdShare": 56.2,
+        "tdShare": 56.1,
         "avgPPA": 60.6,
         "usageOverall": 71.3
       },
@@ -522199,7 +522199,7 @@ const COLLEGE_SCOUTING = {
       "2024_5081322": {
         "recShare": 78.7,
         "ydShare": 87.1,
-        "tdShare": 52.7,
+        "tdShare": 52.6,
         "avgPPA": 96.8,
         "usageOverall": 32.6
       },
@@ -522430,7 +522430,7 @@ const COLLEGE_SCOUTING = {
       "2024_5100582": {
         "recShare": 80,
         "ydShare": 83.8,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 99.3,
         "usageOverall": 33.9
       },
@@ -522446,7 +522446,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 54.1,
         "tdShare": 40.3,
         "avgPPA": 47,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2024_5117836": {
         "recShare": 47.5,
@@ -522465,7 +522465,7 @@ const COLLEGE_SCOUTING = {
       "2024_5120454": {
         "recShare": 12.3,
         "ydShare": 41,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 98.5,
         "usageOverall": 6.2
       },
@@ -522486,7 +522486,7 @@ const COLLEGE_SCOUTING = {
       "2024_5121666": {
         "recShare": 77.5,
         "ydShare": 65.5,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 61.4,
         "usageOverall": 77.1
       },
@@ -522547,7 +522547,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 41.9
       },
       "2024_5141711": {
-        "recShare": 75.6,
+        "recShare": 75.5,
         "ydShare": 86,
         "tdShare": 97.4,
         "avgPPA": 67.3,
@@ -522640,7 +522640,7 @@ const COLLEGE_SCOUTING = {
       "2024_5153074": {
         "recShare": 28.5,
         "ydShare": 17.2,
-        "tdShare": 46.1,
+        "tdShare": 46,
         "avgPPA": 60.8,
         "usageOverall": 53.1
       },
@@ -522956,7 +522956,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 96.2,
         "ydShare": 96.1,
         "tdShare": 84,
-        "avgPPA": 7.6,
+        "avgPPA": 7.5,
         "usageOverall": 92
       },
       "2025_4575862": {
@@ -522976,7 +522976,7 @@ const COLLEGE_SCOUTING = {
       "2025_4592835": {
         "recShare": 28,
         "ydShare": 61.3,
-        "tdShare": 52.7,
+        "tdShare": 52.6,
         "avgPPA": 51.4,
         "usageOverall": 43.5
       },
@@ -522991,7 +522991,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 30.5,
         "ydShare": 28.7,
         "tdShare": 5.3,
-        "avgPPA": 10.3,
+        "avgPPA": 10.4,
         "usageOverall": 51.8
       },
       "2025_4596010": {
@@ -523040,7 +523040,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 4.9,
         "ydShare": 2.3,
         "tdShare": 5.3,
-        "avgPPA": 21.2,
+        "avgPPA": 21.1,
         "usageOverall": 15.5
       },
       "2025_4602966": {
@@ -523059,7 +523059,7 @@ const COLLEGE_SCOUTING = {
       },
       "2025_4604004": {
         "recShare": 53,
-        "ydShare": 55.2,
+        "ydShare": 55.3,
         "tdShare": 15.2,
         "avgPPA": 48.3,
         "usageOverall": 58.8
@@ -523075,7 +523075,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 25.4,
         "ydShare": 17.2,
         "tdShare": 16.8,
-        "avgPPA": 4.7,
+        "avgPPA": 4.6,
         "usageOverall": 47.9
       },
       "2025_4612246": {
@@ -523110,7 +523110,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 32.4,
         "ydShare": 39.5,
         "tdShare": 11.1,
-        "avgPPA": 5,
+        "avgPPA": 4.9,
         "usageOverall": 60
       },
       "2025_4682648": {
@@ -523139,7 +523139,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 82.4,
         "tdShare": 51.7,
         "avgPPA": 28.9,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2025_4683114": {
         "recShare": 29.9,
@@ -523152,11 +523152,11 @@ const COLLEGE_SCOUTING = {
         "recShare": 77.1,
         "ydShare": 63.3,
         "tdShare": 70.3,
-        "avgPPA": 7.6,
+        "avgPPA": 7.5,
         "usageOverall": 80.8
       },
       "2025_4683153": {
-        "recShare": 97.4,
+        "recShare": 97.3,
         "ydShare": 95.1,
         "tdShare": 95.7,
         "avgPPA": 45.9,
@@ -523270,7 +523270,7 @@ const COLLEGE_SCOUTING = {
       "2025_4685383": {
         "recShare": 31,
         "ydShare": 27.5,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 83.2,
         "usageOverall": 35.2
       },
@@ -523303,8 +523303,8 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 70.4
       },
       "2025_4685516": {
-        "recShare": 54.7,
-        "ydShare": 66.4,
+        "recShare": 54.8,
+        "ydShare": 66.3,
         "tdShare": 67.5,
         "avgPPA": 80.5,
         "usageOverall": 36.6
@@ -523382,14 +523382,14 @@ const COLLEGE_SCOUTING = {
       "2025_4696972": {
         "recShare": 21.6,
         "ydShare": 49.5,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 12.7,
         "usageOverall": 32.6
       },
       "2025_4697844": {
         "recShare": 50.2,
         "ydShare": 67.8,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 8.4,
         "usageOverall": 60
       },
@@ -523412,7 +523412,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 74.2,
         "tdShare": 28.1,
         "avgPPA": 27.8,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2025_4702830": {
         "recShare": 1,
@@ -523440,7 +523440,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 23.6,
         "tdShare": 32.7,
         "avgPPA": 26.4,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2025_4705859": {
         "recShare": 72.1,
@@ -523542,7 +523542,7 @@ const COLLEGE_SCOUTING = {
       },
       "2025_4726152": {
         "recShare": 63.1,
-        "ydShare": 66.4,
+        "ydShare": 66.3,
         "tdShare": 44.3,
         "avgPPA": 27.2,
         "usageOverall": 68.3
@@ -523558,7 +523558,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 2.7,
         "ydShare": 8.5,
         "tdShare": 11.1,
-        "avgPPA": 4.7,
+        "avgPPA": 4.6,
         "usageOverall": 23.7
       },
       "2025_4808759": {
@@ -523585,13 +523585,13 @@ const COLLEGE_SCOUTING = {
       "2025_4826505": {
         "recShare": 37.8,
         "ydShare": 32.7,
-        "tdShare": 46.1,
+        "tdShare": 46,
         "avgPPA": 27.5,
         "usageOverall": 35.2
       },
       "2025_4831976": {
         "recShare": 45.7,
-        "ydShare": 55.2,
+        "ydShare": 55.3,
         "tdShare": 85.1,
         "avgPPA": 16.7,
         "usageOverall": 66.4
@@ -523606,7 +523606,7 @@ const COLLEGE_SCOUTING = {
       "2025_4832804": {
         "recShare": 60.2,
         "ydShare": 59.2,
-        "tdShare": 69.6,
+        "tdShare": 69.5,
         "avgPPA": 39.4,
         "usageOverall": 79.3
       },
@@ -523627,9 +523627,9 @@ const COLLEGE_SCOUTING = {
       "2025_4837193": {
         "recShare": 52.1,
         "ydShare": 50.4,
-        "tdShare": 69.6,
+        "tdShare": 69.5,
         "avgPPA": 66,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2025_4837194": {
         "recShare": 37.2,
@@ -523804,7 +523804,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 26.5,
         "tdShare": 5.3,
         "avgPPA": 3.1,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2025_4870745": {
         "recShare": 44.1,
@@ -523901,7 +523901,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 37.2,
         "ydShare": 25.8,
         "tdShare": 57,
-        "avgPPA": 7.6,
+        "avgPPA": 7.5,
         "usageOverall": 36.6
       },
       "2025_4871023": {
@@ -524000,7 +524000,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 74.6,
         "tdShare": 81,
         "avgPPA": 35.8,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2025_4879567": {
         "recShare": 88.9,
@@ -524125,7 +524125,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 74.3,
         "ydShare": 42.5,
         "tdShare": 33.5,
-        "avgPPA": 7.2,
+        "avgPPA": 7.1,
         "usageOverall": 94.8
       },
       "2025_4907671": {
@@ -524217,7 +524217,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 81.1,
         "tdShare": 53.8,
         "avgPPA": 27.1,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2025_4921110": {
         "recShare": 99,
@@ -524271,7 +524271,7 @@ const COLLEGE_SCOUTING = {
       "2025_5031157": {
         "recShare": 38.9,
         "ydShare": 61.9,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 34.4,
         "usageOverall": 70.4
       },
@@ -524334,7 +524334,7 @@ const COLLEGE_SCOUTING = {
       "2025_5078165": {
         "recShare": 68.5,
         "ydShare": 65.9,
-        "tdShare": 69.6,
+        "tdShare": 69.5,
         "avgPPA": 66.7,
         "usageOverall": 77.1
       },
@@ -524353,8 +524353,8 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 23.7
       },
       "2025_5078312": {
-        "recShare": 55.3,
-        "ydShare": 66.4,
+        "recShare": 55.4,
+        "ydShare": 66.3,
         "tdShare": 65.9,
         "avgPPA": 28,
         "usageOverall": 67.3
@@ -524378,7 +524378,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 90.6,
         "tdShare": 96.7,
         "avgPPA": 13.5,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2025_5079501": {
         "recShare": 13.3,
@@ -524419,7 +524419,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 85.5,
         "ydShare": 78.2,
         "tdShare": 82.9,
-        "avgPPA": 7.2,
+        "avgPPA": 7.1,
         "usageOverall": 96.7
       },
       "2025_5079613": {
@@ -524523,7 +524523,7 @@ const COLLEGE_SCOUTING = {
       "2025_5082584": {
         "recShare": 63.9,
         "ydShare": 48.6,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 3.7,
         "usageOverall": 64
       },
@@ -524591,7 +524591,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 87.1
       },
       "2025_5084772": {
-        "recShare": 55.3,
+        "recShare": 55.4,
         "ydShare": 68.2,
         "tdShare": 53.8,
         "avgPPA": 44.8,
@@ -524648,7 +524648,7 @@ const COLLEGE_SCOUTING = {
       },
       "2025_5088338": {
         "recShare": 77.8,
-        "ydShare": 66.4,
+        "ydShare": 66.3,
         "tdShare": 86,
         "avgPPA": 66.9,
         "usageOverall": 80.2
@@ -524675,7 +524675,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 38.1
       },
       "2025_5091739": {
-        "recShare": 75.6,
+        "recShare": 75.5,
         "ydShare": 82.8,
         "tdShare": 89,
         "avgPPA": 67.5,
@@ -524705,7 +524705,7 @@ const COLLEGE_SCOUTING = {
       "2025_5092787": {
         "recShare": 18.5,
         "ydShare": 49.9,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 49.4,
         "usageOverall": 18.3
       },
@@ -524774,8 +524774,8 @@ const COLLEGE_SCOUTING = {
       },
       "2025_5110019": {
         "recShare": 51.6,
-        "ydShare": 54.5,
-        "tdShare": 74.4,
+        "ydShare": 54.6,
+        "tdShare": 74.5,
         "avgPPA": 34.6,
         "usageOverall": 43.5
       },
@@ -524826,7 +524826,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 38.7,
         "tdShare": 61.9,
         "avgPPA": 6.7,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2025_5121616": {
         "recShare": 12.8,
@@ -524902,7 +524902,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 77.5,
         "ydShare": 77.9,
         "tdShare": 76.8,
-        "avgPPA": 5,
+        "avgPPA": 4.9,
         "usageOverall": 91.5
       },
       "2025_5130792": {
@@ -524915,7 +524915,7 @@ const COLLEGE_SCOUTING = {
       "2025_5132253": {
         "recShare": 27.3,
         "ydShare": 32.2,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 35,
         "usageOverall": 26.7
       },
@@ -525008,7 +525008,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 48.6,
         "tdShare": 63.9,
         "avgPPA": 31.6,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2025_5146719": {
         "recShare": 30.5,
@@ -525095,7 +525095,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 60
       },
       "2025_5151048": {
-        "recShare": 75.6,
+        "recShare": 75.5,
         "ydShare": 61.3,
         "tdShare": 5.3,
         "avgPPA": 4.1,
@@ -525125,7 +525125,7 @@ const COLLEGE_SCOUTING = {
       "2025_5151662": {
         "recShare": 43.3,
         "ydShare": 48.1,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 55.7,
         "usageOverall": 53.1
       },
@@ -525189,7 +525189,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 64.3,
         "ydShare": 54.1,
         "tdShare": 83.2,
-        "avgPPA": 17.7,
+        "avgPPA": 17.6,
         "usageOverall": 89.8
       },
       "2025_5153852": {
@@ -525201,7 +525201,7 @@ const COLLEGE_SCOUTING = {
       },
       "2025_5153994": {
         "recShare": 52.7,
-        "ydShare": 66.4,
+        "ydShare": 66.3,
         "tdShare": 58.3,
         "avgPPA": 91.8,
         "usageOverall": 28.4
@@ -525280,7 +525280,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 95.2,
         "ydShare": 89.2,
         "tdShare": 84.6,
-        "avgPPA": 21.5,
+        "avgPPA": 21.4,
         "usageOverall": 97.8
       },
       "2025_5159362": {
@@ -525319,7 +525319,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 33.9
       },
       "2025_5166797": {
-        "recShare": 55.3,
+        "recShare": 55.4,
         "ydShare": 51.5,
         "tdShare": 77.2,
         "avgPPA": 58.1,
@@ -525398,7 +525398,7 @@ const COLLEGE_SCOUTING = {
       "2025_5214557": {
         "recShare": 24.1,
         "ydShare": 39.5,
-        "tdShare": 56.2,
+        "tdShare": 56.1,
         "avgPPA": 31.6,
         "usageOverall": 26.7
       },
@@ -525412,7 +525412,7 @@ const COLLEGE_SCOUTING = {
       "2025_5218633": {
         "recShare": 74.3,
         "ydShare": 80.4,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 15.8,
         "usageOverall": 92.3
       },
@@ -525425,7 +525425,7 @@ const COLLEGE_SCOUTING = {
       },
       "2025_5218787": {
         "recShare": 66.2,
-        "ydShare": 66.4,
+        "ydShare": 66.3,
         "tdShare": 44.4,
         "avgPPA": 13.4,
         "usageOverall": 74.1
@@ -525512,7 +525512,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 71.1,
         "tdShare": 37.4,
         "avgPPA": 13.2,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2025_5225416": {
         "recShare": 44.1,
@@ -525536,7 +525536,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 23.7
       },
       "2025_5231354": {
-        "recShare": 55.3,
+        "recShare": 55.4,
         "ydShare": 41,
         "tdShare": 18.4,
         "avgPPA": 12.8,
@@ -525566,7 +525566,7 @@ const COLLEGE_SCOUTING = {
       "2025_5294063": {
         "recShare": 56.8,
         "ydShare": 68.7,
-        "tdShare": 69.6,
+        "tdShare": 69.5,
         "avgPPA": 36.7,
         "usageOverall": 88.9
       },
@@ -525645,11 +525645,11 @@ const COLLEGE_SCOUTING = {
         "ydShare": 79.2,
         "tdShare": 61.9,
         "avgPPA": 3.3,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2026_4379471": {
         "recShare": 65.7,
-        "ydShare": 55.2,
+        "ydShare": 55.3,
         "tdShare": 5.3,
         "avgPPA": 53.5,
         "usageOverall": 64
@@ -525712,7 +525712,7 @@ const COLLEGE_SCOUTING = {
       },
       "2026_4702790": {
         "recShare": 42.1,
-        "ydShare": 55.2,
+        "ydShare": 55.3,
         "tdShare": 44.3,
         "avgPPA": 37.9,
         "usageOverall": 43.5
@@ -525721,7 +525721,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 95.6,
         "ydShare": 93.6,
         "tdShare": 89.5,
-        "avgPPA": 21.2,
+        "avgPPA": 21.1,
         "usageOverall": 96.4
       },
       "2026_4711408": {
@@ -525736,14 +525736,14 @@ const COLLEGE_SCOUTING = {
         "ydShare": 84.9,
         "tdShare": 51.7,
         "avgPPA": 22.9,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2026_4714046": {
         "recShare": 87,
         "ydShare": 77.2,
         "tdShare": 18.4,
         "avgPPA": 3,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2026_4717430": {
         "recShare": 89.4,
@@ -525753,11 +525753,11 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 94.8
       },
       "2026_4726152": {
-        "recShare": 59.7,
-        "ydShare": 56.9,
-        "tdShare": 80.8,
-        "avgPPA": 11.5,
-        "usageOverall": 71.3
+        "recShare": 54.2,
+        "ydShare": 52,
+        "tdShare": 74.5,
+        "avgPPA": 5.3,
+        "usageOverall": 70.4
       },
       "2026_4804878": {
         "recShare": 60.2,
@@ -525767,8 +525767,8 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 54.1
       },
       "2026_4808767": {
-        "recShare": 75.6,
-        "ydShare": 54.5,
+        "recShare": 75.5,
+        "ydShare": 54.6,
         "tdShare": 69.3,
         "avgPPA": 13.7,
         "usageOverall": 83
@@ -525865,9 +525865,9 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 80.2
       },
       "2026_4869694": {
-        "recShare": 57.7,
+        "recShare": 57.8,
         "ydShare": 84.1,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 30.3,
         "usageOverall": 73.1
       },
@@ -525881,7 +525881,7 @@ const COLLEGE_SCOUTING = {
       "2026_4870601": {
         "recShare": 71.7,
         "ydShare": 75.7,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 12.7,
         "usageOverall": 76.3
       },
@@ -526062,7 +526062,7 @@ const COLLEGE_SCOUTING = {
       },
       "2026_4879999": {
         "recShare": 86.1,
-        "ydShare": 88.4,
+        "ydShare": 88.5,
         "tdShare": 84,
         "avgPPA": 55.7,
         "usageOverall": 89.3
@@ -526105,7 +526105,7 @@ const COLLEGE_SCOUTING = {
       "2026_4899366": {
         "recShare": 89.6,
         "ydShare": 74.9,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 34.3,
         "usageOverall": 71.3
       },
@@ -526203,7 +526203,7 @@ const COLLEGE_SCOUTING = {
       "2026_4920163": {
         "recShare": 89.6,
         "ydShare": 87.6,
-        "tdShare": 69.6,
+        "tdShare": 69.5,
         "avgPPA": 29.7,
         "usageOverall": 95.5
       },
@@ -526218,7 +526218,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 83.5,
         "ydShare": 71.8,
         "tdShare": 80.8,
-        "avgPPA": 7.2,
+        "avgPPA": 7.1,
         "usageOverall": 93.4
       },
       "2026_4921113": {
@@ -526310,7 +526310,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 87.9,
         "tdShare": 88.5,
         "avgPPA": 70.9,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2026_5077803": {
         "recShare": 29.1,
@@ -526385,7 +526385,7 @@ const COLLEGE_SCOUTING = {
       "2026_5079475": {
         "recShare": 60.7,
         "ydShare": 74.9,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 76.8,
         "usageOverall": 60
       },
@@ -526411,7 +526411,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 51.8
       },
       "2026_5079524": {
-        "recShare": 57.7,
+        "recShare": 57.8,
         "ydShare": 70.1,
         "tdShare": 91.6,
         "avgPPA": 60.5,
@@ -526447,7 +526447,7 @@ const COLLEGE_SCOUTING = {
       },
       "2026_5079632": {
         "recShare": 44.1,
-        "ydShare": 54.5,
+        "ydShare": 54.6,
         "tdShare": 5.3,
         "avgPPA": 0.5,
         "usageOverall": 47.9
@@ -526582,7 +526582,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 24.7,
         "ydShare": 34.7,
         "tdShare": 18.4,
-        "avgPPA": 17.3,
+        "avgPPA": 17.2,
         "usageOverall": 32.6
       },
       "2026_5085354": {
@@ -526614,18 +526614,18 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 76.3
       },
       "2026_5086096": {
-        "recShare": 55.3,
+        "recShare": 55.4,
         "ydShare": 73.3,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 34.6,
         "usageOverall": 84.2
       },
       "2026_5087747": {
-        "recShare": 67,
-        "ydShare": 65,
-        "tdShare": 65.1,
-        "avgPPA": 6.5,
-        "usageOverall": 58.8
+        "recShare": 68.1,
+        "ydShare": 66.8,
+        "tdShare": 74.5,
+        "avgPPA": 8.7,
+        "usageOverall": 56.5
       },
       "2026_5087930": {
         "recShare": 66.2,
@@ -526649,11 +526649,11 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 60
       },
       "2026_5089003": {
-        "recShare": 73.2,
-        "ydShare": 74.9,
-        "tdShare": 44.3,
-        "avgPPA": 16.3,
-        "usageOverall": 83
+        "recShare": 78.7,
+        "ydShare": 79.2,
+        "tdShare": 57,
+        "avgPPA": 23.3,
+        "usageOverall": 86.5
       },
       "2026_5089539": {
         "recShare": 29.9,
@@ -526681,7 +526681,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 51.5,
         "tdShare": 65.1,
         "avgPPA": 70,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2026_5092470": {
         "recShare": 65.7,
@@ -526854,7 +526854,7 @@ const COLLEGE_SCOUTING = {
       "2026_5122096": {
         "recShare": 19.8,
         "ydShare": 49,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 23.9,
         "usageOverall": 22.4
       },
@@ -526908,7 +526908,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 25.2
       },
       "2026_5138293": {
-        "recShare": 55.3,
+        "recShare": 55.4,
         "ydShare": 69,
         "tdShare": 80.8,
         "avgPPA": 100,
@@ -526950,7 +526950,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 90.7
       },
       "2026_5141572": {
-        "recShare": 97.7,
+        "recShare": 97.6,
         "ydShare": 83.8,
         "tdShare": 44.3,
         "avgPPA": 0.4,
@@ -526980,7 +526980,7 @@ const COLLEGE_SCOUTING = {
       "2026_5141671": {
         "recShare": 49.2,
         "ydShare": 60.3,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 67.8,
         "usageOverall": 47.9
       },
@@ -527043,7 +527043,7 @@ const COLLEGE_SCOUTING = {
       "2026_5146728": {
         "recShare": 23,
         "ydShare": 35.2,
-        "tdShare": 56.2,
+        "tdShare": 56.1,
         "avgPPA": 20,
         "usageOverall": 32.6
       },
@@ -527127,7 +527127,7 @@ const COLLEGE_SCOUTING = {
       "2026_5148787": {
         "recShare": 72.6,
         "ydShare": 74.2,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 49.5,
         "usageOverall": 79.3
       },
@@ -527162,14 +527162,14 @@ const COLLEGE_SCOUTING = {
       "2026_5150424": {
         "recShare": 80.6,
         "ydShare": 75.2,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 34.1,
         "usageOverall": 83.6
       },
       "2026_5150834": {
         "recShare": 84.2,
         "ydShare": 79.5,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 14.4,
         "usageOverall": 81.6
       },
@@ -527230,7 +527230,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 86.5
       },
       "2026_5153074": {
-        "recShare": 97.3,
+        "recShare": 97.2,
         "ydShare": 94.5,
         "tdShare": 89.1,
         "avgPPA": 85.2,
@@ -527276,12 +527276,12 @@ const COLLEGE_SCOUTING = {
         "ydShare": 41.5,
         "tdShare": 37.4,
         "avgPPA": 46.4,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2026_5153889": {
         "recShare": 87.9,
         "ydShare": 93,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 42.2,
         "usageOverall": 88.9
       },
@@ -527302,7 +527302,7 @@ const COLLEGE_SCOUTING = {
       "2026_5156183": {
         "recShare": 83.5,
         "ydShare": 87.3,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 22.8,
         "usageOverall": 79.3
       },
@@ -527391,7 +527391,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 25.2
       },
       "2026_5161012": {
-        "recShare": 97.7,
+        "recShare": 97.6,
         "ydShare": 90.6,
         "tdShare": 92.3,
         "avgPPA": 6.1,
@@ -527402,7 +527402,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 46.9,
         "tdShare": 57.7,
         "avgPPA": 21.9,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2026_5162858": {
         "recShare": 51.1,
@@ -527448,7 +527448,7 @@ const COLLEGE_SCOUTING = {
       },
       "2026_5166797": {
         "recShare": 89.4,
-        "ydShare": 66.4,
+        "ydShare": 66.3,
         "tdShare": 57.7,
         "avgPPA": 5.3,
         "usageOverall": 98.2
@@ -527511,7 +527511,7 @@ const COLLEGE_SCOUTING = {
       },
       "2026_5193292": {
         "recShare": 59.4,
-        "ydShare": 66.4,
+        "ydShare": 66.3,
         "tdShare": 28.1,
         "avgPPA": 2.3,
         "usageOverall": 73.1
@@ -527556,7 +527556,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 70.1,
         "tdShare": 47.2,
         "avgPPA": 40.1,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2026_5200108": {
         "recShare": 10,
@@ -527626,10 +527626,10 @@ const COLLEGE_SCOUTING = {
         "ydShare": 42,
         "tdShare": 40.2,
         "avgPPA": 3.7,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2026_5211694": {
-        "recShare": 55.3,
+        "recShare": 55.4,
         "ydShare": 57.5,
         "tdShare": 90.2,
         "avgPPA": 13.2,
@@ -527640,7 +527640,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 98,
         "tdShare": 99.9,
         "avgPPA": 38.3,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2026_5214940": {
         "recShare": 34.2,
@@ -527696,12 +527696,12 @@ const COLLEGE_SCOUTING = {
         "ydShare": 81.5,
         "tdShare": 63.9,
         "avgPPA": 23.9,
-        "usageOverall": 86
+        "usageOverall": 85.9
       },
       "2026_5218753": {
         "recShare": 71.7,
         "ydShare": 64.6,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 1.5,
         "usageOverall": 78.5
       },
@@ -527716,7 +527716,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 44.1,
         "ydShare": 20.2,
         "tdShare": 24.8,
-        "avgPPA": 17.7,
+        "avgPPA": 17.6,
         "usageOverall": 76.3
       },
       "2026_5218891": {
@@ -527883,14 +527883,14 @@ const COLLEGE_SCOUTING = {
       "2026_5232343": {
         "recShare": 50.2,
         "ydShare": 56.9,
-        "tdShare": 52.7,
+        "tdShare": 52.6,
         "avgPPA": 50.7,
         "usageOverall": 80.2
       },
       "2026_5239156": {
         "recShare": 45.7,
         "ydShare": 59.9,
-        "tdShare": 52.7,
+        "tdShare": 52.6,
         "avgPPA": 57.5,
         "usageOverall": 44.8
       },
@@ -527916,16 +527916,16 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 50.7
       },
       "2026_5265445": {
-        "recShare": 96.9,
-        "ydShare": 88.8,
+        "recShare": 98,
+        "ydShare": 87.7,
         "tdShare": 5.3,
-        "avgPPA": 3.8,
-        "usageOverall": 55.2
+        "avgPPA": 10.4,
+        "usageOverall": 64
       },
       "2026_5265446": {
         "recShare": 41,
         "ydShare": 48.1,
-        "tdShare": 74.4,
+        "tdShare": 74.5,
         "avgPPA": 55.5,
         "usageOverall": 33.9
       },
@@ -527983,12 +527983,12 @@ const COLLEGE_SCOUTING = {
         "ydShare": 38.7,
         "tdShare": 16.8,
         "avgPPA": 6.8,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2026_5294438": {
         "recShare": 41,
         "ydShare": 58.1,
-        "tdShare": 69.6,
+        "tdShare": 69.5,
         "avgPPA": 89,
         "usageOverall": 31
       },
@@ -528011,7 +528011,7 @@ const COLLEGE_SCOUTING = {
         "ydShare": 65.9,
         "tdShare": 84,
         "avgPPA": 44.8,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2026_5295525": {
         "recShare": 48.7,
@@ -528025,14 +528025,14 @@ const COLLEGE_SCOUTING = {
         "ydShare": 59.2,
         "tdShare": 24.8,
         "avgPPA": 16.7,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2026_5295811": {
         "recShare": 10,
         "ydShare": 22.9,
         "tdShare": 47.2,
         "avgPPA": 79.3,
-        "usageOverall": 62.6
+        "usageOverall": 62.5
       },
       "2026_5295921": {
         "recShare": 84,
@@ -528136,7 +528136,7 @@ const COLLEGE_SCOUTING = {
         "recShare": 48.7,
         "ydShare": 67,
         "tdShare": 20.4,
-        "avgPPA": 21.5,
+        "avgPPA": 21.4,
         "usageOverall": 55.2
       },
       "2026_5388762": {
@@ -528163,9 +528163,9 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 22.5
       },
       "2013_480634": {
-        "recShare": 72.8,
+        "recShare": 72.9,
         "ydShare": 54.7,
-        "tdShare": 52.7,
+        "tdShare": 52.8,
         "avgPPA": 25.1,
         "usageOverall": 74.3
       },
@@ -528311,7 +528311,7 @@ const COLLEGE_SCOUTING = {
       },
       "2013_501194": {
         "recShare": 81.2,
-        "ydShare": 80.5,
+        "ydShare": 80.6,
         "tdShare": 82.4,
         "avgPPA": 63.2,
         "usageOverall": 61.5
@@ -528353,7 +528353,7 @@ const COLLEGE_SCOUTING = {
       },
       "2013_502878": {
         "recShare": 82.2,
-        "ydShare": 80.5,
+        "ydShare": 80.6,
         "tdShare": 35,
         "avgPPA": 43.9,
         "usageOverall": 77.5
@@ -528417,7 +528417,7 @@ const COLLEGE_SCOUTING = {
       "2013_505999": {
         "recShare": 20.4,
         "ydShare": 19.7,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 57.1,
         "usageOverall": 5.8
       },
@@ -528450,7 +528450,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 63.4
       },
       "2013_513064": {
-        "recShare": 71.7,
+        "recShare": 71.8,
         "ydShare": 71.7,
         "tdShare": 93.9,
         "avgPPA": 93.6,
@@ -528508,7 +528508,7 @@ const COLLEGE_SCOUTING = {
       "2013_515471": {
         "recShare": 21.4,
         "ydShare": 25.1,
-        "tdShare": 53.7,
+        "tdShare": 53.8,
         "avgPPA": 62.7,
         "usageOverall": 4.1
       },
@@ -528591,7 +528591,7 @@ const COLLEGE_SCOUTING = {
       },
       "2013_517624": {
         "recShare": 76.9,
-        "ydShare": 81.4,
+        "ydShare": 81.5,
         "tdShare": 74.3,
         "avgPPA": 94.5,
         "usageOverall": 27.5
@@ -528725,7 +528725,7 @@ const COLLEGE_SCOUTING = {
       "2013_538421": {
         "recShare": 75,
         "ydShare": 69.7,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 89,
         "usageOverall": 14.6
       },
@@ -528774,7 +528774,7 @@ const COLLEGE_SCOUTING = {
       "2013_547020": {
         "recShare": 56.1,
         "ydShare": 56.4,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 75.9,
         "usageOverall": 16.6
       },
@@ -528788,7 +528788,7 @@ const COLLEGE_SCOUTING = {
       "2013_550117": {
         "recShare": 23,
         "ydShare": 30.1,
-        "tdShare": 53.7,
+        "tdShare": 53.8,
         "avgPPA": 52.2,
         "usageOverall": 16.6
       },
@@ -528802,7 +528802,7 @@ const COLLEGE_SCOUTING = {
       "2014_482359": {
         "recShare": 27.6,
         "ydShare": 35.4,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 8.7,
         "usageOverall": 44.8
       },
@@ -528816,7 +528816,7 @@ const COLLEGE_SCOUTING = {
       "2014_500815": {
         "recShare": 73.8,
         "ydShare": 62.3,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 30.8,
         "usageOverall": 56.8
       },
@@ -528842,7 +528842,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 14.6
       },
       "2014_501524": {
-        "recShare": 71.7,
+        "recShare": 71.8,
         "ydShare": 63.5,
         "tdShare": 85.1,
         "avgPPA": 24.6,
@@ -528879,7 +528879,7 @@ const COLLEGE_SCOUTING = {
       "2014_502997": {
         "recShare": 56.6,
         "ydShare": 38.4,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 32.8,
         "usageOverall": 69.4
       },
@@ -528963,7 +528963,7 @@ const COLLEGE_SCOUTING = {
       "2014_513640": {
         "recShare": 18.5,
         "ydShare": 52.4,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 99.2,
         "usageOverall": 18.5
       },
@@ -529061,7 +529061,7 @@ const COLLEGE_SCOUTING = {
       "2014_516664": {
         "recShare": 78.5,
         "ydShare": 76.1,
-        "tdShare": 53.7,
+        "tdShare": 53.8,
         "avgPPA": 57.1,
         "usageOverall": 93.9
       },
@@ -529122,9 +529122,9 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 59
       },
       "2014_518298": {
-        "recShare": 71.7,
+        "recShare": 71.8,
         "ydShare": 55.5,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 64.7,
         "usageOverall": 56.8
       },
@@ -529143,7 +529143,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 33.9
       },
       "2014_518414": {
-        "recShare": 72.8,
+        "recShare": 72.9,
         "ydShare": 68.9,
         "tdShare": 60.8,
         "avgPPA": 9.1,
@@ -529220,7 +529220,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 68.3
       },
       "2014_533188": {
-        "recShare": 74.3,
+        "recShare": 74.4,
         "ydShare": 63.5,
         "tdShare": 82.4,
         "avgPPA": 54.3,
@@ -529262,7 +529262,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 65.4
       },
       "2014_535598": {
-        "recShare": 74.3,
+        "recShare": 74.4,
         "ydShare": 70.8,
         "tdShare": 83.9,
         "avgPPA": 42.2,
@@ -529285,12 +529285,12 @@ const COLLEGE_SCOUTING = {
       "2014_536612": {
         "recShare": 5.2,
         "ydShare": 6.3,
-        "tdShare": 52.7,
+        "tdShare": 52.8,
         "avgPPA": 26.9,
         "usageOverall": 27.5
       },
       "2014_538421": {
-        "recShare": 73.2,
+        "recShare": 73.3,
         "ydShare": 82.7,
         "tdShare": 88.9,
         "avgPPA": 71.8,
@@ -529502,12 +529502,12 @@ const COLLEGE_SCOUTING = {
       "2015_504910": {
         "recShare": 10.6,
         "ydShare": 15,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 29.9,
         "usageOverall": 20.4
       },
       "2015_511347": {
-        "recShare": 75.4,
+        "recShare": 75.5,
         "ydShare": 63.5,
         "tdShare": 38.4,
         "avgPPA": 9.6,
@@ -529529,7 +529529,7 @@ const COLLEGE_SCOUTING = {
       },
       "2015_512967": {
         "recShare": 64.5,
-        "ydShare": 80.7,
+        "ydShare": 80.8,
         "tdShare": 78.1,
         "avgPPA": 66.5,
         "usageOverall": 77.5
@@ -529591,7 +529591,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 2.4
       },
       "2015_516997": {
-        "recShare": 71.7,
+        "recShare": 71.8,
         "ydShare": 60.8,
         "tdShare": 18.9,
         "avgPPA": 45.7,
@@ -529642,7 +529642,7 @@ const COLLEGE_SCOUTING = {
       "2015_529568": {
         "recShare": 27.6,
         "ydShare": 46.1,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 86.9,
         "usageOverall": 22.5
       },
@@ -529802,13 +529802,13 @@ const COLLEGE_SCOUTING = {
       },
       "2015_536843": {
         "recShare": 64.5,
-        "ydShare": 80.1,
+        "ydShare": 80.2,
         "tdShare": 9.7,
         "avgPPA": 90.5,
         "usageOverall": 27.5
       },
       "2015_538421": {
-        "recShare": 74.3,
+        "recShare": 74.4,
         "ydShare": 61.5,
         "tdShare": 78.1,
         "avgPPA": 93.8,
@@ -529852,7 +529852,7 @@ const COLLEGE_SCOUTING = {
       "2015_545580": {
         "recShare": 2.3,
         "ydShare": 2,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 65.2,
         "usageOverall": 22.5
       },
@@ -530027,14 +530027,14 @@ const COLLEGE_SCOUTING = {
       "2015_3116661": {
         "recShare": 9.6,
         "ydShare": 2.6,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 80.1,
         "usageOverall": 54.5
       },
       "2015_3116703": {
         "recShare": 15.9,
         "ydShare": 10.8,
-        "tdShare": 52.7,
+        "tdShare": 52.8,
         "avgPPA": 88,
         "usageOverall": 20.4
       },
@@ -530082,7 +530082,7 @@ const COLLEGE_SCOUTING = {
       },
       "2015_3125404": {
         "recShare": 75.9,
-        "ydShare": 81.4,
+        "ydShare": 81.5,
         "tdShare": 62,
         "avgPPA": 41.3,
         "usageOverall": 71.8
@@ -530160,7 +530160,7 @@ const COLLEGE_SCOUTING = {
       "2016_530276": {
         "recShare": 50.7,
         "ydShare": 45.3,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 8.8,
         "usageOverall": 73.2
       },
@@ -530256,7 +530256,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 75.7
       },
       "2016_535889": {
-        "recShare": 72.1,
+        "recShare": 72.2,
         "ydShare": 60.3,
         "tdShare": 63.4,
         "avgPPA": 39.6,
@@ -530270,7 +530270,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 30.8
       },
       "2016_536480": {
-        "recShare": 72.8,
+        "recShare": 72.9,
         "ydShare": 67.2,
         "tdShare": 23.4,
         "avgPPA": 12.5,
@@ -530292,7 +530292,7 @@ const COLLEGE_SCOUTING = {
       },
       "2016_545428": {
         "recShare": 68.2,
-        "ydShare": 81.4,
+        "ydShare": 81.5,
         "tdShare": 84.6,
         "avgPPA": 51.1,
         "usageOverall": 73.2
@@ -530319,7 +530319,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 99.7
       },
       "2016_545846": {
-        "recShare": 74.6,
+        "recShare": 74.7,
         "ydShare": 66.9,
         "tdShare": 48.5,
         "avgPPA": 49.4,
@@ -530482,7 +530482,7 @@ const COLLEGE_SCOUTING = {
       "2016_559747": {
         "recShare": 32.2,
         "ydShare": 39.4,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 16.4,
         "usageOverall": 36.7
       },
@@ -530517,7 +530517,7 @@ const COLLEGE_SCOUTING = {
       "2016_3116573": {
         "recShare": 17.5,
         "ydShare": 10.8,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 14.1,
         "usageOverall": 56.8
       },
@@ -530600,7 +530600,7 @@ const COLLEGE_SCOUTING = {
       },
       "2016_3125404": {
         "recShare": 80.1,
-        "ydShare": 82.3,
+        "ydShare": 82.4,
         "tdShare": 85.5,
         "avgPPA": 86.9,
         "usageOverall": 56.8
@@ -530684,7 +530684,7 @@ const COLLEGE_SCOUTING = {
       },
       "2016_3915486": {
         "recShare": 79.4,
-        "ydShare": 80.7,
+        "ydShare": 80.8,
         "tdShare": 88,
         "avgPPA": 37.8,
         "usageOverall": 92.4
@@ -530782,14 +530782,14 @@ const COLLEGE_SCOUTING = {
       },
       "2016_4039160": {
         "recShare": 76.3,
-        "ydShare": 80.7,
-        "tdShare": 52.3,
+        "ydShare": 80.8,
+        "tdShare": 52.4,
         "avgPPA": 29.7,
         "usageOverall": 95.3
       },
       "2017_545319": {
         "recShare": 84.8,
-        "ydShare": 80.1,
+        "ydShare": 80.2,
         "tdShare": 89.6,
         "avgPPA": 75.7,
         "usageOverall": 82.1
@@ -530809,7 +530809,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 98.4
       },
       "2017_546222": {
-        "recShare": 74.6,
+        "recShare": 74.7,
         "ydShare": 60.8,
         "tdShare": 95.4,
         "avgPPA": 78.7,
@@ -530865,8 +530865,8 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 30.8
       },
       "2017_552779": {
-        "recShare": 73.2,
-        "ydShare": 81.4,
+        "recShare": 73.3,
+        "ydShare": 81.5,
         "tdShare": 87.8,
         "avgPPA": 75.1,
         "usageOverall": 91.3
@@ -530895,12 +530895,12 @@ const COLLEGE_SCOUTING = {
       "2017_559747": {
         "recShare": 36.5,
         "ydShare": 47.6,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 76.4,
         "usageOverall": 11.1
       },
       "2017_559748": {
-        "recShare": 71.7,
+        "recShare": 71.8,
         "ydShare": 64.5,
         "tdShare": 89.6,
         "avgPPA": 10.3,
@@ -530937,7 +530937,7 @@ const COLLEGE_SCOUTING = {
       "2017_3116659": {
         "recShare": 54.5,
         "ydShare": 35.4,
-        "tdShare": 57,
+        "tdShare": 57.1,
         "avgPPA": 14.4,
         "usageOverall": 59
       },
@@ -530951,7 +530951,7 @@ const COLLEGE_SCOUTING = {
       "2017_3117256": {
         "recShare": 55.4,
         "ydShare": 37.6,
-        "tdShare": 53.7,
+        "tdShare": 53.8,
         "avgPPA": 9.9,
         "usageOverall": 54.5
       },
@@ -530965,7 +530965,7 @@ const COLLEGE_SCOUTING = {
       "2017_3121396": {
         "recShare": 69.2,
         "ydShare": 61.5,
-        "tdShare": 53.7,
+        "tdShare": 53.8,
         "avgPPA": 11.3,
         "usageOverall": 77.5
       },
@@ -531061,7 +531061,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 86.6
       },
       "2017_3843945": {
-        "recShare": 72.1,
+        "recShare": 72.2,
         "ydShare": 56.4,
         "tdShare": 70.3,
         "avgPPA": 46.6,
@@ -531110,7 +531110,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 9
       },
       "2017_3915486": {
-        "recShare": 71.7,
+        "recShare": 71.8,
         "ydShare": 79.6,
         "tdShare": 71.9,
         "avgPPA": 32.4,
@@ -531244,7 +531244,7 @@ const COLLEGE_SCOUTING = {
       },
       "2017_3932963": {
         "recShare": 83.4,
-        "ydShare": 80.5,
+        "ydShare": 80.6,
         "tdShare": 21.5,
         "avgPPA": 27.8,
         "usageOverall": 82.9
@@ -531712,9 +531712,9 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 12.7
       },
       "2018_3932433": {
-        "recShare": 72.1,
+        "recShare": 72.2,
         "ydShare": 58.7,
-        "tdShare": 53.7,
+        "tdShare": 53.8,
         "avgPPA": 13.3,
         "usageOverall": 73.2
       },
@@ -531817,7 +531817,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 6.7
       },
       "2018_4037557": {
-        "recShare": 74.3,
+        "recShare": 74.4,
         "ydShare": 58.7,
         "tdShare": 55.5,
         "avgPPA": 15.6,
@@ -531875,7 +531875,7 @@ const COLLEGE_SCOUTING = {
       "2018_4040980": {
         "recShare": 76.9,
         "ydShare": 77.5,
-        "tdShare": 55.5,
+        "tdShare": 55.6,
         "avgPPA": 48.1,
         "usageOverall": 77.5
       },
@@ -532195,7 +532195,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 12.7
       },
       "2019_3918043": {
-        "recShare": 71.7,
+        "recShare": 71.8,
         "ydShare": 61.5,
         "tdShare": 84.6,
         "avgPPA": 23,
@@ -532225,7 +532225,7 @@ const COLLEGE_SCOUTING = {
       "2019_3921960": {
         "recShare": 86.6,
         "ydShare": 83.1,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 38,
         "usageOverall": 74.3
       },
@@ -532308,7 +532308,7 @@ const COLLEGE_SCOUTING = {
       },
       "2019_4035593": {
         "recShare": 84.3,
-        "ydShare": 82.3,
+        "ydShare": 82.4,
         "tdShare": 80.8,
         "avgPPA": 27.1,
         "usageOverall": 97.6
@@ -532363,7 +532363,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 54.5
       },
       "2019_4039115": {
-        "recShare": 74.3,
+        "recShare": 74.4,
         "ydShare": 68.2,
         "tdShare": 85.1,
         "avgPPA": 62.1,
@@ -532412,7 +532412,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 96.9
       },
       "2019_4040846": {
-        "recShare": 75.4,
+        "recShare": 75.5,
         "ydShare": 70.8,
         "tdShare": 60.8,
         "avgPPA": 19.4,
@@ -532426,7 +532426,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 41.5
       },
       "2019_4043607": {
-        "recShare": 72.8,
+        "recShare": 72.9,
         "ydShare": 64.2,
         "tdShare": 73.1,
         "avgPPA": 5,
@@ -532497,7 +532497,7 @@ const COLLEGE_SCOUTING = {
       },
       "2019_4239691": {
         "recShare": 54.5,
-        "ydShare": 80.1,
+        "ydShare": 80.2,
         "tdShare": 91.1,
         "avgPPA": 81.1,
         "usageOverall": 52.4
@@ -532573,7 +532573,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 52.4
       },
       "2019_4242355": {
-        "recShare": 72.1,
+        "recShare": 72.2,
         "ydShare": 77,
         "tdShare": 46.7,
         "avgPPA": 54.1,
@@ -532603,7 +532603,7 @@ const COLLEGE_SCOUTING = {
       "2019_4243318": {
         "recShare": 93.5,
         "ydShare": 97.9,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 26.2,
         "usageOverall": 96.5
       },
@@ -532644,7 +532644,7 @@ const COLLEGE_SCOUTING = {
       },
       "2019_4258248": {
         "recShare": 84,
-        "ydShare": 81.4,
+        "ydShare": 81.5,
         "tdShare": 68.3,
         "avgPPA": 32.8,
         "usageOverall": 83.7
@@ -532708,7 +532708,7 @@ const COLLEGE_SCOUTING = {
       "2019_4360635": {
         "recShare": 58.4,
         "ydShare": 49.6,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 49.7,
         "usageOverall": 54.5
       },
@@ -532841,7 +532841,7 @@ const COLLEGE_SCOUTING = {
       "2019_4426692": {
         "recShare": 1,
         "ydShare": 16.2,
-        "tdShare": 53.7,
+        "tdShare": 53.8,
         "avgPPA": 99,
         "usageOverall": 2.4
       },
@@ -532874,7 +532874,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 67.3
       },
       "2019_4567151": {
-        "recShare": 74.6,
+        "recShare": 74.7,
         "ydShare": 83.9,
         "tdShare": 80.8,
         "avgPPA": 20.6,
@@ -532938,7 +532938,7 @@ const COLLEGE_SCOUTING = {
       },
       "2020_4036595": {
         "recShare": 76.9,
-        "ydShare": 82.3,
+        "ydShare": 82.4,
         "tdShare": 9.7,
         "avgPPA": 20.6,
         "usageOverall": 92.4
@@ -533007,14 +533007,14 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 33.9
       },
       "2020_4040771": {
-        "recShare": 74.6,
+        "recShare": 74.7,
         "ydShare": 70.4,
         "tdShare": 68.3,
         "avgPPA": 14.3,
         "usageOverall": 90.1
       },
       "2020_4040846": {
-        "recShare": 72.8,
+        "recShare": 72.9,
         "ydShare": 68.9,
         "tdShare": 60.8,
         "avgPPA": 14.6,
@@ -533149,7 +533149,7 @@ const COLLEGE_SCOUTING = {
       "2020_4249624": {
         "recShare": 88,
         "ydShare": 95.5,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 85,
         "usageOverall": 77.5
       },
@@ -533182,7 +533182,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 73.2
       },
       "2020_4360248": {
-        "recShare": 72.1,
+        "recShare": 72.2,
         "ydShare": 84.7,
         "tdShare": 88,
         "avgPPA": 72.5,
@@ -533387,7 +533387,7 @@ const COLLEGE_SCOUTING = {
       "2020_4426553": {
         "recShare": 7.1,
         "ydShare": 14,
-        "tdShare": 52.7,
+        "tdShare": 52.8,
         "avgPPA": 84.8,
         "usageOverall": 4.1
       },
@@ -533407,7 +533407,7 @@ const COLLEGE_SCOUTING = {
       },
       "2020_4429086": {
         "recShare": 90.3,
-        "ydShare": 81.4,
+        "ydShare": 81.5,
         "tdShare": 55.5,
         "avgPPA": 50.1,
         "usageOverall": 81.5
@@ -533469,7 +533469,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 14.6
       },
       "2020_4569951": {
-        "recShare": 73.2,
+        "recShare": 73.3,
         "ydShare": 58.7,
         "tdShare": 96.3,
         "avgPPA": 69.6,
@@ -533511,7 +533511,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 33.9
       },
       "2021_4032491": {
-        "recShare": 74.6,
+        "recShare": 74.7,
         "ydShare": 65.3,
         "tdShare": 96.5,
         "avgPPA": 62.1,
@@ -533659,7 +533659,7 @@ const COLLEGE_SCOUTING = {
       },
       "2021_4241273": {
         "recShare": 59.2,
-        "ydShare": 80.1,
+        "ydShare": 80.2,
         "tdShare": 43.8,
         "avgPPA": 96.8,
         "usageOverall": 24.6
@@ -533674,7 +533674,7 @@ const COLLEGE_SCOUTING = {
       "2021_4241380": {
         "recShare": 62.3,
         "ydShare": 50.8,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 56.6,
         "usageOverall": 67.3
       },
@@ -533737,7 +533737,7 @@ const COLLEGE_SCOUTING = {
       "2021_4243921": {
         "recShare": 21.4,
         "ydShare": 22.9,
-        "tdShare": 53.7,
+        "tdShare": 53.8,
         "avgPPA": 54.1,
         "usageOverall": 4.1
       },
@@ -533772,7 +533772,7 @@ const COLLEGE_SCOUTING = {
       "2021_4259147": {
         "recShare": 46,
         "ydShare": 56.4,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 18.7,
         "usageOverall": 61.5
       },
@@ -533926,7 +533926,7 @@ const COLLEGE_SCOUTING = {
       "2021_4361516": {
         "recShare": 78.5,
         "ydShare": 79.6,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 23.9,
         "usageOverall": 69.4
       },
@@ -533939,7 +533939,7 @@ const COLLEGE_SCOUTING = {
       },
       "2021_4361796": {
         "recShare": 77.4,
-        "ydShare": 82.3,
+        "ydShare": 82.4,
         "tdShare": 69.3,
         "avgPPA": 83.1,
         "usageOverall": 52.4
@@ -534220,7 +534220,7 @@ const COLLEGE_SCOUTING = {
       "2021_4431051": {
         "recShare": 13.5,
         "ydShare": 21.8,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 39.8,
         "usageOverall": 38.5
       },
@@ -534437,7 +534437,7 @@ const COLLEGE_SCOUTING = {
       "2022_4261933": {
         "recShare": 44.5,
         "ydShare": 22.9,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 80.1,
         "usageOverall": 1
       },
@@ -534471,7 +534471,7 @@ const COLLEGE_SCOUTING = {
       },
       "2022_4360290": {
         "recShare": 81.2,
-        "ydShare": 80.5,
+        "ydShare": 80.6,
         "tdShare": 87.8,
         "avgPPA": 50.5,
         "usageOverall": 81.5
@@ -534640,7 +534640,7 @@ const COLLEGE_SCOUTING = {
       "2022_4367182": {
         "recShare": 23.9,
         "ydShare": 21.8,
-        "tdShare": 57,
+        "tdShare": 57.1,
         "avgPPA": 34.8,
         "usageOverall": 44.8
       },
@@ -534661,7 +534661,7 @@ const COLLEGE_SCOUTING = {
       "2022_4372096": {
         "recShare": 78,
         "ydShare": 73.9,
-        "tdShare": 53.7,
+        "tdShare": 53.8,
         "avgPPA": 63.5,
         "usageOverall": 69.4
       },
@@ -534794,7 +534794,7 @@ const COLLEGE_SCOUTING = {
       "2022_4427934": {
         "recShare": 34.2,
         "ydShare": 21.8,
-        "tdShare": 53.7,
+        "tdShare": 53.8,
         "avgPPA": 95.2,
         "usageOverall": 73.2
       },
@@ -534843,7 +534843,7 @@ const COLLEGE_SCOUTING = {
       "2022_4429148": {
         "recShare": 28.3,
         "ydShare": 52.4,
-        "tdShare": 57,
+        "tdShare": 57.1,
         "avgPPA": 84.7,
         "usageOverall": 44.8
       },
@@ -534869,7 +534869,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 47.4
       },
       "2022_4429608": {
-        "recShare": 71.7,
+        "recShare": 71.8,
         "ydShare": 77.5,
         "tdShare": 60.8,
         "avgPPA": 71,
@@ -534918,7 +534918,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 36.7
       },
       "2022_4430684": {
-        "recShare": 75.4,
+        "recShare": 75.5,
         "ydShare": 87.2,
         "tdShare": 98.7,
         "avgPPA": 97.5,
@@ -535100,7 +535100,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 82.9
       },
       "2022_4583089": {
-        "recShare": 75.4,
+        "recShare": 75.5,
         "ydShare": 67.7,
         "tdShare": 61,
         "avgPPA": 59.6,
@@ -535179,7 +535179,7 @@ const COLLEGE_SCOUTING = {
       "2022_4686382": {
         "recShare": 28.3,
         "ydShare": 24.1,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 97.5,
         "usageOverall": 9
       },
@@ -535219,7 +535219,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 56.8
       },
       "2022_4692538": {
-        "recShare": 74.3,
+        "recShare": 74.4,
         "ydShare": 75.2,
         "tdShare": 90.1,
         "avgPPA": 68.6,
@@ -535270,7 +535270,7 @@ const COLLEGE_SCOUTING = {
       "2022_4808766": {
         "recShare": 63.8,
         "ydShare": 59.9,
-        "tdShare": 53.7,
+        "tdShare": 53.8,
         "avgPPA": 46.1,
         "usageOverall": 56.8
       },
@@ -535361,12 +535361,12 @@ const COLLEGE_SCOUTING = {
       "2023_4360967": {
         "recShare": 80.1,
         "ydShare": 69.3,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 45,
         "usageOverall": 33.9
       },
       "2023_4360978": {
-        "recShare": 75.4,
+        "recShare": 75.5,
         "ydShare": 82.7,
         "tdShare": 69.3,
         "avgPPA": 89.2,
@@ -535492,7 +535492,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 92.4
       },
       "2023_4384171": {
-        "recShare": 73.2,
+        "recShare": 73.3,
         "ydShare": 71.1,
         "tdShare": 46.7,
         "avgPPA": 63.2,
@@ -535522,14 +535522,14 @@ const COLLEGE_SCOUTING = {
       "2023_4427052": {
         "recShare": 21.4,
         "ydShare": 10,
-        "tdShare": 53.7,
+        "tdShare": 53.8,
         "avgPPA": 88,
         "usageOverall": 14.6
       },
       "2023_4427164": {
-        "recShare": 72.8,
+        "recShare": 72.9,
         "ydShare": 77,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 71.1,
         "usageOverall": 67.3
       },
@@ -535555,7 +535555,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 11.1
       },
       "2023_4429148": {
-        "recShare": 74.3,
+        "recShare": 74.4,
         "ydShare": 66.6,
         "tdShare": 84.1,
         "avgPPA": 78.5,
@@ -535681,7 +535681,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 77.5
       },
       "2023_4431459": {
-        "recShare": 74.3,
+        "recShare": 74.4,
         "ydShare": 79,
         "tdShare": 84.1,
         "avgPPA": 90.3,
@@ -535949,21 +535949,21 @@ const COLLEGE_SCOUTING = {
       "2023_4685540": {
         "recShare": 11.3,
         "ydShare": 25.1,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 96.4,
         "usageOverall": 5.8
       },
       "2023_4685573": {
         "recShare": 21.4,
         "ydShare": 10.8,
-        "tdShare": 52.7,
+        "tdShare": 52.8,
         "avgPPA": 73,
         "usageOverall": 30.8
       },
       "2023_4685784": {
         "recShare": 60.8,
         "ydShare": 52.4,
-        "tdShare": 57,
+        "tdShare": 57.1,
         "avgPPA": 44.6,
         "usageOverall": 61.5
       },
@@ -536026,7 +536026,7 @@ const COLLEGE_SCOUTING = {
       "2023_4696700": {
         "recShare": 27.6,
         "ydShare": 19.7,
-        "tdShare": 53.7,
+        "tdShare": 53.8,
         "avgPPA": 75.6,
         "usageOverall": 14.6
       },
@@ -536166,7 +536166,7 @@ const COLLEGE_SCOUTING = {
       "2023_4867887": {
         "recShare": 63.8,
         "ydShare": 45.3,
-        "tdShare": 53.7,
+        "tdShare": 53.8,
         "avgPPA": 25.5,
         "usageOverall": 47.4
       },
@@ -536194,7 +536194,7 @@ const COLLEGE_SCOUTING = {
       "2023_4870869": {
         "recShare": 27.6,
         "ydShare": 13.3,
-        "tdShare": 53.7,
+        "tdShare": 53.8,
         "avgPPA": 82.2,
         "usageOverall": 12.7
       },
@@ -536264,7 +536264,7 @@ const COLLEGE_SCOUTING = {
       "2023_4880236": {
         "recShare": 43.7,
         "ydShare": 46.1,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 47,
         "usageOverall": 22.5
       },
@@ -536332,7 +536332,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 98.3
       },
       "2023_5085189": {
-        "recShare": 73.2,
+        "recShare": 73.3,
         "ydShare": 76.4,
         "tdShare": 38.4,
         "avgPPA": 42.5,
@@ -536355,7 +536355,7 @@ const COLLEGE_SCOUTING = {
       "2023_5151528": {
         "recShare": 13.1,
         "ydShare": 3.6,
-        "tdShare": 57,
+        "tdShare": 57.1,
         "avgPPA": 84.2,
         "usageOverall": 30.8
       },
@@ -536395,7 +536395,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 36.7
       },
       "2024_4428050": {
-        "recShare": 72.8,
+        "recShare": 72.9,
         "ydShare": 67.7,
         "tdShare": 87.3,
         "avgPPA": 76.4,
@@ -536550,7 +536550,7 @@ const COLLEGE_SCOUTING = {
       },
       "2024_4432772": {
         "recShare": 55.4,
-        "ydShare": 80.5,
+        "ydShare": 80.6,
         "tdShare": 60.8,
         "avgPPA": 97.3,
         "usageOverall": 54.5
@@ -536635,7 +536635,7 @@ const COLLEGE_SCOUTING = {
       "2024_4571942": {
         "recShare": 20.4,
         "ydShare": 22.9,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 69.4,
         "usageOverall": 16.6
       },
@@ -536696,7 +536696,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 56.8
       },
       "2024_4605858": {
-        "recShare": 72.8,
+        "recShare": 72.9,
         "ydShare": 64.2,
         "tdShare": 29.4,
         "avgPPA": 67.8,
@@ -536733,7 +536733,7 @@ const COLLEGE_SCOUTING = {
       "2024_4613199": {
         "recShare": 23,
         "ydShare": 18.2,
-        "tdShare": 57,
+        "tdShare": 57.1,
         "avgPPA": 85.5,
         "usageOverall": 44.8
       },
@@ -536747,7 +536747,7 @@ const COLLEGE_SCOUTING = {
       "2024_4683243": {
         "recShare": 76.9,
         "ydShare": 71.7,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 57.6,
         "usageOverall": 69.4
       },
@@ -536866,7 +536866,7 @@ const COLLEGE_SCOUTING = {
       "2024_4695765": {
         "recShare": 79.4,
         "ydShare": 76.1,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 63.8,
         "usageOverall": 52.4
       },
@@ -536894,7 +536894,7 @@ const COLLEGE_SCOUTING = {
       "2024_4702559": {
         "recShare": 16.7,
         "ydShare": 18.2,
-        "tdShare": 57,
+        "tdShare": 57.1,
         "avgPPA": 63,
         "usageOverall": 36.7
       },
@@ -536908,14 +536908,14 @@ const COLLEGE_SCOUTING = {
       "2024_4708049": {
         "recShare": 68.2,
         "ydShare": 49,
-        "tdShare": 57,
+        "tdShare": 57.1,
         "avgPPA": 46.4,
         "usageOverall": 52.4
       },
       "2024_4708354": {
         "recShare": 70.1,
         "ydShare": 65.6,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 87.5,
         "usageOverall": 27.5
       },
@@ -537020,7 +537020,7 @@ const COLLEGE_SCOUTING = {
       "2024_4838696": {
         "recShare": 40.8,
         "ydShare": 35.4,
-        "tdShare": 52.7,
+        "tdShare": 52.8,
         "avgPPA": 48.2,
         "usageOverall": 67.3
       },
@@ -537139,14 +537139,14 @@ const COLLEGE_SCOUTING = {
       "2024_4882061": {
         "recShare": 79.4,
         "ydShare": 45.3,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 12.4,
         "usageOverall": 73.2
       },
       "2024_4890373": {
         "recShare": 89.6,
         "ydShare": 75.8,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 13.1,
         "usageOverall": 78.4
       },
@@ -537237,7 +537237,7 @@ const COLLEGE_SCOUTING = {
       "2024_5085189": {
         "recShare": 91,
         "ydShare": 88.2,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 89.5,
         "usageOverall": 85.8
       },
@@ -537370,7 +537370,7 @@ const COLLEGE_SCOUTING = {
       "2025_4565859": {
         "recShare": 69.5,
         "ydShare": 74.9,
-        "tdShare": 57,
+        "tdShare": 57.1,
         "avgPPA": 49.9,
         "usageOverall": 63.4
       },
@@ -537398,7 +537398,7 @@ const COLLEGE_SCOUTING = {
       "2025_4583089": {
         "recShare": 2.5,
         "ydShare": 5.6,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 90.4,
         "usageOverall": 11.1
       },
@@ -537432,7 +537432,7 @@ const COLLEGE_SCOUTING = {
       },
       "2025_4608858": {
         "recShare": 86.6,
-        "ydShare": 81.4,
+        "ydShare": 81.5,
         "tdShare": 9.7,
         "avgPPA": 16.5,
         "usageOverall": 93
@@ -537508,7 +537508,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 82.1
       },
       "2025_4687486": {
-        "recShare": 72.8,
+        "recShare": 72.9,
         "ydShare": 49.6,
         "tdShare": 36.1,
         "avgPPA": 4.6,
@@ -537552,7 +537552,7 @@ const COLLEGE_SCOUTING = {
       "2025_4699678": {
         "recShare": 16.7,
         "ydShare": 24.1,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 67,
         "usageOverall": 14.6
       },
@@ -537705,7 +537705,7 @@ const COLLEGE_SCOUTING = {
       },
       "2025_4867887": {
         "recShare": 87.7,
-        "ydShare": 82.3,
+        "ydShare": 82.4,
         "tdShare": 62.2,
         "avgPPA": 26.1,
         "usageOverall": 89.3
@@ -537726,7 +537726,7 @@ const COLLEGE_SCOUTING = {
       },
       "2025_4869602": {
         "recShare": 85.2,
-        "ydShare": 80.5,
+        "ydShare": 80.6,
         "tdShare": 68.3,
         "avgPPA": 14.7,
         "usageOverall": 67.3
@@ -537774,7 +537774,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 63.4
       },
       "2025_4870869": {
-        "recShare": 72.8,
+        "recShare": 72.9,
         "ydShare": 55.5,
         "tdShare": 95.2,
         "avgPPA": 7.4,
@@ -537811,7 +537811,7 @@ const COLLEGE_SCOUTING = {
       "2025_4876132": {
         "recShare": 56.6,
         "ydShare": 55.5,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 35,
         "usageOverall": 83.7
       },
@@ -537823,7 +537823,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 78.4
       },
       "2025_4877733": {
-        "recShare": 71.7,
+        "recShare": 71.8,
         "ydShare": 71.7,
         "tdShare": 63.4,
         "avgPPA": 8,
@@ -537923,7 +537923,7 @@ const COLLEGE_SCOUTING = {
       "2025_4910711": {
         "recShare": 48.3,
         "ydShare": 41.1,
-        "tdShare": 57,
+        "tdShare": 57.1,
         "avgPPA": 11,
         "usageOverall": 68.3
       },
@@ -538040,7 +538040,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 61.5
       },
       "2025_5081611": {
-        "recShare": 75.4,
+        "recShare": 75.5,
         "ydShare": 65.3,
         "tdShare": 80.8,
         "avgPPA": 25.5,
@@ -538117,7 +538117,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 65.4
       },
       "2025_5092410": {
-        "recShare": 75.4,
+        "recShare": 75.5,
         "ydShare": 62.3,
         "tdShare": 68.3,
         "avgPPA": 0.2,
@@ -538397,14 +538397,14 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 61.5
       },
       "2026_4688904": {
-        "recShare": 72.8,
+        "recShare": 72.9,
         "ydShare": 54.7,
         "tdShare": 9.7,
         "avgPPA": 7.9,
         "usageOverall": 69.4
       },
       "2026_4698179": {
-        "recShare": 72.1,
+        "recShare": 72.2,
         "ydShare": 75.5,
         "tdShare": 68.3,
         "avgPPA": 54.1,
@@ -538523,7 +538523,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 99.2
       },
       "2026_4885469": {
-        "recShare": 73.2,
+        "recShare": 73.3,
         "ydShare": 55.5,
         "tdShare": 28.2,
         "avgPPA": 2.4,
@@ -538539,7 +538539,7 @@ const COLLEGE_SCOUTING = {
       "2026_4900351": {
         "recShare": 47.5,
         "ydShare": 65.3,
-        "tdShare": 52.3,
+        "tdShare": 52.4,
         "avgPPA": 58.2,
         "usageOverall": 47.4
       },
@@ -538551,7 +538551,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 91.3
       },
       "2026_4922988": {
-        "recShare": 73.2,
+        "recShare": 73.3,
         "ydShare": 74.9,
         "tdShare": 49.2,
         "avgPPA": 21.5,
@@ -538628,9 +538628,9 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 80.3
       },
       "2026_5080547": {
-        "recShare": 76,
-        "ydShare": 83.1,
-        "tdShare": 60.8,
+        "recShare": 71.8,
+        "ydShare": 79.9,
+        "tdShare": 52.4,
         "avgPPA": 62.7,
         "usageOverall": 77.5
       },
@@ -539076,14 +539076,14 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 93.4
       },
       "2026_5265478": {
-        "recShare": 71.7,
+        "recShare": 71.8,
         "ydShare": 87.6,
         "tdShare": 91.4,
         "avgPPA": 65.3,
         "usageOverall": 65.4
       },
       "2026_5295371": {
-        "recShare": 74.3,
+        "recShare": 74.4,
         "ydShare": 62.7,
         "tdShare": 63.4,
         "avgPPA": 7.2,
@@ -539111,7 +539111,7 @@ const COLLEGE_SCOUTING = {
         "usageOverall": 73.2
       },
       "2026_5328488": {
-        "recShare": 71.7,
+        "recShare": 71.8,
         "ydShare": 85,
         "tdShare": 26,
         "avgPPA": 37.5,
@@ -539159,7 +539159,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 59.5,
         "avgPpaRush": 5.7,
         "avgPpaPass": 76.5,
-        "usageRush": 25.1
+        "usageRush": 25
       },
       "2013_480702": {
         "rushCarShare": 88.8,
@@ -539228,7 +539228,7 @@ const COLLEGE_SCOUTING = {
         "rushCarShare": 22.3,
         "recYdShare": 7,
         "avgPpaRush": 0.9,
-        "avgPpaPass": 16.6,
+        "avgPpaPass": 16.5,
         "usageRush": 85.8
       },
       "2013_482107": {
@@ -539318,14 +539318,14 @@ const COLLEGE_SCOUTING = {
       "2013_484855": {
         "rushCarShare": 37.5,
         "recYdShare": 68.5,
-        "avgPpaRush": 13.9,
+        "avgPpaRush": 13.8,
         "avgPpaPass": 91.3,
         "usageRush": 14.1
       },
       "2013_488054": {
         "rushCarShare": 82.4,
         "recYdShare": 56.3,
-        "avgPpaRush": 25.9,
+        "avgPpaRush": 25.8,
         "avgPpaPass": 98.3,
         "usageRush": 77.7
       },
@@ -539346,7 +539346,7 @@ const COLLEGE_SCOUTING = {
       "2013_500365": {
         "rushCarShare": 76.6,
         "recYdShare": 73.2,
-        "avgPpaRush": 21.5,
+        "avgPpaRush": 21.4,
         "avgPpaPass": 91.4,
         "usageRush": 68.9
       },
@@ -539456,7 +539456,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 1.2
       },
       "2013_502076": {
-        "rushCarShare": 29.2,
+        "rushCarShare": 29.1,
         "recYdShare": 21.3,
         "avgPpaRush": 4.2,
         "avgPpaPass": 54,
@@ -539528,7 +539528,7 @@ const COLLEGE_SCOUTING = {
       "2013_503343": {
         "rushCarShare": 86.4,
         "recYdShare": 14.3,
-        "avgPpaRush": 18.6,
+        "avgPpaRush": 18.5,
         "avgPpaPass": 90.9,
         "usageRush": 80.7
       },
@@ -539579,7 +539579,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 45,
         "avgPpaRush": 57.7,
         "avgPpaPass": 63.1,
-        "usageRush": 25.8
+        "usageRush": 25.7
       },
       "2013_504322": {
         "rushCarShare": 91.9,
@@ -539612,7 +539612,7 @@ const COLLEGE_SCOUTING = {
       "2013_505060": {
         "rushCarShare": 80.6,
         "recYdShare": 55.4,
-        "avgPpaRush": 25.9,
+        "avgPpaRush": 25.8,
         "avgPpaPass": 62.4,
         "usageRush": 71.5
       },
@@ -539640,7 +539640,7 @@ const COLLEGE_SCOUTING = {
       "2013_505548": {
         "rushCarShare": 91.4,
         "recYdShare": 37.1,
-        "avgPpaRush": 24.7,
+        "avgPpaRush": 24.6,
         "avgPpaPass": 79.7,
         "usageRush": 35.5
       },
@@ -539668,7 +539668,7 @@ const COLLEGE_SCOUTING = {
       "2013_511348": {
         "rushCarShare": 68.5,
         "recYdShare": 60.6,
-        "avgPpaRush": 23,
+        "avgPpaRush": 22.9,
         "avgPpaPass": 25.9,
         "usageRush": 71
       },
@@ -539682,7 +539682,7 @@ const COLLEGE_SCOUTING = {
       "2013_511399": {
         "rushCarShare": 93.2,
         "recYdShare": 15.7,
-        "avgPpaRush": 8.1,
+        "avgPpaRush": 8,
         "avgPpaPass": 28,
         "usageRush": 95.5
       },
@@ -539696,7 +539696,7 @@ const COLLEGE_SCOUTING = {
       "2013_511640": {
         "rushCarShare": 80.6,
         "recYdShare": 29.4,
-        "avgPpaRush": 13.9,
+        "avgPpaRush": 13.8,
         "avgPpaPass": 58.3,
         "usageRush": 78.7
       },
@@ -539731,7 +539731,7 @@ const COLLEGE_SCOUTING = {
       "2013_512471": {
         "rushCarShare": 42.9,
         "recYdShare": 47.2,
-        "avgPpaRush": 42.4,
+        "avgPpaRush": 42.5,
         "avgPpaPass": 40.6,
         "usageRush": 45.5
       },
@@ -539743,7 +539743,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 80.7
       },
       "2013_512789": {
-        "rushCarShare": 32.4,
+        "rushCarShare": 32.5,
         "recYdShare": 54.2,
         "avgPpaRush": 18.3,
         "avgPpaPass": 33,
@@ -539773,7 +539773,7 @@ const COLLEGE_SCOUTING = {
       "2013_512990": {
         "rushCarShare": 88.8,
         "recYdShare": 88.1,
-        "avgPpaRush": 42.4,
+        "avgPpaRush": 42.5,
         "avgPpaPass": 73.9,
         "usageRush": 89.7
       },
@@ -539810,7 +539810,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 23,
         "avgPpaRush": 38.7,
         "avgPpaPass": 96.5,
-        "usageRush": 25.1
+        "usageRush": 25
       },
       "2013_513703": {
         "rushCarShare": 4.5,
@@ -539883,7 +539883,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 19.6
       },
       "2013_515369": {
-        "rushCarShare": 32.4,
+        "rushCarShare": 32.5,
         "recYdShare": 97.9,
         "avgPpaRush": 91.4,
         "avgPpaPass": 98.5,
@@ -539892,7 +539892,7 @@ const COLLEGE_SCOUTING = {
       "2013_515371": {
         "rushCarShare": 17.3,
         "recYdShare": 70.4,
-        "avgPpaRush": 23.4,
+        "avgPpaRush": 23.3,
         "avgPpaPass": 95.2,
         "usageRush": 20.7
       },
@@ -539962,7 +539962,7 @@ const COLLEGE_SCOUTING = {
       "2013_517209": {
         "rushCarShare": 18.6,
         "recYdShare": 23,
-        "avgPpaRush": 21.3,
+        "avgPpaRush": 21.2,
         "avgPpaPass": 62.9,
         "usageRush": 9.1
       },
@@ -540046,14 +540046,14 @@ const COLLEGE_SCOUTING = {
       "2013_518316": {
         "rushCarShare": 53.6,
         "recYdShare": 46.3,
-        "avgPpaRush": 20.5,
+        "avgPpaRush": 20.4,
         "avgPpaPass": 62,
         "usageRush": 54.8
       },
       "2013_518349": {
         "rushCarShare": 72.8,
         "recYdShare": 52.2,
-        "avgPpaRush": 12.2,
+        "avgPpaRush": 12.1,
         "avgPpaPass": 92.4,
         "usageRush": 94.1
       },
@@ -540065,7 +540065,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 77.9
       },
       "2013_518390": {
-        "rushCarShare": 34.4,
+        "rushCarShare": 34.5,
         "recYdShare": 82.3,
         "avgPpaRush": 9.1,
         "avgPpaPass": 54.1,
@@ -540088,7 +540088,7 @@ const COLLEGE_SCOUTING = {
       "2013_530480": {
         "rushCarShare": 34,
         "recYdShare": 52.2,
-        "avgPpaRush": 22.1,
+        "avgPpaRush": 22,
         "avgPpaPass": 87.1,
         "usageRush": 27.4
       },
@@ -540137,7 +540137,7 @@ const COLLEGE_SCOUTING = {
       "2013_531310": {
         "rushCarShare": 77.4,
         "recYdShare": 50.9,
-        "avgPpaRush": 43.5,
+        "avgPpaRush": 43.6,
         "avgPpaPass": 23.2,
         "usageRush": 78.7
       },
@@ -540186,7 +540186,7 @@ const COLLEGE_SCOUTING = {
       "2013_532121": {
         "rushCarShare": 6.1,
         "recYdShare": 18.4,
-        "avgPpaRush": 44.1,
+        "avgPpaRush": 44.2,
         "avgPpaPass": 51.1,
         "usageRush": 5.4
       },
@@ -540202,7 +540202,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 90.7,
         "avgPpaRush": 34.4,
         "avgPpaPass": 88.7,
-        "usageRush": 26.8
+        "usageRush": 26.7
       },
       "2013_532974": {
         "rushCarShare": 62.1,
@@ -540214,7 +540214,7 @@ const COLLEGE_SCOUTING = {
       "2013_533277": {
         "rushCarShare": 11.3,
         "recYdShare": 8.6,
-        "avgPpaRush": 42.7,
+        "avgPpaRush": 42.8,
         "avgPpaPass": 18.8,
         "usageRush": 3
       },
@@ -540279,12 +540279,12 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 59.5,
         "avgPpaRush": 95.2,
         "avgPpaPass": 82.1,
-        "usageRush": 27.9
+        "usageRush": 27.8
       },
       "2013_535801": {
         "rushCarShare": 59.1,
         "recYdShare": 69.5,
-        "avgPpaRush": 22.4,
+        "avgPpaRush": 22.3,
         "avgPpaPass": 95.1,
         "usageRush": 74
       },
@@ -540303,7 +540303,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 66.9
       },
       "2013_536106": {
-        "rushCarShare": 34.4,
+        "rushCarShare": 34.5,
         "recYdShare": 90.2,
         "avgPpaRush": 14.5,
         "avgPpaPass": 77.8,
@@ -540326,7 +540326,7 @@ const COLLEGE_SCOUTING = {
       "2013_536203": {
         "rushCarShare": 22.3,
         "recYdShare": 35.5,
-        "avgPpaRush": 22.1,
+        "avgPpaRush": 22,
         "avgPpaPass": 89.3,
         "usageRush": 17.7
       },
@@ -540340,7 +540340,7 @@ const COLLEGE_SCOUTING = {
       "2013_536365": {
         "rushCarShare": 80.9,
         "recYdShare": 69.5,
-        "avgPpaRush": 42.4,
+        "avgPpaRush": 42.5,
         "avgPpaPass": 45.8,
         "usageRush": 82.8
       },
@@ -540380,7 +540380,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 73.1
       },
       "2013_537069": {
-        "rushCarShare": 32,
+        "rushCarShare": 32.1,
         "recYdShare": 64.8,
         "avgPpaRush": 1.1,
         "avgPpaPass": 82.9,
@@ -540394,9 +540394,9 @@ const COLLEGE_SCOUTING = {
         "usageRush": 67.6
       },
       "2013_538149": {
-        "rushCarShare": 27.6,
+        "rushCarShare": 27.5,
         "recYdShare": 86.7,
-        "avgPpaRush": 24.3,
+        "avgPpaRush": 24.2,
         "avgPpaPass": 91,
         "usageRush": 18.3
       },
@@ -540453,7 +540453,7 @@ const COLLEGE_SCOUTING = {
         "rushCarShare": 6.1,
         "recYdShare": 3.9,
         "avgPpaRush": 68.5,
-        "avgPpaPass": 16.8,
+        "avgPpaPass": 16.7,
         "usageRush": 3.5
       },
       "2013_546410": {
@@ -540494,7 +540494,7 @@ const COLLEGE_SCOUTING = {
       "2013_547238": {
         "rushCarShare": 3.8,
         "recYdShare": 46.3,
-        "avgPpaRush": 20.5,
+        "avgPpaRush": 20.4,
         "avgPpaPass": 23.3,
         "usageRush": 5.7
       },
@@ -540522,14 +540522,14 @@ const COLLEGE_SCOUTING = {
       "2013_549633": {
         "rushCarShare": 4,
         "recYdShare": 32.1,
-        "avgPpaRush": 22.1,
+        "avgPpaRush": 22,
         "avgPpaPass": 39.3,
         "usageRush": 11.6
       },
       "2013_549763": {
         "rushCarShare": 43.4,
         "recYdShare": 60.6,
-        "avgPpaRush": 25,
+        "avgPpaRush": 24.9,
         "avgPpaPass": 74.8,
         "usageRush": 46.6
       },
@@ -540538,7 +540538,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 7,
         "avgPpaRush": 62.7,
         "avgPpaPass": 48.5,
-        "usageRush": 25.1
+        "usageRush": 25
       },
       "2013_550296": {
         "rushCarShare": 19.7,
@@ -540587,7 +540587,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 68.5,
         "avgPpaRush": 1.8,
         "avgPpaPass": 89.7,
-        "usageRush": 27.9
+        "usageRush": 27.8
       },
       "2013_551280": {
         "rushCarShare": 60.2,
@@ -540634,7 +540634,7 @@ const COLLEGE_SCOUTING = {
       "2013_552929": {
         "rushCarShare": 8.2,
         "recYdShare": 46.3,
-        "avgPpaRush": 22.4,
+        "avgPpaRush": 22.3,
         "avgPpaPass": 98.9,
         "usageRush": 4
       },
@@ -540662,14 +540662,14 @@ const COLLEGE_SCOUTING = {
       "2014_500365": {
         "rushCarShare": 25.2,
         "recYdShare": 40,
-        "avgPpaRush": 21.5,
+        "avgPpaRush": 21.4,
         "avgPpaPass": 46.6,
         "usageRush": 47
       },
       "2014_500428": {
         "rushCarShare": 10.2,
         "recYdShare": 8.6,
-        "avgPpaRush": 24.3,
+        "avgPpaRush": 24.2,
         "avgPpaPass": 2.8,
         "usageRush": 10
       },
@@ -540781,7 +540781,7 @@ const COLLEGE_SCOUTING = {
       "2014_505063": {
         "rushCarShare": 41.2,
         "recYdShare": 70.4,
-        "avgPpaRush": 9.4,
+        "avgPpaRush": 9.3,
         "avgPpaPass": 78.9,
         "usageRush": 36.7
       },
@@ -540795,7 +540795,7 @@ const COLLEGE_SCOUTING = {
       "2014_505255": {
         "rushCarShare": 14.9,
         "recYdShare": 75.7,
-        "avgPpaRush": 15.3,
+        "avgPpaRush": 15.2,
         "avgPpaPass": 77.4,
         "usageRush": 9.1
       },
@@ -540818,7 +540818,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 14.3,
         "avgPpaRush": 7.3,
         "avgPpaPass": 13.5,
-        "usageRush": 26.8
+        "usageRush": 26.7
       },
       "2014_511399": {
         "rushCarShare": 99,
@@ -540830,7 +540830,7 @@ const COLLEGE_SCOUTING = {
       "2014_511699": {
         "rushCarShare": 86.1,
         "recYdShare": 45,
-        "avgPpaRush": 44.1,
+        "avgPpaRush": 44.2,
         "avgPpaPass": 40.8,
         "usageRush": 97.9
       },
@@ -540858,7 +540858,7 @@ const COLLEGE_SCOUTING = {
       "2014_512099": {
         "rushCarShare": 26.4,
         "recYdShare": 32.1,
-        "avgPpaRush": 24.3,
+        "avgPpaRush": 24.2,
         "avgPpaPass": 95,
         "usageRush": 43.4
       },
@@ -540905,7 +540905,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 75.8
       },
       "2014_513035": {
-        "rushCarShare": 27.6,
+        "rushCarShare": 27.5,
         "recYdShare": 52.2,
         "avgPpaRush": 91.4,
         "avgPpaPass": 52.6,
@@ -540956,7 +540956,7 @@ const COLLEGE_SCOUTING = {
       "2014_514194": {
         "rushCarShare": 87.8,
         "recYdShare": 97.4,
-        "avgPpaRush": 42.4,
+        "avgPpaRush": 42.5,
         "avgPpaPass": 23.8,
         "usageRush": 85.4
       },
@@ -540993,7 +540993,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 10.1,
         "avgPpaRush": 65,
         "avgPpaPass": 50.9,
-        "usageRush": 25.4
+        "usageRush": 25.3
       },
       "2014_515139": {
         "rushCarShare": 47.6,
@@ -541096,7 +541096,7 @@ const COLLEGE_SCOUTING = {
       "2014_517390": {
         "rushCarShare": 72.3,
         "recYdShare": 92.6,
-        "avgPpaRush": 43.5,
+        "avgPpaRush": 43.6,
         "avgPpaPass": 69.6,
         "usageRush": 76.4
       },
@@ -541124,7 +541124,7 @@ const COLLEGE_SCOUTING = {
       "2014_518180": {
         "rushCarShare": 54.1,
         "recYdShare": 71.6,
-        "avgPpaRush": 43.5,
+        "avgPpaRush": 43.6,
         "avgPpaPass": 43.7,
         "usageRush": 43.7
       },
@@ -541138,7 +541138,7 @@ const COLLEGE_SCOUTING = {
       "2014_518264": {
         "rushCarShare": 21.9,
         "recYdShare": 8.6,
-        "avgPpaRush": 42.4,
+        "avgPpaRush": 42.5,
         "avgPpaPass": 90.4,
         "usageRush": 13.9
       },
@@ -541266,7 +541266,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 40,
         "avgPpaRush": 91.8,
         "avgPpaPass": 54.7,
-        "usageRush": 25.1
+        "usageRush": 25
       },
       "2014_532122": {
         "rushCarShare": 60.7,
@@ -541297,7 +541297,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 73.8
       },
       "2014_532274": {
-        "rushCarShare": 33.1,
+        "rushCarShare": 33.2,
         "recYdShare": 19.8,
         "avgPpaRush": 34.1,
         "avgPpaPass": 75.7,
@@ -541628,14 +541628,14 @@ const COLLEGE_SCOUTING = {
       "2014_546747": {
         "rushCarShare": 13.8,
         "recYdShare": 29.4,
-        "avgPpaRush": 9.4,
+        "avgPpaRush": 9.3,
         "avgPpaPass": 78.4,
         "usageRush": 56.9
       },
       "2014_546764": {
         "rushCarShare": 12.8,
         "recYdShare": 8.6,
-        "avgPpaRush": 22.1,
+        "avgPpaRush": 22,
         "avgPpaPass": 7.5,
         "usageRush": 12.8
       },
@@ -541696,7 +541696,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 88.7
       },
       "2014_548467": {
-        "rushCarShare": 32.4,
+        "rushCarShare": 32.5,
         "recYdShare": 37.1,
         "avgPpaRush": 54.9,
         "avgPpaPass": 79.3,
@@ -541714,7 +541714,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 98.7,
         "avgPpaRush": 2.3,
         "avgPpaPass": 97.4,
-        "usageRush": 25.8
+        "usageRush": 25.7
       },
       "2014_549811": {
         "rushCarShare": 83.6,
@@ -541922,7 +541922,7 @@ const COLLEGE_SCOUTING = {
       "2014_559716": {
         "rushCarShare": 76.3,
         "recYdShare": 85.7,
-        "avgPpaRush": 23,
+        "avgPpaRush": 22.9,
         "avgPpaPass": 44.9,
         "usageRush": 72.8
       },
@@ -541957,7 +541957,7 @@ const COLLEGE_SCOUTING = {
       "2014_3116593": {
         "rushCarShare": 81.2,
         "recYdShare": 84.7,
-        "avgPpaRush": 42.7,
+        "avgPpaRush": 42.8,
         "avgPpaPass": 84.8,
         "usageRush": 79.8
       },
@@ -541999,7 +541999,7 @@ const COLLEGE_SCOUTING = {
       "2014_3122866": {
         "rushCarShare": 95.7,
         "recYdShare": 96.3,
-        "avgPpaRush": 42.4,
+        "avgPpaRush": 42.5,
         "avgPpaPass": 39.9,
         "usageRush": 94.7
       },
@@ -542008,7 +542008,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 59.5,
         "avgPpaRush": 70.6,
         "avgPpaPass": 54,
-        "usageRush": 25.1
+        "usageRush": 25
       },
       "2014_3123212": {
         "rushCarShare": 77.6,
@@ -542078,7 +542078,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 53.3,
         "avgPpaRush": 26.8,
         "avgPpaPass": 94,
-        "usageRush": 25.1
+        "usageRush": 25
       },
       "2014_3125403": {
         "rushCarShare": 69.1,
@@ -542174,7 +542174,7 @@ const COLLEGE_SCOUTING = {
       "2014_3133355": {
         "rushCarShare": 67.7,
         "recYdShare": 90.7,
-        "avgPpaRush": 17.4,
+        "avgPpaRush": 17.3,
         "avgPpaPass": 67.3,
         "usageRush": 60.6
       },
@@ -542279,16 +542279,16 @@ const COLLEGE_SCOUTING = {
       "2015_515457": {
         "rushCarShare": 70.8,
         "recYdShare": 92.4,
-        "avgPpaRush": 44.1,
+        "avgPpaRush": 44.2,
         "avgPpaPass": 42.6,
         "usageRush": 77.7
       },
       "2015_515514": {
-        "rushCarShare": 28.8,
+        "rushCarShare": 28.7,
         "recYdShare": 0.4,
         "avgPpaRush": 26.1,
         "avgPpaPass": 6.4,
-        "usageRush": 25.1
+        "usageRush": 25
       },
       "2015_515805": {
         "rushCarShare": 95,
@@ -542350,7 +542350,7 @@ const COLLEGE_SCOUTING = {
         "rushCarShare": 49.4,
         "recYdShare": 33.9,
         "avgPpaRush": 5.1,
-        "avgPpaPass": 16.9,
+        "avgPpaPass": 16.8,
         "usageRush": 39.7
       },
       "2015_518264": {
@@ -542368,7 +542368,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 64.7
       },
       "2015_518349": {
-        "rushCarShare": 33.1,
+        "rushCarShare": 33.2,
         "recYdShare": 24.6,
         "avgPpaRush": 47.8,
         "avgPpaPass": 15.8,
@@ -542386,7 +542386,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 75.7,
         "avgPpaRush": 65,
         "avgPpaPass": 28.4,
-        "usageRush": 27.9
+        "usageRush": 27.8
       },
       "2015_530360": {
         "rushCarShare": 58,
@@ -542424,7 +542424,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 29.1
       },
       "2015_530919": {
-        "rushCarShare": 28.8,
+        "rushCarShare": 28.7,
         "recYdShare": 14.3,
         "avgPpaRush": 50.5,
         "avgPpaPass": 99.8,
@@ -542456,7 +542456,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 92.4,
         "avgPpaRush": 13.3,
         "avgPpaPass": 78.8,
-        "usageRush": 26.6
+        "usageRush": 26.5
       },
       "2015_531458": {
         "rushCarShare": 48.3,
@@ -542468,14 +542468,14 @@ const COLLEGE_SCOUTING = {
       "2015_531594": {
         "rushCarShare": 33.5,
         "recYdShare": 26.1,
-        "avgPpaRush": 15.3,
+        "avgPpaRush": 15.2,
         "avgPpaPass": 17.9,
         "usageRush": 33.4
       },
       "2015_531721": {
         "rushCarShare": 96.4,
         "recYdShare": 94.3,
-        "avgPpaRush": 22.1,
+        "avgPpaRush": 22,
         "avgPpaPass": 47.5,
         "usageRush": 95.2
       },
@@ -542496,7 +542496,7 @@ const COLLEGE_SCOUTING = {
       "2015_531953": {
         "rushCarShare": 84.6,
         "recYdShare": 35.5,
-        "avgPpaRush": 22.1,
+        "avgPpaRush": 22,
         "avgPpaPass": 64,
         "usageRush": 78.8
       },
@@ -542547,7 +542547,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 2.4,
         "avgPpaRush": 76.6,
         "avgPpaPass": 3.7,
-        "usageRush": 27.9
+        "usageRush": 27.8
       },
       "2015_533277": {
         "rushCarShare": 38.9,
@@ -542559,7 +542559,7 @@ const COLLEGE_SCOUTING = {
       "2015_534242": {
         "rushCarShare": 15.6,
         "recYdShare": 60.6,
-        "avgPpaRush": 44.1,
+        "avgPpaRush": 44.2,
         "avgPpaPass": 27.1,
         "usageRush": 21
       },
@@ -542699,7 +542699,7 @@ const COLLEGE_SCOUTING = {
       "2015_545762": {
         "rushCarShare": 30.1,
         "recYdShare": 96.5,
-        "avgPpaRush": 20.5,
+        "avgPpaRush": 20.4,
         "avgPpaPass": 66.8,
         "usageRush": 15
       },
@@ -542711,7 +542711,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 88.8
       },
       "2015_545840": {
-        "rushCarShare": 33.1,
+        "rushCarShare": 33.2,
         "recYdShare": 30.7,
         "avgPpaRush": 14.7,
         "avgPpaPass": 29.7,
@@ -543035,7 +543035,7 @@ const COLLEGE_SCOUTING = {
       "2015_3116074": {
         "rushCarShare": 75.8,
         "recYdShare": 77.3,
-        "avgPpaRush": 15,
+        "avgPpaRush": 14.9,
         "avgPpaPass": 36.7,
         "usageRush": 71.5
       },
@@ -543154,7 +543154,7 @@ const COLLEGE_SCOUTING = {
       "2015_3123857": {
         "rushCarShare": 10.2,
         "recYdShare": 5.6,
-        "avgPpaRush": 42.4,
+        "avgPpaRush": 42.5,
         "avgPpaPass": 2,
         "usageRush": 5.3
       },
@@ -543239,7 +543239,7 @@ const COLLEGE_SCOUTING = {
         "rushCarShare": 97.2,
         "recYdShare": 91.7,
         "avgPpaRush": 95.9,
-        "avgPpaPass": 16.6,
+        "avgPpaPass": 16.5,
         "usageRush": 97.2
       },
       "2015_3125084": {
@@ -543261,7 +543261,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 89.6,
         "avgPpaRush": 6.7,
         "avgPpaPass": 66.4,
-        "usageRush": 25.1
+        "usageRush": 25
       },
       "2015_3125403": {
         "rushCarShare": 98.8,
@@ -543280,7 +543280,7 @@ const COLLEGE_SCOUTING = {
       "2015_3125833": {
         "rushCarShare": 42.9,
         "recYdShare": 92.8,
-        "avgPpaRush": 43.5,
+        "avgPpaRush": 43.6,
         "avgPpaPass": 28.9,
         "usageRush": 32.7
       },
@@ -543359,12 +543359,12 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 74.1,
         "avgPpaRush": 57.7,
         "avgPpaPass": 85.8,
-        "usageRush": 25.8
+        "usageRush": 25.7
       },
       "2015_3127369": {
         "rushCarShare": 55.4,
         "recYdShare": 15.7,
-        "avgPpaRush": 42.4,
+        "avgPpaRush": 42.5,
         "avgPpaPass": 98.3,
         "usageRush": 54.8
       },
@@ -543420,7 +543420,7 @@ const COLLEGE_SCOUTING = {
       "2015_3128800": {
         "rushCarShare": 82,
         "recYdShare": 87,
-        "avgPpaRush": 42.4,
+        "avgPpaRush": 42.5,
         "avgPpaPass": 64.3,
         "usageRush": 81.9
       },
@@ -543441,7 +543441,7 @@ const COLLEGE_SCOUTING = {
       "2015_3129453": {
         "rushCarShare": 60.7,
         "recYdShare": 66.8,
-        "avgPpaRush": 23,
+        "avgPpaRush": 22.9,
         "avgPpaPass": 87.2,
         "usageRush": 53.9
       },
@@ -543455,7 +543455,7 @@ const COLLEGE_SCOUTING = {
       "2015_3133371": {
         "rushCarShare": 18.6,
         "recYdShare": 42.1,
-        "avgPpaRush": 23.4,
+        "avgPpaRush": 23.3,
         "avgPpaPass": 27.5,
         "usageRush": 16
       },
@@ -543490,7 +543490,7 @@ const COLLEGE_SCOUTING = {
       "2015_3139429": {
         "rushCarShare": 7.1,
         "recYdShare": 8.6,
-        "avgPpaRush": 20,
+        "avgPpaRush": 19.9,
         "avgPpaPass": 89.3,
         "usageRush": 75.7
       },
@@ -543576,7 +543576,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 53.3,
         "avgPpaRush": 17.1,
         "avgPpaPass": 46.9,
-        "usageRush": 25.8
+        "usageRush": 25.7
       },
       "2015_3914324": {
         "rushCarShare": 82.7,
@@ -543642,7 +543642,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 3.9
       },
       "2015_3917190": {
-        "rushCarShare": 27.6,
+        "rushCarShare": 27.5,
         "recYdShare": 67.8,
         "avgPpaRush": 61.9,
         "avgPpaPass": 63.9,
@@ -543805,7 +543805,7 @@ const COLLEGE_SCOUTING = {
       "2016_530449": {
         "rushCarShare": 28.1,
         "recYdShare": 46.3,
-        "avgPpaRush": 25,
+        "avgPpaRush": 24.9,
         "avgPpaPass": 31.5,
         "usageRush": 24.6
       },
@@ -543826,7 +543826,7 @@ const COLLEGE_SCOUTING = {
       "2016_531953": {
         "rushCarShare": 92.4,
         "recYdShare": 59.5,
-        "avgPpaRush": 42.4,
+        "avgPpaRush": 42.5,
         "avgPpaPass": 51.3,
         "usageRush": 89.9
       },
@@ -543854,7 +543854,7 @@ const COLLEGE_SCOUTING = {
       "2016_534616": {
         "rushCarShare": 30.1,
         "recYdShare": 79,
-        "avgPpaRush": 42.7,
+        "avgPpaRush": 42.8,
         "avgPpaPass": 82.3,
         "usageRush": 18.6
       },
@@ -543896,7 +543896,7 @@ const COLLEGE_SCOUTING = {
       "2016_536483": {
         "rushCarShare": 30.1,
         "recYdShare": 32.1,
-        "avgPpaRush": 23,
+        "avgPpaRush": 22.9,
         "avgPpaPass": 49.3,
         "usageRush": 32.5
       },
@@ -543938,14 +543938,14 @@ const COLLEGE_SCOUTING = {
       "2016_545615": {
         "rushCarShare": 77.7,
         "recYdShare": 71.6,
-        "avgPpaRush": 15,
+        "avgPpaRush": 14.9,
         "avgPpaPass": 46.8,
         "usageRush": 68.5
       },
       "2016_545736": {
         "rushCarShare": 80.6,
         "recYdShare": 86.7,
-        "avgPpaRush": 20.5,
+        "avgPpaRush": 20.4,
         "avgPpaPass": 74.8,
         "usageRush": 80.2
       },
@@ -544037,7 +544037,7 @@ const COLLEGE_SCOUTING = {
         "rushCarShare": 0.9,
         "recYdShare": 7,
         "avgPpaRush": 41,
-        "avgPpaPass": 16.3,
+        "avgPpaPass": 16.2,
         "usageRush": 0.4
       },
       "2016_547541": {
@@ -544092,7 +544092,7 @@ const COLLEGE_SCOUTING = {
       "2016_549935": {
         "rushCarShare": 94.3,
         "recYdShare": 87,
-        "avgPpaRush": 23.4,
+        "avgPpaRush": 23.3,
         "avgPpaPass": 40,
         "usageRush": 91.7
       },
@@ -544104,7 +544104,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 93.9
       },
       "2016_550009": {
-        "rushCarShare": 35.6,
+        "rushCarShare": 35.7,
         "recYdShare": 3.9,
         "avgPpaRush": 50.1,
         "avgPpaPass": 0.5,
@@ -544125,7 +544125,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 73.4
       },
       "2016_550353": {
-        "rushCarShare": 33.1,
+        "rushCarShare": 33.2,
         "recYdShare": 5.6,
         "avgPpaRush": 29.4,
         "avgPpaPass": 93.7,
@@ -544185,10 +544185,10 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 33.9,
         "avgPpaRush": 30.1,
         "avgPpaPass": 96.4,
-        "usageRush": 25.4
+        "usageRush": 25.3
       },
       "2016_551026": {
-        "rushCarShare": 32.7,
+        "rushCarShare": 32.8,
         "recYdShare": 75,
         "avgPpaRush": 99.6,
         "avgPpaPass": 93.3,
@@ -544220,7 +544220,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 97,
         "avgPpaRush": 77.6,
         "avgPpaPass": 62.2,
-        "usageRush": 26.8
+        "usageRush": 26.7
       },
       "2016_552022": {
         "rushCarShare": 13.3,
@@ -544232,7 +544232,7 @@ const COLLEGE_SCOUTING = {
       "2016_552685": {
         "rushCarShare": 82,
         "recYdShare": 94.3,
-        "avgPpaRush": 25,
+        "avgPpaRush": 24.9,
         "avgPpaPass": 48.7,
         "usageRush": 85
       },
@@ -544309,7 +544309,7 @@ const COLLEGE_SCOUTING = {
       "2016_3116563": {
         "rushCarShare": 68.2,
         "recYdShare": 42.1,
-        "avgPpaRush": 10.3,
+        "avgPpaRush": 10.2,
         "avgPpaPass": 22.4,
         "usageRush": 60.9
       },
@@ -544377,7 +544377,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 66.1
       },
       "2016_3122978": {
-        "rushCarShare": 32.7,
+        "rushCarShare": 32.8,
         "recYdShare": 79,
         "avgPpaRush": 32.7,
         "avgPpaPass": 31.1,
@@ -544568,7 +544568,7 @@ const COLLEGE_SCOUTING = {
       "2016_3125973": {
         "rushCarShare": 72.7,
         "recYdShare": 46.3,
-        "avgPpaRush": 24.7,
+        "avgPpaRush": 24.6,
         "avgPpaPass": 81.4,
         "usageRush": 66.6
       },
@@ -544577,7 +544577,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 27.8,
         "avgPpaRush": 28.5,
         "avgPpaPass": 24.9,
-        "usageRush": 25.1
+        "usageRush": 25
       },
       "2016_3126139": {
         "rushCarShare": 27.2,
@@ -544755,7 +544755,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 40.8
       },
       "2016_3139602": {
-        "rushCarShare": 27.6,
+        "rushCarShare": 27.5,
         "recYdShare": 92.6,
         "avgPpaRush": 91.7,
         "avgPpaPass": 95.9,
@@ -544769,7 +544769,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 57.7
       },
       "2016_3139925": {
-        "rushCarShare": 34.4,
+        "rushCarShare": 34.5,
         "recYdShare": 95.2,
         "avgPpaRush": 95.4,
         "avgPpaPass": 91,
@@ -544785,7 +544785,7 @@ const COLLEGE_SCOUTING = {
       "2016_3699935": {
         "rushCarShare": 24.5,
         "recYdShare": 53.3,
-        "avgPpaRush": 24.7,
+        "avgPpaRush": 24.6,
         "avgPpaPass": 73.3,
         "usageRush": 36.5
       },
@@ -544799,7 +544799,7 @@ const COLLEGE_SCOUTING = {
       "2016_3791143": {
         "rushCarShare": 86.4,
         "recYdShare": 77.3,
-        "avgPpaRush": 21.3,
+        "avgPpaRush": 21.2,
         "avgPpaPass": 31,
         "usageRush": 92.9
       },
@@ -544883,12 +544883,12 @@ const COLLEGE_SCOUTING = {
       "2016_3915381": {
         "rushCarShare": 24.8,
         "recYdShare": 24.6,
-        "avgPpaRush": 42.7,
+        "avgPpaRush": 42.8,
         "avgPpaPass": 76.8,
         "usageRush": 30.3
       },
       "2016_3915411": {
-        "rushCarShare": 32,
+        "rushCarShare": 32.1,
         "recYdShare": 90.7,
         "avgPpaRush": 98.4,
         "avgPpaPass": 81.2,
@@ -544918,7 +544918,7 @@ const COLLEGE_SCOUTING = {
       "2016_3916206": {
         "rushCarShare": 87,
         "recYdShare": 45,
-        "avgPpaRush": 25,
+        "avgPpaRush": 24.9,
         "avgPpaPass": 37.1,
         "usageRush": 83.8
       },
@@ -544939,9 +544939,9 @@ const COLLEGE_SCOUTING = {
       "2016_3916635": {
         "rushCarShare": 16.8,
         "recYdShare": 26.1,
-        "avgPpaRush": 23.4,
+        "avgPpaRush": 23.3,
         "avgPpaPass": 33,
-        "usageRush": 25.1
+        "usageRush": 25
       },
       "2016_3916814": {
         "rushCarShare": 0,
@@ -544967,7 +544967,7 @@ const COLLEGE_SCOUTING = {
       "2016_3916921": {
         "rushCarShare": 92.6,
         "recYdShare": 79,
-        "avgPpaRush": 43.5,
+        "avgPpaRush": 43.6,
         "avgPpaPass": 92.8,
         "usageRush": 91.2
       },
@@ -544979,7 +544979,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 54.8
       },
       "2016_3917098": {
-        "rushCarShare": 32,
+        "rushCarShare": 32.1,
         "recYdShare": 81.7,
         "avgPpaRush": 89.5,
         "avgPpaPass": 77,
@@ -545002,7 +545002,7 @@ const COLLEGE_SCOUTING = {
       "2016_3917611": {
         "rushCarShare": 45.3,
         "recYdShare": 70.4,
-        "avgPpaRush": 24.7,
+        "avgPpaRush": 24.6,
         "avgPpaPass": 65.3,
         "usageRush": 34.9
       },
@@ -545044,7 +545044,7 @@ const COLLEGE_SCOUTING = {
       "2016_3919544": {
         "rushCarShare": 58.7,
         "recYdShare": 80.2,
-        "avgPpaRush": 20.2,
+        "avgPpaRush": 20.1,
         "avgPpaPass": 80.7,
         "usageRush": 50.9
       },
@@ -545371,7 +545371,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 39.4
       },
       "2016_4042808": {
-        "rushCarShare": 36.5,
+        "rushCarShare": 36.6,
         "recYdShare": 78.2,
         "avgPpaRush": 58,
         "avgPpaPass": 43.7,
@@ -545385,14 +545385,14 @@ const COLLEGE_SCOUTING = {
         "usageRush": 95.2
       },
       "2016_4043614": {
-        "rushCarShare": 35.6,
+        "rushCarShare": 35.7,
         "recYdShare": 10.1,
         "avgPpaRush": 30.1,
         "avgPpaPass": 26.5,
         "usageRush": 49.4
       },
       "2016_4045724": {
-        "rushCarShare": 29.2,
+        "rushCarShare": 29.1,
         "recYdShare": 18.4,
         "avgPpaRush": 57.2,
         "avgPpaPass": 6.1,
@@ -545413,7 +545413,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 59.3
       },
       "2016_4046740": {
-        "rushCarShare": 28.8,
+        "rushCarShare": 28.7,
         "recYdShare": 23,
         "avgPpaRush": 75.4,
         "avgPpaPass": 15.1,
@@ -545518,11 +545518,11 @@ const COLLEGE_SCOUTING = {
         "usageRush": 53.5
       },
       "2017_549298": {
-        "rushCarShare": 35.6,
+        "rushCarShare": 35.7,
         "recYdShare": 17,
         "avgPpaRush": 58.5,
         "avgPpaPass": 37.4,
-        "usageRush": 25.4
+        "usageRush": 25.3
       },
       "2017_549802": {
         "rushCarShare": 56.3,
@@ -545555,7 +545555,7 @@ const COLLEGE_SCOUTING = {
       "2017_550049": {
         "rushCarShare": 79.8,
         "recYdShare": 84.7,
-        "avgPpaRush": 20.2,
+        "avgPpaRush": 20.1,
         "avgPpaPass": 76.4,
         "usageRush": 73.1
       },
@@ -545569,7 +545569,7 @@ const COLLEGE_SCOUTING = {
       "2017_550353": {
         "rushCarShare": 47.1,
         "recYdShare": 30.7,
-        "avgPpaRush": 15,
+        "avgPpaRush": 14.9,
         "avgPpaPass": 9.6,
         "usageRush": 44.8
       },
@@ -545595,7 +545595,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 7.1
       },
       "2017_550681": {
-        "rushCarShare": 29.2,
+        "rushCarShare": 29.1,
         "recYdShare": 11.7,
         "avgPpaRush": 94.2,
         "avgPpaPass": 3.9,
@@ -545779,7 +545779,7 @@ const COLLEGE_SCOUTING = {
       "2017_3124043": {
         "rushCarShare": 61.5,
         "recYdShare": 59.5,
-        "avgPpaRush": 21.7,
+        "avgPpaRush": 21.6,
         "avgPpaPass": 36.7,
         "usageRush": 53.9
       },
@@ -545836,7 +545836,7 @@ const COLLEGE_SCOUTING = {
         "rushCarShare": 56.3,
         "recYdShare": 26.1,
         "avgPpaRush": 4.4,
-        "avgPpaPass": 16.6,
+        "avgPpaPass": 16.5,
         "usageRush": 52.9
       },
       "2017_3124950": {
@@ -545870,14 +545870,14 @@ const COLLEGE_SCOUTING = {
       "2017_3125830": {
         "rushCarShare": 87.6,
         "recYdShare": 56.3,
-        "avgPpaRush": 18.6,
+        "avgPpaRush": 18.5,
         "avgPpaPass": 35.7,
         "usageRush": 82.1
       },
       "2017_3125833": {
         "rushCarShare": 53.9,
         "recYdShare": 30.7,
-        "avgPpaRush": 10.5,
+        "avgPpaRush": 10.4,
         "avgPpaPass": 16.4,
         "usageRush": 63
       },
@@ -545948,7 +545948,7 @@ const COLLEGE_SCOUTING = {
         "rushCarShare": 60.4,
         "recYdShare": 5.6,
         "avgPpaRush": 74.5,
-        "avgPpaPass": 16.3,
+        "avgPpaPass": 16.2,
         "usageRush": 64.3
       },
       "2017_3127335": {
@@ -545982,7 +545982,7 @@ const COLLEGE_SCOUTING = {
       "2017_3128840": {
         "rushCarShare": 77.6,
         "recYdShare": 35.5,
-        "avgPpaRush": 21.5,
+        "avgPpaRush": 21.4,
         "avgPpaPass": 9.1,
         "usageRush": 71
       },
@@ -546008,7 +546008,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 37.5
       },
       "2017_3134012": {
-        "rushCarShare": 32,
+        "rushCarShare": 32.1,
         "recYdShare": 5.6,
         "avgPpaRush": 36.7,
         "avgPpaPass": 1.4,
@@ -546024,7 +546024,7 @@ const COLLEGE_SCOUTING = {
       "2017_3139033": {
         "rushCarShare": 62.6,
         "recYdShare": 81.7,
-        "avgPpaRush": 20,
+        "avgPpaRush": 19.9,
         "avgPpaPass": 30.6,
         "usageRush": 67.6
       },
@@ -546143,7 +546143,7 @@ const COLLEGE_SCOUTING = {
       "2017_3914462": {
         "rushCarShare": 7.6,
         "recYdShare": 23,
-        "avgPpaRush": 15,
+        "avgPpaRush": 14.9,
         "avgPpaPass": 13,
         "usageRush": 29
       },
@@ -546171,7 +546171,7 @@ const COLLEGE_SCOUTING = {
       "2017_3915381": {
         "rushCarShare": 91.1,
         "recYdShare": 98.3,
-        "avgPpaRush": 22.4,
+        "avgPpaRush": 22.3,
         "avgPpaPass": 43.3,
         "usageRush": 96.4
       },
@@ -546381,7 +546381,7 @@ const COLLEGE_SCOUTING = {
       "2017_3928925": {
         "rushCarShare": 23.2,
         "recYdShare": 46.3,
-        "avgPpaRush": 8.1,
+        "avgPpaRush": 8,
         "avgPpaPass": 21.9,
         "usageRush": 42.2
       },
@@ -546395,7 +546395,7 @@ const COLLEGE_SCOUTING = {
       "2017_3929828": {
         "rushCarShare": 78.9,
         "recYdShare": 69.5,
-        "avgPpaRush": 17.2,
+        "avgPpaRush": 17.1,
         "avgPpaPass": 37.1,
         "usageRush": 75.8
       },
@@ -546591,7 +546591,7 @@ const COLLEGE_SCOUTING = {
       "2017_4036436": {
         "rushCarShare": 17.7,
         "recYdShare": 15.7,
-        "avgPpaRush": 42.4,
+        "avgPpaRush": 42.5,
         "avgPpaPass": 15.5,
         "usageRush": 18.3
       },
@@ -546715,7 +546715,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 52.5
       },
       "2017_4039503": {
-        "rushCarShare": 32.4,
+        "rushCarShare": 32.5,
         "recYdShare": 42.1,
         "avgPpaRush": 91.4,
         "avgPpaPass": 74.5,
@@ -546738,7 +546738,7 @@ const COLLEGE_SCOUTING = {
       "2017_4040553": {
         "rushCarShare": 38.1,
         "recYdShare": 79,
-        "avgPpaRush": 22.1,
+        "avgPpaRush": 22,
         "avgPpaPass": 77.5,
         "usageRush": 10.2
       },
@@ -546810,7 +546810,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 7,
         "avgPpaRush": 14,
         "avgPpaPass": 4.3,
-        "usageRush": 27.9
+        "usageRush": 27.8
       },
       "2017_4045294": {
         "rushCarShare": 31.6,
@@ -546827,14 +546827,14 @@ const COLLEGE_SCOUTING = {
         "usageRush": 66.3
       },
       "2017_4045705": {
-        "rushCarShare": 32,
+        "rushCarShare": 32.1,
         "recYdShare": 7,
-        "avgPpaRush": 12.2,
+        "avgPpaRush": 12.1,
         "avgPpaPass": 1.1,
         "usageRush": 39.7
       },
       "2017_4046354": {
-        "rushCarShare": 33.1,
+        "rushCarShare": 33.2,
         "recYdShare": 35.5,
         "avgPpaRush": 16.6,
         "avgPpaPass": 41,
@@ -547004,23 +547004,23 @@ const COLLEGE_SCOUTING = {
       "2017_4242380": {
         "rushCarShare": 20.8,
         "recYdShare": 7,
-        "avgPpaRush": 20.5,
+        "avgPpaRush": 20.4,
         "avgPpaPass": 9.3,
         "usageRush": 69.4
       },
       "2017_4242431": {
         "rushCarShare": 19.4,
         "recYdShare": 69.5,
-        "avgPpaRush": 21.3,
+        "avgPpaRush": 21.2,
         "avgPpaPass": 78.7,
         "usageRush": 17.8
       },
       "2017_4243003": {
-        "rushCarShare": 28.8,
+        "rushCarShare": 28.7,
         "recYdShare": 56.3,
         "avgPpaRush": 30.3,
         "avgPpaPass": 24.6,
-        "usageRush": 26.6
+        "usageRush": 26.5
       },
       "2017_4243004": {
         "rushCarShare": 61.8,
@@ -547051,9 +547051,9 @@ const COLLEGE_SCOUTING = {
         "usageRush": 68.8
       },
       "2017_4243955": {
-        "rushCarShare": 32,
+        "rushCarShare": 32.1,
         "recYdShare": 94,
-        "avgPpaRush": 21.7,
+        "avgPpaRush": 21.6,
         "avgPpaPass": 79.1,
         "usageRush": 55
       },
@@ -547065,7 +547065,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 43.4
       },
       "2017_4244599": {
-        "rushCarShare": 27.6,
+        "rushCarShare": 27.5,
         "recYdShare": 3.9,
         "avgPpaRush": 89.7,
         "avgPpaPass": 19.5,
@@ -547109,7 +547109,7 @@ const COLLEGE_SCOUTING = {
       "2017_4259348": {
         "rushCarShare": 15.6,
         "recYdShare": 62.9,
-        "avgPpaRush": 8.1,
+        "avgPpaRush": 8,
         "avgPpaPass": 78.9,
         "usageRush": 41.8
       },
@@ -547188,7 +547188,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 93,
         "avgPpaRush": 29.4,
         "avgPpaPass": 78.7,
-        "usageRush": 26.6
+        "usageRush": 26.5
       },
       "2018_3122780": {
         "rushCarShare": 24.3,
@@ -547478,7 +547478,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 65.7
       },
       "2018_3914534": {
-        "rushCarShare": 34.4,
+        "rushCarShare": 34.5,
         "recYdShare": 48.5,
         "avgPpaRush": 12,
         "avgPpaPass": 22.3,
@@ -547550,7 +547550,7 @@ const COLLEGE_SCOUTING = {
       "2018_3915497": {
         "rushCarShare": 26,
         "recYdShare": 15.7,
-        "avgPpaRush": 21.3,
+        "avgPpaRush": 21.2,
         "avgPpaPass": 1.7,
         "usageRush": 61.8
       },
@@ -547732,7 +547732,7 @@ const COLLEGE_SCOUTING = {
       "2018_3925346": {
         "rushCarShare": 65.5,
         "recYdShare": 42.1,
-        "avgPpaRush": 44.1,
+        "avgPpaRush": 44.2,
         "avgPpaPass": 28.1,
         "usageRush": 57.7
       },
@@ -547760,16 +547760,16 @@ const COLLEGE_SCOUTING = {
       "2018_3929927": {
         "rushCarShare": 85.2,
         "recYdShare": 24.6,
-        "avgPpaRush": 42.4,
+        "avgPpaRush": 42.5,
         "avgPpaPass": 18.9,
         "usageRush": 89
       },
       "2018_3929944": {
         "rushCarShare": 24,
         "recYdShare": 45,
-        "avgPpaRush": 10.3,
+        "avgPpaRush": 10.2,
         "avgPpaPass": 76.7,
-        "usageRush": 25.4
+        "usageRush": 25.3
       },
       "2018_3931398": {
         "rushCarShare": 87.4,
@@ -547788,7 +547788,7 @@ const COLLEGE_SCOUTING = {
       "2018_3931766": {
         "rushCarShare": 28.5,
         "recYdShare": 70.4,
-        "avgPpaRush": 25,
+        "avgPpaRush": 24.9,
         "avgPpaPass": 36.7,
         "usageRush": 65.3
       },
@@ -547858,9 +547858,9 @@ const COLLEGE_SCOUTING = {
       "2018_4035497": {
         "rushCarShare": 26.4,
         "recYdShare": 32.1,
-        "avgPpaRush": 25,
+        "avgPpaRush": 24.9,
         "avgPpaPass": 45.6,
-        "usageRush": 25.8
+        "usageRush": 25.7
       },
       "2018_4035538": {
         "rushCarShare": 97.8,
@@ -547940,7 +547940,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 36.5
       },
       "2018_4036485": {
-        "rushCarShare": 32.4,
+        "rushCarShare": 32.5,
         "recYdShare": 87.6,
         "avgPpaRush": 78.6,
         "avgPpaPass": 41.3,
@@ -547949,7 +547949,7 @@ const COLLEGE_SCOUTING = {
       "2018_4036516": {
         "rushCarShare": 41.2,
         "recYdShare": 43.5,
-        "avgPpaRush": 22.1,
+        "avgPpaRush": 22,
         "avgPpaPass": 13.3,
         "usageRush": 38
       },
@@ -548040,14 +548040,14 @@ const COLLEGE_SCOUTING = {
       "2018_4039234": {
         "rushCarShare": 72.3,
         "recYdShare": 70.4,
-        "avgPpaRush": 43.5,
+        "avgPpaRush": 43.6,
         "avgPpaPass": 92.6,
         "usageRush": 68.1
       },
       "2018_4039294": {
         "rushCarShare": 4.9,
         "recYdShare": 5.6,
-        "avgPpaRush": 42.7,
+        "avgPpaRush": 42.8,
         "avgPpaPass": 94,
         "usageRush": 8.3
       },
@@ -548215,7 +548215,7 @@ const COLLEGE_SCOUTING = {
       "2018_4045705": {
         "rushCarShare": 19.7,
         "recYdShare": 35.5,
-        "avgPpaRush": 19.6,
+        "avgPpaRush": 19.5,
         "avgPpaPass": 30.8,
         "usageRush": 14.1
       },
@@ -548224,7 +548224,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 29.4,
         "avgPpaRush": 12.9,
         "avgPpaPass": 97.7,
-        "usageRush": 25.1
+        "usageRush": 25
       },
       "2018_4046530": {
         "rushCarShare": 12.2,
@@ -548269,7 +548269,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 49
       },
       "2018_4047365": {
-        "rushCarShare": 32.7,
+        "rushCarShare": 32.8,
         "recYdShare": 68.5,
         "avgPpaRush": 98.3,
         "avgPpaPass": 83.3,
@@ -548292,7 +548292,7 @@ const COLLEGE_SCOUTING = {
       "2018_4052178": {
         "rushCarShare": 4.5,
         "recYdShare": 2.4,
-        "avgPpaRush": 24.3,
+        "avgPpaRush": 24.2,
         "avgPpaPass": 2.5,
         "usageRush": 12.8
       },
@@ -548327,7 +548327,7 @@ const COLLEGE_SCOUTING = {
       "2018_4240021": {
         "rushCarShare": 85.6,
         "recYdShare": 62.9,
-        "avgPpaRush": 15.3,
+        "avgPpaRush": 15.2,
         "avgPpaPass": 33.3,
         "usageRush": 84.2
       },
@@ -548374,7 +548374,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 29.1
       },
       "2018_4240657": {
-        "rushCarShare": 32.4,
+        "rushCarShare": 32.5,
         "recYdShare": 66.8,
         "avgPpaRush": 39.9,
         "avgPpaPass": 25.3,
@@ -548574,7 +548574,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 50.9,
         "avgPpaRush": 99.2,
         "avgPpaPass": 97.3,
-        "usageRush": 26.6
+        "usageRush": 26.5
       },
       "2018_4243966": {
         "rushCarShare": 46.8,
@@ -548598,7 +548598,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 86.3
       },
       "2018_4244651": {
-        "rushCarShare": 27.6,
+        "rushCarShare": 27.5,
         "recYdShare": 53.3,
         "avgPpaRush": 69.3,
         "avgPpaPass": 50.7,
@@ -548717,7 +548717,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 80.5
       },
       "2018_4261912": {
-        "rushCarShare": 29.2,
+        "rushCarShare": 29.1,
         "recYdShare": 13,
         "avgPpaRush": 67.4,
         "avgPpaPass": 37.8,
@@ -548782,7 +548782,7 @@ const COLLEGE_SCOUTING = {
       "2018_4360805": {
         "rushCarShare": 19.2,
         "recYdShare": 56.3,
-        "avgPpaRush": 21.5,
+        "avgPpaRush": 21.4,
         "avgPpaPass": 69.8,
         "usageRush": 17.7
       },
@@ -548805,7 +548805,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 37.1,
         "avgPpaRush": 11.3,
         "avgPpaPass": 97.5,
-        "usageRush": 27.9
+        "usageRush": 27.8
       },
       "2018_4361142": {
         "rushCarShare": 51.9,
@@ -548838,7 +548838,7 @@ const COLLEGE_SCOUTING = {
       "2018_4361444": {
         "rushCarShare": 84.4,
         "recYdShare": 73.2,
-        "avgPpaRush": 21.3,
+        "avgPpaRush": 21.2,
         "avgPpaPass": 81.8,
         "usageRush": 80.1
       },
@@ -548857,7 +548857,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 56.9
       },
       "2018_4361655": {
-        "rushCarShare": 36.5,
+        "rushCarShare": 36.6,
         "recYdShare": 3.9,
         "avgPpaRush": 5,
         "avgPpaPass": 5.6,
@@ -548885,7 +548885,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 45.3
       },
       "2018_4362161": {
-        "rushCarShare": 29.2,
+        "rushCarShare": 29.1,
         "recYdShare": 50.9,
         "avgPpaRush": 8.8,
         "avgPpaPass": 42.9,
@@ -548894,7 +548894,7 @@ const COLLEGE_SCOUTING = {
       "2018_4362196": {
         "rushCarShare": 34,
         "recYdShare": 14.3,
-        "avgPpaRush": 24.7,
+        "avgPpaRush": 24.6,
         "avgPpaPass": 95.8,
         "usageRush": 29
       },
@@ -548944,7 +548944,7 @@ const COLLEGE_SCOUTING = {
         "rushCarShare": 46.3,
         "recYdShare": 47.2,
         "avgPpaRush": 2.9,
-        "avgPpaPass": 16.8,
+        "avgPpaPass": 16.7,
         "usageRush": 48.3
       },
       "2018_4371953": {
@@ -548964,7 +548964,7 @@ const COLLEGE_SCOUTING = {
       "2018_4372519": {
         "rushCarShare": 3.4,
         "recYdShare": 40,
-        "avgPpaRush": 22.1,
+        "avgPpaRush": 22,
         "avgPpaPass": 79.2,
         "usageRush": 2.4
       },
@@ -549041,16 +549041,16 @@ const COLLEGE_SCOUTING = {
       "2019_3914305": {
         "rushCarShare": 81.2,
         "recYdShare": 62.9,
-        "avgPpaRush": 43.5,
+        "avgPpaRush": 43.6,
         "avgPpaPass": 56.1,
         "usageRush": 78.1
       },
       "2019_3914549": {
-        "rushCarShare": 27.6,
+        "rushCarShare": 27.5,
         "recYdShare": 92,
         "avgPpaRush": 26.5,
         "avgPpaPass": 42.3,
-        "usageRush": 27.9
+        "usageRush": 27.8
       },
       "2019_3915098": {
         "rushCarShare": 63.3,
@@ -549167,12 +549167,12 @@ const COLLEGE_SCOUTING = {
       "2019_3923405": {
         "rushCarShare": 62.4,
         "recYdShare": 23,
-        "avgPpaRush": 23,
+        "avgPpaRush": 22.9,
         "avgPpaPass": 19.9,
         "usageRush": 65.3
       },
       "2019_3928925": {
-        "rushCarShare": 34.4,
+        "rushCarShare": 34.5,
         "recYdShare": 69.5,
         "avgPpaRush": 33,
         "avgPpaPass": 14.3,
@@ -549181,7 +549181,7 @@ const COLLEGE_SCOUTING = {
       "2019_3929944": {
         "rushCarShare": 67,
         "recYdShare": 40,
-        "avgPpaRush": 21.7,
+        "avgPpaRush": 21.6,
         "avgPpaPass": 25.6,
         "usageRush": 57.3
       },
@@ -549195,7 +549195,7 @@ const COLLEGE_SCOUTING = {
       "2019_3932911": {
         "rushCarShare": 39.5,
         "recYdShare": 93,
-        "avgPpaRush": 22.4,
+        "avgPpaRush": 22.3,
         "avgPpaPass": 34.7,
         "usageRush": 31.4
       },
@@ -549328,7 +549328,7 @@ const COLLEGE_SCOUTING = {
       "2019_4037125": {
         "rushCarShare": 71.6,
         "recYdShare": 88.8,
-        "avgPpaRush": 44.1,
+        "avgPpaRush": 44.2,
         "avgPpaPass": 71.2,
         "usageRush": 69.9
       },
@@ -549384,7 +549384,7 @@ const COLLEGE_SCOUTING = {
       "2019_4038815": {
         "rushCarShare": 52.2,
         "recYdShare": 78.2,
-        "avgPpaRush": 25.9,
+        "avgPpaRush": 25.8,
         "avgPpaPass": 32.6,
         "usageRush": 64.3
       },
@@ -549434,7 +549434,7 @@ const COLLEGE_SCOUTING = {
         "rushCarShare": 95.8,
         "recYdShare": 32.1,
         "avgPpaRush": 27.7,
-        "avgPpaPass": 16.8,
+        "avgPpaPass": 16.7,
         "usageRush": 98.1
       },
       "2019_4039503": {
@@ -549484,7 +549484,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 27.8,
         "avgPpaRush": 90.6,
         "avgPpaPass": 52.8,
-        "usageRush": 25.1
+        "usageRush": 25
       },
       "2019_4040732": {
         "rushCarShare": 30.9,
@@ -549574,7 +549574,7 @@ const COLLEGE_SCOUTING = {
         "rushCarShare": 15.6,
         "recYdShare": 26.1,
         "avgPpaRush": 86.1,
-        "avgPpaPass": 16.6,
+        "avgPpaPass": 16.5,
         "usageRush": 26.2
       },
       "2019_4048243": {
@@ -549636,7 +549636,7 @@ const COLLEGE_SCOUTING = {
       "2019_4240021": {
         "rushCarShare": 93.8,
         "recYdShare": 79.6,
-        "avgPpaRush": 43.5,
+        "avgPpaRush": 43.6,
         "avgPpaPass": 49.5,
         "usageRush": 99.1
       },
@@ -549683,7 +549683,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 67.9
       },
       "2019_4240750": {
-        "rushCarShare": 32,
+        "rushCarShare": 32.1,
         "recYdShare": 7,
         "avgPpaRush": 82.4,
         "avgPpaPass": 22.4,
@@ -549727,7 +549727,7 @@ const COLLEGE_SCOUTING = {
       "2019_4241205": {
         "rushCarShare": 82.2,
         "recYdShare": 40,
-        "avgPpaRush": 22.1,
+        "avgPpaRush": 22,
         "avgPpaPass": 34.6,
         "usageRush": 77.7
       },
@@ -549767,7 +549767,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 90.1
       },
       "2019_4241474": {
-        "rushCarShare": 36.5,
+        "rushCarShare": 36.6,
         "recYdShare": 43.5,
         "avgPpaRush": 56,
         "avgPpaPass": 76.1,
@@ -549860,7 +549860,7 @@ const COLLEGE_SCOUTING = {
       "2019_4242873": {
         "rushCarShare": 98.3,
         "recYdShare": 94.5,
-        "avgPpaRush": 25.9,
+        "avgPpaRush": 25.8,
         "avgPpaPass": 53.3,
         "usageRush": 99
       },
@@ -549909,7 +549909,7 @@ const COLLEGE_SCOUTING = {
       "2019_4243826": {
         "rushCarShare": 80.2,
         "recYdShare": 27.8,
-        "avgPpaRush": 42.7,
+        "avgPpaRush": 42.8,
         "avgPpaPass": 14.9,
         "usageRush": 90.4
       },
@@ -550040,7 +550040,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 49
       },
       "2019_4261168": {
-        "rushCarShare": 33.1,
+        "rushCarShare": 33.2,
         "recYdShare": 8.6,
         "avgPpaRush": 15.9,
         "avgPpaPass": 5.6,
@@ -550072,7 +550072,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 58.5,
         "avgPpaRush": 52,
         "avgPpaPass": 73.3,
-        "usageRush": 25.4
+        "usageRush": 25.3
       },
       "2019_4360238": {
         "rushCarShare": 8.4,
@@ -550096,7 +550096,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 98.5
       },
       "2019_4360406": {
-        "rushCarShare": 27.6,
+        "rushCarShare": 27.5,
         "recYdShare": 71.6,
         "avgPpaRush": 12.6,
         "avgPpaPass": 24.6,
@@ -550117,7 +550117,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 40.3
       },
       "2019_4360691": {
-        "rushCarShare": 32.7,
+        "rushCarShare": 32.8,
         "recYdShare": 61.6,
         "avgPpaRush": 43.1,
         "avgPpaPass": 76.7,
@@ -550168,7 +550168,7 @@ const COLLEGE_SCOUTING = {
       "2019_4361227": {
         "rushCarShare": 79.4,
         "recYdShare": 47.2,
-        "avgPpaRush": 20,
+        "avgPpaRush": 19.9,
         "avgPpaPass": 81.9,
         "usageRush": 90.4
       },
@@ -550196,7 +550196,7 @@ const COLLEGE_SCOUTING = {
       "2019_4361444": {
         "rushCarShare": 88.9,
         "recYdShare": 74.1,
-        "avgPpaRush": 17.2,
+        "avgPpaRush": 17.1,
         "avgPpaPass": 18,
         "usageRush": 86.4
       },
@@ -550204,7 +550204,7 @@ const COLLEGE_SCOUTING = {
         "rushCarShare": 78.9,
         "recYdShare": 67.8,
         "avgPpaRush": 29.7,
-        "avgPpaPass": 16.8,
+        "avgPpaPass": 16.7,
         "usageRush": 83.5
       },
       "2019_4361579": {
@@ -550219,7 +550219,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 1.4,
         "avgPpaRush": 53.5,
         "avgPpaPass": 3.5,
-        "usageRush": 26.8
+        "usageRush": 26.7
       },
       "2019_4361777": {
         "rushCarShare": 13.3,
@@ -550315,7 +550315,7 @@ const COLLEGE_SCOUTING = {
       "2019_4362569": {
         "rushCarShare": 74.1,
         "recYdShare": 63.9,
-        "avgPpaRush": 43.5,
+        "avgPpaRush": 43.6,
         "avgPpaPass": 47.1,
         "usageRush": 66.3
       },
@@ -550336,7 +550336,7 @@ const COLLEGE_SCOUTING = {
       "2019_4362748": {
         "rushCarShare": 38.9,
         "recYdShare": 97.7,
-        "avgPpaRush": 25.9,
+        "avgPpaRush": 25.8,
         "avgPpaPass": 73.3,
         "usageRush": 29
       },
@@ -550378,7 +550378,7 @@ const COLLEGE_SCOUTING = {
       "2019_4370813": {
         "rushCarShare": 51.3,
         "recYdShare": 10.1,
-        "avgPpaRush": 42.7,
+        "avgPpaRush": 42.8,
         "avgPpaPass": 7.5,
         "usageRush": 63.4
       },
@@ -550413,7 +550413,7 @@ const COLLEGE_SCOUTING = {
       "2019_4372721": {
         "rushCarShare": 89.4,
         "recYdShare": 79.6,
-        "avgPpaRush": 25.9,
+        "avgPpaRush": 25.8,
         "avgPpaPass": 70.9,
         "usageRush": 88.2
       },
@@ -550581,7 +550581,7 @@ const COLLEGE_SCOUTING = {
       "2019_4429676": {
         "rushCarShare": 61.5,
         "recYdShare": 73.2,
-        "avgPpaRush": 13.9,
+        "avgPpaRush": 13.8,
         "avgPpaPass": 56.4,
         "usageRush": 52.5
       },
@@ -550602,7 +550602,7 @@ const COLLEGE_SCOUTING = {
       "2019_4430100": {
         "rushCarShare": 17.3,
         "recYdShare": 33.9,
-        "avgPpaRush": 21.7,
+        "avgPpaRush": 21.6,
         "avgPpaPass": 81.6,
         "usageRush": 38
       },
@@ -550616,7 +550616,7 @@ const COLLEGE_SCOUTING = {
       "2019_4430551": {
         "rushCarShare": 4.2,
         "recYdShare": 40,
-        "avgPpaRush": 23.5,
+        "avgPpaRush": 23.4,
         "avgPpaPass": 98.7,
         "usageRush": 38
       },
@@ -550686,14 +550686,14 @@ const COLLEGE_SCOUTING = {
       "2019_4570543": {
         "rushCarShare": 42.9,
         "recYdShare": 18.4,
-        "avgPpaRush": 21.7,
+        "avgPpaRush": 21.6,
         "avgPpaPass": 30,
         "usageRush": 32.3
       },
       "2019_4570561": {
-        "rushCarShare": 36.5,
+        "rushCarShare": 36.6,
         "recYdShare": 57.4,
-        "avgPpaRush": 17.4,
+        "avgPpaRush": 17.3,
         "avgPpaPass": 60.1,
         "usageRush": 26.2
       },
@@ -550721,7 +550721,7 @@ const COLLEGE_SCOUTING = {
       "2020_4035537": {
         "rushCarShare": 8.2,
         "recYdShare": 13,
-        "avgPpaRush": 21.3,
+        "avgPpaRush": 21.2,
         "avgPpaPass": 25.3,
         "usageRush": 4.8
       },
@@ -550791,7 +550791,7 @@ const COLLEGE_SCOUTING = {
       "2020_4037568": {
         "rushCarShare": 78.8,
         "recYdShare": 61.6,
-        "avgPpaRush": 20,
+        "avgPpaRush": 19.9,
         "avgPpaPass": 20.7,
         "usageRush": 72.3
       },
@@ -550859,7 +550859,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 91.6
       },
       "2020_4047337": {
-        "rushCarShare": 32,
+        "rushCarShare": 32.1,
         "recYdShare": 21.3,
         "avgPpaRush": 38.7,
         "avgPpaPass": 15.7,
@@ -550875,7 +550875,7 @@ const COLLEGE_SCOUTING = {
       "2020_4239768": {
         "rushCarShare": 95.7,
         "recYdShare": 30.7,
-        "avgPpaRush": 44.1,
+        "avgPpaRush": 44.2,
         "avgPpaPass": 65,
         "usageRush": 95.8
       },
@@ -550945,7 +550945,7 @@ const COLLEGE_SCOUTING = {
       "2020_4240781": {
         "rushCarShare": 95.4,
         "recYdShare": 96.3,
-        "avgPpaRush": 20.5,
+        "avgPpaRush": 20.4,
         "avgPpaPass": 80.5,
         "usageRush": 94.3
       },
@@ -551111,7 +551111,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 37.5
       },
       "2020_4244732": {
-        "rushCarShare": 36.5,
+        "rushCarShare": 36.6,
         "recYdShare": 10.1,
         "avgPpaRush": 92.4,
         "avgPpaPass": 99.1,
@@ -551148,7 +551148,7 @@ const COLLEGE_SCOUTING = {
       "2020_4260406": {
         "rushCarShare": 99.4,
         "recYdShare": 99.2,
-        "avgPpaRush": 22.4,
+        "avgPpaRush": 22.3,
         "avgPpaPass": 87.6,
         "usageRush": 99.1
       },
@@ -551197,7 +551197,7 @@ const COLLEGE_SCOUTING = {
       "2020_4360448": {
         "rushCarShare": 62.1,
         "recYdShare": 58.5,
-        "avgPpaRush": 42.4,
+        "avgPpaRush": 42.5,
         "avgPpaPass": 32.1,
         "usageRush": 56.3
       },
@@ -551253,7 +551253,7 @@ const COLLEGE_SCOUTING = {
       "2020_4361354": {
         "rushCarShare": 63.7,
         "recYdShare": 33.9,
-        "avgPpaRush": 42.4,
+        "avgPpaRush": 42.5,
         "avgPpaPass": 14.4,
         "usageRush": 67.9
       },
@@ -551286,9 +551286,9 @@ const COLLEGE_SCOUTING = {
         "usageRush": 66.6
       },
       "2020_4361624": {
-        "rushCarShare": 36.5,
+        "rushCarShare": 36.6,
         "recYdShare": 27.8,
-        "avgPpaRush": 12.2,
+        "avgPpaRush": 12.1,
         "avgPpaPass": 50.9,
         "usageRush": 52.9
       },
@@ -551449,7 +551449,7 @@ const COLLEGE_SCOUTING = {
       "2020_4373661": {
         "rushCarShare": 94.1,
         "recYdShare": 72.3,
-        "avgPpaRush": 15,
+        "avgPpaRush": 14.9,
         "avgPpaPass": 41.1,
         "usageRush": 91.6
       },
@@ -551485,7 +551485,7 @@ const COLLEGE_SCOUTING = {
         "rushCarShare": 30.9,
         "recYdShare": 7,
         "avgPpaRush": 81.1,
-        "avgPpaPass": 16.8,
+        "avgPpaPass": 16.7,
         "usageRush": 18.9
       },
       "2020_4382468": {
@@ -551521,12 +551521,12 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 27.8,
         "avgPpaRush": 63.7,
         "avgPpaPass": 56.8,
-        "usageRush": 25.4
+        "usageRush": 25.3
       },
       "2020_4426475": {
         "rushCarShare": 61.5,
         "recYdShare": 23,
-        "avgPpaRush": 18.6,
+        "avgPpaRush": 18.5,
         "avgPpaPass": 14.3,
         "usageRush": 62.4
       },
@@ -551566,7 +551566,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 98.9
       },
       "2020_4427630": {
-        "rushCarShare": 36.5,
+        "rushCarShare": 36.6,
         "recYdShare": 5.6,
         "avgPpaRush": 89.7,
         "avgPpaPass": 13.7,
@@ -551611,7 +551611,7 @@ const COLLEGE_SCOUTING = {
         "rushCarShare": 74.9,
         "recYdShare": 88.1,
         "avgPpaRush": 67.9,
-        "avgPpaPass": 16.6,
+        "avgPpaPass": 16.5,
         "usageRush": 78.1
       },
       "2020_4429072": {
@@ -551639,7 +551639,7 @@ const COLLEGE_SCOUTING = {
         "rushCarShare": 53.9,
         "recYdShare": 60.6,
         "avgPpaRush": 6.7,
-        "avgPpaPass": 16.8,
+        "avgPpaPass": 16.7,
         "usageRush": 96.3
       },
       "2020_4429676": {
@@ -551650,7 +551650,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 90.5
       },
       "2020_4429795": {
-        "rushCarShare": 35.6,
+        "rushCarShare": 35.7,
         "recYdShare": 98.8,
         "avgPpaRush": 46.2,
         "avgPpaPass": 92,
@@ -551981,12 +551981,12 @@ const COLLEGE_SCOUTING = {
       "2021_4035695": {
         "rushCarShare": 56.9,
         "recYdShare": 27.8,
-        "avgPpaRush": 44.1,
+        "avgPpaRush": 44.2,
         "avgPpaPass": 14.6,
         "usageRush": 45.3
       },
       "2021_4036032": {
-        "rushCarShare": 29.2,
+        "rushCarShare": 29.1,
         "recYdShare": 65.8,
         "avgPpaRush": 82.5,
         "avgPpaPass": 82.5,
@@ -552016,7 +552016,7 @@ const COLLEGE_SCOUTING = {
       "2021_4039009": {
         "rushCarShare": 61.5,
         "recYdShare": 29.4,
-        "avgPpaRush": 10.3,
+        "avgPpaRush": 10.2,
         "avgPpaPass": 19.6,
         "usageRush": 81.2
       },
@@ -552053,7 +552053,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 15.7,
         "avgPpaRush": 26.5,
         "avgPpaPass": 7.3,
-        "usageRush": 25.1
+        "usageRush": 25
       },
       "2021_4052178": {
         "rushCarShare": 99.7,
@@ -552163,14 +552163,14 @@ const COLLEGE_SCOUTING = {
       "2021_4242881": {
         "rushCarShare": 30.9,
         "recYdShare": 13,
-        "avgPpaRush": 21.7,
+        "avgPpaRush": 21.6,
         "avgPpaPass": 4.8,
         "usageRush": 14.3
       },
       "2021_4243003": {
         "rushCarShare": 78.8,
         "recYdShare": 89.6,
-        "avgPpaRush": 10.3,
+        "avgPpaRush": 10.2,
         "avgPpaPass": 78.9,
         "usageRush": 85.8
       },
@@ -552291,7 +552291,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 14.3,
         "avgPpaRush": 96.5,
         "avgPpaPass": 99.8,
-        "usageRush": 25.8
+        "usageRush": 25.7
       },
       "2021_4259633": {
         "rushCarShare": 76.9,
@@ -552310,9 +552310,9 @@ const COLLEGE_SCOUTING = {
       "2021_4261173": {
         "rushCarShare": 24.8,
         "recYdShare": 32.1,
-        "avgPpaRush": 8.1,
+        "avgPpaRush": 8,
         "avgPpaPass": 4,
-        "usageRush": 26.6
+        "usageRush": 26.5
       },
       "2021_4261605": {
         "rushCarShare": 6.4,
@@ -552322,7 +552322,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 3
       },
       "2021_4261851": {
-        "rushCarShare": 29.2,
+        "rushCarShare": 29.1,
         "recYdShare": 66.8,
         "avgPpaRush": 8.7,
         "avgPpaPass": 66.2,
@@ -552350,7 +552350,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 77.9
       },
       "2021_4360238": {
-        "rushCarShare": 29.2,
+        "rushCarShare": 29.1,
         "recYdShare": 79.6,
         "avgPpaRush": 94.3,
         "avgPpaPass": 95.3,
@@ -552415,7 +552415,7 @@ const COLLEGE_SCOUTING = {
       "2021_4360932": {
         "rushCarShare": 81.7,
         "recYdShare": 62.9,
-        "avgPpaRush": 43.5,
+        "avgPpaRush": 43.6,
         "avgPpaPass": 86.2,
         "usageRush": 82.3
       },
@@ -552429,14 +552429,14 @@ const COLLEGE_SCOUTING = {
       "2021_4361159": {
         "rushCarShare": 87.8,
         "recYdShare": 3.9,
-        "avgPpaRush": 25,
+        "avgPpaRush": 24.9,
         "avgPpaPass": 3.4,
         "usageRush": 76.7
       },
       "2021_4361263": {
         "rushCarShare": 30.9,
         "recYdShare": 52.2,
-        "avgPpaRush": 22.1,
+        "avgPpaRush": 22,
         "avgPpaPass": 42.2,
         "usageRush": 29.4
       },
@@ -552564,7 +552564,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 83.4,
         "avgPpaRush": 9.9,
         "avgPpaPass": 73.6,
-        "usageRush": 27.9
+        "usageRush": 27.8
       },
       "2021_4362478": {
         "rushCarShare": 30.5,
@@ -552648,7 +552648,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 19.8,
         "avgPpaRush": 93.6,
         "avgPpaPass": 68.8,
-        "usageRush": 26.6
+        "usageRush": 26.5
       },
       "2021_4371852": {
         "rushCarShare": 1.3,
@@ -552707,7 +552707,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 97.9
       },
       "2021_4379399": {
-        "rushCarShare": 32.4,
+        "rushCarShare": 32.5,
         "recYdShare": 85.2,
         "avgPpaRush": 80,
         "avgPpaPass": 87,
@@ -552742,7 +552742,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 77.2
       },
       "2021_4426386": {
-        "rushCarShare": 32.4,
+        "rushCarShare": 32.5,
         "recYdShare": 47.2,
         "avgPpaRush": 89.4,
         "avgPpaPass": 59.3,
@@ -552786,7 +552786,7 @@ const COLLEGE_SCOUTING = {
       "2021_4426840": {
         "rushCarShare": 63.9,
         "recYdShare": 87.6,
-        "avgPpaRush": 42.4,
+        "avgPpaRush": 42.5,
         "avgPpaPass": 77.3,
         "usageRush": 59.8
       },
@@ -552968,7 +552968,7 @@ const COLLEGE_SCOUTING = {
       "2021_4429454": {
         "rushCarShare": 17,
         "recYdShare": 91,
-        "avgPpaRush": 15,
+        "avgPpaRush": 14.9,
         "avgPpaPass": 84.2,
         "usageRush": 9
       },
@@ -553138,7 +553138,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 13,
         "avgPpaRush": 77.2,
         "avgPpaPass": 3.8,
-        "usageRush": 27.9
+        "usageRush": 27.8
       },
       "2021_4430926": {
         "rushCarShare": 3.8,
@@ -553150,7 +553150,7 @@ const COLLEGE_SCOUTING = {
       "2021_4430968": {
         "rushCarShare": 86.5,
         "recYdShare": 64.8,
-        "avgPpaRush": 23,
+        "avgPpaRush": 22.9,
         "avgPpaPass": 48.5,
         "usageRush": 91.6
       },
@@ -553236,7 +553236,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 23,
         "avgPpaRush": 97.5,
         "avgPpaPass": 58,
-        "usageRush": 27.9
+        "usageRush": 27.8
       },
       "2021_4432710": {
         "rushCarShare": 88.6,
@@ -553248,7 +553248,7 @@ const COLLEGE_SCOUTING = {
       "2021_4433827": {
         "rushCarShare": 72.3,
         "recYdShare": 27.8,
-        "avgPpaRush": 12.2,
+        "avgPpaRush": 12.1,
         "avgPpaPass": 8,
         "usageRush": 84.7
       },
@@ -553402,7 +553402,7 @@ const COLLEGE_SCOUTING = {
       "2021_4570519": {
         "rushCarShare": 66.2,
         "recYdShare": 46.3,
-        "avgPpaRush": 10.3,
+        "avgPpaRush": 10.2,
         "avgPpaPass": 86.7,
         "usageRush": 43.7
       },
@@ -553486,7 +553486,7 @@ const COLLEGE_SCOUTING = {
       "2021_4601283": {
         "rushCarShare": 18.8,
         "recYdShare": 73.2,
-        "avgPpaRush": 18.6,
+        "avgPpaRush": 18.5,
         "avgPpaPass": 95.1,
         "usageRush": 15.7
       },
@@ -553549,7 +553549,7 @@ const COLLEGE_SCOUTING = {
       "2021_4682640": {
         "rushCarShare": 43.4,
         "recYdShare": 35.5,
-        "avgPpaRush": 25,
+        "avgPpaRush": 24.9,
         "avgPpaPass": 99.1,
         "usageRush": 46.4
       },
@@ -553610,7 +553610,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 71.5
       },
       "2021_4686095": {
-        "rushCarShare": 34.4,
+        "rushCarShare": 34.5,
         "recYdShare": 70.4,
         "avgPpaRush": 70.6,
         "avgPpaPass": 95.6,
@@ -553645,7 +553645,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 63.4
       },
       "2021_4689193": {
-        "rushCarShare": 33.1,
+        "rushCarShare": 33.2,
         "recYdShare": 3.9,
         "avgPpaRush": 64.4,
         "avgPpaPass": 12.4,
@@ -553673,7 +553673,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 92.7
       },
       "2021_4690120": {
-        "rushCarShare": 35.6,
+        "rushCarShare": 35.7,
         "recYdShare": 88.8,
         "avgPpaRush": 84.8,
         "avgPpaPass": 70,
@@ -553729,7 +553729,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 10
       },
       "2021_4876029": {
-        "rushCarShare": 29.2,
+        "rushCarShare": 29.1,
         "recYdShare": 15.7,
         "avgPpaRush": 5.5,
         "avgPpaPass": 95.5,
@@ -553820,9 +553820,9 @@ const COLLEGE_SCOUTING = {
         "usageRush": 65.3
       },
       "2022_4244855": {
-        "rushCarShare": 29.2,
+        "rushCarShare": 29.1,
         "recYdShare": 38.4,
-        "avgPpaRush": 25.9,
+        "avgPpaRush": 25.8,
         "avgPpaPass": 21.5,
         "usageRush": 21.3
       },
@@ -553836,7 +553836,7 @@ const COLLEGE_SCOUTING = {
       "2022_4245242": {
         "rushCarShare": 74.4,
         "recYdShare": 45,
-        "avgPpaRush": 23,
+        "avgPpaRush": 22.9,
         "avgPpaPass": 96.6,
         "usageRush": 67.9
       },
@@ -553859,7 +553859,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 17,
         "avgPpaRush": 28.8,
         "avgPpaPass": 25.7,
-        "usageRush": 25.1
+        "usageRush": 25
       },
       "2022_4260206": {
         "rushCarShare": 41.8,
@@ -553892,9 +553892,9 @@ const COLLEGE_SCOUTING = {
       "2022_4360589": {
         "rushCarShare": 31.3,
         "recYdShare": 71.6,
-        "avgPpaRush": 44.1,
+        "avgPpaRush": 44.2,
         "avgPpaPass": 61.5,
-        "usageRush": 26.6
+        "usageRush": 26.5
       },
       "2022_4360652": {
         "rushCarShare": 34.7,
@@ -553911,7 +553911,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 85.8
       },
       "2022_4360765": {
-        "rushCarShare": 33.1,
+        "rushCarShare": 33.2,
         "recYdShare": 21.3,
         "avgPpaRush": 91.1,
         "avgPpaPass": 10.6,
@@ -553955,7 +553955,7 @@ const COLLEGE_SCOUTING = {
       "2022_4362161": {
         "rushCarShare": 35.9,
         "recYdShare": 76.7,
-        "avgPpaRush": 24.7,
+        "avgPpaRush": 24.6,
         "avgPpaPass": 75.4,
         "usageRush": 52.5
       },
@@ -554011,7 +554011,7 @@ const COLLEGE_SCOUTING = {
       "2022_4363033": {
         "rushCarShare": 96.1,
         "recYdShare": 56.3,
-        "avgPpaRush": 19.6,
+        "avgPpaRush": 19.5,
         "avgPpaPass": 25.7,
         "usageRush": 95.5
       },
@@ -554046,7 +554046,7 @@ const COLLEGE_SCOUTING = {
       "2022_4370794": {
         "rushCarShare": 45.3,
         "recYdShare": 29.4,
-        "avgPpaRush": 23,
+        "avgPpaRush": 22.9,
         "avgPpaPass": 83.3,
         "usageRush": 58.4
       },
@@ -554060,14 +554060,14 @@ const COLLEGE_SCOUTING = {
       "2022_4371977": {
         "rushCarShare": 76.1,
         "recYdShare": 66.8,
-        "avgPpaRush": 44.1,
+        "avgPpaRush": 44.2,
         "avgPpaPass": 26.3,
         "usageRush": 72
       },
       "2022_4372073": {
         "rushCarShare": 49.4,
         "recYdShare": 15.7,
-        "avgPpaRush": 23,
+        "avgPpaRush": 22.9,
         "avgPpaPass": 66.8,
         "usageRush": 46.6
       },
@@ -554102,12 +554102,12 @@ const COLLEGE_SCOUTING = {
       "2022_4373637": {
         "rushCarShare": 19.7,
         "recYdShare": 38.4,
-        "avgPpaRush": 17.4,
+        "avgPpaRush": 17.3,
         "avgPpaPass": 66.1,
         "usageRush": 32.3
       },
       "2022_4374141": {
-        "rushCarShare": 35.6,
+        "rushCarShare": 35.7,
         "recYdShare": 40,
         "avgPpaRush": 0.7,
         "avgPpaPass": 35.9,
@@ -554125,7 +554125,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 48.5,
         "avgPpaRush": 67.7,
         "avgPpaPass": 12.4,
-        "usageRush": 25.4
+        "usageRush": 25.3
       },
       "2022_4391845": {
         "rushCarShare": 73.8,
@@ -554158,7 +554158,7 @@ const COLLEGE_SCOUTING = {
       "2022_4426409": {
         "rushCarShare": 37.1,
         "recYdShare": 15.7,
-        "avgPpaRush": 21.3,
+        "avgPpaRush": 21.2,
         "avgPpaPass": 97.3,
         "usageRush": 57.7
       },
@@ -554202,7 +554202,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 8.6,
         "avgPpaRush": 18.3,
         "avgPpaPass": 26,
-        "usageRush": 25.8
+        "usageRush": 25.7
       },
       "2022_4427332": {
         "rushCarShare": 42.5,
@@ -554244,7 +554244,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 76.7,
         "avgPpaRush": 54.9,
         "avgPpaPass": 72.6,
-        "usageRush": 26.8
+        "usageRush": 26.7
       },
       "2022_4427916": {
         "rushCarShare": 63.3,
@@ -554298,8 +554298,8 @@ const COLLEGE_SCOUTING = {
       "2022_4428606": {
         "rushCarShare": 41.2,
         "recYdShare": 24.6,
-        "avgPpaRush": 43.5,
-        "avgPpaPass": 16.3,
+        "avgPpaRush": 43.6,
+        "avgPpaPass": 16.2,
         "usageRush": 29
       },
       "2022_4428732": {
@@ -554419,7 +554419,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 42.1,
         "avgPpaRush": 14.7,
         "avgPpaPass": 63.7,
-        "usageRush": 25.8
+        "usageRush": 25.7
       },
       "2022_4429299": {
         "rushCarShare": 57.2,
@@ -554503,7 +554503,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 33.9,
         "avgPpaRush": 0.6,
         "avgPpaPass": 58.7,
-        "usageRush": 25.8
+        "usageRush": 25.7
       },
       "2022_4430049": {
         "rushCarShare": 46.6,
@@ -554559,7 +554559,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 13,
         "avgPpaRush": 73.3,
         "avgPpaPass": 14.9,
-        "usageRush": 25.8
+        "usageRush": 25.7
       },
       "2022_4430666": {
         "rushCarShare": 51.9,
@@ -554632,7 +554632,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 77
       },
       "2022_4431328": {
-        "rushCarShare": 34.4,
+        "rushCarShare": 34.5,
         "recYdShare": 38.4,
         "avgPpaRush": 31.7,
         "avgPpaPass": 90,
@@ -554711,7 +554711,7 @@ const COLLEGE_SCOUTING = {
       "2022_4432317": {
         "rushCarShare": 52.7,
         "recYdShare": 8.6,
-        "avgPpaRush": 9.4,
+        "avgPpaRush": 9.3,
         "avgPpaPass": 18.5,
         "usageRush": 61.5
       },
@@ -554807,7 +554807,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 38
       },
       "2022_4568233": {
-        "rushCarShare": 34.4,
+        "rushCarShare": 34.5,
         "recYdShare": 24.6,
         "avgPpaRush": 59.9,
         "avgPpaPass": 83.6,
@@ -554823,7 +554823,7 @@ const COLLEGE_SCOUTING = {
       "2022_4568406": {
         "rushCarShare": 28.1,
         "recYdShare": 26.1,
-        "avgPpaRush": 21.7,
+        "avgPpaRush": 21.6,
         "avgPpaPass": 65.1,
         "usageRush": 66.1
       },
@@ -554881,7 +554881,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 26.1,
         "avgPpaRush": 43.1,
         "avgPpaPass": 76.5,
-        "usageRush": 25.4
+        "usageRush": 25.3
       },
       "2022_4569682": {
         "rushCarShare": 61.1,
@@ -554970,7 +554970,7 @@ const COLLEGE_SCOUTING = {
       "2022_4599158": {
         "rushCarShare": 4.2,
         "recYdShare": 24.6,
-        "avgPpaRush": 19.6,
+        "avgPpaRush": 19.5,
         "avgPpaPass": 52.9,
         "usageRush": 3.2
       },
@@ -555026,7 +555026,7 @@ const COLLEGE_SCOUTING = {
       "2022_4608686": {
         "rushCarShare": 48,
         "recYdShare": 26.1,
-        "avgPpaRush": 25.9,
+        "avgPpaRush": 25.8,
         "avgPpaPass": 20.1,
         "usageRush": 38.3
       },
@@ -555103,7 +555103,7 @@ const COLLEGE_SCOUTING = {
       "2022_4685016": {
         "rushCarShare": 58.4,
         "recYdShare": 50.9,
-        "avgPpaRush": 15,
+        "avgPpaRush": 14.9,
         "avgPpaPass": 55.9,
         "usageRush": 65.3
       },
@@ -555194,14 +555194,14 @@ const COLLEGE_SCOUTING = {
       "2022_4686658": {
         "rushCarShare": 55,
         "recYdShare": 43.5,
-        "avgPpaRush": 24.7,
+        "avgPpaRush": 24.6,
         "avgPpaPass": 43.3,
         "usageRush": 49
       },
       "2022_4686769": {
         "rushCarShare": 2.1,
         "recYdShare": 14.3,
-        "avgPpaRush": 22.1,
+        "avgPpaRush": 22,
         "avgPpaPass": 59.4,
         "usageRush": 1.9
       },
@@ -555264,7 +555264,7 @@ const COLLEGE_SCOUTING = {
       "2022_4690120": {
         "rushCarShare": 0.9,
         "recYdShare": 53.3,
-        "avgPpaRush": 20.5,
+        "avgPpaRush": 20.4,
         "avgPpaPass": 27.5,
         "usageRush": 0.5
       },
@@ -555313,7 +555313,7 @@ const COLLEGE_SCOUTING = {
       "2022_4698727": {
         "rushCarShare": 43.9,
         "recYdShare": 10.1,
-        "avgPpaRush": 43.5,
+        "avgPpaRush": 43.6,
         "avgPpaPass": 67.6,
         "usageRush": 51.2
       },
@@ -555322,7 +555322,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 10.1,
         "avgPpaRush": 57.2,
         "avgPpaPass": 5.2,
-        "usageRush": 25.4
+        "usageRush": 25.3
       },
       "2022_4708487": {
         "rushCarShare": 17.7,
@@ -555383,7 +555383,7 @@ const COLLEGE_SCOUTING = {
       "2022_4819231": {
         "rushCarShare": 75.8,
         "recYdShare": 19.8,
-        "avgPpaRush": 20.5,
+        "avgPpaRush": 20.4,
         "avgPpaPass": 50.7,
         "usageRush": 73.4
       },
@@ -555399,12 +555399,12 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 42.1,
         "avgPpaRush": 27.7,
         "avgPpaPass": 16.4,
-        "usageRush": 26.8
+        "usageRush": 26.7
       },
       "2022_4869552": {
         "rushCarShare": 8.4,
         "recYdShare": 18.4,
-        "avgPpaRush": 18.6,
+        "avgPpaRush": 18.5,
         "avgPpaPass": 54.1,
         "usageRush": 12.4
       },
@@ -555444,7 +555444,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 16.3
       },
       "2022_4875861": {
-        "rushCarShare": 32.4,
+        "rushCarShare": 32.5,
         "recYdShare": 5.6,
         "avgPpaRush": 69,
         "avgPpaPass": 75.1,
@@ -555500,7 +555500,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 55.4
       },
       "2022_4912240": {
-        "rushCarShare": 32,
+        "rushCarShare": 32.1,
         "recYdShare": 47.2,
         "avgPpaRush": 86.2,
         "avgPpaPass": 8.9,
@@ -555647,7 +555647,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 24
       },
       "2023_4363033": {
-        "rushCarShare": 35.6,
+        "rushCarShare": 35.7,
         "recYdShare": 13,
         "avgPpaRush": 11.1,
         "avgPpaPass": 5.8,
@@ -555717,11 +555717,11 @@ const COLLEGE_SCOUTING = {
         "usageRush": 12.1
       },
       "2023_4374306": {
-        "rushCarShare": 27.6,
+        "rushCarShare": 27.5,
         "recYdShare": 29.4,
         "avgPpaRush": 31.4,
         "avgPpaPass": 20.7,
-        "usageRush": 25.1
+        "usageRush": 25
       },
       "2023_4391845": {
         "rushCarShare": 98.3,
@@ -555747,7 +555747,7 @@ const COLLEGE_SCOUTING = {
       "2023_4426484": {
         "rushCarShare": 13.3,
         "recYdShare": 27.8,
-        "avgPpaRush": 22.4,
+        "avgPpaRush": 22.3,
         "avgPpaPass": 41.3,
         "usageRush": 48.3
       },
@@ -555768,7 +555768,7 @@ const COLLEGE_SCOUTING = {
       "2023_4426910": {
         "rushCarShare": 34,
         "recYdShare": 92.6,
-        "avgPpaRush": 15,
+        "avgPpaRush": 14.9,
         "avgPpaPass": 74.3,
         "usageRush": 21
       },
@@ -555801,7 +555801,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 15.7
       },
       "2023_4428606": {
-        "rushCarShare": 34.4,
+        "rushCarShare": 34.5,
         "recYdShare": 63.9,
         "avgPpaRush": 31.9,
         "avgPpaPass": 71.4,
@@ -555936,7 +555936,7 @@ const COLLEGE_SCOUTING = {
       "2023_4429618": {
         "rushCarShare": 49,
         "recYdShare": 40,
-        "avgPpaRush": 19.6,
+        "avgPpaRush": 19.5,
         "avgPpaPass": 61.6,
         "usageRush": 54.1
       },
@@ -555992,7 +555992,7 @@ const COLLEGE_SCOUTING = {
       "2023_4430717": {
         "rushCarShare": 48,
         "recYdShare": 49.6,
-        "avgPpaRush": 23,
+        "avgPpaRush": 22.9,
         "avgPpaPass": 69.6,
         "usageRush": 58.5
       },
@@ -556083,7 +556083,7 @@ const COLLEGE_SCOUTING = {
       "2023_4431545": {
         "rushCarShare": 67,
         "recYdShare": 88.1,
-        "avgPpaRush": 43.5,
+        "avgPpaRush": 43.6,
         "avgPpaPass": 62.4,
         "usageRush": 66.3
       },
@@ -556328,7 +556328,7 @@ const COLLEGE_SCOUTING = {
       "2023_4596437": {
         "rushCarShare": 10.2,
         "recYdShare": 17,
-        "avgPpaRush": 21.5,
+        "avgPpaRush": 21.4,
         "avgPpaPass": 78.4,
         "usageRush": 7.4
       },
@@ -556370,7 +556370,7 @@ const COLLEGE_SCOUTING = {
       "2023_4608922": {
         "rushCarShare": 28.5,
         "recYdShare": 75.7,
-        "avgPpaRush": 10.5,
+        "avgPpaRush": 10.4,
         "avgPpaPass": 42.2,
         "usageRush": 23.2
       },
@@ -556461,7 +556461,7 @@ const COLLEGE_SCOUTING = {
       "2023_4684525": {
         "rushCarShare": 54,
         "recYdShare": 21.3,
-        "avgPpaRush": 24.7,
+        "avgPpaRush": 24.6,
         "avgPpaPass": 93.4,
         "usageRush": 68.1
       },
@@ -556536,7 +556536,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 32.3
       },
       "2023_4685470": {
-        "rushCarShare": 32.4,
+        "rushCarShare": 32.5,
         "recYdShare": 37.1,
         "avgPpaRush": 82.5,
         "avgPpaPass": 71.6,
@@ -556559,7 +556559,7 @@ const COLLEGE_SCOUTING = {
       "2023_4685555": {
         "rushCarShare": 69.9,
         "recYdShare": 95.1,
-        "avgPpaRush": 22.1,
+        "avgPpaRush": 22,
         "avgPpaPass": 83.6,
         "usageRush": 62.4
       },
@@ -556578,7 +556578,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 93.5
       },
       "2023_4685723": {
-        "rushCarShare": 29.2,
+        "rushCarShare": 29.1,
         "recYdShare": 29.4,
         "avgPpaRush": 39.7,
         "avgPpaPass": 50.6,
@@ -556622,7 +556622,7 @@ const COLLEGE_SCOUTING = {
       "2023_4686658": {
         "rushCarShare": 31.6,
         "recYdShare": 24.6,
-        "avgPpaRush": 23.4,
+        "avgPpaRush": 23.3,
         "avgPpaPass": 6.3,
         "usageRush": 30.5
       },
@@ -556636,7 +556636,7 @@ const COLLEGE_SCOUTING = {
       "2023_4687475": {
         "rushCarShare": 78.2,
         "recYdShare": 63.9,
-        "avgPpaRush": 25.9,
+        "avgPpaRush": 25.8,
         "avgPpaPass": 80.1,
         "usageRush": 76.4
       },
@@ -556804,7 +556804,7 @@ const COLLEGE_SCOUTING = {
       "2023_4714365": {
         "rushCarShare": 67.7,
         "recYdShare": 72.3,
-        "avgPpaRush": 23,
+        "avgPpaRush": 22.9,
         "avgPpaPass": 81.3,
         "usageRush": 68.8
       },
@@ -556879,7 +556879,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 32.3
       },
       "2023_4838269": {
-        "rushCarShare": 28.8,
+        "rushCarShare": 28.7,
         "recYdShare": 48.5,
         "avgPpaRush": 70.1,
         "avgPpaPass": 90.6,
@@ -556923,7 +556923,7 @@ const COLLEGE_SCOUTING = {
       "2023_4873234": {
         "rushCarShare": 57.5,
         "recYdShare": 46.3,
-        "avgPpaRush": 42.7,
+        "avgPpaRush": 42.8,
         "avgPpaPass": 27.9,
         "usageRush": 50.9
       },
@@ -556937,7 +556937,7 @@ const COLLEGE_SCOUTING = {
       "2023_4875385": {
         "rushCarShare": 48,
         "recYdShare": 21.3,
-        "avgPpaRush": 42.4,
+        "avgPpaRush": 42.5,
         "avgPpaPass": 25.1,
         "usageRush": 92.2
       },
@@ -556956,7 +556956,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 58.4
       },
       "2023_4875671": {
-        "rushCarShare": 36.5,
+        "rushCarShare": 36.6,
         "recYdShare": 68.5,
         "avgPpaRush": 69.2,
         "avgPpaPass": 71.7,
@@ -557021,7 +557021,7 @@ const COLLEGE_SCOUTING = {
       "2023_4899368": {
         "rushCarShare": 9.8,
         "recYdShare": 55.4,
-        "avgPpaRush": 15,
+        "avgPpaRush": 14.9,
         "avgPpaPass": 90.1,
         "usageRush": 14.8
       },
@@ -557042,7 +557042,7 @@ const COLLEGE_SCOUTING = {
       "2023_4911851": {
         "rushCarShare": 91.4,
         "recYdShare": 92,
-        "avgPpaRush": 20.2,
+        "avgPpaRush": 20.1,
         "avgPpaPass": 37.7,
         "usageRush": 80.2
       },
@@ -557061,7 +557061,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 68.5
       },
       "2023_4918414": {
-        "rushCarShare": 33.1,
+        "rushCarShare": 33.2,
         "recYdShare": 89.3,
         "avgPpaRush": 35.8,
         "avgPpaPass": 70.2,
@@ -557138,7 +557138,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 29.4
       },
       "2023_5081926": {
-        "rushCarShare": 28.8,
+        "rushCarShare": 28.7,
         "recYdShare": 29.4,
         "avgPpaRush": 90.3,
         "avgPpaPass": 52.6,
@@ -557173,7 +557173,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 10.5
       },
       "2023_5084179": {
-        "rushCarShare": 34.4,
+        "rushCarShare": 34.5,
         "recYdShare": 77.6,
         "avgPpaRush": 70.6,
         "avgPpaPass": 96,
@@ -557210,7 +557210,7 @@ const COLLEGE_SCOUTING = {
       "2023_5086034": {
         "rushCarShare": 64.9,
         "recYdShare": 75,
-        "avgPpaRush": 24.7,
+        "avgPpaRush": 24.6,
         "avgPpaPass": 80.2,
         "usageRush": 78.1
       },
@@ -557229,7 +557229,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 6.4
       },
       "2023_5125754": {
-        "rushCarShare": 29.2,
+        "rushCarShare": 29.1,
         "recYdShare": 29.4,
         "avgPpaRush": 65,
         "avgPpaPass": 93.3,
@@ -557273,7 +557273,7 @@ const COLLEGE_SCOUTING = {
       "2023_5154339": {
         "rushCarShare": 82.7,
         "recYdShare": 63.9,
-        "avgPpaRush": 23.5,
+        "avgPpaRush": 23.4,
         "avgPpaPass": 26.8,
         "usageRush": 86.4
       },
@@ -557336,14 +557336,14 @@ const COLLEGE_SCOUTING = {
       "2024_4427332": {
         "rushCarShare": 49.4,
         "recYdShare": 69.5,
-        "avgPpaRush": 42.4,
+        "avgPpaRush": 42.5,
         "avgPpaPass": 97.4,
         "usageRush": 38.7
       },
       "2024_4427648": {
-        "rushCarShare": 32.4,
+        "rushCarShare": 32.5,
         "recYdShare": 23,
-        "avgPpaRush": 9.4,
+        "avgPpaRush": 9.3,
         "avgPpaPass": 22.9,
         "usageRush": 18.9
       },
@@ -557614,11 +557614,11 @@ const COLLEGE_SCOUTING = {
         "usageRush": 56.3
       },
       "2024_4568312": {
-        "rushCarShare": 36.5,
+        "rushCarShare": 36.6,
         "recYdShare": 84.2,
         "avgPpaRush": 51.5,
         "avgPpaPass": 79.5,
-        "usageRush": 25.8
+        "usageRush": 25.7
       },
       "2024_4568490": {
         "rushCarShare": 89.3,
@@ -557763,7 +557763,7 @@ const COLLEGE_SCOUTING = {
       "2024_4613032": {
         "rushCarShare": 66.4,
         "recYdShare": 23,
-        "avgPpaRush": 42.4,
+        "avgPpaRush": 42.5,
         "avgPpaPass": 9.4,
         "usageRush": 72.6
       },
@@ -557840,14 +557840,14 @@ const COLLEGE_SCOUTING = {
       "2024_4685269": {
         "rushCarShare": 41.4,
         "recYdShare": 71.6,
-        "avgPpaRush": 44.1,
+        "avgPpaRush": 44.2,
         "avgPpaPass": 56.9,
         "usageRush": 70.1
       },
       "2024_4685279": {
         "rushCarShare": 40.9,
         "recYdShare": 88.5,
-        "avgPpaRush": 44.1,
+        "avgPpaRush": 44.2,
         "avgPpaPass": 76.5,
         "usageRush": 34.3
       },
@@ -558064,7 +558064,7 @@ const COLLEGE_SCOUTING = {
       "2024_4700138": {
         "rushCarShare": 30.1,
         "recYdShare": 43.5,
-        "avgPpaRush": 22.4,
+        "avgPpaRush": 22.3,
         "avgPpaPass": 65.3,
         "usageRush": 39.4
       },
@@ -558153,7 +558153,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 93.8
       },
       "2024_4827047": {
-        "rushCarShare": 34.4,
+        "rushCarShare": 34.5,
         "recYdShare": 18.4,
         "avgPpaRush": 65.4,
         "avgPpaPass": 19.1,
@@ -558223,7 +558223,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 49
       },
       "2024_4871053": {
-        "rushCarShare": 33.1,
+        "rushCarShare": 33.2,
         "recYdShare": 89.9,
         "avgPpaRush": 70.8,
         "avgPpaPass": 87.3,
@@ -558282,7 +558282,7 @@ const COLLEGE_SCOUTING = {
         "rushCarShare": 11.3,
         "recYdShare": 1.4,
         "avgPpaRush": 73.5,
-        "avgPpaPass": 16.3,
+        "avgPpaPass": 16.2,
         "usageRush": 5.1
       },
       "2024_4877713": {
@@ -558302,7 +558302,7 @@ const COLLEGE_SCOUTING = {
       "2024_4880638": {
         "rushCarShare": 71.9,
         "recYdShare": 26.1,
-        "avgPpaRush": 22.4,
+        "avgPpaRush": 22.3,
         "avgPpaPass": 19.2,
         "usageRush": 71
       },
@@ -558414,7 +558414,7 @@ const COLLEGE_SCOUTING = {
       "2024_4918103": {
         "rushCarShare": 63,
         "recYdShare": 27.8,
-        "avgPpaRush": 25,
+        "avgPpaRush": 24.9,
         "avgPpaPass": 7.5,
         "usageRush": 59.3
       },
@@ -558484,7 +558484,7 @@ const COLLEGE_SCOUTING = {
       "2024_4923298": {
         "rushCarShare": 37.1,
         "recYdShare": 46.3,
-        "avgPpaRush": 8.1,
+        "avgPpaRush": 8,
         "avgPpaPass": 89.1,
         "usageRush": 28.3
       },
@@ -558505,21 +558505,21 @@ const COLLEGE_SCOUTING = {
       "2024_4954506": {
         "rushCarShare": 33.5,
         "recYdShare": 17,
-        "avgPpaRush": 42.7,
+        "avgPpaRush": 42.8,
         "avgPpaPass": 10.5,
         "usageRush": 29.7
       },
       "2024_5030333": {
         "rushCarShare": 74.9,
         "recYdShare": 93.6,
-        "avgPpaRush": 20.2,
+        "avgPpaRush": 20.1,
         "avgPpaPass": 82.3,
         "usageRush": 64.3
       },
       "2024_5076654": {
         "rushCarShare": 9.2,
         "recYdShare": 23,
-        "avgPpaRush": 23,
+        "avgPpaRush": 22.9,
         "avgPpaPass": 65.1,
         "usageRush": 5.1
       },
@@ -558549,7 +558549,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 89.6,
         "avgPpaRush": 6.8,
         "avgPpaPass": 63.1,
-        "usageRush": 25.1
+        "usageRush": 25
       },
       "2024_5078251": {
         "rushCarShare": 71.3,
@@ -558636,7 +558636,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 86.1
       },
       "2024_5081526": {
-        "rushCarShare": 32.7,
+        "rushCarShare": 32.8,
         "recYdShare": 98.2,
         "avgPpaRush": 51.7,
         "avgPpaPass": 90,
@@ -558664,7 +558664,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 94.5
       },
       "2024_5082548": {
-        "rushCarShare": 32,
+        "rushCarShare": 32.1,
         "recYdShare": 45,
         "avgPpaRush": 97.6,
         "avgPpaPass": 86.7,
@@ -558785,7 +558785,7 @@ const COLLEGE_SCOUTING = {
       "2024_5121709": {
         "rushCarShare": 8.2,
         "recYdShare": 14.3,
-        "avgPpaRush": 22.4,
+        "avgPpaRush": 22.3,
         "avgPpaPass": 26.9,
         "usageRush": 5.1
       },
@@ -558951,7 +558951,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 41.1
       },
       "2024_5219864": {
-        "rushCarShare": 32,
+        "rushCarShare": 32.1,
         "recYdShare": 38.4,
         "avgPpaRush": 63.5,
         "avgPpaPass": 10.5,
@@ -559035,7 +559035,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 49
       },
       "2025_4430843": {
-        "rushCarShare": 34.4,
+        "rushCarShare": 34.5,
         "recYdShare": 48.5,
         "avgPpaRush": 40.2,
         "avgPpaPass": 49.7,
@@ -559084,7 +559084,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 84.7
       },
       "2025_4432297": {
-        "rushCarShare": 29.2,
+        "rushCarShare": 29.1,
         "recYdShare": 40,
         "avgPpaRush": 33.4,
         "avgPpaPass": 29.9,
@@ -559126,7 +559126,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 64.7
       },
       "2025_4576294": {
-        "rushCarShare": 35.6,
+        "rushCarShare": 35.7,
         "recYdShare": 18.4,
         "avgPpaRush": 46.5,
         "avgPpaPass": 13.1,
@@ -559135,7 +559135,7 @@ const COLLEGE_SCOUTING = {
       "2025_4594984": {
         "rushCarShare": 53.6,
         "recYdShare": 57.4,
-        "avgPpaRush": 24.7,
+        "avgPpaRush": 24.6,
         "avgPpaPass": 29.7,
         "usageRush": 53.9
       },
@@ -559156,7 +559156,7 @@ const COLLEGE_SCOUTING = {
       "2025_4607267": {
         "rushCarShare": 14.1,
         "recYdShare": 84.2,
-        "avgPpaRush": 24.3,
+        "avgPpaRush": 24.2,
         "avgPpaPass": 49,
         "usageRush": 6.4
       },
@@ -559205,7 +559205,7 @@ const COLLEGE_SCOUTING = {
       "2025_4680018": {
         "rushCarShare": 42.2,
         "recYdShare": 46.3,
-        "avgPpaRush": 8.1,
+        "avgPpaRush": 8,
         "avgPpaPass": 49.3,
         "usageRush": 74
       },
@@ -559217,7 +559217,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 14.3
       },
       "2025_4683234": {
-        "rushCarShare": 32,
+        "rushCarShare": 32.1,
         "recYdShare": 38.4,
         "avgPpaRush": 81,
         "avgPpaPass": 85.3,
@@ -559226,9 +559226,9 @@ const COLLEGE_SCOUTING = {
       "2025_4685237": {
         "rushCarShare": 13.8,
         "recYdShare": 73.2,
-        "avgPpaRush": 18.6,
+        "avgPpaRush": 18.5,
         "avgPpaPass": 77.7,
-        "usageRush": 26.6
+        "usageRush": 26.5
       },
       "2025_4685246": {
         "rushCarShare": 89.1,
@@ -559247,7 +559247,7 @@ const COLLEGE_SCOUTING = {
       "2025_4685385": {
         "rushCarShare": 99.2,
         "recYdShare": 62.9,
-        "avgPpaRush": 24.7,
+        "avgPpaRush": 24.6,
         "avgPpaPass": 10.9,
         "usageRush": 99.3
       },
@@ -559256,7 +559256,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 92.4,
         "avgPpaRush": 55.2,
         "avgPpaPass": 64.1,
-        "usageRush": 27.9
+        "usageRush": 27.8
       },
       "2025_4685470": {
         "rushCarShare": 15,
@@ -559287,7 +559287,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 81.6
       },
       "2025_4685545": {
-        "rushCarShare": 34.4,
+        "rushCarShare": 34.5,
         "recYdShare": 57.4,
         "avgPpaRush": 86.4,
         "avgPpaPass": 61.3,
@@ -559345,12 +559345,12 @@ const COLLEGE_SCOUTING = {
       "2025_4689529": {
         "rushCarShare": 37.1,
         "recYdShare": 77.6,
-        "avgPpaRush": 23.5,
+        "avgPpaRush": 23.4,
         "avgPpaPass": 52.8,
         "usageRush": 23.2
       },
       "2025_4691889": {
-        "rushCarShare": 32.4,
+        "rushCarShare": 32.5,
         "recYdShare": 86.1,
         "avgPpaRush": 88,
         "avgPpaPass": 48.7,
@@ -559518,9 +559518,9 @@ const COLLEGE_SCOUTING = {
         "usageRush": 12.1
       },
       "2025_4869582": {
-        "rushCarShare": 36.5,
+        "rushCarShare": 36.6,
         "recYdShare": 81.7,
-        "avgPpaRush": 24.7,
+        "avgPpaRush": 24.6,
         "avgPpaPass": 55.2,
         "usageRush": 26.2
       },
@@ -559569,14 +559569,14 @@ const COLLEGE_SCOUTING = {
       "2025_4871013": {
         "rushCarShare": 60.4,
         "recYdShare": 70.4,
-        "avgPpaRush": 20,
+        "avgPpaRush": 19.9,
         "avgPpaPass": 25.2,
         "usageRush": 53.5
       },
       "2025_4871053": {
         "rushCarShare": 79.9,
         "recYdShare": 75.7,
-        "avgPpaRush": 21.3,
+        "avgPpaRush": 21.2,
         "avgPpaPass": 19,
         "usageRush": 86.8
       },
@@ -559597,14 +559597,14 @@ const COLLEGE_SCOUTING = {
       "2025_4875267": {
         "rushCarShare": 18.9,
         "recYdShare": 8.6,
-        "avgPpaRush": 24.3,
+        "avgPpaRush": 24.2,
         "avgPpaPass": 10.5,
         "usageRush": 11.1
       },
       "2025_4875666": {
         "rushCarShare": 27.2,
         "recYdShare": 89.3,
-        "avgPpaRush": 20.5,
+        "avgPpaRush": 20.4,
         "avgPpaPass": 76.1,
         "usageRush": 20.3
       },
@@ -559618,7 +559618,7 @@ const COLLEGE_SCOUTING = {
       "2025_4876311": {
         "rushCarShare": 24,
         "recYdShare": 69.5,
-        "avgPpaRush": 24.7,
+        "avgPpaRush": 24.6,
         "avgPpaPass": 40.6,
         "usageRush": 21.3
       },
@@ -559637,7 +559637,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 8.2
       },
       "2025_4878394": {
-        "rushCarShare": 28.8,
+        "rushCarShare": 28.7,
         "recYdShare": 54.2,
         "avgPpaRush": 38.7,
         "avgPpaPass": 32.2,
@@ -559674,7 +559674,7 @@ const COLLEGE_SCOUTING = {
       "2025_4897730": {
         "rushCarShare": 57.7,
         "recYdShare": 59.5,
-        "avgPpaRush": 17.4,
+        "avgPpaRush": 17.3,
         "avgPpaPass": 50.5,
         "usageRush": 48.3
       },
@@ -559688,7 +559688,7 @@ const COLLEGE_SCOUTING = {
       "2025_4899368": {
         "rushCarShare": 99.2,
         "recYdShare": 81.7,
-        "avgPpaRush": 20.5,
+        "avgPpaRush": 20.4,
         "avgPpaPass": 23.4,
         "usageRush": 99
       },
@@ -559744,7 +559744,7 @@ const COLLEGE_SCOUTING = {
       "2025_4920901": {
         "rushCarShare": 79.9,
         "recYdShare": 93,
-        "avgPpaRush": 24.3,
+        "avgPpaRush": 24.2,
         "avgPpaPass": 33.2,
         "usageRush": 91.3
       },
@@ -559760,14 +559760,14 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 75,
         "avgPpaRush": 92.4,
         "avgPpaPass": 24.4,
-        "usageRush": 26.6
+        "usageRush": 26.5
       },
       "2025_4922993": {
         "rushCarShare": 30.5,
         "recYdShare": 17,
         "avgPpaRush": 39.3,
         "avgPpaPass": 61.8,
-        "usageRush": 26.6
+        "usageRush": 26.5
       },
       "2025_4923046": {
         "rushCarShare": 40.5,
@@ -559884,7 +559884,7 @@ const COLLEGE_SCOUTING = {
       "2025_5079378": {
         "rushCarShare": 28.5,
         "recYdShare": 26.1,
-        "avgPpaRush": 23.4,
+        "avgPpaRush": 23.3,
         "avgPpaPass": 18.6,
         "usageRush": 31.2
       },
@@ -559924,7 +559924,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 31.2
       },
       "2025_5079641": {
-        "rushCarShare": 32.7,
+        "rushCarShare": 32.8,
         "recYdShare": 11.7,
         "avgPpaRush": 30.8,
         "avgPpaPass": 84.9,
@@ -560001,7 +560001,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 51.4
       },
       "2025_5084179": {
-        "rushCarShare": 33.1,
+        "rushCarShare": 33.2,
         "recYdShare": 46.3,
         "avgPpaRush": 84.7,
         "avgPpaPass": 95.7,
@@ -560094,7 +560094,7 @@ const COLLEGE_SCOUTING = {
       "2025_5093886": {
         "rushCarShare": 72.1,
         "recYdShare": 69.5,
-        "avgPpaRush": 42.4,
+        "avgPpaRush": 42.5,
         "avgPpaPass": 28.2,
         "usageRush": 77.4
       },
@@ -560129,7 +560129,7 @@ const COLLEGE_SCOUTING = {
       "2025_5110454": {
         "rushCarShare": 7.1,
         "recYdShare": 19.8,
-        "avgPpaRush": 20.2,
+        "avgPpaRush": 20.1,
         "avgPpaPass": 29.1,
         "usageRush": 6.4
       },
@@ -560199,7 +560199,7 @@ const COLLEGE_SCOUTING = {
       "2025_5126513": {
         "rushCarShare": 47.4,
         "recYdShare": 58.5,
-        "avgPpaRush": 24.3,
+        "avgPpaRush": 24.2,
         "avgPpaPass": 65.7,
         "usageRush": 37.2
       },
@@ -560211,7 +560211,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 53.9
       },
       "2025_5141423": {
-        "rushCarShare": 32,
+        "rushCarShare": 32.1,
         "recYdShare": 24.6,
         "avgPpaRush": 98.6,
         "avgPpaPass": 31.2,
@@ -560386,7 +560386,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 65.7
       },
       "2025_5155366": {
-        "rushCarShare": 33.1,
+        "rushCarShare": 33.2,
         "recYdShare": 52.2,
         "avgPpaRush": 91.4,
         "avgPpaPass": 56.8,
@@ -560437,7 +560437,7 @@ const COLLEGE_SCOUTING = {
       "2025_5157261": {
         "rushCarShare": 52.2,
         "recYdShare": 50.9,
-        "avgPpaRush": 15.3,
+        "avgPpaRush": 15.2,
         "avgPpaPass": 24.9,
         "usageRush": 40.3
       },
@@ -560481,7 +560481,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 13,
         "avgPpaRush": 74.5,
         "avgPpaPass": 61.3,
-        "usageRush": 27.9
+        "usageRush": 27.8
       },
       "2025_5167252": {
         "rushCarShare": 36.2,
@@ -560598,14 +560598,14 @@ const COLLEGE_SCOUTING = {
       "2025_5218961": {
         "rushCarShare": 49.4,
         "recYdShare": 33.9,
-        "avgPpaRush": 23.5,
+        "avgPpaRush": 23.4,
         "avgPpaPass": 12.2,
         "usageRush": 58.7
       },
       "2025_5219089": {
         "rushCarShare": 22.9,
         "recYdShare": 70.4,
-        "avgPpaRush": 25.9,
+        "avgPpaRush": 25.8,
         "avgPpaPass": 54.4,
         "usageRush": 17.7
       },
@@ -560626,7 +560626,7 @@ const COLLEGE_SCOUTING = {
       "2025_5220340": {
         "rushCarShare": 22.6,
         "recYdShare": 45,
-        "avgPpaRush": 42.4,
+        "avgPpaRush": 42.5,
         "avgPpaPass": 39.9,
         "usageRush": 18
       },
@@ -560638,7 +560638,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 22.2
       },
       "2025_5223119": {
-        "rushCarShare": 28.8,
+        "rushCarShare": 28.7,
         "recYdShare": 1.4,
         "avgPpaRush": 65,
         "avgPpaPass": 0.2,
@@ -560722,7 +560722,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 33.8
       },
       "2025_5295318": {
-        "rushCarShare": 32.7,
+        "rushCarShare": 32.8,
         "recYdShare": 21.3,
         "avgPpaRush": 92.4,
         "avgPpaPass": 10.3,
@@ -560731,7 +560731,7 @@ const COLLEGE_SCOUTING = {
       "2025_5295550": {
         "rushCarShare": 86.1,
         "recYdShare": 98,
-        "avgPpaRush": 17.4,
+        "avgPpaRush": 17.3,
         "avgPpaPass": 33.6,
         "usageRush": 80.9
       },
@@ -560766,7 +560766,7 @@ const COLLEGE_SCOUTING = {
       "2025_5296162": {
         "rushCarShare": 15.9,
         "recYdShare": 29.4,
-        "avgPpaRush": 13.9,
+        "avgPpaRush": 13.8,
         "avgPpaPass": 6.4,
         "usageRush": 7.1
       },
@@ -560780,7 +560780,7 @@ const COLLEGE_SCOUTING = {
       "2025_5296378": {
         "rushCarShare": 45.6,
         "recYdShare": 97,
-        "avgPpaRush": 25.9,
+        "avgPpaRush": 25.8,
         "avgPpaPass": 69.6,
         "usageRush": 30.5
       },
@@ -560808,7 +560808,7 @@ const COLLEGE_SCOUTING = {
       "2026_4685268": {
         "rushCarShare": 73.6,
         "recYdShare": 66.8,
-        "avgPpaRush": 23.4,
+        "avgPpaRush": 23.3,
         "avgPpaPass": 28.2,
         "usageRush": 68.1
       },
@@ -560855,7 +560855,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 16
       },
       "2026_4805256": {
-        "rushCarShare": 35.6,
+        "rushCarShare": 35.7,
         "recYdShare": 72.3,
         "avgPpaRush": 5.7,
         "avgPpaPass": 34.7,
@@ -560927,7 +560927,7 @@ const COLLEGE_SCOUTING = {
       "2026_4870934": {
         "rushCarShare": 59.6,
         "recYdShare": 49.6,
-        "avgPpaRush": 24.3,
+        "avgPpaRush": 24.2,
         "avgPpaPass": 24,
         "usageRush": 50.9
       },
@@ -560936,10 +560936,10 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 89.6,
         "avgPpaRush": 5.7,
         "avgPpaPass": 77.9,
-        "usageRush": 25.4
+        "usageRush": 25.3
       },
       "2026_4871081": {
-        "rushCarShare": 32.7,
+        "rushCarShare": 32.8,
         "recYdShare": 1.4,
         "avgPpaRush": 12.7,
         "avgPpaPass": 0.6,
@@ -560983,7 +560983,7 @@ const COLLEGE_SCOUTING = {
       "2026_4897730": {
         "rushCarShare": 44.2,
         "recYdShare": 40,
-        "avgPpaRush": 18.6,
+        "avgPpaRush": 18.5,
         "avgPpaPass": 4.2,
         "usageRush": 36.1
       },
@@ -561044,7 +561044,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 66.9
       },
       "2026_4918111": {
-        "rushCarShare": 32,
+        "rushCarShare": 32.1,
         "recYdShare": 58.5,
         "avgPpaRush": 99.9,
         "avgPpaPass": 94.3,
@@ -561054,7 +561054,7 @@ const COLLEGE_SCOUTING = {
         "rushCarShare": 17.3,
         "recYdShare": 32.1,
         "avgPpaRush": 97.7,
-        "avgPpaPass": 16.9,
+        "avgPpaPass": 16.8,
         "usageRush": 33.1
       },
       "2026_4918414": {
@@ -561149,14 +561149,14 @@ const COLLEGE_SCOUTING = {
         "usageRush": 39.9
       },
       "2026_5078005": {
-        "rushCarShare": 32.7,
+        "rushCarShare": 32.8,
         "recYdShare": 19.8,
         "avgPpaRush": 47.8,
         "avgPpaPass": 8.3,
         "usageRush": 43.2
       },
       "2026_5078063": {
-        "rushCarShare": 36.5,
+        "rushCarShare": 36.6,
         "recYdShare": 62.9,
         "avgPpaRush": 73.3,
         "avgPpaPass": 54,
@@ -561177,7 +561177,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 62.7
       },
       "2026_5078422": {
-        "rushCarShare": 28.8,
+        "rushCarShare": 28.7,
         "recYdShare": 23,
         "avgPpaRush": 62.7,
         "avgPpaPass": 20.6,
@@ -561256,7 +561256,7 @@ const COLLEGE_SCOUTING = {
       "2026_5079506": {
         "rushCarShare": 54.6,
         "recYdShare": 60.6,
-        "avgPpaRush": 18.6,
+        "avgPpaRush": 18.5,
         "avgPpaPass": 55.4,
         "usageRush": 43.9
       },
@@ -561284,12 +561284,12 @@ const COLLEGE_SCOUTING = {
       "2026_5079663": {
         "rushCarShare": 68.2,
         "recYdShare": 48.5,
-        "avgPpaRush": 8.1,
+        "avgPpaRush": 8,
         "avgPpaPass": 14.6,
         "usageRush": 85.4
       },
       "2026_5079742": {
-        "rushCarShare": 33.1,
+        "rushCarShare": 33.2,
         "recYdShare": 67.8,
         "avgPpaRush": 72.2,
         "avgPpaPass": 78.2,
@@ -561354,7 +561354,7 @@ const COLLEGE_SCOUTING = {
       "2026_5085729": {
         "rushCarShare": 58.4,
         "recYdShare": 56.3,
-        "avgPpaRush": 8.1,
+        "avgPpaRush": 8,
         "avgPpaPass": 54,
         "usageRush": 50.2
       },
@@ -561429,7 +561429,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 18.3
       },
       "2026_5103639": {
-        "rushCarShare": 36.5,
+        "rushCarShare": 36.6,
         "recYdShare": 79.6,
         "avgPpaRush": 68.2,
         "avgPpaPass": 24.4,
@@ -561443,7 +561443,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 46.1
       },
       "2026_5110535": {
-        "rushCarShare": 27.6,
+        "rushCarShare": 27.5,
         "recYdShare": 45,
         "avgPpaRush": 14.3,
         "avgPpaPass": 18.3,
@@ -561452,7 +561452,7 @@ const COLLEGE_SCOUTING = {
       "2026_5120317": {
         "rushCarShare": 37.5,
         "recYdShare": 77.3,
-        "avgPpaRush": 18.6,
+        "avgPpaRush": 18.5,
         "avgPpaPass": 23.5,
         "usageRush": 27.1
       },
@@ -561543,7 +561543,7 @@ const COLLEGE_SCOUTING = {
       "2026_5141560": {
         "rushCarShare": 64.4,
         "recYdShare": 59.5,
-        "avgPpaRush": 25,
+        "avgPpaRush": 24.9,
         "avgPpaPass": 33,
         "usageRush": 83.9
       },
@@ -561615,7 +561615,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 62.9,
         "avgPpaRush": 62.3,
         "avgPpaPass": 39.7,
-        "usageRush": 26.6
+        "usageRush": 26.5
       },
       "2026_5147347": {
         "rushCarShare": 65.2,
@@ -561641,19 +561641,19 @@ const COLLEGE_SCOUTING = {
       "2026_5148741": {
         "rushCarShare": 49,
         "recYdShare": 40,
-        "avgPpaRush": 17.4,
+        "avgPpaRush": 17.3,
         "avgPpaPass": 13,
         "usageRush": 39.9
       },
       "2026_5151112": {
-        "rushCarShare": 32.4,
+        "rushCarShare": 32.5,
         "recYdShare": 70.4,
         "avgPpaRush": 33,
         "avgPpaPass": 67.3,
         "usageRush": 28.3
       },
       "2026_5151338": {
-        "rushCarShare": 33.1,
+        "rushCarShare": 33.2,
         "recYdShare": 0.4,
         "avgPpaRush": 62.7,
         "avgPpaPass": 5.6,
@@ -561744,7 +561744,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 27.4
       },
       "2026_5158975": {
-        "rushCarShare": 27.6,
+        "rushCarShare": 27.5,
         "recYdShare": 18.4,
         "avgPpaRush": 90.5,
         "avgPpaPass": 1.3,
@@ -561760,7 +561760,7 @@ const COLLEGE_SCOUTING = {
       "2026_5159046": {
         "rushCarShare": 59.9,
         "recYdShare": 62.9,
-        "avgPpaRush": 15.3,
+        "avgPpaRush": 15.2,
         "avgPpaPass": 58.2,
         "usageRush": 48.7
       },
@@ -561811,7 +561811,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 10.1,
         "avgPpaRush": 25.3,
         "avgPpaPass": 14.6,
-        "usageRush": 25.8
+        "usageRush": 25.7
       },
       "2026_5166161": {
         "rushCarShare": 69.9,
@@ -561888,7 +561888,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 23,
         "avgPpaRush": 69,
         "avgPpaPass": 81.3,
-        "usageRush": 27.9
+        "usageRush": 27.8
       },
       "2026_5200430": {
         "rushCarShare": 52.8,
@@ -561912,18 +561912,18 @@ const COLLEGE_SCOUTING = {
         "usageRush": 58.9
       },
       "2026_5207925": {
-        "rushCarShare": 38.4,
+        "rushCarShare": 30.9,
         "recYdShare": 1.4,
         "avgPpaRush": 16.9,
         "avgPpaPass": 0,
         "usageRush": 27.1
       },
       "2026_5207930": {
-        "rushCarShare": 26.9,
-        "recYdShare": 24.6,
-        "avgPpaRush": 8.1,
+        "rushCarShare": 31.6,
+        "recYdShare": 19.8,
+        "avgPpaRush": 27,
         "avgPpaPass": 24,
-        "usageRush": 25.1
+        "usageRush": 29
       },
       "2026_5208592": {
         "rushCarShare": 38.9,
@@ -561942,7 +561942,7 @@ const COLLEGE_SCOUTING = {
       "2026_5209945": {
         "rushCarShare": 90.8,
         "recYdShare": 91,
-        "avgPpaRush": 42.4,
+        "avgPpaRush": 42.5,
         "avgPpaPass": 52.9,
         "usageRush": 89.9
       },
@@ -561970,7 +561970,7 @@ const COLLEGE_SCOUTING = {
       "2026_5218961": {
         "rushCarShare": 96.4,
         "recYdShare": 83.9,
-        "avgPpaRush": 22.4,
+        "avgPpaRush": 22.3,
         "avgPpaPass": 33.1,
         "usageRush": 95.3
       },
@@ -562026,7 +562026,7 @@ const COLLEGE_SCOUTING = {
       "2026_5222564": {
         "rushCarShare": 44.4,
         "recYdShare": 60.6,
-        "avgPpaRush": 24.7,
+        "avgPpaRush": 24.6,
         "avgPpaPass": 12.6,
         "usageRush": 48.3
       },
@@ -562061,7 +562061,7 @@ const COLLEGE_SCOUTING = {
       "2026_5224792": {
         "rushCarShare": 48.6,
         "recYdShare": 72.3,
-        "avgPpaRush": 12.2,
+        "avgPpaRush": 12.1,
         "avgPpaPass": 13.1,
         "usageRush": 38.7
       },
@@ -562077,7 +562077,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 40,
         "avgPpaRush": 83,
         "avgPpaPass": 51.8,
-        "usageRush": 25.8
+        "usageRush": 25.7
       },
       "2026_5227018": {
         "rushCarShare": 34.7,
@@ -562110,7 +562110,7 @@ const COLLEGE_SCOUTING = {
       "2026_5233016": {
         "rushCarShare": 92.3,
         "recYdShare": 35.5,
-        "avgPpaRush": 43.5,
+        "avgPpaRush": 43.6,
         "avgPpaPass": 38.8,
         "usageRush": 87.1
       },
@@ -562126,7 +562126,7 @@ const COLLEGE_SCOUTING = {
         "recYdShare": 81,
         "avgPpaRush": 14.3,
         "avgPpaPass": 69.7,
-        "usageRush": 27.9
+        "usageRush": 27.8
       },
       "2026_5254150": {
         "rushCarShare": 74.6,
@@ -562173,7 +562173,7 @@ const COLLEGE_SCOUTING = {
       "2026_5265178": {
         "rushCarShare": 77.2,
         "recYdShare": 87.1,
-        "avgPpaRush": 20.2,
+        "avgPpaRush": 20.1,
         "avgPpaPass": 37.8,
         "usageRush": 68.3
       },
@@ -562255,11 +562255,11 @@ const COLLEGE_SCOUTING = {
         "usageRush": 0.6
       },
       "2026_5296364": {
-        "rushCarShare": 72.5,
-        "recYdShare": 61.6,
-        "avgPpaRush": 45.6,
-        "avgPpaPass": 16,
-        "usageRush": 64.5
+        "rushCarShare": 74.1,
+        "recYdShare": 64.8,
+        "avgPpaRush": 40.7,
+        "avgPpaPass": 16.9,
+        "usageRush": 66.1
       },
       "2026_5296374": {
         "rushCarShare": 56.8,
@@ -562304,7 +562304,7 @@ const COLLEGE_SCOUTING = {
         "usageRush": 17.2
       },
       "2026_5306988": {
-        "rushCarShare": 34.4,
+        "rushCarShare": 34.5,
         "recYdShare": 83.4,
         "avgPpaRush": 79.3,
         "avgPpaPass": 17.4,
@@ -562327,7 +562327,7 @@ const COLLEGE_SCOUTING = {
       "2026_5327659": {
         "rushCarShare": 44.2,
         "recYdShare": 23,
-        "avgPpaRush": 21.5,
+        "avgPpaRush": 21.4,
         "avgPpaPass": 17.1,
         "usageRush": 32.3
       },
@@ -562348,7 +562348,7 @@ const COLLEGE_SCOUTING = {
       "2026_5388331": {
         "rushCarShare": 45.6,
         "recYdShare": 49.6,
-        "avgPpaRush": 42.7,
+        "avgPpaRush": 42.8,
         "avgPpaPass": 35.2,
         "usageRush": 36.1
       },
