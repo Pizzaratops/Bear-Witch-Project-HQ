@@ -4,7 +4,7 @@
 //  AUTO-GENERIERT von scripts/sync-fantasy-position-score.js über die
 //  GitHub Action ".github/workflows/sync-fantasy-position-score.yml".
 //  Nicht von Hand editieren.
-//  Zuletzt synchronisiert: 2026-11-20T16:55:25.945Z
+//  Zuletzt synchronisiert: 2026-11-21T00:47:24.747Z
 //
 //  6 Kategorien: Points Scored, Points Allowed, Points by QB/RB/WR/TE
 //  (FLEX zaehlt nach echter Spieler-Position, K/DST fliessen in keine
