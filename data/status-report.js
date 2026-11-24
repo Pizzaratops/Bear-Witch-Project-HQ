@@ -7,7 +7,7 @@
 // ============================================================
 
 const STATUS_REPORT_DATA = {
-  "generatedAt": "2026-11-23T16:45:29.350Z",
+  "generatedAt": "2026-11-24T03:34:56.787Z",
   "leagues": [
     {
       "id": "beyaz-espn-91260355",
@@ -122,8 +122,8 @@ const STATUS_REPORT_DATA = {
           "pos": "RB",
           "nfl": "IND",
           "isStarter": true,
-          "status": "Q",
-          "flag": false,
+          "status": "O",
+          "flag": true,
           "lastGamePoints": 13.7,
           "last3AvgPoints": 9.3,
           "projPoints": 5.3
@@ -188,8 +188,8 @@ const STATUS_REPORT_DATA = {
           "pos": "RB",
           "nfl": "WSH",
           "isStarter": true,
-          "status": "IR",
-          "flag": true,
+          "status": null,
+          "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 0,
           "projPoints": 7.5
@@ -564,7 +564,7 @@ const STATUS_REPORT_DATA = {
           "pos": "TE",
           "nfl": "PHI",
           "isStarter": true,
-          "status": null,
+          "status": "Q",
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 7.2,
@@ -808,7 +808,7 @@ const STATUS_REPORT_DATA = {
           "pos": "RB",
           "nfl": "JAX",
           "isStarter": false,
-          "status": null,
+          "status": "Q",
           "flag": false,
           "lastGamePoints": 20.3,
           "last3AvgPoints": 19.7,
@@ -1283,7 +1283,7 @@ const STATUS_REPORT_DATA = {
           "pos": "RB",
           "nfl": "SEA",
           "isStarter": false,
-          "status": "O",
+          "status": "IR",
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 0.9,
@@ -1305,7 +1305,7 @@ const STATUS_REPORT_DATA = {
           "pos": "RB",
           "nfl": "JAX",
           "isStarter": false,
-          "status": null,
+          "status": "Q",
           "flag": false,
           "lastGamePoints": 18.8,
           "last3AvgPoints": 18.9,
@@ -2358,7 +2358,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 1.9,
           "last3AvgPoints": 7.5,
-          "projPoints": 9.1
+          "projPoints": 9.2
         },
         {
           "name": "David Montgomery",
@@ -2398,7 +2398,7 @@ const STATUS_REPORT_DATA = {
           "pos": "RB",
           "nfl": "WAS",
           "isStarter": false,
-          "status": "Q",
+          "status": null,
           "flag": false,
           "lastGamePoints": 6.2,
           "last3AvgPoints": 9,
@@ -2413,7 +2413,7 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 28.3,
           "last3AvgPoints": 18.3,
-          "projPoints": 14.9
+          "projPoints": 15
         },
         {
           "name": "Zach Charbonnet",
@@ -3328,7 +3328,7 @@ const STATUS_REPORT_DATA = {
           "pos": "TE",
           "nfl": "DET",
           "isStarter": true,
-          "status": null,
+          "status": "Q",
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": null,
@@ -3826,7 +3826,7 @@ const STATUS_REPORT_DATA = {
           "pos": "K",
           "nfl": "JAX",
           "isStarter": false,
-          "status": null,
+          "status": "Q",
           "flag": false,
           "lastGamePoints": 19,
           "last3AvgPoints": 14,
@@ -4058,7 +4058,7 @@ const STATUS_REPORT_DATA = {
           "pos": "RB",
           "nfl": "WAS",
           "isStarter": true,
-          "status": "Q",
+          "status": null,
           "flag": false,
           "lastGamePoints": 6.2,
           "last3AvgPoints": 9,
@@ -4125,7 +4125,7 @@ const STATUS_REPORT_DATA = {
           "pos": "RB",
           "nfl": "SEA",
           "isStarter": false,
-          "status": "O",
+          "status": "IR",
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 0.9,
@@ -4217,14 +4217,14 @@ const STATUS_REPORT_DATA = {
           "flag": false,
           "lastGamePoints": 1.9,
           "last3AvgPoints": 7.5,
-          "projPoints": 9.1
+          "projPoints": 9.2
         },
         {
           "name": "Dallas Goedert",
           "pos": "TE",
           "nfl": "PHI",
           "isStarter": true,
-          "status": null,
+          "status": "Q",
           "flag": false,
           "lastGamePoints": null,
           "last3AvgPoints": 8.6,
