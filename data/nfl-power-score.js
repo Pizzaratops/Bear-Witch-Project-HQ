@@ -4,7 +4,7 @@
 //  AUTO-GENERIERT von scripts/sync-nfl-power-score.js über die GitHub
 //  Action ".github/workflows/sync-nfl-power-score.yml". Nicht von Hand
 //  editieren — Änderungen werden beim nächsten Sync überschrieben.
-//  Zuletzt synchronisiert: 2026-11-23T19:58:55.458Z
+//  Zuletzt synchronisiert: 2026-11-24T04:14:14.003Z
 //
 //  6 Kategorien, datengestützt ausgewählt (siehe Kommentar oben im
 //  Script für die Korrelationsanalyse gegen echte Season-Siege
@@ -74,17 +74,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BUF",
             "values": {
-              "passOffEpa": 0.354,
+              "passOffEpa": 0.337,
               "turnoverDiff": 2,
-              "passDefEpa": 0.061,
-              "rushDefEpa": 0.094,
+              "passDefEpa": 0.03,
+              "rushDefEpa": 0.119,
               "pointsFor": 36,
               "pointsAgainst": 31
             },
             "ranks": {
               "passOffEpa": 4,
               "turnoverDiff": 3,
-              "passDefEpa": 17,
+              "passDefEpa": 16,
               "rushDefEpa": 27,
               "pointsFor": 5,
               "pointsAgainst": 23
@@ -94,18 +94,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIA",
             "values": {
-              "passOffEpa": -0.116,
+              "passOffEpa": -0.137,
               "turnoverDiff": 0,
-              "passDefEpa": 0.036,
-              "rushDefEpa": -0.112,
+              "passDefEpa": 0.042,
+              "rushDefEpa": -0.093,
               "pointsFor": 13,
               "pointsAgainst": 27
             },
             "ranks": {
-              "passOffEpa": 23,
+              "passOffEpa": 25,
               "turnoverDiff": 14,
-              "passDefEpa": 16,
-              "rushDefEpa": 4,
+              "passDefEpa": 17,
+              "rushDefEpa": 5,
               "pointsFor": 25,
               "pointsAgainst": 18
             },
@@ -114,18 +114,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NE",
             "values": {
-              "passOffEpa": -0.109,
+              "passOffEpa": -0.135,
               "turnoverDiff": -3,
-              "passDefEpa": 0.123,
-              "rushDefEpa": -0.041,
+              "passDefEpa": 0.092,
+              "rushDefEpa": -0.03,
               "pointsFor": 10,
               "pointsAgainst": 13
             },
             "ranks": {
-              "passOffEpa": 22,
+              "passOffEpa": 24,
               "turnoverDiff": 31,
-              "passDefEpa": 21,
-              "rushDefEpa": 15,
+              "passDefEpa": 20,
+              "rushDefEpa": 12,
               "pointsFor": 28,
               "pointsAgainst": 6
             },
@@ -134,15 +134,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYJ",
             "values": {
-              "passOffEpa": 0.316,
+              "passOffEpa": 0.321,
               "turnoverDiff": 1,
-              "passDefEpa": -0.163,
-              "rushDefEpa": 0.082,
+              "passDefEpa": -0.177,
+              "rushDefEpa": 0.114,
               "pointsFor": 23,
               "pointsAgainst": 10
             },
             "ranks": {
-              "passOffEpa": 7,
+              "passOffEpa": 6,
               "turnoverDiff": 8,
               "passDefEpa": 5,
               "rushDefEpa": 26,
@@ -154,10 +154,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BAL",
             "values": {
-              "passOffEpa": 0.341,
+              "passOffEpa": 0.322,
               "turnoverDiff": 1,
-              "passDefEpa": -0.219,
-              "rushDefEpa": 0.116,
+              "passDefEpa": -0.236,
+              "rushDefEpa": 0.169,
               "pointsFor": 41,
               "pointsAgainst": 23
             },
@@ -165,7 +165,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 5,
               "turnoverDiff": 9,
               "passDefEpa": 3,
-              "rushDefEpa": 28,
+              "rushDefEpa": 29,
               "pointsFor": 2,
               "pointsAgainst": 14
             },
@@ -174,18 +174,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CIN",
             "values": {
-              "passOffEpa": -0.053,
+              "passOffEpa": -0.076,
               "turnoverDiff": 3,
-              "passDefEpa": -0.145,
-              "rushDefEpa": -0.043,
+              "passDefEpa": -0.138,
+              "rushDefEpa": -0.051,
               "pointsFor": 33,
               "pointsAgainst": 27
             },
             "ranks": {
-              "passOffEpa": 20,
+              "passOffEpa": 21,
               "turnoverDiff": 1,
               "passDefEpa": 7,
-              "rushDefEpa": 14,
+              "rushDefEpa": 9,
               "pointsFor": 7,
               "pointsAgainst": 19
             },
@@ -194,10 +194,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CLE",
             "values": {
-              "passOffEpa": -0.152,
+              "passOffEpa": -0.168,
               "turnoverDiff": -2,
-              "passDefEpa": 0.671,
-              "rushDefEpa": -0.047,
+              "passDefEpa": 0.647,
+              "rushDefEpa": -0.046,
               "pointsFor": 10,
               "pointsAgainst": 34
             },
@@ -205,7 +205,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 27,
               "turnoverDiff": 26,
               "passDefEpa": 32,
-              "rushDefEpa": 13,
+              "rushDefEpa": 10,
               "pointsFor": 29,
               "pointsAgainst": 27
             },
@@ -214,10 +214,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PIT",
             "values": {
-              "passOffEpa": -0.18,
+              "passOffEpa": -0.186,
               "turnoverDiff": 1,
-              "passDefEpa": -0.482,
-              "rushDefEpa": -0.096,
+              "passDefEpa": -0.477,
+              "rushDefEpa": -0.082,
               "pointsFor": 20,
               "pointsAgainst": 13
             },
@@ -225,7 +225,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 29,
               "turnoverDiff": 10,
               "passDefEpa": 1,
-              "rushDefEpa": 7,
+              "rushDefEpa": 6,
               "pointsFor": 22,
               "pointsAgainst": 7
             },
@@ -234,18 +234,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "HOU",
             "values": {
-              "passOffEpa": 0.061,
+              "passOffEpa": 0.03,
               "turnoverDiff": -2,
-              "passDefEpa": 0.354,
-              "rushDefEpa": -0.086,
+              "passDefEpa": 0.337,
+              "rushDefEpa": -0.055,
               "pointsFor": 31,
               "pointsAgainst": 36
             },
             "ranks": {
-              "passOffEpa": 16,
+              "passOffEpa": 17,
               "turnoverDiff": 27,
               "passDefEpa": 29,
-              "rushDefEpa": 9,
+              "rushDefEpa": 8,
               "pointsFor": 8,
               "pointsAgainst": 28
             },
@@ -254,10 +254,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "IND",
             "values": {
-              "passOffEpa": -0.219,
+              "passOffEpa": -0.236,
               "turnoverDiff": -1,
-              "passDefEpa": 0.341,
-              "rushDefEpa": 0.168,
+              "passDefEpa": 0.322,
+              "rushDefEpa": 0.205,
               "pointsFor": 23,
               "pointsAgainst": 41
             },
@@ -265,7 +265,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 30,
               "turnoverDiff": 20,
               "passDefEpa": 28,
-              "rushDefEpa": 30,
+              "rushDefEpa": 31,
               "pointsFor": 19,
               "pointsAgainst": 31
             },
@@ -274,10 +274,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "JAX",
             "values": {
-              "passOffEpa": 0.671,
+              "passOffEpa": 0.647,
               "turnoverDiff": 2,
-              "passDefEpa": -0.152,
-              "rushDefEpa": 0.041,
+              "passDefEpa": -0.168,
+              "rushDefEpa": 0.05,
               "pointsFor": 34,
               "pointsAgainst": 10
             },
@@ -285,7 +285,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 1,
               "turnoverDiff": 4,
               "passDefEpa": 6,
-              "rushDefEpa": 22,
+              "rushDefEpa": 23,
               "pointsFor": 6,
               "pointsAgainst": 3
             },
@@ -294,18 +294,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TEN",
             "values": {
-              "passOffEpa": -0.163,
+              "passOffEpa": -0.177,
               "turnoverDiff": -1,
-              "passDefEpa": 0.316,
-              "rushDefEpa": -0.035,
+              "passDefEpa": 0.321,
+              "rushDefEpa": -0.012,
               "pointsFor": 10,
               "pointsAgainst": 23
             },
             "ranks": {
               "passOffEpa": 28,
               "turnoverDiff": 21,
-              "passDefEpa": 26,
-              "rushDefEpa": 16,
+              "passDefEpa": 27,
+              "rushDefEpa": 17,
               "pointsFor": 30,
               "pointsAgainst": 15
             },
@@ -314,18 +314,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DEN",
             "values": {
-              "passOffEpa": -0.353,
+              "passOffEpa": -0.36,
               "turnoverDiff": -1,
-              "passDefEpa": -0.045,
-              "rushDefEpa": 0.188,
+              "passDefEpa": -0.056,
+              "rushDefEpa": 0.195,
               "pointsFor": 10,
               "pointsAgainst": 31
             },
             "ranks": {
               "passOffEpa": 31,
               "turnoverDiff": 22,
-              "passDefEpa": 14,
-              "rushDefEpa": 31,
+              "passDefEpa": 13,
+              "rushDefEpa": 30,
               "pointsFor": 31,
               "pointsAgainst": 24
             },
@@ -334,18 +334,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "KC",
             "values": {
-              "passOffEpa": -0.045,
+              "passOffEpa": -0.056,
               "turnoverDiff": 1,
-              "passDefEpa": -0.353,
-              "rushDefEpa": -0.09,
+              "passDefEpa": -0.36,
+              "rushDefEpa": -0.098,
               "pointsFor": 31,
               "pointsAgainst": 10
             },
             "ranks": {
-              "passOffEpa": 19,
+              "passOffEpa": 20,
               "turnoverDiff": 11,
               "passDefEpa": 2,
-              "rushDefEpa": 8,
+              "rushDefEpa": 4,
               "pointsFor": 9,
               "pointsAgainst": 4
             },
@@ -354,18 +354,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LV",
             "values": {
-              "passOffEpa": 0.036,
+              "passOffEpa": 0.042,
               "turnoverDiff": 0,
-              "passDefEpa": -0.116,
-              "rushDefEpa": -0.108,
+              "passDefEpa": -0.137,
+              "rushDefEpa": -0.02,
               "pointsFor": 27,
               "pointsAgainst": 13
             },
             "ranks": {
-              "passOffEpa": 17,
+              "passOffEpa": 16,
               "turnoverDiff": 15,
-              "passDefEpa": 10,
-              "rushDefEpa": 5,
+              "passDefEpa": 8,
+              "rushDefEpa": 15,
               "pointsFor": 13,
               "pointsAgainst": 8
             },
@@ -374,18 +374,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LAC",
             "values": {
-              "passOffEpa": -0.124,
+              "passOffEpa": -0.119,
               "turnoverDiff": -2,
-              "passDefEpa": 0.165,
-              "rushDefEpa": -0.027,
+              "passDefEpa": 0.202,
+              "rushDefEpa": -0.017,
               "pointsFor": 14,
               "pointsAgainst": 26
             },
             "ranks": {
-              "passOffEpa": 24,
+              "passOffEpa": 23,
               "turnoverDiff": 28,
               "passDefEpa": 24,
-              "rushDefEpa": 17,
+              "rushDefEpa": 16,
               "pointsFor": 24,
               "pointsAgainst": 17
             },
@@ -394,9 +394,9 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DAL",
             "values": {
-              "passOffEpa": 0.265,
+              "passOffEpa": 0.25,
               "turnoverDiff": 0,
-              "passDefEpa": 0.634,
+              "passDefEpa": 0.594,
               "rushDefEpa": -0.024,
               "pointsFor": 20,
               "pointsAgainst": 28
@@ -405,7 +405,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 8,
               "turnoverDiff": 16,
               "passDefEpa": 31,
-              "rushDefEpa": 18,
+              "rushDefEpa": 14,
               "pointsFor": 23,
               "pointsAgainst": 21
             },
@@ -414,10 +414,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYG",
             "values": {
-              "passOffEpa": 0.634,
+              "passOffEpa": 0.594,
               "turnoverDiff": 0,
-              "passDefEpa": 0.265,
-              "rushDefEpa": 0.048,
+              "passDefEpa": 0.25,
+              "rushDefEpa": 0.046,
               "pointsFor": 28,
               "pointsAgainst": 20
             },
@@ -425,7 +425,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 2,
               "turnoverDiff": 17,
               "passDefEpa": 25,
-              "rushDefEpa": 23,
+              "rushDefEpa": 22,
               "pointsFor": 12,
               "pointsAgainst": 10
             },
@@ -434,18 +434,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PHI",
             "values": {
-              "passOffEpa": 0.074,
+              "passOffEpa": 0.076,
               "turnoverDiff": 0,
-              "passDefEpa": 0.115,
-              "rushDefEpa": 0.01,
+              "passDefEpa": 0.101,
+              "rushDefEpa": 0.025,
               "pointsFor": 24,
               "pointsAgainst": 22
             },
             "ranks": {
               "passOffEpa": 14,
               "turnoverDiff": 18,
-              "passDefEpa": 20,
-              "rushDefEpa": 21,
+              "passDefEpa": 21,
+              "rushDefEpa": 19,
               "pointsFor": 17,
               "pointsAgainst": 12
             },
@@ -454,15 +454,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "WSH",
             "values": {
-              "passOffEpa": 0.115,
+              "passOffEpa": 0.101,
               "turnoverDiff": 0,
-              "passDefEpa": 0.074,
-              "rushDefEpa": 0.068,
+              "passDefEpa": 0.076,
+              "rushDefEpa": 0.075,
               "pointsFor": 22,
               "pointsAgainst": 24
             },
             "ranks": {
-              "passOffEpa": 13,
+              "passOffEpa": 12,
               "turnoverDiff": 19,
               "passDefEpa": 19,
               "rushDefEpa": 25,
@@ -474,17 +474,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CHI",
             "values": {
-              "passOffEpa": 0.488,
+              "passOffEpa": 0.472,
               "turnoverDiff": 2,
-              "passDefEpa": 0.33,
-              "rushDefEpa": 0.06,
+              "passDefEpa": 0.304,
+              "rushDefEpa": 0.059,
               "pointsFor": 59,
               "pointsAgainst": 37
             },
             "ranks": {
               "passOffEpa": 3,
               "turnoverDiff": 5,
-              "passDefEpa": 27,
+              "passDefEpa": 26,
               "rushDefEpa": 24,
               "pointsFor": 1,
               "pointsAgainst": 29
@@ -494,18 +494,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DET",
             "values": {
-              "passOffEpa": 0.136,
+              "passOffEpa": 0.131,
               "turnoverDiff": 2,
-              "passDefEpa": 0.021,
-              "rushDefEpa": -0.064,
+              "passDefEpa": 0.016,
+              "rushDefEpa": -0.025,
               "pointsFor": 31,
               "pointsAgainst": 30
             },
             "ranks": {
-              "passOffEpa": 10,
+              "passOffEpa": 11,
               "turnoverDiff": 6,
               "passDefEpa": 15,
-              "rushDefEpa": 10,
+              "rushDefEpa": 13,
               "pointsFor": 10,
               "pointsAgainst": 22
             },
@@ -514,18 +514,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "GB",
             "values": {
-              "passOffEpa": -0.061,
+              "passOffEpa": -0.04,
               "turnoverDiff": -1,
-              "passDefEpa": 0.063,
-              "rushDefEpa": -0.05,
+              "passDefEpa": 0.075,
+              "rushDefEpa": -0.007,
               "pointsFor": 22,
               "pointsAgainst": 39
             },
             "ranks": {
-              "passOffEpa": 21,
+              "passOffEpa": 19,
               "turnoverDiff": 23,
               "passDefEpa": 18,
-              "rushDefEpa": 12,
+              "rushDefEpa": 18,
               "pointsFor": 21,
               "pointsAgainst": 30
             },
@@ -534,17 +534,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIN",
             "values": {
-              "passOffEpa": 0.063,
+              "passOffEpa": 0.075,
               "turnoverDiff": 1,
-              "passDefEpa": -0.061,
-              "rushDefEpa": -0.332,
+              "passDefEpa": -0.04,
+              "rushDefEpa": -0.28,
               "pointsFor": 39,
               "pointsAgainst": 22
             },
             "ranks": {
               "passOffEpa": 15,
               "turnoverDiff": 12,
-              "passDefEpa": 12,
+              "passDefEpa": 14,
               "rushDefEpa": 1,
               "pointsFor": 3,
               "pointsAgainst": 13
@@ -554,10 +554,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ATL",
             "values": {
-              "passOffEpa": -0.482,
+              "passOffEpa": -0.477,
               "turnoverDiff": -1,
-              "passDefEpa": -0.18,
-              "rushDefEpa": -0.239,
+              "passDefEpa": -0.186,
+              "rushDefEpa": -0.224,
               "pointsFor": 13,
               "pointsAgainst": 20
             },
@@ -565,7 +565,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 32,
               "turnoverDiff": 24,
               "passDefEpa": 4,
-              "rushDefEpa": 3,
+              "rushDefEpa": 2,
               "pointsFor": 26,
               "pointsAgainst": 11
             },
@@ -574,15 +574,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CAR",
             "values": {
-              "passOffEpa": 0.33,
+              "passOffEpa": 0.304,
               "turnoverDiff": -2,
-              "passDefEpa": 0.488,
-              "rushDefEpa": 0.36,
+              "passDefEpa": 0.472,
+              "rushDefEpa": 0.375,
               "pointsFor": 37,
               "pointsAgainst": 59
             },
             "ranks": {
-              "passOffEpa": 6,
+              "passOffEpa": 7,
               "turnoverDiff": 29,
               "passDefEpa": 30,
               "rushDefEpa": 32,
@@ -594,18 +594,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NO",
             "values": {
-              "passOffEpa": 0.021,
+              "passOffEpa": 0.016,
               "turnoverDiff": -2,
-              "passDefEpa": 0.136,
-              "rushDefEpa": -0.009,
+              "passDefEpa": 0.131,
+              "rushDefEpa": 0.045,
               "pointsFor": 30,
               "pointsAgainst": 31
             },
             "ranks": {
               "passOffEpa": 18,
               "turnoverDiff": 30,
-              "passDefEpa": 23,
-              "rushDefEpa": 19,
+              "passDefEpa": 22,
+              "rushDefEpa": 21,
               "pointsFor": 11,
               "pointsAgainst": 25
             },
@@ -614,17 +614,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TB",
             "values": {
-              "passOffEpa": -0.145,
+              "passOffEpa": -0.138,
               "turnoverDiff": -3,
-              "passDefEpa": -0.053,
-              "rushDefEpa": 0.003,
+              "passDefEpa": -0.076,
+              "rushDefEpa": 0.031,
               "pointsFor": 27,
               "pointsAgainst": 33
             },
             "ranks": {
               "passOffEpa": 26,
               "turnoverDiff": 32,
-              "passDefEpa": 13,
+              "passDefEpa": 12,
               "rushDefEpa": 20,
               "pointsFor": 14,
               "pointsAgainst": 26
@@ -634,18 +634,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ARI",
             "values": {
-              "passOffEpa": 0.165,
+              "passOffEpa": 0.202,
               "turnoverDiff": 2,
-              "passDefEpa": -0.124,
-              "rushDefEpa": -0.261,
+              "passDefEpa": -0.119,
+              "rushDefEpa": -0.197,
               "pointsFor": 26,
               "pointsAgainst": 14
             },
             "ranks": {
               "passOffEpa": 9,
               "turnoverDiff": 7,
-              "passDefEpa": 9,
-              "rushDefEpa": 2,
+              "passDefEpa": 10,
+              "rushDefEpa": 3,
               "pointsFor": 16,
               "pointsAgainst": 9
             },
@@ -654,18 +654,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LAR",
             "values": {
-              "passOffEpa": -0.129,
+              "passOffEpa": -0.098,
               "turnoverDiff": -1,
-              "passDefEpa": 0.123,
-              "rushDefEpa": 0.159,
+              "passDefEpa": 0.163,
+              "rushDefEpa": 0.163,
               "pointsFor": 7,
               "pointsAgainst": 27
             },
             "ranks": {
-              "passOffEpa": 25,
+              "passOffEpa": 22,
               "turnoverDiff": 25,
-              "passDefEpa": 22,
-              "rushDefEpa": 29,
+              "passDefEpa": 23,
+              "rushDefEpa": 28,
               "pointsFor": 32,
               "pointsAgainst": 20
             },
@@ -674,18 +674,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SF",
             "values": {
-              "passOffEpa": 0.123,
+              "passOffEpa": 0.163,
               "turnoverDiff": 1,
-              "passDefEpa": -0.129,
-              "rushDefEpa": -0.105,
+              "passDefEpa": -0.098,
+              "rushDefEpa": -0.072,
               "pointsFor": 27,
               "pointsAgainst": 7
             },
             "ranks": {
-              "passOffEpa": 11,
+              "passOffEpa": 10,
               "turnoverDiff": 13,
-              "passDefEpa": 8,
-              "rushDefEpa": 6,
+              "passDefEpa": 11,
+              "rushDefEpa": 7,
               "pointsFor": 15,
               "pointsAgainst": 1
             },
@@ -694,17 +694,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SEA",
             "values": {
-              "passOffEpa": 0.123,
+              "passOffEpa": 0.092,
               "turnoverDiff": 3,
-              "passDefEpa": -0.109,
-              "rushDefEpa": -0.059,
+              "passDefEpa": -0.135,
+              "rushDefEpa": -0.042,
               "pointsFor": 13,
               "pointsAgainst": 10
             },
             "ranks": {
-              "passOffEpa": 12,
+              "passOffEpa": 13,
               "turnoverDiff": 2,
-              "passDefEpa": 11,
+              "passDefEpa": 9,
               "rushDefEpa": 11,
               "pointsFor": 27,
               "pointsAgainst": 5
@@ -716,17 +716,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BUF",
             "values": {
-              "passOffEpa": 0.354,
+              "passOffEpa": 0.337,
               "turnoverDiff": 2,
-              "passDefEpa": 0.061,
-              "rushDefEpa": 0.094,
+              "passDefEpa": 0.03,
+              "rushDefEpa": 0.119,
               "pointsFor": 36,
               "pointsAgainst": 31
             },
             "ranks": {
               "passOffEpa": 4,
               "turnoverDiff": 3,
-              "passDefEpa": 17,
+              "passDefEpa": 16,
               "rushDefEpa": 27,
               "pointsFor": 5,
               "pointsAgainst": 23
@@ -735,18 +735,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIA",
             "values": {
-              "passOffEpa": -0.116,
+              "passOffEpa": -0.137,
               "turnoverDiff": 0,
-              "passDefEpa": 0.036,
-              "rushDefEpa": -0.112,
+              "passDefEpa": 0.042,
+              "rushDefEpa": -0.093,
               "pointsFor": 13,
               "pointsAgainst": 27
             },
             "ranks": {
-              "passOffEpa": 23,
+              "passOffEpa": 25,
               "turnoverDiff": 14,
-              "passDefEpa": 16,
-              "rushDefEpa": 4,
+              "passDefEpa": 17,
+              "rushDefEpa": 5,
               "pointsFor": 25,
               "pointsAgainst": 18
             }
@@ -754,18 +754,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NE",
             "values": {
-              "passOffEpa": -0.109,
+              "passOffEpa": -0.135,
               "turnoverDiff": -3,
-              "passDefEpa": 0.123,
-              "rushDefEpa": -0.041,
+              "passDefEpa": 0.092,
+              "rushDefEpa": -0.03,
               "pointsFor": 10,
               "pointsAgainst": 13
             },
             "ranks": {
-              "passOffEpa": 22,
+              "passOffEpa": 24,
               "turnoverDiff": 31,
-              "passDefEpa": 21,
-              "rushDefEpa": 15,
+              "passDefEpa": 20,
+              "rushDefEpa": 12,
               "pointsFor": 28,
               "pointsAgainst": 6
             }
@@ -773,15 +773,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYJ",
             "values": {
-              "passOffEpa": 0.316,
+              "passOffEpa": 0.321,
               "turnoverDiff": 1,
-              "passDefEpa": -0.163,
-              "rushDefEpa": 0.082,
+              "passDefEpa": -0.177,
+              "rushDefEpa": 0.114,
               "pointsFor": 23,
               "pointsAgainst": 10
             },
             "ranks": {
-              "passOffEpa": 7,
+              "passOffEpa": 6,
               "turnoverDiff": 8,
               "passDefEpa": 5,
               "rushDefEpa": 26,
@@ -792,10 +792,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BAL",
             "values": {
-              "passOffEpa": 0.341,
+              "passOffEpa": 0.322,
               "turnoverDiff": 1,
-              "passDefEpa": -0.219,
-              "rushDefEpa": 0.116,
+              "passDefEpa": -0.236,
+              "rushDefEpa": 0.169,
               "pointsFor": 41,
               "pointsAgainst": 23
             },
@@ -803,7 +803,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 5,
               "turnoverDiff": 9,
               "passDefEpa": 3,
-              "rushDefEpa": 28,
+              "rushDefEpa": 29,
               "pointsFor": 2,
               "pointsAgainst": 14
             }
@@ -811,18 +811,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CIN",
             "values": {
-              "passOffEpa": -0.053,
+              "passOffEpa": -0.076,
               "turnoverDiff": 3,
-              "passDefEpa": -0.145,
-              "rushDefEpa": -0.043,
+              "passDefEpa": -0.138,
+              "rushDefEpa": -0.051,
               "pointsFor": 33,
               "pointsAgainst": 27
             },
             "ranks": {
-              "passOffEpa": 20,
+              "passOffEpa": 21,
               "turnoverDiff": 1,
               "passDefEpa": 7,
-              "rushDefEpa": 14,
+              "rushDefEpa": 9,
               "pointsFor": 7,
               "pointsAgainst": 19
             }
@@ -830,10 +830,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CLE",
             "values": {
-              "passOffEpa": -0.152,
+              "passOffEpa": -0.168,
               "turnoverDiff": -2,
-              "passDefEpa": 0.671,
-              "rushDefEpa": -0.047,
+              "passDefEpa": 0.647,
+              "rushDefEpa": -0.046,
               "pointsFor": 10,
               "pointsAgainst": 34
             },
@@ -841,7 +841,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 27,
               "turnoverDiff": 26,
               "passDefEpa": 32,
-              "rushDefEpa": 13,
+              "rushDefEpa": 10,
               "pointsFor": 29,
               "pointsAgainst": 27
             }
@@ -849,10 +849,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PIT",
             "values": {
-              "passOffEpa": -0.18,
+              "passOffEpa": -0.186,
               "turnoverDiff": 1,
-              "passDefEpa": -0.482,
-              "rushDefEpa": -0.096,
+              "passDefEpa": -0.477,
+              "rushDefEpa": -0.082,
               "pointsFor": 20,
               "pointsAgainst": 13
             },
@@ -860,7 +860,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 29,
               "turnoverDiff": 10,
               "passDefEpa": 1,
-              "rushDefEpa": 7,
+              "rushDefEpa": 6,
               "pointsFor": 22,
               "pointsAgainst": 7
             }
@@ -868,18 +868,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "HOU",
             "values": {
-              "passOffEpa": 0.061,
+              "passOffEpa": 0.03,
               "turnoverDiff": -2,
-              "passDefEpa": 0.354,
-              "rushDefEpa": -0.086,
+              "passDefEpa": 0.337,
+              "rushDefEpa": -0.055,
               "pointsFor": 31,
               "pointsAgainst": 36
             },
             "ranks": {
-              "passOffEpa": 16,
+              "passOffEpa": 17,
               "turnoverDiff": 27,
               "passDefEpa": 29,
-              "rushDefEpa": 9,
+              "rushDefEpa": 8,
               "pointsFor": 8,
               "pointsAgainst": 28
             }
@@ -887,10 +887,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "IND",
             "values": {
-              "passOffEpa": -0.219,
+              "passOffEpa": -0.236,
               "turnoverDiff": -1,
-              "passDefEpa": 0.341,
-              "rushDefEpa": 0.168,
+              "passDefEpa": 0.322,
+              "rushDefEpa": 0.205,
               "pointsFor": 23,
               "pointsAgainst": 41
             },
@@ -898,7 +898,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 30,
               "turnoverDiff": 20,
               "passDefEpa": 28,
-              "rushDefEpa": 30,
+              "rushDefEpa": 31,
               "pointsFor": 19,
               "pointsAgainst": 31
             }
@@ -906,10 +906,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "JAX",
             "values": {
-              "passOffEpa": 0.671,
+              "passOffEpa": 0.647,
               "turnoverDiff": 2,
-              "passDefEpa": -0.152,
-              "rushDefEpa": 0.041,
+              "passDefEpa": -0.168,
+              "rushDefEpa": 0.05,
               "pointsFor": 34,
               "pointsAgainst": 10
             },
@@ -917,7 +917,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 1,
               "turnoverDiff": 4,
               "passDefEpa": 6,
-              "rushDefEpa": 22,
+              "rushDefEpa": 23,
               "pointsFor": 6,
               "pointsAgainst": 3
             }
@@ -925,18 +925,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TEN",
             "values": {
-              "passOffEpa": -0.163,
+              "passOffEpa": -0.177,
               "turnoverDiff": -1,
-              "passDefEpa": 0.316,
-              "rushDefEpa": -0.035,
+              "passDefEpa": 0.321,
+              "rushDefEpa": -0.012,
               "pointsFor": 10,
               "pointsAgainst": 23
             },
             "ranks": {
               "passOffEpa": 28,
               "turnoverDiff": 21,
-              "passDefEpa": 26,
-              "rushDefEpa": 16,
+              "passDefEpa": 27,
+              "rushDefEpa": 17,
               "pointsFor": 30,
               "pointsAgainst": 15
             }
@@ -944,18 +944,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DEN",
             "values": {
-              "passOffEpa": -0.353,
+              "passOffEpa": -0.36,
               "turnoverDiff": -1,
-              "passDefEpa": -0.045,
-              "rushDefEpa": 0.188,
+              "passDefEpa": -0.056,
+              "rushDefEpa": 0.195,
               "pointsFor": 10,
               "pointsAgainst": 31
             },
             "ranks": {
               "passOffEpa": 31,
               "turnoverDiff": 22,
-              "passDefEpa": 14,
-              "rushDefEpa": 31,
+              "passDefEpa": 13,
+              "rushDefEpa": 30,
               "pointsFor": 31,
               "pointsAgainst": 24
             }
@@ -963,18 +963,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "KC",
             "values": {
-              "passOffEpa": -0.045,
+              "passOffEpa": -0.056,
               "turnoverDiff": 1,
-              "passDefEpa": -0.353,
-              "rushDefEpa": -0.09,
+              "passDefEpa": -0.36,
+              "rushDefEpa": -0.098,
               "pointsFor": 31,
               "pointsAgainst": 10
             },
             "ranks": {
-              "passOffEpa": 19,
+              "passOffEpa": 20,
               "turnoverDiff": 11,
               "passDefEpa": 2,
-              "rushDefEpa": 8,
+              "rushDefEpa": 4,
               "pointsFor": 9,
               "pointsAgainst": 4
             }
@@ -982,18 +982,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LV",
             "values": {
-              "passOffEpa": 0.036,
+              "passOffEpa": 0.042,
               "turnoverDiff": 0,
-              "passDefEpa": -0.116,
-              "rushDefEpa": -0.108,
+              "passDefEpa": -0.137,
+              "rushDefEpa": -0.02,
               "pointsFor": 27,
               "pointsAgainst": 13
             },
             "ranks": {
-              "passOffEpa": 17,
+              "passOffEpa": 16,
               "turnoverDiff": 15,
-              "passDefEpa": 10,
-              "rushDefEpa": 5,
+              "passDefEpa": 8,
+              "rushDefEpa": 15,
               "pointsFor": 13,
               "pointsAgainst": 8
             }
@@ -1001,18 +1001,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LAC",
             "values": {
-              "passOffEpa": -0.124,
+              "passOffEpa": -0.119,
               "turnoverDiff": -2,
-              "passDefEpa": 0.165,
-              "rushDefEpa": -0.027,
+              "passDefEpa": 0.202,
+              "rushDefEpa": -0.017,
               "pointsFor": 14,
               "pointsAgainst": 26
             },
             "ranks": {
-              "passOffEpa": 24,
+              "passOffEpa": 23,
               "turnoverDiff": 28,
               "passDefEpa": 24,
-              "rushDefEpa": 17,
+              "rushDefEpa": 16,
               "pointsFor": 24,
               "pointsAgainst": 17
             }
@@ -1020,9 +1020,9 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DAL",
             "values": {
-              "passOffEpa": 0.265,
+              "passOffEpa": 0.25,
               "turnoverDiff": 0,
-              "passDefEpa": 0.634,
+              "passDefEpa": 0.594,
               "rushDefEpa": -0.024,
               "pointsFor": 20,
               "pointsAgainst": 28
@@ -1031,7 +1031,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 8,
               "turnoverDiff": 16,
               "passDefEpa": 31,
-              "rushDefEpa": 18,
+              "rushDefEpa": 14,
               "pointsFor": 23,
               "pointsAgainst": 21
             }
@@ -1039,10 +1039,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYG",
             "values": {
-              "passOffEpa": 0.634,
+              "passOffEpa": 0.594,
               "turnoverDiff": 0,
-              "passDefEpa": 0.265,
-              "rushDefEpa": 0.048,
+              "passDefEpa": 0.25,
+              "rushDefEpa": 0.046,
               "pointsFor": 28,
               "pointsAgainst": 20
             },
@@ -1050,7 +1050,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 2,
               "turnoverDiff": 17,
               "passDefEpa": 25,
-              "rushDefEpa": 23,
+              "rushDefEpa": 22,
               "pointsFor": 12,
               "pointsAgainst": 10
             }
@@ -1058,18 +1058,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PHI",
             "values": {
-              "passOffEpa": 0.074,
+              "passOffEpa": 0.076,
               "turnoverDiff": 0,
-              "passDefEpa": 0.115,
-              "rushDefEpa": 0.01,
+              "passDefEpa": 0.101,
+              "rushDefEpa": 0.025,
               "pointsFor": 24,
               "pointsAgainst": 22
             },
             "ranks": {
               "passOffEpa": 14,
               "turnoverDiff": 18,
-              "passDefEpa": 20,
-              "rushDefEpa": 21,
+              "passDefEpa": 21,
+              "rushDefEpa": 19,
               "pointsFor": 17,
               "pointsAgainst": 12
             }
@@ -1077,15 +1077,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "WSH",
             "values": {
-              "passOffEpa": 0.115,
+              "passOffEpa": 0.101,
               "turnoverDiff": 0,
-              "passDefEpa": 0.074,
-              "rushDefEpa": 0.068,
+              "passDefEpa": 0.076,
+              "rushDefEpa": 0.075,
               "pointsFor": 22,
               "pointsAgainst": 24
             },
             "ranks": {
-              "passOffEpa": 13,
+              "passOffEpa": 12,
               "turnoverDiff": 19,
               "passDefEpa": 19,
               "rushDefEpa": 25,
@@ -1096,17 +1096,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CHI",
             "values": {
-              "passOffEpa": 0.488,
+              "passOffEpa": 0.472,
               "turnoverDiff": 2,
-              "passDefEpa": 0.33,
-              "rushDefEpa": 0.06,
+              "passDefEpa": 0.304,
+              "rushDefEpa": 0.059,
               "pointsFor": 59,
               "pointsAgainst": 37
             },
             "ranks": {
               "passOffEpa": 3,
               "turnoverDiff": 5,
-              "passDefEpa": 27,
+              "passDefEpa": 26,
               "rushDefEpa": 24,
               "pointsFor": 1,
               "pointsAgainst": 29
@@ -1115,18 +1115,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DET",
             "values": {
-              "passOffEpa": 0.136,
+              "passOffEpa": 0.131,
               "turnoverDiff": 2,
-              "passDefEpa": 0.021,
-              "rushDefEpa": -0.064,
+              "passDefEpa": 0.016,
+              "rushDefEpa": -0.025,
               "pointsFor": 31,
               "pointsAgainst": 30
             },
             "ranks": {
-              "passOffEpa": 10,
+              "passOffEpa": 11,
               "turnoverDiff": 6,
               "passDefEpa": 15,
-              "rushDefEpa": 10,
+              "rushDefEpa": 13,
               "pointsFor": 10,
               "pointsAgainst": 22
             }
@@ -1134,18 +1134,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "GB",
             "values": {
-              "passOffEpa": -0.061,
+              "passOffEpa": -0.04,
               "turnoverDiff": -1,
-              "passDefEpa": 0.063,
-              "rushDefEpa": -0.05,
+              "passDefEpa": 0.075,
+              "rushDefEpa": -0.007,
               "pointsFor": 22,
               "pointsAgainst": 39
             },
             "ranks": {
-              "passOffEpa": 21,
+              "passOffEpa": 19,
               "turnoverDiff": 23,
               "passDefEpa": 18,
-              "rushDefEpa": 12,
+              "rushDefEpa": 18,
               "pointsFor": 21,
               "pointsAgainst": 30
             }
@@ -1153,17 +1153,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIN",
             "values": {
-              "passOffEpa": 0.063,
+              "passOffEpa": 0.075,
               "turnoverDiff": 1,
-              "passDefEpa": -0.061,
-              "rushDefEpa": -0.332,
+              "passDefEpa": -0.04,
+              "rushDefEpa": -0.28,
               "pointsFor": 39,
               "pointsAgainst": 22
             },
             "ranks": {
               "passOffEpa": 15,
               "turnoverDiff": 12,
-              "passDefEpa": 12,
+              "passDefEpa": 14,
               "rushDefEpa": 1,
               "pointsFor": 3,
               "pointsAgainst": 13
@@ -1172,10 +1172,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ATL",
             "values": {
-              "passOffEpa": -0.482,
+              "passOffEpa": -0.477,
               "turnoverDiff": -1,
-              "passDefEpa": -0.18,
-              "rushDefEpa": -0.239,
+              "passDefEpa": -0.186,
+              "rushDefEpa": -0.224,
               "pointsFor": 13,
               "pointsAgainst": 20
             },
@@ -1183,7 +1183,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 32,
               "turnoverDiff": 24,
               "passDefEpa": 4,
-              "rushDefEpa": 3,
+              "rushDefEpa": 2,
               "pointsFor": 26,
               "pointsAgainst": 11
             }
@@ -1191,15 +1191,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CAR",
             "values": {
-              "passOffEpa": 0.33,
+              "passOffEpa": 0.304,
               "turnoverDiff": -2,
-              "passDefEpa": 0.488,
-              "rushDefEpa": 0.36,
+              "passDefEpa": 0.472,
+              "rushDefEpa": 0.375,
               "pointsFor": 37,
               "pointsAgainst": 59
             },
             "ranks": {
-              "passOffEpa": 6,
+              "passOffEpa": 7,
               "turnoverDiff": 29,
               "passDefEpa": 30,
               "rushDefEpa": 32,
@@ -1210,18 +1210,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NO",
             "values": {
-              "passOffEpa": 0.021,
+              "passOffEpa": 0.016,
               "turnoverDiff": -2,
-              "passDefEpa": 0.136,
-              "rushDefEpa": -0.009,
+              "passDefEpa": 0.131,
+              "rushDefEpa": 0.045,
               "pointsFor": 30,
               "pointsAgainst": 31
             },
             "ranks": {
               "passOffEpa": 18,
               "turnoverDiff": 30,
-              "passDefEpa": 23,
-              "rushDefEpa": 19,
+              "passDefEpa": 22,
+              "rushDefEpa": 21,
               "pointsFor": 11,
               "pointsAgainst": 25
             }
@@ -1229,17 +1229,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TB",
             "values": {
-              "passOffEpa": -0.145,
+              "passOffEpa": -0.138,
               "turnoverDiff": -3,
-              "passDefEpa": -0.053,
-              "rushDefEpa": 0.003,
+              "passDefEpa": -0.076,
+              "rushDefEpa": 0.031,
               "pointsFor": 27,
               "pointsAgainst": 33
             },
             "ranks": {
               "passOffEpa": 26,
               "turnoverDiff": 32,
-              "passDefEpa": 13,
+              "passDefEpa": 12,
               "rushDefEpa": 20,
               "pointsFor": 14,
               "pointsAgainst": 26
@@ -1248,18 +1248,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ARI",
             "values": {
-              "passOffEpa": 0.165,
+              "passOffEpa": 0.202,
               "turnoverDiff": 2,
-              "passDefEpa": -0.124,
-              "rushDefEpa": -0.261,
+              "passDefEpa": -0.119,
+              "rushDefEpa": -0.197,
               "pointsFor": 26,
               "pointsAgainst": 14
             },
             "ranks": {
               "passOffEpa": 9,
               "turnoverDiff": 7,
-              "passDefEpa": 9,
-              "rushDefEpa": 2,
+              "passDefEpa": 10,
+              "rushDefEpa": 3,
               "pointsFor": 16,
               "pointsAgainst": 9
             }
@@ -1267,18 +1267,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LAR",
             "values": {
-              "passOffEpa": -0.129,
+              "passOffEpa": -0.098,
               "turnoverDiff": -1,
-              "passDefEpa": 0.123,
-              "rushDefEpa": 0.159,
+              "passDefEpa": 0.163,
+              "rushDefEpa": 0.163,
               "pointsFor": 7,
               "pointsAgainst": 27
             },
             "ranks": {
-              "passOffEpa": 25,
+              "passOffEpa": 22,
               "turnoverDiff": 25,
-              "passDefEpa": 22,
-              "rushDefEpa": 29,
+              "passDefEpa": 23,
+              "rushDefEpa": 28,
               "pointsFor": 32,
               "pointsAgainst": 20
             }
@@ -1286,18 +1286,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SF",
             "values": {
-              "passOffEpa": 0.123,
+              "passOffEpa": 0.163,
               "turnoverDiff": 1,
-              "passDefEpa": -0.129,
-              "rushDefEpa": -0.105,
+              "passDefEpa": -0.098,
+              "rushDefEpa": -0.072,
               "pointsFor": 27,
               "pointsAgainst": 7
             },
             "ranks": {
-              "passOffEpa": 11,
+              "passOffEpa": 10,
               "turnoverDiff": 13,
-              "passDefEpa": 8,
-              "rushDefEpa": 6,
+              "passDefEpa": 11,
+              "rushDefEpa": 7,
               "pointsFor": 15,
               "pointsAgainst": 1
             }
@@ -1305,17 +1305,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SEA",
             "values": {
-              "passOffEpa": 0.123,
+              "passOffEpa": 0.092,
               "turnoverDiff": 3,
-              "passDefEpa": -0.109,
-              "rushDefEpa": -0.059,
+              "passDefEpa": -0.135,
+              "rushDefEpa": -0.042,
               "pointsFor": 13,
               "pointsAgainst": 10
             },
             "ranks": {
-              "passOffEpa": 12,
+              "passOffEpa": 13,
               "turnoverDiff": 2,
-              "passDefEpa": 11,
+              "passDefEpa": 9,
               "rushDefEpa": 11,
               "pointsFor": 27,
               "pointsAgainst": 5
@@ -1328,18 +1328,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BUF",
             "values": {
-              "passOffEpa": 0.37,
+              "passOffEpa": 0.351,
               "turnoverDiff": 1,
-              "passDefEpa": 0.226,
-              "rushDefEpa": -0.009,
+              "passDefEpa": 0.206,
+              "rushDefEpa": 0.015,
               "pointsFor": 38.5,
               "pointsAgainst": 31
             },
             "ranks": {
               "passOffEpa": 2,
               "turnoverDiff": 5,
-              "passDefEpa": 26,
-              "rushDefEpa": 21,
+              "passDefEpa": 25,
+              "rushDefEpa": 20,
               "pointsFor": 1,
               "pointsAgainst": 28
             },
@@ -1348,10 +1348,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIA",
             "values": {
-              "passOffEpa": -0.002,
+              "passOffEpa": -0.013,
               "turnoverDiff": 0,
-              "passDefEpa": 0.402,
-              "rushDefEpa": -0.085,
+              "passDefEpa": 0.399,
+              "rushDefEpa": -0.066,
               "pointsFor": 13,
               "pointsAgainst": 31
             },
@@ -1359,7 +1359,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 21,
               "turnoverDiff": 17,
               "passDefEpa": 32,
-              "rushDefEpa": 14,
+              "rushDefEpa": 15,
               "pointsFor": 30,
               "pointsAgainst": 29
             },
@@ -1368,15 +1368,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NE",
             "values": {
-              "passOffEpa": -0.091,
+              "passOffEpa": -0.121,
               "turnoverDiff": -1.5,
-              "passDefEpa": -0.199,
-              "rushDefEpa": -0.055,
+              "passDefEpa": -0.216,
+              "rushDefEpa": -0.046,
               "pointsFor": 15,
               "pointsAgainst": 8
             },
             "ranks": {
-              "passOffEpa": 28,
+              "passOffEpa": 29,
               "turnoverDiff": 29,
               "passDefEpa": 2,
               "rushDefEpa": 17,
@@ -1388,18 +1388,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYJ",
             "values": {
-              "passOffEpa": 0.167,
+              "passOffEpa": 0.166,
               "turnoverDiff": 1,
-              "passDefEpa": -0.11,
-              "rushDefEpa": -0.161,
+              "passDefEpa": -0.125,
+              "rushDefEpa": -0.126,
               "pointsFor": 20,
               "pointsAgainst": 15
             },
             "ranks": {
-              "passOffEpa": 11,
+              "passOffEpa": 10,
               "turnoverDiff": 6,
-              "passDefEpa": 6,
-              "rushDefEpa": 8,
+              "passDefEpa": 5,
+              "rushDefEpa": 10,
               "pointsFor": 20,
               "pointsAgainst": 6
             },
@@ -1408,18 +1408,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BAL",
             "values": {
-              "passOffEpa": 0.204,
+              "passOffEpa": 0.181,
               "turnoverDiff": 0,
-              "passDefEpa": 0.033,
-              "rushDefEpa": 0.029,
+              "passDefEpa": 0.017,
+              "rushDefEpa": 0.064,
               "pointsFor": 29,
               "pointsAgainst": 23.5
             },
             "ranks": {
               "passOffEpa": 9,
               "turnoverDiff": 18,
-              "passDefEpa": 14,
-              "rushDefEpa": 23,
+              "passDefEpa": 13,
+              "rushDefEpa": 26,
               "pointsFor": 7,
               "pointsAgainst": 16
             },
@@ -1428,17 +1428,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CIN",
             "values": {
-              "passOffEpa": -0.027,
+              "passOffEpa": -0.036,
               "turnoverDiff": 1.5,
-              "passDefEpa": -0.132,
-              "rushDefEpa": -0.231,
+              "passDefEpa": -0.128,
+              "rushDefEpa": -0.219,
               "pointsFor": 26.5,
               "pointsAgainst": 16.5
             },
             "ranks": {
               "passOffEpa": 22,
               "turnoverDiff": 1,
-              "passDefEpa": 5,
+              "passDefEpa": 4,
               "rushDefEpa": 2,
               "pointsFor": 10,
               "pointsAgainst": 8
@@ -1448,18 +1448,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CLE",
             "values": {
-              "passOffEpa": 0.069,
+              "passOffEpa": 0.051,
               "turnoverDiff": -0.5,
-              "passDefEpa": 0.083,
-              "rushDefEpa": 0.051,
+              "passDefEpa": 0.069,
+              "rushDefEpa": 0.063,
               "pointsFor": 16.5,
               "pointsAgainst": 26.5
             },
             "ranks": {
               "passOffEpa": 18,
               "turnoverDiff": 20,
-              "passDefEpa": 18,
-              "rushDefEpa": 27,
+              "passDefEpa": 17,
+              "rushDefEpa": 25,
               "pointsFor": 24,
               "pointsAgainst": 22
             },
@@ -1468,10 +1468,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PIT",
             "values": {
-              "passOffEpa": -0.285,
+              "passOffEpa": -0.293,
               "turnoverDiff": 0.5,
-              "passDefEpa": -0.277,
-              "rushDefEpa": -0.028,
+              "passDefEpa": -0.292,
+              "rushDefEpa": -0.019,
               "pointsFor": 11.5,
               "pointsAgainst": 16.5
             },
@@ -1488,15 +1488,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "HOU",
             "values": {
-              "passOffEpa": -0.05,
+              "passOffEpa": -0.061,
               "turnoverDiff": -1,
-              "passDefEpa": 0.163,
-              "rushDefEpa": -0.132,
+              "passDefEpa": 0.158,
+              "rushDefEpa": -0.095,
               "pointsFor": 18.5,
               "pointsAgainst": 28
             },
             "ranks": {
-              "passOffEpa": 24,
+              "passOffEpa": 26,
               "turnoverDiff": 24,
               "passDefEpa": 22,
               "rushDefEpa": 11,
@@ -1508,10 +1508,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "IND",
             "values": {
-              "passOffEpa": -0.032,
+              "passOffEpa": -0.044,
               "turnoverDiff": -1,
-              "passDefEpa": 0.271,
-              "rushDefEpa": 0.147,
+              "passDefEpa": 0.255,
+              "rushDefEpa": 0.165,
               "pointsFor": 26.5,
               "pointsAgainst": 37
             },
@@ -1528,10 +1528,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "JAX",
             "values": {
-              "passOffEpa": 0.24,
+              "passOffEpa": 0.229,
               "turnoverDiff": 1,
-              "passDefEpa": 0.054,
-              "rushDefEpa": -0.079,
+              "passDefEpa": 0.042,
+              "rushDefEpa": -0.071,
               "pointsFor": 23.5,
               "pointsAgainst": 15
             },
@@ -1539,7 +1539,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 7,
               "turnoverDiff": 7,
               "passDefEpa": 15,
-              "rushDefEpa": 16,
+              "rushDefEpa": 14,
               "pointsFor": 15,
               "pointsAgainst": 7
             },
@@ -1548,18 +1548,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TEN",
             "values": {
-              "passOffEpa": -0.1,
+              "passOffEpa": -0.104,
               "turnoverDiff": 0.5,
-              "passDefEpa": 0.256,
-              "rushDefEpa": -0.085,
+              "passDefEpa": 0.251,
+              "rushDefEpa": -0.061,
               "pointsFor": 15,
               "pointsAgainst": 23.5
             },
             "ranks": {
-              "passOffEpa": 29,
+              "passOffEpa": 28,
               "turnoverDiff": 13,
               "passDefEpa": 28,
-              "rushDefEpa": 15,
+              "rushDefEpa": 16,
               "pointsFor": 27,
               "pointsAgainst": 17
             },
@@ -1568,17 +1568,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DEN",
             "values": {
-              "passOffEpa": -0.065,
+              "passOffEpa": -0.073,
               "turnoverDiff": -0.5,
-              "passDefEpa": -0.07,
-              "rushDefEpa": 0.133,
+              "passDefEpa": -0.077,
+              "rushDefEpa": 0.147,
               "pointsFor": 15,
               "pointsAgainst": 22
             },
             "ranks": {
               "passOffEpa": 27,
               "turnoverDiff": 21,
-              "passDefEpa": 10,
+              "passDefEpa": 9,
               "rushDefEpa": 31,
               "pointsFor": 28,
               "pointsAgainst": 13
@@ -1588,18 +1588,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "KC",
             "values": {
-              "passOffEpa": 0.129,
+              "passOffEpa": 0.116,
               "turnoverDiff": 1,
-              "passDefEpa": -0.097,
-              "rushDefEpa": 0.035,
+              "passDefEpa": -0.104,
+              "rushDefEpa": 0.031,
               "pointsFor": 32,
               "pointsAgainst": 20
             },
             "ranks": {
-              "passOffEpa": 13,
+              "passOffEpa": 14,
               "turnoverDiff": 8,
-              "passDefEpa": 7,
-              "rushDefEpa": 25,
+              "passDefEpa": 6,
+              "rushDefEpa": 23,
               "pointsFor": 3,
               "pointsAgainst": 11
             },
@@ -1608,17 +1608,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LV",
             "values": {
-              "passOffEpa": 0.122,
+              "passOffEpa": 0.138,
               "turnoverDiff": 1,
-              "passDefEpa": -0.06,
-              "rushDefEpa": -0.274,
+              "passDefEpa": -0.069,
+              "rushDefEpa": -0.223,
               "pointsFor": 26.5,
               "pointsAgainst": 13.5
             },
             "ranks": {
-              "passOffEpa": 14,
+              "passOffEpa": 13,
               "turnoverDiff": 9,
-              "passDefEpa": 11,
+              "passDefEpa": 10,
               "rushDefEpa": 1,
               "pointsFor": 12,
               "pointsAgainst": 5
@@ -1628,18 +1628,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LAC",
             "values": {
-              "passOffEpa": -0.063,
+              "passOffEpa": -0.057,
               "turnoverDiff": -2,
-              "passDefEpa": 0.182,
-              "rushDefEpa": -0.185,
+              "passDefEpa": 0.215,
+              "rushDefEpa": -0.165,
               "pointsFor": 14,
               "pointsAgainst": 26
             },
             "ranks": {
-              "passOffEpa": 26,
+              "passOffEpa": 25,
               "turnoverDiff": 30,
-              "passDefEpa": 24,
-              "rushDefEpa": 6,
+              "passDefEpa": 26,
+              "rushDefEpa": 5,
               "pointsFor": 29,
               "pointsAgainst": 21
             },
@@ -1648,15 +1648,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DAL",
             "values": {
-              "passOffEpa": 0.316,
+              "passOffEpa": 0.295,
               "turnoverDiff": 0.5,
-              "passDefEpa": 0.351,
-              "rushDefEpa": 0.029,
+              "passDefEpa": 0.323,
+              "rushDefEpa": 0.042,
               "pointsFor": 28.5,
               "pointsAgainst": 24
             },
             "ranks": {
-              "passOffEpa": 3,
+              "passOffEpa": 4,
               "turnoverDiff": 14,
               "passDefEpa": 30,
               "rushDefEpa": 24,
@@ -1668,10 +1668,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYG",
             "values": {
-              "passOffEpa": 0.092,
+              "passOffEpa": 0.089,
               "turnoverDiff": 0.5,
-              "passDefEpa": 0.384,
-              "rushDefEpa": -0.101,
+              "passDefEpa": 0.376,
+              "rushDefEpa": -0.084,
               "pointsFor": 17,
               "pointsAgainst": 24
             },
@@ -1688,10 +1688,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PHI",
             "values": {
-              "passOffEpa": 0.16,
+              "passOffEpa": 0.154,
               "turnoverDiff": -1,
-              "passDefEpa": 0.07,
-              "rushDefEpa": 0.071,
+              "passDefEpa": 0.067,
+              "rushDefEpa": 0.087,
               "pointsFor": 24,
               "pointsAgainst": 21
             },
@@ -1699,7 +1699,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 12,
               "turnoverDiff": 26,
               "passDefEpa": 16,
-              "rushDefEpa": 28,
+              "rushDefEpa": 27,
               "pointsFor": 13,
               "pointsAgainst": 12
             },
@@ -1708,10 +1708,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "WSH",
             "values": {
-              "passOffEpa": 0.107,
+              "passOffEpa": 0.092,
               "turnoverDiff": -0.5,
-              "passDefEpa": 0.233,
-              "rushDefEpa": -0.017,
+              "passDefEpa": 0.219,
+              "rushDefEpa": 0.015,
               "pointsFor": 21,
               "pointsAgainst": 30.5
             },
@@ -1719,7 +1719,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 16,
               "turnoverDiff": 22,
               "passDefEpa": 27,
-              "rushDefEpa": 20,
+              "rushDefEpa": 21,
               "pointsFor": 18,
               "pointsAgainst": 27
             },
@@ -1728,17 +1728,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CHI",
             "values": {
-              "passOffEpa": 0.17,
+              "passOffEpa": 0.159,
               "turnoverDiff": 0,
-              "passDefEpa": 0.211,
-              "rushDefEpa": -0.045,
+              "passDefEpa": 0.174,
+              "rushDefEpa": -0.03,
               "pointsFor": 31,
               "pointsAgainst": 23
             },
             "ranks": {
-              "passOffEpa": 10,
+              "passOffEpa": 11,
               "turnoverDiff": 19,
-              "passDefEpa": 25,
+              "passDefEpa": 23,
               "rushDefEpa": 18,
               "pointsFor": 4,
               "pointsAgainst": 15
@@ -1748,10 +1748,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DET",
             "values": {
-              "passOffEpa": 0.264,
+              "passOffEpa": 0.257,
               "turnoverDiff": 1,
-              "passDefEpa": 0.149,
-              "rushDefEpa": 0.111,
+              "passDefEpa": 0.138,
+              "rushDefEpa": 0.134,
               "pointsFor": 31,
               "pointsAgainst": 35.5
             },
@@ -1768,18 +1768,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "GB",
             "values": {
-              "passOffEpa": -0.057,
+              "passOffEpa": -0.051,
               "turnoverDiff": -1,
-              "passDefEpa": 0.078,
-              "rushDefEpa": -0.186,
+              "passDefEpa": 0.08,
+              "rushDefEpa": -0.139,
               "pointsFor": 21,
               "pointsAgainst": 28
             },
             "ranks": {
-              "passOffEpa": 25,
+              "passOffEpa": 24,
               "turnoverDiff": 27,
-              "passDefEpa": 17,
-              "rushDefEpa": 5,
+              "passDefEpa": 19,
+              "rushDefEpa": 7,
               "pointsFor": 19,
               "pointsAgainst": 25
             },
@@ -1788,17 +1788,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIN",
             "values": {
-              "passOffEpa": 0.036,
+              "passOffEpa": 0.017,
               "turnoverDiff": 1.5,
-              "passDefEpa": -0.071,
-              "rushDefEpa": -0.215,
+              "passDefEpa": -0.063,
+              "rushDefEpa": -0.192,
               "pointsFor": 24,
               "pointsAgainst": 12.5
             },
             "ranks": {
-              "passOffEpa": 19,
+              "passOffEpa": 20,
               "turnoverDiff": 2,
-              "passDefEpa": 9,
+              "passDefEpa": 11,
               "rushDefEpa": 4,
               "pointsFor": 14,
               "pointsAgainst": 4
@@ -1808,17 +1808,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ATL",
             "values": {
-              "passOffEpa": -0.542,
+              "passOffEpa": -0.545,
               "turnoverDiff": -3,
-              "passDefEpa": 0.028,
-              "rushDefEpa": -0.216,
+              "passDefEpa": 0.03,
+              "rushDefEpa": -0.209,
               "pointsFor": 8,
               "pointsAgainst": 27
             },
             "ranks": {
               "passOffEpa": 32,
               "turnoverDiff": 32,
-              "passDefEpa": 13,
+              "passDefEpa": 14,
               "rushDefEpa": 3,
               "pointsFor": 32,
               "pointsAgainst": 23
@@ -1828,10 +1828,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CAR",
             "values": {
-              "passOffEpa": 0.298,
+              "passOffEpa": 0.289,
               "turnoverDiff": 1.5,
-              "passDefEpa": -0.082,
-              "rushDefEpa": 0.129,
+              "passDefEpa": -0.094,
+              "rushDefEpa": 0.144,
               "pointsFor": 35.5,
               "pointsAgainst": 31
             },
@@ -1848,10 +1848,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NO",
             "values": {
-              "passOffEpa": 0.11,
+              "passOffEpa": 0.101,
               "turnoverDiff": -0.5,
-              "passDefEpa": 0.117,
-              "rushDefEpa": 0.047,
+              "passDefEpa": 0.102,
+              "rushDefEpa": 0.088,
               "pointsFor": 27,
               "pointsAgainst": 24
             },
@@ -1859,7 +1859,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 15,
               "turnoverDiff": 23,
               "passDefEpa": 20,
-              "rushDefEpa": 26,
+              "rushDefEpa": 28,
               "pointsFor": 9,
               "pointsAgainst": 20
             },
@@ -1868,18 +1868,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TB",
             "values": {
-              "passOffEpa": -0.227,
+              "passOffEpa": -0.228,
               "turnoverDiff": -2,
-              "passDefEpa": 0.092,
-              "rushDefEpa": -0.159,
+              "passDefEpa": 0.071,
+              "rushDefEpa": -0.129,
               "pointsFor": 23,
               "pointsAgainst": 28
             },
             "ranks": {
               "passOffEpa": 30,
               "turnoverDiff": 31,
-              "passDefEpa": 19,
-              "rushDefEpa": 10,
+              "passDefEpa": 18,
+              "rushDefEpa": 9,
               "pointsFor": 16,
               "pointsAgainst": 26
             },
@@ -1888,18 +1888,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ARI",
             "values": {
-              "passOffEpa": 0.008,
+              "passOffEpa": 0.028,
               "turnoverDiff": 1,
-              "passDefEpa": 0.169,
-              "rushDefEpa": -0.177,
+              "passDefEpa": 0.177,
+              "rushDefEpa": -0.146,
               "pointsFor": 16.5,
               "pointsAgainst": 22.5
             },
             "ranks": {
-              "passOffEpa": 20,
+              "passOffEpa": 19,
               "turnoverDiff": 11,
-              "passDefEpa": 23,
-              "rushDefEpa": 7,
+              "passDefEpa": 24,
+              "rushDefEpa": 6,
               "pointsFor": 25,
               "pointsAgainst": 14
             },
@@ -1908,17 +1908,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LAR",
             "values": {
-              "passOffEpa": 0.213,
+              "passOffEpa": 0.226,
               "turnoverDiff": -1,
-              "passDefEpa": -0.14,
-              "rushDefEpa": 0.001,
+              "passDefEpa": -0.104,
+              "rushDefEpa": 0.017,
               "pointsFor": 17.5,
               "pointsAgainst": 16.5
             },
             "ranks": {
               "passOffEpa": 8,
               "turnoverDiff": 28,
-              "passDefEpa": 4,
+              "passDefEpa": 7,
               "rushDefEpa": 22,
               "pointsFor": 22,
               "pointsAgainst": 10
@@ -1928,10 +1928,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SF",
             "values": {
-              "passOffEpa": 0.428,
+              "passOffEpa": 0.447,
               "turnoverDiff": 0.5,
-              "passDefEpa": -0.001,
-              "rushDefEpa": -0.106,
+              "passDefEpa": 0.016,
+              "rushDefEpa": -0.09,
               "pointsFor": 31,
               "pointsAgainst": 10
             },
@@ -1948,18 +1948,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SEA",
             "values": {
-              "passOffEpa": 0.313,
+              "passOffEpa": 0.302,
               "turnoverDiff": 1.5,
-              "passDefEpa": -0.146,
-              "rushDefEpa": -0.16,
+              "passDefEpa": -0.161,
+              "rushDefEpa": -0.131,
               "pointsFor": 22,
               "pointsAgainst": 8.5
             },
             "ranks": {
-              "passOffEpa": 4,
+              "passOffEpa": 3,
               "turnoverDiff": 4,
               "passDefEpa": 3,
-              "rushDefEpa": 9,
+              "rushDefEpa": 8,
               "pointsFor": 17,
               "pointsAgainst": 2
             },
@@ -1970,10 +1970,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BUF",
             "values": {
-              "passOffEpa": 0.385,
+              "passOffEpa": 0.365,
               "turnoverDiff": 0,
-              "passDefEpa": 0.387,
-              "rushDefEpa": -0.173,
+              "passDefEpa": 0.378,
+              "rushDefEpa": -0.15,
               "pointsFor": 41,
               "pointsAgainst": 31
             },
@@ -1981,7 +1981,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 5,
               "turnoverDiff": 11,
               "passDefEpa": 29,
-              "rushDefEpa": 11,
+              "rushDefEpa": 12,
               "pointsFor": 1,
               "pointsAgainst": 26
             }
@@ -1989,10 +1989,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIA",
             "values": {
-              "passOffEpa": 0.133,
+              "passOffEpa": 0.134,
               "turnoverDiff": 0,
-              "passDefEpa": 0.9,
-              "rushDefEpa": -0.048,
+              "passDefEpa": 0.886,
+              "rushDefEpa": -0.03,
               "pointsFor": 13,
               "pointsAgainst": 35
             },
@@ -2008,18 +2008,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NE",
             "values": {
-              "passOffEpa": -0.064,
+              "passOffEpa": -0.101,
               "turnoverDiff": 0,
-              "passDefEpa": -0.389,
-              "rushDefEpa": -0.069,
+              "passDefEpa": -0.397,
+              "rushDefEpa": -0.062,
               "pointsFor": 20,
               "pointsAgainst": 3
             },
             "ranks": {
-              "passOffEpa": 24,
+              "passOffEpa": 26,
               "turnoverDiff": 13,
-              "passDefEpa": 3,
-              "rushDefEpa": 21,
+              "passDefEpa": 2,
+              "rushDefEpa": 20,
               "pointsFor": 14,
               "pointsAgainst": 1
             }
@@ -2027,15 +2027,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYJ",
             "values": {
-              "passOffEpa": 0.087,
+              "passOffEpa": 0.084,
               "turnoverDiff": 1,
-              "passDefEpa": -0.053,
-              "rushDefEpa": -0.35,
+              "passDefEpa": -0.067,
+              "rushDefEpa": -0.313,
               "pointsFor": 17,
               "pointsAgainst": 20
             },
             "ranks": {
-              "passOffEpa": 18,
+              "passOffEpa": 16,
               "turnoverDiff": 5,
               "passDefEpa": 10,
               "rushDefEpa": 5,
@@ -2046,15 +2046,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BAL",
             "values": {
-              "passOffEpa": 0.095,
+              "passOffEpa": 0.069,
               "turnoverDiff": -1,
-              "passDefEpa": 0.257,
-              "rushDefEpa": -0.036,
+              "passDefEpa": 0.243,
+              "rushDefEpa": -0.014,
               "pointsFor": 17,
               "pointsAgainst": 24
             },
             "ranks": {
-              "passOffEpa": 17,
+              "passOffEpa": 18,
               "turnoverDiff": 23,
               "passDefEpa": 25,
               "rushDefEpa": 23,
@@ -2065,15 +2065,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CIN",
             "values": {
-              "passOffEpa": -0.001,
+              "passOffEpa": 0.004,
               "turnoverDiff": 0,
-              "passDefEpa": -0.126,
-              "rushDefEpa": -0.441,
+              "passDefEpa": -0.123,
+              "rushDefEpa": -0.404,
               "pointsFor": 20,
               "pointsAgainst": 6
             },
             "ranks": {
-              "passOffEpa": 21,
+              "passOffEpa": 20,
               "turnoverDiff": 14,
               "passDefEpa": 6,
               "rushDefEpa": 1,
@@ -2084,10 +2084,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CLE",
             "values": {
-              "passOffEpa": 0.256,
+              "passOffEpa": 0.236,
               "turnoverDiff": 1,
-              "passDefEpa": -0.298,
-              "rushDefEpa": 0.176,
+              "passDefEpa": -0.306,
+              "rushDefEpa": 0.203,
               "pointsFor": 23,
               "pointsAgainst": 19
             },
@@ -2103,18 +2103,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PIT",
             "values": {
-              "passOffEpa": -0.389,
+              "passOffEpa": -0.397,
               "turnoverDiff": 0,
-              "passDefEpa": -0.064,
-              "rushDefEpa": 0.048,
+              "passDefEpa": -0.101,
+              "rushDefEpa": 0.052,
               "pointsFor": 3,
               "pointsAgainst": 20
             },
             "ranks": {
-              "passOffEpa": 30,
+              "passOffEpa": 31,
               "turnoverDiff": 15,
-              "passDefEpa": 9,
-              "rushDefEpa": 25,
+              "passDefEpa": 7,
+              "rushDefEpa": 24,
               "pointsFor": 30,
               "pointsAgainst": 15
             }
@@ -2122,18 +2122,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "HOU",
             "values": {
-              "passOffEpa": -0.126,
+              "passOffEpa": -0.123,
               "turnoverDiff": 0,
-              "passDefEpa": -0.001,
-              "rushDefEpa": -0.173,
+              "passDefEpa": 0.004,
+              "rushDefEpa": -0.132,
               "pointsFor": 6,
               "pointsAgainst": 20
             },
             "ranks": {
               "passOffEpa": 27,
               "turnoverDiff": 16,
-              "passDefEpa": 11,
-              "rushDefEpa": 12,
+              "passDefEpa": 12,
+              "rushDefEpa": 14,
               "pointsFor": 28,
               "pointsAgainst": 16
             }
@@ -2141,18 +2141,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "IND",
             "values": {
-              "passOffEpa": 0.168,
+              "passOffEpa": 0.16,
               "turnoverDiff": -1,
-              "passDefEpa": 0.232,
-              "rushDefEpa": 0.119,
+              "passDefEpa": 0.218,
+              "rushDefEpa": 0.113,
               "pointsFor": 30,
               "pointsAgainst": 33
             },
             "ranks": {
               "passOffEpa": 14,
               "turnoverDiff": 24,
-              "passDefEpa": 22,
-              "rushDefEpa": 28,
+              "passDefEpa": 21,
+              "rushDefEpa": 27,
               "pointsFor": 8,
               "pointsAgainst": 28
             }
@@ -2160,18 +2160,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "JAX",
             "values": {
-              "passOffEpa": -0.094,
+              "passOffEpa": -0.095,
               "turnoverDiff": 0,
-              "passDefEpa": 0.233,
-              "rushDefEpa": -0.173,
+              "passDefEpa": 0.224,
+              "rushDefEpa": -0.165,
               "pointsFor": 13,
               "pointsAgainst": 20
             },
             "ranks": {
-              "passOffEpa": 26,
+              "passOffEpa": 25,
               "turnoverDiff": 17,
-              "passDefEpa": 23,
-              "rushDefEpa": 13,
+              "passDefEpa": 22,
+              "rushDefEpa": 11,
               "pointsFor": 25,
               "pointsAgainst": 17
             }
@@ -2179,18 +2179,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TEN",
             "values": {
-              "passOffEpa": 0,
+              "passOffEpa": 0.013,
               "turnoverDiff": 2,
-              "passDefEpa": 0.22,
-              "rushDefEpa": -0.146,
+              "passDefEpa": 0.209,
+              "rushDefEpa": -0.122,
               "pointsFor": 20,
               "pointsAgainst": 24
             },
             "ranks": {
-              "passOffEpa": 20,
+              "passOffEpa": 19,
               "turnoverDiff": 2,
-              "passDefEpa": 21,
-              "rushDefEpa": 15,
+              "passDefEpa": 20,
+              "rushDefEpa": 16,
               "pointsFor": 16,
               "pointsAgainst": 22
             }
@@ -2198,18 +2198,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DEN",
             "values": {
-              "passOffEpa": 0.233,
+              "passOffEpa": 0.224,
               "turnoverDiff": 0,
-              "passDefEpa": -0.094,
-              "rushDefEpa": 0.047,
+              "passDefEpa": -0.095,
+              "rushDefEpa": 0.071,
               "pointsFor": 20,
               "pointsAgainst": 13
             },
             "ranks": {
-              "passOffEpa": 10,
+              "passOffEpa": 11,
               "turnoverDiff": 18,
-              "passDefEpa": 7,
-              "rushDefEpa": 24,
+              "passDefEpa": 8,
+              "rushDefEpa": 25,
               "pointsFor": 17,
               "pointsAgainst": 8
             }
@@ -2217,18 +2217,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "KC",
             "values": {
-              "passOffEpa": 0.232,
+              "passOffEpa": 0.218,
               "turnoverDiff": 1,
-              "passDefEpa": 0.168,
-              "rushDefEpa": 0.094,
+              "passDefEpa": 0.16,
+              "rushDefEpa": 0.091,
               "pointsFor": 33,
               "pointsAgainst": 30
             },
             "ranks": {
-              "passOffEpa": 11,
+              "passOffEpa": 12,
               "turnoverDiff": 7,
               "passDefEpa": 19,
-              "rushDefEpa": 27,
+              "rushDefEpa": 26,
               "pointsFor": 5,
               "pointsAgainst": 25
             }
@@ -2236,18 +2236,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LV",
             "values": {
-              "passOffEpa": 0.204,
+              "passOffEpa": 0.232,
               "turnoverDiff": 2,
-              "passDefEpa": -0.001,
-              "rushDefEpa": -0.368,
+              "passDefEpa": 0.004,
+              "rushDefEpa": -0.337,
               "pointsFor": 26,
               "pointsAgainst": 14
             },
             "ranks": {
-              "passOffEpa": 13,
+              "passOffEpa": 10,
               "turnoverDiff": 3,
-              "passDefEpa": 12,
-              "rushDefEpa": 3,
+              "passDefEpa": 13,
+              "rushDefEpa": 2,
               "pointsFor": 10,
               "pointsAgainst": 10
             }
@@ -2255,18 +2255,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LAC",
             "values": {
-              "passOffEpa": -0.001,
+              "passOffEpa": 0.004,
               "turnoverDiff": -2,
-              "passDefEpa": 0.204,
-              "rushDefEpa": -0.369,
+              "passDefEpa": 0.232,
+              "rushDefEpa": -0.337,
               "pointsFor": 14,
               "pointsAgainst": 26
             },
             "ranks": {
-              "passOffEpa": 22,
+              "passOffEpa": 21,
               "turnoverDiff": 29,
-              "passDefEpa": 20,
-              "rushDefEpa": 2,
+              "passDefEpa": 23,
+              "rushDefEpa": 3,
               "pointsFor": 23,
               "pointsAgainst": 23
             }
@@ -2274,18 +2274,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DAL",
             "values": {
-              "passOffEpa": 0.369,
+              "passOffEpa": 0.341,
               "turnoverDiff": 1,
-              "passDefEpa": 0.099,
-              "rushDefEpa": 0.09,
+              "passDefEpa": 0.083,
+              "rushDefEpa": 0.118,
               "pointsFor": 37,
               "pointsAgainst": 20
             },
             "ranks": {
               "passOffEpa": 6,
               "turnoverDiff": 8,
-              "passDefEpa": 17,
-              "rushDefEpa": 26,
+              "passDefEpa": 16,
+              "rushDefEpa": 28,
               "pointsFor": 2,
               "pointsAgainst": 18
             }
@@ -2293,18 +2293,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYG",
             "values": {
-              "passOffEpa": -0.402,
+              "passOffEpa": -0.371,
               "turnoverDiff": 1,
-              "passDefEpa": 0.512,
-              "rushDefEpa": -0.197,
+              "passDefEpa": 0.51,
+              "rushDefEpa": -0.168,
               "pointsFor": 6,
               "pointsAgainst": 28
             },
             "ranks": {
-              "passOffEpa": 31,
+              "passOffEpa": 30,
               "turnoverDiff": 9,
               "passDefEpa": 31,
-              "rushDefEpa": 9,
+              "rushDefEpa": 10,
               "pointsFor": 29,
               "pointsAgainst": 24
             }
@@ -2312,17 +2312,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PHI",
             "values": {
-              "passOffEpa": 0.22,
+              "passOffEpa": 0.209,
               "turnoverDiff": -2,
-              "passDefEpa": 0,
-              "rushDefEpa": 0.139,
+              "passDefEpa": 0.013,
+              "rushDefEpa": 0.155,
               "pointsFor": 24,
               "pointsAgainst": 20
             },
             "ranks": {
-              "passOffEpa": 12,
+              "passOffEpa": 13,
               "turnoverDiff": 30,
-              "passDefEpa": 13,
+              "passDefEpa": 14,
               "rushDefEpa": 30,
               "pointsFor": 11,
               "pointsAgainst": 19
@@ -2331,18 +2331,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "WSH",
             "values": {
-              "passOffEpa": 0.099,
+              "passOffEpa": 0.083,
               "turnoverDiff": -1,
-              "passDefEpa": 0.369,
-              "rushDefEpa": -0.118,
+              "passDefEpa": 0.341,
+              "rushDefEpa": -0.058,
               "pointsFor": 20,
               "pointsAgainst": 37
             },
             "ranks": {
-              "passOffEpa": 16,
+              "passOffEpa": 17,
               "turnoverDiff": 25,
               "passDefEpa": 27,
-              "rushDefEpa": 19,
+              "rushDefEpa": 21,
               "pointsFor": 18,
               "pointsAgainst": 31
             }
@@ -2350,18 +2350,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CHI",
             "values": {
-              "passOffEpa": -0.083,
+              "passOffEpa": -0.09,
               "turnoverDiff": -2,
-              "passDefEpa": 0.005,
-              "rushDefEpa": -0.127,
+              "passDefEpa": -0.052,
+              "rushDefEpa": -0.101,
               "pointsFor": 3,
               "pointsAgainst": 9
             },
             "ranks": {
-              "passOffEpa": 25,
+              "passOffEpa": 24,
               "turnoverDiff": 31,
-              "passDefEpa": 14,
-              "rushDefEpa": 18,
+              "passDefEpa": 11,
+              "rushDefEpa": 19,
               "pointsFor": 31,
               "pointsAgainst": 7
             }
@@ -2369,10 +2369,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DET",
             "values": {
-              "passOffEpa": 0.387,
+              "passOffEpa": 0.378,
               "turnoverDiff": 0,
-              "passDefEpa": 0.385,
-              "rushDefEpa": 0.232,
+              "passDefEpa": 0.365,
+              "rushDefEpa": 0.245,
               "pointsFor": 31,
               "pointsAgainst": 41
             },
@@ -2388,18 +2388,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "GB",
             "values": {
-              "passOffEpa": -0.053,
+              "passOffEpa": -0.067,
               "turnoverDiff": -1,
-              "passDefEpa": 0.087,
-              "rushDefEpa": -0.356,
+              "passDefEpa": 0.084,
+              "rushDefEpa": -0.305,
               "pointsFor": 20,
               "pointsAgainst": 17
             },
             "ranks": {
               "passOffEpa": 23,
               "turnoverDiff": 26,
-              "passDefEpa": 15,
-              "rushDefEpa": 4,
+              "passDefEpa": 17,
+              "rushDefEpa": 6,
               "pointsFor": 19,
               "pointsAgainst": 11
             }
@@ -2407,18 +2407,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIN",
             "values": {
-              "passOffEpa": 0.005,
+              "passOffEpa": -0.052,
               "turnoverDiff": 2,
-              "passDefEpa": -0.083,
-              "rushDefEpa": -0.136,
+              "passDefEpa": -0.09,
+              "rushDefEpa": -0.132,
               "pointsFor": 9,
               "pointsAgainst": 3
             },
             "ranks": {
-              "passOffEpa": 19,
+              "passOffEpa": 22,
               "turnoverDiff": 4,
-              "passDefEpa": 8,
-              "rushDefEpa": 16,
+              "passDefEpa": 9,
+              "rushDefEpa": 15,
               "pointsFor": 26,
               "pointsAgainst": 2
             }
@@ -2426,10 +2426,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ATL",
             "values": {
-              "passOffEpa": -0.587,
+              "passOffEpa": -0.595,
               "turnoverDiff": -5,
-              "passDefEpa": 0.263,
-              "rushDefEpa": -0.194,
+              "passDefEpa": 0.274,
+              "rushDefEpa": -0.196,
               "pointsFor": 3,
               "pointsAgainst": 34
             },
@@ -2437,7 +2437,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 32,
               "turnoverDiff": 32,
               "passDefEpa": 26,
-              "rushDefEpa": 10,
+              "rushDefEpa": 8,
               "pointsFor": 32,
               "pointsAgainst": 29
             }
@@ -2445,10 +2445,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CAR",
             "values": {
-              "passOffEpa": 0.263,
+              "passOffEpa": 0.274,
               "turnoverDiff": 5,
-              "passDefEpa": -0.587,
-              "rushDefEpa": -0.153,
+              "passDefEpa": -0.595,
+              "rushDefEpa": -0.139,
               "pointsFor": 34,
               "pointsAgainst": 3
             },
@@ -2456,7 +2456,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 7,
               "turnoverDiff": 1,
               "passDefEpa": 1,
-              "rushDefEpa": 14,
+              "rushDefEpa": 13,
               "pointsFor": 4,
               "pointsAgainst": 3
             }
@@ -2464,17 +2464,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NO",
             "values": {
-              "passOffEpa": 0.257,
+              "passOffEpa": 0.243,
               "turnoverDiff": 1,
-              "passDefEpa": 0.095,
-              "rushDefEpa": 0.132,
+              "passDefEpa": 0.069,
+              "rushDefEpa": 0.152,
               "pointsFor": 24,
               "pointsAgainst": 17
             },
             "ranks": {
               "passOffEpa": 8,
               "turnoverDiff": 10,
-              "passDefEpa": 16,
+              "passDefEpa": 15,
               "rushDefEpa": 29,
               "pointsFor": 12,
               "pointsAgainst": 12
@@ -2483,10 +2483,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TB",
             "values": {
-              "passOffEpa": -0.298,
+              "passOffEpa": -0.306,
               "turnoverDiff": -1,
-              "passDefEpa": 0.256,
-              "rushDefEpa": -0.349,
+              "passDefEpa": 0.236,
+              "rushDefEpa": -0.316,
               "pointsFor": 19,
               "pointsAgainst": 23
             },
@@ -2494,7 +2494,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 29,
               "turnoverDiff": 27,
               "passDefEpa": 24,
-              "rushDefEpa": 6,
+              "rushDefEpa": 4,
               "pointsFor": 20,
               "pointsAgainst": 20
             }
@@ -2502,10 +2502,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ARI",
             "values": {
-              "passOffEpa": -0.191,
+              "passOffEpa": -0.193,
               "turnoverDiff": 0,
-              "passDefEpa": 0.496,
-              "rushDefEpa": -0.133,
+              "passDefEpa": 0.505,
+              "rushDefEpa": -0.119,
               "pointsFor": 7,
               "pointsAgainst": 31
             },
@@ -2521,18 +2521,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LAR",
             "values": {
-              "passOffEpa": 0.512,
+              "passOffEpa": 0.51,
               "turnoverDiff": -1,
-              "passDefEpa": -0.402,
-              "rushDefEpa": -0.226,
+              "passDefEpa": -0.371,
+              "rushDefEpa": -0.191,
               "pointsFor": 28,
               "pointsAgainst": 6
             },
             "ranks": {
               "passOffEpa": 2,
               "turnoverDiff": 28,
-              "passDefEpa": 2,
-              "rushDefEpa": 8,
+              "passDefEpa": 3,
+              "rushDefEpa": 9,
               "pointsFor": 9,
               "pointsAgainst": 5
             }
@@ -2540,10 +2540,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SF",
             "values": {
-              "passOffEpa": 0.9,
+              "passOffEpa": 0.886,
               "turnoverDiff": 0,
-              "passDefEpa": 0.133,
-              "rushDefEpa": -0.108,
+              "passDefEpa": 0.134,
+              "rushDefEpa": -0.107,
               "pointsFor": 35,
               "pointsAgainst": 13
             },
@@ -2551,7 +2551,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 1,
               "turnoverDiff": 21,
               "passDefEpa": 18,
-              "rushDefEpa": 20,
+              "rushDefEpa": 18,
               "pointsFor": 3,
               "pointsAgainst": 9
             }
@@ -2559,10 +2559,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SEA",
             "values": {
-              "passOffEpa": 0.496,
+              "passOffEpa": 0.505,
               "turnoverDiff": 0,
-              "passDefEpa": -0.191,
-              "rushDefEpa": -0.342,
+              "passDefEpa": -0.193,
+              "rushDefEpa": -0.294,
               "pointsFor": 31,
               "pointsAgainst": 7
             },
@@ -2582,10 +2582,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BUF",
             "values": {
-              "passOffEpa": 0.258,
+              "passOffEpa": 0.241,
               "turnoverDiff": -0.67,
-              "passDefEpa": 0.109,
-              "rushDefEpa": 0.008,
+              "passDefEpa": 0.096,
+              "rushDefEpa": 0.026,
               "pointsFor": 33.67,
               "pointsAgainst": 26
             },
@@ -2593,7 +2593,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 5,
               "turnoverDiff": 24,
               "passDefEpa": 19,
-              "rushDefEpa": 24,
+              "rushDefEpa": 23,
               "pointsFor": 1,
               "pointsAgainst": 21
             },
@@ -2602,18 +2602,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIA",
             "values": {
-              "passOffEpa": -0.041,
+              "passOffEpa": -0.055,
               "turnoverDiff": -0.33,
-              "passDefEpa": 0.415,
-              "rushDefEpa": -0.118,
+              "passDefEpa": 0.413,
+              "rushDefEpa": -0.098,
               "pointsFor": 12,
               "pointsAgainst": 28.67
             },
             "ranks": {
-              "passOffEpa": 22,
+              "passOffEpa": 23,
               "turnoverDiff": 21,
               "passDefEpa": 32,
-              "rushDefEpa": 8,
+              "rushDefEpa": 7,
               "pointsFor": 31,
               "pointsAgainst": 28
             },
@@ -2622,18 +2622,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NE",
             "values": {
-              "passOffEpa": -0.19,
+              "passOffEpa": -0.219,
               "turnoverDiff": -1.67,
-              "passDefEpa": -0.067,
-              "rushDefEpa": 0.037,
+              "passDefEpa": -0.085,
+              "rushDefEpa": 0.042,
               "pointsFor": 12,
               "pointsAgainst": 17
             },
             "ranks": {
               "passOffEpa": 30,
               "turnoverDiff": 28,
-              "passDefEpa": 5,
-              "rushDefEpa": 28,
+              "passDefEpa": 4,
+              "rushDefEpa": 26,
               "pointsFor": 32,
               "pointsAgainst": 6
             },
@@ -2642,10 +2642,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYJ",
             "values": {
-              "passOffEpa": 0.185,
+              "passOffEpa": 0.181,
               "turnoverDiff": 0.33,
-              "passDefEpa": 0.025,
-              "rushDefEpa": -0.107,
+              "passDefEpa": 0.019,
+              "rushDefEpa": -0.077,
               "pointsFor": 21.33,
               "pointsAgainst": 20.33
             },
@@ -2653,7 +2653,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 9,
               "turnoverDiff": 13,
               "passDefEpa": 15,
-              "rushDefEpa": 10,
+              "rushDefEpa": 11,
               "pointsFor": 17,
               "pointsAgainst": 12
             },
@@ -2662,18 +2662,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BAL",
             "values": {
-              "passOffEpa": 0.28,
+              "passOffEpa": 0.262,
               "turnoverDiff": 0.33,
-              "passDefEpa": 0.115,
-              "rushDefEpa": 0.02,
+              "passDefEpa": 0.107,
+              "rushDefEpa": 0.052,
               "pointsFor": 30.67,
               "pointsAgainst": 26
             },
             "ranks": {
-              "passOffEpa": 3,
+              "passOffEpa": 4,
               "turnoverDiff": 14,
               "passDefEpa": 20,
-              "rushDefEpa": 26,
+              "rushDefEpa": 27,
               "pointsFor": 4,
               "pointsAgainst": 22
             },
@@ -2682,18 +2682,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CIN",
             "values": {
-              "passOffEpa": 0.097,
+              "passOffEpa": 0.093,
               "turnoverDiff": 0.67,
               "passDefEpa": -0.042,
-              "rushDefEpa": -0.136,
+              "rushDefEpa": -0.121,
               "pointsFor": 26.67,
               "pointsAgainst": 21
             },
             "ranks": {
               "passOffEpa": 15,
               "turnoverDiff": 10,
-              "passDefEpa": 8,
-              "rushDefEpa": 5,
+              "passDefEpa": 10,
+              "rushDefEpa": 4,
               "pointsFor": 12,
               "pointsAgainst": 13
             },
@@ -2702,18 +2702,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CLE",
             "values": {
-              "passOffEpa": 0.074,
+              "passOffEpa": 0.055,
               "turnoverDiff": -0.33,
-              "passDefEpa": -0.002,
-              "rushDefEpa": -0.005,
+              "passDefEpa": -0.01,
+              "rushDefEpa": 0.009,
               "pointsFor": 18,
               "pointsAgainst": 23.67
             },
             "ranks": {
-              "passOffEpa": 17,
+              "passOffEpa": 18,
               "turnoverDiff": 22,
-              "passDefEpa": 13,
-              "rushDefEpa": 23,
+              "passDefEpa": 14,
+              "rushDefEpa": 20,
               "pointsFor": 24,
               "pointsAgainst": 18
             },
@@ -2722,10 +2722,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PIT",
             "values": {
-              "passOffEpa": -0.147,
+              "passOffEpa": -0.155,
               "turnoverDiff": 0.67,
-              "passDefEpa": -0.017,
-              "rushDefEpa": -0.011,
+              "passDefEpa": -0.024,
+              "rushDefEpa": 0.002,
               "pointsFor": 17.67,
               "pointsAgainst": 20
             },
@@ -2733,7 +2733,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 29,
               "turnoverDiff": 11,
               "passDefEpa": 12,
-              "rushDefEpa": 19,
+              "rushDefEpa": 18,
               "pointsFor": 26,
               "pointsAgainst": 11
             },
@@ -2742,10 +2742,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "HOU",
             "values": {
-              "passOffEpa": -0.057,
+              "passOffEpa": -0.061,
               "turnoverDiff": 0.33,
-              "passDefEpa": 0.054,
-              "rushDefEpa": -0.091,
+              "passDefEpa": 0.052,
+              "rushDefEpa": -0.069,
               "pointsFor": 18,
               "pointsAgainst": 25
             },
@@ -2753,7 +2753,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 24,
               "turnoverDiff": 15,
               "passDefEpa": 17,
-              "rushDefEpa": 12,
+              "rushDefEpa": 13,
               "pointsFor": 25,
               "pointsAgainst": 19
             },
@@ -2762,10 +2762,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "IND",
             "values": {
-              "passOffEpa": -0.069,
+              "passOffEpa": -0.075,
               "turnoverDiff": -1.67,
-              "passDefEpa": 0.171,
-              "rushDefEpa": 0.1,
+              "passDefEpa": 0.165,
+              "rushDefEpa": 0.117,
               "pointsFor": 24,
               "pointsAgainst": 30.33
             },
@@ -2782,17 +2782,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "JAX",
             "values": {
-              "passOffEpa": 0.24,
+              "passOffEpa": 0.226,
               "turnoverDiff": 1.33,
-              "passDefEpa": -0.102,
-              "rushDefEpa": -0.066,
+              "passDefEpa": -0.12,
+              "rushDefEpa": -0.048,
               "pointsFor": 27.33,
               "pointsAgainst": 12
             },
             "ranks": {
               "passOffEpa": 6,
               "turnoverDiff": 2,
-              "passDefEpa": 2,
+              "passDefEpa": 1,
               "rushDefEpa": 14,
               "pointsFor": 10,
               "pointsAgainst": 1
@@ -2802,10 +2802,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TEN",
             "values": {
-              "passOffEpa": -0.112,
+              "passOffEpa": -0.118,
               "turnoverDiff": -0.33,
-              "passDefEpa": 0.126,
-              "rushDefEpa": -0.062,
+              "passDefEpa": 0.114,
+              "rushDefEpa": -0.044,
               "pointsFor": 12.33,
               "pointsAgainst": 19.67
             },
@@ -2822,17 +2822,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DEN",
             "values": {
-              "passOffEpa": -0.042,
+              "passOffEpa": -0.051,
               "turnoverDiff": 0,
-              "passDefEpa": -0.039,
-              "rushDefEpa": 0.122,
+              "passDefEpa": -0.042,
+              "rushDefEpa": 0.135,
               "pointsFor": 20,
               "pointsAgainst": 23.33
             },
             "ranks": {
-              "passOffEpa": 23,
+              "passOffEpa": 22,
               "turnoverDiff": 16,
-              "passDefEpa": 9,
+              "passDefEpa": 11,
               "rushDefEpa": 32,
               "pointsFor": 21,
               "pointsAgainst": 17
@@ -2842,10 +2842,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "KC",
             "values": {
-              "passOffEpa": 0.203,
+              "passOffEpa": 0.193,
               "turnoverDiff": 1,
-              "passDefEpa": -0.1,
-              "rushDefEpa": -0.041,
+              "passDefEpa": -0.111,
+              "rushDefEpa": -0.032,
               "pointsFor": 29.33,
               "pointsAgainst": 16.67
             },
@@ -2862,10 +2862,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LV",
             "values": {
-              "passOffEpa": 0.147,
+              "passOffEpa": 0.159,
               "turnoverDiff": 1.67,
-              "passDefEpa": -0.046,
-              "rushDefEpa": -0.156,
+              "passDefEpa": -0.054,
+              "rushDefEpa": -0.116,
               "pointsFor": 29.33,
               "pointsAgainst": 18
             },
@@ -2873,7 +2873,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 11,
               "turnoverDiff": 1,
               "passDefEpa": 7,
-              "rushDefEpa": 4,
+              "rushDefEpa": 5,
               "pointsFor": 8,
               "pointsAgainst": 8
             },
@@ -2882,18 +2882,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LAC",
             "values": {
-              "passOffEpa": -0.099,
+              "passOffEpa": -0.095,
               "turnoverDiff": 0,
-              "passDefEpa": 0.133,
-              "rushDefEpa": -0.1,
+              "passDefEpa": 0.151,
+              "rushDefEpa": -0.084,
               "pointsFor": 14.67,
               "pointsAgainst": 25.33
             },
             "ranks": {
-              "passOffEpa": 27,
+              "passOffEpa": 26,
               "turnoverDiff": 17,
-              "passDefEpa": 23,
-              "rushDefEpa": 11,
+              "passDefEpa": 25,
+              "rushDefEpa": 9,
               "pointsFor": 29,
               "pointsAgainst": 20
             },
@@ -2902,10 +2902,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DAL",
             "values": {
-              "passOffEpa": 0.293,
+              "passOffEpa": 0.281,
               "turnoverDiff": 0,
-              "passDefEpa": 0.389,
-              "rushDefEpa": -0.009,
+              "passDefEpa": 0.367,
+              "rushDefEpa": 0.007,
               "pointsFor": 29.33,
               "pointsAgainst": 27.33
             },
@@ -2913,7 +2913,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 2,
               "turnoverDiff": 18,
               "passDefEpa": 31,
-              "rushDefEpa": 21,
+              "rushDefEpa": 19,
               "pointsFor": 9,
               "pointsAgainst": 25
             },
@@ -2922,10 +2922,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYG",
             "values": {
-              "passOffEpa": 0.009,
+              "passOffEpa": -0.001,
               "turnoverDiff": 1,
-              "passDefEpa": 0.203,
-              "rushDefEpa": -0.09,
+              "passDefEpa": 0.193,
+              "rushDefEpa": -0.071,
               "pointsFor": 15.33,
               "pointsAgainst": 18.33
             },
@@ -2933,7 +2933,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 19,
               "turnoverDiff": 5,
               "passDefEpa": 29,
-              "rushDefEpa": 13,
+              "rushDefEpa": 12,
               "pointsFor": 28,
               "pointsAgainst": 9
             },
@@ -2942,10 +2942,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PHI",
             "values": {
-              "passOffEpa": -0.016,
+              "passOffEpa": -0.026,
               "turnoverDiff": -1.67,
-              "passDefEpa": 0.117,
-              "rushDefEpa": -0.006,
+              "passDefEpa": 0.113,
+              "rushDefEpa": 0.011,
               "pointsFor": 18.33,
               "pointsAgainst": 23
             },
@@ -2953,7 +2953,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 21,
               "turnoverDiff": 30,
               "passDefEpa": 21,
-              "rushDefEpa": 22,
+              "rushDefEpa": 21,
               "pointsFor": 23,
               "pointsAgainst": 16
             },
@@ -2962,18 +2962,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "WSH",
             "values": {
-              "passOffEpa": 0.112,
+              "passOffEpa": 0.1,
               "turnoverDiff": 0.67,
-              "passDefEpa": 0.18,
-              "rushDefEpa": -0.112,
+              "passDefEpa": 0.175,
+              "rushDefEpa": -0.082,
               "pointsFor": 25,
               "pointsAgainst": 30.67
             },
             "ranks": {
-              "passOffEpa": 13,
+              "passOffEpa": 14,
               "turnoverDiff": 12,
               "passDefEpa": 28,
-              "rushDefEpa": 9,
+              "rushDefEpa": 10,
               "pointsFor": 13,
               "pointsAgainst": 31
             },
@@ -2982,18 +2982,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CHI",
             "values": {
-              "passOffEpa": 0.178,
+              "passOffEpa": 0.169,
               "turnoverDiff": 1,
-              "passDefEpa": 0.011,
-              "rushDefEpa": 0.047,
+              "passDefEpa": -0.022,
+              "rushDefEpa": 0.068,
               "pointsFor": 29.67,
               "pointsAgainst": 17.67
             },
             "ranks": {
               "passOffEpa": 10,
               "turnoverDiff": 6,
-              "passDefEpa": 14,
-              "rushDefEpa": 29,
+              "passDefEpa": 13,
+              "rushDefEpa": 28,
               "pointsFor": 5,
               "pointsAgainst": 7
             },
@@ -3002,18 +3002,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DET",
             "values": {
-              "passOffEpa": 0.272,
+              "passOffEpa": 0.271,
               "turnoverDiff": 1,
-              "passDefEpa": 0.169,
-              "rushDefEpa": 0.033,
+              "passDefEpa": 0.159,
+              "rushDefEpa": 0.068,
               "pointsFor": 31,
               "pointsAgainst": 31.67
             },
             "ranks": {
-              "passOffEpa": 4,
+              "passOffEpa": 3,
               "turnoverDiff": 7,
               "passDefEpa": 26,
-              "rushDefEpa": 27,
+              "rushDefEpa": 29,
               "pointsFor": 3,
               "pointsAgainst": 32
             },
@@ -3022,18 +3022,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "GB",
             "values": {
-              "passOffEpa": -0.009,
+              "passOffEpa": -0.013,
               "turnoverDiff": -0.67,
-              "passDefEpa": 0.143,
-              "rushDefEpa": -0.01,
+              "passDefEpa": 0.141,
+              "rushDefEpa": 0.028,
               "pointsFor": 18.67,
               "pointsAgainst": 30.33
             },
             "ranks": {
               "passOffEpa": 20,
               "turnoverDiff": 25,
-              "passDefEpa": 25,
-              "rushDefEpa": 20,
+              "passDefEpa": 24,
+              "rushDefEpa": 25,
               "pointsFor": 22,
               "pointsAgainst": 30
             },
@@ -3042,18 +3042,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIN",
             "values": {
-              "passOffEpa": -0.09,
+              "passOffEpa": -0.106,
               "turnoverDiff": 1.33,
-              "passDefEpa": -0.118,
-              "rushDefEpa": -0.201,
+              "passDefEpa": -0.116,
+              "rushDefEpa": -0.173,
               "pointsFor": 23.67,
               "pointsAgainst": 13.67
             },
             "ranks": {
-              "passOffEpa": 26,
+              "passOffEpa": 27,
               "turnoverDiff": 3,
-              "passDefEpa": 1,
-              "rushDefEpa": 2,
+              "passDefEpa": 2,
+              "rushDefEpa": 3,
               "pointsFor": 16,
               "pointsAgainst": 2
             },
@@ -3062,10 +3062,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ATL",
             "values": {
-              "passOffEpa": -0.288,
+              "passOffEpa": -0.294,
               "turnoverDiff": -2,
-              "passDefEpa": 0.041,
-              "rushDefEpa": -0.224,
+              "passDefEpa": 0.035,
+              "rushDefEpa": -0.205,
               "pointsFor": 17,
               "pointsAgainst": 22.67
             },
@@ -3082,17 +3082,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CAR",
             "values": {
-              "passOffEpa": 0.139,
+              "passOffEpa": 0.133,
               "turnoverDiff": 1,
-              "passDefEpa": -0.027,
-              "rushDefEpa": 0.056,
+              "passDefEpa": -0.043,
+              "rushDefEpa": 0.071,
               "pointsFor": 29.67,
               "pointsAgainst": 27.67
             },
             "ranks": {
               "passOffEpa": 12,
               "turnoverDiff": 8,
-              "passDefEpa": 11,
+              "passDefEpa": 9,
               "rushDefEpa": 30,
               "pointsFor": 6,
               "pointsAgainst": 26
@@ -3102,18 +3102,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NO",
             "values": {
-              "passOffEpa": 0.068,
+              "passOffEpa": 0.06,
               "turnoverDiff": -1.33,
-              "passDefEpa": 0.141,
-              "rushDefEpa": -0.014,
+              "passDefEpa": 0.132,
+              "rushDefEpa": 0.027,
               "pointsFor": 27,
               "pointsAgainst": 27.67
             },
             "ranks": {
-              "passOffEpa": 18,
+              "passOffEpa": 17,
               "turnoverDiff": 27,
-              "passDefEpa": 24,
-              "rushDefEpa": 18,
+              "passDefEpa": 23,
+              "rushDefEpa": 24,
               "pointsFor": 11,
               "pointsAgainst": 27
             },
@@ -3122,17 +3122,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TB",
             "values": {
-              "passOffEpa": -0.22,
+              "passOffEpa": -0.225,
               "turnoverDiff": -1.67,
-              "passDefEpa": -0.03,
-              "rushDefEpa": -0.134,
+              "passDefEpa": -0.047,
+              "rushDefEpa": -0.107,
               "pointsFor": 20.67,
               "pointsAgainst": 26.33
             },
             "ranks": {
               "passOffEpa": 31,
               "turnoverDiff": 31,
-              "passDefEpa": 10,
+              "passDefEpa": 8,
               "rushDefEpa": 6,
               "pointsFor": 19,
               "pointsAgainst": 23
@@ -3142,10 +3142,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ARI",
             "values": {
-              "passOffEpa": 0.078,
+              "passOffEpa": 0.083,
               "turnoverDiff": 1,
-              "passDefEpa": 0.354,
-              "rushDefEpa": -0.131,
+              "passDefEpa": 0.339,
+              "rushDefEpa": -0.091,
               "pointsFor": 21,
               "pointsAgainst": 27
             },
@@ -3153,7 +3153,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 16,
               "turnoverDiff": 9,
               "passDefEpa": 30,
-              "rushDefEpa": 7,
+              "rushDefEpa": 8,
               "pointsFor": 18,
               "pointsAgainst": 24
             },
@@ -3162,18 +3162,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LAR",
             "values": {
-              "passOffEpa": 0.103,
+              "passOffEpa": 0.11,
               "turnoverDiff": -1,
-              "passDefEpa": -0.093,
-              "rushDefEpa": 0.011,
+              "passDefEpa": -0.073,
+              "rushDefEpa": 0.025,
               "pointsFor": 20.33,
               "pointsAgainst": 21
             },
             "ranks": {
-              "passOffEpa": 14,
+              "passOffEpa": 13,
               "turnoverDiff": 26,
-              "passDefEpa": 4,
-              "rushDefEpa": 25,
+              "passDefEpa": 5,
+              "rushDefEpa": 22,
               "pointsFor": 20,
               "pointsAgainst": 14
             },
@@ -3182,10 +3182,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SF",
             "values": {
-              "passOffEpa": 0.531,
+              "passOffEpa": 0.524,
               "turnoverDiff": 0,
-              "passDefEpa": 0.082,
-              "rushDefEpa": -0.053,
+              "passDefEpa": 0.084,
+              "rushDefEpa": -0.039,
               "pointsFor": 32.67,
               "pointsAgainst": 16.67
             },
@@ -3202,10 +3202,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SEA",
             "values": {
-              "passOffEpa": 0.219,
+              "passOffEpa": 0.216,
               "turnoverDiff": 0,
-              "passDefEpa": -0.056,
-              "rushDefEpa": -0.2,
+              "passDefEpa": -0.069,
+              "rushDefEpa": -0.174,
               "pointsFor": 25,
               "pointsAgainst": 16.67
             },
@@ -3213,7 +3213,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 7,
               "turnoverDiff": 20,
               "passDefEpa": 6,
-              "rushDefEpa": 3,
+              "rushDefEpa": 2,
               "pointsFor": 14,
               "pointsAgainst": 5
             },
@@ -3224,10 +3224,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BUF",
             "values": {
-              "passOffEpa": 0.02,
+              "passOffEpa": 0.005,
               "turnoverDiff": -4,
-              "passDefEpa": -0.159,
-              "rushDefEpa": 0.039,
+              "passDefEpa": -0.158,
+              "rushDefEpa": 0.046,
               "pointsFor": 24,
               "pointsAgainst": 16
             },
@@ -3235,7 +3235,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 18,
               "turnoverDiff": 32,
               "passDefEpa": 6,
-              "rushDefEpa": 24,
+              "rushDefEpa": 23,
               "pointsFor": 17,
               "pointsAgainst": 7
             }
@@ -3243,18 +3243,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIA",
             "values": {
-              "passOffEpa": -0.104,
+              "passOffEpa": -0.123,
               "turnoverDiff": -1,
               "passDefEpa": 0.444,
-              "rushDefEpa": -0.201,
+              "rushDefEpa": -0.177,
               "pointsFor": 10,
               "pointsAgainst": 24
             },
             "ranks": {
-              "passOffEpa": 23,
+              "passOffEpa": 24,
               "turnoverDiff": 19,
               "passDefEpa": 30,
-              "rushDefEpa": 5,
+              "rushDefEpa": 4,
               "pointsFor": 29,
               "pointsAgainst": 14
             }
@@ -3262,9 +3262,9 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NE",
             "values": {
-              "passOffEpa": -0.367,
+              "passOffEpa": -0.395,
               "turnoverDiff": -2,
-              "passDefEpa": 0.24,
+              "passDefEpa": 0.221,
               "rushDefEpa": 0.175,
               "pointsFor": 6,
               "pointsAgainst": 35
@@ -3281,10 +3281,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYJ",
             "values": {
-              "passOffEpa": 0.215,
+              "passOffEpa": 0.206,
               "turnoverDiff": -1,
-              "passDefEpa": 0.29,
-              "rushDefEpa": -0.049,
+              "passDefEpa": 0.303,
+              "rushDefEpa": -0.025,
               "pointsFor": 24,
               "pointsAgainst": 31
             },
@@ -3292,7 +3292,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 9,
               "turnoverDiff": 20,
               "passDefEpa": 27,
-              "rushDefEpa": 15,
+              "rushDefEpa": 17,
               "pointsFor": 18,
               "pointsAgainst": 24
             }
@@ -3300,10 +3300,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BAL",
             "values": {
-              "passOffEpa": 0.514,
+              "passOffEpa": 0.511,
               "turnoverDiff": 1,
-              "passDefEpa": 0.256,
-              "rushDefEpa": 0.005,
+              "passDefEpa": 0.259,
+              "rushDefEpa": 0.034,
               "pointsFor": 34,
               "pointsAgainst": 31
             },
@@ -3311,7 +3311,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 2,
               "turnoverDiff": 8,
               "passDefEpa": 26,
-              "rushDefEpa": 21,
+              "rushDefEpa": 20,
               "pointsFor": 5,
               "pointsAgainst": 25
             }
@@ -3319,10 +3319,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CIN",
             "values": {
-              "passOffEpa": 0.333,
+              "passOffEpa": 0.337,
               "turnoverDiff": -1,
-              "passDefEpa": 0.187,
-              "rushDefEpa": 0.021,
+              "passDefEpa": 0.178,
+              "rushDefEpa": 0.041,
               "pointsFor": 27,
               "pointsAgainst": 30
             },
@@ -3338,17 +3338,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CLE",
             "values": {
-              "passOffEpa": 0.083,
+              "passOffEpa": 0.06,
               "turnoverDiff": 0,
-              "passDefEpa": -0.104,
-              "rushDefEpa": -0.144,
+              "passDefEpa": -0.105,
+              "rushDefEpa": -0.124,
               "pointsFor": 21,
               "pointsAgainst": 18
             },
             "ranks": {
               "passOffEpa": 16,
               "turnoverDiff": 15,
-              "passDefEpa": 9,
+              "passDefEpa": 10,
               "rushDefEpa": 8,
               "pointsFor": 21,
               "pointsAgainst": 10
@@ -3357,10 +3357,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PIT",
             "values": {
-              "passOffEpa": 0.187,
+              "passOffEpa": 0.178,
               "turnoverDiff": 1,
-              "passDefEpa": 0.333,
-              "rushDefEpa": 0.045,
+              "passDefEpa": 0.337,
+              "rushDefEpa": 0.072,
               "pointsFor": 30,
               "pointsAgainst": 27
             },
@@ -3368,7 +3368,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 12,
               "turnoverDiff": 9,
               "passDefEpa": 29,
-              "rushDefEpa": 25,
+              "rushDefEpa": 27,
               "pointsFor": 10,
               "pointsAgainst": 18
             }
@@ -3376,10 +3376,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "HOU",
             "values": {
-              "passOffEpa": -0.082,
+              "passOffEpa": -0.062,
               "turnoverDiff": 3,
-              "passDefEpa": -0.129,
-              "rushDefEpa": -0.034,
+              "passDefEpa": -0.125,
+              "rushDefEpa": -0.032,
               "pointsFor": 17,
               "pointsAgainst": 19
             },
@@ -3387,7 +3387,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 22,
               "turnoverDiff": 2,
               "passDefEpa": 8,
-              "rushDefEpa": 18,
+              "rushDefEpa": 16,
               "pointsFor": 24,
               "pointsAgainst": 11
             }
@@ -3395,10 +3395,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "IND",
             "values": {
-              "passOffEpa": -0.129,
+              "passOffEpa": -0.125,
               "turnoverDiff": -3,
-              "passDefEpa": -0.082,
-              "rushDefEpa": -0.048,
+              "passDefEpa": -0.062,
+              "rushDefEpa": -0.034,
               "pointsFor": 19,
               "pointsAgainst": 17
             },
@@ -3406,7 +3406,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 25,
               "turnoverDiff": 28,
               "passDefEpa": 11,
-              "rushDefEpa": 16,
+              "rushDefEpa": 15,
               "pointsFor": 22,
               "pointsAgainst": 9
             }
@@ -3414,10 +3414,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "JAX",
             "values": {
-              "passOffEpa": 0.24,
+              "passOffEpa": 0.221,
               "turnoverDiff": 2,
-              "passDefEpa": -0.367,
-              "rushDefEpa": -0.041,
+              "passDefEpa": -0.395,
+              "rushDefEpa": -0.006,
               "pointsFor": 35,
               "pointsAgainst": 6
             },
@@ -3425,7 +3425,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 8,
               "turnoverDiff": 6,
               "passDefEpa": 2,
-              "rushDefEpa": 17,
+              "rushDefEpa": 19,
               "pointsFor": 2,
               "pointsAgainst": 1
             }
@@ -3433,18 +3433,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TEN",
             "values": {
-              "passOffEpa": -0.13,
+              "passOffEpa": -0.141,
               "turnoverDiff": -2,
-              "passDefEpa": -0.208,
-              "rushDefEpa": -0.012,
+              "passDefEpa": -0.237,
+              "rushDefEpa": -0.007,
               "pointsFor": 7,
               "pointsAgainst": 12
             },
             "ranks": {
               "passOffEpa": 26,
               "turnoverDiff": 27,
-              "passDefEpa": 5,
-              "rushDefEpa": 19,
+              "passDefEpa": 4,
+              "rushDefEpa": 18,
               "pointsFor": 30,
               "pointsAgainst": 5
             }
@@ -3452,17 +3452,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DEN",
             "values": {
-              "passOffEpa": -0.001,
+              "passOffEpa": -0.011,
               "turnoverDiff": 1,
-              "passDefEpa": -0.008,
-              "rushDefEpa": 0.091,
+              "passDefEpa": -0.007,
+              "rushDefEpa": 0.104,
               "pointsFor": 30,
               "pointsAgainst": 26
             },
             "ranks": {
-              "passOffEpa": 19,
+              "passOffEpa": 20,
               "turnoverDiff": 10,
-              "passDefEpa": 13,
+              "passDefEpa": 14,
               "rushDefEpa": 29,
               "pointsFor": 11,
               "pointsAgainst": 17
@@ -3473,16 +3473,16 @@ const NFL_POWER_SCORE = {
             "values": {
               "passOffEpa": 0.444,
               "turnoverDiff": 1,
-              "passDefEpa": -0.104,
-              "rushDefEpa": -0.156,
+              "passDefEpa": -0.123,
+              "rushDefEpa": -0.128,
               "pointsFor": 24,
               "pointsAgainst": 10
             },
             "ranks": {
               "passOffEpa": 3,
               "turnoverDiff": 11,
-              "passDefEpa": 10,
-              "rushDefEpa": 7,
+              "passDefEpa": 9,
+              "rushDefEpa": 6,
               "pointsFor": 19,
               "pointsAgainst": 4
             }
@@ -3490,18 +3490,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LV",
             "values": {
-              "passOffEpa": 0.19,
+              "passOffEpa": 0.194,
               "turnoverDiff": 3,
-              "passDefEpa": -0.027,
-              "rushDefEpa": 0.054,
+              "passDefEpa": -0.033,
+              "rushDefEpa": 0.074,
               "pointsFor": 35,
               "pointsAgainst": 27
             },
             "ranks": {
-              "passOffEpa": 11,
+              "passOffEpa": 10,
               "turnoverDiff": 3,
               "passDefEpa": 12,
-              "rushDefEpa": 26,
+              "rushDefEpa": 28,
               "pointsFor": 3,
               "pointsAgainst": 19
             }
@@ -3509,10 +3509,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LAC",
             "values": {
-              "passOffEpa": -0.159,
+              "passOffEpa": -0.158,
               "turnoverDiff": 4,
-              "passDefEpa": 0.02,
-              "rushDefEpa": 0.062,
+              "passDefEpa": 0.005,
+              "rushDefEpa": 0.07,
               "pointsFor": 16,
               "pointsAgainst": 24
             },
@@ -3520,7 +3520,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 27,
               "turnoverDiff": 1,
               "passDefEpa": 15,
-              "rushDefEpa": 28,
+              "rushDefEpa": 25,
               "pointsFor": 25,
               "pointsAgainst": 15
             }
@@ -3528,10 +3528,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DAL",
             "values": {
-              "passOffEpa": 0.256,
+              "passOffEpa": 0.259,
               "turnoverDiff": -1,
-              "passDefEpa": 0.514,
-              "rushDefEpa": -0.078,
+              "passDefEpa": 0.511,
+              "rushDefEpa": -0.056,
               "pointsFor": 31,
               "pointsAgainst": 34
             },
@@ -3547,15 +3547,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYG",
             "values": {
-              "passOffEpa": -0.208,
+              "passOffEpa": -0.237,
               "turnoverDiff": 2,
-              "passDefEpa": -0.13,
-              "rushDefEpa": -0.065,
+              "passDefEpa": -0.141,
+              "rushDefEpa": -0.042,
               "pointsFor": 12,
               "pointsAgainst": 7
             },
             "ranks": {
-              "passOffEpa": 28,
+              "passOffEpa": 29,
               "turnoverDiff": 7,
               "passDefEpa": 7,
               "rushDefEpa": 14,
@@ -3566,17 +3566,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PHI",
             "values": {
-              "passOffEpa": -0.441,
+              "passOffEpa": -0.463,
               "turnoverDiff": -3,
-              "passDefEpa": 0.195,
-              "rushDefEpa": -0.141,
+              "passDefEpa": 0.189,
+              "rushDefEpa": -0.12,
               "pointsFor": 7,
               "pointsAgainst": 27
             },
             "ranks": {
               "passOffEpa": 32,
               "turnoverDiff": 29,
-              "passDefEpa": 23,
+              "passDefEpa": 22,
               "rushDefEpa": 9,
               "pointsFor": 31,
               "pointsAgainst": 20
@@ -3585,10 +3585,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "WSH",
             "values": {
-              "passOffEpa": 0.123,
+              "passOffEpa": 0.117,
               "turnoverDiff": 3,
-              "passDefEpa": 0.11,
-              "rushDefEpa": -0.354,
+              "passDefEpa": 0.117,
+              "rushDefEpa": -0.33,
               "pointsFor": 33,
               "pointsAgainst": 31
             },
@@ -3604,15 +3604,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CHI",
             "values": {
-              "passOffEpa": 0.195,
+              "passOffEpa": 0.189,
               "turnoverDiff": 3,
-              "passDefEpa": -0.441,
-              "rushDefEpa": 0.289,
+              "passDefEpa": -0.463,
+              "rushDefEpa": 0.326,
               "pointsFor": 27,
               "pointsAgainst": 7
             },
             "ranks": {
-              "passOffEpa": 10,
+              "passOffEpa": 11,
               "turnoverDiff": 5,
               "passDefEpa": 1,
               "rushDefEpa": 32,
@@ -3623,10 +3623,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DET",
             "values": {
-              "passOffEpa": 0.29,
+              "passOffEpa": 0.303,
               "turnoverDiff": 1,
-              "passDefEpa": 0.215,
-              "rushDefEpa": -0.216,
+              "passDefEpa": 0.206,
+              "rushDefEpa": -0.143,
               "pointsFor": 31,
               "pointsAgainst": 24
             },
@@ -3634,7 +3634,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 6,
               "turnoverDiff": 12,
               "passDefEpa": 24,
-              "rushDefEpa": 4,
+              "rushDefEpa": 5,
               "pointsFor": 8,
               "pointsAgainst": 16
             }
@@ -3642,10 +3642,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "GB",
             "values": {
-              "passOffEpa": 0.06,
+              "passOffEpa": 0.043,
               "turnoverDiff": 0,
-              "passDefEpa": 0.332,
-              "rushDefEpa": 0.252,
+              "passDefEpa": 0.317,
+              "rushDefEpa": 0.277,
               "pointsFor": 14,
               "pointsAgainst": 35
             },
@@ -3661,18 +3661,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIN",
             "values": {
-              "passOffEpa": -0.289,
+              "passOffEpa": -0.297,
               "turnoverDiff": 1,
-              "passDefEpa": -0.21,
-              "rushDefEpa": -0.167,
+              "passDefEpa": -0.219,
+              "rushDefEpa": -0.125,
               "pointsFor": 23,
               "pointsAgainst": 16
             },
             "ranks": {
               "passOffEpa": 30,
               "turnoverDiff": 13,
-              "passDefEpa": 4,
-              "rushDefEpa": 6,
+              "passDefEpa": 5,
+              "rushDefEpa": 7,
               "pointsFor": 20,
               "pointsAgainst": 8
             }
@@ -3680,10 +3680,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ATL",
             "values": {
-              "passOffEpa": 0.332,
+              "passOffEpa": 0.317,
               "turnoverDiff": 0,
-              "passDefEpa": 0.06,
-              "rushDefEpa": -0.263,
+              "passDefEpa": 0.043,
+              "rushDefEpa": -0.183,
               "pointsFor": 35,
               "pointsAgainst": 14
             },
@@ -3691,7 +3691,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 5,
               "turnoverDiff": 17,
               "passDefEpa": 16,
-              "rushDefEpa": 2,
+              "rushDefEpa": 3,
               "pointsFor": 4,
               "pointsAgainst": 6
             }
@@ -3699,18 +3699,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CAR",
             "values": {
-              "passOffEpa": -0.104,
+              "passOffEpa": -0.105,
               "turnoverDiff": 0,
-              "passDefEpa": 0.083,
-              "rushDefEpa": -0.115,
+              "passDefEpa": 0.06,
+              "rushDefEpa": -0.101,
               "pointsFor": 18,
               "pointsAgainst": 21
             },
             "ranks": {
-              "passOffEpa": 24,
+              "passOffEpa": 23,
               "turnoverDiff": 18,
               "passDefEpa": 17,
-              "rushDefEpa": 11,
+              "rushDefEpa": 10,
               "pointsFor": 23,
               "pointsAgainst": 12
             }
@@ -3718,18 +3718,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NO",
             "values": {
-              "passOffEpa": -0.027,
+              "passOffEpa": -0.033,
               "turnoverDiff": -3,
-              "passDefEpa": 0.19,
-              "rushDefEpa": -0.14,
+              "passDefEpa": 0.194,
+              "rushDefEpa": -0.098,
               "pointsFor": 27,
               "pointsAgainst": 35
             },
             "ranks": {
               "passOffEpa": 21,
               "turnoverDiff": 30,
-              "passDefEpa": 22,
-              "rushDefEpa": 10,
+              "passDefEpa": 23,
+              "rushDefEpa": 11,
               "pointsFor": 15,
               "pointsAgainst": 31
             }
@@ -3737,15 +3737,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TB",
             "values": {
-              "passOffEpa": -0.21,
+              "passOffEpa": -0.219,
               "turnoverDiff": -1,
-              "passDefEpa": -0.289,
-              "rushDefEpa": -0.08,
+              "passDefEpa": -0.297,
+              "rushDefEpa": -0.059,
               "pointsFor": 16,
               "pointsAgainst": 23
             },
             "ranks": {
-              "passOffEpa": 29,
+              "passOffEpa": 28,
               "turnoverDiff": 23,
               "passDefEpa": 3,
               "rushDefEpa": 12,
@@ -3756,10 +3756,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ARI",
             "values": {
-              "passOffEpa": 0.166,
+              "passOffEpa": 0.153,
               "turnoverDiff": 1,
-              "passDefEpa": 0.743,
-              "rushDefEpa": -0.01,
+              "passDefEpa": 0.683,
+              "rushDefEpa": 0.053,
               "pointsFor": 30,
               "pointsAgainst": 36
             },
@@ -3767,7 +3767,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 13,
               "turnoverDiff": 14,
               "passDefEpa": 32,
-              "rushDefEpa": 20,
+              "rushDefEpa": 24,
               "pointsFor": 12,
               "pointsAgainst": 32
             }
@@ -3775,18 +3775,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LAR",
             "values": {
-              "passOffEpa": -0.008,
+              "passOffEpa": -0.007,
               "turnoverDiff": -1,
-              "passDefEpa": -0.001,
-              "rushDefEpa": 0.033,
+              "passDefEpa": -0.011,
+              "rushDefEpa": 0.04,
               "pointsFor": 26,
               "pointsAgainst": 30
             },
             "ranks": {
-              "passOffEpa": 20,
+              "passOffEpa": 19,
               "turnoverDiff": 24,
-              "passDefEpa": 14,
-              "rushDefEpa": 23,
+              "passDefEpa": 13,
+              "rushDefEpa": 21,
               "pointsFor": 16,
               "pointsAgainst": 22
             }
@@ -3794,10 +3794,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SF",
             "values": {
-              "passOffEpa": 0.743,
+              "passOffEpa": 0.683,
               "turnoverDiff": -1,
-              "passDefEpa": 0.166,
-              "rushDefEpa": 0.06,
+              "passDefEpa": 0.153,
+              "rushDefEpa": 0.07,
               "pointsFor": 36,
               "pointsAgainst": 30
             },
@@ -3805,7 +3805,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 1,
               "turnoverDiff": 25,
               "passDefEpa": 20,
-              "rushDefEpa": 27,
+              "rushDefEpa": 26,
               "pointsFor": 1,
               "pointsAgainst": 23
             }
@@ -3813,10 +3813,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SEA",
             "values": {
-              "passOffEpa": 0.11,
+              "passOffEpa": 0.117,
               "turnoverDiff": -3,
-              "passDefEpa": 0.123,
-              "rushDefEpa": -0.261,
+              "passDefEpa": 0.117,
+              "rushDefEpa": -0.239,
               "pointsFor": 31,
               "pointsAgainst": 33
             },
@@ -3824,7 +3824,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 15,
               "turnoverDiff": 31,
               "passDefEpa": 19,
-              "rushDefEpa": 3,
+              "rushDefEpa": 2,
               "pointsFor": 9,
               "pointsAgainst": 27
             }
@@ -3836,10 +3836,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BUF",
             "values": {
-              "passOffEpa": 0.222,
+              "passOffEpa": 0.21,
               "turnoverDiff": -0.5,
-              "passDefEpa": 0.141,
-              "rushDefEpa": 0.027,
+              "passDefEpa": 0.129,
+              "rushDefEpa": 0.036,
               "pointsFor": 31.75,
               "pointsAgainst": 26.75
             },
@@ -3856,18 +3856,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIA",
             "values": {
-              "passOffEpa": -0.122,
+              "passOffEpa": -0.131,
               "turnoverDiff": -0.5,
-              "passDefEpa": 0.269,
-              "rushDefEpa": -0.148,
+              "passDefEpa": 0.271,
+              "rushDefEpa": -0.127,
               "pointsFor": 11.5,
               "pointsAgainst": 25.25
             },
             "ranks": {
-              "passOffEpa": 28,
+              "passOffEpa": 30,
               "turnoverDiff": 22,
-              "passDefEpa": 30,
-              "rushDefEpa": 4,
+              "passDefEpa": 31,
+              "rushDefEpa": 3,
               "pointsFor": 32,
               "pointsAgainst": 21
             },
@@ -3876,18 +3876,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NE",
             "values": {
-              "passOffEpa": -0.067,
+              "passOffEpa": -0.09,
               "turnoverDiff": -1.25,
-              "passDefEpa": -0.019,
-              "rushDefEpa": 0.057,
+              "passDefEpa": -0.032,
+              "rushDefEpa": 0.058,
               "pointsFor": 16.25,
               "pointsAgainst": 19.25
             },
             "ranks": {
-              "passOffEpa": 25,
+              "passOffEpa": 26,
               "turnoverDiff": 27,
-              "passDefEpa": 7,
-              "rushDefEpa": 30,
+              "passDefEpa": 6,
+              "rushDefEpa": 28,
               "pointsFor": 30,
               "pointsAgainst": 6
             },
@@ -3896,17 +3896,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYJ",
             "values": {
-              "passOffEpa": 0.128,
+              "passOffEpa": 0.122,
               "turnoverDiff": 0.75,
-              "passDefEpa": 0.07,
-              "rushDefEpa": -0.105,
+              "passDefEpa": 0.065,
+              "rushDefEpa": -0.09,
               "pointsFor": 19,
               "pointsAgainst": 21
             },
             "ranks": {
               "passOffEpa": 12,
               "turnoverDiff": 4,
-              "passDefEpa": 18,
+              "passDefEpa": 19,
               "rushDefEpa": 7,
               "pointsFor": 24,
               "pointsAgainst": 11
@@ -3916,17 +3916,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BAL",
             "values": {
-              "passOffEpa": 0.296,
+              "passOffEpa": 0.284,
               "turnoverDiff": 0.75,
-              "passDefEpa": 0.1,
-              "rushDefEpa": -0.027,
+              "passDefEpa": 0.091,
+              "rushDefEpa": 0.003,
               "pointsFor": 29,
               "pointsAgainst": 24
             },
             "ranks": {
               "passOffEpa": 2,
               "turnoverDiff": 5,
-              "passDefEpa": 25,
+              "passDefEpa": 24,
               "rushDefEpa": 20,
               "pointsFor": 7,
               "pointsAgainst": 19
@@ -3936,17 +3936,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CIN",
             "values": {
-              "passOffEpa": 0.103,
+              "passOffEpa": 0.095,
               "turnoverDiff": 0,
-              "passDefEpa": 0.012,
-              "rushDefEpa": -0.08,
+              "passDefEpa": 0.017,
+              "rushDefEpa": -0.067,
               "pointsFor": 24.25,
               "pointsAgainst": 21.25
             },
             "ranks": {
               "passOffEpa": 14,
               "turnoverDiff": 17,
-              "passDefEpa": 9,
+              "passDefEpa": 11,
               "rushDefEpa": 11,
               "pointsFor": 14,
               "pointsAgainst": 13
@@ -3956,10 +3956,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CLE",
             "values": {
-              "passOffEpa": 0.122,
+              "passOffEpa": 0.098,
               "turnoverDiff": -0.25,
-              "passDefEpa": 0.016,
-              "rushDefEpa": 0.015,
+              "passDefEpa": 0.008,
+              "rushDefEpa": 0.027,
               "pointsFor": 20.25,
               "pointsAgainst": 23.75
             },
@@ -3967,7 +3967,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 13,
               "turnoverDiff": 19,
               "passDefEpa": 10,
-              "rushDefEpa": 25,
+              "rushDefEpa": 23,
               "pointsFor": 22,
               "pointsAgainst": 18
             },
@@ -3976,10 +3976,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PIT",
             "values": {
-              "passOffEpa": -0.092,
+              "passOffEpa": -0.099,
               "turnoverDiff": 0.5,
-              "passDefEpa": 0.058,
-              "rushDefEpa": -0.032,
+              "passDefEpa": 0.043,
+              "rushDefEpa": -0.021,
               "pointsFor": 19.25,
               "pointsAgainst": 21.75
             },
@@ -3996,17 +3996,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "HOU",
             "values": {
-              "passOffEpa": 0.032,
+              "passOffEpa": 0.021,
               "turnoverDiff": 0.25,
-              "passDefEpa": 0.087,
-              "rushDefEpa": -0.069,
+              "passDefEpa": 0.083,
+              "rushDefEpa": -0.044,
               "pointsFor": 21,
               "pointsAgainst": 27.25
             },
             "ranks": {
               "passOffEpa": 18,
               "turnoverDiff": 14,
-              "passDefEpa": 24,
+              "passDefEpa": 23,
               "rushDefEpa": 13,
               "pointsFor": 20,
               "pointsAgainst": 26
@@ -4016,17 +4016,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "IND",
             "values": {
-              "passOffEpa": -0.124,
+              "passOffEpa": -0.125,
               "turnoverDiff": -1.5,
-              "passDefEpa": 0.072,
-              "rushDefEpa": 0.033,
+              "passDefEpa": 0.064,
+              "rushDefEpa": 0.055,
               "pointsFor": 25.5,
               "pointsAgainst": 26
             },
             "ranks": {
-              "passOffEpa": 29,
+              "passOffEpa": 28,
               "turnoverDiff": 32,
-              "passDefEpa": 19,
+              "passDefEpa": 18,
               "rushDefEpa": 27,
               "pointsFor": 13,
               "pointsAgainst": 22
@@ -4036,18 +4036,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "JAX",
             "values": {
-              "passOffEpa": 0.247,
+              "passOffEpa": 0.242,
               "turnoverDiff": 1.5,
-              "passDefEpa": -0.021,
-              "rushDefEpa": -0.096,
+              "passDefEpa": -0.037,
+              "rushDefEpa": -0.08,
               "pointsFor": 26,
               "pointsAgainst": 13.25
             },
             "ranks": {
-              "passOffEpa": 4,
+              "passOffEpa": 3,
               "turnoverDiff": 1,
-              "passDefEpa": 6,
-              "rushDefEpa": 8,
+              "passDefEpa": 5,
+              "rushDefEpa": 9,
               "pointsFor": 12,
               "pointsAgainst": 2
             },
@@ -4056,18 +4056,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TEN",
             "values": {
-              "passOffEpa": -0.071,
+              "passOffEpa": -0.078,
               "turnoverDiff": -0.75,
-              "passDefEpa": 0.181,
-              "rushDefEpa": -0.069,
+              "passDefEpa": 0.173,
+              "rushDefEpa": -0.058,
               "pointsFor": 13.75,
               "pointsAgainst": 20.75
             },
             "ranks": {
-              "passOffEpa": 26,
+              "passOffEpa": 25,
               "turnoverDiff": 24,
-              "passDefEpa": 28,
-              "rushDefEpa": 14,
+              "passDefEpa": 27,
+              "rushDefEpa": 12,
               "pointsFor": 31,
               "pointsAgainst": 9
             },
@@ -4076,18 +4076,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DEN",
             "values": {
-              "passOffEpa": -0.001,
+              "passOffEpa": -0.013,
               "turnoverDiff": -0.25,
-              "passDefEpa": 0.024,
-              "rushDefEpa": 0.081,
+              "passDefEpa": 0.019,
+              "rushDefEpa": 0.09,
               "pointsFor": 18.5,
               "pointsAgainst": 23.5
             },
             "ranks": {
               "passOffEpa": 21,
               "turnoverDiff": 20,
-              "passDefEpa": 11,
-              "rushDefEpa": 32,
+              "passDefEpa": 12,
+              "rushDefEpa": 31,
               "pointsFor": 27,
               "pointsAgainst": 17
             },
@@ -4096,10 +4096,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "KC",
             "values": {
-              "passOffEpa": 0.167,
+              "passOffEpa": 0.166,
               "turnoverDiff": 1.25,
-              "passDefEpa": -0.007,
-              "rushDefEpa": -0.085,
+              "passDefEpa": -0.014,
+              "rushDefEpa": -0.068,
               "pointsFor": 29.5,
               "pointsAgainst": 19.25
             },
@@ -4116,18 +4116,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LV",
             "values": {
-              "passOffEpa": 0.154,
+              "passOffEpa": 0.163,
               "turnoverDiff": 0.75,
-              "passDefEpa": -0.023,
-              "rushDefEpa": -0.072,
+              "passDefEpa": -0.022,
+              "rushDefEpa": -0.037,
               "pointsFor": 28.75,
               "pointsAgainst": 21
             },
             "ranks": {
               "passOffEpa": 10,
               "turnoverDiff": 6,
-              "passDefEpa": 5,
-              "rushDefEpa": 12,
+              "passDefEpa": 7,
+              "rushDefEpa": 15,
               "pointsFor": 8,
               "pointsAgainst": 12
             },
@@ -4136,18 +4136,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LAC",
             "values": {
-              "passOffEpa": -0.132,
+              "passOffEpa": -0.128,
               "turnoverDiff": -0.75,
-              "passDefEpa": 0.077,
-              "rushDefEpa": -0.096,
+              "passDefEpa": 0.096,
+              "rushDefEpa": -0.081,
               "pointsFor": 16.75,
               "pointsAgainst": 26.5
             },
             "ranks": {
-              "passOffEpa": 30,
+              "passOffEpa": 29,
               "turnoverDiff": 25,
-              "passDefEpa": 20,
-              "rushDefEpa": 9,
+              "passDefEpa": 25,
+              "rushDefEpa": 8,
               "pointsFor": 29,
               "pointsAgainst": 24
             },
@@ -4156,15 +4156,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DAL",
             "values": {
-              "passOffEpa": 0.252,
+              "passOffEpa": 0.241,
               "turnoverDiff": 0,
-              "passDefEpa": 0.389,
-              "rushDefEpa": -0.029,
+              "passDefEpa": 0.361,
+              "rushDefEpa": -0.009,
               "pointsFor": 30.5,
               "pointsAgainst": 28
             },
             "ranks": {
-              "passOffEpa": 3,
+              "passOffEpa": 5,
               "turnoverDiff": 18,
               "passDefEpa": 32,
               "rushDefEpa": 19,
@@ -4176,15 +4176,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYG",
             "values": {
-              "passOffEpa": 0.037,
+              "passOffEpa": 0.018,
               "turnoverDiff": 0.75,
-              "passDefEpa": 0.044,
-              "rushDefEpa": -0.042,
+              "passDefEpa": 0.034,
+              "rushDefEpa": -0.023,
               "pointsFor": 20.5,
               "pointsAgainst": 19.75
             },
             "ranks": {
-              "passOffEpa": 17,
+              "passOffEpa": 19,
               "turnoverDiff": 7,
               "passDefEpa": 14,
               "rushDefEpa": 16,
@@ -4196,18 +4196,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PHI",
             "values": {
-              "passOffEpa": -0.051,
+              "passOffEpa": -0.073,
               "turnoverDiff": -0.75,
-              "passDefEpa": 0.081,
-              "rushDefEpa": 0.004,
+              "passDefEpa": 0.075,
+              "rushDefEpa": 0.02,
               "pointsFor": 18.75,
               "pointsAgainst": 23.25
             },
             "ranks": {
-              "passOffEpa": 23,
+              "passOffEpa": 24,
               "turnoverDiff": 26,
-              "passDefEpa": 21,
-              "rushDefEpa": 23,
+              "passDefEpa": 20,
+              "rushDefEpa": 22,
               "pointsFor": 26,
               "pointsAgainst": 16
             },
@@ -4216,10 +4216,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "WSH",
             "values": {
-              "passOffEpa": 0.027,
+              "passOffEpa": 0.015,
               "turnoverDiff": 0.75,
-              "passDefEpa": 0.064,
-              "rushDefEpa": -0.006,
+              "passDefEpa": 0.063,
+              "rushDefEpa": 0.018,
               "pointsFor": 22,
               "pointsAgainst": 30.5
             },
@@ -4236,10 +4236,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CHI",
             "values": {
-              "passOffEpa": 0.184,
+              "passOffEpa": 0.176,
               "turnoverDiff": 0.25,
-              "passDefEpa": -0.028,
-              "rushDefEpa": 0.042,
+              "passDefEpa": -0.058,
+              "rushDefEpa": 0.064,
               "pointsFor": 28,
               "pointsAgainst": 16.25
             },
@@ -4247,7 +4247,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 8,
               "turnoverDiff": 15,
               "passDefEpa": 4,
-              "rushDefEpa": 28,
+              "rushDefEpa": 30,
               "pointsFor": 9,
               "pointsAgainst": 4
             },
@@ -4256,18 +4256,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DET",
             "values": {
-              "passOffEpa": 0.244,
+              "passOffEpa": 0.242,
               "turnoverDiff": 0.75,
-              "passDefEpa": 0.22,
-              "rushDefEpa": 0.003,
+              "passDefEpa": 0.208,
+              "rushDefEpa": 0.034,
               "pointsFor": 29.75,
               "pointsAgainst": 31.75
             },
             "ranks": {
-              "passOffEpa": 5,
+              "passOffEpa": 4,
               "turnoverDiff": 9,
               "passDefEpa": 29,
-              "rushDefEpa": 22,
+              "rushDefEpa": 25,
               "pointsFor": 5,
               "pointsAgainst": 31
             },
@@ -4276,17 +4276,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "GB",
             "values": {
-              "passOffEpa": 0.032,
+              "passOffEpa": 0.024,
               "turnoverDiff": -0.5,
-              "passDefEpa": 0.084,
-              "rushDefEpa": 0.007,
+              "passDefEpa": 0.079,
+              "rushDefEpa": 0.029,
               "pointsFor": 18.25,
               "pointsAgainst": 26.25
             },
             "ranks": {
-              "passOffEpa": 19,
+              "passOffEpa": 17,
               "turnoverDiff": 23,
-              "passDefEpa": 22,
+              "passDefEpa": 21,
               "rushDefEpa": 24,
               "pointsFor": 28,
               "pointsAgainst": 23
@@ -4296,18 +4296,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIN",
             "values": {
-              "passOffEpa": -0.061,
+              "passOffEpa": -0.068,
               "turnoverDiff": 1.25,
-              "passDefEpa": -0.17,
-              "rushDefEpa": -0.12,
+              "passDefEpa": -0.167,
+              "rushDefEpa": -0.096,
               "pointsFor": 21.5,
               "pointsAgainst": 12.75
             },
             "ranks": {
-              "passOffEpa": 24,
+              "passOffEpa": 23,
               "turnoverDiff": 3,
               "passDefEpa": 1,
-              "rushDefEpa": 5,
+              "rushDefEpa": 6,
               "pointsFor": 18,
               "pointsAgainst": 1
             },
@@ -4316,10 +4316,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ATL",
             "values": {
-              "passOffEpa": -0.156,
+              "passOffEpa": -0.158,
               "turnoverDiff": -1.25,
-              "passDefEpa": 0.033,
-              "rushDefEpa": -0.223,
+              "passDefEpa": 0.028,
+              "rushDefEpa": -0.2,
               "pointsFor": 24,
               "pointsAgainst": 23
             },
@@ -4336,10 +4336,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CAR",
             "values": {
-              "passOffEpa": 0.2,
+              "passOffEpa": 0.19,
               "turnoverDiff": 0.75,
-              "passDefEpa": 0.046,
-              "rushDefEpa": 0.045,
+              "passDefEpa": 0.034,
+              "rushDefEpa": 0.058,
               "pointsFor": 30.25,
               "pointsAgainst": 27.25
             },
@@ -4356,18 +4356,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NO",
             "values": {
-              "passOffEpa": 0.053,
+              "passOffEpa": 0.046,
               "turnoverDiff": -1.25,
-              "passDefEpa": 0.18,
-              "rushDefEpa": 0.074,
+              "passDefEpa": 0.175,
+              "rushDefEpa": 0.113,
               "pointsFor": 26.25,
               "pointsAgainst": 32
             },
             "ranks": {
               "passOffEpa": 16,
               "turnoverDiff": 29,
-              "passDefEpa": 27,
-              "rushDefEpa": 31,
+              "passDefEpa": 28,
+              "rushDefEpa": 32,
               "pointsFor": 10,
               "pointsAgainst": 32
             },
@@ -4376,18 +4376,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TB",
             "values": {
-              "passOffEpa": -0.196,
+              "passOffEpa": -0.203,
               "turnoverDiff": -1.25,
-              "passDefEpa": 0.027,
-              "rushDefEpa": -0.151,
+              "passDefEpa": 0.007,
+              "rushDefEpa": -0.127,
               "pointsFor": 19,
               "pointsAgainst": 24
             },
             "ranks": {
               "passOffEpa": 32,
               "turnoverDiff": 30,
-              "passDefEpa": 12,
-              "rushDefEpa": 3,
+              "passDefEpa": 9,
+              "rushDefEpa": 4,
               "pointsFor": 25,
               "pointsAgainst": 20
             },
@@ -4398,15 +4398,15 @@ const NFL_POWER_SCORE = {
             "values": {
               "passOffEpa": -0.031,
               "turnoverDiff": 0.75,
-              "passDefEpa": 0.286,
-              "rushDefEpa": -0.169,
+              "passDefEpa": 0.264,
+              "rushDefEpa": -0.131,
               "pointsFor": 21.75,
               "pointsAgainst": 29.25
             },
             "ranks": {
               "passOffEpa": 22,
               "turnoverDiff": 11,
-              "passDefEpa": 31,
+              "passDefEpa": 30,
               "rushDefEpa": 2,
               "pointsFor": 17,
               "pointsAgainst": 29
@@ -4416,18 +4416,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LAR",
             "values": {
-              "passOffEpa": 0.077,
+              "passOffEpa": 0.079,
               "turnoverDiff": -1.25,
-              "passDefEpa": -0.108,
-              "rushDefEpa": -0.066,
+              "passDefEpa": -0.106,
+              "rushDefEpa": -0.043,
               "pointsFor": 21.25,
               "pointsAgainst": 20.75
             },
             "ranks": {
               "passOffEpa": 15,
               "turnoverDiff": 31,
-              "passDefEpa": 2,
-              "rushDefEpa": 15,
+              "passDefEpa": 3,
+              "rushDefEpa": 14,
               "pointsFor": 19,
               "pointsAgainst": 10
             },
@@ -4436,17 +4436,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SF",
             "values": {
-              "passOffEpa": 0.463,
+              "passOffEpa": 0.455,
               "turnoverDiff": 0.25,
-              "passDefEpa": 0.086,
-              "rushDefEpa": -0.032,
+              "passDefEpa": 0.082,
+              "rushDefEpa": -0.021,
               "pointsFor": 30.5,
               "pointsAgainst": 16
             },
             "ranks": {
               "passOffEpa": 1,
               "turnoverDiff": 16,
-              "passDefEpa": 23,
+              "passDefEpa": 22,
               "rushDefEpa": 18,
               "pointsFor": 3,
               "pointsAgainst": 3
@@ -4456,18 +4456,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SEA",
             "values": {
-              "passOffEpa": 0.146,
+              "passOffEpa": 0.148,
               "turnoverDiff": 0.75,
-              "passDefEpa": -0.1,
-              "rushDefEpa": -0.117,
+              "passDefEpa": -0.108,
+              "rushDefEpa": -0.102,
               "pointsFor": 26.25,
               "pointsAgainst": 18.25
             },
             "ranks": {
               "passOffEpa": 11,
               "turnoverDiff": 12,
-              "passDefEpa": 3,
-              "rushDefEpa": 6,
+              "passDefEpa": 2,
+              "rushDefEpa": 5,
               "pointsFor": 11,
               "pointsAgainst": 5
             },
@@ -4478,17 +4478,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BUF",
             "values": {
-              "passOffEpa": 0.121,
+              "passOffEpa": 0.125,
               "turnoverDiff": 0,
-              "passDefEpa": 0.24,
-              "rushDefEpa": 0.072,
+              "passDefEpa": 0.231,
+              "rushDefEpa": 0.057,
               "pointsFor": 26,
               "pointsAgainst": 29
             },
             "ranks": {
               "passOffEpa": 14,
               "turnoverDiff": 11,
-              "passDefEpa": 25,
+              "passDefEpa": 26,
               "rushDefEpa": 24,
               "pointsFor": 12,
               "pointsAgainst": 24
@@ -4497,10 +4497,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIA",
             "values": {
-              "passOffEpa": -0.526,
+              "passOffEpa": -0.515,
               "turnoverDiff": -1,
-              "passDefEpa": -0.003,
-              "rushDefEpa": -0.234,
+              "passDefEpa": 0.008,
+              "rushDefEpa": -0.212,
               "pointsFor": 10,
               "pointsAgainst": 15
             },
@@ -4516,15 +4516,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NE",
             "values": {
-              "passOffEpa": 0.24,
+              "passOffEpa": 0.231,
               "turnoverDiff": 0,
-              "passDefEpa": 0.121,
-              "rushDefEpa": 0.131,
+              "passDefEpa": 0.125,
+              "rushDefEpa": 0.12,
               "pointsFor": 29,
               "pointsAgainst": 26
             },
             "ranks": {
-              "passOffEpa": 8,
+              "passOffEpa": 7,
               "turnoverDiff": 12,
               "passDefEpa": 19,
               "rushDefEpa": 28,
@@ -4535,18 +4535,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYJ",
             "values": {
-              "passOffEpa": -0.225,
+              "passOffEpa": -0.24,
               "turnoverDiff": 2,
-              "passDefEpa": 0.2,
-              "rushDefEpa": -0.104,
+              "passDefEpa": 0.196,
+              "rushDefEpa": -0.105,
               "pointsFor": 12,
               "pointsAgainst": 23
             },
             "ranks": {
               "passOffEpa": 29,
               "turnoverDiff": 2,
-              "passDefEpa": 23,
-              "rushDefEpa": 11,
+              "passDefEpa": 24,
+              "rushDefEpa": 10,
               "pointsFor": 31,
               "pointsAgainst": 12
             }
@@ -4554,10 +4554,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BAL",
             "values": {
-              "passOffEpa": 0.338,
+              "passOffEpa": 0.343,
               "turnoverDiff": 2,
-              "passDefEpa": 0.049,
-              "rushDefEpa": -0.165,
+              "passDefEpa": 0.039,
+              "rushDefEpa": -0.142,
               "pointsFor": 24,
               "pointsAgainst": 18
             },
@@ -4573,18 +4573,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CIN",
             "values": {
-              "passOffEpa": 0.113,
+              "passOffEpa": 0.098,
               "turnoverDiff": -2,
-              "passDefEpa": 0.27,
-              "rushDefEpa": 0.046,
+              "passDefEpa": 0.294,
+              "rushDefEpa": 0.054,
               "pointsFor": 17,
               "pointsAgainst": 22
             },
             "ranks": {
               "passOffEpa": 15,
               "turnoverDiff": 27,
-              "passDefEpa": 27,
-              "rushDefEpa": 21,
+              "passDefEpa": 28,
+              "rushDefEpa": 23,
               "pointsFor": 25,
               "pointsAgainst": 11
             }
@@ -4592,17 +4592,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CLE",
             "values": {
-              "passOffEpa": 0.247,
+              "passOffEpa": 0.213,
               "turnoverDiff": 0,
-              "passDefEpa": 0.06,
+              "passDefEpa": 0.053,
               "rushDefEpa": 0.102,
               "pointsFor": 27,
               "pointsAgainst": 24
             },
             "ranks": {
-              "passOffEpa": 7,
+              "passOffEpa": 8,
               "turnoverDiff": 13,
-              "passDefEpa": 15,
+              "passDefEpa": 14,
               "rushDefEpa": 27,
               "pointsFor": 10,
               "pointsAgainst": 14
@@ -4611,17 +4611,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PIT",
             "values": {
-              "passOffEpa": 0.06,
+              "passOffEpa": 0.053,
               "turnoverDiff": 0,
-              "passDefEpa": 0.247,
-              "rushDefEpa": -0.093,
+              "passDefEpa": 0.213,
+              "rushDefEpa": -0.087,
               "pointsFor": 24,
               "pointsAgainst": 27
             },
             "ranks": {
-              "passOffEpa": 18,
+              "passOffEpa": 19,
               "turnoverDiff": 14,
-              "passDefEpa": 26,
+              "passDefEpa": 25,
               "rushDefEpa": 13,
               "pointsFor": 15,
               "pointsAgainst": 22
@@ -4630,15 +4630,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "HOU",
             "values": {
-              "passOffEpa": 0.389,
+              "passOffEpa": 0.348,
               "turnoverDiff": 0,
-              "passDefEpa": 0.16,
-              "rushDefEpa": -0.002,
+              "passDefEpa": 0.151,
+              "rushDefEpa": 0.029,
               "pointsFor": 30,
               "pointsAgainst": 34
             },
             "ranks": {
-              "passOffEpa": 1,
+              "passOffEpa": 3,
               "turnoverDiff": 15,
               "passDefEpa": 20,
               "rushDefEpa": 18,
@@ -4649,18 +4649,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "IND",
             "values": {
-              "passOffEpa": -0.283,
+              "passOffEpa": -0.27,
               "turnoverDiff": -1,
-              "passDefEpa": -0.197,
-              "rushDefEpa": -0.232,
+              "passDefEpa": -0.21,
+              "rushDefEpa": -0.187,
               "pointsFor": 30,
               "pointsAgainst": 13
             },
             "ranks": {
               "passOffEpa": 30,
               "turnoverDiff": 24,
-              "passDefEpa": 6,
-              "rushDefEpa": 5,
+              "passDefEpa": 7,
+              "rushDefEpa": 6,
               "pointsFor": 6,
               "pointsAgainst": 3
             }
@@ -4668,18 +4668,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "JAX",
             "values": {
-              "passOffEpa": 0.27,
+              "passOffEpa": 0.294,
               "turnoverDiff": 2,
-              "passDefEpa": 0.113,
-              "rushDefEpa": -0.25,
+              "passDefEpa": 0.098,
+              "rushDefEpa": -0.237,
               "pointsFor": 22,
               "pointsAgainst": 17
             },
             "ranks": {
-              "passOffEpa": 6,
+              "passOffEpa": 5,
               "turnoverDiff": 4,
               "passDefEpa": 18,
-              "rushDefEpa": 3,
+              "rushDefEpa": 2,
               "pointsFor": 22,
               "pointsAgainst": 7
             }
@@ -4687,10 +4687,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TEN",
             "values": {
-              "passOffEpa": 0.049,
+              "passOffEpa": 0.039,
               "turnoverDiff": -2,
-              "passDefEpa": 0.338,
-              "rushDefEpa": -0.096,
+              "passDefEpa": 0.343,
+              "rushDefEpa": -0.105,
               "pointsFor": 18,
               "pointsAgainst": 24
             },
@@ -4698,7 +4698,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 20,
               "turnoverDiff": 28,
               "passDefEpa": 29,
-              "rushDefEpa": 12,
+              "rushDefEpa": 11,
               "pointsFor": 24,
               "pointsAgainst": 15
             }
@@ -4706,17 +4706,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DEN",
             "values": {
-              "passOffEpa": 0.095,
+              "passOffEpa": 0.076,
               "turnoverDiff": -1,
-              "passDefEpa": 0.276,
-              "rushDefEpa": -0.018,
+              "passDefEpa": 0.263,
+              "rushDefEpa": -0.021,
               "pointsFor": 14,
               "pointsAgainst": 24
             },
             "ranks": {
               "passOffEpa": 17,
               "turnoverDiff": 25,
-              "passDefEpa": 28,
+              "passDefEpa": 27,
               "rushDefEpa": 17,
               "pointsFor": 28,
               "pointsAgainst": 16
@@ -4725,18 +4725,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "KC",
             "values": {
-              "passOffEpa": 0.052,
+              "passOffEpa": 0.082,
               "turnoverDiff": 2,
-              "passDefEpa": 0.168,
-              "rushDefEpa": -0.216,
+              "passDefEpa": 0.171,
+              "rushDefEpa": -0.174,
               "pointsFor": 30,
               "pointsAgainst": 27
             },
             "ranks": {
-              "passOffEpa": 19,
+              "passOffEpa": 16,
               "turnoverDiff": 5,
               "passDefEpa": 21,
-              "rushDefEpa": 7,
+              "rushDefEpa": 8,
               "pointsFor": 7,
               "pointsAgainst": 23
             }
@@ -4744,17 +4744,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LV",
             "values": {
-              "passOffEpa": 0.168,
+              "passOffEpa": 0.171,
               "turnoverDiff": -2,
-              "passDefEpa": 0.052,
-              "rushDefEpa": 0.181,
+              "passDefEpa": 0.082,
+              "rushDefEpa": 0.199,
               "pointsFor": 27,
               "pointsAgainst": 30
             },
             "ranks": {
               "passOffEpa": 12,
               "turnoverDiff": 29,
-              "passDefEpa": 14,
+              "passDefEpa": 17,
               "rushDefEpa": 29,
               "pointsFor": 11,
               "pointsAgainst": 25
@@ -4763,15 +4763,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LAC",
             "values": {
-              "passOffEpa": -0.222,
+              "passOffEpa": -0.217,
               "turnoverDiff": -3,
-              "passDefEpa": -0.143,
-              "rushDefEpa": -0.085,
+              "passDefEpa": -0.122,
+              "rushDefEpa": -0.071,
               "pointsFor": 23,
               "pointsAgainst": 30
             },
             "ranks": {
-              "passOffEpa": 28,
+              "passOffEpa": 27,
               "turnoverDiff": 32,
               "passDefEpa": 8,
               "rushDefEpa": 14,
@@ -4782,18 +4782,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DAL",
             "values": {
-              "passOffEpa": 0.16,
+              "passOffEpa": 0.151,
               "turnoverDiff": 0,
-              "passDefEpa": 0.389,
-              "rushDefEpa": -0.14,
+              "passDefEpa": 0.348,
+              "rushDefEpa": -0.1,
               "pointsFor": 34,
               "pointsAgainst": 30
             },
             "ranks": {
               "passOffEpa": 13,
               "turnoverDiff": 16,
-              "passDefEpa": 32,
-              "rushDefEpa": 10,
+              "passDefEpa": 30,
+              "rushDefEpa": 12,
               "pointsFor": 3,
               "pointsAgainst": 27
             }
@@ -4801,18 +4801,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYG",
             "values": {
-              "passOffEpa": 0.112,
+              "passOffEpa": 0.073,
               "turnoverDiff": 0,
-              "passDefEpa": -0.392,
-              "rushDefEpa": 0.081,
+              "passDefEpa": -0.406,
+              "rushDefEpa": 0.099,
               "pointsFor": 36,
               "pointsAgainst": 24
             },
             "ranks": {
-              "passOffEpa": 16,
+              "passOffEpa": 18,
               "turnoverDiff": 17,
               "passDefEpa": 2,
-              "rushDefEpa": 25,
+              "rushDefEpa": 26,
               "pointsFor": 2,
               "pointsAgainst": 17
             }
@@ -4820,18 +4820,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PHI",
             "values": {
-              "passOffEpa": -0.161,
+              "passOffEpa": -0.217,
               "turnoverDiff": 2,
-              "passDefEpa": 0.018,
-              "rushDefEpa": 0.041,
+              "passDefEpa": 0.008,
+              "rushDefEpa": 0.052,
               "pointsFor": 20,
               "pointsAgainst": 24
             },
             "ranks": {
-              "passOffEpa": 26,
+              "passOffEpa": 28,
               "turnoverDiff": 6,
-              "passDefEpa": 12,
-              "rushDefEpa": 20,
+              "passDefEpa": 11,
+              "rushDefEpa": 22,
               "pointsFor": 23,
               "pointsAgainst": 18
             }
@@ -4839,15 +4839,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "WSH",
             "values": {
-              "passOffEpa": -0.197,
+              "passOffEpa": -0.21,
               "turnoverDiff": 1,
-              "passDefEpa": -0.283,
-              "rushDefEpa": 0.221,
+              "passDefEpa": -0.27,
+              "rushDefEpa": 0.231,
               "pointsFor": 13,
               "pointsAgainst": 30
             },
             "ranks": {
-              "passOffEpa": 27,
+              "passOffEpa": 26,
               "turnoverDiff": 7,
               "passDefEpa": 3,
               "rushDefEpa": 31,
@@ -4858,18 +4858,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CHI",
             "values": {
-              "passOffEpa": 0.2,
+              "passOffEpa": 0.196,
               "turnoverDiff": -2,
-              "passDefEpa": -0.225,
-              "rushDefEpa": 0.019,
+              "passDefEpa": -0.24,
+              "rushDefEpa": 0.047,
               "pointsFor": 23,
               "pointsAgainst": 12
             },
             "ranks": {
-              "passOffEpa": 10,
+              "passOffEpa": 9,
               "turnoverDiff": 30,
               "passDefEpa": 4,
-              "rushDefEpa": 19,
+              "rushDefEpa": 20,
               "pointsFor": 21,
               "pointsAgainst": 2
             }
@@ -4877,17 +4877,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DET",
             "values": {
-              "passOffEpa": 0.182,
+              "passOffEpa": 0.178,
               "turnoverDiff": 0,
-              "passDefEpa": 0.378,
-              "rushDefEpa": -0.082,
+              "passDefEpa": 0.357,
+              "rushDefEpa": -0.064,
               "pointsFor": 26,
               "pointsAgainst": 32
             },
             "ranks": {
               "passOffEpa": 11,
               "turnoverDiff": 18,
-              "passDefEpa": 30,
+              "passDefEpa": 31,
               "rushDefEpa": 15,
               "pointsFor": 13,
               "pointsAgainst": 29
@@ -4896,18 +4896,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "GB",
             "values": {
-              "passOffEpa": 0.214,
+              "passOffEpa": 0.184,
               "turnoverDiff": 0,
-              "passDefEpa": -0.107,
-              "rushDefEpa": 0.064,
+              "passDefEpa": -0.12,
+              "rushDefEpa": 0.033,
               "pointsFor": 17,
               "pointsAgainst": 14
             },
             "ranks": {
-              "passOffEpa": 9,
+              "passOffEpa": 10,
               "turnoverDiff": 19,
               "passDefEpa": 9,
-              "rushDefEpa": 23,
+              "rushDefEpa": 19,
               "pointsFor": 26,
               "pointsAgainst": 4
             }
@@ -4915,15 +4915,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIN",
             "values": {
-              "passOffEpa": -0.003,
+              "passOffEpa": 0.008,
               "turnoverDiff": 1,
-              "passDefEpa": -0.526,
-              "rushDefEpa": 0.209,
+              "passDefEpa": -0.515,
+              "rushDefEpa": 0.215,
               "pointsFor": 15,
               "pointsAgainst": 10
             },
             "ranks": {
-              "passOffEpa": 23,
+              "passOffEpa": 21,
               "turnoverDiff": 8,
               "passDefEpa": 1,
               "rushDefEpa": 30,
@@ -4934,18 +4934,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ATL",
             "values": {
-              "passOffEpa": 0.387,
+              "passOffEpa": 0.399,
               "turnoverDiff": 1,
-              "passDefEpa": 0.01,
-              "rushDefEpa": -0.219,
+              "passDefEpa": 0.008,
+              "rushDefEpa": -0.186,
               "pointsFor": 45,
               "pointsAgainst": 24
             },
             "ranks": {
-              "passOffEpa": 2,
+              "passOffEpa": 1,
               "turnoverDiff": 9,
-              "passDefEpa": 11,
-              "rushDefEpa": 6,
+              "passDefEpa": 12,
+              "rushDefEpa": 7,
               "pointsFor": 1,
               "pointsAgainst": 19
             }
@@ -4953,15 +4953,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CAR",
             "values": {
-              "passOffEpa": 0.378,
+              "passOffEpa": 0.357,
               "turnoverDiff": 0,
-              "passDefEpa": 0.182,
-              "rushDefEpa": -0.03,
+              "passDefEpa": 0.178,
+              "rushDefEpa": -0.032,
               "pointsFor": 32,
               "pointsAgainst": 26
             },
             "ranks": {
-              "passOffEpa": 3,
+              "passOffEpa": 2,
               "turnoverDiff": 20,
               "passDefEpa": 22,
               "rushDefEpa": 16,
@@ -4972,17 +4972,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NO",
             "values": {
-              "passOffEpa": 0.01,
+              "passOffEpa": 0.008,
               "turnoverDiff": -1,
-              "passDefEpa": 0.387,
-              "rushDefEpa": 0.282,
+              "passDefEpa": 0.399,
+              "rushDefEpa": 0.315,
               "pointsFor": 24,
               "pointsAgainst": 45
             },
             "ranks": {
               "passOffEpa": 22,
               "turnoverDiff": 26,
-              "passDefEpa": 31,
+              "passDefEpa": 32,
               "rushDefEpa": 32,
               "pointsFor": 16,
               "pointsAgainst": 32
@@ -4991,18 +4991,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TB",
             "values": {
-              "passOffEpa": -0.107,
+              "passOffEpa": -0.12,
               "turnoverDiff": 0,
-              "passDefEpa": 0.214,
-              "rushDefEpa": -0.2,
+              "passDefEpa": 0.184,
+              "rushDefEpa": -0.188,
               "pointsFor": 14,
               "pointsAgainst": 17
             },
             "ranks": {
               "passOffEpa": 24,
               "turnoverDiff": 21,
-              "passDefEpa": 24,
-              "rushDefEpa": 8,
+              "passDefEpa": 23,
+              "rushDefEpa": 5,
               "pointsFor": 29,
               "pointsAgainst": 8
             }
@@ -5010,18 +5010,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ARI",
             "values": {
-              "passOffEpa": -0.392,
+              "passOffEpa": -0.406,
               "turnoverDiff": 0,
-              "passDefEpa": 0.112,
-              "rushDefEpa": -0.281,
+              "passDefEpa": 0.073,
+              "rushDefEpa": -0.25,
               "pointsFor": 24,
               "pointsAgainst": 36
             },
             "ranks": {
               "passOffEpa": 31,
               "turnoverDiff": 22,
-              "passDefEpa": 17,
-              "rushDefEpa": 2,
+              "passDefEpa": 15,
+              "rushDefEpa": 1,
               "pointsFor": 17,
               "pointsAgainst": 31
             }
@@ -5029,18 +5029,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LAR",
             "values": {
-              "passOffEpa": 0.018,
+              "passOffEpa": 0.008,
               "turnoverDiff": -2,
-              "passDefEpa": -0.161,
-              "rushDefEpa": -0.283,
+              "passDefEpa": -0.217,
+              "rushDefEpa": -0.234,
               "pointsFor": 24,
               "pointsAgainst": 20
             },
             "ranks": {
-              "passOffEpa": 21,
+              "passOffEpa": 23,
               "turnoverDiff": 31,
-              "passDefEpa": 7,
-              "rushDefEpa": 1,
+              "passDefEpa": 5,
+              "rushDefEpa": 3,
               "pointsFor": 18,
               "pointsAgainst": 10
             }
@@ -5048,18 +5048,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SF",
             "values": {
-              "passOffEpa": 0.276,
+              "passOffEpa": 0.263,
               "turnoverDiff": 1,
-              "passDefEpa": 0.095,
-              "rushDefEpa": 0.05,
+              "passDefEpa": 0.076,
+              "rushDefEpa": 0.047,
               "pointsFor": 24,
               "pointsAgainst": 14
             },
             "ranks": {
-              "passOffEpa": 5,
+              "passOffEpa": 6,
               "turnoverDiff": 10,
               "passDefEpa": 16,
-              "rushDefEpa": 22,
+              "rushDefEpa": 21,
               "pointsFor": 19,
               "pointsAgainst": 5
             }
@@ -5067,18 +5067,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SEA",
             "values": {
-              "passOffEpa": -0.143,
+              "passOffEpa": -0.122,
               "turnoverDiff": 3,
-              "passDefEpa": -0.222,
-              "rushDefEpa": 0.091,
+              "passDefEpa": -0.217,
+              "rushDefEpa": 0.079,
               "pointsFor": 30,
               "pointsAgainst": 23
             },
             "ranks": {
               "passOffEpa": 25,
               "turnoverDiff": 1,
-              "passDefEpa": 5,
-              "rushDefEpa": 26,
+              "passDefEpa": 6,
+              "rushDefEpa": 25,
               "pointsFor": 8,
               "pointsAgainst": 13
             }
@@ -5090,10 +5090,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BUF",
             "values": {
-              "passOffEpa": 0.235,
+              "passOffEpa": 0.228,
               "turnoverDiff": -0.8,
-              "passDefEpa": 0.18,
-              "rushDefEpa": 0.024,
+              "passDefEpa": 0.169,
+              "rushDefEpa": 0.035,
               "pointsFor": 32.8,
               "pointsAgainst": 28.2
             },
@@ -5101,7 +5101,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 5,
               "turnoverDiff": 24,
               "passDefEpa": 26,
-              "rushDefEpa": 29,
+              "rushDefEpa": 27,
               "pointsFor": 1,
               "pointsAgainst": 28
             },
@@ -5110,18 +5110,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIA",
             "values": {
-              "passOffEpa": -0.155,
+              "passOffEpa": -0.165,
               "turnoverDiff": -0.8,
-              "passDefEpa": 0.293,
-              "rushDefEpa": -0.126,
+              "passDefEpa": 0.296,
+              "rushDefEpa": -0.109,
               "pointsFor": 14,
               "pointsAgainst": 26.4
             },
             "ranks": {
-              "passOffEpa": 31,
+              "passOffEpa": 32,
               "turnoverDiff": 25,
               "passDefEpa": 30,
-              "rushDefEpa": 4,
+              "rushDefEpa": 3,
               "pointsFor": 31,
               "pointsAgainst": 24
             },
@@ -5130,18 +5130,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NE",
             "values": {
-              "passOffEpa": 0.098,
+              "passOffEpa": 0.073,
               "turnoverDiff": -1,
-              "passDefEpa": 0.03,
-              "rushDefEpa": 0.009,
+              "passDefEpa": 0.019,
+              "rushDefEpa": 0.011,
               "pointsFor": 22,
               "pointsAgainst": 18.8
             },
             "ranks": {
-              "passOffEpa": 12,
+              "passOffEpa": 13,
               "turnoverDiff": 27,
-              "passDefEpa": 16,
-              "rushDefEpa": 25,
+              "passDefEpa": 15,
+              "rushDefEpa": 21,
               "pointsFor": 19,
               "pointsAgainst": 4
             },
@@ -5150,18 +5150,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYJ",
             "values": {
-              "passOffEpa": 0.045,
+              "passOffEpa": 0.043,
               "turnoverDiff": 0.6,
-              "passDefEpa": -0.006,
-              "rushDefEpa": -0.127,
+              "passDefEpa": -0.009,
+              "rushDefEpa": -0.113,
               "pointsFor": 18.6,
               "pointsAgainst": 19.2
             },
             "ranks": {
               "passOffEpa": 18,
               "turnoverDiff": 7,
-              "passDefEpa": 10,
-              "rushDefEpa": 3,
+              "passDefEpa": 11,
+              "rushDefEpa": 2,
               "pointsFor": 27,
               "pointsAgainst": 5
             },
@@ -5170,17 +5170,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BAL",
             "values": {
-              "passOffEpa": 0.246,
+              "passOffEpa": 0.234,
               "turnoverDiff": 0.6,
-              "passDefEpa": 0.1,
-              "rushDefEpa": -0.07,
+              "passDefEpa": 0.085,
+              "rushDefEpa": -0.036,
               "pointsFor": 29.2,
               "pointsAgainst": 23.8
             },
             "ranks": {
-              "passOffEpa": 3,
+              "passOffEpa": 4,
               "turnoverDiff": 8,
-              "passDefEpa": 23,
+              "passDefEpa": 22,
               "rushDefEpa": 15,
               "pointsFor": 6,
               "pointsAgainst": 19
@@ -5190,18 +5190,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CIN",
             "values": {
-              "passOffEpa": 0.148,
+              "passOffEpa": 0.142,
               "turnoverDiff": 0.4,
-              "passDefEpa": -0.035,
-              "rushDefEpa": -0.001,
+              "passDefEpa": -0.033,
+              "rushDefEpa": 0.01,
               "pointsFor": 25.6,
               "pointsAgainst": 21.8
             },
             "ranks": {
               "passOffEpa": 10,
               "turnoverDiff": 12,
-              "passDefEpa": 4,
-              "rushDefEpa": 21,
+              "passDefEpa": 5,
+              "rushDefEpa": 20,
               "pointsFor": 10,
               "pointsAgainst": 10
             },
@@ -5210,18 +5210,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CLE",
             "values": {
-              "passOffEpa": 0.029,
+              "passOffEpa": 0.012,
               "turnoverDiff": -0.2,
-              "passDefEpa": -0.035,
-              "rushDefEpa": 0.008,
+              "passDefEpa": -0.04,
+              "rushDefEpa": 0.019,
               "pointsFor": 18.6,
               "pointsAgainst": 22.4
             },
             "ranks": {
               "passOffEpa": 19,
               "turnoverDiff": 19,
-              "passDefEpa": 5,
-              "rushDefEpa": 24,
+              "passDefEpa": 4,
+              "rushDefEpa": 25,
               "pointsFor": 28,
               "pointsAgainst": 14
             },
@@ -5230,18 +5230,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PIT",
             "values": {
-              "passOffEpa": -0.057,
+              "passOffEpa": -0.062,
               "turnoverDiff": 0.4,
-              "passDefEpa": 0.034,
-              "rushDefEpa": -0.027,
+              "passDefEpa": 0.021,
+              "rushDefEpa": -0.015,
               "pointsFor": 22.2,
               "pointsAgainst": 21.8
             },
             "ranks": {
               "passOffEpa": 26,
               "turnoverDiff": 13,
-              "passDefEpa": 17,
-              "rushDefEpa": 18,
+              "passDefEpa": 16,
+              "rushDefEpa": 17,
               "pointsFor": 18,
               "pointsAgainst": 11
             },
@@ -5250,17 +5250,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "HOU",
             "values": {
-              "passOffEpa": 0.071,
+              "passOffEpa": 0.061,
               "turnoverDiff": 0.6,
-              "passDefEpa": -0.004,
-              "rushDefEpa": -0.096,
+              "passDefEpa": -0.006,
+              "rushDefEpa": -0.076,
               "pointsFor": 22,
               "pointsAgainst": 22.4
             },
             "ranks": {
-              "passOffEpa": 15,
+              "passOffEpa": 14,
               "turnoverDiff": 9,
-              "passDefEpa": 11,
+              "passDefEpa": 12,
               "rushDefEpa": 10,
               "pointsFor": 20,
               "pointsAgainst": 15
@@ -5270,10 +5270,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "IND",
             "values": {
-              "passOffEpa": -0.102,
+              "passOffEpa": -0.104,
               "turnoverDiff": -1.2,
-              "passDefEpa": 0.082,
-              "rushDefEpa": 0.071,
+              "passDefEpa": 0.077,
+              "rushDefEpa": 0.092,
               "pointsFor": 24.8,
               "pointsAgainst": 27.6
             },
@@ -5290,17 +5290,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "JAX",
             "values": {
-              "passOffEpa": 0.245,
+              "passOffEpa": 0.237,
               "turnoverDiff": 1,
-              "passDefEpa": -0.016,
-              "rushDefEpa": -0.164,
+              "passDefEpa": -0.028,
+              "rushDefEpa": -0.149,
               "pointsFor": 24.6,
               "pointsAgainst": 14
             },
             "ranks": {
-              "passOffEpa": 4,
+              "passOffEpa": 3,
               "turnoverDiff": 3,
-              "passDefEpa": 8,
+              "passDefEpa": 7,
               "rushDefEpa": 1,
               "pointsFor": 12,
               "pointsAgainst": 2
@@ -5310,18 +5310,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TEN",
             "values": {
-              "passOffEpa": -0.139,
+              "passOffEpa": -0.144,
               "turnoverDiff": -1,
-              "passDefEpa": 0.196,
-              "rushDefEpa": -0.087,
+              "passDefEpa": 0.189,
+              "rushDefEpa": -0.077,
               "pointsFor": 11.6,
               "pointsAgainst": 21.8
             },
             "ranks": {
-              "passOffEpa": 30,
+              "passOffEpa": 29,
               "turnoverDiff": 28,
               "passDefEpa": 29,
-              "rushDefEpa": 12,
+              "rushDefEpa": 9,
               "pointsFor": 32,
               "pointsAgainst": 12
             },
@@ -5330,10 +5330,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DEN",
             "values": {
-              "passOffEpa": -0.035,
+              "passOffEpa": -0.039,
               "turnoverDiff": 0.2,
-              "passDefEpa": -0.023,
-              "rushDefEpa": 0.021,
+              "passDefEpa": -0.032,
+              "rushDefEpa": 0.041,
               "pointsFor": 19.4,
               "pointsAgainst": 22.2
             },
@@ -5341,7 +5341,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 24,
               "turnoverDiff": 17,
               "passDefEpa": 6,
-              "rushDefEpa": 27,
+              "rushDefEpa": 28,
               "pointsFor": 26,
               "pointsAgainst": 13
             },
@@ -5350,18 +5350,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "KC",
             "values": {
-              "passOffEpa": 0.167,
+              "passOffEpa": 0.166,
               "turnoverDiff": 1.25,
-              "passDefEpa": -0.007,
-              "rushDefEpa": -0.085,
+              "passDefEpa": -0.014,
+              "rushDefEpa": -0.068,
               "pointsFor": 29.5,
               "pointsAgainst": 19.25
             },
             "ranks": {
-              "passOffEpa": 8,
+              "passOffEpa": 9,
               "turnoverDiff": 1,
               "passDefEpa": 9,
-              "rushDefEpa": 13,
+              "rushDefEpa": 12,
               "pointsFor": 5,
               "pointsAgainst": 7
             },
@@ -5370,15 +5370,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LV",
             "values": {
-              "passOffEpa": 0.164,
+              "passOffEpa": 0.17,
               "turnoverDiff": 0.6,
-              "passDefEpa": 0.128,
-              "rushDefEpa": -0.072,
+              "passDefEpa": 0.123,
+              "rushDefEpa": -0.041,
               "pointsFor": 26.4,
               "pointsAgainst": 25.8
             },
             "ranks": {
-              "passOffEpa": 9,
+              "passOffEpa": 8,
               "turnoverDiff": 10,
               "passDefEpa": 25,
               "rushDefEpa": 14,
@@ -5390,18 +5390,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LAC",
             "values": {
-              "passOffEpa": -0.156,
+              "passOffEpa": -0.158,
               "turnoverDiff": -1,
-              "passDefEpa": 0.025,
-              "rushDefEpa": -0.119,
+              "passDefEpa": 0.048,
+              "rushDefEpa": -0.1,
               "pointsFor": 16.8,
               "pointsAgainst": 25.8
             },
             "ranks": {
-              "passOffEpa": 32,
+              "passOffEpa": 31,
               "turnoverDiff": 29,
-              "passDefEpa": 15,
-              "rushDefEpa": 8,
+              "passDefEpa": 20,
+              "rushDefEpa": 7,
               "pointsFor": 30,
               "pointsAgainst": 23
             },
@@ -5410,10 +5410,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DAL",
             "values": {
-              "passOffEpa": 0.189,
+              "passOffEpa": 0.174,
               "turnoverDiff": -0.6,
-              "passDefEpa": 0.352,
-              "rushDefEpa": 0,
+              "passDefEpa": 0.325,
+              "rushDefEpa": 0.018,
               "pointsFor": 27.6,
               "pointsAgainst": 27.2
             },
@@ -5421,7 +5421,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 7,
               "turnoverDiff": 22,
               "passDefEpa": 32,
-              "rushDefEpa": 22,
+              "rushDefEpa": 24,
               "pointsFor": 7,
               "pointsAgainst": 25
             },
@@ -5430,18 +5430,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYG",
             "values": {
-              "passOffEpa": 0.078,
+              "passOffEpa": 0.06,
               "turnoverDiff": 0.2,
-              "passDefEpa": 0.022,
-              "rushDefEpa": 0.034,
+              "passDefEpa": 0.01,
+              "rushDefEpa": 0.044,
               "pointsFor": 21.8,
               "pointsAgainst": 21.2
             },
             "ranks": {
-              "passOffEpa": 14,
+              "passOffEpa": 15,
               "turnoverDiff": 18,
-              "passDefEpa": 14,
-              "rushDefEpa": 30,
+              "passDefEpa": 13,
+              "rushDefEpa": 29,
               "pointsFor": 21,
               "pointsAgainst": 9
             },
@@ -5450,10 +5450,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PHI",
             "values": {
-              "passOffEpa": -0.038,
+              "passOffEpa": -0.053,
               "turnoverDiff": -0.4,
-              "passDefEpa": 0.117,
-              "rushDefEpa": -0.035,
+              "passDefEpa": 0.108,
+              "rushDefEpa": -0.013,
               "pointsFor": 18.4,
               "pointsAgainst": 22.4
             },
@@ -5461,7 +5461,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 25,
               "turnoverDiff": 20,
               "passDefEpa": 24,
-              "rushDefEpa": 17,
+              "rushDefEpa": 18,
               "pointsFor": 29,
               "pointsAgainst": 16
             },
@@ -5470,17 +5470,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "WSH",
             "values": {
-              "passOffEpa": 0.009,
+              "passOffEpa": -0.005,
               "turnoverDiff": 1,
-              "passDefEpa": 0.093,
-              "rushDefEpa": -0.042,
+              "passDefEpa": 0.088,
+              "rushDefEpa": -0.02,
               "pointsFor": 23,
               "pointsAgainst": 29.8
             },
             "ranks": {
-              "passOffEpa": 20,
+              "passOffEpa": 22,
               "turnoverDiff": 4,
-              "passDefEpa": 22,
+              "passDefEpa": 23,
               "rushDefEpa": 16,
               "pointsFor": 17,
               "pointsAgainst": 30
@@ -5490,18 +5490,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CHI",
             "values": {
-              "passOffEpa": 0.065,
+              "passOffEpa": 0.059,
               "turnoverDiff": -0.8,
-              "passDefEpa": 0.072,
-              "rushDefEpa": -0.003,
+              "passDefEpa": 0.043,
+              "rushDefEpa": 0.017,
               "pointsFor": 23.8,
               "pointsAgainst": 19.2
             },
             "ranks": {
               "passOffEpa": 16,
               "turnoverDiff": 26,
-              "passDefEpa": 20,
-              "rushDefEpa": 20,
+              "passDefEpa": 19,
+              "rushDefEpa": 22,
               "pointsFor": 13,
               "pointsAgainst": 6
             },
@@ -5510,17 +5510,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DET",
             "values": {
-              "passOffEpa": 0.274,
+              "passOffEpa": 0.276,
               "turnoverDiff": 0.8,
-              "passDefEpa": 0.193,
-              "rushDefEpa": -0.024,
+              "passDefEpa": 0.179,
+              "rushDefEpa": 0.008,
               "pointsFor": 32.8,
               "pointsAgainst": 29.6
             },
             "ranks": {
               "passOffEpa": 2,
               "turnoverDiff": 5,
-              "passDefEpa": 28,
+              "passDefEpa": 27,
               "rushDefEpa": 19,
               "pointsFor": 2,
               "pointsAgainst": 29
@@ -5530,17 +5530,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "GB",
             "values": {
-              "passOffEpa": 0.095,
+              "passOffEpa": 0.083,
               "turnoverDiff": 0.6,
-              "passDefEpa": -0.017,
-              "rushDefEpa": 0.001,
+              "passDefEpa": -0.021,
+              "rushDefEpa": 0.017,
               "pointsFor": 20.8,
               "pointsAgainst": 22.4
             },
             "ranks": {
-              "passOffEpa": 13,
+              "passOffEpa": 12,
               "turnoverDiff": 11,
-              "passDefEpa": 7,
+              "passDefEpa": 8,
               "rushDefEpa": 23,
               "pointsFor": 24,
               "pointsAgainst": 17
@@ -5550,10 +5550,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIN",
             "values": {
-              "passOffEpa": -0.005,
+              "passOffEpa": -0.011,
               "turnoverDiff": 1.2,
-              "passDefEpa": -0.199,
-              "rushDefEpa": -0.12,
+              "passDefEpa": -0.191,
+              "rushDefEpa": -0.092,
               "pointsFor": 21.8,
               "pointsAgainst": 12.8
             },
@@ -5561,7 +5561,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 23,
               "turnoverDiff": 2,
               "passDefEpa": 1,
-              "rushDefEpa": 6,
+              "rushDefEpa": 8,
               "pointsFor": 22,
               "pointsAgainst": 1
             },
@@ -5570,10 +5570,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ATL",
             "values": {
-              "passOffEpa": -0.089,
+              "passOffEpa": -0.101,
               "turnoverDiff": -1,
-              "passDefEpa": 0.042,
-              "rushDefEpa": -0.093,
+              "passDefEpa": 0.036,
+              "rushDefEpa": -0.07,
               "pointsFor": 23.8,
               "pointsAgainst": 24.4
             },
@@ -5590,17 +5590,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CAR",
             "values": {
-              "passOffEpa": 0.2,
+              "passOffEpa": 0.19,
               "turnoverDiff": 0.75,
-              "passDefEpa": 0.046,
-              "rushDefEpa": 0.045,
+              "passDefEpa": 0.034,
+              "rushDefEpa": 0.058,
               "pointsFor": 30.25,
               "pointsAgainst": 27.25
             },
             "ranks": {
               "passOffEpa": 6,
               "turnoverDiff": 6,
-              "passDefEpa": 19,
+              "passDefEpa": 17,
               "rushDefEpa": 31,
               "pointsFor": 4,
               "pointsAgainst": 26
@@ -5610,18 +5610,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NO",
             "values": {
-              "passOffEpa": 0.003,
+              "passOffEpa": 0.002,
               "turnoverDiff": -1.2,
-              "passDefEpa": 0.186,
-              "rushDefEpa": 0.022,
+              "passDefEpa": 0.182,
+              "rushDefEpa": 0.057,
               "pointsFor": 23.6,
               "pointsAgainst": 30.2
             },
             "ranks": {
-              "passOffEpa": 21,
+              "passOffEpa": 20,
               "turnoverDiff": 32,
-              "passDefEpa": 27,
-              "rushDefEpa": 28,
+              "passDefEpa": 28,
+              "rushDefEpa": 30,
               "pointsFor": 16,
               "pointsAgainst": 31
             },
@@ -5630,18 +5630,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TB",
             "values": {
-              "passOffEpa": -0.137,
+              "passOffEpa": -0.147,
               "turnoverDiff": -0.4,
-              "passDefEpa": 0.009,
-              "rushDefEpa": -0.129,
+              "passDefEpa": -0.014,
+              "rushDefEpa": -0.102,
               "pointsFor": 20,
               "pointsAgainst": 22.4
             },
             "ranks": {
-              "passOffEpa": 29,
+              "passOffEpa": 30,
               "turnoverDiff": 21,
-              "passDefEpa": 12,
-              "rushDefEpa": 2,
+              "passDefEpa": 10,
+              "rushDefEpa": 6,
               "pointsFor": 25,
               "pointsAgainst": 18
             },
@@ -5650,18 +5650,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ARI",
             "values": {
-              "passOffEpa": 0.001,
+              "passOffEpa": -0.003,
               "turnoverDiff": 0.4,
-              "passDefEpa": 0.318,
-              "rushDefEpa": -0.101,
+              "passDefEpa": 0.305,
+              "rushDefEpa": -0.067,
               "pointsFor": 21.6,
               "pointsAgainst": 32.4
             },
             "ranks": {
-              "passOffEpa": 22,
+              "passOffEpa": 21,
               "turnoverDiff": 14,
               "passDefEpa": 31,
-              "rushDefEpa": 9,
+              "rushDefEpa": 13,
               "pointsFor": 23,
               "pointsAgainst": 32
             },
@@ -5672,8 +5672,8 @@ const NFL_POWER_SCORE = {
             "values": {
               "passOffEpa": 0.129,
               "turnoverDiff": -0.6,
-              "passDefEpa": -0.053,
-              "rushDefEpa": 0.01,
+              "passDefEpa": -0.047,
+              "rushDefEpa": 0.034,
               "pointsFor": 23.8,
               "pointsAgainst": 24
             },
@@ -5690,18 +5690,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SF",
             "values": {
-              "passOffEpa": 0.355,
+              "passOffEpa": 0.354,
               "turnoverDiff": 0.4,
-              "passDefEpa": 0.021,
-              "rushDefEpa": -0.12,
+              "passDefEpa": 0.014,
+              "rushDefEpa": -0.105,
               "pointsFor": 30.8,
               "pointsAgainst": 18.6
             },
             "ranks": {
               "passOffEpa": 1,
               "turnoverDiff": 15,
-              "passDefEpa": 13,
-              "rushDefEpa": 7,
+              "passDefEpa": 14,
+              "rushDefEpa": 5,
               "pointsFor": 3,
               "pointsAgainst": 3
             },
@@ -5710,10 +5710,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SEA",
             "values": {
-              "passOffEpa": 0.057,
+              "passOffEpa": 0.055,
               "turnoverDiff": 0.4,
-              "passDefEpa": -0.086,
-              "rushDefEpa": -0.121,
+              "passDefEpa": -0.088,
+              "rushDefEpa": -0.109,
               "pointsFor": 26.8,
               "pointsAgainst": 21
             },
@@ -5721,7 +5721,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 17,
               "turnoverDiff": 16,
               "passDefEpa": 2,
-              "rushDefEpa": 5,
+              "rushDefEpa": 4,
               "pointsFor": 8,
               "pointsAgainst": 8
             },
@@ -5732,10 +5732,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BUF",
             "values": {
-              "passOffEpa": 0.318,
+              "passOffEpa": 0.347,
               "turnoverDiff": -2,
-              "passDefEpa": 0.29,
-              "rushDefEpa": 0.006,
+              "passDefEpa": 0.285,
+              "rushDefEpa": 0.032,
               "pointsFor": 37,
               "pointsAgainst": 34
             },
@@ -5751,18 +5751,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIA",
             "values": {
-              "passOffEpa": -0.281,
+              "passOffEpa": -0.292,
               "turnoverDiff": -2,
-              "passDefEpa": 0.383,
+              "passDefEpa": 0.386,
               "rushDefEpa": -0.041,
               "pointsFor": 24,
               "pointsAgainst": 31
             },
             "ranks": {
-              "passOffEpa": 27,
+              "passOffEpa": 26,
               "turnoverDiff": 25,
-              "passDefEpa": 27,
-              "rushDefEpa": 18,
+              "passDefEpa": 28,
+              "rushDefEpa": 19,
               "pointsFor": 14,
               "pointsAgainst": 23
             }
@@ -5770,10 +5770,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NE",
             "values": {
-              "passOffEpa": 0.725,
+              "passOffEpa": 0.694,
               "turnoverDiff": 0,
-              "passDefEpa": 0.2,
-              "rushDefEpa": -0.246,
+              "passDefEpa": 0.193,
+              "rushDefEpa": -0.237,
               "pointsFor": 45,
               "pointsAgainst": 17
             },
@@ -5781,7 +5781,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 1,
               "turnoverDiff": 12,
               "passDefEpa": 21,
-              "rushDefEpa": 3,
+              "rushDefEpa": 4,
               "pointsFor": 1,
               "pointsAgainst": 6
             }
@@ -5789,18 +5789,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYJ",
             "values": {
-              "passOffEpa": -0.271,
+              "passOffEpa": -0.26,
               "turnoverDiff": 0,
-              "passDefEpa": -0.258,
-              "rushDefEpa": -0.231,
+              "passDefEpa": -0.255,
+              "rushDefEpa": -0.221,
               "pointsFor": 17,
               "pointsAgainst": 12
             },
             "ranks": {
-              "passOffEpa": 26,
+              "passOffEpa": 24,
               "turnoverDiff": 13,
               "passDefEpa": 8,
-              "rushDefEpa": 6,
+              "rushDefEpa": 5,
               "pointsFor": 22,
               "pointsAgainst": 3
             }
@@ -5808,18 +5808,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BAL",
             "values": {
-              "passOffEpa": 0.089,
+              "passOffEpa": 0.078,
               "turnoverDiff": 0,
-              "passDefEpa": 0.099,
-              "rushDefEpa": -0.238,
+              "passDefEpa": 0.06,
+              "rushDefEpa": -0.189,
               "pointsFor": 30,
               "pointsAgainst": 23
             },
             "ranks": {
-              "passOffEpa": 16,
+              "passOffEpa": 15,
               "turnoverDiff": 14,
-              "passDefEpa": 16,
-              "rushDefEpa": 5,
+              "passDefEpa": 15,
+              "rushDefEpa": 6,
               "pointsFor": 9,
               "pointsAgainst": 13
             }
@@ -5827,17 +5827,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CIN",
             "values": {
-              "passOffEpa": 0.383,
+              "passOffEpa": 0.386,
               "turnoverDiff": 2,
-              "passDefEpa": -0.281,
-              "rushDefEpa": 0.205,
+              "passDefEpa": -0.292,
+              "rushDefEpa": 0.209,
               "pointsFor": 31,
               "pointsAgainst": 24
             },
             "ranks": {
-              "passOffEpa": 4,
+              "passOffEpa": 3,
               "turnoverDiff": 3,
-              "passDefEpa": 4,
+              "passDefEpa": 5,
               "rushDefEpa": 27,
               "pointsFor": 7,
               "pointsAgainst": 16
@@ -5846,17 +5846,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CLE",
             "values": {
-              "passOffEpa": -0.258,
+              "passOffEpa": -0.255,
               "turnoverDiff": 0,
-              "passDefEpa": -0.271,
-              "rushDefEpa": -0.014,
+              "passDefEpa": -0.26,
+              "rushDefEpa": -0.006,
               "pointsFor": 12,
               "pointsAgainst": 17
             },
             "ranks": {
               "passOffEpa": 23,
               "turnoverDiff": 15,
-              "passDefEpa": 5,
+              "passDefEpa": 7,
               "rushDefEpa": 20,
               "pointsFor": 28,
               "pointsAgainst": 7
@@ -5865,10 +5865,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PIT",
             "values": {
-              "passOffEpa": 0.128,
+              "passOffEpa": 0.135,
               "turnoverDiff": 0,
-              "passDefEpa": -0.034,
-              "rushDefEpa": -0.003,
+              "passDefEpa": -0.039,
+              "rushDefEpa": 0.008,
               "pointsFor": 34,
               "pointsAgainst": 22
             },
@@ -5884,18 +5884,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "HOU",
             "values": {
-              "passOffEpa": 0.246,
+              "passOffEpa": 0.242,
               "turnoverDiff": 2,
-              "passDefEpa": -0.354,
-              "rushDefEpa": -0.246,
+              "passDefEpa": -0.351,
+              "rushDefEpa": -0.249,
               "pointsFor": 26,
               "pointsAgainst": 3
             },
             "ranks": {
               "passOffEpa": 7,
               "turnoverDiff": 4,
-              "passDefEpa": 2,
-              "rushDefEpa": 4,
+              "passDefEpa": 1,
+              "rushDefEpa": 3,
               "pointsFor": 13,
               "pointsAgainst": 1
             }
@@ -5903,10 +5903,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "IND",
             "values": {
-              "passOffEpa": -0.034,
+              "passOffEpa": -0.039,
               "turnoverDiff": 0,
-              "passDefEpa": 0.128,
-              "rushDefEpa": 0.26,
+              "passDefEpa": 0.135,
+              "rushDefEpa": 0.272,
               "pointsFor": 22,
               "pointsAgainst": 34
             },
@@ -5914,7 +5914,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 19,
               "turnoverDiff": 17,
               "passDefEpa": 18,
-              "rushDefEpa": 29,
+              "rushDefEpa": 30,
               "pointsFor": 19,
               "pointsAgainst": 27
             }
@@ -5922,10 +5922,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "JAX",
             "values": {
-              "passOffEpa": 0.241,
+              "passOffEpa": 0.223,
               "turnoverDiff": -1,
-              "passDefEpa": 0.002,
-              "rushDefEpa": -0.507,
+              "passDefEpa": 0.006,
+              "rushDefEpa": -0.498,
               "pointsFor": 19,
               "pointsAgainst": 17
             },
@@ -5941,18 +5941,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TEN",
             "values": {
-              "passOffEpa": -0.354,
+              "passOffEpa": -0.351,
               "turnoverDiff": -2,
-              "passDefEpa": 0.246,
+              "passDefEpa": 0.242,
               "rushDefEpa": -0.173,
               "pointsFor": 3,
               "pointsAgainst": 26
             },
             "ranks": {
-              "passOffEpa": 29,
+              "passOffEpa": 30,
               "turnoverDiff": 26,
               "passDefEpa": 24,
-              "rushDefEpa": 11,
+              "rushDefEpa": 8,
               "pointsFor": 30,
               "pointsAgainst": 18
             }
@@ -5960,18 +5960,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DEN",
             "values": {
-              "passOffEpa": -0.209,
+              "passOffEpa": -0.168,
               "turnoverDiff": 2,
-              "passDefEpa": -0.264,
-              "rushDefEpa": -0.191,
+              "passDefEpa": -0.295,
+              "rushDefEpa": -0.129,
               "pointsFor": 23,
               "pointsAgainst": 17
             },
             "ranks": {
               "passOffEpa": 22,
               "turnoverDiff": 5,
-              "passDefEpa": 7,
-              "rushDefEpa": 9,
+              "passDefEpa": 4,
+              "rushDefEpa": 14,
               "pointsFor": 16,
               "pointsAgainst": 9
             }
@@ -5998,10 +5998,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LV",
             "values": {
-              "passOffEpa": 0.2,
+              "passOffEpa": 0.193,
               "turnoverDiff": 0,
-              "passDefEpa": 0.725,
-              "rushDefEpa": -0.072,
+              "passDefEpa": 0.694,
+              "rushDefEpa": -0.054,
               "pointsFor": 17,
               "pointsAgainst": 45
             },
@@ -6017,15 +6017,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LAC",
             "values": {
-              "passOffEpa": -0.264,
+              "passOffEpa": -0.295,
               "turnoverDiff": -2,
-              "passDefEpa": -0.209,
-              "rushDefEpa": -0.221,
+              "passDefEpa": -0.168,
+              "rushDefEpa": -0.184,
               "pointsFor": 17,
               "pointsAgainst": 23
             },
             "ranks": {
-              "passOffEpa": 24,
+              "passOffEpa": 27,
               "turnoverDiff": 27,
               "passDefEpa": 9,
               "rushDefEpa": 7,
@@ -6036,10 +6036,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DAL",
             "values": {
-              "passOffEpa": -0.047,
+              "passOffEpa": -0.076,
               "turnoverDiff": -3,
-              "passDefEpa": 0.186,
-              "rushDefEpa": 0.093,
+              "passDefEpa": 0.157,
+              "rushDefEpa": 0.104,
               "pointsFor": 16,
               "pointsAgainst": 24
             },
@@ -6055,10 +6055,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYG",
             "values": {
-              "passOffEpa": 0.168,
+              "passOffEpa": 0.152,
               "turnoverDiff": -2,
-              "passDefEpa": -0.08,
-              "rushDefEpa": 0.269,
+              "passDefEpa": -0.1,
+              "rushDefEpa": 0.253,
               "pointsFor": 27,
               "pointsAgainst": 27
             },
@@ -6066,7 +6066,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 12,
               "turnoverDiff": 28,
               "passDefEpa": 10,
-              "rushDefEpa": 30,
+              "rushDefEpa": 29,
               "pointsFor": 11,
               "pointsAgainst": 19
             }
@@ -6074,10 +6074,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PHI",
             "values": {
-              "passOffEpa": 0.002,
+              "passOffEpa": 0.006,
               "turnoverDiff": 1,
-              "passDefEpa": 0.241,
-              "rushDefEpa": -0.208,
+              "passDefEpa": 0.223,
+              "rushDefEpa": -0.159,
               "pointsFor": 17,
               "pointsAgainst": 19
             },
@@ -6085,7 +6085,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 17,
               "turnoverDiff": 8,
               "passDefEpa": 23,
-              "rushDefEpa": 8,
+              "rushDefEpa": 9,
               "pointsFor": 25,
               "pointsAgainst": 10
             }
@@ -6093,10 +6093,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "WSH",
             "values": {
-              "passOffEpa": -0.08,
+              "passOffEpa": -0.1,
               "turnoverDiff": 2,
-              "passDefEpa": 0.168,
-              "rushDefEpa": -0.164,
+              "passDefEpa": 0.152,
+              "rushDefEpa": -0.147,
               "pointsFor": 27,
               "pointsAgainst": 27
             },
@@ -6104,7 +6104,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 21,
               "turnoverDiff": 6,
               "passDefEpa": 19,
-              "rushDefEpa": 12,
+              "rushDefEpa": 10,
               "pointsFor": 12,
               "pointsAgainst": 20
             }
@@ -6112,17 +6112,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CHI",
             "values": {
-              "passOffEpa": -0.311,
+              "passOffEpa": -0.31,
               "turnoverDiff": -5,
-              "passDefEpa": 0.403,
-              "rushDefEpa": -0.15,
+              "passDefEpa": 0.376,
+              "rushDefEpa": -0.133,
               "pointsFor": 7,
               "pointsAgainst": 31
             },
             "ranks": {
               "passOffEpa": 28,
               "turnoverDiff": 30,
-              "passDefEpa": 28,
+              "passDefEpa": 27,
               "rushDefEpa": 13,
               "pointsFor": 29,
               "pointsAgainst": 24
@@ -6131,10 +6131,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DET",
             "values": {
-              "passOffEpa": 0.432,
+              "passOffEpa": 0.449,
               "turnoverDiff": 1,
-              "passDefEpa": 0.1,
-              "rushDefEpa": -0.19,
+              "passDefEpa": 0.08,
+              "rushDefEpa": -0.145,
               "pointsFor": 45,
               "pointsAgainst": 21
             },
@@ -6142,7 +6142,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 2,
               "turnoverDiff": 9,
               "passDefEpa": 17,
-              "rushDefEpa": 10,
+              "rushDefEpa": 11,
               "pointsFor": 2,
               "pointsAgainst": 11
             }
@@ -6150,18 +6150,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "GB",
             "values": {
-              "passOffEpa": 0.403,
+              "passOffEpa": 0.376,
               "turnoverDiff": 5,
-              "passDefEpa": -0.311,
-              "rushDefEpa": -0.034,
+              "passDefEpa": -0.31,
+              "rushDefEpa": -0.049,
               "pointsFor": 31,
               "pointsAgainst": 7
             },
             "ranks": {
-              "passOffEpa": 3,
+              "passOffEpa": 4,
               "turnoverDiff": 1,
               "passDefEpa": 3,
-              "rushDefEpa": 19,
+              "rushDefEpa": 18,
               "pointsFor": 8,
               "pointsAgainst": 2
             }
@@ -6169,17 +6169,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIN",
             "values": {
-              "passOffEpa": 0.21,
+              "passOffEpa": 0.209,
               "turnoverDiff": 1,
-              "passDefEpa": -0.36,
-              "rushDefEpa": -0.119,
+              "passDefEpa": -0.327,
+              "rushDefEpa": -0.073,
               "pointsFor": 23,
               "pointsAgainst": 13
             },
             "ranks": {
               "passOffEpa": 9,
               "turnoverDiff": 10,
-              "passDefEpa": 1,
+              "passDefEpa": 2,
               "rushDefEpa": 16,
               "pointsFor": 17,
               "pointsAgainst": 4
@@ -6188,17 +6188,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ATL",
             "values": {
-              "passOffEpa": 0.099,
+              "passOffEpa": 0.06,
               "turnoverDiff": 0,
-              "passDefEpa": 0.089,
-              "rushDefEpa": 0.171,
+              "passDefEpa": 0.078,
+              "rushDefEpa": 0.194,
               "pointsFor": 23,
               "pointsAgainst": 30
             },
             "ranks": {
-              "passOffEpa": 15,
+              "passOffEpa": 16,
               "turnoverDiff": 19,
-              "passDefEpa": 15,
+              "passDefEpa": 16,
               "rushDefEpa": 26,
               "pointsFor": 18,
               "pointsAgainst": 22
@@ -6226,18 +6226,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NO",
             "values": {
-              "passOffEpa": -0.36,
+              "passOffEpa": -0.327,
               "turnoverDiff": -1,
-              "passDefEpa": 0.21,
-              "rushDefEpa": -0.15,
+              "passDefEpa": 0.209,
+              "rushDefEpa": -0.126,
               "pointsFor": 13,
               "pointsAgainst": 23
             },
             "ranks": {
-              "passOffEpa": 30,
+              "passOffEpa": 29,
               "turnoverDiff": 21,
               "passDefEpa": 22,
-              "rushDefEpa": 14,
+              "rushDefEpa": 15,
               "pointsFor": 27,
               "pointsAgainst": 15
             }
@@ -6245,10 +6245,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TB",
             "values": {
-              "passOffEpa": 0.186,
+              "passOffEpa": 0.157,
               "turnoverDiff": 3,
-              "passDefEpa": -0.047,
-              "rushDefEpa": 0.04,
+              "passDefEpa": -0.076,
+              "rushDefEpa": 0.093,
               "pointsFor": 24,
               "pointsAgainst": 16
             },
@@ -6264,10 +6264,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ARI",
             "values": {
-              "passOffEpa": 0.1,
+              "passOffEpa": 0.08,
               "turnoverDiff": -1,
-              "passDefEpa": 0.432,
-              "rushDefEpa": 0.138,
+              "passDefEpa": 0.449,
+              "rushDefEpa": 0.158,
               "pointsFor": 21,
               "pointsAgainst": 45
             },
@@ -6283,10 +6283,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LAR",
             "values": {
-              "passOffEpa": 0.29,
+              "passOffEpa": 0.285,
               "turnoverDiff": 2,
-              "passDefEpa": 0.318,
-              "rushDefEpa": 0.22,
+              "passDefEpa": 0.347,
+              "rushDefEpa": 0.248,
               "pointsFor": 34,
               "pointsAgainst": 37
             },
@@ -6302,10 +6302,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SF",
             "values": {
-              "passOffEpa": -0.026,
+              "passOffEpa": -0.002,
               "turnoverDiff": 1,
-              "passDefEpa": -0.268,
-              "rushDefEpa": -0.482,
+              "passDefEpa": -0.286,
+              "rushDefEpa": -0.451,
               "pointsFor": 32,
               "pointsAgainst": 29
             },
@@ -6321,10 +6321,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SEA",
             "values": {
-              "passOffEpa": -0.268,
+              "passOffEpa": -0.286,
               "turnoverDiff": -1,
-              "passDefEpa": -0.026,
-              "rushDefEpa": -0.141,
+              "passDefEpa": -0.002,
+              "rushDefEpa": -0.143,
               "pointsFor": 29,
               "pointsAgainst": 32
             },
@@ -6332,7 +6332,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 25,
               "turnoverDiff": 23,
               "passDefEpa": 13,
-              "rushDefEpa": 15,
+              "rushDefEpa": 12,
               "pointsFor": 10,
               "pointsAgainst": 25
             }
@@ -6344,10 +6344,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BUF",
             "values": {
-              "passOffEpa": 0.233,
+              "passOffEpa": 0.232,
               "turnoverDiff": -0.5,
-              "passDefEpa": 0.189,
-              "rushDefEpa": -0.011,
+              "passDefEpa": 0.178,
+              "rushDefEpa": 0.014,
               "pointsFor": 32.83,
               "pointsAgainst": 28.5
             },
@@ -6355,7 +6355,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 4,
               "turnoverDiff": 22,
               "passDefEpa": 28,
-              "rushDefEpa": 23,
+              "rushDefEpa": 24,
               "pointsFor": 1,
               "pointsAgainst": 28
             },
@@ -6364,18 +6364,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIA",
             "values": {
-              "passOffEpa": -0.155,
+              "passOffEpa": -0.165,
               "turnoverDiff": -0.8,
-              "passDefEpa": 0.293,
-              "rushDefEpa": -0.126,
+              "passDefEpa": 0.296,
+              "rushDefEpa": -0.109,
               "pointsFor": 14,
               "pointsAgainst": 26.4
             },
             "ranks": {
               "passOffEpa": 30,
               "turnoverDiff": 28,
-              "passDefEpa": 31,
-              "rushDefEpa": 4,
+              "passDefEpa": 32,
+              "rushDefEpa": 5,
               "pointsFor": 31,
               "pointsAgainst": 24
             },
@@ -6384,18 +6384,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NE",
             "values": {
-              "passOffEpa": 0.141,
+              "passOffEpa": 0.113,
               "turnoverDiff": -1,
-              "passDefEpa": 0.045,
-              "rushDefEpa": -0.04,
+              "passDefEpa": 0.03,
+              "rushDefEpa": -0.033,
               "pointsFor": 22.67,
               "pointsAgainst": 18.83
             },
             "ranks": {
               "passOffEpa": 10,
               "turnoverDiff": 30,
-              "passDefEpa": 18,
-              "rushDefEpa": 17,
+              "passDefEpa": 16,
+              "rushDefEpa": 15,
               "pointsFor": 18,
               "pointsAgainst": 5
             },
@@ -6404,18 +6404,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYJ",
             "values": {
-              "passOffEpa": 0.058,
+              "passOffEpa": 0.05,
               "turnoverDiff": 0.67,
-              "passDefEpa": 0.051,
-              "rushDefEpa": -0.133,
+              "passDefEpa": 0.041,
+              "rushDefEpa": -0.113,
               "pointsFor": 18.67,
               "pointsAgainst": 20.33
             },
             "ranks": {
               "passOffEpa": 16,
               "turnoverDiff": 6,
-              "passDefEpa": 19,
-              "rushDefEpa": 2,
+              "passDefEpa": 18,
+              "rushDefEpa": 3,
               "pointsFor": 27,
               "pointsAgainst": 7
             },
@@ -6424,18 +6424,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BAL",
             "values": {
-              "passOffEpa": 0.223,
+              "passOffEpa": 0.21,
               "turnoverDiff": 0.33,
-              "passDefEpa": 0.061,
-              "rushDefEpa": -0.057,
+              "passDefEpa": 0.047,
+              "rushDefEpa": -0.029,
               "pointsFor": 26,
               "pointsAgainst": 22
             },
             "ranks": {
               "passOffEpa": 5,
               "turnoverDiff": 13,
-              "passDefEpa": 21,
-              "rushDefEpa": 15,
+              "passDefEpa": 19,
+              "rushDefEpa": 16,
               "pointsFor": 7,
               "pointsAgainst": 15
             },
@@ -6444,10 +6444,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CIN",
             "values": {
-              "passOffEpa": 0.148,
+              "passOffEpa": 0.142,
               "turnoverDiff": 0.4,
-              "passDefEpa": -0.035,
-              "rushDefEpa": -0.001,
+              "passDefEpa": -0.033,
+              "rushDefEpa": 0.01,
               "pointsFor": 25.6,
               "pointsAgainst": 21.8
             },
@@ -6455,7 +6455,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 9,
               "turnoverDiff": 12,
               "passDefEpa": 9,
-              "rushDefEpa": 26,
+              "rushDefEpa": 23,
               "pointsFor": 9,
               "pointsAgainst": 14
             },
@@ -6464,18 +6464,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CLE",
             "values": {
-              "passOffEpa": -0.002,
+              "passOffEpa": -0.017,
               "turnoverDiff": 0,
-              "passDefEpa": -0.011,
-              "rushDefEpa": -0.05,
+              "passDefEpa": -0.018,
+              "rushDefEpa": -0.042,
               "pointsFor": 17.67,
               "pointsAgainst": 20.33
             },
             "ranks": {
-              "passOffEpa": 22,
+              "passOffEpa": 23,
               "turnoverDiff": 17,
               "passDefEpa": 10,
-              "rushDefEpa": 16,
+              "rushDefEpa": 14,
               "pointsFor": 28,
               "pointsAgainst": 8
             },
@@ -6486,8 +6486,8 @@ const NFL_POWER_SCORE = {
             "values": {
               "passOffEpa": -0.085,
               "turnoverDiff": 0.5,
-              "passDefEpa": -0.057,
-              "rushDefEpa": -0.024,
+              "passDefEpa": -0.07,
+              "rushDefEpa": -0.011,
               "pointsFor": 22.83,
               "pointsAgainst": 21.33
             },
@@ -6495,7 +6495,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 26,
               "turnoverDiff": 10,
               "passDefEpa": 4,
-              "rushDefEpa": 20,
+              "rushDefEpa": 18,
               "pointsFor": 17,
               "pointsAgainst": 12
             },
@@ -6504,15 +6504,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "HOU",
             "values": {
-              "passOffEpa": 0.114,
+              "passOffEpa": 0.1,
               "turnoverDiff": 0.5,
-              "passDefEpa": 0.043,
-              "rushDefEpa": -0.076,
+              "passDefEpa": 0.039,
+              "rushDefEpa": -0.054,
               "pointsFor": 24,
               "pointsAgainst": 23.83
             },
             "ranks": {
-              "passOffEpa": 12,
+              "passOffEpa": 13,
               "turnoverDiff": 11,
               "passDefEpa": 17,
               "rushDefEpa": 13,
@@ -6524,18 +6524,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "IND",
             "values": {
-              "passOffEpa": -0.095,
+              "passOffEpa": -0.101,
               "turnoverDiff": -1.33,
-              "passDefEpa": 0.057,
-              "rushDefEpa": 0.045,
+              "passDefEpa": 0.053,
+              "rushDefEpa": 0.066,
               "pointsFor": 24,
               "pointsAgainst": 27.33
             },
             "ranks": {
               "passOffEpa": 27,
               "turnoverDiff": 32,
-              "passDefEpa": 20,
-              "rushDefEpa": 31,
+              "passDefEpa": 21,
+              "rushDefEpa": 32,
               "pointsFor": 15,
               "pointsAgainst": 27
             },
@@ -6544,18 +6544,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "JAX",
             "values": {
-              "passOffEpa": 0.249,
+              "passOffEpa": 0.24,
               "turnoverDiff": 0.83,
-              "passDefEpa": 0.042,
-              "rushDefEpa": -0.132,
+              "passDefEpa": 0.026,
+              "rushDefEpa": -0.115,
               "pointsFor": 25.67,
               "pointsAgainst": 17.33
             },
             "ranks": {
               "passOffEpa": 3,
               "turnoverDiff": 4,
-              "passDefEpa": 16,
-              "rushDefEpa": 3,
+              "passDefEpa": 15,
+              "rushDefEpa": 2,
               "pointsFor": 8,
               "pointsAgainst": 3
             },
@@ -6564,10 +6564,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TEN",
             "values": {
-              "passOffEpa": -0.141,
+              "passOffEpa": -0.143,
               "turnoverDiff": -0.5,
-              "passDefEpa": 0.134,
-              "rushDefEpa": -0.087,
+              "passDefEpa": 0.124,
+              "rushDefEpa": -0.074,
               "pointsFor": 14,
               "pointsAgainst": 21.5
             },
@@ -6575,7 +6575,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 29,
               "turnoverDiff": 23,
               "passDefEpa": 26,
-              "rushDefEpa": 12,
+              "rushDefEpa": 9,
               "pointsFor": 32,
               "pointsAgainst": 13
             },
@@ -6584,18 +6584,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DEN",
             "values": {
-              "passOffEpa": -0.053,
+              "passOffEpa": -0.057,
               "turnoverDiff": 0.67,
-              "passDefEpa": -0.041,
-              "rushDefEpa": 0.019,
+              "passDefEpa": -0.049,
+              "rushDefEpa": 0.038,
               "pointsFor": 19,
               "pointsAgainst": 20.83
             },
             "ranks": {
               "passOffEpa": 24,
               "turnoverDiff": 7,
-              "passDefEpa": 5,
-              "rushDefEpa": 27,
+              "passDefEpa": 6,
+              "rushDefEpa": 28,
               "pointsFor": 26,
               "pointsAgainst": 10
             },
@@ -6604,10 +6604,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "KC",
             "values": {
-              "passOffEpa": 0.151,
+              "passOffEpa": 0.146,
               "turnoverDiff": 1,
-              "passDefEpa": -0.067,
-              "rushDefEpa": -0.088,
+              "passDefEpa": -0.071,
+              "rushDefEpa": -0.073,
               "pointsFor": 28,
               "pointsAgainst": 16.6
             },
@@ -6624,10 +6624,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LV",
             "values": {
-              "passOffEpa": 0.177,
+              "passOffEpa": 0.18,
               "turnoverDiff": 0.33,
               "passDefEpa": 0.144,
-              "rushDefEpa": -0.065,
+              "rushDefEpa": -0.029,
               "pointsFor": 27,
               "pointsAgainst": 27
             },
@@ -6635,7 +6635,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 6,
               "turnoverDiff": 14,
               "passDefEpa": 27,
-              "rushDefEpa": 14,
+              "rushDefEpa": 17,
               "pointsFor": 6,
               "pointsAgainst": 26
             },
@@ -6644,17 +6644,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LAC",
             "values": {
-              "passOffEpa": -0.182,
+              "passOffEpa": -0.183,
               "turnoverDiff": -0.83,
-              "passDefEpa": 0.033,
-              "rushDefEpa": -0.091,
+              "passDefEpa": 0.049,
+              "rushDefEpa": -0.074,
               "pointsFor": 15,
               "pointsAgainst": 25.17
             },
             "ranks": {
               "passOffEpa": 31,
               "turnoverDiff": 29,
-              "passDefEpa": 15,
+              "passDefEpa": 20,
               "rushDefEpa": 10,
               "pointsFor": 30,
               "pointsAgainst": 22
@@ -6664,18 +6664,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DAL",
             "values": {
-              "passOffEpa": 0.124,
+              "passOffEpa": 0.109,
               "turnoverDiff": -0.67,
-              "passDefEpa": 0.296,
-              "rushDefEpa": -0.016,
+              "passDefEpa": 0.266,
+              "rushDefEpa": 0.005,
               "pointsFor": 25.17,
               "pointsAgainst": 26.5
             },
             "ranks": {
               "passOffEpa": 11,
               "turnoverDiff": 27,
-              "passDefEpa": 32,
-              "rushDefEpa": 22,
+              "passDefEpa": 31,
+              "rushDefEpa": 21,
               "pointsFor": 11,
               "pointsAgainst": 25
             },
@@ -6684,10 +6684,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYG",
             "values": {
-              "passOffEpa": 0.036,
+              "passOffEpa": 0.02,
               "turnoverDiff": -0.33,
-              "passDefEpa": 0.026,
-              "rushDefEpa": 0.019,
+              "passDefEpa": 0.016,
+              "rushDefEpa": 0.025,
               "pointsFor": 22.67,
               "pointsAgainst": 23.33
             },
@@ -6695,7 +6695,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 17,
               "turnoverDiff": 19,
               "passDefEpa": 13,
-              "rushDefEpa": 28,
+              "rushDefEpa": 27,
               "pointsFor": 19,
               "pointsAgainst": 19
             },
@@ -6704,10 +6704,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PHI",
             "values": {
-              "passOffEpa": -0.06,
+              "passOffEpa": -0.07,
               "turnoverDiff": -0.33,
-              "passDefEpa": 0.11,
-              "rushDefEpa": -0.032,
+              "passDefEpa": 0.101,
+              "rushDefEpa": -0.01,
               "pointsFor": 17.67,
               "pointsAgainst": 22.83
             },
@@ -6715,7 +6715,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 25,
               "turnoverDiff": 20,
               "passDefEpa": 24,
-              "rushDefEpa": 18,
+              "rushDefEpa": 19,
               "pointsFor": 29,
               "pointsAgainst": 16
             },
@@ -6724,18 +6724,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "WSH",
             "values": {
-              "passOffEpa": 0.018,
+              "passOffEpa": 0.007,
               "turnoverDiff": 1,
-              "passDefEpa": 0.092,
-              "rushDefEpa": 0.052,
+              "passDefEpa": 0.09,
+              "rushDefEpa": 0.058,
               "pointsFor": 22,
               "pointsAgainst": 28.67
             },
             "ranks": {
-              "passOffEpa": 18,
+              "passOffEpa": 20,
               "turnoverDiff": 3,
               "passDefEpa": 23,
-              "rushDefEpa": 32,
+              "rushDefEpa": 31,
               "pointsFor": 21,
               "pointsAgainst": 29
             },
@@ -6744,18 +6744,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CHI",
             "values": {
-              "passOffEpa": 0.09,
+              "passOffEpa": 0.086,
               "turnoverDiff": -0.33,
-              "passDefEpa": 0.024,
-              "rushDefEpa": -0.027,
+              "passDefEpa": 0.001,
+              "rushDefEpa": -0.007,
               "pointsFor": 25,
               "pointsAgainst": 19.83
             },
             "ranks": {
-              "passOffEpa": 15,
+              "passOffEpa": 14,
               "turnoverDiff": 21,
               "passDefEpa": 12,
-              "rushDefEpa": 19,
+              "rushDefEpa": 20,
               "pointsFor": 12,
               "pointsAgainst": 6
             },
@@ -6764,10 +6764,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DET",
             "values": {
-              "passOffEpa": 0.274,
+              "passOffEpa": 0.276,
               "turnoverDiff": 0.8,
-              "passDefEpa": 0.193,
-              "rushDefEpa": -0.024,
+              "passDefEpa": 0.179,
+              "rushDefEpa": 0.008,
               "pointsFor": 32.8,
               "pointsAgainst": 29.6
             },
@@ -6775,7 +6775,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 2,
               "turnoverDiff": 5,
               "passDefEpa": 29,
-              "rushDefEpa": 21,
+              "rushDefEpa": 22,
               "pointsFor": 2,
               "pointsAgainst": 30
             },
@@ -6784,15 +6784,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "GB",
             "values": {
-              "passOffEpa": 0.098,
+              "passOffEpa": 0.082,
               "turnoverDiff": 0.67,
-              "passDefEpa": -0.039,
-              "rushDefEpa": -0.002,
+              "passDefEpa": -0.046,
+              "rushDefEpa": 0.015,
               "pointsFor": 21.17,
               "pointsAgainst": 20.83
             },
             "ranks": {
-              "passOffEpa": 14,
+              "passOffEpa": 15,
               "turnoverDiff": 8,
               "passDefEpa": 7,
               "rushDefEpa": 25,
@@ -6804,18 +6804,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIN",
             "values": {
-              "passOffEpa": -0.005,
+              "passOffEpa": -0.011,
               "turnoverDiff": 1.2,
-              "passDefEpa": -0.199,
-              "rushDefEpa": -0.12,
+              "passDefEpa": -0.191,
+              "rushDefEpa": -0.092,
               "pointsFor": 21.8,
               "pointsAgainst": 12.8
             },
             "ranks": {
-              "passOffEpa": 23,
+              "passOffEpa": 22,
               "turnoverDiff": 1,
               "passDefEpa": 1,
-              "rushDefEpa": 6,
+              "rushDefEpa": 7,
               "pointsFor": 22,
               "pointsAgainst": 1
             },
@@ -6824,10 +6824,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ATL",
             "values": {
-              "passOffEpa": -0.102,
+              "passOffEpa": -0.113,
               "turnoverDiff": -1.17,
-              "passDefEpa": 0.067,
-              "rushDefEpa": -0.138,
+              "passDefEpa": 0.062,
+              "rushDefEpa": -0.117,
               "pointsFor": 23.67,
               "pointsAgainst": 25.5
             },
@@ -6844,10 +6844,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CAR",
             "values": {
-              "passOffEpa": 0.177,
+              "passOffEpa": 0.167,
               "turnoverDiff": 0.6,
-              "passDefEpa": 0.003,
-              "rushDefEpa": 0.03,
+              "passDefEpa": -0.004,
+              "rushDefEpa": 0.042,
               "pointsFor": 29.2,
               "pointsAgainst": 24.6
             },
@@ -6855,7 +6855,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 7,
               "turnoverDiff": 9,
               "passDefEpa": 11,
-              "rushDefEpa": 30,
+              "rushDefEpa": 29,
               "pointsFor": 4,
               "pointsAgainst": 21
             },
@@ -6866,16 +6866,16 @@ const NFL_POWER_SCORE = {
             "values": {
               "passOffEpa": 0.008,
               "turnoverDiff": -0.5,
-              "passDefEpa": 0.115,
-              "rushDefEpa": 0.027,
+              "passDefEpa": 0.109,
+              "rushDefEpa": 0.056,
               "pointsFor": 25.33,
               "pointsAgainst": 29.67
             },
             "ranks": {
-              "passOffEpa": 20,
+              "passOffEpa": 19,
               "turnoverDiff": 24,
               "passDefEpa": 25,
-              "rushDefEpa": 29,
+              "rushDefEpa": 30,
               "pointsFor": 10,
               "pointsAgainst": 31
             },
@@ -6884,18 +6884,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TB",
             "values": {
-              "passOffEpa": -0.19,
+              "passOffEpa": -0.201,
               "turnoverDiff": -0.5,
-              "passDefEpa": -0.039,
-              "rushDefEpa": -0.111,
+              "passDefEpa": -0.052,
+              "rushDefEpa": -0.086,
               "pointsFor": 19.83,
               "pointsAgainst": 23
             },
             "ranks": {
               "passOffEpa": 32,
               "turnoverDiff": 25,
-              "passDefEpa": 8,
-              "rushDefEpa": 7,
+              "passDefEpa": 5,
+              "rushDefEpa": 8,
               "pointsFor": 25,
               "pointsAgainst": 17
             },
@@ -6904,10 +6904,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ARI",
             "values": {
-              "passOffEpa": 0.003,
+              "passOffEpa": -0.002,
               "turnoverDiff": 0.33,
-              "passDefEpa": 0.248,
-              "rushDefEpa": -0.099,
+              "passDefEpa": 0.24,
+              "rushDefEpa": -0.069,
               "pointsFor": 21,
               "pointsAgainst": 29.67
             },
@@ -6915,7 +6915,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 21,
               "turnoverDiff": 15,
               "passDefEpa": 30,
-              "rushDefEpa": 9,
+              "rushDefEpa": 12,
               "pointsFor": 24,
               "pointsAgainst": 32
             },
@@ -6924,18 +6924,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LAR",
             "values": {
-              "passOffEpa": 0.106,
+              "passOffEpa": 0.107,
               "turnoverDiff": -0.5,
-              "passDefEpa": -0.041,
-              "rushDefEpa": -0.009,
+              "passDefEpa": -0.038,
+              "rushDefEpa": 0.016,
               "pointsFor": 22.5,
               "pointsAgainst": 23
             },
             "ranks": {
-              "passOffEpa": 13,
+              "passOffEpa": 12,
               "turnoverDiff": 26,
-              "passDefEpa": 6,
-              "rushDefEpa": 24,
+              "passDefEpa": 8,
+              "rushDefEpa": 26,
               "pointsFor": 20,
               "pointsAgainst": 18
             },
@@ -6944,10 +6944,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SF",
             "values": {
-              "passOffEpa": 0.307,
+              "passOffEpa": 0.309,
               "turnoverDiff": 0.17,
-              "passDefEpa": 0.027,
-              "rushDefEpa": -0.125,
+              "passDefEpa": 0.022,
+              "rushDefEpa": -0.112,
               "pointsFor": 29.5,
               "pointsAgainst": 18.33
             },
@@ -6955,7 +6955,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 1,
               "turnoverDiff": 16,
               "passDefEpa": 14,
-              "rushDefEpa": 5,
+              "rushDefEpa": 4,
               "pointsFor": 3,
               "pointsAgainst": 4
             },
@@ -6964,18 +6964,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SEA",
             "values": {
-              "passOffEpa": 0.016,
+              "passOffEpa": 0.013,
               "turnoverDiff": -0.17,
-              "passDefEpa": -0.096,
-              "rushDefEpa": -0.107,
+              "passDefEpa": -0.098,
+              "rushDefEpa": -0.095,
               "pointsFor": 24.67,
               "pointsAgainst": 20.33
             },
             "ranks": {
-              "passOffEpa": 19,
+              "passOffEpa": 18,
               "turnoverDiff": 18,
               "passDefEpa": 2,
-              "rushDefEpa": 8,
+              "rushDefEpa": 6,
               "pointsFor": 13,
               "pointsAgainst": 9
             },
@@ -6986,18 +6986,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BUF",
             "values": {
-              "passOffEpa": 0.224,
+              "passOffEpa": 0.248,
               "turnoverDiff": 1,
-              "passDefEpa": 0.238,
-              "rushDefEpa": -0.252,
+              "passDefEpa": 0.225,
+              "rushDefEpa": -0.134,
               "pointsFor": 33,
               "pointsAgainst": 30
             },
             "ranks": {
-              "passOffEpa": 5,
+              "passOffEpa": 4,
               "turnoverDiff": 5,
-              "passDefEpa": 25,
-              "rushDefEpa": 3,
+              "passDefEpa": 24,
+              "rushDefEpa": 6,
               "pointsFor": 3,
               "pointsAgainst": 23
             }
@@ -7024,17 +7024,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NE",
             "values": {
-              "passOffEpa": 0.366,
+              "passOffEpa": 0.323,
               "turnoverDiff": -1,
-              "passDefEpa": 0.122,
-              "rushDefEpa": -0.245,
+              "passDefEpa": 0.088,
+              "rushDefEpa": -0.221,
               "pointsFor": 26,
               "pointsAgainst": 19
             },
             "ranks": {
-              "passOffEpa": 1,
+              "passOffEpa": 2,
               "turnoverDiff": 19,
-              "passDefEpa": 21,
+              "passDefEpa": 20,
               "rushDefEpa": 4,
               "pointsFor": 8,
               "pointsAgainst": 11
@@ -7043,17 +7043,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYJ",
             "values": {
-              "passOffEpa": 0.122,
+              "passOffEpa": 0.088,
               "turnoverDiff": 1,
-              "passDefEpa": 0.366,
-              "rushDefEpa": -0.155,
+              "passDefEpa": 0.323,
+              "rushDefEpa": -0.114,
               "pointsFor": 19,
               "pointsAgainst": 26
             },
             "ranks": {
-              "passOffEpa": 8,
+              "passOffEpa": 9,
               "turnoverDiff": 6,
-              "passDefEpa": 28,
+              "passDefEpa": 27,
               "rushDefEpa": 7,
               "pointsFor": 17,
               "pointsAgainst": 19
@@ -7062,18 +7062,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BAL",
             "values": {
-              "passOffEpa": 0.123,
+              "passOffEpa": 0.105,
               "turnoverDiff": -1,
-              "passDefEpa": -0.17,
-              "rushDefEpa": -0.003,
+              "passDefEpa": -0.173,
+              "rushDefEpa": -0.001,
               "pointsFor": 10,
               "pointsAgainst": 13
             },
             "ranks": {
               "passOffEpa": 7,
               "turnoverDiff": 20,
-              "passDefEpa": 4,
-              "rushDefEpa": 22,
+              "passDefEpa": 3,
+              "rushDefEpa": 19,
               "pointsFor": 27,
               "pointsAgainst": 3
             }
@@ -7100,10 +7100,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CLE",
             "values": {
-              "passOffEpa": -0.17,
+              "passOffEpa": -0.173,
               "turnoverDiff": 1,
-              "passDefEpa": 0.123,
-              "rushDefEpa": -0.378,
+              "passDefEpa": 0.105,
+              "rushDefEpa": -0.392,
               "pointsFor": 13,
               "pointsAgainst": 10
             },
@@ -7119,10 +7119,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PIT",
             "values": {
-              "passOffEpa": -0.191,
+              "passOffEpa": -0.173,
               "turnoverDiff": 1,
-              "passDefEpa": -0.375,
-              "rushDefEpa": -0.013,
+              "passDefEpa": -0.391,
+              "rushDefEpa": 0.014,
               "pointsFor": 26,
               "pointsAgainst": 19
             },
@@ -7138,15 +7138,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "HOU",
             "values": {
-              "passOffEpa": 0.365,
+              "passOffEpa": 0.326,
               "turnoverDiff": 0,
-              "passDefEpa": 0.262,
-              "rushDefEpa": 0.01,
+              "passDefEpa": 0.253,
+              "rushDefEpa": 0.04,
               "pointsFor": 34,
               "pointsAgainst": 31
             },
             "ranks": {
-              "passOffEpa": 2,
+              "passOffEpa": 1,
               "turnoverDiff": 11,
               "passDefEpa": 26,
               "rushDefEpa": 25,
@@ -7157,10 +7157,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "IND",
             "values": {
-              "passOffEpa": -0.068,
+              "passOffEpa": -0.086,
               "turnoverDiff": -2,
-              "passDefEpa": -0.15,
-              "rushDefEpa": -0.099,
+              "passDefEpa": -0.137,
+              "rushDefEpa": -0.084,
               "pointsFor": 20,
               "pointsAgainst": 26
             },
@@ -7168,7 +7168,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 17,
               "turnoverDiff": 25,
               "passDefEpa": 7,
-              "rushDefEpa": 11,
+              "rushDefEpa": 10,
               "pointsFor": 16,
               "pointsAgainst": 20
             }
@@ -7176,17 +7176,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "JAX",
             "values": {
-              "passOffEpa": 0.262,
+              "passOffEpa": 0.253,
               "turnoverDiff": 0,
-              "passDefEpa": 0.365,
-              "rushDefEpa": 0.006,
+              "passDefEpa": 0.326,
+              "rushDefEpa": 0.032,
               "pointsFor": 31,
               "pointsAgainst": 34
             },
             "ranks": {
               "passOffEpa": 3,
               "turnoverDiff": 12,
-              "passDefEpa": 27,
+              "passDefEpa": 28,
               "rushDefEpa": 24,
               "pointsFor": 4,
               "pointsAgainst": 27
@@ -7195,10 +7195,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TEN",
             "values": {
-              "passOffEpa": -0.15,
+              "passOffEpa": -0.137,
               "turnoverDiff": 2,
-              "passDefEpa": -0.068,
-              "rushDefEpa": -0.088,
+              "passDefEpa": -0.086,
+              "rushDefEpa": -0.056,
               "pointsFor": 26,
               "pointsAgainst": 20
             },
@@ -7206,7 +7206,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 22,
               "turnoverDiff": 3,
               "passDefEpa": 12,
-              "rushDefEpa": 12,
+              "rushDefEpa": 14,
               "pointsFor": 10,
               "pointsAgainst": 13
             }
@@ -7214,10 +7214,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DEN",
             "values": {
-              "passOffEpa": -0.154,
+              "passOffEpa": -0.16,
               "turnoverDiff": 3,
-              "passDefEpa": -0.098,
-              "rushDefEpa": 0.003,
+              "passDefEpa": -0.103,
+              "rushDefEpa": 0.02,
               "pointsFor": 17,
               "pointsAgainst": 14
             },
@@ -7225,7 +7225,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 24,
               "turnoverDiff": 1,
               "passDefEpa": 11,
-              "rushDefEpa": 23,
+              "rushDefEpa": 22,
               "pointsFor": 20,
               "pointsAgainst": 5
             }
@@ -7233,10 +7233,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "KC",
             "values": {
-              "passOffEpa": 0.077,
+              "passOffEpa": 0.057,
               "turnoverDiff": 0,
-              "passDefEpa": -0.286,
-              "rushDefEpa": -0.102,
+              "passDefEpa": -0.28,
+              "rushDefEpa": -0.095,
               "pointsFor": 22,
               "pointsAgainst": 6
             },
@@ -7244,7 +7244,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 12,
               "turnoverDiff": 13,
               "passDefEpa": 2,
-              "rushDefEpa": 10,
+              "rushDefEpa": 8,
               "pointsFor": 15,
               "pointsAgainst": 1
             }
@@ -7252,18 +7252,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LV",
             "values": {
-              "passOffEpa": 0.238,
+              "passOffEpa": 0.225,
               "turnoverDiff": -1,
-              "passDefEpa": 0.224,
-              "rushDefEpa": -0.031,
+              "passDefEpa": 0.248,
+              "rushDefEpa": 0.028,
               "pointsFor": 30,
               "pointsAgainst": 33
             },
             "ranks": {
-              "passOffEpa": 4,
+              "passOffEpa": 5,
               "turnoverDiff": 21,
-              "passDefEpa": 24,
-              "rushDefEpa": 17,
+              "passDefEpa": 25,
+              "rushDefEpa": 23,
               "pointsFor": 6,
               "pointsAgainst": 26
             }
@@ -7271,10 +7271,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LAC",
             "values": {
-              "passOffEpa": -0.286,
+              "passOffEpa": -0.28,
               "turnoverDiff": 0,
-              "passDefEpa": 0.077,
-              "rushDefEpa": 0.074,
+              "passDefEpa": 0.057,
+              "rushDefEpa": 0.078,
               "pointsFor": 6,
               "pointsAgainst": 22
             },
@@ -7290,18 +7290,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DAL",
             "values": {
-              "passOffEpa": -0.108,
+              "passOffEpa": -0.126,
               "turnoverDiff": -1,
-              "passDefEpa": 0.111,
-              "rushDefEpa": -0.117,
+              "passDefEpa": 0.074,
+              "rushDefEpa": -0.073,
               "pointsFor": 13,
               "pointsAgainst": 23
             },
             "ranks": {
-              "passOffEpa": 19,
+              "passOffEpa": 20,
               "turnoverDiff": 22,
-              "passDefEpa": 20,
-              "rushDefEpa": 8,
+              "passDefEpa": 19,
+              "rushDefEpa": 12,
               "pointsFor": 26,
               "pointsAgainst": 15
             }
@@ -7309,18 +7309,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYG",
             "values": {
-              "passOffEpa": -0.109,
+              "passOffEpa": -0.119,
               "turnoverDiff": -3,
-              "passDefEpa": 0.044,
-              "rushDefEpa": -0.027,
+              "passDefEpa": 0.052,
+              "rushDefEpa": -0.037,
               "pointsFor": 27,
               "pointsAgainst": 34
             },
             "ranks": {
-              "passOffEpa": 20,
+              "passOffEpa": 19,
               "turnoverDiff": 27,
               "passDefEpa": 15,
-              "rushDefEpa": 18,
+              "rushDefEpa": 15,
               "pointsFor": 7,
               "pointsAgainst": 28
             }
@@ -7328,10 +7328,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PHI",
             "values": {
-              "passOffEpa": -0.135,
+              "passOffEpa": -0.127,
               "turnoverDiff": 0,
-              "passDefEpa": 0.08,
-              "rushDefEpa": -0.021,
+              "passDefEpa": 0.069,
+              "rushDefEpa": 0.003,
               "pointsFor": 14,
               "pointsAgainst": 25
             },
@@ -7347,17 +7347,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "WSH",
             "values": {
-              "passOffEpa": 0.055,
+              "passOffEpa": 0.056,
               "turnoverDiff": 1,
-              "passDefEpa": 0.082,
-              "rushDefEpa": 0.447,
+              "passDefEpa": 0.099,
+              "rushDefEpa": 0.387,
               "pointsFor": 17,
               "pointsAgainst": 23
             },
             "ranks": {
               "passOffEpa": 13,
               "turnoverDiff": 9,
-              "passDefEpa": 19,
+              "passDefEpa": 21,
               "rushDefEpa": 28,
               "pointsFor": 21,
               "pointsAgainst": 16
@@ -7366,10 +7366,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CHI",
             "values": {
-              "passOffEpa": 0.204,
+              "passOffEpa": 0.208,
               "turnoverDiff": 2,
-              "passDefEpa": -0.153,
-              "rushDefEpa": -0.239,
+              "passDefEpa": -0.157,
+              "rushDefEpa": -0.224,
               "pointsFor": 31,
               "pointsAgainst": 23
             },
@@ -7377,7 +7377,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 6,
               "turnoverDiff": 4,
               "passDefEpa": 6,
-              "rushDefEpa": 5,
+              "rushDefEpa": 3,
               "pointsFor": 5,
               "pointsAgainst": 17
             }
@@ -7404,18 +7404,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "GB",
             "values": {
-              "passOffEpa": 0.111,
+              "passOffEpa": 0.074,
               "turnoverDiff": 1,
-              "passDefEpa": -0.108,
-              "rushDefEpa": -0.038,
+              "passDefEpa": -0.126,
+              "rushDefEpa": -0.004,
               "pointsFor": 23,
               "pointsAgainst": 13
             },
             "ranks": {
-              "passOffEpa": 9,
+              "passOffEpa": 10,
               "turnoverDiff": 10,
-              "passDefEpa": 10,
-              "rushDefEpa": 15,
+              "passDefEpa": 9,
+              "rushDefEpa": 18,
               "pointsFor": 12,
               "pointsAgainst": 4
             }
@@ -7442,10 +7442,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ATL",
             "values": {
-              "passOffEpa": -0.153,
+              "passOffEpa": -0.157,
               "turnoverDiff": -2,
-              "passDefEpa": 0.204,
-              "rushDefEpa": -0.285,
+              "passDefEpa": 0.208,
+              "rushDefEpa": -0.27,
               "pointsFor": 23,
               "pointsAgainst": 31
             },
@@ -7461,10 +7461,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CAR",
             "values": {
-              "passOffEpa": 0.08,
+              "passOffEpa": 0.069,
               "turnoverDiff": 0,
-              "passDefEpa": -0.135,
-              "rushDefEpa": -0.105,
+              "passDefEpa": -0.127,
+              "rushDefEpa": -0.093,
               "pointsFor": 25,
               "pointsAgainst": 14
             },
@@ -7480,17 +7480,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NO",
             "values": {
-              "passOffEpa": 0.044,
+              "passOffEpa": 0.052,
               "turnoverDiff": 3,
-              "passDefEpa": -0.109,
-              "rushDefEpa": 0.067,
+              "passDefEpa": -0.119,
+              "rushDefEpa": 0.051,
               "pointsFor": 34,
               "pointsAgainst": 27
             },
             "ranks": {
               "passOffEpa": 14,
               "turnoverDiff": 2,
-              "passDefEpa": 9,
+              "passDefEpa": 10,
               "rushDefEpa": 26,
               "pointsFor": 2,
               "pointsAgainst": 22
@@ -7499,18 +7499,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TB",
             "values": {
-              "passOffEpa": -0.375,
+              "passOffEpa": -0.391,
               "turnoverDiff": -1,
-              "passDefEpa": -0.191,
-              "rushDefEpa": -0.022,
+              "passDefEpa": -0.173,
+              "rushDefEpa": -0.007,
               "pointsFor": 19,
               "pointsAgainst": 26
             },
             "ranks": {
               "passOffEpa": 28,
               "turnoverDiff": 23,
-              "passDefEpa": 3,
-              "rushDefEpa": 19,
+              "passDefEpa": 4,
+              "rushDefEpa": 17,
               "pointsFor": 18,
               "pointsAgainst": 21
             }
@@ -7518,10 +7518,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ARI",
             "values": {
-              "passOffEpa": 0.013,
+              "passOffEpa": 0.005,
               "turnoverDiff": 0,
-              "passDefEpa": -0.042,
-              "rushDefEpa": -0.083,
+              "passDefEpa": -0.032,
+              "rushDefEpa": -0.082,
               "pointsFor": 18,
               "pointsAgainst": 16
             },
@@ -7529,7 +7529,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 15,
               "turnoverDiff": 17,
               "passDefEpa": 13,
-              "rushDefEpa": 13,
+              "rushDefEpa": 11,
               "pointsFor": 19,
               "pointsAgainst": 7
             }
@@ -7537,10 +7537,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LAR",
             "values": {
-              "passOffEpa": -0.042,
+              "passOffEpa": -0.032,
               "turnoverDiff": 0,
-              "passDefEpa": 0.013,
-              "rushDefEpa": -0.082,
+              "passDefEpa": 0.005,
+              "rushDefEpa": -0.058,
               "pointsFor": 16,
               "pointsAgainst": 18
             },
@@ -7548,7 +7548,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 16,
               "turnoverDiff": 18,
               "passDefEpa": 14,
-              "rushDefEpa": 14,
+              "rushDefEpa": 13,
               "pointsFor": 22,
               "pointsAgainst": 10
             }
@@ -7556,18 +7556,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SF",
             "values": {
-              "passOffEpa": 0.082,
+              "passOffEpa": 0.099,
               "turnoverDiff": -1,
-              "passDefEpa": 0.055,
-              "rushDefEpa": -0.168,
+              "passDefEpa": 0.056,
+              "rushDefEpa": -0.159,
               "pointsFor": 23,
               "pointsAgainst": 17
             },
             "ranks": {
-              "passOffEpa": 10,
+              "passOffEpa": 8,
               "turnoverDiff": 24,
               "passDefEpa": 16,
-              "rushDefEpa": 6,
+              "rushDefEpa": 5,
               "pointsFor": 14,
               "pointsAgainst": 8
             }
@@ -7575,10 +7575,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SEA",
             "values": {
-              "passOffEpa": -0.098,
+              "passOffEpa": -0.103,
               "turnoverDiff": -3,
-              "passDefEpa": -0.154,
-              "rushDefEpa": -0.037,
+              "passDefEpa": -0.16,
+              "rushDefEpa": -0.029,
               "pointsFor": 14,
               "pointsAgainst": 17
             },
@@ -7598,10 +7598,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BUF",
             "values": {
-              "passOffEpa": 0.233,
+              "passOffEpa": 0.232,
               "turnoverDiff": -0.5,
-              "passDefEpa": 0.189,
-              "rushDefEpa": -0.011,
+              "passDefEpa": 0.178,
+              "rushDefEpa": 0.014,
               "pointsFor": 32.83,
               "pointsAgainst": 28.5
             },
@@ -7609,7 +7609,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 4,
               "turnoverDiff": 26,
               "passDefEpa": 29,
-              "rushDefEpa": 24,
+              "rushDefEpa": 25,
               "pointsFor": 1,
               "pointsAgainst": 30
             },
@@ -7618,10 +7618,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIA",
             "values": {
-              "passOffEpa": -0.071,
+              "passOffEpa": -0.082,
               "turnoverDiff": -0.5,
-              "passDefEpa": 0.298,
-              "rushDefEpa": -0.102,
+              "passDefEpa": 0.296,
+              "rushDefEpa": -0.087,
               "pointsFor": 16.33,
               "pointsAgainst": 26.17
             },
@@ -7629,7 +7629,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 28,
               "turnoverDiff": 27,
               "passDefEpa": 32,
-              "rushDefEpa": 4,
+              "rushDefEpa": 3,
               "pointsFor": 30,
               "pointsAgainst": 25
             },
@@ -7638,18 +7638,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NE",
             "values": {
-              "passOffEpa": 0.164,
+              "passOffEpa": 0.138,
               "turnoverDiff": -1,
-              "passDefEpa": 0.083,
-              "rushDefEpa": -0.043,
+              "passDefEpa": 0.067,
+              "rushDefEpa": -0.035,
               "pointsFor": 22.86,
               "pointsAgainst": 20.43
             },
             "ranks": {
-              "passOffEpa": 7,
+              "passOffEpa": 8,
               "turnoverDiff": 31,
               "passDefEpa": 20,
-              "rushDefEpa": 19,
+              "rushDefEpa": 14,
               "pointsFor": 19,
               "pointsAgainst": 9
             },
@@ -7658,15 +7658,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYJ",
             "values": {
-              "passOffEpa": 0.095,
+              "passOffEpa": 0.085,
               "turnoverDiff": 0.43,
-              "passDefEpa": 0.091,
-              "rushDefEpa": -0.087,
+              "passDefEpa": 0.081,
+              "rushDefEpa": -0.072,
               "pointsFor": 19.57,
               "pointsAgainst": 21.43
             },
             "ranks": {
-              "passOffEpa": 15,
+              "passOffEpa": 16,
               "turnoverDiff": 11,
               "passDefEpa": 21,
               "rushDefEpa": 7,
@@ -7678,18 +7678,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BAL",
             "values": {
-              "passOffEpa": 0.2,
+              "passOffEpa": 0.184,
               "turnoverDiff": 0.14,
-              "passDefEpa": 0.117,
-              "rushDefEpa": -0.056,
+              "passDefEpa": 0.104,
+              "rushDefEpa": -0.026,
               "pointsFor": 24.14,
               "pointsAgainst": 23.86
             },
             "ranks": {
-              "passOffEpa": 5,
+              "passOffEpa": 6,
               "turnoverDiff": 14,
-              "passDefEpa": 24,
-              "rushDefEpa": 15,
+              "passDefEpa": 23,
+              "rushDefEpa": 18,
               "pointsFor": 12,
               "pointsAgainst": 18
             },
@@ -7698,18 +7698,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CIN",
             "values": {
-              "passOffEpa": 0.196,
+              "passOffEpa": 0.189,
               "turnoverDiff": 0.5,
-              "passDefEpa": -0.014,
-              "rushDefEpa": -0.052,
+              "passDefEpa": -0.018,
+              "rushDefEpa": -0.032,
               "pointsFor": 27.17,
               "pointsAgainst": 20.33
             },
             "ranks": {
-              "passOffEpa": 6,
+              "passOffEpa": 5,
               "turnoverDiff": 9,
               "passDefEpa": 8,
-              "rushDefEpa": 16,
+              "rushDefEpa": 15,
               "pointsFor": 4,
               "pointsAgainst": 8
             },
@@ -7718,18 +7718,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CLE",
             "values": {
-              "passOffEpa": 0.018,
+              "passOffEpa": 0.002,
               "turnoverDiff": 0,
-              "passDefEpa": 0.011,
-              "rushDefEpa": -0.059,
+              "passDefEpa": 0.002,
+              "rushDefEpa": -0.047,
               "pointsFor": 19,
               "pointsAgainst": 20.86
             },
             "ranks": {
-              "passOffEpa": 20,
+              "passOffEpa": 21,
               "turnoverDiff": 16,
               "passDefEpa": 10,
-              "rushDefEpa": 12,
+              "rushDefEpa": 11,
               "pointsFor": 28,
               "pointsAgainst": 12
             },
@@ -7738,18 +7738,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PIT",
             "values": {
-              "passOffEpa": -0.069,
+              "passOffEpa": -0.065,
               "turnoverDiff": 0.57,
-              "passDefEpa": -0.016,
-              "rushDefEpa": -0.057,
+              "passDefEpa": -0.026,
+              "rushDefEpa": -0.041,
               "pointsFor": 21.86,
               "pointsAgainst": 19.71
             },
             "ranks": {
-              "passOffEpa": 27,
+              "passOffEpa": 26,
               "turnoverDiff": 6,
-              "passDefEpa": 6,
-              "rushDefEpa": 14,
+              "passDefEpa": 7,
+              "rushDefEpa": 12,
               "pointsFor": 22,
               "pointsAgainst": 5
             },
@@ -7758,17 +7758,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "HOU",
             "values": {
-              "passOffEpa": 0.105,
+              "passOffEpa": 0.093,
               "turnoverDiff": 0.43,
-              "passDefEpa": 0.057,
-              "rushDefEpa": -0.013,
+              "passDefEpa": 0.054,
+              "rushDefEpa": 0.005,
               "pointsFor": 23.57,
               "pointsAgainst": 24.29
             },
             "ranks": {
               "passOffEpa": 12,
               "turnoverDiff": 12,
-              "passDefEpa": 17,
+              "passDefEpa": 18,
               "rushDefEpa": 23,
               "pointsFor": 15,
               "pointsAgainst": 19
@@ -7778,17 +7778,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "IND",
             "values": {
-              "passOffEpa": -0.108,
+              "passOffEpa": -0.112,
               "turnoverDiff": -1.29,
-              "passDefEpa": 0.047,
-              "rushDefEpa": 0.007,
+              "passDefEpa": 0.044,
+              "rushDefEpa": 0.029,
               "pointsFor": 22,
               "pointsAgainst": 25.71
             },
             "ranks": {
               "passOffEpa": 30,
               "turnoverDiff": 32,
-              "passDefEpa": 15,
+              "passDefEpa": 14,
               "rushDefEpa": 28,
               "pointsFor": 20,
               "pointsAgainst": 23
@@ -7798,17 +7798,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "JAX",
             "values": {
-              "passOffEpa": 0.249,
+              "passOffEpa": 0.24,
               "turnoverDiff": 0.83,
-              "passDefEpa": 0.042,
-              "rushDefEpa": -0.132,
+              "passDefEpa": 0.026,
+              "rushDefEpa": -0.115,
               "pointsFor": 25.67,
               "pointsAgainst": 17.33
             },
             "ranks": {
               "passOffEpa": 3,
               "turnoverDiff": 3,
-              "passDefEpa": 14,
+              "passDefEpa": 13,
               "rushDefEpa": 2,
               "pointsFor": 9,
               "pointsAgainst": 3
@@ -7818,10 +7818,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TEN",
             "values": {
-              "passOffEpa": -0.096,
+              "passOffEpa": -0.102,
               "turnoverDiff": -0.43,
-              "passDefEpa": 0.132,
-              "rushDefEpa": -0.046,
+              "passDefEpa": 0.121,
+              "rushDefEpa": -0.029,
               "pointsFor": 15.43,
               "pointsAgainst": 22.29
             },
@@ -7829,7 +7829,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 29,
               "turnoverDiff": 21,
               "passDefEpa": 25,
-              "rushDefEpa": 18,
+              "rushDefEpa": 17,
               "pointsFor": 31,
               "pointsAgainst": 15
             },
@@ -7840,8 +7840,8 @@ const NFL_POWER_SCORE = {
             "values": {
               "passOffEpa": -0.033,
               "turnoverDiff": 0.57,
-              "passDefEpa": -0.056,
-              "rushDefEpa": 0.011,
+              "passDefEpa": -0.061,
+              "rushDefEpa": 0.03,
               "pointsFor": 20.57,
               "pointsAgainst": 20.14
             },
@@ -7858,18 +7858,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "KC",
             "values": {
-              "passOffEpa": 0.099,
+              "passOffEpa": 0.092,
               "turnoverDiff": 0.83,
-              "passDefEpa": -0.015,
-              "rushDefEpa": -0.072,
+              "passDefEpa": -0.027,
+              "rushDefEpa": -0.058,
               "pointsFor": 23.83,
               "pointsAgainst": 17.17
             },
             "ranks": {
-              "passOffEpa": 14,
+              "passOffEpa": 13,
               "turnoverDiff": 4,
-              "passDefEpa": 7,
-              "rushDefEpa": 10,
+              "passDefEpa": 6,
+              "rushDefEpa": 8,
               "pointsFor": 14,
               "pointsAgainst": 2
             },
@@ -7878,18 +7878,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LV",
             "values": {
-              "passOffEpa": 0.137,
+              "passOffEpa": 0.142,
               "turnoverDiff": 0.57,
-              "passDefEpa": 0.148,
-              "rushDefEpa": -0.037,
+              "passDefEpa": 0.15,
+              "rushDefEpa": 0.004,
               "pointsFor": 26.14,
               "pointsAgainst": 28.14
             },
             "ranks": {
-              "passOffEpa": 9,
+              "passOffEpa": 7,
               "turnoverDiff": 8,
               "passDefEpa": 27,
-              "rushDefEpa": 21,
+              "rushDefEpa": 22,
               "pointsFor": 7,
               "pointsAgainst": 29
             },
@@ -7898,17 +7898,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LAC",
             "values": {
-              "passOffEpa": -0.182,
+              "passOffEpa": -0.183,
               "turnoverDiff": -0.83,
-              "passDefEpa": 0.033,
-              "rushDefEpa": -0.091,
+              "passDefEpa": 0.049,
+              "rushDefEpa": -0.074,
               "pointsFor": 15,
               "pointsAgainst": 25.17
             },
             "ranks": {
               "passOffEpa": 32,
               "turnoverDiff": 30,
-              "passDefEpa": 13,
+              "passDefEpa": 16,
               "rushDefEpa": 6,
               "pointsFor": 32,
               "pointsAgainst": 22
@@ -7918,18 +7918,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DAL",
             "values": {
-              "passOffEpa": 0.152,
+              "passOffEpa": 0.136,
               "turnoverDiff": -0.43,
-              "passDefEpa": 0.238,
-              "rushDefEpa": -0.005,
+              "passDefEpa": 0.209,
+              "rushDefEpa": 0.014,
               "pointsFor": 27,
               "pointsAgainst": 25.71
             },
             "ranks": {
-              "passOffEpa": 8,
+              "passOffEpa": 9,
               "turnoverDiff": 22,
-              "passDefEpa": 31,
-              "rushDefEpa": 25,
+              "passDefEpa": 30,
+              "rushDefEpa": 26,
               "pointsFor": 5,
               "pointsAgainst": 24
             },
@@ -7938,10 +7938,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYG",
             "values": {
-              "passOffEpa": 0.051,
+              "passOffEpa": 0.037,
               "turnoverDiff": -0.29,
-              "passDefEpa": 0.027,
-              "rushDefEpa": 0.005,
+              "passDefEpa": 0.02,
+              "rushDefEpa": 0.013,
               "pointsFor": 23.29,
               "pointsAgainst": 23
             },
@@ -7949,7 +7949,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 18,
               "turnoverDiff": 20,
               "passDefEpa": 12,
-              "rushDefEpa": 26,
+              "rushDefEpa": 24,
               "pointsFor": 16,
               "pointsAgainst": 17
             },
@@ -7958,15 +7958,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PHI",
             "values": {
-              "passOffEpa": -0.06,
+              "passOffEpa": -0.072,
               "turnoverDiff": -0.43,
-              "passDefEpa": 0.142,
-              "rushDefEpa": 0.006,
+              "passDefEpa": 0.132,
+              "rushDefEpa": 0.026,
               "pointsFor": 18.14,
               "pointsAgainst": 25
             },
             "ranks": {
-              "passOffEpa": 26,
+              "passOffEpa": 27,
               "turnoverDiff": 23,
               "passDefEpa": 26,
               "rushDefEpa": 27,
@@ -7978,15 +7978,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "WSH",
             "values": {
-              "passOffEpa": 0.018,
+              "passOffEpa": 0.007,
               "turnoverDiff": 1,
-              "passDefEpa": 0.092,
-              "rushDefEpa": 0.052,
+              "passDefEpa": 0.09,
+              "rushDefEpa": 0.058,
               "pointsFor": 22,
               "pointsAgainst": 28.67
             },
             "ranks": {
-              "passOffEpa": 21,
+              "passOffEpa": 20,
               "turnoverDiff": 2,
               "passDefEpa": 22,
               "rushDefEpa": 31,
@@ -7998,18 +7998,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CHI",
             "values": {
-              "passOffEpa": 0.119,
+              "passOffEpa": 0.113,
               "turnoverDiff": -0.14,
-              "passDefEpa": 0.068,
-              "rushDefEpa": -0.036,
+              "passDefEpa": 0.046,
+              "rushDefEpa": -0.014,
               "pointsFor": 25.71,
               "pointsAgainst": 20.43
             },
             "ranks": {
-              "passOffEpa": 10,
+              "passOffEpa": 11,
               "turnoverDiff": 17,
-              "passDefEpa": 19,
-              "rushDefEpa": 22,
+              "passDefEpa": 15,
+              "rushDefEpa": 19,
               "pointsFor": 8,
               "pointsAgainst": 10
             },
@@ -8018,10 +8018,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DET",
             "values": {
-              "passOffEpa": 0.27,
+              "passOffEpa": 0.271,
               "turnoverDiff": 0.5,
-              "passDefEpa": 0.18,
-              "rushDefEpa": -0.048,
+              "passDefEpa": 0.168,
+              "rushDefEpa": -0.013,
               "pointsFor": 30.67,
               "pointsAgainst": 27.5
             },
@@ -8029,7 +8029,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 1,
               "turnoverDiff": 10,
               "passDefEpa": 28,
-              "rushDefEpa": 17,
+              "rushDefEpa": 20,
               "pointsFor": 2,
               "pointsAgainst": 26
             },
@@ -8038,18 +8038,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "GB",
             "values": {
-              "passOffEpa": 0.1,
+              "passOffEpa": 0.087,
               "turnoverDiff": 0.71,
-              "passDefEpa": -0.003,
-              "rushDefEpa": -0.06,
+              "passDefEpa": -0.009,
+              "rushDefEpa": -0.041,
               "pointsFor": 20.57,
               "pointsAgainst": 20.71
             },
             "ranks": {
-              "passOffEpa": 13,
+              "passOffEpa": 14,
               "turnoverDiff": 5,
               "passDefEpa": 9,
-              "rushDefEpa": 11,
+              "rushDefEpa": 13,
               "pointsFor": 25,
               "pointsAgainst": 11
             },
@@ -8058,10 +8058,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIN",
             "values": {
-              "passOffEpa": -0.008,
+              "passOffEpa": -0.013,
               "turnoverDiff": 1.17,
-              "passDefEpa": -0.202,
-              "rushDefEpa": -0.083,
+              "passDefEpa": -0.194,
+              "rushDefEpa": -0.053,
               "pointsFor": 20.83,
               "pointsAgainst": 12.33
             },
@@ -8069,7 +8069,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 22,
               "turnoverDiff": 1,
               "passDefEpa": 1,
-              "rushDefEpa": 8,
+              "rushDefEpa": 9,
               "pointsFor": 23,
               "pointsAgainst": 1
             },
@@ -8078,18 +8078,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ATL",
             "values": {
-              "passOffEpa": -0.048,
+              "passOffEpa": -0.059,
               "turnoverDiff": -0.43,
-              "passDefEpa": 0.066,
-              "rushDefEpa": -0.104,
+              "passDefEpa": 0.059,
+              "rushDefEpa": -0.079,
               "pointsFor": 24.43,
               "pointsAgainst": 24.71
             },
             "ranks": {
               "passOffEpa": 25,
               "turnoverDiff": 24,
-              "passDefEpa": 18,
-              "rushDefEpa": 3,
+              "passDefEpa": 19,
+              "rushDefEpa": 5,
               "pointsFor": 10,
               "pointsAgainst": 20
             },
@@ -8098,15 +8098,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CAR",
             "values": {
-              "passOffEpa": 0.095,
+              "passOffEpa": 0.086,
               "turnoverDiff": -0.17,
-              "passDefEpa": 0.025,
-              "rushDefEpa": 0.059,
+              "passDefEpa": 0.018,
+              "rushDefEpa": 0.069,
               "pointsFor": 26.5,
               "pointsAgainst": 27.67
             },
             "ranks": {
-              "passOffEpa": 16,
+              "passOffEpa": 15,
               "turnoverDiff": 19,
               "passDefEpa": 11,
               "rushDefEpa": 32,
@@ -8121,14 +8121,14 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 0.036,
               "turnoverDiff": -0.57,
               "passDefEpa": 0.107,
-              "rushDefEpa": 0.026,
+              "rushDefEpa": 0.051,
               "pointsFor": 23.14,
               "pointsAgainst": 27.71
             },
             "ranks": {
               "passOffEpa": 19,
               "turnoverDiff": 28,
-              "passDefEpa": 23,
+              "passDefEpa": 24,
               "rushDefEpa": 30,
               "pointsFor": 17,
               "pointsAgainst": 28
@@ -8138,10 +8138,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TB",
             "values": {
-              "passOffEpa": -0.16,
+              "passOffEpa": -0.171,
               "turnoverDiff": 0.14,
-              "passDefEpa": -0.087,
-              "rushDefEpa": -0.077,
+              "passDefEpa": -0.099,
+              "rushDefEpa": -0.05,
               "pointsFor": 23.14,
               "pointsAgainst": 21.57
             },
@@ -8149,7 +8149,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 31,
               "turnoverDiff": 15,
               "passDefEpa": 3,
-              "rushDefEpa": 9,
+              "rushDefEpa": 10,
               "pointsFor": 18,
               "pointsAgainst": 14
             },
@@ -8158,18 +8158,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ARI",
             "values": {
-              "passOffEpa": -0.019,
+              "passOffEpa": -0.022,
               "turnoverDiff": 0.29,
-              "passDefEpa": 0.227,
-              "rushDefEpa": -0.058,
+              "passDefEpa": 0.223,
+              "rushDefEpa": -0.031,
               "pointsFor": 20.29,
               "pointsAgainst": 29.71
             },
             "ranks": {
               "passOffEpa": 23,
               "turnoverDiff": 13,
-              "passDefEpa": 30,
-              "rushDefEpa": 13,
+              "passDefEpa": 31,
+              "rushDefEpa": 16,
               "pointsFor": 26,
               "pointsAgainst": 32
             },
@@ -8178,18 +8178,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LAR",
             "values": {
-              "passOffEpa": 0.112,
+              "passOffEpa": 0.116,
               "turnoverDiff": -0.71,
-              "passDefEpa": -0.044,
-              "rushDefEpa": -0.039,
+              "passDefEpa": -0.038,
+              "rushDefEpa": -0.01,
               "pointsFor": 24.29,
               "pointsAgainst": 22.71
             },
             "ranks": {
-              "passOffEpa": 11,
+              "passOffEpa": 10,
               "turnoverDiff": 29,
               "passDefEpa": 5,
-              "rushDefEpa": 20,
+              "rushDefEpa": 21,
               "pointsFor": 11,
               "pointsAgainst": 16
             },
@@ -8198,17 +8198,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SF",
             "values": {
-              "passOffEpa": 0.259,
+              "passOffEpa": 0.257,
               "turnoverDiff": -0.43,
-              "passDefEpa": 0.056,
-              "rushDefEpa": -0.136,
+              "passDefEpa": 0.049,
+              "rushDefEpa": -0.119,
               "pointsFor": 28.14,
               "pointsAgainst": 19.86
             },
             "ranks": {
               "passOffEpa": 2,
               "turnoverDiff": 25,
-              "passDefEpa": 16,
+              "passDefEpa": 17,
               "rushDefEpa": 1,
               "pointsFor": 3,
               "pointsAgainst": 6
@@ -8218,10 +8218,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SEA",
             "values": {
-              "passOffEpa": 0.054,
+              "passOffEpa": 0.043,
               "turnoverDiff": -0.14,
-              "passDefEpa": -0.104,
-              "rushDefEpa": -0.092,
+              "passDefEpa": -0.109,
+              "rushDefEpa": -0.082,
               "pointsFor": 24,
               "pointsAgainst": 17.86
             },
@@ -8229,7 +8229,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 17,
               "turnoverDiff": 18,
               "passDefEpa": 2,
-              "rushDefEpa": 5,
+              "rushDefEpa": 4,
               "pointsFor": 13,
               "pointsAgainst": 4
             },
@@ -8259,18 +8259,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIA",
             "values": {
-              "passOffEpa": 0.454,
+              "passOffEpa": 0.438,
               "turnoverDiff": 1,
-              "passDefEpa": 0.323,
-              "rushDefEpa": 0.068,
+              "passDefEpa": 0.298,
+              "rushDefEpa": 0.074,
               "pointsFor": 28,
               "pointsAgainst": 25
             },
             "ranks": {
               "passOffEpa": 2,
               "turnoverDiff": 4,
-              "passDefEpa": 23,
-              "rushDefEpa": 18,
+              "passDefEpa": 24,
+              "rushDefEpa": 17,
               "pointsFor": 8,
               "pointsAgainst": 18
             }
@@ -8278,17 +8278,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NE",
             "values": {
-              "passOffEpa": 0.304,
+              "passOffEpa": 0.293,
               "turnoverDiff": -1,
-              "passDefEpa": 0.304,
-              "rushDefEpa": -0.056,
+              "passDefEpa": 0.281,
+              "rushDefEpa": -0.043,
               "pointsFor": 24,
               "pointsAgainst": 30
             },
             "ranks": {
-              "passOffEpa": 7,
+              "passOffEpa": 6,
               "turnoverDiff": 19,
-              "passDefEpa": 21,
+              "passDefEpa": 22,
               "rushDefEpa": 11,
               "pointsFor": 12,
               "pointsAgainst": 23
@@ -8297,18 +8297,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYJ",
             "values": {
-              "passOffEpa": 0.323,
+              "passOffEpa": 0.298,
               "turnoverDiff": -1,
-              "passDefEpa": 0.454,
-              "rushDefEpa": 0.109,
+              "passDefEpa": 0.438,
+              "rushDefEpa": 0.106,
               "pointsFor": 25,
               "pointsAgainst": 28
             },
             "ranks": {
-              "passOffEpa": 6,
+              "passOffEpa": 5,
               "turnoverDiff": 20,
               "passDefEpa": 27,
-              "rushDefEpa": 22,
+              "rushDefEpa": 20,
               "pointsFor": 11,
               "pointsAgainst": 21
             }
@@ -8316,18 +8316,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BAL",
             "values": {
-              "passOffEpa": 0.089,
+              "passOffEpa": 0.058,
               "turnoverDiff": -1,
-              "passDefEpa": 0.501,
-              "rushDefEpa": -0.047,
+              "passDefEpa": 0.49,
+              "rushDefEpa": -0.003,
               "pointsFor": 13,
               "pointsAgainst": 35
             },
             "ranks": {
-              "passOffEpa": 18,
+              "passOffEpa": 19,
               "turnoverDiff": 21,
               "passDefEpa": 28,
-              "rushDefEpa": 13,
+              "rushDefEpa": 14,
               "pointsFor": 24,
               "pointsAgainst": 25
             }
@@ -8335,17 +8335,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CIN",
             "values": {
-              "passOffEpa": 0.501,
+              "passOffEpa": 0.49,
               "turnoverDiff": 1,
-              "passDefEpa": 0.089,
-              "rushDefEpa": -0.285,
+              "passDefEpa": 0.058,
+              "rushDefEpa": -0.219,
               "pointsFor": 35,
               "pointsAgainst": 13
             },
             "ranks": {
               "passOffEpa": 1,
               "turnoverDiff": 5,
-              "passDefEpa": 11,
+              "passDefEpa": 10,
               "rushDefEpa": 4,
               "pointsFor": 3,
               "pointsAgainst": 4
@@ -8354,17 +8354,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CLE",
             "values": {
-              "passOffEpa": 0.124,
+              "passOffEpa": 0.104,
               "turnoverDiff": 0,
-              "passDefEpa": 0.168,
-              "rushDefEpa": -0.107,
+              "passDefEpa": 0.142,
+              "rushDefEpa": -0.072,
               "pointsFor": 27,
               "pointsAgainst": 24
             },
             "ranks": {
-              "passOffEpa": 15,
+              "passOffEpa": 17,
               "turnoverDiff": 11,
-              "passDefEpa": 16,
+              "passDefEpa": 15,
               "rushDefEpa": 8,
               "pointsFor": 9,
               "pointsAgainst": 16
@@ -8373,15 +8373,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PIT",
             "values": {
-              "passOffEpa": 0.057,
+              "passOffEpa": 0.091,
               "turnoverDiff": 1,
-              "passDefEpa": 0.208,
-              "rushDefEpa": -0.35,
+              "passDefEpa": 0.214,
+              "rushDefEpa": -0.314,
               "pointsFor": 16,
               "pointsAgainst": 10
             },
             "ranks": {
-              "passOffEpa": 20,
+              "passOffEpa": 18,
               "turnoverDiff": 6,
               "passDefEpa": 18,
               "rushDefEpa": 2,
@@ -8392,18 +8392,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "HOU",
             "values": {
-              "passOffEpa": 0.037,
+              "passOffEpa": 0.042,
               "turnoverDiff": 0,
               "passDefEpa": 0.166,
-              "rushDefEpa": 0.26,
+              "rushDefEpa": 0.255,
               "pointsFor": 21,
               "pointsAgainst": 27
             },
             "ranks": {
-              "passOffEpa": 21,
+              "passOffEpa": 20,
               "turnoverDiff": 12,
-              "passDefEpa": 15,
-              "rushDefEpa": 28,
+              "passDefEpa": 16,
+              "rushDefEpa": 27,
               "pointsFor": 14,
               "pointsAgainst": 19
             }
@@ -8411,10 +8411,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "IND",
             "values": {
-              "passOffEpa": -0.22,
+              "passOffEpa": -0.209,
               "turnoverDiff": -1,
-              "passDefEpa": -0.026,
-              "rushDefEpa": -0.195,
+              "passDefEpa": -0.027,
+              "rushDefEpa": -0.167,
               "pointsFor": 10,
               "pointsAgainst": 16
             },
@@ -8422,7 +8422,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 27,
               "turnoverDiff": 22,
               "passDefEpa": 7,
-              "rushDefEpa": 6,
+              "rushDefEpa": 5,
               "pointsFor": 26,
               "pointsAgainst": 6
             }
@@ -8449,18 +8449,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TEN",
             "values": {
-              "passOffEpa": 0.168,
+              "passOffEpa": 0.142,
               "turnoverDiff": 0,
-              "passDefEpa": 0.124,
-              "rushDefEpa": 0.227,
+              "passDefEpa": 0.104,
+              "rushDefEpa": 0.268,
               "pointsFor": 24,
               "pointsAgainst": 27
             },
             "ranks": {
-              "passOffEpa": 13,
+              "passOffEpa": 14,
               "turnoverDiff": 13,
-              "passDefEpa": 14,
-              "rushDefEpa": 27,
+              "passDefEpa": 12,
+              "rushDefEpa": 28,
               "pointsFor": 13,
               "pointsAgainst": 20
             }
@@ -8468,15 +8468,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DEN",
             "values": {
-              "passOffEpa": 0.098,
+              "passOffEpa": 0.12,
               "turnoverDiff": 0,
-              "passDefEpa": -0.127,
-              "rushDefEpa": -0.048,
+              "passDefEpa": -0.117,
+              "rushDefEpa": -0.032,
               "pointsFor": 30,
               "pointsAgainst": 16
             },
             "ranks": {
-              "passOffEpa": 17,
+              "passOffEpa": 15,
               "turnoverDiff": 14,
               "passDefEpa": 4,
               "rushDefEpa": 12,
@@ -8487,18 +8487,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "KC",
             "values": {
-              "passOffEpa": -0.151,
+              "passOffEpa": -0.171,
               "turnoverDiff": 0,
-              "passDefEpa": 0.342,
-              "rushDefEpa": -0.026,
+              "passDefEpa": 0.27,
+              "rushDefEpa": -0.013,
               "pointsFor": 3,
               "pointsAgainst": 20
             },
             "ranks": {
               "passOffEpa": 26,
               "turnoverDiff": 15,
-              "passDefEpa": 24,
-              "rushDefEpa": 14,
+              "passDefEpa": 21,
+              "rushDefEpa": 13,
               "pointsFor": 28,
               "pointsAgainst": 10
             }
@@ -8506,10 +8506,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LV",
             "values": {
-              "passOffEpa": -0.058,
+              "passOffEpa": -0.038,
               "turnoverDiff": 2,
-              "passDefEpa": 0.172,
-              "rushDefEpa": 0.085,
+              "passDefEpa": 0.194,
+              "rushDefEpa": 0.146,
               "pointsFor": 21,
               "pointsAgainst": 35
             },
@@ -8517,7 +8517,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 23,
               "turnoverDiff": 3,
               "passDefEpa": 17,
-              "rushDefEpa": 20,
+              "rushDefEpa": 22,
               "pointsFor": 15,
               "pointsAgainst": 26
             }
@@ -8544,10 +8544,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DAL",
             "values": {
-              "passOffEpa": 0.408,
+              "passOffEpa": 0.394,
               "turnoverDiff": 1,
-              "passDefEpa": -0.061,
-              "rushDefEpa": 0.079,
+              "passDefEpa": -0.087,
+              "rushDefEpa": 0.08,
               "pointsFor": 38,
               "pointsAgainst": 21
             },
@@ -8565,15 +8565,15 @@ const NFL_POWER_SCORE = {
             "values": {
               "passOffEpa": 0.166,
               "turnoverDiff": 0,
-              "passDefEpa": 0.037,
-              "rushDefEpa": -0.084,
+              "passDefEpa": 0.042,
+              "rushDefEpa": -0.065,
               "pointsFor": 27,
               "pointsAgainst": 21
             },
             "ranks": {
-              "passOffEpa": 14,
+              "passOffEpa": 13,
               "turnoverDiff": 16,
-              "passDefEpa": 8,
+              "passDefEpa": 9,
               "rushDefEpa": 10,
               "pointsFor": 10,
               "pointsAgainst": 14
@@ -8582,10 +8582,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PHI",
             "values": {
-              "passOffEpa": -0.061,
+              "passOffEpa": -0.087,
               "turnoverDiff": -1,
-              "passDefEpa": 0.408,
-              "rushDefEpa": 0.189,
+              "passDefEpa": 0.394,
+              "rushDefEpa": 0.198,
               "pointsFor": 21,
               "pointsAgainst": 38
             },
@@ -8593,7 +8593,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 24,
               "turnoverDiff": 23,
               "passDefEpa": 25,
-              "rushDefEpa": 25,
+              "rushDefEpa": 24,
               "pointsFor": 16,
               "pointsAgainst": 27
             }
@@ -8620,17 +8620,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CHI",
             "values": {
-              "passOffEpa": 0.304,
+              "passOffEpa": 0.281,
               "turnoverDiff": 1,
-              "passDefEpa": 0.304,
-              "rushDefEpa": -0.102,
+              "passDefEpa": 0.293,
+              "rushDefEpa": -0.067,
               "pointsFor": 30,
               "pointsAgainst": 24
             },
             "ranks": {
-              "passOffEpa": 8,
+              "passOffEpa": 7,
               "turnoverDiff": 8,
-              "passDefEpa": 22,
+              "passDefEpa": 23,
               "rushDefEpa": 9,
               "pointsFor": 6,
               "pointsAgainst": 17
@@ -8639,18 +8639,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DET",
             "values": {
-              "passOffEpa": 0.243,
+              "passOffEpa": 0.245,
               "turnoverDiff": -1,
-              "passDefEpa": 0.113,
-              "rushDefEpa": -0.206,
+              "passDefEpa": 0.117,
+              "rushDefEpa": -0.155,
               "pointsFor": 20,
               "pointsAgainst": 17
             },
             "ranks": {
-              "passOffEpa": 10,
+              "passOffEpa": 9,
               "turnoverDiff": 24,
               "passDefEpa": 13,
-              "rushDefEpa": 5,
+              "rushDefEpa": 7,
               "pointsFor": 17,
               "pointsAgainst": 9
             }
@@ -8658,17 +8658,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "GB",
             "values": {
-              "passOffEpa": 0.113,
+              "passOffEpa": 0.117,
               "turnoverDiff": 1,
-              "passDefEpa": 0.243,
-              "rushDefEpa": -0.363,
+              "passDefEpa": 0.245,
+              "rushDefEpa": -0.335,
               "pointsFor": 17,
               "pointsAgainst": 20
             },
             "ranks": {
               "passOffEpa": 16,
               "turnoverDiff": 9,
-              "passDefEpa": 19,
+              "passDefEpa": 20,
               "rushDefEpa": 1,
               "pointsFor": 20,
               "pointsAgainst": 11
@@ -8677,10 +8677,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIN",
             "values": {
-              "passOffEpa": -0.026,
+              "passOffEpa": -0.027,
               "turnoverDiff": 1,
-              "passDefEpa": -0.22,
-              "rushDefEpa": 0.039,
+              "passDefEpa": -0.209,
+              "rushDefEpa": 0.077,
               "pointsFor": 16,
               "pointsAgainst": 10
             },
@@ -8688,7 +8688,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 22,
               "turnoverDiff": 10,
               "passDefEpa": 2,
-              "rushDefEpa": 16,
+              "rushDefEpa": 18,
               "pointsFor": 22,
               "pointsAgainst": 3
             }
@@ -8696,18 +8696,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ATL",
             "values": {
-              "passOffEpa": 0.247,
+              "passOffEpa": 0.229,
               "turnoverDiff": 4,
-              "passDefEpa": 0.06,
-              "rushDefEpa": 0.104,
+              "passDefEpa": 0.04,
+              "rushDefEpa": 0.15,
               "pointsFor": 29,
               "pointsAgainst": 20
             },
             "ranks": {
-              "passOffEpa": 9,
+              "passOffEpa": 10,
               "turnoverDiff": 1,
-              "passDefEpa": 10,
-              "rushDefEpa": 21,
+              "passDefEpa": 8,
+              "rushDefEpa": 23,
               "pointsFor": 7,
               "pointsAgainst": 12
             }
@@ -8715,10 +8715,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CAR",
             "values": {
-              "passOffEpa": -0.39,
+              "passOffEpa": -0.399,
               "turnoverDiff": -4,
-              "passDefEpa": 0.421,
-              "rushDefEpa": 0.135,
+              "passDefEpa": 0.414,
+              "rushDefEpa": 0.14,
               "pointsFor": 13,
               "pointsAgainst": 43
             },
@@ -8726,7 +8726,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 28,
               "turnoverDiff": 27,
               "passDefEpa": 26,
-              "rushDefEpa": 23,
+              "rushDefEpa": 21,
               "pointsFor": 25,
               "pointsAgainst": 28
             }
@@ -8734,17 +8734,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NO",
             "values": {
-              "passOffEpa": 0.208,
+              "passOffEpa": 0.214,
               "turnoverDiff": -1,
-              "passDefEpa": 0.057,
-              "rushDefEpa": 0.018,
+              "passDefEpa": 0.091,
+              "rushDefEpa": 0.021,
               "pointsFor": 10,
               "pointsAgainst": 16
             },
             "ranks": {
               "passOffEpa": 11,
               "turnoverDiff": 25,
-              "passDefEpa": 9,
+              "passDefEpa": 11,
               "rushDefEpa": 15,
               "pointsFor": 27,
               "pointsAgainst": 8
@@ -8753,10 +8753,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TB",
             "values": {
-              "passOffEpa": 0.421,
+              "passOffEpa": 0.414,
               "turnoverDiff": 4,
-              "passDefEpa": -0.39,
-              "rushDefEpa": 0.172,
+              "passDefEpa": -0.399,
+              "rushDefEpa": 0.217,
               "pointsFor": 43,
               "pointsAgainst": 13
             },
@@ -8764,7 +8764,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 3,
               "turnoverDiff": 2,
               "passDefEpa": 1,
-              "rushDefEpa": 24,
+              "rushDefEpa": 26,
               "pointsFor": 1,
               "pointsAgainst": 5
             }
@@ -8772,18 +8772,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ARI",
             "values": {
-              "passOffEpa": -0.127,
+              "passOffEpa": -0.117,
               "turnoverDiff": 0,
-              "passDefEpa": 0.098,
-              "rushDefEpa": 0.196,
+              "passDefEpa": 0.12,
+              "rushDefEpa": 0.204,
               "pointsFor": 16,
               "pointsAgainst": 30
             },
             "ranks": {
               "passOffEpa": 25,
               "turnoverDiff": 17,
-              "passDefEpa": 12,
-              "rushDefEpa": 26,
+              "passDefEpa": 14,
+              "rushDefEpa": 25,
               "pointsFor": 23,
               "pointsAgainst": 24
             }
@@ -8791,10 +8791,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LAR",
             "values": {
-              "passOffEpa": 0.172,
+              "passOffEpa": 0.194,
               "turnoverDiff": -2,
-              "passDefEpa": -0.058,
-              "rushDefEpa": -0.349,
+              "passDefEpa": -0.038,
+              "rushDefEpa": -0.273,
               "pointsFor": 35,
               "pointsAgainst": 21
             },
@@ -8810,18 +8810,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SF",
             "values": {
-              "passOffEpa": 0.06,
+              "passOffEpa": 0.04,
               "turnoverDiff": -4,
-              "passDefEpa": 0.247,
-              "rushDefEpa": -0.189,
+              "passDefEpa": 0.229,
+              "rushDefEpa": -0.156,
               "pointsFor": 20,
               "pointsAgainst": 29
             },
             "ranks": {
-              "passOffEpa": 19,
+              "passOffEpa": 21,
               "turnoverDiff": 28,
-              "passDefEpa": 20,
-              "rushDefEpa": 7,
+              "passDefEpa": 19,
+              "rushDefEpa": 6,
               "pointsFor": 18,
               "pointsAgainst": 22
             }
@@ -8829,18 +8829,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SEA",
             "values": {
-              "passOffEpa": 0.342,
+              "passOffEpa": 0.27,
               "turnoverDiff": 0,
-              "passDefEpa": -0.151,
+              "passDefEpa": -0.171,
               "rushDefEpa": 0.057,
               "pointsFor": 20,
               "pointsAgainst": 3
             },
             "ranks": {
-              "passOffEpa": 5,
+              "passOffEpa": 8,
               "turnoverDiff": 18,
               "passDefEpa": 3,
-              "rushDefEpa": 17,
+              "rushDefEpa": 16,
               "pointsFor": 19,
               "pointsAgainst": 1
             }
@@ -8854,16 +8854,16 @@ const NFL_POWER_SCORE = {
             "values": {
               "passOffEpa": 0.223,
               "turnoverDiff": -0.29,
-              "passDefEpa": 0.108,
-              "rushDefEpa": -0.025,
+              "passDefEpa": 0.096,
+              "rushDefEpa": -0.001,
               "pointsFor": 33.29,
               "pointsAgainst": 25.86
             },
             "ranks": {
               "passOffEpa": 4,
               "turnoverDiff": 22,
-              "passDefEpa": 23,
-              "rushDefEpa": 20,
+              "passDefEpa": 22,
+              "rushDefEpa": 21,
               "pointsFor": 1,
               "pointsAgainst": 24
             },
@@ -8872,10 +8872,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIA",
             "values": {
-              "passOffEpa": -0.041,
+              "passOffEpa": -0.052,
               "turnoverDiff": -0.43,
-              "passDefEpa": 0.301,
-              "rushDefEpa": -0.087,
+              "passDefEpa": 0.304,
+              "rushDefEpa": -0.074,
               "pointsFor": 16.71,
               "pointsAgainst": 25.86
             },
@@ -8883,7 +8883,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 25,
               "turnoverDiff": 24,
               "passDefEpa": 32,
-              "rushDefEpa": 5,
+              "rushDefEpa": 4,
               "pointsFor": 31,
               "pointsAgainst": 25
             },
@@ -8892,18 +8892,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NE",
             "values": {
-              "passOffEpa": 0.178,
+              "passOffEpa": 0.159,
               "turnoverDiff": -0.87,
-              "passDefEpa": 0.085,
-              "rushDefEpa": -0.068,
+              "passDefEpa": 0.069,
+              "rushDefEpa": -0.059,
               "pointsFor": 23,
               "pointsAgainst": 20.25
             },
             "ranks": {
-              "passOffEpa": 6,
+              "passOffEpa": 7,
               "turnoverDiff": 31,
               "passDefEpa": 21,
-              "rushDefEpa": 11,
+              "rushDefEpa": 7,
               "pointsFor": 16,
               "pointsAgainst": 9
             },
@@ -8912,10 +8912,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYJ",
             "values": {
-              "passOffEpa": 0.116,
+              "passOffEpa": 0.101,
               "turnoverDiff": 0.25,
-              "passDefEpa": 0.136,
-              "rushDefEpa": -0.088,
+              "passDefEpa": 0.126,
+              "rushDefEpa": -0.072,
               "pointsFor": 21.25,
               "pointsAgainst": 23.5
             },
@@ -8923,7 +8923,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 12,
               "turnoverDiff": 12,
               "passDefEpa": 26,
-              "rushDefEpa": 4,
+              "rushDefEpa": 5,
               "pointsFor": 25,
               "pointsAgainst": 16
             },
@@ -8932,15 +8932,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BAL",
             "values": {
-              "passOffEpa": 0.107,
+              "passOffEpa": 0.09,
               "turnoverDiff": 0,
-              "passDefEpa": 0.124,
-              "rushDefEpa": -0.054,
+              "passDefEpa": 0.113,
+              "rushDefEpa": -0.029,
               "pointsFor": 22.38,
               "pointsAgainst": 25.38
             },
             "ranks": {
-              "passOffEpa": 13,
+              "passOffEpa": 15,
               "turnoverDiff": 14,
               "passDefEpa": 24,
               "rushDefEpa": 17,
@@ -8952,18 +8952,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CIN",
             "values": {
-              "passOffEpa": 0.218,
+              "passOffEpa": 0.207,
               "turnoverDiff": 0.14,
-              "passDefEpa": 0.012,
-              "rushDefEpa": -0.025,
+              "passDefEpa": 0.009,
+              "rushDefEpa": -0.007,
               "pointsFor": 29.43,
               "pointsAgainst": 22.57
             },
             "ranks": {
               "passOffEpa": 5,
               "turnoverDiff": 13,
-              "passDefEpa": 10,
-              "rushDefEpa": 21,
+              "passDefEpa": 11,
+              "rushDefEpa": 20,
               "pointsFor": 2,
               "pointsAgainst": 14
             },
@@ -8972,18 +8972,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CLE",
             "values": {
-              "passOffEpa": -0.003,
+              "passOffEpa": -0.016,
               "turnoverDiff": -0.12,
-              "passDefEpa": 0,
-              "rushDefEpa": -0.005,
+              "passDefEpa": -0.004,
+              "rushDefEpa": -0.001,
               "pointsFor": 17.38,
               "pointsAgainst": 21.63
             },
             "ranks": {
-              "passOffEpa": 21,
+              "passOffEpa": 23,
               "turnoverDiff": 17,
               "passDefEpa": 9,
-              "rushDefEpa": 24,
+              "rushDefEpa": 22,
               "pointsFor": 29,
               "pointsAgainst": 13
             },
@@ -8992,10 +8992,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PIT",
             "values": {
-              "passOffEpa": -0.072,
+              "passOffEpa": -0.065,
               "turnoverDiff": 0.63,
-              "passDefEpa": -0.03,
-              "rushDefEpa": -0.084,
+              "passDefEpa": -0.039,
+              "rushDefEpa": -0.07,
               "pointsFor": 22.5,
               "pointsAgainst": 18
             },
@@ -9012,10 +9012,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "HOU",
             "values": {
-              "passOffEpa": 0.105,
+              "passOffEpa": 0.093,
               "turnoverDiff": 0.43,
-              "passDefEpa": 0.057,
-              "rushDefEpa": -0.013,
+              "passDefEpa": 0.054,
+              "rushDefEpa": 0.005,
               "pointsFor": 23.57,
               "pointsAgainst": 24.29
             },
@@ -9032,17 +9032,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "IND",
             "values": {
-              "passOffEpa": -0.155,
+              "passOffEpa": -0.159,
               "turnoverDiff": -1.37,
-              "passDefEpa": 0.061,
-              "rushDefEpa": 0.031,
+              "passDefEpa": 0.056,
+              "rushDefEpa": 0.05,
               "pointsFor": 20.13,
               "pointsAgainst": 27.75
             },
             "ranks": {
               "passOffEpa": 30,
               "turnoverDiff": 32,
-              "passDefEpa": 19,
+              "passDefEpa": 20,
               "rushDefEpa": 30,
               "pointsFor": 26,
               "pointsAgainst": 30
@@ -9052,10 +9052,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "JAX",
             "values": {
-              "passOffEpa": 0.246,
+              "passOffEpa": 0.236,
               "turnoverDiff": 1,
-              "passDefEpa": -0.032,
-              "rushDefEpa": -0.145,
+              "passDefEpa": -0.046,
+              "rushDefEpa": -0.13,
               "pointsFor": 28,
               "pointsAgainst": 15.86
             },
@@ -9072,17 +9072,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TEN",
             "values": {
-              "passOffEpa": -0.055,
+              "passOffEpa": -0.061,
               "turnoverDiff": -0.12,
-              "passDefEpa": 0.164,
-              "rushDefEpa": -0.063,
+              "passDefEpa": 0.15,
+              "rushDefEpa": -0.044,
               "pointsFor": 18,
               "pointsAgainst": 24.88
             },
             "ranks": {
               "passOffEpa": 26,
               "turnoverDiff": 18,
-              "passDefEpa": 29,
+              "passDefEpa": 28,
               "rushDefEpa": 14,
               "pointsFor": 28,
               "pointsAgainst": 19
@@ -9092,15 +9092,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DEN",
             "values": {
-              "passOffEpa": -0.003,
+              "passOffEpa": -0.005,
               "turnoverDiff": 0.5,
-              "passDefEpa": -0.019,
-              "rushDefEpa": 0.011,
+              "passDefEpa": -0.023,
+              "rushDefEpa": 0.026,
               "pointsFor": 21.5,
               "pointsAgainst": 20.63
             },
             "ranks": {
-              "passOffEpa": 22,
+              "passOffEpa": 21,
               "turnoverDiff": 7,
               "passDefEpa": 8,
               "rushDefEpa": 26,
@@ -9112,18 +9112,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "KC",
             "values": {
-              "passOffEpa": 0.122,
+              "passOffEpa": 0.117,
               "turnoverDiff": 0.71,
-              "passDefEpa": 0.013,
-              "rushDefEpa": -0.067,
+              "passDefEpa": 0.001,
+              "rushDefEpa": -0.048,
               "pointsFor": 23.86,
               "pointsAgainst": 18.71
             },
             "ranks": {
               "passOffEpa": 10,
               "turnoverDiff": 4,
-              "passDefEpa": 11,
-              "rushDefEpa": 12,
+              "passDefEpa": 10,
+              "rushDefEpa": 10,
               "pointsFor": 11,
               "pointsAgainst": 4
             },
@@ -9132,18 +9132,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LV",
             "values": {
-              "passOffEpa": 0.172,
+              "passOffEpa": 0.176,
               "turnoverDiff": 0.63,
-              "passDefEpa": 0.161,
-              "rushDefEpa": -0.019,
+              "passDefEpa": 0.157,
+              "rushDefEpa": 0.021,
               "pointsFor": 27.63,
               "pointsAgainst": 28.75
             },
             "ranks": {
-              "passOffEpa": 7,
+              "passOffEpa": 6,
               "turnoverDiff": 6,
-              "passDefEpa": 28,
-              "rushDefEpa": 22,
+              "passDefEpa": 29,
+              "rushDefEpa": 25,
               "pointsFor": 6,
               "pointsAgainst": 31
             },
@@ -9152,17 +9152,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LAC",
             "values": {
-              "passOffEpa": -0.208,
+              "passOffEpa": -0.206,
               "turnoverDiff": -0.86,
-              "passDefEpa": 0.015,
-              "rushDefEpa": -0.073,
+              "passDefEpa": 0.032,
+              "rushDefEpa": -0.054,
               "pointsFor": 14.14,
               "pointsAgainst": 25
             },
             "ranks": {
               "passOffEpa": 32,
               "turnoverDiff": 30,
-              "passDefEpa": 12,
+              "passDefEpa": 14,
               "rushDefEpa": 9,
               "pointsFor": 32,
               "pointsAgainst": 20
@@ -9172,10 +9172,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DAL",
             "values": {
-              "passOffEpa": 0.14,
+              "passOffEpa": 0.127,
               "turnoverDiff": -0.12,
-              "passDefEpa": 0.202,
-              "rushDefEpa": 0.017,
+              "passDefEpa": 0.18,
+              "rushDefEpa": 0.038,
               "pointsFor": 27.38,
               "pointsAgainst": 26.63
             },
@@ -9192,10 +9192,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYG",
             "values": {
-              "passOffEpa": 0.051,
+              "passOffEpa": 0.037,
               "turnoverDiff": -0.29,
-              "passDefEpa": 0.027,
-              "rushDefEpa": 0.005,
+              "passDefEpa": 0.02,
+              "rushDefEpa": 0.013,
               "pointsFor": 23.29,
               "pointsAgainst": 23
             },
@@ -9203,7 +9203,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 17,
               "turnoverDiff": 23,
               "passDefEpa": 13,
-              "rushDefEpa": 25,
+              "rushDefEpa": 24,
               "pointsFor": 13,
               "pointsAgainst": 15
             },
@@ -9212,10 +9212,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PHI",
             "values": {
-              "passOffEpa": -0.082,
+              "passOffEpa": -0.095,
               "turnoverDiff": -0.5,
-              "passDefEpa": 0.134,
-              "rushDefEpa": 0.019,
+              "passDefEpa": 0.123,
+              "rushDefEpa": 0.038,
               "pointsFor": 17.13,
               "pointsAgainst": 25.25
             },
@@ -9232,10 +9232,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "WSH",
             "values": {
-              "passOffEpa": 0.024,
+              "passOffEpa": 0.012,
               "turnoverDiff": 1,
-              "passDefEpa": 0.046,
-              "rushDefEpa": 0.032,
+              "passDefEpa": 0.041,
+              "rushDefEpa": 0.041,
               "pointsFor": 22.71,
               "pointsAgainst": 26
             },
@@ -9243,7 +9243,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 20,
               "turnoverDiff": 2,
               "passDefEpa": 15,
-              "rushDefEpa": 31,
+              "rushDefEpa": 29,
               "pointsFor": 17,
               "pointsAgainst": 26
             },
@@ -9252,18 +9252,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CHI",
             "values": {
-              "passOffEpa": 0.127,
+              "passOffEpa": 0.118,
               "turnoverDiff": -0.12,
-              "passDefEpa": 0.04,
-              "rushDefEpa": -0.047,
+              "passDefEpa": 0.015,
+              "rushDefEpa": -0.022,
               "pointsFor": 26.75,
               "pointsAgainst": 20
             },
             "ranks": {
               "passOffEpa": 9,
               "turnoverDiff": 20,
-              "passDefEpa": 14,
-              "rushDefEpa": 19,
+              "passDefEpa": 12,
+              "rushDefEpa": 18,
               "pointsFor": 8,
               "pointsAgainst": 8
             },
@@ -9272,10 +9272,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DET",
             "values": {
-              "passOffEpa": 0.228,
+              "passOffEpa": 0.231,
               "turnoverDiff": 0.43,
-              "passDefEpa": 0.159,
-              "rushDefEpa": -0.058,
+              "passDefEpa": 0.148,
+              "rushDefEpa": -0.021,
               "pointsFor": 29,
               "pointsAgainst": 25.71
             },
@@ -9283,7 +9283,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 3,
               "turnoverDiff": 11,
               "passDefEpa": 27,
-              "rushDefEpa": 16,
+              "rushDefEpa": 19,
               "pointsFor": 3,
               "pointsAgainst": 23
             },
@@ -9292,10 +9292,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "GB",
             "values": {
-              "passOffEpa": 0.121,
+              "passOffEpa": 0.106,
               "turnoverDiff": 0.5,
-              "passDefEpa": -0.024,
-              "rushDefEpa": -0.063,
+              "passDefEpa": -0.028,
+              "rushDefEpa": -0.046,
               "pointsFor": 21.38,
               "pointsAgainst": 20.5
             },
@@ -9303,7 +9303,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 11,
               "turnoverDiff": 8,
               "passDefEpa": 7,
-              "rushDefEpa": 15,
+              "rushDefEpa": 11,
               "pointsFor": 23,
               "pointsAgainst": 10
             },
@@ -9312,18 +9312,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIN",
             "values": {
-              "passOffEpa": -0.01,
+              "passOffEpa": -0.016,
               "turnoverDiff": 1,
-              "passDefEpa": -0.19,
-              "rushDefEpa": -0.065,
+              "passDefEpa": -0.182,
+              "rushDefEpa": -0.038,
               "pointsFor": 20,
               "pointsAgainst": 13.29
             },
             "ranks": {
-              "passOffEpa": 23,
+              "passOffEpa": 24,
               "turnoverDiff": 3,
               "passDefEpa": 1,
-              "rushDefEpa": 13,
+              "rushDefEpa": 16,
               "pointsFor": 27,
               "pointsAgainst": 1
             },
@@ -9332,10 +9332,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ATL",
             "values": {
-              "passOffEpa": -0.12,
+              "passOffEpa": -0.134,
               "turnoverDiff": -0.75,
-              "passDefEpa": 0.048,
-              "rushDefEpa": -0.099,
+              "passDefEpa": 0.042,
+              "rushDefEpa": -0.079,
               "pointsFor": 21.38,
               "pointsAgainst": 23.63
             },
@@ -9352,17 +9352,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CAR",
             "values": {
-              "passOffEpa": 0.058,
+              "passOffEpa": 0.051,
               "turnoverDiff": 0,
-              "passDefEpa": 0.063,
-              "rushDefEpa": 0.038,
+              "passDefEpa": 0.054,
+              "rushDefEpa": 0.052,
               "pointsFor": 25.43,
               "pointsAgainst": 27.57
             },
             "ranks": {
               "passOffEpa": 16,
               "turnoverDiff": 15,
-              "passDefEpa": 20,
+              "passDefEpa": 19,
               "rushDefEpa": 32,
               "pointsFor": 9,
               "pointsAgainst": 28
@@ -9375,15 +9375,15 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 0.036,
               "turnoverDiff": -0.57,
               "passDefEpa": 0.107,
-              "rushDefEpa": 0.026,
+              "rushDefEpa": 0.051,
               "pointsFor": 23.14,
               "pointsAgainst": 27.71
             },
             "ranks": {
               "passOffEpa": 18,
               "turnoverDiff": 28,
-              "passDefEpa": 22,
-              "rushDefEpa": 29,
+              "passDefEpa": 23,
+              "rushDefEpa": 31,
               "pointsFor": 14,
               "pointsAgainst": 29
             },
@@ -9392,10 +9392,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TB",
             "values": {
-              "passOffEpa": -0.18,
+              "passOffEpa": -0.19,
               "turnoverDiff": 0.5,
-              "passDefEpa": -0.145,
-              "rushDefEpa": -0.08,
+              "passDefEpa": -0.159,
+              "rushDefEpa": -0.056,
               "pointsFor": 22.25,
               "pointsAgainst": 18.88
             },
@@ -9403,7 +9403,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 31,
               "turnoverDiff": 9,
               "passDefEpa": 2,
-              "rushDefEpa": 7,
+              "rushDefEpa": 8,
               "pointsFor": 20,
               "pointsAgainst": 5
             },
@@ -9412,18 +9412,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ARI",
             "values": {
-              "passOffEpa": -0.01,
+              "passOffEpa": -0.011,
               "turnoverDiff": 0,
-              "passDefEpa": 0.203,
-              "rushDefEpa": -0.07,
+              "passDefEpa": 0.199,
+              "rushDefEpa": -0.046,
               "pointsFor": 21.88,
               "pointsAgainst": 29.75
             },
             "ranks": {
-              "passOffEpa": 24,
+              "passOffEpa": 22,
               "turnoverDiff": 16,
               "passDefEpa": 31,
-              "rushDefEpa": 10,
+              "rushDefEpa": 12,
               "pointsFor": 21,
               "pointsAgainst": 32
             },
@@ -9432,18 +9432,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LAR",
             "values": {
-              "passOffEpa": 0.094,
+              "passOffEpa": 0.099,
               "turnoverDiff": -0.5,
-              "passDefEpa": -0.084,
-              "rushDefEpa": -0.075,
+              "passDefEpa": -0.076,
+              "rushDefEpa": -0.045,
               "pointsFor": 24.25,
               "pointsAgainst": 21
             },
             "ranks": {
-              "passOffEpa": 15,
+              "passOffEpa": 13,
               "turnoverDiff": 27,
               "passDefEpa": 3,
-              "rushDefEpa": 8,
+              "rushDefEpa": 13,
               "pointsFor": 10,
               "pointsAgainst": 12
             },
@@ -9452,10 +9452,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SF",
             "values": {
-              "passOffEpa": 0.259,
+              "passOffEpa": 0.257,
               "turnoverDiff": -0.43,
-              "passDefEpa": 0.056,
-              "rushDefEpa": -0.136,
+              "passDefEpa": 0.049,
+              "rushDefEpa": -0.119,
               "pointsFor": 28.14,
               "pointsAgainst": 19.86
             },
@@ -9472,10 +9472,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SEA",
             "values": {
-              "passOffEpa": 0.031,
+              "passOffEpa": 0.016,
               "turnoverDiff": -0.12,
-              "passDefEpa": -0.067,
-              "rushDefEpa": -0.049,
+              "passDefEpa": -0.074,
+              "rushDefEpa": -0.041,
               "pointsFor": 23.13,
               "pointsAgainst": 19.88
             },
@@ -9483,7 +9483,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 19,
               "turnoverDiff": 21,
               "passDefEpa": 4,
-              "rushDefEpa": 18,
+              "rushDefEpa": 15,
               "pointsFor": 15,
               "pointsAgainst": 7
             },
@@ -9494,15 +9494,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BUF",
             "values": {
-              "passOffEpa": 0.171,
+              "passOffEpa": 0.176,
               "turnoverDiff": 1,
-              "passDefEpa": -0.573,
-              "rushDefEpa": -0.137,
+              "passDefEpa": -0.602,
+              "rushDefEpa": -0.121,
               "pointsFor": 36,
               "pointsAgainst": 10
             },
             "ranks": {
-              "passOffEpa": 10,
+              "passOffEpa": 9,
               "turnoverDiff": 5,
               "passDefEpa": 3,
               "rushDefEpa": 6,
@@ -9513,10 +9513,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIA",
             "values": {
-              "passOffEpa": 0.095,
+              "passOffEpa": 0.082,
               "turnoverDiff": 0,
-              "passDefEpa": 0.324,
-              "rushDefEpa": -0.012,
+              "passDefEpa": 0.363,
+              "rushDefEpa": -0.009,
               "pointsFor": 19,
               "pointsAgainst": 24
             },
@@ -9524,7 +9524,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 12,
               "turnoverDiff": 11,
               "passDefEpa": 27,
-              "rushDefEpa": 18,
+              "rushDefEpa": 17,
               "pointsFor": 17,
               "pointsAgainst": 13
             }
@@ -9532,10 +9532,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NE",
             "values": {
-              "passOffEpa": 0.324,
+              "passOffEpa": 0.363,
               "turnoverDiff": 0,
-              "passDefEpa": 0.095,
-              "rushDefEpa": -0.255,
+              "passDefEpa": 0.082,
+              "rushDefEpa": -0.234,
               "pointsFor": 24,
               "pointsAgainst": 19
             },
@@ -9543,7 +9543,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 2,
               "turnoverDiff": 12,
               "passDefEpa": 17,
-              "rushDefEpa": 4,
+              "rushDefEpa": 3,
               "pointsFor": 14,
               "pointsAgainst": 10
             }
@@ -9551,18 +9551,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYJ",
             "values": {
-              "passOffEpa": 0.259,
+              "passOffEpa": 0.207,
               "turnoverDiff": -1,
-              "passDefEpa": 0.525,
-              "rushDefEpa": -0.096,
+              "passDefEpa": 0.518,
+              "rushDefEpa": -0.078,
               "pointsFor": 33,
               "pointsAgainst": 38
             },
             "ranks": {
-              "passOffEpa": 5,
+              "passOffEpa": 6,
               "turnoverDiff": 19,
               "passDefEpa": 28,
-              "rushDefEpa": 11,
+              "rushDefEpa": 12,
               "pointsFor": 7,
               "pointsAgainst": 26
             }
@@ -9570,17 +9570,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BAL",
             "values": {
-              "passOffEpa": -0.573,
+              "passOffEpa": -0.602,
               "turnoverDiff": -1,
-              "passDefEpa": 0.171,
-              "rushDefEpa": -0.046,
+              "passDefEpa": 0.176,
+              "rushDefEpa": -0.041,
               "pointsFor": 10,
               "pointsAgainst": 36
             },
             "ranks": {
               "passOffEpa": 26,
               "turnoverDiff": 20,
-              "passDefEpa": 19,
+              "passDefEpa": 20,
               "rushDefEpa": 16,
               "pointsFor": 23,
               "pointsAgainst": 24
@@ -9589,10 +9589,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CIN",
             "values": {
-              "passOffEpa": 0.317,
+              "passOffEpa": 0.288,
               "turnoverDiff": -2,
-              "passDefEpa": 0.154,
-              "rushDefEpa": 0.119,
+              "passDefEpa": 0.152,
+              "rushDefEpa": 0.126,
               "pointsFor": 43,
               "pointsAgainst": 36
             },
@@ -9600,7 +9600,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 3,
               "turnoverDiff": 25,
               "passDefEpa": 18,
-              "rushDefEpa": 23,
+              "rushDefEpa": 22,
               "pointsFor": 1,
               "pointsAgainst": 25
             }
@@ -9610,13 +9610,13 @@ const NFL_POWER_SCORE = {
             "values": {
               "passOffEpa": -0.105,
               "turnoverDiff": -1,
-              "passDefEpa": -0.104,
-              "rushDefEpa": 0.295,
+              "passDefEpa": -0.061,
+              "rushDefEpa": 0.256,
               "pointsFor": 6,
               "pointsAgainst": 27
             },
             "ranks": {
-              "passOffEpa": 18,
+              "passOffEpa": 20,
               "turnoverDiff": 21,
               "passDefEpa": 12,
               "rushDefEpa": 28,
@@ -9627,17 +9627,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PIT",
             "values": {
-              "passOffEpa": -0.104,
+              "passOffEpa": -0.061,
               "turnoverDiff": 1,
               "passDefEpa": -0.105,
-              "rushDefEpa": -0.39,
+              "rushDefEpa": -0.397,
               "pointsFor": 27,
               "pointsAgainst": 6
             },
             "ranks": {
               "passOffEpa": 17,
               "turnoverDiff": 6,
-              "passDefEpa": 11,
+              "passDefEpa": 9,
               "rushDefEpa": 1,
               "pointsFor": 11,
               "pointsAgainst": 2
@@ -9665,10 +9665,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "IND",
             "values": {
-              "passOffEpa": -0.518,
+              "passOffEpa": -0.517,
               "turnoverDiff": -2,
-              "passDefEpa": 0.217,
-              "rushDefEpa": 0.165,
+              "passDefEpa": 0.192,
+              "rushDefEpa": 0.169,
               "pointsFor": 7,
               "pointsAgainst": 42
             },
@@ -9676,7 +9676,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 25,
               "turnoverDiff": 26,
               "passDefEpa": 22,
-              "rushDefEpa": 25,
+              "rushDefEpa": 26,
               "pointsFor": 26,
               "pointsAgainst": 27
             }
@@ -9684,10 +9684,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "JAX",
             "values": {
-              "passOffEpa": 0.217,
+              "passOffEpa": 0.192,
               "turnoverDiff": 2,
-              "passDefEpa": -0.518,
-              "rushDefEpa": -0.211,
+              "passDefEpa": -0.517,
+              "rushDefEpa": -0.207,
               "pointsFor": 42,
               "pointsAgainst": 7
             },
@@ -9703,10 +9703,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TEN",
             "values": {
-              "passOffEpa": 0.154,
+              "passOffEpa": 0.152,
               "turnoverDiff": 2,
-              "passDefEpa": 0.317,
-              "rushDefEpa": -0.261,
+              "passDefEpa": 0.288,
+              "rushDefEpa": -0.225,
               "pointsFor": 36,
               "pointsAgainst": 43
             },
@@ -9714,7 +9714,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 11,
               "turnoverDiff": 3,
               "passDefEpa": 26,
-              "rushDefEpa": 3,
+              "rushDefEpa": 4,
               "pointsFor": 5,
               "pointsAgainst": 28
             }
@@ -9722,18 +9722,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DEN",
             "values": {
-              "passOffEpa": 0.201,
+              "passOffEpa": 0.19,
               "turnoverDiff": 0,
               "passDefEpa": 0.231,
-              "rushDefEpa": 0.013,
+              "rushDefEpa": -0.009,
               "pointsFor": 28,
               "pointsAgainst": 24
             },
             "ranks": {
               "passOffEpa": 8,
               "turnoverDiff": 13,
-              "passDefEpa": 23,
-              "rushDefEpa": 20,
+              "passDefEpa": 24,
+              "rushDefEpa": 18,
               "pointsFor": 10,
               "pointsAgainst": 14
             }
@@ -9743,16 +9743,16 @@ const NFL_POWER_SCORE = {
             "values": {
               "passOffEpa": 0.231,
               "turnoverDiff": 0,
-              "passDefEpa": 0.201,
-              "rushDefEpa": -0.026,
+              "passDefEpa": 0.19,
+              "rushDefEpa": 0.026,
               "pointsFor": 24,
               "pointsAgainst": 28
             },
             "ranks": {
-              "passOffEpa": 6,
+              "passOffEpa": 5,
               "turnoverDiff": 14,
               "passDefEpa": 21,
-              "rushDefEpa": 17,
+              "rushDefEpa": 20,
               "pointsFor": 15,
               "pointsAgainst": 19
             }
@@ -9760,18 +9760,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LV",
             "values": {
-              "passOffEpa": 0.525,
+              "passOffEpa": 0.518,
               "turnoverDiff": 1,
-              "passDefEpa": 0.259,
-              "rushDefEpa": 0.113,
+              "passDefEpa": 0.207,
+              "rushDefEpa": 0.152,
               "pointsFor": 38,
               "pointsAgainst": 33
             },
             "ranks": {
               "passOffEpa": 1,
               "turnoverDiff": 7,
-              "passDefEpa": 24,
-              "rushDefEpa": 22,
+              "passDefEpa": 23,
+              "rushDefEpa": 24,
               "pointsFor": 3,
               "pointsAgainst": 21
             }
@@ -9779,17 +9779,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LAC",
             "values": {
-              "passOffEpa": -0.362,
+              "passOffEpa": -0.346,
               "turnoverDiff": -1,
-              "passDefEpa": -0.111,
-              "rushDefEpa": 0.046,
+              "passDefEpa": -0.088,
+              "rushDefEpa": 0.081,
               "pointsFor": 9,
               "pointsAgainst": 24
             },
             "ranks": {
               "passOffEpa": 24,
               "turnoverDiff": 22,
-              "passDefEpa": 10,
+              "passDefEpa": 11,
               "rushDefEpa": 21,
               "pointsFor": 25,
               "pointsAgainst": 15
@@ -9798,17 +9798,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DAL",
             "values": {
-              "passOffEpa": 0.043,
+              "passOffEpa": 0.044,
               "turnoverDiff": 2,
-              "passDefEpa": 0.044,
-              "rushDefEpa": 0.191,
+              "passDefEpa": 0.052,
+              "rushDefEpa": 0.229,
               "pointsFor": 30,
               "pointsAgainst": 33
             },
             "ranks": {
               "passOffEpa": 15,
               "turnoverDiff": 4,
-              "passDefEpa": 15,
+              "passDefEpa": 16,
               "rushDefEpa": 27,
               "pointsFor": 9,
               "pointsAgainst": 22
@@ -9836,18 +9836,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PHI",
             "values": {
-              "passOffEpa": -0.225,
+              "passOffEpa": -0.244,
               "turnoverDiff": -1,
-              "passDefEpa": 0.069,
-              "rushDefEpa": 0.131,
+              "passDefEpa": 0.048,
+              "rushDefEpa": 0.138,
               "pointsFor": 10,
               "pointsAgainst": 27
             },
             "ranks": {
               "passOffEpa": 23,
               "turnoverDiff": 23,
-              "passDefEpa": 16,
-              "rushDefEpa": 24,
+              "passDefEpa": 15,
+              "rushDefEpa": 23,
               "pointsFor": 24,
               "pointsAgainst": 17
             }
@@ -9855,15 +9855,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "WSH",
             "values": {
-              "passOffEpa": 0.069,
+              "passOffEpa": 0.048,
               "turnoverDiff": 1,
-              "passDefEpa": -0.225,
-              "rushDefEpa": -0.07,
+              "passDefEpa": -0.244,
+              "rushDefEpa": -0.048,
               "pointsFor": 27,
               "pointsAgainst": 10
             },
             "ranks": {
-              "passOffEpa": 13,
+              "passOffEpa": 14,
               "turnoverDiff": 8,
               "passDefEpa": 6,
               "rushDefEpa": 15,
@@ -9874,18 +9874,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CHI",
             "values": {
-              "passOffEpa": 0.18,
+              "passOffEpa": 0.157,
               "turnoverDiff": 0,
-              "passDefEpa": -0.121,
-              "rushDefEpa": -0.126,
+              "passDefEpa": -0.161,
+              "rushDefEpa": -0.078,
               "pointsFor": 34,
               "pointsAgainst": 17
             },
             "ranks": {
-              "passOffEpa": 9,
+              "passOffEpa": 10,
               "turnoverDiff": 15,
-              "passDefEpa": 8,
-              "rushDefEpa": 8,
+              "passDefEpa": 7,
+              "rushDefEpa": 13,
               "pointsFor": 6,
               "pointsAgainst": 9
             }
@@ -9893,18 +9893,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DET",
             "values": {
-              "passOffEpa": -0.113,
+              "passOffEpa": -0.1,
               "turnoverDiff": 0,
-              "passDefEpa": -0.021,
-              "rushDefEpa": -0.137,
+              "passDefEpa": -0.034,
+              "rushDefEpa": -0.089,
               "pointsFor": 19,
               "pointsAgainst": 15
             },
             "ranks": {
-              "passOffEpa": 20,
+              "passOffEpa": 19,
               "turnoverDiff": 16,
               "passDefEpa": 13,
-              "rushDefEpa": 7,
+              "rushDefEpa": 10,
               "pointsFor": 18,
               "pointsAgainst": 7
             }
@@ -9912,18 +9912,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "GB",
             "values": {
-              "passOffEpa": 0.261,
+              "passOffEpa": 0.239,
               "turnoverDiff": -1,
-              "passDefEpa": -0.14,
-              "rushDefEpa": -0.087,
+              "passDefEpa": -0.135,
+              "rushDefEpa": -0.091,
               "pointsFor": 27,
               "pointsAgainst": 19
             },
             "ranks": {
               "passOffEpa": 4,
               "turnoverDiff": 24,
-              "passDefEpa": 7,
-              "rushDefEpa": 13,
+              "passDefEpa": 8,
+              "rushDefEpa": 8,
               "pointsFor": 13,
               "pointsAgainst": 11
             }
@@ -9931,17 +9931,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIN",
             "values": {
-              "passOffEpa": -0.021,
+              "passOffEpa": -0.034,
               "turnoverDiff": 0,
-              "passDefEpa": -0.113,
-              "rushDefEpa": 0.001,
+              "passDefEpa": -0.1,
+              "rushDefEpa": 0.014,
               "pointsFor": 15,
               "pointsAgainst": 19
             },
             "ranks": {
               "passOffEpa": 16,
               "turnoverDiff": 17,
-              "passDefEpa": 9,
+              "passDefEpa": 10,
               "rushDefEpa": 19,
               "pointsFor": 22,
               "pointsAgainst": 12
@@ -9950,10 +9950,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ATL",
             "values": {
-              "passOffEpa": -0.778,
+              "passOffEpa": -0.806,
               "turnoverDiff": -3,
-              "passDefEpa": -1.299,
-              "rushDefEpa": -0.084,
+              "passDefEpa": -1.237,
+              "rushDefEpa": -0.08,
               "pointsFor": 0,
               "pointsAgainst": 16
             },
@@ -9961,7 +9961,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 27,
               "turnoverDiff": 28,
               "passDefEpa": 1,
-              "rushDefEpa": 14,
+              "rushDefEpa": 11,
               "pointsFor": 28,
               "pointsAgainst": 8
             }
@@ -9969,18 +9969,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CAR",
             "values": {
-              "passOffEpa": -0.14,
+              "passOffEpa": -0.135,
               "turnoverDiff": 1,
-              "passDefEpa": 0.261,
-              "rushDefEpa": -0.105,
+              "passDefEpa": 0.239,
+              "rushDefEpa": -0.062,
               "pointsFor": 19,
               "pointsAgainst": 27
             },
             "ranks": {
-              "passOffEpa": 22,
+              "passOffEpa": 21,
               "turnoverDiff": 9,
               "passDefEpa": 25,
-              "rushDefEpa": 10,
+              "rushDefEpa": 14,
               "pointsFor": 19,
               "pointsAgainst": 18
             }
@@ -10007,10 +10007,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TB",
             "values": {
-              "passOffEpa": -1.299,
+              "passOffEpa": -1.237,
               "turnoverDiff": 3,
-              "passDefEpa": -0.778,
-              "rushDefEpa": -0.096,
+              "passDefEpa": -0.806,
+              "rushDefEpa": -0.091,
               "pointsFor": 16,
               "pointsAgainst": 0
             },
@@ -10018,7 +10018,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 28,
               "turnoverDiff": 1,
               "passDefEpa": 2,
-              "rushDefEpa": 12,
+              "rushDefEpa": 9,
               "pointsFor": 21,
               "pointsAgainst": 1
             }
@@ -10026,18 +10026,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ARI",
             "values": {
-              "passOffEpa": 0.044,
+              "passOffEpa": 0.052,
               "turnoverDiff": -2,
-              "passDefEpa": 0.043,
-              "rushDefEpa": -0.126,
+              "passDefEpa": 0.044,
+              "rushDefEpa": -0.118,
               "pointsFor": 33,
               "pointsAgainst": 30
             },
             "ranks": {
-              "passOffEpa": 14,
+              "passOffEpa": 13,
               "turnoverDiff": 27,
               "passDefEpa": 14,
-              "rushDefEpa": 9,
+              "rushDefEpa": 7,
               "pointsFor": 8,
               "pointsAgainst": 20
             }
@@ -10045,15 +10045,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LAR",
             "values": {
-              "passOffEpa": -0.111,
+              "passOffEpa": -0.088,
               "turnoverDiff": 1,
-              "passDefEpa": -0.362,
-              "rushDefEpa": -0.35,
+              "passDefEpa": -0.346,
+              "rushDefEpa": -0.31,
               "pointsFor": 24,
               "pointsAgainst": 9
             },
             "ranks": {
-              "passOffEpa": 19,
+              "passOffEpa": 18,
               "turnoverDiff": 10,
               "passDefEpa": 5,
               "rushDefEpa": 2,
@@ -10083,18 +10083,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SEA",
             "values": {
-              "passOffEpa": -0.121,
+              "passOffEpa": -0.161,
               "turnoverDiff": 0,
-              "passDefEpa": 0.18,
-              "rushDefEpa": 0.17,
+              "passDefEpa": 0.157,
+              "rushDefEpa": 0.166,
               "pointsFor": 17,
               "pointsAgainst": 34
             },
             "ranks": {
-              "passOffEpa": 21,
+              "passOffEpa": 22,
               "turnoverDiff": 18,
-              "passDefEpa": 20,
-              "rushDefEpa": 26,
+              "passDefEpa": 19,
+              "rushDefEpa": 25,
               "pointsFor": 20,
               "pointsAgainst": 23
             }
@@ -10108,8 +10108,8 @@ const NFL_POWER_SCORE = {
             "values": {
               "passOffEpa": 0.193,
               "turnoverDiff": 0,
-              "passDefEpa": 0.034,
-              "rushDefEpa": -0.054,
+              "passDefEpa": 0.025,
+              "rushDefEpa": -0.025,
               "pointsFor": 32,
               "pointsAgainst": 23.38
             },
@@ -10117,7 +10117,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 5,
               "turnoverDiff": 16,
               "passDefEpa": 14,
-              "rushDefEpa": 18,
+              "rushDefEpa": 19,
               "pointsFor": 1,
               "pointsAgainst": 16
             },
@@ -10126,18 +10126,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIA",
             "values": {
-              "passOffEpa": -0.053,
+              "passOffEpa": -0.065,
               "turnoverDiff": -0.37,
-              "passDefEpa": 0.259,
-              "rushDefEpa": -0.088,
+              "passDefEpa": 0.262,
+              "rushDefEpa": -0.075,
               "pointsFor": 15.75,
               "pointsAgainst": 25
             },
             "ranks": {
-              "passOffEpa": 24,
+              "passOffEpa": 25,
               "turnoverDiff": 24,
               "passDefEpa": 32,
-              "rushDefEpa": 5,
+              "rushDefEpa": 4,
               "pointsFor": 31,
               "pointsAgainst": 23
             },
@@ -10146,18 +10146,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NE",
             "values": {
-              "passOffEpa": 0.138,
+              "passOffEpa": 0.124,
               "turnoverDiff": -1.22,
-              "passDefEpa": 0.135,
-              "rushDefEpa": -0.073,
+              "passDefEpa": 0.12,
+              "rushDefEpa": -0.063,
               "pointsFor": 23.44,
               "pointsAgainst": 23
             },
             "ranks": {
-              "passOffEpa": 10,
+              "passOffEpa": 11,
               "turnoverDiff": 31,
-              "passDefEpa": 25,
-              "rushDefEpa": 10,
+              "passDefEpa": 24,
+              "rushDefEpa": 7,
               "pointsFor": 14,
               "pointsAgainst": 15
             },
@@ -10166,18 +10166,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYJ",
             "values": {
-              "passOffEpa": 0.072,
+              "passOffEpa": 0.055,
               "turnoverDiff": 0.33,
-              "passDefEpa": 0.145,
-              "rushDefEpa": -0.071,
+              "passDefEpa": 0.133,
+              "rushDefEpa": -0.055,
               "pointsFor": 20.22,
               "pointsAgainst": 24.78
             },
             "ranks": {
-              "passOffEpa": 14,
+              "passOffEpa": 15,
               "turnoverDiff": 11,
-              "passDefEpa": 26,
-              "rushDefEpa": 12,
+              "passDefEpa": 27,
+              "rushDefEpa": 9,
               "pointsFor": 25,
               "pointsAgainst": 20
             },
@@ -10186,18 +10186,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BAL",
             "values": {
-              "passOffEpa": 0.052,
+              "passOffEpa": 0.036,
               "turnoverDiff": -0.22,
-              "passDefEpa": 0.145,
-              "rushDefEpa": -0.065,
+              "passDefEpa": 0.132,
+              "rushDefEpa": -0.04,
               "pointsFor": 21,
               "pointsAgainst": 26.22
             },
             "ranks": {
-              "passOffEpa": 16,
+              "passOffEpa": 17,
               "turnoverDiff": 22,
-              "passDefEpa": 27,
-              "rushDefEpa": 13,
+              "passDefEpa": 26,
+              "rushDefEpa": 15,
               "pointsFor": 22,
               "pointsAgainst": 25
             },
@@ -10206,10 +10206,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CIN",
             "values": {
-              "passOffEpa": 0.241,
+              "passOffEpa": 0.233,
               "turnoverDiff": 0.25,
-              "passDefEpa": 0.005,
-              "rushDefEpa": 0.012,
+              "passDefEpa": 0.001,
+              "rushDefEpa": 0.03,
               "pointsFor": 30,
               "pointsAgainst": 21.88
             },
@@ -10217,7 +10217,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 3,
               "turnoverDiff": 12,
               "passDefEpa": 13,
-              "rushDefEpa": 28,
+              "rushDefEpa": 27,
               "pointsFor": 2,
               "pointsAgainst": 14
             },
@@ -10226,18 +10226,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CLE",
             "values": {
-              "passOffEpa": 0.011,
+              "passOffEpa": -0.002,
               "turnoverDiff": 0.11,
               "passDefEpa": -0.004,
-              "rushDefEpa": 0.007,
+              "rushDefEpa": 0.01,
               "pointsFor": 17.89,
               "pointsAgainst": 21.78
             },
             "ranks": {
-              "passOffEpa": 21,
+              "passOffEpa": 22,
               "turnoverDiff": 14,
-              "passDefEpa": 10,
-              "rushDefEpa": 27,
+              "passDefEpa": 12,
+              "rushDefEpa": 23,
               "pointsFor": 29,
               "pointsAgainst": 13
             },
@@ -10246,18 +10246,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PIT",
             "values": {
-              "passOffEpa": -0.072,
+              "passOffEpa": -0.065,
               "turnoverDiff": 0.63,
-              "passDefEpa": -0.03,
-              "rushDefEpa": -0.084,
+              "passDefEpa": -0.039,
+              "rushDefEpa": -0.07,
               "pointsFor": 22.5,
               "pointsAgainst": 18
             },
             "ranks": {
               "passOffEpa": 26,
               "turnoverDiff": 5,
-              "passDefEpa": 7,
-              "rushDefEpa": 6,
+              "passDefEpa": 6,
+              "rushDefEpa": 5,
               "pointsFor": 17,
               "pointsAgainst": 4
             },
@@ -10266,10 +10266,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "HOU",
             "values": {
-              "passOffEpa": 0.143,
+              "passOffEpa": 0.133,
               "turnoverDiff": 0.5,
-              "passDefEpa": 0.042,
-              "rushDefEpa": -0.049,
+              "passDefEpa": 0.034,
+              "rushDefEpa": -0.025,
               "pointsFor": 26.13,
               "pointsAgainst": 24
             },
@@ -10286,18 +10286,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "IND",
             "values": {
-              "passOffEpa": -0.16,
+              "passOffEpa": -0.163,
               "turnoverDiff": -1.22,
-              "passDefEpa": 0.087,
-              "rushDefEpa": 0.03,
+              "passDefEpa": 0.08,
+              "rushDefEpa": 0.052,
               "pointsFor": 20.44,
               "pointsAgainst": 27.67
             },
             "ranks": {
               "passOffEpa": 30,
               "turnoverDiff": 32,
-              "passDefEpa": 21,
-              "rushDefEpa": 31,
+              "passDefEpa": 19,
+              "rushDefEpa": 32,
               "pointsFor": 24,
               "pointsAgainst": 30
             },
@@ -10306,17 +10306,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "JAX",
             "values": {
-              "passOffEpa": 0.26,
+              "passOffEpa": 0.246,
               "turnoverDiff": 1.13,
-              "passDefEpa": -0.076,
-              "rushDefEpa": -0.127,
+              "passDefEpa": -0.088,
+              "rushDefEpa": -0.113,
               "pointsFor": 28.63,
               "pointsAgainst": 15.13
             },
             "ranks": {
-              "passOffEpa": 1,
+              "passOffEpa": 2,
               "turnoverDiff": 1,
-              "passDefEpa": 5,
+              "passDefEpa": 3,
               "rushDefEpa": 2,
               "pointsFor": 4,
               "pointsAgainst": 2
@@ -10326,18 +10326,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TEN",
             "values": {
-              "passOffEpa": -0.055,
+              "passOffEpa": -0.061,
               "turnoverDiff": -0.12,
-              "passDefEpa": 0.164,
-              "rushDefEpa": -0.063,
+              "passDefEpa": 0.15,
+              "rushDefEpa": -0.044,
               "pointsFor": 18,
               "pointsAgainst": 24.88
             },
             "ranks": {
-              "passOffEpa": 25,
+              "passOffEpa": 24,
               "turnoverDiff": 20,
               "passDefEpa": 29,
-              "rushDefEpa": 15,
+              "rushDefEpa": 13,
               "pointsFor": 28,
               "pointsAgainst": 22
             },
@@ -10346,10 +10346,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DEN",
             "values": {
-              "passOffEpa": 0.019,
+              "passOffEpa": 0.016,
               "turnoverDiff": 0.56,
-              "passDefEpa": -0.001,
-              "rushDefEpa": 0.015,
+              "passDefEpa": -0.007,
+              "rushDefEpa": 0.03,
               "pointsFor": 22,
               "pointsAgainst": 20.67
             },
@@ -10357,7 +10357,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 20,
               "turnoverDiff": 7,
               "passDefEpa": 11,
-              "rushDefEpa": 30,
+              "rushDefEpa": 28,
               "pointsFor": 20,
               "pointsAgainst": 10
             },
@@ -10366,18 +10366,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "KC",
             "values": {
-              "passOffEpa": 0.133,
+              "passOffEpa": 0.125,
               "turnoverDiff": 0.5,
-              "passDefEpa": -0.019,
-              "rushDefEpa": -0.09,
+              "passDefEpa": -0.033,
+              "rushDefEpa": -0.07,
               "pointsFor": 25.25,
               "pointsAgainst": 17.88
             },
             "ranks": {
-              "passOffEpa": 11,
+              "passOffEpa": 10,
               "turnoverDiff": 9,
-              "passDefEpa": 9,
-              "rushDefEpa": 4,
+              "passDefEpa": 8,
+              "rushDefEpa": 6,
               "pointsFor": 10,
               "pointsAgainst": 3
             },
@@ -10386,18 +10386,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LV",
             "values": {
-              "passOffEpa": 0.157,
+              "passOffEpa": 0.16,
               "turnoverDiff": 0.11,
-              "passDefEpa": 0.168,
-              "rushDefEpa": 0.002,
+              "passDefEpa": 0.161,
+              "rushDefEpa": 0.038,
               "pointsFor": 26.44,
               "pointsAgainst": 29.78
             },
             "ranks": {
-              "passOffEpa": 7,
+              "passOffEpa": 6,
               "turnoverDiff": 15,
               "passDefEpa": 30,
-              "rushDefEpa": 25,
+              "rushDefEpa": 30,
               "pointsFor": 8,
               "pointsAgainst": 32
             },
@@ -10406,17 +10406,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LAC",
             "values": {
-              "passOffEpa": -0.188,
+              "passOffEpa": -0.192,
               "turnoverDiff": -0.87,
-              "passDefEpa": 0.075,
-              "rushDefEpa": -0.073,
+              "passDefEpa": 0.09,
+              "rushDefEpa": -0.052,
               "pointsFor": 15.13,
               "pointsAgainst": 27.38
             },
             "ranks": {
               "passOffEpa": 31,
               "turnoverDiff": 30,
-              "passDefEpa": 18,
+              "passDefEpa": 21,
               "rushDefEpa": 11,
               "pointsFor": 32,
               "pointsAgainst": 28
@@ -10426,10 +10426,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DAL",
             "values": {
-              "passOffEpa": 0.153,
+              "passOffEpa": 0.139,
               "turnoverDiff": -0.11,
-              "passDefEpa": 0.156,
-              "rushDefEpa": 0.005,
+              "passDefEpa": 0.136,
+              "rushDefEpa": 0.027,
               "pointsFor": 27.33,
               "pointsAgainst": 26.22
             },
@@ -10446,18 +10446,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYG",
             "values": {
-              "passOffEpa": 0.052,
+              "passOffEpa": 0.039,
               "turnoverDiff": -0.25,
-              "passDefEpa": -0.027,
-              "rushDefEpa": -0.003,
+              "passDefEpa": -0.033,
+              "rushDefEpa": 0.004,
               "pointsFor": 22.75,
               "pointsAgainst": 21.5
             },
             "ranks": {
-              "passOffEpa": 17,
+              "passOffEpa": 16,
               "turnoverDiff": 23,
-              "passDefEpa": 8,
-              "rushDefEpa": 24,
+              "passDefEpa": 9,
+              "rushDefEpa": 22,
               "pointsFor": 16,
               "pointsAgainst": 12
             },
@@ -10466,10 +10466,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PHI",
             "values": {
-              "passOffEpa": -0.112,
+              "passOffEpa": -0.123,
               "turnoverDiff": -0.44,
-              "passDefEpa": 0.126,
-              "rushDefEpa": -0.005,
+              "passDefEpa": 0.115,
+              "rushDefEpa": 0.012,
               "pointsFor": 16.44,
               "pointsAgainst": 24.56
             },
@@ -10477,7 +10477,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 28,
               "turnoverDiff": 25,
               "passDefEpa": 23,
-              "rushDefEpa": 23,
+              "rushDefEpa": 25,
               "pointsFor": 30,
               "pointsAgainst": 19
             },
@@ -10486,18 +10486,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "WSH",
             "values": {
-              "passOffEpa": 0.011,
+              "passOffEpa": 0,
               "turnoverDiff": 0.88,
-              "passDefEpa": 0.047,
-              "rushDefEpa": 0.031,
+              "passDefEpa": 0.043,
+              "rushDefEpa": 0.04,
               "pointsFor": 21.5,
               "pointsAgainst": 25.25
             },
             "ranks": {
-              "passOffEpa": 22,
+              "passOffEpa": 21,
               "turnoverDiff": 3,
               "passDefEpa": 16,
-              "rushDefEpa": 32,
+              "rushDefEpa": 31,
               "pointsFor": 21,
               "pointsAgainst": 24
             },
@@ -10506,17 +10506,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CHI",
             "values": {
-              "passOffEpa": 0.096,
+              "passOffEpa": 0.087,
               "turnoverDiff": -0.44,
-              "passDefEpa": 0,
-              "rushDefEpa": -0.042,
+              "passDefEpa": -0.023,
+              "rushDefEpa": -0.021,
               "pointsFor": 26.78,
               "pointsAgainst": 20.44
             },
             "ranks": {
-              "passOffEpa": 12,
+              "passOffEpa": 13,
               "turnoverDiff": 26,
-              "passDefEpa": 12,
+              "passDefEpa": 10,
               "rushDefEpa": 21,
               "pointsFor": 7,
               "pointsAgainst": 9
@@ -10526,18 +10526,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DET",
             "values": {
-              "passOffEpa": 0.202,
+              "passOffEpa": 0.205,
               "turnoverDiff": 0.38,
-              "passDefEpa": 0.134,
-              "rushDefEpa": -0.074,
+              "passDefEpa": 0.121,
+              "rushDefEpa": -0.038,
               "pointsFor": 27.75,
               "pointsAgainst": 23.63
             },
             "ranks": {
               "passOffEpa": 4,
               "turnoverDiff": 10,
-              "passDefEpa": 24,
-              "rushDefEpa": 9,
+              "passDefEpa": 25,
+              "rushDefEpa": 17,
               "pointsFor": 5,
               "pointsAgainst": 17
             },
@@ -10546,18 +10546,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "GB",
             "values": {
-              "passOffEpa": 0.161,
+              "passOffEpa": 0.147,
               "turnoverDiff": 0.89,
-              "passDefEpa": -0.033,
-              "rushDefEpa": -0.05,
+              "passDefEpa": -0.035,
+              "rushDefEpa": -0.034,
               "pointsFor": 24,
               "pointsAgainst": 21.22
             },
             "ranks": {
-              "passOffEpa": 6,
+              "passOffEpa": 7,
               "turnoverDiff": 2,
-              "passDefEpa": 6,
-              "rushDefEpa": 19,
+              "passDefEpa": 7,
+              "rushDefEpa": 18,
               "pointsFor": 12,
               "pointsAgainst": 11
             },
@@ -10566,18 +10566,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIN",
             "values": {
-              "passOffEpa": -0.089,
+              "passOffEpa": -0.091,
               "turnoverDiff": 0.63,
-              "passDefEpa": -0.164,
-              "rushDefEpa": -0.065,
+              "passDefEpa": -0.156,
+              "rushDefEpa": -0.039,
               "pointsFor": 18.25,
               "pointsAgainst": 14.5
             },
             "ranks": {
               "passOffEpa": 27,
               "turnoverDiff": 6,
-              "passDefEpa": 1,
-              "rushDefEpa": 14,
+              "passDefEpa": 2,
+              "rushDefEpa": 16,
               "pointsFor": 27,
               "pointsAgainst": 1
             },
@@ -10586,10 +10586,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ATL",
             "values": {
-              "passOffEpa": -0.113,
+              "passOffEpa": -0.126,
               "turnoverDiff": -0.78,
-              "passDefEpa": 0.085,
-              "rushDefEpa": -0.096,
+              "passDefEpa": 0.082,
+              "rushDefEpa": -0.076,
               "pointsFor": 20.89,
               "pointsAgainst": 24.78
             },
@@ -10606,17 +10606,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CAR",
             "values": {
-              "passOffEpa": 0.068,
+              "passOffEpa": 0.059,
               "turnoverDiff": -0.12,
-              "passDefEpa": 0.077,
-              "rushDefEpa": 0.013,
+              "passDefEpa": 0.067,
+              "rushDefEpa": 0.03,
               "pointsFor": 24.88,
               "pointsAgainst": 27.38
             },
             "ranks": {
-              "passOffEpa": 15,
+              "passOffEpa": 14,
               "turnoverDiff": 21,
-              "passDefEpa": 19,
+              "passDefEpa": 18,
               "rushDefEpa": 29,
               "pointsFor": 11,
               "pointsAgainst": 29
@@ -10626,18 +10626,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NO",
             "values": {
-              "passOffEpa": 0.027,
+              "passOffEpa": 0.031,
               "turnoverDiff": -0.75,
-              "passDefEpa": 0.109,
-              "rushDefEpa": -0.016,
+              "passDefEpa": 0.107,
+              "rushDefEpa": 0.01,
               "pointsFor": 23.13,
               "pointsAgainst": 27
             },
             "ranks": {
-              "passOffEpa": 19,
+              "passOffEpa": 18,
               "turnoverDiff": 28,
               "passDefEpa": 22,
-              "rushDefEpa": 22,
+              "rushDefEpa": 24,
               "pointsFor": 15,
               "pointsAgainst": 27
             },
@@ -10646,18 +10646,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TB",
             "values": {
-              "passOffEpa": -0.193,
+              "passOffEpa": -0.203,
               "turnoverDiff": 0.78,
-              "passDefEpa": -0.145,
-              "rushDefEpa": -0.084,
+              "passDefEpa": -0.158,
+              "rushDefEpa": -0.062,
               "pointsFor": 22.44,
               "pointsAgainst": 19.78
             },
             "ranks": {
               "passOffEpa": 32,
               "turnoverDiff": 4,
-              "passDefEpa": 2,
-              "rushDefEpa": 7,
+              "passDefEpa": 1,
+              "rushDefEpa": 8,
               "pointsFor": 18,
               "pointsAgainst": 7
             },
@@ -10666,10 +10666,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ARI",
             "values": {
-              "passOffEpa": -0.024,
+              "passOffEpa": -0.023,
               "turnoverDiff": 0,
-              "passDefEpa": 0.201,
-              "rushDefEpa": -0.063,
+              "passDefEpa": 0.196,
+              "rushDefEpa": -0.041,
               "pointsFor": 19.78,
               "pointsAgainst": 28.33
             },
@@ -10677,7 +10677,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 23,
               "turnoverDiff": 17,
               "passDefEpa": 31,
-              "rushDefEpa": 16,
+              "rushDefEpa": 14,
               "pointsFor": 26,
               "pointsAgainst": 31
             },
@@ -10686,18 +10686,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LAR",
             "values": {
-              "passOffEpa": 0.09,
+              "passOffEpa": 0.094,
               "turnoverDiff": -0.44,
-              "passDefEpa": -0.083,
-              "rushDefEpa": -0.084,
+              "passDefEpa": -0.077,
+              "rushDefEpa": -0.053,
               "pointsFor": 23.78,
               "pointsAgainst": 20.11
             },
             "ranks": {
-              "passOffEpa": 13,
+              "passOffEpa": 12,
               "turnoverDiff": 27,
-              "passDefEpa": 3,
-              "rushDefEpa": 8,
+              "passDefEpa": 5,
+              "rushDefEpa": 10,
               "pointsFor": 13,
               "pointsAgainst": 8
             },
@@ -10706,15 +10706,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SF",
             "values": {
-              "passOffEpa": 0.257,
+              "passOffEpa": 0.251,
               "turnoverDiff": 0.13,
-              "passDefEpa": 0.051,
-              "rushDefEpa": -0.141,
+              "passDefEpa": 0.044,
+              "rushDefEpa": -0.123,
               "pointsFor": 29.38,
               "pointsAgainst": 19.5
             },
             "ranks": {
-              "passOffEpa": 2,
+              "passOffEpa": 1,
               "turnoverDiff": 13,
               "passDefEpa": 17,
               "rushDefEpa": 1,
@@ -10726,18 +10726,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SEA",
             "values": {
-              "passOffEpa": 0.044,
+              "passOffEpa": 0.03,
               "turnoverDiff": -0.11,
-              "passDefEpa": -0.079,
-              "rushDefEpa": -0.055,
+              "passDefEpa": -0.083,
+              "rushDefEpa": -0.049,
               "pointsFor": 22.44,
               "pointsAgainst": 18
             },
             "ranks": {
-              "passOffEpa": 18,
+              "passOffEpa": 19,
               "turnoverDiff": 19,
               "passDefEpa": 4,
-              "rushDefEpa": 17,
+              "rushDefEpa": 12,
               "pointsFor": 19,
               "pointsAgainst": 5
             },
@@ -10748,15 +10748,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BUF",
             "values": {
-              "passOffEpa": 0.005,
+              "passOffEpa": 0.007,
               "turnoverDiff": 2,
-              "passDefEpa": -0.582,
-              "rushDefEpa": -0.487,
+              "passDefEpa": -0.565,
+              "rushDefEpa": -0.388,
               "pointsFor": 23,
               "pointsAgainst": 6
             },
             "ranks": {
-              "passOffEpa": 15,
+              "passOffEpa": 14,
               "turnoverDiff": 4,
               "passDefEpa": 2,
               "rushDefEpa": 1,
@@ -10767,15 +10767,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIA",
             "values": {
-              "passOffEpa": -0.137,
+              "passOffEpa": -0.159,
               "turnoverDiff": 0,
-              "passDefEpa": -0.037,
-              "rushDefEpa": -0.095,
+              "passDefEpa": -0.03,
+              "rushDefEpa": -0.082,
               "pointsFor": 9,
               "pointsAgainst": 19
             },
             "ranks": {
-              "passOffEpa": 22,
+              "passOffEpa": 24,
               "turnoverDiff": 11,
               "passDefEpa": 14,
               "rushDefEpa": 15,
@@ -10786,15 +10786,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NE",
             "values": {
-              "passOffEpa": -0.093,
+              "passOffEpa": -0.076,
               "turnoverDiff": -4,
-              "passDefEpa": 0.577,
-              "rushDefEpa": -0.1,
+              "passDefEpa": 0.562,
+              "rushDefEpa": -0.09,
               "pointsFor": 27,
               "pointsAgainst": 45
             },
             "ranks": {
-              "passOffEpa": 21,
+              "passOffEpa": 19,
               "turnoverDiff": 29,
               "passDefEpa": 30,
               "rushDefEpa": 14,
@@ -10805,10 +10805,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYJ",
             "values": {
-              "passOffEpa": -0.242,
+              "passOffEpa": -0.266,
               "turnoverDiff": 1,
-              "passDefEpa": 0.214,
-              "rushDefEpa": 0.059,
+              "passDefEpa": 0.188,
+              "rushDefEpa": 0.077,
               "pointsFor": 12,
               "pointsAgainst": 35
             },
@@ -10824,10 +10824,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BAL",
             "values": {
-              "passOffEpa": -0.643,
+              "passOffEpa": -0.633,
               "turnoverDiff": -2,
-              "passDefEpa": 0.372,
-              "rushDefEpa": -0.142,
+              "passDefEpa": 0.332,
+              "rushDefEpa": -0.119,
               "pointsFor": 10,
               "pointsAgainst": 33
             },
@@ -10835,7 +10835,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 30,
               "turnoverDiff": 25,
               "passDefEpa": 27,
-              "rushDefEpa": 10,
+              "rushDefEpa": 11,
               "pointsFor": 27,
               "pointsAgainst": 25
             }
@@ -10843,10 +10843,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CIN",
             "values": {
-              "passOffEpa": 0.453,
+              "passOffEpa": 0.473,
               "turnoverDiff": 1,
-              "passDefEpa": -0.057,
-              "rushDefEpa": 0.285,
+              "passDefEpa": -0.068,
+              "rushDefEpa": 0.3,
               "pointsFor": 34,
               "pointsAgainst": 17
             },
@@ -10862,10 +10862,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CLE",
             "values": {
-              "passOffEpa": 0.12,
+              "passOffEpa": 0.112,
               "turnoverDiff": 2,
-              "passDefEpa": -0.034,
-              "rushDefEpa": 0.089,
+              "passDefEpa": -0.006,
+              "rushDefEpa": 0.082,
               "pointsFor": 22,
               "pointsAgainst": 23
             },
@@ -10900,18 +10900,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "HOU",
             "values": {
-              "passOffEpa": 0.401,
+              "passOffEpa": 0.406,
               "turnoverDiff": 1,
-              "passDefEpa": -0.06,
-              "rushDefEpa": -0.264,
+              "passDefEpa": -0.1,
+              "rushDefEpa": -0.205,
               "pointsFor": 44,
               "pointsAgainst": 22
             },
             "ranks": {
               "passOffEpa": 3,
               "turnoverDiff": 9,
-              "passDefEpa": 12,
-              "rushDefEpa": 3,
+              "passDefEpa": 10,
+              "rushDefEpa": 4,
               "pointsFor": 2,
               "pointsAgainst": 15
             }
@@ -10919,10 +10919,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "IND",
             "values": {
-              "passOffEpa": -0.202,
+              "passOffEpa": -0.198,
               "turnoverDiff": 0,
-              "passDefEpa": 0.264,
-              "rushDefEpa": 0.021,
+              "passDefEpa": 0.243,
+              "rushDefEpa": 0.064,
               "pointsFor": 23,
               "pointsAgainst": 27
             },
@@ -10930,7 +10930,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 25,
               "turnoverDiff": 12,
               "passDefEpa": 26,
-              "rushDefEpa": 23,
+              "rushDefEpa": 24,
               "pointsFor": 13,
               "pointsAgainst": 22
             }
@@ -10938,10 +10938,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "JAX",
             "values": {
-              "passOffEpa": 0.372,
+              "passOffEpa": 0.332,
               "turnoverDiff": 2,
-              "passDefEpa": -0.643,
-              "rushDefEpa": -0.04,
+              "passDefEpa": -0.633,
+              "rushDefEpa": -0.032,
               "pointsFor": 33,
               "pointsAgainst": 10
             },
@@ -10976,10 +10976,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DEN",
             "values": {
-              "passOffEpa": 0.173,
+              "passOffEpa": 0.16,
               "turnoverDiff": 1,
-              "passDefEpa": 0.135,
-              "rushDefEpa": 0.055,
+              "passDefEpa": 0.12,
+              "rushDefEpa": 0.074,
               "pointsFor": 26,
               "pointsAgainst": 21
             },
@@ -10995,10 +10995,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "KC",
             "values": {
-              "passOffEpa": 0.214,
+              "passOffEpa": 0.188,
               "turnoverDiff": -1,
-              "passDefEpa": -0.242,
-              "rushDefEpa": -0.265,
+              "passDefEpa": -0.266,
+              "rushDefEpa": -0.239,
               "pointsFor": 35,
               "pointsAgainst": 12
             },
@@ -11014,15 +11014,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LV",
             "values": {
-              "passOffEpa": 0.015,
+              "passOffEpa": 0.005,
               "turnoverDiff": -4,
-              "passDefEpa": 0.232,
-              "rushDefEpa": 0.116,
+              "passDefEpa": 0.2,
+              "rushDefEpa": 0.124,
               "pointsFor": 17,
               "pointsAgainst": 38
             },
             "ranks": {
-              "passOffEpa": 14,
+              "passOffEpa": 15,
               "turnoverDiff": 30,
               "passDefEpa": 25,
               "rushDefEpa": 28,
@@ -11033,18 +11033,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LAC",
             "values": {
-              "passOffEpa": -0.06,
+              "passOffEpa": -0.1,
               "turnoverDiff": -1,
-              "passDefEpa": 0.401,
-              "rushDefEpa": -0.071,
+              "passDefEpa": 0.406,
+              "rushDefEpa": -0.033,
               "pointsFor": 22,
               "pointsAgainst": 44
             },
             "ranks": {
-              "passOffEpa": 19,
+              "passOffEpa": 21,
               "turnoverDiff": 22,
               "passDefEpa": 28,
-              "rushDefEpa": 16,
+              "rushDefEpa": 19,
               "pointsFor": 16,
               "pointsAgainst": 29
             }
@@ -11052,10 +11052,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DAL",
             "values": {
-              "passOffEpa": 0.264,
+              "passOffEpa": 0.243,
               "turnoverDiff": 0,
-              "passDefEpa": -0.202,
-              "rushDefEpa": -0.118,
+              "passDefEpa": -0.198,
+              "rushDefEpa": -0.093,
               "pointsFor": 27,
               "pointsAgainst": 23
             },
@@ -11071,18 +11071,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYG",
             "values": {
-              "passOffEpa": 0.059,
+              "passOffEpa": 0.05,
               "turnoverDiff": 0,
-              "passDefEpa": -0.329,
-              "rushDefEpa": -0.069,
+              "passDefEpa": -0.324,
+              "rushDefEpa": -0.06,
               "pointsFor": 19,
               "pointsAgainst": 11
             },
             "ranks": {
-              "passOffEpa": 12,
+              "passOffEpa": 13,
               "turnoverDiff": 14,
               "passDefEpa": 3,
-              "rushDefEpa": 17,
+              "rushDefEpa": 16,
               "pointsFor": 19,
               "pointsAgainst": 5
             }
@@ -11090,18 +11090,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PHI",
             "values": {
-              "passOffEpa": -0.329,
+              "passOffEpa": -0.324,
               "turnoverDiff": 0,
-              "passDefEpa": 0.059,
-              "rushDefEpa": -0.198,
+              "passDefEpa": 0.05,
+              "rushDefEpa": -0.192,
               "pointsFor": 11,
               "pointsAgainst": 19
             },
             "ranks": {
               "passOffEpa": 28,
               "turnoverDiff": 15,
-              "passDefEpa": 19,
-              "rushDefEpa": 7,
+              "passDefEpa": 18,
+              "rushDefEpa": 5,
               "pointsFor": 26,
               "pointsAgainst": 12
             }
@@ -11109,18 +11109,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "WSH",
             "values": {
-              "passOffEpa": -0.072,
+              "passOffEpa": -0.08,
               "turnoverDiff": 0,
-              "passDefEpa": 0.056,
-              "rushDefEpa": 0.024,
+              "passDefEpa": 0.052,
+              "rushDefEpa": 0.037,
               "pointsFor": 13,
               "pointsAgainst": 20
             },
             "ranks": {
               "passOffEpa": 20,
               "turnoverDiff": 16,
-              "passDefEpa": 18,
-              "rushDefEpa": 24,
+              "passDefEpa": 19,
+              "rushDefEpa": 23,
               "pointsFor": 24,
               "pointsAgainst": 13
             }
@@ -11128,15 +11128,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CHI",
             "values": {
-              "passOffEpa": -0.143,
+              "passOffEpa": -0.15,
               "turnoverDiff": -3,
-              "passDefEpa": -0.276,
+              "passDefEpa": -0.285,
               "rushDefEpa": -0.017,
               "pointsFor": 27,
               "pointsAgainst": 24
             },
             "ranks": {
-              "passOffEpa": 23,
+              "passOffEpa": 22,
               "turnoverDiff": 28,
               "passDefEpa": 4,
               "rushDefEpa": 21,
@@ -11147,18 +11147,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DET",
             "values": {
-              "passOffEpa": -0.037,
+              "passOffEpa": -0.03,
               "turnoverDiff": 0,
-              "passDefEpa": -0.137,
-              "rushDefEpa": -0.2,
+              "passDefEpa": -0.159,
+              "rushDefEpa": -0.167,
               "pointsFor": 19,
               "pointsAgainst": 9
             },
             "ranks": {
               "passOffEpa": 17,
               "turnoverDiff": 17,
-              "passDefEpa": 9,
-              "rushDefEpa": 6,
+              "passDefEpa": 7,
+              "rushDefEpa": 7,
               "pointsFor": 20,
               "pointsAgainst": 3
             }
@@ -11166,17 +11166,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "GB",
             "values": {
-              "passOffEpa": 0.577,
+              "passOffEpa": 0.562,
               "turnoverDiff": 4,
-              "passDefEpa": -0.093,
-              "rushDefEpa": 0.13,
+              "passDefEpa": -0.076,
+              "rushDefEpa": 0.141,
               "pointsFor": 45,
               "pointsAgainst": 27
             },
             "ranks": {
               "passOffEpa": 1,
               "turnoverDiff": 1,
-              "passDefEpa": 10,
+              "passDefEpa": 12,
               "rushDefEpa": 29,
               "pointsFor": 1,
               "pointsAgainst": 23
@@ -11185,18 +11185,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIN",
             "values": {
-              "passOffEpa": -0.582,
+              "passOffEpa": -0.565,
               "turnoverDiff": -2,
-              "passDefEpa": 0.005,
-              "rushDefEpa": -0.067,
+              "passDefEpa": 0.007,
+              "rushDefEpa": -0.044,
               "pointsFor": 6,
               "pointsAgainst": 23
             },
             "ranks": {
               "passOffEpa": 29,
               "turnoverDiff": 26,
-              "passDefEpa": 16,
-              "rushDefEpa": 18,
+              "passDefEpa": 17,
+              "rushDefEpa": 17,
               "pointsFor": 29,
               "pointsAgainst": 19
             }
@@ -11204,10 +11204,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ATL",
             "values": {
-              "passOffEpa": -0.057,
+              "passOffEpa": -0.068,
               "turnoverDiff": -1,
-              "passDefEpa": 0.453,
-              "rushDefEpa": -0.067,
+              "passDefEpa": 0.473,
+              "rushDefEpa": -0.043,
               "pointsFor": 17,
               "pointsAgainst": 34
             },
@@ -11215,7 +11215,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 18,
               "turnoverDiff": 23,
               "passDefEpa": 29,
-              "rushDefEpa": 19,
+              "rushDefEpa": 18,
               "pointsFor": 22,
               "pointsAgainst": 26
             }
@@ -11223,10 +11223,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CAR",
             "values": {
-              "passOffEpa": 0.135,
+              "passOffEpa": 0.12,
               "turnoverDiff": -1,
-              "passDefEpa": 0.173,
-              "rushDefEpa": -0.172,
+              "passDefEpa": 0.16,
+              "rushDefEpa": -0.14,
               "pointsFor": 21,
               "pointsAgainst": 26
             },
@@ -11234,7 +11234,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 10,
               "turnoverDiff": 24,
               "passDefEpa": 22,
-              "rushDefEpa": 9,
+              "rushDefEpa": 10,
               "pointsFor": 17,
               "pointsAgainst": 21
             }
@@ -11242,10 +11242,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NO",
             "values": {
-              "passOffEpa": -0.034,
+              "passOffEpa": -0.006,
               "turnoverDiff": -2,
-              "passDefEpa": 0.12,
-              "rushDefEpa": -0.261,
+              "passDefEpa": 0.112,
+              "rushDefEpa": -0.236,
               "pointsFor": 23,
               "pointsAgainst": 22
             },
@@ -11253,7 +11253,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 16,
               "turnoverDiff": 27,
               "passDefEpa": 20,
-              "rushDefEpa": 4,
+              "rushDefEpa": 3,
               "pointsFor": 14,
               "pointsAgainst": 16
             }
@@ -11261,17 +11261,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TB",
             "values": {
-              "passOffEpa": -0.276,
+              "passOffEpa": -0.285,
               "turnoverDiff": 3,
-              "passDefEpa": -0.143,
-              "rushDefEpa": -0.119,
+              "passDefEpa": -0.15,
+              "rushDefEpa": -0.113,
               "pointsFor": 24,
               "pointsAgainst": 27
             },
             "ranks": {
               "passOffEpa": 27,
               "turnoverDiff": 3,
-              "passDefEpa": 8,
+              "passDefEpa": 9,
               "rushDefEpa": 12,
               "pointsFor": 11,
               "pointsAgainst": 24
@@ -11280,15 +11280,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ARI",
             "values": {
-              "passOffEpa": -0.174,
+              "passOffEpa": -0.155,
               "turnoverDiff": 0,
-              "passDefEpa": 0.18,
-              "rushDefEpa": -0.017,
+              "passDefEpa": 0.167,
+              "rushDefEpa": -0.004,
               "pointsFor": 3,
               "pointsAgainst": 17
             },
             "ranks": {
-              "passOffEpa": 24,
+              "passOffEpa": 23,
               "turnoverDiff": 18,
               "passDefEpa": 23,
               "rushDefEpa": 22,
@@ -11299,15 +11299,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LAR",
             "values": {
-              "passOffEpa": 0.056,
+              "passOffEpa": 0.052,
               "turnoverDiff": 0,
-              "passDefEpa": -0.072,
-              "rushDefEpa": -0.194,
+              "passDefEpa": -0.08,
+              "rushDefEpa": -0.155,
               "pointsFor": 20,
               "pointsAgainst": 13
             },
             "ranks": {
-              "passOffEpa": 13,
+              "passOffEpa": 12,
               "turnoverDiff": 19,
               "passDefEpa": 11,
               "rushDefEpa": 8,
@@ -11318,18 +11318,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SF",
             "values": {
-              "passOffEpa": 0.232,
+              "passOffEpa": 0.2,
               "turnoverDiff": 4,
-              "passDefEpa": 0.015,
-              "rushDefEpa": -0.205,
+              "passDefEpa": 0.005,
+              "rushDefEpa": -0.171,
               "pointsFor": 38,
               "pointsAgainst": 17
             },
             "ranks": {
               "passOffEpa": 6,
               "turnoverDiff": 2,
-              "passDefEpa": 17,
-              "rushDefEpa": 5,
+              "passDefEpa": 16,
+              "rushDefEpa": 6,
               "pointsFor": 3,
               "pointsAgainst": 10
             }
@@ -11337,18 +11337,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SEA",
             "values": {
-              "passOffEpa": 0.18,
+              "passOffEpa": 0.167,
               "turnoverDiff": 0,
-              "passDefEpa": -0.174,
-              "rushDefEpa": -0.125,
+              "passDefEpa": -0.155,
+              "rushDefEpa": -0.142,
               "pointsFor": 17,
               "pointsAgainst": 3
             },
             "ranks": {
               "passOffEpa": 8,
               "turnoverDiff": 20,
-              "passDefEpa": 7,
-              "rushDefEpa": 11,
+              "passDefEpa": 8,
+              "rushDefEpa": 9,
               "pointsFor": 23,
               "pointsAgainst": 1
             }
@@ -11360,10 +11360,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BUF",
             "values": {
-              "passOffEpa": 0.191,
+              "passOffEpa": 0.19,
               "turnoverDiff": 0,
-              "passDefEpa": 0.011,
-              "rushDefEpa": -0.03,
+              "passDefEpa": 0.002,
+              "rushDefEpa": -0.005,
               "pointsFor": 31.89,
               "pointsAgainst": 22.11
             },
@@ -11371,7 +11371,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 5,
               "turnoverDiff": 17,
               "passDefEpa": 13,
-              "rushDefEpa": 21,
+              "rushDefEpa": 22,
               "pointsFor": 1,
               "pointsAgainst": 15
             },
@@ -11380,18 +11380,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIA",
             "values": {
-              "passOffEpa": -0.076,
+              "passOffEpa": -0.088,
               "turnoverDiff": -0.22,
-              "passDefEpa": 0.192,
-              "rushDefEpa": -0.081,
+              "passDefEpa": 0.195,
+              "rushDefEpa": -0.069,
               "pointsFor": 16.44,
               "pointsAgainst": 24.89
             },
             "ranks": {
               "passOffEpa": 27,
               "turnoverDiff": 20,
-              "passDefEpa": 29,
-              "rushDefEpa": 9,
+              "passDefEpa": 31,
+              "rushDefEpa": 3,
               "pointsFor": 30,
               "pointsAgainst": 21
             },
@@ -11400,10 +11400,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NE",
             "values": {
-              "passOffEpa": 0.091,
+              "passOffEpa": 0.08,
               "turnoverDiff": -1,
-              "passDefEpa": 0.143,
-              "rushDefEpa": -0.032,
+              "passDefEpa": 0.133,
+              "rushDefEpa": -0.024,
               "pointsFor": 22.1,
               "pointsAgainst": 24.2
             },
@@ -11411,7 +11411,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 13,
               "turnoverDiff": 31,
               "passDefEpa": 26,
-              "rushDefEpa": 20,
+              "rushDefEpa": 17,
               "pointsFor": 18,
               "pointsAgainst": 17
             },
@@ -11420,10 +11420,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYJ",
             "values": {
-              "passOffEpa": 0.043,
+              "passOffEpa": 0.028,
               "turnoverDiff": 0.3,
-              "passDefEpa": 0.147,
-              "rushDefEpa": -0.028,
+              "passDefEpa": 0.135,
+              "rushDefEpa": -0.015,
               "pointsFor": 19.4,
               "pointsAgainst": 25.4
             },
@@ -11431,7 +11431,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 18,
               "turnoverDiff": 11,
               "passDefEpa": 27,
-              "rushDefEpa": 22,
+              "rushDefEpa": 20,
               "pointsFor": 26,
               "pointsAgainst": 22
             },
@@ -11440,18 +11440,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BAL",
             "values": {
-              "passOffEpa": 0.052,
+              "passOffEpa": 0.034,
               "turnoverDiff": -0.4,
-              "passDefEpa": 0.131,
-              "rushDefEpa": -0.052,
+              "passDefEpa": 0.118,
+              "rushDefEpa": -0.028,
               "pointsFor": 20.9,
               "pointsAgainst": 25.9
             },
             "ranks": {
-              "passOffEpa": 16,
+              "passOffEpa": 17,
               "turnoverDiff": 25,
               "passDefEpa": 25,
-              "rushDefEpa": 15,
+              "rushDefEpa": 16,
               "pointsFor": 22,
               "pointsAgainst": 24
             },
@@ -11460,17 +11460,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CIN",
             "values": {
-              "passOffEpa": 0.271,
+              "passOffEpa": 0.26,
               "turnoverDiff": 0.22,
-              "passDefEpa": 0,
-              "rushDefEpa": 0.022,
+              "passDefEpa": -0.001,
+              "rushDefEpa": 0.037,
               "pointsFor": 30.89,
               "pointsAgainst": 21.44
             },
             "ranks": {
               "passOffEpa": 3,
               "turnoverDiff": 13,
-              "passDefEpa": 11,
+              "passDefEpa": 12,
               "rushDefEpa": 30,
               "pointsFor": 3,
               "pointsAgainst": 10
@@ -11480,18 +11480,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CLE",
             "values": {
-              "passOffEpa": 0.005,
+              "passOffEpa": -0.008,
               "turnoverDiff": 0.1,
-              "passDefEpa": -0.003,
-              "rushDefEpa": -0.004,
+              "passDefEpa": -0.005,
+              "rushDefEpa": -0.002,
               "pointsFor": 18.8,
               "pointsAgainst": 22
             },
             "ranks": {
               "passOffEpa": 22,
               "turnoverDiff": 16,
-              "passDefEpa": 9,
-              "rushDefEpa": 26,
+              "passDefEpa": 11,
+              "rushDefEpa": 23,
               "pointsFor": 27,
               "pointsAgainst": 13
             },
@@ -11500,18 +11500,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PIT",
             "values": {
-              "passOffEpa": -0.069,
+              "passOffEpa": -0.06,
               "turnoverDiff": 0.56,
-              "passDefEpa": 0.035,
-              "rushDefEpa": -0.068,
+              "passDefEpa": 0.023,
+              "rushDefEpa": -0.055,
               "pointsFor": 22,
               "pointsAgainst": 20.22
             },
             "ranks": {
-              "passOffEpa": 26,
+              "passOffEpa": 24,
               "turnoverDiff": 6,
-              "passDefEpa": 15,
-              "rushDefEpa": 11,
+              "passDefEpa": 14,
+              "rushDefEpa": 9,
               "pointsFor": 19,
               "pointsAgainst": 7
             },
@@ -11520,18 +11520,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "HOU",
             "values": {
-              "passOffEpa": 0.127,
+              "passOffEpa": 0.116,
               "turnoverDiff": 0.44,
-              "passDefEpa": 0.033,
-              "rushDefEpa": -0.044,
+              "passDefEpa": 0.024,
+              "rushDefEpa": -0.023,
               "pointsFor": 25.89,
               "pointsAgainst": 24.33
             },
             "ranks": {
-              "passOffEpa": 9,
+              "passOffEpa": 11,
               "turnoverDiff": 9,
-              "passDefEpa": 14,
-              "rushDefEpa": 17,
+              "passDefEpa": 15,
+              "rushDefEpa": 18,
               "pointsFor": 9,
               "pointsAgainst": 18
             },
@@ -11540,18 +11540,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "IND",
             "values": {
-              "passOffEpa": -0.182,
+              "passOffEpa": -0.184,
               "turnoverDiff": -1.2,
-              "passDefEpa": 0.051,
-              "rushDefEpa": 0.01,
+              "passDefEpa": 0.045,
+              "rushDefEpa": 0.033,
               "pointsFor": 20.8,
               "pointsAgainst": 27.1
             },
             "ranks": {
-              "passOffEpa": 31,
+              "passOffEpa": 30,
               "turnoverDiff": 32,
               "passDefEpa": 16,
-              "rushDefEpa": 28,
+              "rushDefEpa": 29,
               "pointsFor": 23,
               "pointsAgainst": 29
             },
@@ -11560,17 +11560,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "JAX",
             "values": {
-              "passOffEpa": 0.284,
+              "passOffEpa": 0.27,
               "turnoverDiff": 1,
-              "passDefEpa": -0.083,
-              "rushDefEpa": -0.096,
+              "passDefEpa": -0.097,
+              "rushDefEpa": -0.083,
               "pointsFor": 29.89,
               "pointsAgainst": 16
             },
             "ranks": {
               "passOffEpa": 2,
               "turnoverDiff": 1,
-              "passDefEpa": 5,
+              "passDefEpa": 4,
               "rushDefEpa": 2,
               "pointsFor": 4,
               "pointsAgainst": 2
@@ -11580,17 +11580,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TEN",
             "values": {
-              "passOffEpa": -0.066,
+              "passOffEpa": -0.074,
               "turnoverDiff": -0.11,
-              "passDefEpa": 0.196,
-              "rushDefEpa": -0.06,
+              "passDefEpa": 0.18,
+              "rushDefEpa": -0.04,
               "pointsFor": 18.56,
               "pointsAgainst": 26.56
             },
             "ranks": {
-              "passOffEpa": 25,
+              "passOffEpa": 26,
               "turnoverDiff": 19,
-              "passDefEpa": 30,
+              "passDefEpa": 29,
               "rushDefEpa": 13,
               "pointsFor": 28,
               "pointsAgainst": 27
@@ -11600,10 +11600,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DEN",
             "values": {
-              "passOffEpa": 0.019,
+              "passOffEpa": 0.016,
               "turnoverDiff": 0.56,
-              "passDefEpa": -0.001,
-              "rushDefEpa": 0.015,
+              "passDefEpa": -0.007,
+              "rushDefEpa": 0.03,
               "pointsFor": 22,
               "pointsAgainst": 20.67
             },
@@ -11611,7 +11611,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 20,
               "turnoverDiff": 7,
               "passDefEpa": 10,
-              "rushDefEpa": 29,
+              "rushDefEpa": 28,
               "pointsFor": 20,
               "pointsAgainst": 9
             },
@@ -11620,18 +11620,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "KC",
             "values": {
-              "passOffEpa": 0.155,
+              "passOffEpa": 0.15,
               "turnoverDiff": 0.67,
-              "passDefEpa": -0.06,
-              "rushDefEpa": -0.082,
+              "passDefEpa": -0.069,
+              "rushDefEpa": -0.062,
               "pointsFor": 26.33,
               "pointsAgainst": 17.33
             },
             "ranks": {
-              "passOffEpa": 7,
+              "passOffEpa": 6,
               "turnoverDiff": 5,
               "passDefEpa": 6,
-              "rushDefEpa": 7,
+              "rushDefEpa": 6,
               "pointsFor": 8,
               "pointsAgainst": 3
             },
@@ -11640,18 +11640,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LV",
             "values": {
-              "passOffEpa": 0.12,
+              "passOffEpa": 0.125,
               "turnoverDiff": 0.3,
-              "passDefEpa": 0.183,
-              "rushDefEpa": -0.006,
+              "passDefEpa": 0.175,
+              "rushDefEpa": 0.028,
               "pointsFor": 25.1,
               "pointsAgainst": 28.9
             },
             "ranks": {
-              "passOffEpa": 10,
+              "passOffEpa": 8,
               "turnoverDiff": 12,
               "passDefEpa": 28,
-              "rushDefEpa": 24,
+              "rushDefEpa": 27,
               "pointsFor": 10,
               "pointsAgainst": 31
             },
@@ -11660,18 +11660,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LAC",
             "values": {
-              "passOffEpa": -0.18,
+              "passOffEpa": -0.184,
               "turnoverDiff": -0.56,
-              "passDefEpa": 0.071,
-              "rushDefEpa": -0.072,
+              "passDefEpa": 0.078,
+              "rushDefEpa": -0.051,
               "pointsFor": 16,
               "pointsAgainst": 26.56
             },
             "ranks": {
-              "passOffEpa": 30,
+              "passOffEpa": 31,
               "turnoverDiff": 28,
-              "passDefEpa": 19,
-              "rushDefEpa": 10,
+              "passDefEpa": 20,
+              "rushDefEpa": 11,
               "pointsFor": 32,
               "pointsAgainst": 28
             },
@@ -11680,18 +11680,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DAL",
             "values": {
-              "passOffEpa": 0.158,
+              "passOffEpa": 0.143,
               "turnoverDiff": -0.3,
-              "passDefEpa": 0.203,
-              "rushDefEpa": 0.028,
+              "passDefEpa": 0.185,
+              "rushDefEpa": 0.05,
               "pointsFor": 28.6,
               "pointsAgainst": 28.2
             },
             "ranks": {
-              "passOffEpa": 6,
+              "passOffEpa": 7,
               "turnoverDiff": 22,
-              "passDefEpa": 31,
-              "rushDefEpa": 31,
+              "passDefEpa": 30,
+              "rushDefEpa": 32,
               "pointsFor": 5,
               "pointsAgainst": 30
             },
@@ -11700,18 +11700,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYG",
             "values": {
-              "passOffEpa": 0.062,
+              "passOffEpa": 0.049,
               "turnoverDiff": -0.22,
-              "passDefEpa": -0.014,
-              "rushDefEpa": -0.004,
+              "passDefEpa": -0.02,
+              "rushDefEpa": 0.003,
               "pointsFor": 22.56,
               "pointsAgainst": 21.78
             },
             "ranks": {
               "passOffEpa": 15,
               "turnoverDiff": 21,
-              "passDefEpa": 8,
-              "rushDefEpa": 27,
+              "passDefEpa": 9,
+              "rushDefEpa": 24,
               "pointsFor": 14,
               "pointsAgainst": 11
             },
@@ -11720,10 +11720,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PHI",
             "values": {
-              "passOffEpa": -0.112,
+              "passOffEpa": -0.123,
               "turnoverDiff": -0.44,
-              "passDefEpa": 0.126,
-              "rushDefEpa": -0.005,
+              "passDefEpa": 0.115,
+              "rushDefEpa": 0.012,
               "pointsFor": 16.44,
               "pointsAgainst": 24.56
             },
@@ -11740,18 +11740,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "WSH",
             "values": {
-              "passOffEpa": 0.02,
+              "passOffEpa": 0.008,
               "turnoverDiff": 0.78,
-              "passDefEpa": 0.057,
-              "rushDefEpa": 0.038,
+              "passDefEpa": 0.052,
+              "rushDefEpa": 0.047,
               "pointsFor": 21.78,
               "pointsAgainst": 24.78
             },
             "ranks": {
-              "passOffEpa": 19,
+              "passOffEpa": 21,
               "turnoverDiff": 3,
-              "passDefEpa": 17,
-              "rushDefEpa": 32,
+              "passDefEpa": 18,
+              "rushDefEpa": 31,
               "pointsFor": 21,
               "pointsAgainst": 20
             },
@@ -11760,18 +11760,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CHI",
             "values": {
-              "passOffEpa": 0.096,
+              "passOffEpa": 0.087,
               "turnoverDiff": -0.44,
-              "passDefEpa": 0,
-              "rushDefEpa": -0.042,
+              "passDefEpa": -0.023,
+              "rushDefEpa": -0.021,
               "pointsFor": 26.78,
               "pointsAgainst": 20.44
             },
             "ranks": {
               "passOffEpa": 12,
               "turnoverDiff": 27,
-              "passDefEpa": 12,
-              "rushDefEpa": 18,
+              "passDefEpa": 7,
+              "rushDefEpa": 19,
               "pointsFor": 7,
               "pointsAgainst": 8
             },
@@ -11780,10 +11780,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DET",
             "values": {
-              "passOffEpa": 0.203,
+              "passOffEpa": 0.21,
               "turnoverDiff": 0.22,
-              "passDefEpa": 0.093,
-              "rushDefEpa": -0.082,
+              "passDefEpa": 0.083,
+              "rushDefEpa": -0.046,
               "pointsFor": 28.56,
               "pointsAgainst": 22.11
             },
@@ -11791,7 +11791,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 4,
               "turnoverDiff": 14,
               "passDefEpa": 22,
-              "rushDefEpa": 8,
+              "rushDefEpa": 12,
               "pointsFor": 6,
               "pointsAgainst": 16
             },
@@ -11800,18 +11800,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "GB",
             "values": {
-              "passOffEpa": 0.14,
+              "passOffEpa": 0.124,
               "turnoverDiff": 0.5,
-              "passDefEpa": -0.018,
-              "rushDefEpa": -0.047,
+              "passDefEpa": -0.021,
+              "rushDefEpa": -0.03,
               "pointsFor": 22.6,
               "pointsAgainst": 22.1
             },
             "ranks": {
-              "passOffEpa": 8,
+              "passOffEpa": 9,
               "turnoverDiff": 8,
-              "passDefEpa": 7,
-              "rushDefEpa": 16,
+              "passDefEpa": 8,
+              "rushDefEpa": 15,
               "pointsFor": 13,
               "pointsAgainst": 14
             },
@@ -11820,18 +11820,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIN",
             "values": {
-              "passOffEpa": -0.061,
+              "passOffEpa": -0.066,
               "turnoverDiff": 0.89,
-              "passDefEpa": -0.153,
-              "rushDefEpa": -0.085,
+              "passDefEpa": -0.149,
+              "rushDefEpa": -0.062,
               "pointsFor": 19.56,
               "pointsAgainst": 14
             },
             "ranks": {
-              "passOffEpa": 24,
+              "passOffEpa": 25,
               "turnoverDiff": 2,
-              "passDefEpa": 1,
-              "rushDefEpa": 5,
+              "passDefEpa": 2,
+              "rushDefEpa": 7,
               "pointsFor": 25,
               "pointsAgainst": 1
             },
@@ -11840,10 +11840,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ATL",
             "values": {
-              "passOffEpa": -0.143,
+              "passOffEpa": -0.15,
               "turnoverDiff": -0.9,
               "passDefEpa": 0.107,
-              "rushDefEpa": -0.086,
+              "rushDefEpa": -0.067,
               "pointsFor": 20.1,
               "pointsAgainst": 25.8
             },
@@ -11860,18 +11860,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CAR",
             "values": {
-              "passOffEpa": 0.046,
+              "passOffEpa": 0.042,
               "turnoverDiff": 0.11,
-              "passDefEpa": 0.059,
-              "rushDefEpa": -0.035,
+              "passDefEpa": 0.05,
+              "rushDefEpa": -0.015,
               "pointsFor": 24.33,
               "pointsAgainst": 26.22
             },
             "ranks": {
-              "passOffEpa": 17,
+              "passOffEpa": 16,
               "turnoverDiff": 15,
-              "passDefEpa": 18,
-              "rushDefEpa": 19,
+              "passDefEpa": 17,
+              "rushDefEpa": 21,
               "pointsFor": 12,
               "pointsAgainst": 25
             },
@@ -11880,18 +11880,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NO",
             "values": {
-              "passOffEpa": 0.016,
+              "passOffEpa": 0.02,
               "turnoverDiff": -0.89,
-              "passDefEpa": 0.079,
-              "rushDefEpa": -0.01,
+              "passDefEpa": 0.082,
+              "rushDefEpa": 0.013,
               "pointsFor": 22.44,
               "pointsAgainst": 26.22
             },
             "ranks": {
-              "passOffEpa": 21,
+              "passOffEpa": 19,
               "turnoverDiff": 29,
               "passDefEpa": 21,
-              "rushDefEpa": 23,
+              "rushDefEpa": 26,
               "pointsFor": 15,
               "pointsAgainst": 26
             },
@@ -11900,18 +11900,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TB",
             "values": {
-              "passOffEpa": -0.193,
+              "passOffEpa": -0.203,
               "turnoverDiff": 0.78,
-              "passDefEpa": -0.145,
-              "rushDefEpa": -0.084,
+              "passDefEpa": -0.158,
+              "rushDefEpa": -0.062,
               "pointsFor": 22.44,
               "pointsAgainst": 19.78
             },
             "ranks": {
               "passOffEpa": 32,
               "turnoverDiff": 4,
-              "passDefEpa": 2,
-              "rushDefEpa": 6,
+              "passDefEpa": 1,
+              "rushDefEpa": 8,
               "pointsFor": 16,
               "pointsAgainst": 6
             },
@@ -11920,10 +11920,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ARI",
             "values": {
-              "passOffEpa": -0.057,
+              "passOffEpa": -0.055,
               "turnoverDiff": -0.1,
-              "passDefEpa": 0.228,
-              "rushDefEpa": -0.053,
+              "passDefEpa": 0.223,
+              "rushDefEpa": -0.032,
               "pointsFor": 18.4,
               "pointsAgainst": 28.9
             },
@@ -11940,18 +11940,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LAR",
             "values": {
-              "passOffEpa": 0.119,
+              "passOffEpa": 0.122,
               "turnoverDiff": -0.3,
-              "passDefEpa": -0.119,
-              "rushDefEpa": -0.096,
+              "passDefEpa": -0.112,
+              "rushDefEpa": -0.067,
               "pointsFor": 24.8,
               "pointsAgainst": 18.7
             },
             "ranks": {
-              "passOffEpa": 11,
+              "passOffEpa": 10,
               "turnoverDiff": 23,
               "passDefEpa": 3,
-              "rushDefEpa": 3,
+              "rushDefEpa": 5,
               "pointsFor": 11,
               "pointsAgainst": 5
             },
@@ -11960,17 +11960,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SF",
             "values": {
-              "passOffEpa": 0.304,
+              "passOffEpa": 0.298,
               "turnoverDiff": 0.33,
-              "passDefEpa": 0.072,
-              "rushDefEpa": -0.103,
+              "passDefEpa": 0.063,
+              "rushDefEpa": -0.087,
               "pointsFor": 31.22,
               "pointsAgainst": 21.78
             },
             "ranks": {
               "passOffEpa": 1,
               "turnoverDiff": 10,
-              "passDefEpa": 20,
+              "passDefEpa": 19,
               "rushDefEpa": 1,
               "pointsFor": 2,
               "pointsAgainst": 12
@@ -11980,18 +11980,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SEA",
             "values": {
-              "passOffEpa": 0.067,
+              "passOffEpa": 0.051,
               "turnoverDiff": -0.3,
-              "passDefEpa": -0.094,
-              "rushDefEpa": -0.064,
+              "passDefEpa": -0.096,
+              "rushDefEpa": -0.054,
               "pointsFor": 22.3,
               "pointsAgainst": 17.5
             },
             "ranks": {
               "passOffEpa": 14,
               "turnoverDiff": 24,
-              "passDefEpa": 4,
-              "rushDefEpa": 12,
+              "passDefEpa": 5,
+              "rushDefEpa": 10,
               "pointsFor": 17,
               "pointsAgainst": 4
             },
@@ -12002,17 +12002,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BUF",
             "values": {
-              "passOffEpa": 0.172,
+              "passOffEpa": 0.152,
               "turnoverDiff": 0,
-              "passDefEpa": -0.15,
-              "rushDefEpa": 0.164,
+              "passDefEpa": -0.157,
+              "rushDefEpa": 0.165,
               "pointsFor": 31,
               "pointsAgainst": 12
             },
             "ranks": {
               "passOffEpa": 9,
               "turnoverDiff": 10,
-              "passDefEpa": 8,
+              "passDefEpa": 7,
               "rushDefEpa": 23,
               "pointsFor": 8,
               "pointsAgainst": 4
@@ -12021,9 +12021,9 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIA",
             "values": {
-              "passOffEpa": -0.229,
+              "passOffEpa": -0.234,
               "turnoverDiff": 1,
-              "passDefEpa": -0.488,
+              "passDefEpa": -0.49,
               "rushDefEpa": -0.032,
               "pointsFor": 22,
               "pointsAgainst": 24
@@ -12032,7 +12032,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 24,
               "turnoverDiff": 7,
               "passDefEpa": 2,
-              "rushDefEpa": 11,
+              "rushDefEpa": 10,
               "pointsFor": 16,
               "pointsAgainst": 16
             }
@@ -12040,10 +12040,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NE",
             "values": {
-              "passOffEpa": -0.33,
+              "passOffEpa": -0.312,
               "turnoverDiff": 1,
-              "passDefEpa": 0.21,
-              "rushDefEpa": 0.241,
+              "passDefEpa": 0.252,
+              "rushDefEpa": 0.232,
               "pointsFor": 10,
               "pointsAgainst": 35
             },
@@ -12051,7 +12051,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 26,
               "turnoverDiff": 8,
               "passDefEpa": 22,
-              "rushDefEpa": 26,
+              "rushDefEpa": 25,
               "pointsFor": 26,
               "pointsAgainst": 23
             }
@@ -12059,10 +12059,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYJ",
             "values": {
-              "passOffEpa": -0.15,
+              "passOffEpa": -0.157,
               "turnoverDiff": 0,
-              "passDefEpa": 0.172,
-              "rushDefEpa": 0.354,
+              "passDefEpa": 0.152,
+              "rushDefEpa": 0.343,
               "pointsFor": 12,
               "pointsAgainst": 31
             },
@@ -12078,17 +12078,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BAL",
             "values": {
-              "passOffEpa": 0.052,
+              "passOffEpa": 0.021,
               "turnoverDiff": -2,
-              "passDefEpa": -0.081,
-              "rushDefEpa": 0.039,
+              "passDefEpa": -0.08,
+              "rushDefEpa": 0.06,
               "pointsFor": 20,
               "pointsAgainst": 23
             },
             "ranks": {
               "passOffEpa": 13,
               "turnoverDiff": 23,
-              "passDefEpa": 11,
+              "passDefEpa": 12,
               "rushDefEpa": 19,
               "pointsFor": 19,
               "pointsAgainst": 14
@@ -12097,17 +12097,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CIN",
             "values": {
-              "passOffEpa": 0.475,
+              "passOffEpa": 0.444,
               "turnoverDiff": 0,
-              "passDefEpa": -0.048,
-              "rushDefEpa": 0.113,
+              "passDefEpa": -0.018,
+              "rushDefEpa": 0.102,
               "pointsFor": 38,
               "pointsAgainst": 18
             },
             "ranks": {
               "passOffEpa": 3,
               "turnoverDiff": 12,
-              "passDefEpa": 13,
+              "passDefEpa": 14,
               "rushDefEpa": 22,
               "pointsFor": 4,
               "pointsAgainst": 8
@@ -12116,18 +12116,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CLE",
             "values": {
-              "passOffEpa": -0.035,
+              "passOffEpa": -0.05,
               "turnoverDiff": 0,
-              "passDefEpa": 0.004,
-              "rushDefEpa": -0.116,
+              "passDefEpa": -0.015,
+              "rushDefEpa": -0.125,
               "pointsFor": 27,
               "pointsAgainst": 24
             },
             "ranks": {
-              "passOffEpa": 15,
+              "passOffEpa": 16,
               "turnoverDiff": 13,
               "passDefEpa": 15,
-              "rushDefEpa": 7,
+              "rushDefEpa": 5,
               "pointsFor": 10,
               "pointsAgainst": 17
             }
@@ -12135,15 +12135,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PIT",
             "values": {
-              "passOffEpa": -0.048,
+              "passOffEpa": -0.018,
               "turnoverDiff": 0,
-              "passDefEpa": 0.475,
-              "rushDefEpa": 0.078,
+              "passDefEpa": 0.444,
+              "rushDefEpa": 0.085,
               "pointsFor": 18,
               "pointsAgainst": 38
             },
             "ranks": {
-              "passOffEpa": 16,
+              "passOffEpa": 15,
               "turnoverDiff": 14,
               "passDefEpa": 26,
               "rushDefEpa": 20,
@@ -12154,18 +12154,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "HOU",
             "values": {
-              "passOffEpa": 0.004,
+              "passOffEpa": -0.015,
               "turnoverDiff": 0,
-              "passDefEpa": -0.035,
-              "rushDefEpa": 0.004,
+              "passDefEpa": -0.05,
+              "rushDefEpa": -0.004,
               "pointsFor": 24,
               "pointsAgainst": 27
             },
             "ranks": {
               "passOffEpa": 14,
               "turnoverDiff": 15,
-              "passDefEpa": 14,
-              "rushDefEpa": 16,
+              "passDefEpa": 13,
+              "rushDefEpa": 13,
               "pointsFor": 11,
               "pointsAgainst": 19
             }
@@ -12173,10 +12173,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "IND",
             "values": {
-              "passOffEpa": -0.488,
+              "passOffEpa": -0.49,
               "turnoverDiff": -1,
-              "passDefEpa": -0.229,
-              "rushDefEpa": -0.179,
+              "passDefEpa": -0.234,
+              "rushDefEpa": -0.15,
               "pointsFor": 24,
               "pointsAgainst": 22
             },
@@ -12192,18 +12192,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "JAX",
             "values": {
-              "passOffEpa": 0.449,
+              "passOffEpa": 0.425,
               "turnoverDiff": 0,
-              "passDefEpa": -0.134,
-              "rushDefEpa": 0.25,
+              "passDefEpa": -0.157,
+              "rushDefEpa": 0.261,
               "pointsFor": 40,
               "pointsAgainst": 23
             },
             "ranks": {
               "passOffEpa": 4,
               "turnoverDiff": 16,
-              "passDefEpa": 9,
-              "rushDefEpa": 27,
+              "passDefEpa": 8,
+              "rushDefEpa": 26,
               "pointsFor": 2,
               "pointsAgainst": 15
             }
@@ -12211,18 +12211,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TEN",
             "values": {
-              "passOffEpa": -0.134,
+              "passOffEpa": -0.157,
               "turnoverDiff": 0,
-              "passDefEpa": 0.449,
-              "rushDefEpa": -0.041,
+              "passDefEpa": 0.425,
+              "rushDefEpa": -0.015,
               "pointsFor": 23,
               "pointsAgainst": 40
             },
             "ranks": {
-              "passOffEpa": 20,
+              "passOffEpa": 22,
               "turnoverDiff": 17,
               "passDefEpa": 25,
-              "rushDefEpa": 10,
+              "rushDefEpa": 11,
               "pointsFor": 14,
               "pointsAgainst": 26
             }
@@ -12249,10 +12249,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "KC",
             "values": {
-              "passOffEpa": 0.318,
+              "passOffEpa": 0.342,
               "turnoverDiff": 2,
-              "passDefEpa": -0.318,
-              "rushDefEpa": 0.001,
+              "passDefEpa": -0.292,
+              "rushDefEpa": 0.028,
               "pointsFor": 35,
               "pointsAgainst": 13
             },
@@ -12260,7 +12260,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 6,
               "turnoverDiff": 2,
               "passDefEpa": 4,
-              "rushDefEpa": 14,
+              "rushDefEpa": 17,
               "pointsFor": 5,
               "pointsAgainst": 5
             }
@@ -12268,10 +12268,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LV",
             "values": {
-              "passOffEpa": -0.228,
+              "passOffEpa": -0.204,
               "turnoverDiff": 2,
-              "passDefEpa": 0.412,
-              "rushDefEpa": -0.071,
+              "passDefEpa": 0.379,
+              "rushDefEpa": -0.046,
               "pointsFor": 13,
               "pointsAgainst": 21
             },
@@ -12287,15 +12287,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LAC",
             "values": {
-              "passOffEpa": -0.081,
+              "passOffEpa": -0.08,
               "turnoverDiff": 2,
-              "passDefEpa": 0.052,
-              "rushDefEpa": -0.06,
+              "passDefEpa": 0.021,
+              "rushDefEpa": -0.043,
               "pointsFor": 23,
               "pointsAgainst": 20
             },
             "ranks": {
-              "passOffEpa": 18,
+              "passOffEpa": 17,
               "turnoverDiff": 4,
               "passDefEpa": 16,
               "rushDefEpa": 9,
@@ -12306,10 +12306,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DAL",
             "values": {
-              "passOffEpa": 0.191,
+              "passOffEpa": 0.171,
               "turnoverDiff": -2,
-              "passDefEpa": 0.652,
-              "rushDefEpa": 0.233,
+              "passDefEpa": 0.647,
+              "rushDefEpa": 0.261,
               "pointsFor": 40,
               "pointsAgainst": 46
             },
@@ -12317,7 +12317,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 8,
               "turnoverDiff": 24,
               "passDefEpa": 28,
-              "rushDefEpa": 25,
+              "rushDefEpa": 27,
               "pointsFor": 3,
               "pointsAgainst": 28
             }
@@ -12325,10 +12325,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYG",
             "values": {
-              "passOffEpa": 0.142,
+              "passOffEpa": 0.129,
               "turnoverDiff": 0,
-              "passDefEpa": 0.091,
-              "rushDefEpa": -0.005,
+              "passDefEpa": 0.079,
+              "rushDefEpa": -0.006,
               "pointsFor": 21,
               "pointsAgainst": 24
             },
@@ -12336,7 +12336,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 10,
               "turnoverDiff": 18,
               "passDefEpa": 17,
-              "rushDefEpa": 13,
+              "rushDefEpa": 12,
               "pointsFor": 17,
               "pointsAgainst": 18
             }
@@ -12363,10 +12363,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "WSH",
             "values": {
-              "passOffEpa": 0.091,
+              "passOffEpa": 0.079,
               "turnoverDiff": 0,
-              "passDefEpa": 0.142,
-              "rushDefEpa": 0.088,
+              "passDefEpa": 0.129,
+              "rushDefEpa": 0.099,
               "pointsFor": 24,
               "pointsAgainst": 21
             },
@@ -12401,10 +12401,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DET",
             "values": {
-              "passOffEpa": 0.21,
+              "passOffEpa": 0.252,
               "turnoverDiff": -1,
-              "passDefEpa": -0.33,
-              "rushDefEpa": -0.151,
+              "passDefEpa": -0.312,
+              "rushDefEpa": -0.111,
               "pointsFor": 35,
               "pointsAgainst": 10
             },
@@ -12412,7 +12412,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 7,
               "turnoverDiff": 21,
               "passDefEpa": 3,
-              "rushDefEpa": 5,
+              "rushDefEpa": 6,
               "pointsFor": 6,
               "pointsAgainst": 2
             }
@@ -12420,18 +12420,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "GB",
             "values": {
-              "passOffEpa": -0.07,
+              "passOffEpa": -0.094,
               "turnoverDiff": -3,
-              "passDefEpa": 0.14,
-              "rushDefEpa": -0.023,
+              "passDefEpa": 0.122,
+              "rushDefEpa": -0.001,
               "pointsFor": 10,
               "pointsAgainst": 30
             },
             "ranks": {
-              "passOffEpa": 17,
+              "passOffEpa": 19,
               "turnoverDiff": 28,
               "passDefEpa": 18,
-              "rushDefEpa": 12,
+              "rushDefEpa": 14,
               "pointsFor": 27,
               "pointsAgainst": 20
             }
@@ -12439,9 +12439,9 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIN",
             "values": {
-              "passOffEpa": 0.14,
+              "passOffEpa": 0.122,
               "turnoverDiff": 3,
-              "passDefEpa": -0.07,
+              "passDefEpa": -0.094,
               "rushDefEpa": -0.353,
               "pointsFor": 30,
               "pointsAgainst": 10
@@ -12449,8 +12449,8 @@ const NFL_POWER_SCORE = {
             "ranks": {
               "passOffEpa": 11,
               "turnoverDiff": 1,
-              "passDefEpa": 12,
-              "rushDefEpa": 3,
+              "passDefEpa": 10,
+              "rushDefEpa": 2,
               "pointsFor": 9,
               "pointsAgainst": 3
             }
@@ -12458,10 +12458,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ATL",
             "values": {
-              "passOffEpa": -0.318,
+              "passOffEpa": -0.292,
               "turnoverDiff": -2,
-              "passDefEpa": 0.318,
-              "rushDefEpa": 0.002,
+              "passDefEpa": 0.342,
+              "rushDefEpa": 0.011,
               "pointsFor": 13,
               "pointsAgainst": 35
             },
@@ -12477,17 +12477,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CAR",
             "values": {
-              "passOffEpa": -0.176,
+              "passOffEpa": -0.135,
               "turnoverDiff": 2,
-              "passDefEpa": -0.085,
-              "rushDefEpa": -0.518,
+              "passDefEpa": -0.081,
+              "rushDefEpa": -0.463,
               "pointsFor": 20,
               "pointsAgainst": 17
             },
             "ranks": {
-              "passOffEpa": 22,
+              "passOffEpa": 20,
               "turnoverDiff": 5,
-              "passDefEpa": 10,
+              "passDefEpa": 11,
               "rushDefEpa": 1,
               "pointsFor": 20,
               "pointsAgainst": 7
@@ -12496,17 +12496,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NO",
             "values": {
-              "passOffEpa": -0.085,
+              "passOffEpa": -0.081,
               "turnoverDiff": -2,
-              "passDefEpa": -0.176,
-              "rushDefEpa": 0.033,
+              "passDefEpa": -0.135,
+              "rushDefEpa": 0.036,
               "pointsFor": 17,
               "pointsAgainst": 20
             },
             "ranks": {
-              "passOffEpa": 19,
+              "passOffEpa": 18,
               "turnoverDiff": 26,
-              "passDefEpa": 7,
+              "passDefEpa": 9,
               "rushDefEpa": 18,
               "pointsFor": 22,
               "pointsAgainst": 10
@@ -12534,10 +12534,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ARI",
             "values": {
-              "passOffEpa": -0.601,
+              "passOffEpa": -0.588,
               "turnoverDiff": -1,
-              "passDefEpa": 0.502,
-              "rushDefEpa": 0.007,
+              "passDefEpa": 0.487,
+              "rushDefEpa": 0.016,
               "pointsFor": 6,
               "pointsAgainst": 34
             },
@@ -12545,7 +12545,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 28,
               "turnoverDiff": 22,
               "passDefEpa": 27,
-              "rushDefEpa": 17,
+              "rushDefEpa": 16,
               "pointsFor": 28,
               "pointsAgainst": 22
             }
@@ -12553,10 +12553,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LAR",
             "values": {
-              "passOffEpa": 0.502,
+              "passOffEpa": 0.487,
               "turnoverDiff": 1,
-              "passDefEpa": -0.601,
-              "rushDefEpa": -0.355,
+              "passDefEpa": -0.588,
+              "rushDefEpa": -0.351,
               "pointsFor": 34,
               "pointsAgainst": 6
             },
@@ -12564,7 +12564,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 2,
               "turnoverDiff": 9,
               "passDefEpa": 1,
-              "rushDefEpa": 2,
+              "rushDefEpa": 3,
               "pointsFor": 7,
               "pointsAgainst": 1
             }
@@ -12572,9 +12572,9 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SF",
             "values": {
-              "passOffEpa": 0.652,
+              "passOffEpa": 0.647,
               "turnoverDiff": 2,
-              "passDefEpa": 0.191,
+              "passDefEpa": 0.171,
               "rushDefEpa": 0.204,
               "pointsFor": 46,
               "pointsAgainst": 40
@@ -12591,10 +12591,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SEA",
             "values": {
-              "passOffEpa": 0.412,
+              "passOffEpa": 0.379,
               "turnoverDiff": -2,
-              "passDefEpa": -0.228,
-              "rushDefEpa": -0.144,
+              "passDefEpa": -0.204,
+              "rushDefEpa": -0.105,
               "pointsFor": 21,
               "pointsAgainst": 13
             },
@@ -12602,7 +12602,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 5,
               "turnoverDiff": 27,
               "passDefEpa": 6,
-              "rushDefEpa": 6,
+              "rushDefEpa": 7,
               "pointsFor": 18,
               "pointsAgainst": 6
             }
@@ -12614,10 +12614,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BUF",
             "values": {
-              "passOffEpa": 0.17,
+              "passOffEpa": 0.166,
               "turnoverDiff": -0.1,
-              "passDefEpa": -0.023,
-              "rushDefEpa": -0.032,
+              "passDefEpa": -0.034,
+              "rushDefEpa": -0.007,
               "pointsFor": 31.3,
               "pointsAgainst": 20.8
             },
@@ -12625,7 +12625,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 7,
               "turnoverDiff": 18,
               "passDefEpa": 8,
-              "rushDefEpa": 18,
+              "rushDefEpa": 20,
               "pointsFor": 2,
               "pointsAgainst": 9
             },
@@ -12634,18 +12634,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIA",
             "values": {
-              "passOffEpa": -0.112,
+              "passOffEpa": -0.125,
               "turnoverDiff": -0.1,
-              "passDefEpa": 0.17,
-              "rushDefEpa": -0.071,
+              "passDefEpa": 0.169,
+              "rushDefEpa": -0.061,
               "pointsFor": 15.7,
               "pointsAgainst": 25
             },
             "ranks": {
               "passOffEpa": 27,
               "turnoverDiff": 19,
-              "passDefEpa": 28,
-              "rushDefEpa": 9,
+              "passDefEpa": 29,
+              "rushDefEpa": 6,
               "pointsFor": 32,
               "pointsAgainst": 21
             },
@@ -12654,18 +12654,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NE",
             "values": {
-              "passOffEpa": 0.091,
+              "passOffEpa": 0.08,
               "turnoverDiff": -1,
-              "passDefEpa": 0.143,
-              "rushDefEpa": -0.032,
+              "passDefEpa": 0.133,
+              "rushDefEpa": -0.024,
               "pointsFor": 22.1,
               "pointsAgainst": 24.2
             },
             "ranks": {
               "passOffEpa": 12,
               "turnoverDiff": 31,
-              "passDefEpa": 26,
-              "rushDefEpa": 19,
+              "passDefEpa": 27,
+              "rushDefEpa": 17,
               "pointsFor": 18,
               "pointsAgainst": 19
             },
@@ -12674,18 +12674,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYJ",
             "values": {
-              "passOffEpa": 0.072,
+              "passOffEpa": 0.058,
               "turnoverDiff": 0.27,
-              "passDefEpa": 0.143,
-              "rushDefEpa": -0.013,
+              "passDefEpa": 0.132,
+              "rushDefEpa": 0.001,
               "pointsFor": 20.09,
               "pointsAgainst": 25.27
             },
             "ranks": {
               "passOffEpa": 14,
               "turnoverDiff": 12,
-              "passDefEpa": 27,
-              "rushDefEpa": 23,
+              "passDefEpa": 26,
+              "rushDefEpa": 24,
               "pointsFor": 24,
               "pointsAgainst": 22
             },
@@ -12694,10 +12694,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BAL",
             "values": {
-              "passOffEpa": 0.06,
+              "passOffEpa": 0.043,
               "turnoverDiff": -0.64,
-              "passDefEpa": 0.128,
-              "rushDefEpa": -0.048,
+              "passDefEpa": 0.113,
+              "rushDefEpa": -0.024,
               "pointsFor": 22,
               "pointsAgainst": 26.73
             },
@@ -12705,7 +12705,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 16,
               "turnoverDiff": 28,
               "passDefEpa": 25,
-              "rushDefEpa": 15,
+              "rushDefEpa": 18,
               "pointsFor": 19,
               "pointsAgainst": 26
             },
@@ -12714,17 +12714,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CIN",
             "values": {
-              "passOffEpa": 0.271,
+              "passOffEpa": 0.26,
               "turnoverDiff": 0.22,
-              "passDefEpa": 0,
-              "rushDefEpa": 0.022,
+              "passDefEpa": -0.001,
+              "rushDefEpa": 0.037,
               "pointsFor": 30.89,
               "pointsAgainst": 21.44
             },
             "ranks": {
               "passOffEpa": 2,
               "turnoverDiff": 14,
-              "passDefEpa": 13,
+              "passDefEpa": 14,
               "rushDefEpa": 30,
               "pointsFor": 3,
               "pointsAgainst": 13
@@ -12734,18 +12734,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CLE",
             "values": {
-              "passOffEpa": 0.005,
+              "passOffEpa": -0.008,
               "turnoverDiff": 0.1,
-              "passDefEpa": -0.003,
-              "rushDefEpa": -0.004,
+              "passDefEpa": -0.005,
+              "rushDefEpa": -0.002,
               "pointsFor": 18.8,
               "pointsAgainst": 22
             },
             "ranks": {
-              "passOffEpa": 21,
+              "passOffEpa": 22,
               "turnoverDiff": 16,
               "passDefEpa": 12,
-              "rushDefEpa": 26,
+              "rushDefEpa": 23,
               "pointsFor": 27,
               "pointsAgainst": 14
             },
@@ -12754,10 +12754,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PIT",
             "values": {
-              "passOffEpa": -0.078,
+              "passOffEpa": -0.071,
               "turnoverDiff": 0.6,
-              "passDefEpa": 0.02,
-              "rushDefEpa": -0.072,
+              "passDefEpa": 0.009,
+              "rushDefEpa": -0.058,
               "pointsFor": 21.4,
               "pointsAgainst": 20.1
             },
@@ -12765,7 +12765,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 26,
               "turnoverDiff": 4,
               "passDefEpa": 15,
-              "rushDefEpa": 8,
+              "rushDefEpa": 7,
               "pointsFor": 22,
               "pointsAgainst": 7
             },
@@ -12774,17 +12774,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "HOU",
             "values": {
-              "passOffEpa": 0.137,
+              "passOffEpa": 0.125,
               "turnoverDiff": 0.4,
-              "passDefEpa": 0.004,
-              "rushDefEpa": -0.061,
+              "passDefEpa": -0.005,
+              "rushDefEpa": -0.04,
               "pointsFor": 25.9,
               "pointsAgainst": 22.2
             },
             "ranks": {
-              "passOffEpa": 9,
+              "passOffEpa": 8,
               "turnoverDiff": 10,
-              "passDefEpa": 14,
+              "passDefEpa": 13,
               "rushDefEpa": 11,
               "pointsFor": 9,
               "pointsAgainst": 17
@@ -12794,10 +12794,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "IND",
             "values": {
-              "passOffEpa": -0.193,
+              "passOffEpa": -0.196,
               "turnoverDiff": -1.09,
-              "passDefEpa": 0.069,
-              "rushDefEpa": -0.011,
+              "passDefEpa": 0.061,
+              "rushDefEpa": 0.011,
               "pointsFor": 19.18,
               "pointsAgainst": 27
             },
@@ -12805,7 +12805,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 32,
               "turnoverDiff": 32,
               "passDefEpa": 19,
-              "rushDefEpa": 25,
+              "rushDefEpa": 27,
               "pointsFor": 26,
               "pointsAgainst": 28
             },
@@ -12814,17 +12814,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "JAX",
             "values": {
-              "passOffEpa": 0.219,
+              "passOffEpa": 0.208,
               "turnoverDiff": 0.8,
-              "passDefEpa": -0.088,
-              "rushDefEpa": -0.108,
+              "passDefEpa": -0.1,
+              "rushDefEpa": -0.097,
               "pointsFor": 28.7,
               "pointsAgainst": 16.7
             },
             "ranks": {
-              "passOffEpa": 3,
+              "passOffEpa": 4,
               "turnoverDiff": 1,
-              "passDefEpa": 4,
+              "passDefEpa": 3,
               "rushDefEpa": 1,
               "pointsFor": 6,
               "pointsAgainst": 3
@@ -12834,10 +12834,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TEN",
             "values": {
-              "passOffEpa": -0.051,
+              "passOffEpa": -0.06,
               "turnoverDiff": -0.2,
-              "passDefEpa": 0.234,
-              "rushDefEpa": -0.031,
+              "passDefEpa": 0.22,
+              "rushDefEpa": -0.012,
               "pointsFor": 19.7,
               "pointsAgainst": 29
             },
@@ -12845,7 +12845,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 23,
               "turnoverDiff": 22,
               "passDefEpa": 31,
-              "rushDefEpa": 20,
+              "rushDefEpa": 19,
               "pointsFor": 25,
               "pointsAgainst": 30
             },
@@ -12854,10 +12854,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DEN",
             "values": {
-              "passOffEpa": 0.028,
+              "passOffEpa": 0.023,
               "turnoverDiff": 0.5,
-              "passDefEpa": -0.004,
-              "rushDefEpa": 0.013,
+              "passDefEpa": -0.01,
+              "rushDefEpa": 0.028,
               "pointsFor": 23.6,
               "pointsAgainst": 21
             },
@@ -12865,7 +12865,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 19,
               "turnoverDiff": 7,
               "passDefEpa": 11,
-              "rushDefEpa": 29,
+              "rushDefEpa": 28,
               "pointsFor": 13,
               "pointsAgainst": 11
             },
@@ -12874,18 +12874,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "KC",
             "values": {
-              "passOffEpa": 0.189,
+              "passOffEpa": 0.183,
               "turnoverDiff": 0.6,
-              "passDefEpa": -0.065,
-              "rushDefEpa": -0.088,
+              "passDefEpa": -0.073,
+              "rushDefEpa": -0.069,
               "pointsFor": 27.1,
               "pointsAgainst": 16.3
             },
             "ranks": {
-              "passOffEpa": 6,
+              "passOffEpa": 5,
               "turnoverDiff": 5,
               "passDefEpa": 6,
-              "rushDefEpa": 4,
+              "rushDefEpa": 3,
               "pointsFor": 7,
               "pointsAgainst": 2
             },
@@ -12894,18 +12894,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LV",
             "values": {
-              "passOffEpa": 0.105,
+              "passOffEpa": 0.109,
               "turnoverDiff": 0.27,
-              "passDefEpa": 0.175,
-              "rushDefEpa": -0.002,
+              "passDefEpa": 0.165,
+              "rushDefEpa": 0.029,
               "pointsFor": 25,
               "pointsAgainst": 29.73
             },
             "ranks": {
               "passOffEpa": 11,
               "turnoverDiff": 13,
-              "passDefEpa": 29,
-              "rushDefEpa": 28,
+              "passDefEpa": 28,
+              "rushDefEpa": 29,
               "pointsFor": 11,
               "pointsAgainst": 32
             },
@@ -12914,17 +12914,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LAC",
             "values": {
-              "passOffEpa": -0.157,
+              "passOffEpa": -0.161,
               "turnoverDiff": -0.5,
-              "passDefEpa": 0.102,
-              "rushDefEpa": -0.057,
+              "passDefEpa": 0.109,
+              "rushDefEpa": -0.037,
               "pointsFor": 16.8,
               "pointsAgainst": 26.6
             },
             "ranks": {
               "passOffEpa": 31,
               "turnoverDiff": 26,
-              "passDefEpa": 23,
+              "passDefEpa": 24,
               "rushDefEpa": 12,
               "pointsFor": 30,
               "pointsAgainst": 25
@@ -12934,18 +12934,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DAL",
             "values": {
-              "passOffEpa": 0.193,
+              "passOffEpa": 0.179,
               "turnoverDiff": -0.18,
-              "passDefEpa": 0.192,
-              "rushDefEpa": 0.025,
+              "passDefEpa": 0.173,
+              "rushDefEpa": 0.048,
               "pointsFor": 30.64,
               "pointsAgainst": 28.36
             },
             "ranks": {
-              "passOffEpa": 5,
+              "passOffEpa": 6,
               "turnoverDiff": 21,
               "passDefEpa": 30,
-              "rushDefEpa": 31,
+              "rushDefEpa": 32,
               "pointsFor": 4,
               "pointsAgainst": 29
             },
@@ -12954,10 +12954,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYG",
             "values": {
-              "passOffEpa": 0.042,
+              "passOffEpa": 0.03,
               "turnoverDiff": -0.1,
-              "passDefEpa": -0.032,
-              "rushDefEpa": -0.004,
+              "passDefEpa": -0.036,
+              "rushDefEpa": 0.003,
               "pointsFor": 22.6,
               "pointsAgainst": 21.4
             },
@@ -12965,7 +12965,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 18,
               "turnoverDiff": 20,
               "passDefEpa": 7,
-              "rushDefEpa": 27,
+              "rushDefEpa": 25,
               "pointsFor": 14,
               "pointsAgainst": 12
             },
@@ -12974,10 +12974,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PHI",
             "values": {
-              "passOffEpa": -0.118,
+              "passOffEpa": -0.129,
               "turnoverDiff": -0.5,
-              "passDefEpa": 0.091,
-              "rushDefEpa": -0.012,
+              "passDefEpa": 0.08,
+              "rushDefEpa": 0.006,
               "pointsFor": 16.7,
               "pointsAgainst": 23.7
             },
@@ -12985,7 +12985,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 28,
               "turnoverDiff": 27,
               "passDefEpa": 21,
-              "rushDefEpa": 24,
+              "rushDefEpa": 26,
               "pointsFor": 31,
               "pointsAgainst": 18
             },
@@ -12994,10 +12994,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "WSH",
             "values": {
-              "passOffEpa": 0.02,
+              "passOffEpa": 0.008,
               "turnoverDiff": 0.78,
-              "passDefEpa": 0.057,
-              "rushDefEpa": 0.038,
+              "passDefEpa": 0.052,
+              "rushDefEpa": 0.047,
               "pointsFor": 21.78,
               "pointsAgainst": 24.78
             },
@@ -13005,7 +13005,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 20,
               "turnoverDiff": 2,
               "passDefEpa": 17,
-              "rushDefEpa": 32,
+              "rushDefEpa": 31,
               "pointsFor": 20,
               "pointsAgainst": 20
             },
@@ -13014,18 +13014,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CHI",
             "values": {
-              "passOffEpa": 0.086,
+              "passOffEpa": 0.076,
               "turnoverDiff": -0.4,
-              "passDefEpa": -0.011,
-              "rushDefEpa": -0.049,
+              "passDefEpa": -0.032,
+              "rushDefEpa": -0.027,
               "pointsFor": 26.2,
               "pointsAgainst": 19.7
             },
             "ranks": {
               "passOffEpa": 13,
               "turnoverDiff": 25,
-              "passDefEpa": 10,
-              "rushDefEpa": 14,
+              "passDefEpa": 9,
+              "rushDefEpa": 16,
               "pointsFor": 8,
               "pointsAgainst": 6
             },
@@ -13034,18 +13034,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DET",
             "values": {
-              "passOffEpa": 0.211,
+              "passOffEpa": 0.218,
               "turnoverDiff": 0.2,
-              "passDefEpa": 0.098,
-              "rushDefEpa": -0.082,
+              "passDefEpa": 0.089,
+              "rushDefEpa": -0.048,
               "pointsFor": 28.8,
               "pointsAgainst": 22
             },
             "ranks": {
-              "passOffEpa": 4,
+              "passOffEpa": 3,
               "turnoverDiff": 15,
               "passDefEpa": 22,
-              "rushDefEpa": 6,
+              "rushDefEpa": 10,
               "pointsFor": 5,
               "pointsAgainst": 15
             },
@@ -13054,18 +13054,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "GB",
             "values": {
-              "passOffEpa": 0.14,
+              "passOffEpa": 0.124,
               "turnoverDiff": 0.5,
-              "passDefEpa": -0.018,
-              "rushDefEpa": -0.047,
+              "passDefEpa": -0.021,
+              "rushDefEpa": -0.03,
               "pointsFor": 22.6,
               "pointsAgainst": 22.1
             },
             "ranks": {
-              "passOffEpa": 8,
+              "passOffEpa": 9,
               "turnoverDiff": 8,
-              "passDefEpa": 9,
-              "rushDefEpa": 16,
+              "passDefEpa": 10,
+              "rushDefEpa": 14,
               "pointsFor": 15,
               "pointsAgainst": 16
             },
@@ -13074,10 +13074,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIN",
             "values": {
-              "passOffEpa": -0.064,
+              "passOffEpa": -0.07,
               "turnoverDiff": 0.6,
-              "passDefEpa": -0.088,
-              "rushDefEpa": -0.079,
+              "passDefEpa": -0.085,
+              "rushDefEpa": -0.057,
               "pointsFor": 18.6,
               "pointsAgainst": 16.1
             },
@@ -13085,7 +13085,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 25,
               "turnoverDiff": 6,
               "passDefEpa": 5,
-              "rushDefEpa": 7,
+              "rushDefEpa": 8,
               "pointsFor": 28,
               "pointsAgainst": 1
             },
@@ -13094,18 +13094,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ATL",
             "values": {
-              "passOffEpa": -0.143,
+              "passOffEpa": -0.15,
               "turnoverDiff": -0.9,
               "passDefEpa": 0.107,
-              "rushDefEpa": -0.086,
+              "rushDefEpa": -0.067,
               "pointsFor": 20.1,
               "pointsAgainst": 25.8
             },
             "ranks": {
               "passOffEpa": 29,
               "turnoverDiff": 30,
-              "passDefEpa": 24,
-              "rushDefEpa": 5,
+              "passDefEpa": 23,
+              "rushDefEpa": 4,
               "pointsFor": 23,
               "pointsAgainst": 24
             },
@@ -13114,10 +13114,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CAR",
             "values": {
-              "passOffEpa": 0.05,
+              "passOffEpa": 0.043,
               "turnoverDiff": 0.4,
-              "passDefEpa": 0.066,
-              "rushDefEpa": -0.029,
+              "passDefEpa": 0.057,
+              "rushDefEpa": -0.007,
               "pointsFor": 25.4,
               "pointsAgainst": 26.9
             },
@@ -13134,15 +13134,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NO",
             "values": {
-              "passOffEpa": 0.005,
+              "passOffEpa": 0.007,
               "turnoverDiff": -0.8,
-              "passDefEpa": 0.07,
-              "rushDefEpa": -0.027,
+              "passDefEpa": 0.071,
+              "rushDefEpa": -0.006,
               "pointsFor": 21.5,
               "pointsAgainst": 25.7
             },
             "ranks": {
-              "passOffEpa": 22,
+              "passOffEpa": 21,
               "turnoverDiff": 29,
               "passDefEpa": 20,
               "rushDefEpa": 22,
@@ -13154,18 +13154,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TB",
             "values": {
-              "passOffEpa": -0.151,
+              "passOffEpa": -0.16,
               "turnoverDiff": 0.7,
-              "passDefEpa": -0.108,
-              "rushDefEpa": -0.047,
+              "passDefEpa": -0.12,
+              "rushDefEpa": -0.028,
               "pointsFor": 22.3,
               "pointsAgainst": 20.9
             },
             "ranks": {
               "passOffEpa": 30,
               "turnoverDiff": 3,
-              "passDefEpa": 2,
-              "rushDefEpa": 17,
+              "passDefEpa": 1,
+              "rushDefEpa": 15,
               "pointsFor": 16,
               "pointsAgainst": 10
             },
@@ -13174,10 +13174,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ARI",
             "values": {
-              "passOffEpa": -0.061,
+              "passOffEpa": -0.06,
               "turnoverDiff": -0.09,
-              "passDefEpa": 0.254,
-              "rushDefEpa": -0.054,
+              "passDefEpa": 0.247,
+              "rushDefEpa": -0.035,
               "pointsFor": 17.36,
               "pointsAgainst": 29.36
             },
@@ -13194,18 +13194,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LAR",
             "values": {
-              "passOffEpa": 0.119,
+              "passOffEpa": 0.122,
               "turnoverDiff": -0.3,
-              "passDefEpa": -0.119,
-              "rushDefEpa": -0.096,
+              "passDefEpa": -0.112,
+              "rushDefEpa": -0.067,
               "pointsFor": 24.8,
               "pointsAgainst": 18.7
             },
             "ranks": {
               "passOffEpa": 10,
               "turnoverDiff": 23,
-              "passDefEpa": 1,
-              "rushDefEpa": 2,
+              "passDefEpa": 2,
+              "rushDefEpa": 5,
               "pointsFor": 12,
               "pointsAgainst": 5
             },
@@ -13214,10 +13214,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SF",
             "values": {
-              "passOffEpa": 0.332,
+              "passOffEpa": 0.326,
               "turnoverDiff": 0.5,
-              "passDefEpa": 0.054,
-              "rushDefEpa": -0.089,
+              "passDefEpa": 0.045,
+              "rushDefEpa": -0.075,
               "pointsFor": 31.6,
               "pointsAgainst": 20.6
             },
@@ -13225,7 +13225,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 1,
               "turnoverDiff": 9,
               "passDefEpa": 16,
-              "rushDefEpa": 3,
+              "rushDefEpa": 2,
               "pointsFor": 1,
               "pointsAgainst": 8
             },
@@ -13234,18 +13234,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SEA",
             "values": {
-              "passOffEpa": 0.067,
+              "passOffEpa": 0.051,
               "turnoverDiff": -0.3,
-              "passDefEpa": -0.094,
-              "rushDefEpa": -0.064,
+              "passDefEpa": -0.096,
+              "rushDefEpa": -0.054,
               "pointsFor": 22.3,
               "pointsAgainst": 17.5
             },
             "ranks": {
               "passOffEpa": 15,
               "turnoverDiff": 24,
-              "passDefEpa": 3,
-              "rushDefEpa": 10,
+              "passDefEpa": 4,
+              "rushDefEpa": 9,
               "pointsFor": 17,
               "pointsAgainst": 4
             },
@@ -13256,10 +13256,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BUF",
             "values": {
-              "passOffEpa": 0.052,
+              "passOffEpa": 0.034,
               "turnoverDiff": -1,
-              "passDefEpa": -0.384,
-              "rushDefEpa": -0.05,
+              "passDefEpa": -0.409,
+              "rushDefEpa": -0.028,
               "pointsFor": 26,
               "pointsAgainst": 9
             },
@@ -13275,10 +13275,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIA",
             "values": {
-              "passOffEpa": -0.384,
+              "passOffEpa": -0.409,
               "turnoverDiff": 1,
-              "passDefEpa": 0.052,
-              "rushDefEpa": 0.02,
+              "passDefEpa": 0.034,
+              "rushDefEpa": 0.019,
               "pointsFor": 9,
               "pointsAgainst": 26
             },
@@ -13286,7 +13286,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 24,
               "turnoverDiff": 3,
               "passDefEpa": 12,
-              "rushDefEpa": 17,
+              "rushDefEpa": 16,
               "pointsFor": 22,
               "pointsAgainst": 14
             }
@@ -13313,17 +13313,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYJ",
             "values": {
-              "passOffEpa": 0.526,
+              "passOffEpa": 0.527,
               "turnoverDiff": 0,
               "passDefEpa": 0.096,
-              "rushDefEpa": 0.144,
+              "rushDefEpa": 0.172,
               "pointsFor": 27,
               "pointsAgainst": 24
             },
             "ranks": {
               "passOffEpa": 3,
               "turnoverDiff": 7,
-              "passDefEpa": 15,
+              "passDefEpa": 16,
               "rushDefEpa": 22,
               "pointsFor": 9,
               "pointsAgainst": 12
@@ -13332,10 +13332,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "BAL",
             "values": {
-              "passOffEpa": 0.126,
+              "passOffEpa": 0.117,
               "turnoverDiff": -3,
-              "passDefEpa": 0.094,
-              "rushDefEpa": -0.012,
+              "passDefEpa": 0.06,
+              "rushDefEpa": 0.01,
               "pointsFor": 33,
               "pointsAgainst": 35
             },
@@ -13343,7 +13343,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 8,
               "turnoverDiff": 24,
               "passDefEpa": 14,
-              "rushDefEpa": 14,
+              "rushDefEpa": 15,
               "pointsFor": 6,
               "pointsAgainst": 21
             }
@@ -13389,18 +13389,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PIT",
             "values": {
-              "passOffEpa": -0.136,
+              "passOffEpa": -0.151,
               "turnoverDiff": 1,
-              "passDefEpa": -0.192,
-              "rushDefEpa": -0.101,
+              "passDefEpa": -0.209,
+              "rushDefEpa": -0.08,
               "pointsFor": 16,
               "pointsAgainst": 19
             },
             "ranks": {
-              "passOffEpa": 20,
+              "passOffEpa": 21,
               "turnoverDiff": 4,
               "passDefEpa": 3,
-              "rushDefEpa": 8,
+              "rushDefEpa": 6,
               "pointsFor": 19,
               "pointsAgainst": 8
             }
@@ -13408,10 +13408,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "HOU",
             "values": {
-              "passOffEpa": 0.266,
+              "passOffEpa": 0.244,
               "turnoverDiff": 0,
-              "passDefEpa": -0.318,
-              "rushDefEpa": -0.299,
+              "passDefEpa": -0.331,
+              "rushDefEpa": -0.262,
               "pointsFor": 26,
               "pointsAgainst": 3
             },
@@ -13427,10 +13427,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "IND",
             "values": {
-              "passOffEpa": -0.318,
+              "passOffEpa": -0.331,
               "turnoverDiff": 0,
-              "passDefEpa": 0.266,
-              "rushDefEpa": -0.172,
+              "passDefEpa": 0.244,
+              "rushDefEpa": -0.149,
               "pointsFor": 3,
               "pointsAgainst": 26
             },
@@ -13438,7 +13438,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 23,
               "turnoverDiff": 9,
               "passDefEpa": 19,
-              "rushDefEpa": 3,
+              "rushDefEpa": 4,
               "pointsFor": 24,
               "pointsAgainst": 15
             }
@@ -13446,15 +13446,15 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "JAX",
             "values": {
-              "passOffEpa": -0.143,
+              "passOffEpa": -0.132,
               "turnoverDiff": -1,
-              "passDefEpa": -0.123,
-              "rushDefEpa": -0.202,
+              "passDefEpa": -0.125,
+              "rushDefEpa": -0.213,
               "pointsFor": 18,
               "pointsAgainst": 23
             },
             "ranks": {
-              "passOffEpa": 21,
+              "passOffEpa": 20,
               "turnoverDiff": 20,
               "passDefEpa": 6,
               "rushDefEpa": 2,
@@ -13465,10 +13465,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TEN",
             "values": {
-              "passOffEpa": 0.081,
+              "passOffEpa": 0.057,
               "turnoverDiff": -1,
-              "passDefEpa": 0.619,
-              "rushDefEpa": 0.236,
+              "passDefEpa": 0.612,
+              "rushDefEpa": 0.253,
               "pointsFor": 30,
               "pointsAgainst": 51
             },
@@ -13484,18 +13484,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DEN",
             "values": {
-              "passOffEpa": 0.099,
+              "passOffEpa": 0.081,
               "turnoverDiff": 0,
-              "passDefEpa": -0.033,
-              "rushDefEpa": -0.004,
+              "passDefEpa": -0.036,
+              "rushDefEpa": 0.005,
               "pointsFor": 38,
               "pointsAgainst": 24
             },
             "ranks": {
-              "passOffEpa": 9,
+              "passOffEpa": 10,
               "turnoverDiff": 10,
               "passDefEpa": 11,
-              "rushDefEpa": 16,
+              "rushDefEpa": 13,
               "pointsFor": 2,
               "pointsAgainst": 13
             }
@@ -13503,10 +13503,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "KC",
             "values": {
-              "passOffEpa": 0.445,
+              "passOffEpa": 0.43,
               "turnoverDiff": 0,
-              "passDefEpa": -0.109,
-              "rushDefEpa": -0.153,
+              "passDefEpa": -0.113,
+              "rushDefEpa": -0.148,
               "pointsFor": 34,
               "pointsAgainst": 7
             },
@@ -13522,17 +13522,17 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "LV",
             "values": {
-              "passOffEpa": -0.033,
+              "passOffEpa": -0.036,
               "turnoverDiff": 0,
-              "passDefEpa": 0.099,
-              "rushDefEpa": 0.034,
+              "passDefEpa": 0.081,
+              "rushDefEpa": 0.037,
               "pointsFor": 24,
               "pointsAgainst": 38
             },
             "ranks": {
               "passOffEpa": 14,
               "turnoverDiff": 12,
-              "passDefEpa": 16,
+              "passDefEpa": 15,
               "rushDefEpa": 18,
               "pointsFor": 12,
               "pointsAgainst": 23
@@ -13543,13 +13543,13 @@ const NFL_POWER_SCORE = {
             "values": {
               "passOffEpa": 0.096,
               "turnoverDiff": 0,
-              "passDefEpa": 0.526,
-              "rushDefEpa": 0.049,
+              "passDefEpa": 0.527,
+              "rushDefEpa": 0.06,
               "pointsFor": 24,
               "pointsAgainst": 27
             },
             "ranks": {
-              "passOffEpa": 10,
+              "passOffEpa": 9,
               "turnoverDiff": 13,
               "passDefEpa": 22,
               "rushDefEpa": 20,
@@ -13560,10 +13560,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DAL",
             "values": {
-              "passOffEpa": 0.619,
+              "passOffEpa": 0.612,
               "turnoverDiff": 1,
-              "passDefEpa": 0.081,
-              "rushDefEpa": -0.007,
+              "passDefEpa": 0.057,
+              "rushDefEpa": 0.036,
               "pointsFor": 51,
               "pointsAgainst": 30
             },
@@ -13571,7 +13571,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 1,
               "turnoverDiff": 5,
               "passDefEpa": 13,
-              "rushDefEpa": 15,
+              "rushDefEpa": 17,
               "pointsFor": 1,
               "pointsAgainst": 17
             }
@@ -13579,18 +13579,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NYG",
             "values": {
-              "passOffEpa": -0.123,
+              "passOffEpa": -0.125,
               "turnoverDiff": 1,
-              "passDefEpa": -0.143,
-              "rushDefEpa": -0.016,
+              "passDefEpa": -0.132,
+              "rushDefEpa": 0.007,
               "pointsFor": 23,
               "pointsAgainst": 18
             },
             "ranks": {
               "passOffEpa": 19,
               "turnoverDiff": 6,
-              "passDefEpa": 4,
-              "rushDefEpa": 13,
+              "passDefEpa": 5,
+              "rushDefEpa": 14,
               "pointsFor": 14,
               "pointsAgainst": 7
             }
@@ -13598,18 +13598,18 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "PHI",
             "values": {
-              "passOffEpa": -0.192,
+              "passOffEpa": -0.209,
               "turnoverDiff": -1,
-              "passDefEpa": -0.136,
-              "rushDefEpa": -0.103,
+              "passDefEpa": -0.151,
+              "rushDefEpa": -0.073,
               "pointsFor": 19,
               "pointsAgainst": 16
             },
             "ranks": {
               "passOffEpa": 22,
               "turnoverDiff": 22,
-              "passDefEpa": 5,
-              "rushDefEpa": 6,
+              "passDefEpa": 4,
+              "rushDefEpa": 8,
               "pointsFor": 17,
               "pointsAgainst": 6
             }
@@ -13636,10 +13636,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CHI",
             "values": {
-              "passOffEpa": -0.044,
+              "passOffEpa": -0.073,
               "turnoverDiff": 0,
-              "passDefEpa": -0.078,
-              "rushDefEpa": -0.103,
+              "passDefEpa": -0.088,
+              "rushDefEpa": -0.074,
               "pointsFor": 21,
               "pointsAgainst": 13
             },
@@ -13655,10 +13655,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "DET",
             "values": {
-              "passOffEpa": 0.302,
+              "passOffEpa": 0.306,
               "turnoverDiff": 0,
-              "passDefEpa": 0.152,
-              "rushDefEpa": -0.076,
+              "passDefEpa": 0.15,
+              "rushDefEpa": -0.063,
               "pointsFor": 31,
               "pointsAgainst": 21
             },
@@ -13666,7 +13666,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 5,
               "turnoverDiff": 15,
               "passDefEpa": 18,
-              "rushDefEpa": 9,
+              "rushDefEpa": 10,
               "pointsFor": 7,
               "pointsAgainst": 9
             }
@@ -13693,10 +13693,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "MIN",
             "values": {
-              "passOffEpa": -0.085,
+              "passOffEpa": -0.094,
               "turnoverDiff": -2,
-              "passDefEpa": 0.61,
-              "rushDefEpa": -0.02,
+              "passDefEpa": 0.603,
+              "rushDefEpa": -0.018,
               "pointsFor": 10,
               "pointsAgainst": 35
             },
@@ -13731,10 +13731,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "CAR",
             "values": {
-              "passOffEpa": 0.094,
+              "passOffEpa": 0.06,
               "turnoverDiff": 3,
-              "passDefEpa": 0.126,
-              "rushDefEpa": 0.039,
+              "passDefEpa": 0.117,
+              "rushDefEpa": 0.085,
               "pointsFor": 35,
               "pointsAgainst": 33
             },
@@ -13742,7 +13742,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 11,
               "turnoverDiff": 1,
               "passDefEpa": 17,
-              "rushDefEpa": 19,
+              "rushDefEpa": 21,
               "pointsFor": 3,
               "pointsAgainst": 19
             }
@@ -13750,10 +13750,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "NO",
             "values": {
-              "passOffEpa": -0.078,
+              "passOffEpa": -0.088,
               "turnoverDiff": 0,
-              "passDefEpa": -0.044,
-              "rushDefEpa": -0.163,
+              "passDefEpa": -0.073,
+              "rushDefEpa": -0.158,
               "pointsFor": 13,
               "pointsAgainst": 21
             },
@@ -13761,7 +13761,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 16,
               "turnoverDiff": 16,
               "passDefEpa": 10,
-              "rushDefEpa": 4,
+              "rushDefEpa": 3,
               "pointsFor": 20,
               "pointsAgainst": 10
             }
@@ -13769,10 +13769,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "TB",
             "values": {
-              "passOffEpa": 0.152,
+              "passOffEpa": 0.15,
               "turnoverDiff": 0,
-              "passDefEpa": 0.302,
-              "rushDefEpa": 0.214,
+              "passDefEpa": 0.306,
+              "rushDefEpa": 0.213,
               "pointsFor": 21,
               "pointsAgainst": 31
             },
@@ -13788,10 +13788,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "ARI",
             "values": {
-              "passOffEpa": -0.109,
+              "passOffEpa": -0.113,
               "turnoverDiff": 0,
-              "passDefEpa": 0.445,
-              "rushDefEpa": -0.068,
+              "passDefEpa": 0.43,
+              "rushDefEpa": -0.065,
               "pointsFor": 7,
               "pointsAgainst": 34
             },
@@ -13799,7 +13799,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 18,
               "turnoverDiff": 18,
               "passDefEpa": 21,
-              "rushDefEpa": 10,
+              "rushDefEpa": 9,
               "pointsFor": 23,
               "pointsAgainst": 20
             }
@@ -13826,10 +13826,10 @@ const NFL_POWER_SCORE = {
           {
             "abbr": "SF",
             "values": {
-              "passOffEpa": 0.61,
+              "passOffEpa": 0.603,
               "turnoverDiff": 2,
-              "passDefEpa": -0.085,
-              "rushDefEpa": 0.053,
+              "passDefEpa": -0.094,
+              "rushDefEpa": 0.05,
               "pointsFor": 35,
               "pointsAgainst": 10
             },
@@ -13837,7 +13837,7 @@ const NFL_POWER_SCORE = {
               "passOffEpa": 2,
               "turnoverDiff": 2,
               "passDefEpa": 8,
-              "rushDefEpa": 21,
+              "rushDefEpa": 19,
               "pointsFor": 4,
               "pointsAgainst": 4
             }
