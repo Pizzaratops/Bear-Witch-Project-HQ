@@ -5,7 +5,7 @@
 //  GitHub Action ".github/workflows/sync-espn-nfl-standings.yml".
 //  Nicht von Hand editieren — Änderungen werden beim nächsten Sync
 //  überschrieben.
-//  Zuletzt synchronisiert: 2026-11-27T17:55:50.959Z
+//  Zuletzt synchronisiert: 2026-11-28T01:48:30.805Z
 //
 //  Quelle: nflverse/nfldata (GitHub-gehostet, MIT-lizenziert), NICHT
 //  ESPN -- ESPNs öffentliche Sport-API blockt GitHub-Actions-Server
@@ -4369,12 +4369,12 @@ const NFL_STANDINGS = {
         "abbr": "PIT",
         "conference": "AFC",
         "division": "North",
-        "wins": 6,
+        "wins": 7,
         "losses": 4,
         "ties": 0,
-        "winPct": 0.6,
-        "pf": 214,
-        "pa": 201
+        "winPct": 0.6363636363636364,
+        "pf": 241,
+        "pa": 206
       },
       {
         "name": "Houston Texans",
@@ -4430,11 +4430,11 @@ const NFL_STANDINGS = {
         "conference": "AFC",
         "division": "West",
         "wins": 8,
-        "losses": 2,
+        "losses": 3,
         "ties": 0,
-        "winPct": 0.8,
-        "pf": 236,
-        "pa": 210
+        "winPct": 0.7272727272727273,
+        "pf": 241,
+        "pa": 237
       },
       {
         "name": "Kansas City Chiefs",
